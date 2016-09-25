@@ -55,13 +55,11 @@
 		<div id="Ahwassa" class="card">
         		<h3><img src="images/ahwassa.png"> Ahwassa:</h3>
         		A while back the Ahwassa projectile was made to do reduced damage to ASFs in order to stop it wiping out chasing squadrons. Now we've been able to make it so the bomb 'burns' through any Air units it hits on the way down. It will hit and kill any it physically collides with, but continue to the ground instead of wiping out the entire squadron.
-        		<ul>
 		</div>	
 			
 		<div id="Staging" class="card">
 			<h3><img ssrc="images/staging.png"> Staging:</h3>
 			Using Air Staging has always been frustrating, largely because everything outside of T1 Aircraft can only dock one plane at a time. This has been reduced so that most planes are treated the same as T1, with larger units like Strategic Bombers and T3 Gunships remaining of higher refueling class.
-			<ul>
 		</div>
 		
 		
@@ -208,14 +206,15 @@
 			</li><li>Health Regeneration: <strike>+60</strike> → +40
 			</li></ul><br>
 			The 'Billy': Advanced Tactical Missile Launcher:
-			<ul></li><li>(Upgrade) Mass Cost: <strike>5400</strike> → 2000
+			<ul><li>(Upgrade) Mass Cost: <strike>5400</strike> → 2000
 			</li><li>(Upgrade) Energy Cost: <strike>315000</strike> → 75000
 			</li><li>(Upgrade) Build time: <strike>5600</strike> → 3000</ul>
 
 			<ul>
-			</li><li>(Missle) Mass Cost: <strike>3000</strike> → 1000
+			<li>(Missle) Mass Cost: <strike>3000</strike> → 1000
 			</li><li>(Missle) Energy Cost: <strike>216260</strike> → 50000
-			</li><li>(Missle) Build Time: <strike>3060</strike> → 3000</ul>
+			</li><li>(Missle) Build Time: <strike>3060</strike> → 3000
+			</ul>
 
 			<ul>
 			<li>Minimum Range:<strike>5</strike> → 15
@@ -262,7 +261,75 @@
 			</li><li>ShieldRechargeTime: <strike>200</strike> → 160
 			</li><li>ShieldRegenRate: <strike>44</strike> → 37
 			</li></ul>
-		</div>			
+		</div>	
+		
+		<div id="otherpatch" class="card">
+        	<h3><img src="images/aeoncom.png"> Other Patch Notes</h3>
+			<h4>Lobby</h4>
+			<ul>
+			<li>Fixed team number switching slots alongside a player
+			</li><li>Added new feature: Kick Reasons. When kicking a player from your lobby, you get a new dialog. You may type in a reason for the kick to notify the player. If you blank it, or leave the message as presented, it will play the old message.
+			</li><li>Fixed Cheat and Build multipliers for AIs showing 1.0 - 1.9 two times
+			</li><li>Fixed rating labels being shown on the minimap when teams are not set to 'Fixed'
+			</li><li>Made it clearer that there's a search filter in the map selection
+			</li><li>Added new unit share conditions for interesting new gameplay. "Full Share" and "Share Until Death" have been joined by "Gain Control", which gifts all your units to the player who killed you (Very interesting for FFA games), "Defectors", which is the opposite of Full Share, gifting your units to the highest scoring enemy, and "Civilian Desertion", which gifts your units to a neutral civilian AI, if there is one.
+			</li><li>Improved the tooltip when hovering over your score in the lobby. It will now show a more detailed explanation including your rating deviation
+			</li><li>Fixed the position of the load button in Skirmish mode when launching offline
+			</ul>
+			
+			<h4>Coop</h4>
+			<ul>
+			<li>Fixed cinematics playing in coop games
+			</li><li>Improved AI sACU usage
+			</li><li>Fixed objective protection timer
+			</ul>
+			
+			<h4>Gameplay</h4>
+			<ul>
+			<li>Improved Selen toggle. It now behaves with no abilities by default, then when toggled on it hides and shows based on motion as before.
+			</li><li>Added dummy weapon to Aeon T2 Transport to allow LABs be targeted to specific enemies
+			</li><li>Allowed UEF T2 Transport to be given targets while landed on water
+			</li><li>Enabled templates to be created with modded units as the primary unit
+			</ul>
+			
+			<h4>Bugs</h4>
+			<ul>
+			<li>Fixed units carried by UEF T2 Gunship from firing from inside a carrier
+			</li><li>Fixed Salvation fire rate slowing at max adjacency instead of speeding up
+			</li><li>Fixed units being able to fire at aircraft docked inside carriers, damaging the carrier
+			</li><li>Fixed games not ending properly with AIs
+			</li><li>Fixed Continental not fying to nukes (Again)
+			</li><li>Fixed upgraded structures not being targetable via radar blip
+			</li><li>Fixed shared unit cap taking civilian armies into account when sharing on player death
+			</li><li>Fixed UEF sACU AOE upgrade removal reducing the AOE too far
+			</li><li>Fixed the Spiderbot's laser beam getting stuck on temporarily while the unit executed the death animation
+			</li><li>Fixed the Cybran ACU wandering off long distance when told to assist various buildings with an enemy in the rough vicinity. It will still happen if the unit is much closer, but we should no longer have ACUs walking across the map to go kill themselves on enemy PD
+			</ul>
+			
+			<h4>UI</h4>
+			<ul>
+			<li>Fixed UEF Engineering station strategic icon not matching the gtech level
+			</li><li>Added missing strategic build icons used in "Bigger" mode
+			</li><li>Fixed displayed abilities on several units
+			</li><li>Fixed unit descriptions on support factories displaying for the wrong ones
+			</li><li>Fixed game quality displaying a corrupted string
+			</li><li>Fixed the scroll button in ACU enhancements freezing the tooltip popup action
+			</li><li>Added mod icon support for various UI elements
+			</li><li>Added build mode support for SCU presets
+			</li><li>Fixed a large number of tooltips not having proper localization
+			</li><li>Added some tooltips to features previously missing them
+			</li><li>Added ability to toggle reclaim labels. Set to Alt-R by default. You may have to bind this manually in the F1 menu.
+			</li><li>Massively improved reclaim label implementation to remove lag when zooming or panning
+			</li><li>Fixed a bug which caused the menu to block the top-left of the screen in ladder games
+			</ul>
+			
+			<h4>Other</h4>
+			<ul>
+			<li>Removed obsolete strategic icons and corrected file paths inside Hotstats module
+			</li><li>Fixed custom FAF player colours conflicting with Steam launcher
+			</li><li>Added German translation to FAF
+			</li></ul>
+		</div>	
 		
 		<p style="height: 1000px">
 	</p></td>
@@ -271,7 +338,7 @@
 		<div id="icongrid">
 		<h2><a href="#container">Contents</a></h2>
 		
-		</p><p>Land<br>
+		<p>Land<br>
 		<a href="#ythotha"><img src="images/ythotha.png"></a>
 		<a href="#aeont1maa"><img src="images/aeont1maa.png"></a>
 		
