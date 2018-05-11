@@ -153,7 +153,7 @@
 						<ul>
 							<p>The titan has a smaller health shield but this regens very quickly, sometimes even during the course of a battle
 							if you can keep them alive. It's target priorities are also fixed as with the Othuum.</p>
-							<li>Health: <strike>2200</strike> → 2650</li>
+							<li>Health: <strike>2200</strike> → 2550</li>
 							<li>Shield: <strike>1200</strike> → 600</li>
 							<li>Recharge Time: <strike>60</strike> → 15</li>
 							<li>Regen Rate: <strike>9</strike> → 20</li>
@@ -161,6 +161,7 @@
 							<li>Speed: <strike>4</strike> → 3.8</li>
 							<li>Acceleration: <strike>4</strike> → 4.2</li>
 							<br>
+                            <li>Range: <strike>20</strike> → 22</li>
 							<li>Muzzle Velocity: <strike>30</strike> → 35</li>
 							<li>Turn rate: <strike>150</strike> → 120</li>
 							<p>Target Priorities:</p>
@@ -187,7 +188,7 @@
 						<h3><img src="images/loya.png"> Loyalist:</h3>
 						<ul>
 							<p>The Loyalist gets a small nerf to many stats, and its stun will no longer affect Experimentals and ACUs.</p>
-							<li>Health: <strike>3100</strike> → 2800</li>
+							<li>Health: <strike>3100</strike> → 3000</li>
 							<br>
 							<li>Speed: <strike>4</strike> → 3.8</li>
 							<li>Acceleration: <strike>4</strike> → 4.2</li>
@@ -203,7 +204,7 @@
 							<br>
 							2nd Weapon (Heavy Electron Bolter):
 							<li>Damage: <strike>12</strike> → 14</li>
-							<li>Range: <strike>25</strike> → 22</li>
+							<li>Range: <strike>25</strike> → 20</li>
 							<li>Muzzle Velocity: <strike>40</strike> → 35</li>
 							<li>TurretYawSpeed: <strike>90</strike> → 120</li>
 							<li>DPS: <strike>30</strike> → 35</li>
@@ -325,6 +326,34 @@
 							<li>Ahwassa Build Time: <strike>36000</strike> → 67500</li>
 						</ul>
 					</div>
+                    <h2>Navy</h2>
+                    <div id="navy" class="card">
+                        <h3><img src="images/aeonbs.png"> Battleships: </h3>
+                        <ul>
+                            Seraphim:
+                            <li>FiringRandomness: <strike>0.3</strike> → 0.25</li>
+                            <li>MuzzleVelocity: <strike>30</strike> → 40</li>
+                            </ul>
+                        <ul>
+                            Aeon:
+                            <li>TurnRate: <strike>35</strike> → 40</li>
+                            <li>MaxSpeed: <strike>3.6</strike> → 4</li>
+                            <li>Range: <strike>100</strike> → 114</li>
+                            </ul>
+                            <br>
+                        <h3><img src="images/Cybran_T3_Aircraft_Carrier.png"> Cybran Carrier: </h3>
+						<p>Fixed the aim on the Anti Air weapon of the carrier.</p>
+                        <br>
+						<h3><img src="images/UEF_T2_Shield_Boat.png"> Bulwark: </h3>
+                        <ul>
+                            <li>Damage Overspill: <strike>15%</strike> → 50%</li>
+                            <li>Recharge time: <strike>35</strike> → 42</li>
+                        </ul>
+                        <h3><img src="images/UEF_T2_Shield_Boat.png"> Shard: </h3>
+                        <ul>
+                            <li>Health: <strike>750</strike> → 800</li>
+                        </ul>
+                    </div>
 					<h2>Miscellaneous</h2>
 					<div id="maa" class="card">
 						<h3><img src="images/ueft1maa.png"> T1 Mobile Anti Air</h3>
@@ -362,17 +391,15 @@
 							<li>Power Cost: <strike>12000</strike> → 13200</li>
 							<li>Speed: <strike>15</strike> → 14.3</li>
 						</ul>
-						<h3><img src="images/Cybran_T3_Aircraft_Carrier.png"> Cybran Carrier: </h3>
-						<p>Fixed the aim on the Anti Air weapon of the carrier.</p>
-						<h3><img src="images/UEF_T2_Shield_Boat.png"> Bulwark: </h3>
-						<li>Damage Overspill: <strike>15%</strike> → 50%</li>
 						<h3><img src="images/selen.png"> Selen: </h3>
 						<p>Removed the Power drain from the stealth/cloak ability while not moving.</p>
+                        <h3><img src="images/selen.png"> Mobile shields: </h3>
+						<p>Damage Overspill: <strike>15%</strike> → 50%</p>
 					</div>
 
 					<h2>Structures</h2>
 					<div id="Structures" class="card">
-						<h3><img src="images/T3hq.png"> T3 Land HQs:</h3>
+						<h3><img src="images/t3hq.png"> T3 Land HQs:</h3>
 						<ul>
 							<li>Mass Cost: <strike>4 920</strike> → 5 220</li>
 							<li>Power Cost: <strike>43 900</strike> → 47 400</li>
@@ -406,7 +433,7 @@
 							<li>Build Time: <strike>1800</strike> → 2000</li>
 						</ul>
 						<h3><img src="images/uec1101_icon.png"> Civilian Structures</h3>
-						<p>Adjusted Civilian Building Mass values to make them more consistent.</p>
+						<p>Adjusted Civilian Building Mass values to make them more consistent. Civilian buildings will give 50-150 mass.</p>
 						<h3><img src="images/Cybran_T2_Static_Shield_L4.png"> Cybran Shield</h3>
 						<p>Added the ED4 Shield to the list of buildable structures and to the hotbuild keygroup for shields.</p>
 					</div>
@@ -420,9 +447,20 @@
                         T3 units you will need three storages. When you Overcharge the amount of energy required to kill the unit you hit will be drained
                         from your storage. If you do not have enough to kill the target, most of your energy will be drained but not all so that your
                         shields and radar are not effected. </p>
+                        <ul>
+                        <li>The damage dealt by overcharge now scales with the amount of energy drained from storage.</li>
+                        <li>Overcharge will drain as much energy as is required to kill the unit targeted, or 90% of your stored energy.</li>
+                        <li>One energy storage is required to unlock Overcharge.</li>
+                        <li>One storage is required to kill T1 and T2 land units.</li>
+                        <li>Up to three storages will be required to kill T3 land units.</li>
+                        <li>The range of the Area of Effect is now displayed when using Overcharge.</li>
+                        <li>The OC indicator will turn orange if you do not have enough energy in storage to kill the unit under the cursor.</li>
+                        <li>The OC indicator will turn green if you have enough energy in storage to kill the unit under the cursor.</li>
+                        </ul>
                         <p>Damage vs buildings and vs commanders is unchanged from the previous system. We have added new icons to indicate whether you
                         have enough energy to kill the unit under your cursor. Gray is for idle, Orange means you don't have enough energy to kill and 
                         green means you will kill the unit if you OC it.</p>
+                        
 						<h3><img src="images/Upgrade_Icon.png"> Veterancy</h3>
 						<p>The vet gained from buildings was too high, leading to problems especially with ACU TML.</p>
 						<ul>
@@ -430,7 +468,7 @@
 							<li>Only a single vet level can be gained for any one kill.</li>
 						</ul>
 						<h3><img src="images/Teleport.png"> Teleport</h3>
-						<p>Added a 15 second cooldown to the Teleport ability.</p>
+						<p>Added a 10 second cooldown to the Teleport ability.</p>
 					</div>
 
 					<p style="height: 1000px">
@@ -464,16 +502,19 @@
 						<a href="#T4"><img src="images/galacticcolossus.png"></a>
 						<a href="#T4"><img src="images/ythotha.png"></a>
 					</p>
-					<p>miscellaneous:<br>
+                    <p>Navy:<br>
+						<a href="#navy"><img src="images/aeonbs.png"></a>
+						<a href="#navy"><img src="images/UEF_T2_Shield_Boat.png"></a>
+						<a href="#navy"><img src="images/Cybran_T3_Aircraft_Carrier.png"></a>
+					</p>
+					<p>Miscellaneous:<br>
 						<a href="#maa"><img src="images/ueft1maa.png"></a>
                         <a href="#maa"><img src="images/beetle.png"></a>
 						<a href="#maa"><img src="images/Aeon_T2_Transport.png"></a>
-						<a href="#maa"><img src="images/Cybran_T3_Aircraft_Carrier.png"></a>
-						<a href="#maa"><img src="images/UEF_T2_Shield_Boat.png"></a>
 						<a href="#maa"><img src="images/selen.png"></a>
 					</p>
 					<p>Structures:<br>
-						<a href="#Structures"><img src="images/T3hq.png"></a>
+						<a href="#Structures"><img src="images/t3hq.png"></a>
 						<a href="#Structures"><img src="images/UEF_T3_PD.png"></a>
 						<a href="#Structures"><img src="images/duke.png"></a>
 						<a href="#Structures"><img src="images/uec1101_icon.png"></a>
