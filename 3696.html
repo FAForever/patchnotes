@@ -13,8 +13,8 @@
 				<td id="main">
 					<div id="intro">
 						<h1>Patch 3696 beta</h1>
-						<p>There are four main portions to this balance patch beta. First is the nerf to direct fire T3 Land units.
-						Second is the rebalance of ACU combat upgrades. Third is the increase in Experimental Build times and fourth is an
+						<p>There are four main portions to this balance patch. First is the nerf to direct fire T3 Land units.
+						Second is the rebalance of ACU combat upgrades. Third is the increase in Experimental Unit build times and fourth is an
 						overcharge rework. A T3 land rebalance has been promised for a very long time so we are very happy to finally be at the beta stage
 						for this important development in Forged Alliance. The aim is to allow a larger window on a large number of maps
 						for the T2 land stage. It is potentially one of the most interesting stages of the game, with many different unit
@@ -23,6 +23,8 @@
 						The balance team found it necessary to introduce combat ACU upgrade changes, an overcharge rework and Experimental build time increases
 						with the T3 land rebalance. Combat ACU upgrades have been shown to be very strong recently, becoming a staple of teamgames. Some of these
 						upgrades are too dominant and with the T3 land changes, some nerfs are required to prevent the ACU from being too powerful. </p>
+                        <p>With the delays this patch has faced, other smaller issues have been admitted into this patch as they were deemed important. The most 
+                        notable of these are the addition of a delay in between teleports, a nerf of shieldboats, </p>
 					</div>
 
 					<h2>ACUs</h2>
@@ -354,7 +356,80 @@
                             <li>Health: <strike>750</strike> → 800</li>
                         </ul>
                     </div>
-					<h2>Miscellaneous</h2>
+					
+
+					<h2>Structures</h2>
+					<div id="Structures" class="card">
+						<h3><img src="images/t3hq.png"> T3 Land HQs:</h3>
+						<ul>
+							<li>Mass Cost: <strike>4 920</strike> → 5 220</li>
+							<li>Power Cost: <strike>43 900</strike> → 47 400</li>
+							<li>Build Time: <strike>11 000</strike> → 12 100</li>
+						</ul>
+						<h3><img src="images/UEF_T3_PD.png"> Ravager:</h3>
+						<ul>
+							<li>Health: <strike>7500</strike> → 6500</li>
+							<li>Mass Cost: <strike>1 800</strike> → 2 000</li>
+							<li>Power Cost: <strike>16 000</strike> → 17 600</li>
+							<li>Build Time: <strike>1 500</strike> → 2000</li>
+						</ul>
+						<h3><img src="images/duke.png"> T3 Static Artillery:</h3>
+						<p>T3 static arty now have the same range. Cybran gets an increased rate of fire
+                        in exchange for lower damage.</p>
+						<ul>
+							<li>UEF/Cybran Range: <strike>750/700</strike> → 825</li>
+							<li>Aeon/Seraphim Range: <strike>900/825</strike> → 825</li>
+							Cybran:
+							<li>Damage: <strike>4600</strike> → 3700</li>
+							<li>Rate of Fire: <strike>0.1</strike> → 0.13</li>
+						</ul>
+						<h3><img src="images/UEF_T3_Mass_Fabricator.png"> T3 Mass Fabricator:</h3>
+						<p>Adjacency for T3 mass fabs was improved slightly too much in patch 3688. </p>
+						<ul>
+							<li>Adjacency from storage: <strike>4.1667%</strike> → 3%</li>
+							<li>Adjacency for SML: <strike>20%</strike> → 12.5%</li>
+						</ul>
+						<h3><img src="images/uec1101_icon.png"> Civilian Structures</h3>
+						<p>Adjusted Civilian Building Mass values to make them more consistent. Civilian buildings will give 50-150 mass.</p>
+						<h3><img src="images/Cybran_T2_Static_Shield_L4.png"> Cybran Shield</h3>
+						<p>Added the ED4 Shield to the list of buildable structures and to the hotbuild keygroup for shields.</p>
+					</div>
+
+					<h2>Mechanics</h2>
+					<div id="mechanics" class="card">
+						<h3><img src="images/overcharge.png"> Overcharge</h3>
+						<p>This is the first rebalance of Overcharge since patch 3605 and it builds upon the premise of requiring energy storage to OC.
+                        We have implemented a variable system of Overcharge so to do greater damage you will need more energy in storage. You will still
+                        need to buld an energy storage before you can Overcharge and one storage will suffice for killing T2 units. To kill the heaviest
+                        T3 units you will need three storages. When you Overcharge the amount of energy required to kill the unit you hit will be drained
+                        from your storage. If you do not have enough to kill the target, most of your energy will be drained but not all so that your
+                        shields and radar are not effected. </p>
+                        <ul>
+                        <li>The damage dealt by overcharge now scales with the amount of energy drained from storage.</li>
+                        <li>Overcharge will drain as much energy as is required to kill any unit within the area of effect of the OC, or 90% of your stored energy.</li>
+                        <li>One energy storage is required to unlock Overcharge.</li>
+                        <li>One storage is required to kill T1 and T2 land units.</li>
+                        <li>Up to three storages will be required to kill T3 land units.</li>
+                        <li>The range of the Area of Effect is now displayed when using Overcharge.</li>
+                        <li>The OC indicator will turn orange if you do not have enough energy in storage to kill the unit under the cursor.</li>
+                        <li>The OC indicator will turn green if you have enough energy in storage to kill the unit under the cursor.</li>
+                        <li>The maximum damage is 15k at a cost of ~45k energy</li>
+                        </ul>
+                        <p>Damage vs buildings and vs commanders is unchanged from the previous system. We have added new icons to indicate whether you
+                        have enough energy to kill the unit under your cursor. Gray is for idle, Orange means you don't have enough energy to kill and 
+                        green means you will kill the unit if you OC it.</p>
+                        
+						<h3><img src="images/Upgrade_Icon.png"> Veterancy</h3>
+						<p>The vet gained from buildings was too high, leading to problems especially with ACU TML.</p>
+						<ul>
+							<li>Vet gained from damaging non-combat buildings is reduced by 50%</li>
+							<li>Only a single vet level can be gained for any one kill.</li>
+						</ul>
+						<h3><img src="images/Teleport.png"> Teleport</h3>
+						<p>Added a 10 second cooldown to the Teleport ability.</p>
+					</div>
+                    
+                    <h2>Miscellaneous</h2>
 					<div id="maa" class="card">
 						<h3><img src="images/ueft1maa.png"> T1 Mobile Anti Air</h3>
 						<p>T1 MAA gets a small damage reduction and mass cost reduction so it doesn't cost more than tanks anymore. Sera MAA is fixed
@@ -391,84 +466,20 @@
 							<li>Power Cost: <strike>12000</strike> → 13200</li>
 							<li>Speed: <strike>15</strike> → 14.3</li>
 						</ul>
+                        <h3><img src="images/t1bomber.png"> T1 Bombers:</h3>
+						<ul>
+							<li>RandomBreakOffDistanceMult: <strike>1</strike> → 1.5</li>
+						</ul>
 						<h3><img src="images/selen.png"> Selen: </h3>
 						<p>Removed the Power drain from the stealth/cloak ability while not moving.</p>
-                        <h3><img src="images/selen.png"> Mobile shields: </h3>
+                        <h3><img src="images/UEF_T2_Shield_Boat.png"> Mobile shields: </h3>
 						<p>Damage Overspill: <strike>15%</strike> → 50%</p>
-					</div>
-
-					<h2>Structures</h2>
-					<div id="Structures" class="card">
-						<h3><img src="images/t3hq.png"> T3 Land HQs:</h3>
-						<ul>
-							<li>Mass Cost: <strike>4 920</strike> → 5 220</li>
-							<li>Power Cost: <strike>43 900</strike> → 47 400</li>
-							<li>Build Time: <strike>11 000</strike> → 12 100</li>
-						</ul>
-						<h3><img src="images/UEF_T3_PD.png"> T3 Point Defense:</h3>
-						<ul>
-							<li>Mass Cost: <strike>1 800</strike> → 2 000</li>
-							<li>Power Cost: <strike>16 000</strike> → 17 600</li>
-							<li>Build Time: <strike>1 500</strike> → 1 800</li>
-						</ul>
-						<h3><img src="images/duke.png"> T3 Static Artillery:</h3>
-						<p>T3 static arty is rebalanced into two range tiers. Cybran gets an increased rate of fire
-                        in exchange for lower damage.</p>
-						<ul>
-							<li>UEF/Cybran Range: <strike>750/700</strike> → 775</li>
-							<li>Aeon/Seraphim Range: <strike>900/825</strike> → 825</li>
-							Cybran:
-							<li>Damage: <strike>4600</strike> → 3200</li>
-							<li>Rate of Fire: <strike>0.1</strike> → 0.13</li>
-						</ul>
-						<h3><img src="images/UEF_T3_Mass_Fabricator.png"> T3 Mass Fabricator:</h3>
-						<p>Adjacency for T3 mass fabs was improved slightly too much in patch 3688. </p>
-						<ul>
-							<li>adjacency from storage: <strike>4.1667%</strike> → 3%</li>
-							<li>adjacency for SML: <strike>20%</strike> → 12.5%</li>
-						</ul>
-						<h3><img src="images/UEF_T3_PD.png"> Ravager</h3>
-						<ul>
-							<li>Health: <strike>7500</strike> → 6500</li>
-							<li>Build Time: <strike>1800</strike> → 2000</li>
-						</ul>
-						<h3><img src="images/uec1101_icon.png"> Civilian Structures</h3>
-						<p>Adjusted Civilian Building Mass values to make them more consistent. Civilian buildings will give 50-150 mass.</p>
-						<h3><img src="images/Cybran_T2_Static_Shield_L4.png"> Cybran Shield</h3>
-						<p>Added the ED4 Shield to the list of buildable structures and to the hotbuild keygroup for shields.</p>
-					</div>
-
-					<h2>Mechanics</h2>
-					<div id="mechanics" class="card">
-						<h3><img src="images/overcharge.png"> Overcharge</h3>
-						<p>This is the first rebalance of Overcharge since patch 3605 and it builds upon the premise of requiring energy storage to OC.
-                        We have implemented a variable system of Overcharge so to do greater damage you will need more energy in storage. You will still
-                        need to buld an energy storage before you can Overcharge and one storage will suffice for killing T2 units. To kill the heaviest
-                        T3 units you will need three storages. When you Overcharge the amount of energy required to kill the unit you hit will be drained
-                        from your storage. If you do not have enough to kill the target, most of your energy will be drained but not all so that your
-                        shields and radar are not effected. </p>
+                        <h3><img src="images/Upgrade_Icon.png"> Fixes:</h3>
                         <ul>
-                        <li>The damage dealt by overcharge now scales with the amount of energy drained from storage.</li>
-                        <li>Overcharge will drain as much energy as is required to kill the unit targeted, or 90% of your stored energy.</li>
-                        <li>One energy storage is required to unlock Overcharge.</li>
-                        <li>One storage is required to kill T1 and T2 land units.</li>
-                        <li>Up to three storages will be required to kill T3 land units.</li>
-                        <li>The range of the Area of Effect is now displayed when using Overcharge.</li>
-                        <li>The OC indicator will turn orange if you do not have enough energy in storage to kill the unit under the cursor.</li>
-                        <li>The OC indicator will turn green if you have enough energy in storage to kill the unit under the cursor.</li>
+                            <li>Nuke trajectory is now corrected so it travels parallel to the ground.</li>
+                            <li>Selens will no longer lose their radar when there is a power stall.</li>
+                            <li>Units with personal shields that are unloading from transports will now take damage on their shield when hit. </li>
                         </ul>
-                        <p>Damage vs buildings and vs commanders is unchanged from the previous system. We have added new icons to indicate whether you
-                        have enough energy to kill the unit under your cursor. Gray is for idle, Orange means you don't have enough energy to kill and 
-                        green means you will kill the unit if you OC it.</p>
-                        
-						<h3><img src="images/Upgrade_Icon.png"> Veterancy</h3>
-						<p>The vet gained from buildings was too high, leading to problems especially with ACU TML.</p>
-						<ul>
-							<li>Vet gained from damaging non-combat buildings is reduced by 50%</li>
-							<li>Only a single vet level can be gained for any one kill.</li>
-						</ul>
-						<h3><img src="images/Teleport.png"> Teleport</h3>
-						<p>Added a 10 second cooldown to the Teleport ability.</p>
 					</div>
 
 					<p style="height: 1000px">
@@ -507,22 +518,26 @@
 						<a href="#navy"><img src="images/UEF_T2_Shield_Boat.png"></a>
 						<a href="#navy"><img src="images/Cybran_T3_Aircraft_Carrier.png"></a>
 					</p>
-					<p>Miscellaneous:<br>
-						<a href="#maa"><img src="images/ueft1maa.png"></a>
-                        <a href="#maa"><img src="images/beetle.png"></a>
-						<a href="#maa"><img src="images/Aeon_T2_Transport.png"></a>
-						<a href="#maa"><img src="images/selen.png"></a>
-					</p>
 					<p>Structures:<br>
 						<a href="#Structures"><img src="images/t3hq.png"></a>
 						<a href="#Structures"><img src="images/UEF_T3_PD.png"></a>
 						<a href="#Structures"><img src="images/duke.png"></a>
+                        <a href="#Structures"><img src="images/UEF_T3_Mass_Fabricator.png"></a>
 						<a href="#Structures"><img src="images/uec1101_icon.png"></a>
 						<a href="#Structures"><img src="images/Cybran_T2_Static_Shield_L4.png"></a>
 					</p>
 					<p>Mechanics:<br>
 						<a href="#mechanics"><img src="images/overcharge.png"></a>
 						<a href="#mechanics"><img src="images/Upgrade_Icon.png"></a>
+                        <a href="#mechanics"><img src="images/Teleport.png"></a>
+					</p>
+					<p>Miscellaneous:<br>
+						<a href="#maa"><img src="images/ueft1maa.png"></a>
+                        <a href="#maa"><img src="images/beetle.png"></a>
+						<a href="#maa"><img src="images/Aeon_T2_Transport.png"></a>
+                        <a href="#maa"><img src="images/beetle.png"></a>
+						<a href="#maa"><img src="images/selen.png"></a>
+                        <a href="#maa"><img src="images/beetle.png"></a>
 					</p>
 					</div>
 				</td>
