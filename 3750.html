@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <meta charset="UTF-8">
+        <title>Patch 3750</title>
+        <link href="http://fonts.googleapis.com/css→family=Open+Sans" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="patchnotes.css">
+    </head>
+
+    <body>
+        <table id="container">
+            <tbody>
+                <tr>
+                    <td id="main">
+                        <div id="intro">
+                            <h1>Patch 3750</h1>
+                            <p>Welcome to the patchnotes for the 3750 patch.</p>
+                            <p>This patch aims to alleviate the most pressing imbalances that have arouse over the past 2 years. Notably the dominance of Sniper bots and Titans/Loyalists during the T3 stage, Nukes being extremely oppressive, air T4s and T3 artilleries being rushed without any energy infrastructure and the power distribution in naval warfare being very asymmetric tech wise between factions. It also includes 2 mini-reworks, Soul Ripper and Bulwark which hopefully will help those units function better at their intended roles.</p>
+                            <p>We hope you enjoy this new patch</p>
+                            <p>-- The Balance Team</p>
+                        </div>
+                        
+                        <h2>Land</h2>
+
+                        <div id="T2Land" class="card">
+                            <h3><img src="/images/t2landhq.png"> T2 Land</h3>
+                            <p>Zthuees are more efficient BP-wise for their strength compared to other T1 arties which allows for powerful arty spam with a rather small investment in factories. This brings them more in line with other factions.</p>
+                            <ul>
+                                <li>BuildTime: <strike>180</strike> → 270</li>
+                            </ul>
+                        </div>
+
+                        <div id="Asylum" class="card">
+                            <h3><img src="images/asylum.png"> Asylum (Aeon T2 mobile shield)</h3>
+                            <p>Aeon t2 land has become arguably the best with a combination of powerful tanks, cheap shields, and the strongest ACU. This minor nerf aims at reducing the strength a little bit.</p>
+                            <ul>
+                                <li>EnergyMaintenanceCost: <strike>45</strike> → 55</li>
+                            </ul>
+                        </div>
+                        
+                        <div id="t3lightbots" class="card">
+                            <h3><img src="images/UEF_T3_Heavy_Assault_Bot.png"> Titan and Loyalist</h3>
+                            <p>The Titan and Loyalist build-time buffs from patch 3725 are reverted to make it harder to snowball out of control with a T3 land rush.</p>
+                            <ul>
+                                <li>BuildTime: <strike>2160</strike> → 2400</li>
+                            </ul>
+
+                            <h4>Titan:</h4>
+                            <p>After T3 rebalance Titans with their fast recharging shields became a bit too oppressive and they are currently stronger than loyalists. A small HP nerf should put the unit in the right place while not taking away from its specialty of constantly dashing in and out and letting its shield recharge.</p>
+
+                            <ul>
+                                <li>Health: <strike>2600</strike> → 2400</li>
+                            </ul>
+                            <h4>Loyalist:</h4>
+                            <p>Loyalists' ability has been underwhelming and thus it's getting a well-deserved buff, we hope this will be enough to make mixing in Loyalists in your army in later stages a more viable option instead of being a gimmick that is rarely used.</p>
+                            <ul>
+                                <li>The Loyalist's ability will no longer disable weapons and the charge will kick in 1 second faster</li>
+                            </ul>
+                        </div>
+                        
+                        <div id="Sniper" class="card">
+                            <h3>Sniper bots</h3>
+                            <p>Sniper bots get an overall nerf to make it harder to snowball out of control. With the energy cost nerf specifically we aim at delaying the first few snipers from hitting the field immediately after a player gets T3 Land.</p>
+                            
+                            <h4><img src="images/serasniper.png"> Seraphim (Usha-Ah)</h4>
+                            <ul>
+                                <li>Mass Cost: <strike>880</strike> → 960</li>
+                                <li>Energy Cost: <strike>9700</strike> → 15,360</li>
+                                <li>BuildTime: <strike>4500</strike> → 5400</li>
+                            </ul>
+                            <p>The snipe mode icon is changed to make the difference between the snipe mode and normal mode easier to see.</p>
+
+                            <h4><img src="/images/aeonsniper.png"> Aeon (Sprite Striker)</h4>
+                            <ul>
+                                <li>Mass Cost: <strike>800</strike> → 880</li>
+                                <li>Energy Cost: <strike>8900</strike> → 14,080</li>
+                                <li>BuildTime: <strike>4500</strike> → 4950</li>
+                            </ul>
+                        </div>
+                        
+                        <h2>Air</h2>
+
+                        <div id="Experimentals" class="card">
+                            <h3>Air Experimentals</h3>
+                            <p>Air experimentals were always extremely cheap in energy cost compared to t3 air. This led to the ability to build air t4’s without any power setup like is required for t3 air and thus became a relatively cheesy way to win games. With this change, the e cost is more streamlined with t3 air.</p>
+                            <p>We also reduce the crash damage of air T4s. Their ability to kill heavily shielded targets by simply dying and hitting them provided the defending player with little counter-play. They still deal a considerable amount of damage to not break the immersion of the game but these values will be further reduced if deemed necessary.</p>
+
+                            <h4><img src="images/awhassa.png">Ahwassa</h4>
+                            <ul>
+                                <li>Energy Cost: <strike>780,000 </strike> → 1,920,000</li>
+                                <li>DamageRadius: <strike>20</strike> → 19</li>
+                                <li>Crash Damage: <strike>10,000</strike> → 7000</li>
+                            </ul>
+                            <p>In addition to the energy cost nerf the ahwassa gets a small nerf to its AoE considering its dominance compared to the other air T4s.</p>
+
+                            <h4><img src="images/czar.png">CZAR</h4>
+                            <ul>
+                                <li>Energy Cost: <strike>731,250 </strike> → 1,530,000</li>
+                                <li>Chrash Damage: <strike>10,000</strike> → 7000</li>
+                            </ul>
+
+                            <h4><img src="images/soulripper.png">Soul Ripper</h4>
+                            <p>A decrease of roughly 15% across the board. The goal is to make the SR a more viable option and further establish it as the value over time air experimental. With the lower cost, it will be easier for the player to justify investing in the SR
+                                and slowly leverage a small-medium advantage he had in the air.</p>
+                            <p>In addition to the stat changes we also increase the movement speed by 1 and give it 75 hp regen per second.</p>
+                            <ul>
+                                <li>Health: <strike>90,000</strike> → 75,000</li>
+                                <li>Regen Rate: <strike>0</strike> → 75</li>
+                                <li>Mass Cost: <strike>34,000</strike> → 29,000</li>
+                                <li>Energy Cost: <strike>480,000</strike> → 812,000</li>
+                                <li>BuildTime: <strike>56,250</strike> → 48,000</li>
+                                <li>DPS: <strike>1535</strike> → 1368.3</li>
+                                <li>Chrash Damage: <strike>7000</strike> → 5000</li>
+                            </ul>
+                            <p>The decrease in hp is slightly larger than the decrease in DPS meaning the SR will be a bit less tanky but will pack a bigger punch relative to its cost.</p>
+                        </div>
+
+                        <div id="strat" class="card">
+                            <h3><img src="images/uefstrat.png"> Strategic Bombers</h3>
+                            <p>All strategic bombers have their elevation reduced. This will make them easier to hit by non-homing AA which should greatly increase the effectiveness of T1 AA and T2 Flak (although that will now hit rarely instead of never) which should make the early strats a lot less oppressive since now every play will be able to build a unit that will at least partially counter the strat.</p>
+                            <ul>
+                                <li>Elevation: <strike>20</strike> → 14</li>
+                            </ul>
+                        </div>
+
+                        <div id="t3air" class="card">
+                            <h3><img src="images/wasp.png"> T3 UEF Air</h3>
+                            <p>These changes should allow UEF air players to trick their opponents by including Air scouts in their mix and artificially inflating the size of their ASF cloud. It will also make the Air scouts harder to shoot down by static AA/ASF and buff unscouted strat runs.</p>
+                            
+                            Spy Plane:
+                            <ul>
+                                <li>Added Jamming for Spy Plane</li>
+                                <li>On by Default with no running cost</li>
+                            </ul>
+                            Strategic Bomber:
+                            <ul>
+                                <li>Added Jamming</li>
+                                <li>Off by Default</li>
+                                <li>Energy Maintenance Cost: <strike>0</strike> → 25</li>
+                            </ul>
+                        </div>
+
+                        <div id="t2air" class="card">
+                            <h3> T2 Air Chrash Damage</h3>
+                            
+                            <h4><img src="/images/notha.png"> Notha</h4>
+                            <ul>
+                                <li>Chrash Damage: <strike>25</strike> → 200</li>
+                            </ul>
+                            <p>For some reason Notha had different crash damage than other T2 Fighter bombers</p>
+
+                            <h4><img src="/images/Aeon_T2_Transport.png"> T2 Transports</h4>
+                            <ul>
+                                <li>Chrash Damage: <strike>25</strike> → 250</li>
+                            </ul>
+                            <p>T2 transports had lower crash damage than T1 (100). These changes will also nerf arty drops since now if the transports die and land on top of them it will kill all of the arties.</p>
+                        </div>
+
+                        <h2>Navy</h2>
+
+                        <div id="navyintro">
+                            <p>For a long time, Aeon frigates were absolute garbage while their Destro's were insanely good while Cybran had the exact opposite with OP frigate and weak destroyer. These changes redistribute the power of those factions while retaining the units' unique traits and further enhancing them by adjusting the ranges of the frigate. We hope it will also introduce more micro potential in frigate fights, especially with Cybran vs Aeon.</p>
+                            <p>Bulwark gets a mini-rework to establish it as a T2 support vessel instead of a unit that is mainly used during the T3 stage with Battlecruisers and Battleships. This should help UEF's notoriously weak T2 stage while making their T3 one less oppressive.</p>
+                            <p>However, with the changes to Bulwark UEF Battleships are left out to dry. We are making them slightly less clunky so that hopefully they can dodge at least some shot if you micro them.</p>
+                            <p>Tempest has been very powerful for a long time and it's getting a well-deserved nerf. It will cost a bit more, and you will need more BP/infrastructure ready to build one. It won't be able to act like a quick mass dump after spamming destroyers and skipping T3 Navy completely.</p>
+                        </div>
+
+                        <div id="frigets" class="card">
+                            <h3>Frigates</h3>
+                            <h4><img src="/images/aeonfrigate.png">Aeon</h4>
+                            <ul>
+                                <li>Mass Cost: <strike>290</strike> → 280</li>
+                                <li>Energy Cost: <strike>2900</strike> → 2800</li>
+                                <li>BuiltTime: <strike>1450</strike> → 1400</li>
+                                <li>Range: <strike>31</strike> → 33</li>
+                            </ul>
+                            <h4><img src="/images/cybranfrigate.png">Cybran</h4>
+                            <ul>
+                                <li>Mass Cost: <strike>250</strike> → 260</li>
+                                <li>Energy Cost: <strike>2500</strike> → 2600</li>
+                                <li>BuiltTime: <strike>1250</strike> → 1300</li>
+                                <li>Range: <strike>28</strike> → 26</li>
+                            </ul>
+                        </div>
+
+                        <div id="destroyer" class="card">
+                            <h3>Destroyers</h3>
+                            
+                            <h4><img src="/images/uefdestro.png">UEF</h4>
+                            <ul>
+                                <li>Health: <strike>7200</strike> → 8000</li>
+                            </ul>
+                            <p>The valiant has always been one of the weakest destroyers. With this change, we hope to give it more of a tank role that fights at a short range.</p>
+                            
+                            <h4><img src="/images/cybrandestro.png">Cybran</h4>
+                            <ul>
+                                <li>Health: <strike>6050</strike> → 6500</li>
+                                <li>TurretYawRange: <strike>140</strike> → 145</li>
+                            </ul>
+                            <p>Salem has always been extremely squishy compared to other destroyers. It will still have the least hp but will now be able to survive a few more shots.</p>
+                            <p>The TurretYawRange of salems is again slightly increased to improve the handling and micro potential.</p>
+
+                            <h4><img src="/images/exodus.png">Aeon</h4>
+                            <ul>
+                                <li>Health: <strike>7500</strike> → 7200</li>
+                                <li>Range: <strike>80</strike> → 70</li>
+                            </ul>
+                            <p>Exodus was one of the 2 higher-range destroyers yet it had the highest HP of all. This was necessary due to how weak the Aeon frigate was but this kind of balance made Aeon really bad at T1 and extremely oppressive at T2 where they spammed destroyers only. With the buffs to their frigate, we can finally tune down Exodus a bit. We are reducing its HP to punish Aeon players for letting their destroyers get into range of their enemy and reducing the max range down to 70 to allow shorter-range destroyers to get into range more easily. This will also mean that the Cybran destroyer will now outrange the Exodus and thus have some edge over them.</p>
+                        </div>
+
+                        <div id="bulwark" class="card">
+                            <h3><img src="images/UEF_T2_Shield_Boat.png"> Bulwark</h3>
+                            <p>Decrease of roughly 1/3 in the stats to allow UEF players to get them out during the T2 stage to support their navy without having to worry about having fewer destroyers and dying immediately to an enemy push.</p>
+                            <ul>
+                                <li>Mass Cost: <strike>1300</strike> → 900</li>
+                                <li>Energy Cost: <strike>13,000</strike> → 9000</li>
+                                <li>BuildTime: <strike>5200</strike> → 3600</li>
+                                <li>Energy Maintenance Cost: <strike>150</strike> → 100</li>
+                                <li>Health: <strike>750</strike> → 550</li>
+                                <li>Sheild HP: <strike>8000</strike> → 5500</li>
+                                <li>Shield Recharge Time: <strike>40</strike> → 30</li>
+                            </ul>
+                        </div>
+
+                        <div id="uefbattleship" class="card">
+                            <h3><img src="images/summit.png"> Summit</h3>
+                            <p>With the changes to the bulwark Summit will struggle against the other Battleships since it's the slowest one by far and is not able to dodge shots. It used to rely on Shield Boats to just tank all of that damage but that won't work to such a degree anymore. We are increasing its Movement Speed and Turn Rate slightly to make it less clunky and allow UEF players to micro their Battleships</p>
+                            <ul>
+                                <li>Movement Speed: <strike>2.5</strike> → 2.75</li>
+                                <li>Turn Rate: <strike>25</strike> → 27.5</li>
+                            </ul>
+                            <p>Acceleration and Break speed were adjusted accordingly</p>
+                        </div>
+
+                        <div id="tempest" class="card">
+                            <h3><img src="images/tempest.png"> Tempest</h3>
+                            <p>Tempest is an extremely powerful unit in the right hands. It was a common sight to see them with 20k+ mass killed while the Battleships had < 5k. With a relatively cheap mass cost and especially build time cost it was easy to rush with an ACU/T3 engineer and some T1 BP. If micro'ed properly enemy could never kill one without fully committing to a naval engagement thus allowing Tempests to gain a lot of value over time. These changes will hopefully make the unit more balance and force the Aeon players to have more BP in order to build a tempest.</p>
+                            <ul>
+                                <li>Mass Cost: <strike>22,000</strike> → 24,000</li>
+                                <li>Build Time: <strike>28,000</strike> → 38,400</li>
+                            </ul>
+                        </div>
+
+                        <h2>Engineers</h2>
+
+                        <div id="engie" class="card">
+                            <h3> Engineers</h3>
+                            <p>Engineer pathfinding is one of the most frustrating things in FAF. With the changes to their Turn rate, Back up distance, and Acceleration/Deaccelaration we hope to finally alleviate those issues. These changes will also make engineers more micro'able, especially in the early stages of the game eg. vs T1 bombers. If you want to read more take a look at this <a href="https://github.com/FAForever/fa/pull/4571">PR</a> that Jip made.</p>
+                            <p>We are also buffing the efficiency of higher-tech engineers. They will now get more bp while having the same cost.</p>
+                            <ul>
+                                <li>T1 Engineer: 10.4 Mass/bp</li>
+                                <li>T2 Engineer: 10 Mass/bp</li>
+                                <li>T3 Engineer: 9.6 Mass/bp</li>
+                            </ul>
+
+                            <h4><img src="/images/UEF_T2_Field_Engineer.png"> Sparky (UEF T2 Field Engineer)</h4>
+                            <ul>
+                                <li>Allow Sparkies to build intelligence structures(radars, sonars, stealth generators)</li>
+                                <li>Allow Sparkies to build T1 factories</li>
+                            </ul>
+                            <p>This small buff should make Sparkies easier and nicer to use by not requiring players to find the nearest T1 engineer on the frontline to construct a radar or a factory. We hope these changes will encourage more aggressive usage of the Sparky on the frontlines and in drops.</p>
+                        </div>
+
+                        <h2>Structures</h2>
+
+                        <div id="engiestations" class="card">
+                            <h3><img> Hives & Kennels</h3>
+                            <p>Hives have been the dominant engineer station forever now, they have many advantages over Kennels and are extremely dominant in the super-late game. These changes are meant to bring the Hives more in line with the Kennels without making them a non-viable option if you quickly want some concentrated, albeit less efficient, bp in your base in the mid to early late-game.</p>
+                            <p>Hives will now get less efficient the higher tech of the Hive you get, this is meant to reduce their strength as an insanely compact, high bp that is easy to shield. You will now have to pay more to have a more concentrated, higher HP, higher range BP.</p>
+                            <p>We are also reducing the HP of engineering stations to make them a bit easier to snipe and to emphasize protecting your BP more.</p>
+                            
+                            <h3><img src="">Hives</h3>
+                            <p>Hives have 3 different levels, I will denote them T1, T2, and T3 for clarity's sake.</p>
+                            <h4><img src="/images/hiveT1.png">T1 Hive</h4>
+                                <ul>
+                                    <li>Build Power: <strike>25</strike> → 20</li>
+                                    <li>Energy Cost: <strike>1750</strike> → 2100</li>
+                                </ul>
+                            <h4><img src="/images/hiveT2.png">T2 Hive</h4>
+                            <ul>
+                                <li>Health: <strike>1250</strike> → 1000</li>
+                                <li>Build Power: <strike>50</strike> → 37</li>
+                                <li>Energy Cost: <strike>4083.33</strike> → 4200</li>
+                            </ul>
+                            <h4><img src="/images/hiveT3.png">T3 Hive</h4>
+                            <ul>
+                                <li>Health: <strike>2750</strike> → 2000</li>
+                                <li>Build Power: <strike>75</strike> → 50</li>
+                                <li>Energy Cost: <strike>6416.66</strike> → 6300</li>
+                            </ul>
+
+                            <h3>Kennels</h3>
+                            <p>Kennels have 2 different levels, I will denote them T2 and T3.</p>
+                            <h4><img src="/images/kennelT2.png">T2 Kennel</h4>
+                            <ul>
+                                <li>Mass Cost: <strike>550</strike> → 525</li>
+                                <li>Energy Cost: <strike>2750</strike> → 2625</li>
+                                <li>Build Power: <strike>1100</strike> → 1000</li>
+                            </ul>
+                            <h4><img src="/images/kennelT3.png">T3 Kennel</h4>
+                            <ul>
+                                <li>Health: <strike>3000</strike> → 2500</li>
+                                <li>Build Rate: <strike>20</strike> → 30</li>
+                            </ul>
+                            <h4><img src="/images/kenneldrone.png">Kennel Drone</h4>
+                            <ul>
+                                <li>Health: <strike>6</strike> → 50</li>
+                                <li>Mass Cost: <strike>250</strike> → 100</li>
+                                <li>BuildTime: <strike>750</strike> → 500</li>
+                                <li>Elevation: <strike>2</strike> → 3</li>
+                            </ul>
+                            <p>With these changes, it will be less punishing to lose the drones as they will rebuild faster and at a much lower cost. The elevation increase should make the drones less prone to random AoE attacks landing on the base.</p>
+                        </div>
+
+                        <div id="t2arty" class="card">
+                            <h3>T2 Static Artillery</h3>
+                            <p>T2 static artilleries shouldn't be able to consistently hit small single targets. That's why we are increasing the firing randomness of all arties by 0.25. Aeon artillery gets a small buff as it's currently the most underwhelming one. We also normalized the unit economy stats and made a few small tweaks.</p>
+                            
+                            <h4><img src="/images/uefT2StaticArty.png"> UEF</h4>
+                            <ul>
+                                <li>Mass Cost: <strike>1890</strike> → 1900</li>
+                                <li>Energy Cost: <strike>13,500</strike> → 13,585</li>
+                                <li>Firing Randomness: <strike>2</strike> → 2.25</li>
+                            </ul>
+
+                            <h4><img src="/images/aeonT2StaticArty.png"> Aeon</h4>
+                            <ul>
+                                <li>Mass Cost: <strike>2079</strike> → 2080</li>
+                                <li>Energy Cost: <strike>14,850</strike> → 14,872</li>
+                                <li>Firing Randomness: <strike>1.5</strike> → 1.75</li>
+                                <li>Damage Radius: <strike>2</strike> → 2.25</li>
+                            </ul>
+
+                            <h4><img src="/images/seraT2StaticArty.png"> Seraphim</h4>
+                            <ul>
+                                <li>Mass Cost: <strike>1995</strike> → 2000</li>
+                                <li>Energy Cost: <strike>14,250</strike> → 14,300</li>
+                                <li>Firing Randomness: <strike>1.5</strike> → 1.75</li>
+                            </ul>
+
+                            <h4><img src="/images/cybranT2StaticArty.png"> Cybran</h4>
+                            <ul>
+                                <li>Energy Cost: <strike>12,000</strike> → 12,012</li>
+                                <li>Firing Randomness: <strike>2.5</strike> → 2.75</li>
+                            </ul>
+                        </div>
+
+                        <div id="nukes" class="card">
+                            <h3>Nukes</h3>
+                            <p>Nukes are extremely strong and can be very oppressive, especially in team games. In almost every game in an early late-game, it's a good idea to make a nuke. Its relatively low cost combined with having potential for game-ending damage while always being able to find value even if the enemy has adequate defenses in place makes it a no-brainer. Not to mention that it will force out SMDs, and not just 1, depending on the map it can be up to 4 which already makes the nuke worth it without even killing anything.</p>
+                            <p>The small mass cost increase and higher energy cost are supposed to make it more expensive and delay the 1st nuke by requiring more E infrastructure to set up. You will no longer be able to get T3, make 2 T3 pgens, and a nuke launcher immediately afterward. Additionally, the E cost of the missile itself is increased (The Launcher will now drain 5k instead of 4.5k E/sec), this will also increase the importance of adjacency while discouraging heavy assisting.</p>
+                            
+                            <h4>Nuclear warheads</h4>
+                            <ul>
+                                <li>Energy Cost: <strike>1,350,000</strike> → 1,500,000</li>
+                            </ul>
+
+                            <h4><img src="/images/nukelauncher.png">Nuke Silos</h4>
+                            <ul>
+                                <li>Mass Cost: <strike>15,000</strike> → 16,500</li>
+                                <li>Energy Cost: <strike>210,000</strike> → 412,500</li>
+                            </ul>
+                            
+                            <h3><img src="/images/nukesub.png">Nuke Subs</h3>
+
+                            <h4>Aeon & UEF</h4>
+                            <ul>
+                                <li>Mass Cost: <strike>9000</strike> → 9500</li>
+                                <li>Energy Cost: <strike>80,000</strike> → 152,000</li>
+                            </ul>
+
+                            <h4>Cybran</h4>
+                            <ul>
+                                <li>Mass Cost: <strike>10,000</strike> → 10,500</li>
+                                <li>Energy Cost: <strike>80,000</strike> → 152,000</li>
+                            </ul>
+                        </div>
+
+                        <div id="t3arty" class="card">
+                            <h3>T3 Static Artillery</h3>
+                            <p>Energy cost nerfs follow in the steps of Air experimentals and nukes. The E cost increase is meant to force players to set up proper energy infrastructure before making artillery instead of being able to dump all of their mass extremely fast. The E maintenance cost increase is meant to create a real operational cost, especially when a player has multiple artilleries.</p>
+                            <p>Increase E cost of all artilleries 1.5 times and double energy required to fire.</p>
+
+                            <h4><img src="/images/uefT3StaticArty.png"> UEF</h4>
+                            <ul>
+                                <li>Energy Cost: <strike>900,000</strike> → 1,350,000</li>
+                                <li>Energy Cost to Fire: <strike>8000</strike> → 16,000</li>
+                            </ul>
+
+                            <h4><img src="/images/aeonT3StaticArty.png"> Aeon</h4>
+                            <ul>
+                                <li>Energy Cost: <strike>915,000</strike> → 1,372,500</li>
+                                <li>Energy Cost to Fire: <strike>8500</strike> → 17,000</li>
+                            </ul>
+
+                            <h4><img src="/images/seraT3StaticArty.png"> Seraphim</h4>
+                            <ul>
+                                <li>Energy Cost: <strike>885,000</strike> → 1,327,500</li>
+                                <li>Energy Cost to Fire: <strike>7500</strike> → 15,000</li>
+                            </ul>
+
+                            <h4><img src="/images/cybranT3StaticArty.png"> Cybran</h4>
+                            <ul>
+                                <li>Energy Cost: <strike>870,000</strike> → 1,305,000</li>
+                                <li>Energy Cost to Fire: <strike>7000</strike> → 14,000</li>
+                            </ul>
+                        </div>
+
+                        <h2>Mechanics</h2>
+
+                        <div id="Mechanics" class="card">
+                            <h3><img src="/images/Upgrade_Icon.png"> Mechanics</h3>
+                            <ul>
+                                <li>New hotkey for setting target priorities of selected units to the type of unit that you hover over with the mouse</li>
+                                <li>All ACUs and SACUs that can make tac missiles will start construction by default instead of having to manually enable it.</li>
+                                <li>Loyalists will no longer redirect Billy Nukes</li>
+                            </ul>
+                        </div>
+
+                        <h2>Fixes</h2>
+
+                        <div id="fixes" class="card">
+                            <h3> Fixes</h3>
+                            <ul>
+                                <li>Fixed the icon of the Heavy Shield upgrade for Aeon ACU</li>
+                                <li>Fixed the damage of UEF and Sera T1 Artillery. They dealt 2 less damage than intended since the way that units break tree groups was changed some time ago.</li>
+                                <li>Adjust the hitbox of Sera Sniper so that MMLs can hit it properly</li>
+                            </ul>
+                        </div>
+
+                        <h2>Contributors</h2>
+
+                        <div id="contributors" class="card">
+                            <h3> Contributors</h3>
+                            <ul>
+                                <li>Spikey</li>
+                                <li>Farms</li>
+                                <li>Tagada</li>
+                                <li>Turin</li>
+                                <li>Jip</li>
+                                <li>Penguin</li>
+                                <li>4z0t</li>
+                            </ul>
+                        </div>
+                        <p style="height: 1000px"></p>
+                    </td>
+                    
+                    <td id="sidebar">
+                        <div id="icongrid">
+                            <h2><a href="#container">Contents</a></h2>
+                            
+							</p><p>Land<br>
+                            <a href="#T2Land"><img src="images/t2landhq.png"></a>
+                            <a href="#Asylum"><img src="images/asylum.png"></a>
+                            <a href="#t3lightbots"><img src="images/UEF_T3_Heavy_Assault_Bot.png"></a>
+                            <a href="#Sniper"><img src="images/serasniper.png"></a>
+
+   
+							</p><p>Air<br>
+                            <a href="#Experimentals"><img src="images/awhassa.png"></a>
+                            <a href="#strat"><img src="images/uefstrat.png"></a>
+                            <a href="#t3air"><img src="images/wasp.png"></a>
+                            <a href="#t2air"><img src="images/notha.png"></a>
+
+                            </p><p>Navy<br>
+                            <a href="#frigets"><img src="images/aeonfrigate.png"></a>
+                            <a href="#destroyer"><img src="images/cybrandestro.png"></a>
+                            <a href="#bulwark"><img src="images/UEF_T2_Shield_Boat.png"></a>
+                            <a href="#uefbattleship"><img src="images/summit.png"></a>
+                            <a href="#tempest"><img src="images/tempest.png"></a>
+                            
+                            </p><p>Engineers<br>
+                            <a href="#engie"><img src="images/UEF_T2_Field_Engineer.png"></a>
+
+							</p><p>Structures<br>
+                            <a href="#engiestations"><img src="images/kennelT3.png"></a>
+                            <a href="#t2arty"><img src="images/t3sonar.png"></a>
+                            <a href="#nukes"><img src="images/nukelauncher.png"></a>
+                            <a href="#t3arty"><img src="images/uefT3StaticArty.png"></a>
+
+							
+							</p><p>Miscellaneous<br>
+                            <a href="#Mechanics"><img src="images/Upgrade_Icon.png"></a>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>
