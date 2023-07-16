@@ -1,124 +1,111 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
     <meta charset="UTF-8" />
     <title>Patch 3757</title>
-    <link
-      href="http://fonts.googleapis.com/css→family=Open+Sans"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <link rel="stylesheet" href="/patchnotes.css" />
+    <link rel="stylesheet" href="../style/balance.css"/>
   </head>
-
   <body>
-    <table id="container">
-      <tbody>
-        <tr>
-          <td id="main">
-            <div id="intro">
-              <h1>Patch 3757</h1>
-              <p>Welcome to the patchnotes for the 3757 patch.</p>
-              <p>
-                A balance patch has been released with a few important changes
-                that have been planned for a while, but were delayed.
-              </p>
-              <p>We hope you enjoy this new patch</p>
-              <p>-- The Balance Team</p>
-            </div>
+    <main class="grid">
+      <div class="content">
 
-            <h2>Land</h2>
+        <div id="intro">
+          <h1>Patch 3757</h1>
+          <p> Welcome to the patchnotes for the 3757 patch.</p>
+          <p> A balance patch has been released with a few important changes that have been planned for a while, but were delayed. </p>
+          <p>We hope you enjoy this new patch</p>
+          <p>-- The Balance Team</p>
+        </div>
 
-            <div id="GC" class="card">
-              <h3>
-                <img src="/images/galacticcolossus.png" /> Galactic Colossus
-              </h3>
-              <p>
-                Previously the claws would instantaneously destroy the unit upon
-                arrival. This matched the old behavior, but with the bug fixes
-                of the claws it was only slightly too strong.
-              </p>
+        <h2>Land</h2>
 
-              <ul>
-                <li>Claw Damage: 730 dps</li>
-              </ul>
-            </div>
+        <div id="land">
 
-            <h2>Structures</h2>
+          <div id="gc" class="card">
+            <h3><img src="/images/galacticcolossus.png"/> Galactic Colossus </h3>
+            <p> Previously the claws would instantaneously destroy the unit upon arrival. This matched the old behavior, but with the bug fixes of the claws it was only slightly too strong. </p>
+            <ul>
+              <li>Claw Damage: 730 dps</li>
+            </ul>
+          </div>
 
-            <div id="airstaging" class="card">
-              <h3><img src="/images/cybranairstaging.png" /> Air Staging Facility</h3>
-              <p>
-                When they were moved from tech 2 to tech 1 their build time was
-                not reduced accordingly.
-              </p>
-              <ul>
-                <li>Build Time: <strike>450</strike> → 350</li>
-              </ul>
-            </div>
+        </div>
 
-            <h2>Commander</h2>
+        <h2>Structures</h2>
+
+        <div id="structures">
+
+          <div id="airstaging" class="card">
+            <h3><img src="/images/cybranairstaging.png"/> Air Staging Facility</h3>
+            
+            <p> When they were moved from tech 2 to tech 1 their build time was not reduced accordingly. </p>
+            <ul>
+              <li>Build Time: <strike>450</strike> → 350</li>
+            </ul>
+          </div>
+
+        </div>
+
+        <h2>ACUs</h2>
+
+        <div id="acus">
+          <div id="aeonacu">
 
             <div id="Chrono" class="card">
               <h3><img src="/images/Enhancements/aeon/chrono.png"/> Chrono Dampener</h3>
               <ul>
-                <li>
-                  The chrono dampener received several buffs over the past year.
-                  With this patch we nerf it by changing how the Chrono Dampener
-                  behaves.
-                </li>
-                <li>
-                  The old behavior applies the same stun on all units over a
-                  large radius every 5.0 seconds. The stun duration was 3.5
-                  seconds.
-                </li>
-                <li>
-                  The new behavior applies a diminishing stun based on the
-                  distance of the unit to the ACU over a large radius every 5.0
-                  seconds. The stun is applied in slices of 0.4 seconds. There
-                  are 10 slices. Units that are on top of the ACU receive all
-                  slices, and are therefore stunned for 4.0 seconds. Units at
-                  the outer edge of the radius receive only a single slice and
-                  are therefore stunned for 0.4 seconds.
-                </li>
+                <li> The chrono dampener received several buffs over the past year. With this patch we nerf it by changing how the Chrono Dampener behaves. </li>
+                <li> The old behavior applies the same stun on all units over a large radius every 5.0 seconds. The stun duration was 3.5 seconds. </li>
+                <li> The new behavior applies a diminishing stun based on the distance of the unit to the ACU over a large radius every 5.0 seconds. The stun is applied in slices of 0.4 seconds. There are 10 slices. Units that are on top of the ACU receive all slices, and are therefore stunned for 4.0 seconds. Units at the outer edge of the radius receive only a single slice and are therefore stunned for 0.4 seconds. </li>
               </ul>
             </div>
 
-            <h2>Contributors</h2>
+          </div>
+        </div>
 
-            <div id="contributors" class="card">
-              <h3>Contributors</h3>
-              <ul>
-                <li>Jip</li>
-                <li>SpikeyNoob</li>
-                <li>Basilisk3</li>
-                <li>Deribus</li>
-              </ul>
-            </div>
-            <p style="height: 1000px"></p>
-          </td>
+        <h2>Contributors</h2>
 
-          <td id="sidebar">
-            <div id="icongrid">
-              <h2><a href="#container">Contents</a></h2>
+        <div id="contributors" class="card">
+          <h3>Contributors</h3>
+          <ul>
+            <li>Jip</li>
+            <li>SpikeyNoob</li>
+            <li>Basilisk3</li>
+            <li>Deribus</li>
+          </ul>
+        </div>
 
-              Land<br />
-              <a href="#GC"><img src="/images/galacticcolossus.png" /></a>
-              <br /><br />
+        <div class="backtotop">
+          <button>
+            <a class="toptext" href="#top">Back to Top</a>
+          </button>
+        </div>
 
-              Structures<br />
-              <a href="#airstaging"><img src="/images/cybranairstaging.png" /></a>
-              <br /><br />
+      </div>
+      <div class="sidebar">
+        <div class="icongrid">
+          <h2>Contents</h2><br>
 
-              ACU<br />
-              <a href="#Chrono"
-                ><img src="/images/Enhancements/aeon/chrono.png"
-              /></a>
-            </div>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+          Land
+          <br/>
+          <a href="#GC"><img src="/images/galacticcolossus.png"/></a>
+          <br/><br/>
+
+          Structures
+          <br/>
+          <a href="#airstaging"><img src="/images/cybranairstaging.png"/></a>
+          <br/><br/>
+
+          ACU
+          <br/>
+          <a href="#Chrono"><img src="/images/Enhancements/aeon/chrono.png"></a>
+        </div>
+      </div>
+    </main>
   </body>
+  <footer >
+    <a href="../index.html">Back to Patchnote List</a>
+    <p>© 2023 FAForever</p>
+  </footer>
 </html>

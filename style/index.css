@@ -1,0 +1,20 @@
+@import 'root.css';
+
+.header {
+    background: var(--Primary-BG);
+    padding: 20px;
+    text-align: center;
+    font-size: 30px;
+}
+
+a {
+    color: var(--Link);
+}
+
+a:visited {
+    color: var(--Link-Visited);
+}
+
+a:hover {
+    color: var(--Link-Hover);
+}
