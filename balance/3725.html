@@ -6,447 +6,478 @@
     <title>Patch 3725</title>
     <link rel="stylesheet" href="../style/balance.css"/>
   </head>
-
     <body>
-        <table id="container">
-            <tbody>
-                <tr>
-                    <td id="main">
-                        <div id="intro">
-                            <h1>Patch 3725</h1>
-                            <p>Welcome to the patchnotes for the 3725 patch.</p>
-                            <p>This patch touches various land, naval and air units as well as reworks a couple of ACU upgrades. Notably seraphim are receiving significant nerfs to Selen cloak and Zthuee build time efficiency while cybran are getting some buffs that will make their midgame a lot more robust. Plus various QoL improvements and fixes to inconsistent unit behavior.</p>
-                            <p>Have fun playing with the new patch! (or don't)</p>
-                            <p>-- The Balance Team</p>
-                        </div>
+      <main class="grid">
+        <div class="content">
+
+          <div id="intro">
+            <h1>Patch 3725</h1>
+            <p>Welcome to the patchnotes for the 3725 patch.</p>
+            <p>This patch touches various land, naval and air units as well as reworks a couple of ACU upgrades. Notably seraphim are receiving significant nerfs to Selen cloak and Zthuee build time efficiency while cybran are getting some buffs that will make their midgame a lot more robust. Plus various QoL improvements and fixes to inconsistent unit behavior.</p>
+            <p>Have fun playing with the new patch! (or don't)</p>
+            <h4>-- The Balance Team</h4>
+        </div>
+
+        <h2>Land</h2>
+
+        <div id="land">
+
+          <div id="zuee" class="card">
+            <h3><img src="/images/zuee.png"> Zthuee</h3>
+            <p>Zthuees are more efficient BP-wise for their strength compared to other T1 arties which allows for powerful arty spam with a rather small investment in factories. This brings them more in line with other factions.</p>
+
+            <ul>
+                <li>BuildTime: <strike>180</strike> → 270</li>
+            </ul>
+          </div>
+
+          <div id="t3lightbots" class="card">
+            <h3>Tech 3 Light Assult Bots</h3>
+                            
+            <p>This is a small buff to the Titan and the Loyalist bringing their E and BT costs more in line with other T3 units which should make massing them a bit easier, potentially prolonging the T3 light bot stage before bricks and percivals come out.</p>
+
+              <div id="titan">
+                <h3><img src="/images/titan.png">Titan</h3>
+                
+                  <ul>
+                    <li>BuildCostEnergy: <strike>5400</strike> → 5250</li>
+                    <li>BuildTime: <strike>2400</strike> → 2160</li>
+                  </ul>
+              </div>
+
+              <div id="loya">
+                <h3><img src="/images/loya.png">Loyalist</h3>
+
+                <ul>
+                  <li>BuildCostEnergy: <strike>5400</strike> → 5250</li>
+                  <li>BuildTime: <strike>2400</strike> → 2160</li>
+                </ul>
+
+                <p>Allows loyalists to better deal with T2 which is the main threat during early T3 stage.</p>
+                
+                <ul>
+                  <li>Add 1.5s stun to the slow-firing weapon affecting units up to and including T2, excluding navy and structures</li>
+                </ul>
+              </div>
+          </div>
                         
-                        
-                        <h2>Land</h2>
-
-                        <div id="zuee" class="card">
-                            <h3><img src="/images/zuee.png"> Zthuee</h3>
-                            <p> </p>
-                            <ul>
-                                <li>BuildTime: <strike>180</strike> → 270</li>
-                            </ul>
-                            <p>Zthuees are more efficient BP-wise for their strength compared to other T1 arties which allows for powerful arty spam with a rather small investment in factories. This brings them more in line with other factions.</p>
-                        </div>
-                        
-                        <div id="t3lightbots" class="card">
-                            <h3>Tech 3 Light Assult Bots</h3>
+          <div id="t1scouts" class="card">
+            <h3>Tech 1 Land Scouts</h3>
                             
-                            <p>This is a small buff to the Titan and the Loyalist bringing their E and BT costs more in line with other T3 units which should make massing them a bit easier, potentially prolonging the T3 light bot stage before bricks and percivals come out.</p>
+            <p>Make scouts slightly more appealing to create early game and help the scouts to not aggro on enemy units and civilians from far away when they are given an attack move or an assist order.</p>
 
-                            <div id="titan">
-                                <h3><img src="/images/titan.png">Titan</h3>
-                                <ul>
-                                    <li>BuildCostEnergy: <strike>5400</strike> → 5250</li>
-                                    <li>BuildTime: <strike>2400</strike> → 2160</li>
-                                </ul>
-                            </div>
+              <div id="snoop">
+                <img src="/images/snoop.png"><b><u>UEF Scout (Snoop)</u></b>
+                <ul>
+                  <li>Reduce the aggro range while on assist/attack move</li>
+                  <li>BuildTime: <strike>80</strike> → 60</li>
+                </ul>
+              </div>
+              
+              <div id="mole">
+                <img src="/images/mole.png"><b><u>Cybran Scout (Mole)</u></b>
+                <ul>
+                    <li>BuildCostEnergy: <strike>80</strike> → 60</li>
+                    <li>EnergyMaintenanceCost: <strike>5</strike> → 1</li>
+                    <li>Reduce the aggro range while on assist/attack move</li>
+                    <li>BuildTime: <strike>80</strike> → 60</li>
+                </ul>
+              </div>
+                   
+              <div id="spirit">
+                <img src="/images/spirit.png"><b><u>Aeon Scout (Spirit)</u></b>
+                <ul>
+                  <li>BuildCostEnergy: <strike>40</strike> → 60</li>
+                  <li>Reduce the aggro range while on assist/attack move</li>
+                  <li>BuildTime: <strike>80</strike> → 60</li>
+                </ul>
+              </div>
 
-                            <div id="loya">
-                                <h3><img src="/images/loya.png">Loyalist</h3>
+              <div id="selen">
+                <img src="/images/selen.png"><b><u>Seraphim Scout (Selen)</u></b>
+                <ul>
+                  <li>Reduce the aggro range while on assist/attack move</li>
+                  <li>BuildTime: <strike>80</strike> → 60</li>
+                  <li>Energy Maintenance Cost: <strike>0</strike> → 1</li>
+                  <li>StealthWaitTime: <strike>1</strike> → 3</li>
+                  <li>Vision and radar range are now multiplied by 0.6 when entering cloak mode</li>
+                </ul>
+                <p>Drastically reduce the abusiveness of cloaked selens both in the early game with the reduced radar as well as in the mid game with energy maintenance cost.</p>
+              </div>
+          </div>
 
-                                <ul>
-                                    <li>BuildCostEnergy: <strike>5400</strike> → 5250</li>
-                                    <li>BuildTime: <strike>2400</strike> → 2160</li>
-                                </ul>
+          <div id="labs" class="card">
+            <h3><img src="/images/flare.png"> LABs</h3>
+            
+            <p>Allow for more reliable hitting of unmicroed labs moving at an angle.</p>
 
-                                <p>Allows loyalists to better deal with T2 which is the main threat during early T3 stage.</p>
-                                <ul>
-                                    <li>Add 1.5s stun to the slow-firing weapon affecting units up to and including T2, excluding navy and structures</li>
-                                </ul>
+            <ul>
+              <li>Slightly increase the hitbox</li>
+            </ul>
+          </div>
 
-                            </div>
-                        </div>
-                        
-                        <div id="t1scouts" class="card">
-                            <h3>Tech 1 Land Scouts</h3>
-                            
-                            <p>Make scouts slightly more appealing to create early game and help the scouts to not aggro on enemy units and civilians from far away when they are given an attack move or an assist order.</p>
+          <div id="beetle" class="card">
+            <h3><img src="/images/beetle.png"> Firebeetle</h3>
 
-                            <div id="snoop">
-                                <img src="/images/snoop.png"><b><u>UEF Scout (Snoop)</u></b>
-                                <ul>
-                                    <li>Reduce the aggro range while on assist/attack move</li>
-                                    <li>BuildTime: <strike>80</strike> → 60</li>
-                                </ul>
-                            </div>
+            <p>Slightly increase maneuverability to compensate for pathfinding, slightly increase the explosion radius and buff hp to 400 for slightly more survivability, notably allowing it to survive an obsidian shot. Make the beetle come close before detonating if it is manually ordered to attack a unit, before it would detonate at max range and miss a lot of potential damage, now it either detonates up close or gets killed before that and detonates closer than before anyway. Added an extra range ring to indicate the detonation trigger radius.</p>
 
-                            <div id="mole">
-                                <img src="/images/mole.png"><b><u>Cybran Scout (Mole)</u></b>
-                                <ul>
-                                    <li>BuildCostEnergy: <strike>80</strike> → 60</li>
-                                    <li>EnergyMaintenanceCost: <strike>5</strike> → 1</li>
-                                    <li>Reduce the aggro range while on assist/attack move</li>
-                                    <li>BuildTime: <strike>80</strike> → 60</li>
-                                </ul>
-                            </div>
-                            
-                            <div id="spirit">
-                                <img src="/images/spirit.png"><b><u>Aeon Scout (Spirit)</u></b>
-                                <ul>
-                                    <li>BuildCostEnergy: <strike>40</strike> → 60</li>
-                                    <li>Reduce the aggro range while on assist/attack move</li>
-                                    <li>BuildTime: <strike>80</strike> → 60</li>
-                                </ul>
-                            </div>
+            <ul>
+              <li>HP: <strike>350</strike> → 400</li>
+              <li>ExplosionRadius: <strike>6</strike> → 6.5</li>
+              <li>MaxAcceleration: <strike>5</strike> → 7</li>
+              <li>TurnRate: <strike>160</strike> → 200</li>
+              <li>Reduce detonation trigger distance when manually attacking a unit</li>
+            </ul>
+          </div>
 
-                            <div id="selen">
-                                <img src="/images/selen.png"><b><u>Seraphim Scout (Selen)</u></b>
-                                <ul>
-                                    <li>Reduce the aggro range while on assist/attack move</li>
-                                    <li>BuildTime: <strike>80</strike> → 60</li>
-                                    <li>Energy Maintenance Cost: <strike>0</strike> → 1</li>
-                                    <li>StealthWaitTime: <strike>1</strike> → 3</li>
-                                    <li>Vision and radar range are now multiplied by 0.6 when entering cloak mode</li>
-                                </ul>
-                                <p>Drastically reduce the abusiveness of cloaked selens both in the early game with the reduced radar as well as in the mid game with energy maintenance cost.</p>
-                            </div>
-                        </div>
+          <div id="rhino" class="card">
+            <h3><img src="/images/rhino.png"> Rhino</h3>
+            
+            <ul>
+              <li>Revert the weapon from a beam-type to a projectile-type to prevent misses when leading targets</li>
+            </ul>
+          </div>
 
-                        <div id="labs" class="card">
-                            <h3><img src="/images/flare.png"> LABs</h3>
-                            <p> </p>
-                            <ul>
-                                <li>Slightly increase the hitbox</li>
-                            </ul>
-                            <p>Allow for more reliable hitting of unmicroed labs moving at an angle.</p>
-                        </div>
+        </div>
 
-                        <div id="beetle" class="card">
-                            <h3><img src="/images/beetle.png"> Firebeetle</h3>
-                            <p> </p>
-                            <ul>
-                                <li>HP: <strike>350</strike> → 400</li>
-                                <li>ExplosionRadius: <strike>6</strike> → 6.5</li>
-                                <li>MaxAcceleration: <strike>5</strike> → 7</li>
-                                <li>TurnRate: <strike>160</strike> → 200</li>
-                                <li>Reduce detonation trigger distance when manually attacking a unit</li>
-                            </ul>
-                            <p>Slightly increase maneuverability to compensate for pathfinding, slightly increase the explosion radius and buff hp to 400 for slightly more survivability, notably allowing it to survive an obsidian shot. Make the beetle come close before detonating if it is manually ordered to attack a unit, before it would detonate at max range and miss a lot of potential damage, now it either detonates up close or gets killed before that and detonates closer than before anyway. Added an extra range ring to indicate the detonation trigger radius.</p>
-                        </div>
+        <h2>Air</h2>
 
-                        <div id="rhino" class="card">
-                            <h3><img src="/images/rhino.png"> Rhino</h3>
-                            <p> </p>
-                            <ul>
-                                <li>Revert the weapon from a beam-type to a projectile-type to prevent misses when leading targets</li>
-                            </ul>
-                        </div>
+        <div id="air">
 
-                        <h2>Air</h2>
+          <div id="t1trans" class="card">
+            <h3><img src="/images/aeont1trans.png"> T1 Transports</h3>
+            
+            <ul>
+                <li>Add dummy weapons to T1 transports which allows LABs inside the transport to focus fire targets</li>
+            </ul>
+          </div>
 
-                        <div id="t1trans" class="card">
-                            <h3><img src="/images/aeont1trans.png"> T1 Transports</h3>
-                            <p> </p>
-                            <ul>
-                                <li>Add dummy weapons to T1 transports which allows LABs inside the transport to focus fire targets</li>
-                            </ul>
-                        </div>
+          <div id="scorcher" class="card">
+            <h3><img src="/images/t1bomber.png"> Scorcher</h3>
 
-                        <div id="scorcher" class="card">
-                            <h3><img src="/images/t1bomber.png"> Scorcher</h3>
-                            <p> </p>
-                            <ul>
-                                <li>Damage: <strike>4</strike> → 4.5</li>
-                                <li>InitialDamage: <strike>47.5</strike> → 42.5</li>
-                                <li>MuzzleSalvoDelay: <strike>0.3</strike> → 0.2</li>
-                            </ul>
-                            <p>Scorcher’s drop pattern allows it to sometimes kill engies even if enemy manages to partially dodge. These changes convert some of the bomb’s initial damage to damage over time as well as make the drop pattern tighter resulting in a smaller spread of the bombs thus not allowing the last two of them to home in on an engie that had already started to dodge.</p>
-                        </div>
+            <p>Scorcher’s drop pattern allows it to sometimes kill engies even if enemy manages to partially dodge. These changes convert some of the bomb’s initial damage to damage over time as well as make the drop pattern tighter resulting in a smaller spread of the bombs thus not allowing the last two of them to home in on an engie that had already started to dodge.</p>
 
-                        <div id="notha" class="card">
-                            <h3><img src="/images/notha.png"> Notha</h3>
-                                <p> </p>
-                                <ul>
-                                    <li>HP: <strike>1175</strike> → 1000</li>
-                                </ul>
-                                <p>Make shooting nothas down easier as they could be extremely difficult to deal with if you lose air control.</p>
-                        </div>
+            <ul>
+                <li>Damage: <strike>4</strike> → 4.5</li>
+                <li>InitialDamage: <strike>47.5</strike> → 42.5</li>
+                <li>MuzzleSalvoDelay: <strike>0.3</strike> → 0.2</li>
+            </ul>
+          </div>
 
-                        <div id="soulripper" class="card">
-                            <h3><img src="/images/soulripper.png"> Soul Ripper</h3>
-                                <p> </p>
-                                <ul>
-                                    <li>Add Stealth at -600 energy maintenance cost</li>
-                                </ul>
-                                <p>After the numerous veterancy changes as well as experimental BT changes soul ripper has lost most of its strength, this will allow it to rotate around the map easier and be more effective at harassing and sniping.</p>
-                        </div>
+          <div id="notha" class="card">
+            <h3><img src="/images/notha.png"> Notha</h3>
 
-                        <div id="strats" class="card">
-                            <h3>Stratigic Bombers</h3>
+            <p>Make shooting nothas down easier as they could be extremely difficult to deal with if you lose air control.</p>
 
-                            <p>Reduce the snowball effect from early strat bomber rushes killing mexes continuously and regaining any hp lost, making it very difficult to kill them if you don't have air control.</p>
+            <ul>
+              <li>HP: <strike>1175</strike> → 1000</li>
+            </ul>
+          </div>
 
-                            <div id="cstrat">
-                                <h3><img src="/images/cybranstrat.png"> Revenant</h3>
-                                    <p> </p>
-                                    <ul>
-                                        <li>DamageRadius: <strike>7</strike> → 6.5</li>
-                                        <li>EnergyMaintenanceCost: <strike>65</strike> → 150</li>
-                                        <li>Double the amount of mass killed required to vet</li>
-                                    </ul>
-                            </div>
+          <div id="soulripper" class="card">
+            <h3><img src="/images/soulripper.png"> Soul Ripper</h3>
+            
+            <p>After the numerous veterancy changes as well as experimental BT changes soul ripper has lost most of its strength, this will allow it to rotate around the map easier and be more effective at harassing and sniping.</p>
 
-                            <div id="astrat">
-                                <h3><img src="/images/aeonstrat.png"> Shocker</h3>
-                            
-                                <ul>
-                                    <li>Damage: <strike>3450</strike> → 3000</li>
-                                    <li>DamageRadius: <strike>4</strike> → 5.25</li>
-                                    <li>Added a 3s stun of units up to and including T3</li>
-                                    <li>Double the amount of mass killed required to vet</li>
-                                </ul>
-                            </div>
+            <ul>
+              <li>Add Stealth at -600 energy maintenance cost</li>
+            </ul>
+          </div>
 
-                            <div id="sstrat">
-                                <h3><img src="/images/serastrat.png"> Sinntha</h3>
-                                <p></p>
-                                <ul>
-                                    <li>Damage: <strike>3250</strike> → 3000</li>
-                                    <li>DamageRadius: <strike>5</strike> → 6</li>
-                                    <li>Double the amount of mass killed required to vet</li>
-                                </ul>
-                            </div>
+          <div id="strats" class="card">
+            <h3>Stratigic Bombers</h3>
 
-                            <div id="ustrat">
-                                <h3><img src="/images/uefstrat.png"> Ambassador</h3>
-                                <p></p>
-                                <ul>
-                                    <li>Damage: <strike>3000</strike> → 3100</li>
-                                    <li>DamageRadius: <strike>6</strike> → 5.5</li>
-                                    <li>Double the amount of mass killed required to vet</li>
-                                </ul>
-                            </div>
+            <p>Reduce the snowball effect from early strat bomber rushes killing mexes continuously and regaining any hp lost, making it very difficult to kill them if you don't have air control.</p>
 
-                        </div>
+            <div id="cstrat">
+              <h3><img src="/images/cybranstrat.png"> Revenant</h3>
+              
+              <ul>
+                <li>DamageRadius: <strike>7</strike> → 6.5</li>
+                <li>EnergyMaintenanceCost: <strike>65</strike> → 150</li>
+                <li>Double the amount of mass killed required to vet</li>
+              </ul>
+            </div>
 
-                        <div id="aeonbomber" class="card">
-                            <h3><img src="/images/aeont1bomber.png"> Shimmer</h3>
-                            <p></p>
-                            <ul>
-                                <li>Better match the EMP radius to the damage radius</li>
-                            </ul>
-                        </div>
+            <div id="astrat">
+              <h3><img src="/images/aeonstrat.png"> Shocker</h3>
+            
+              <ul>
+                <li>Damage: <strike>3450</strike> → 3000</li>
+                <li>DamageRadius: <strike>4</strike> → 5.25</li>
+                <li>Added a 3s stun of units up to and including T3</li>
+                <li>Double the amount of mass killed required to vet</li>
+              </ul>
+            </div>
 
-                        <div id="jester" class="card">
-                            <h3><img src="/images/jester.png"> Jester</h3>
-                            <p></p>
-                            <ul>
-                                <li>Fix the bug where it would not do damage to moving units</li>
-                                <li>Replace splash damage with soft projectile homing</li>
-                            </ul>
-                            <p>Now jester should be able to hit all or at least most targets consistently.</p>
-                        </div>
+            <div id="sstrat">
+              <h3><img src="/images/serastrat.png"> Sinntha</h3>
+              <ul>
+                <li>Damage: <strike>3250</strike> → 3000</li>
+                <li>DamageRadius: <strike>5</strike> → 6</li>
+                <li>Double the amount of mass killed required to vet</li>
+              </ul>
+            </div>
 
-                        <h2>Navy</h2>
+            <div id="ustrat">
+              <h3><img src="/images/uefstrat.png"> Ambassador</h3>
+              <ul>
+                <li>Damage: <strike>3000</strike> → 3100</li>
+                <li>DamageRadius: <strike>6</strike> → 5.5</li>
+                <li>Double the amount of mass killed required to vet</li>
+              </ul>
+            </div>
 
-                        <div id="destroyers" class="card">
-                            <h3>Tech 2 Destroyer</h3>
+          </div>
 
-                            <div id="udestro">
-                                <h3><img src="/images/uefdestroyer.png">UEF</h3>
+          <div id="aeonbomber" class="card">
+            <h3><img src="/images/aeont1bomber.png"> Shimmer</h3>
+            <ul>
+              <li>Better match the EMP radius to the damage radius</li>
+            </ul>
+          </div>
 
-                                <p>Improve handling and micro potential, slightly improve effectiveness vs submarines.</p>
+          <div id="jester" class="card">
+            <h3><img src="/images/jester.png"> Jester</h3>
+            
+            <p>Now jester should be able to hit all or at least most targets consistently.</p>
+            
+            <ul>
+              <li>Fix the bug where it would not do damage to moving units</li>
+              <li>Replace splash damage with soft projectile homing</li>
+            </ul>
+            
+          </div>
 
-                                <ul>
-                                    <li>TurretYawRange: <strike>140</strike> → 160</li>
-                                    <li>TurretYawSpeed: <strike>90</strike> → 100</li>
-                                    <li>Torpedo firing cycle adjusted to combat torpedo defense better</li>
-                                </ul>
-                            </div>
+        </div>
 
-                            <div id="cdestro">
-                                <h3><img src="/images/cybrandestoryer.png">Cybran</h3>
-                                
-                                <p>Make it slightly less punishing to have to retreat your navy.</p>
+        <h2>Navy</h2>
 
-                                <ul>
-                                    <li>TurretYawRange: <strike>135</strike> → 140</li>
-                                </ul>
-                            </div>
+        <div id="navy">
 
-                            <div id="adestro">
-                                <h3><img src="/images/aeondestroyer.png">Aeon</h3>
-                                
-                                <p>Slightly reduce the micro potential to soften the snowball effect that can occur with aeon destroyers.</p>
+          <div id="destroyers" class="card">
+            <h3>Tech 2 Destroyer</h3>
 
-                                <ul>
-                                    <li>TurretYawRange: <strike>160</strike> → 150</li>
-                                    <li>TurretYawSpeed: <strike>100</strike> → 90</li>
-                                </ul>
-                                
-                            </div>
+            <div id="udestro">
+              <h3><img src="/images/uefdestroyer.png">UEF</h3>
 
-                            <div id="sdestro">
-                                <h3><img src="/images/seradestoryer.png">Seraphim</h3>
-                                                              
-                                <ul>
-                                    <li>Torpedo firing cycle adjusted to combat torpedo defense better</li>
-                                </ul>
-                            </div>
+              <p>Improve handling and micro potential, slightly improve effectiveness vs submarines.</p>
 
-                        </div>
+              <ul>
+                <li>TurretYawRange: <strike>140</strike> → 160</li>
+                <li>TurretYawSpeed: <strike>90</strike> → 100</li>
+                <li>Torpedo firing cycle adjusted to combat torpedo defense better</li>
+              </ul>
+            </div>
 
-                        <div id="atlantis" class="card">
-                            <h3><img src="/images/atlantis.png"> Atlantis</h3>
-                            <p></p>
-                            <ul>
-                                <li>Fix the AA behaving in a way inconsistent with the stats, adjust the stats to preserve the current balance</li>
-                            </ul>
-                        </div>
+            <div id="cdestro">
+              <h3><img src="/images/cybrandestoryer.png">Cybran</h3>
+                
+              <p>Make it slightly less punishing to have to retreat your navy.</p>
 
-                        <h2>Structures</h2>
+              <ul>
+                <li>TurretYawRange: <strike>135</strike> → 140</li>
+              </ul>
+            </div>
 
-                        <div id="kennels" class="card">
-                            <h3><img src="/images/kenneldrone.png"> Kennel Drones</h3>
-                            <p></p>
-                            <ul>
-                                <li>Now have higher selection priority than buildings</li>
-                            </ul>
-                        </div>
+            <div id="adestro">
+              <h3><img src="/images/aeondestroyer.png">Aeon</h3>
+                
+              <p>Slightly reduce the micro potential to soften the snowball effect that can occur with aeon destroyers.</p>
 
-                        <div id="uefsonar" class="card">
-                            <h3><img src="/images/ueft3sonar.png"> UEF T3 Sonar</h3>
-                            <p></p>
-                            <ul>
-                                <li>Add Jamming</li>
-                            </ul>
-                        </div>
+              <ul>
+                <li>TurretYawRange: <strike>160</strike> → 150</li>
+                <li>TurretYawSpeed: <strike>100</strike> → 90</li>
+              </ul>             
+            </div>
 
-                        <div id="para" class="card">
-                            <h3><img src="/images/paragon.png"> Paragon</h3>
-                            <p></p>
-                            <ul>
-                                <li>Add a 100,000 E storage</li>
-                            </ul>
-                            <p>This will prevent the bug where despite not draining more E than paragon provides you still go into stall and drop shields.</p>
-                        </div>
+            <div id="sdestro">
+              <h3><img src="/images/seradestoryer.png">Seraphim</h3>
+                                              
+              <ul>
+                <li>Torpedo firing cycle adjusted to combat torpedo defense better</li>
+              </ul>
+            </div>
 
-                        <div id="pds" class="card">
-                            <h3><img src="/images/aeont1pd.png"> T1 PDs</h3>
-                            <p></p>
-                            <ul>
-                                <li>Adjust the hitboxes and bones of the PDs to make the wall-pd template behave the same way for each faction</li>
-                            </ul>
-                        </div>
+          </div>
 
+          <div id="atlantis" class="card">
+          <h3><img src="/images/atlantis.png"> Atlantis</h3>
+          
+          <ul>
+            <li>Fix the AA behaving in a way inconsistent with the stats, adjust the stats to preserve the current balance</li>
+          </ul>
+          </div>
 
-                        <div id="t4arty" class="card">
-                            <h3><img src="/images/scathis.png"> T4 Artilleries</h3>
-                            <p></p>
-                            <ul>
-                                <li>Ranges normalized to 4000 (Mavor range)</li>
-                            </ul>
-                            <p>This makes all T4 arties viable for all 3 people who play 81x81 maps.</p>
-                        </div>
+        </div>
 
+        <h2>Structures</h2>
 
-                        <h2>Miscellaneous</h2>
+        <div id="structure">
 
-                        <div id="cybstealth" class="card">
-                            <h3><img src="/images/Enhancements/cybran/stealth.png">Cybran ACU Stealth Upgrade</h3>
-                            <p></p>
-                            <ul>
-                                <li>EnergyCost: <strike>5000</strike> → 14000</li>
-                                <li>MassCost: <strike>350</strike> → 650</li>
-                                <li>BuildTime: <strike>500</strike> → 800</li>
-                                <li>Provides 2000 extra HP</li>
-                            </ul>
-                            <p>Gives cybran acu better chances in midgame against ACUs that can have both T2 and gun at the same time.</p>
-                        </div>
+          <div id="kennels" class="card">
+            <h3><img src="/images/kenneldrone.png"> Kennel Drones</h3>
+            <ul>
+              <li>Now have higher selection priority than buildings</li>
+            </ul>
+          </div>
 
-                        <div id="seraregen" class="card">
-                            <h3><img src="/images/Enhancements/sera/advancedregenfield.png">Sera ACU Regen Field Upgrade</h3>
-                            <p></p>
-                            <ul>
-                                <li>Now provides regen to the ACU itself, 10 hp/s for the first upgrade and 20 hp/s for the second</li>
-                                <li>Now uses different regen floor values for units depending on their tier:
-                                    <p>Basic Tier</p>
-                                    <ul>
-                                        <li>RegenFloorT1: 3</li>
-                                        <li>RegenFloorT2: 8</li>
-                                        <li>RegenFloorT3: 15</li>
-                                        <li>RegenFloorT4: 25</li>
-                                        <li>RegenFloorSCU: 15</li>
-                                    </ul>
-                                    <p>Advanced Tier</p>
-                                    <ul>
-                                        <li>RegenFloorT1: 15</li>
-                                        <li>RegenFloorT2: 30</li>
-                                        <li>RegenFloorT3: 60</li>
-                                        <li>RegenFloorT4: 120</li>
-                                        <li>RegenFloorSCU: 80</li>
-                                    </ul>
-                                </li>
-                            </ul>
-                            <p>This boosts the upgrade's attractiveness over the T2 upgrade and also fixes some inconsistencies where some units were getting more regen from the first upgrade tier than the second.</p>
-                        </div>
+          <div id="uefsonar" class="card">
+            <h3><img src="/images/ueft3sonar.png"> UEF T3 Sonar</h3>
+            <ul>
+              <li>Add Jamming</li>
+            </ul>
+          </div>
 
-                        <p style="height: 1000px"></p>
-                    </td>
-                    
-                    <td id="sidebar">
-                        <div id="icongrid">
-                            <h2><a href="#container">Contents</a></h2>
-                            
-							Land
-                            <br>
-                            <a href="#zuee"><img src="/images/zuee.png"></a>
-                            <a href="#titan"><img src="/images/titan.png"></a>
-                            <a href="#loya"><img src="/images/loya.png"></a>
-                            <a href="#snoop"><img src="/images/snoop.png"></a>
-                            <a href="#mole"><img src="/images/mole.png"></a>
-                            <a href="#spirit"><img src="/images/spirit.png"></a>
-                            <a href="#selen"><img src="/images/selen.png"></a>
-                            <a href="#labs"><img src="/images/flare.png"></a>
-                            <a href="#beetle"><img src="/images/beetle.png"></a>
-                            <a href="#rhino"><img src="/images/rhino.png"></a>
-                            <br><br>
+          <div id="para" class="card">
+            <h3><img src="/images/paragon.png"> Paragon</h3>
 
-							Air
-                            <br>
-                            <a href="#t1trans"><img src="/images/aeont1trans.png"></a>
-                            <a href="#scorcher"><img src="/images/t1bomber.png"></a>
-                            <a href="#notha"><img src="/images/notha.png"></a>
-                            <a href="#soulripper"><img src="/images/soulripper.png"></a>
-                            <a href="#cstrat"><img src="/images/cybranstrat.png"></a>
-                            <a href="#astrat"><img src="/images/aeonstrat.png"></a>
-                            <a href="#sstrat"><img src="/images/serastrat.png"></a>
-                            <a href="#ustrat"><img src="/images/uefstrat.png"></a>
-                            <a href="#aeonbomber"><img src="/images/aeont1bomber.png"></a>
-                            <a href="#jester"><img src="/images/jester.png"></a>
-                            <br><br>
+            <p>This will prevent the bug where despite not draining more E than paragon provides you still go into stall and drop shields.</p>
+            
+            <ul>
+              <li>Add a 100,000 E storage</li>
+            </ul>
+          </div>
 
-                            Navy
-                            <br>
-                            <a href="#udestro"><img src="/images/uefdestroyer.png"></a>
-                            <a href="#cdestro"><img src="/images/cybrandestoryer.png"></a>
-                            <a href="#adestro"><img src="/images/aeondestroyer.png"></a>
-                            <a href="#sdestro"><img src="/images/seradestoryer.png"></a>
-                            <a href="#atlantis"><img src="/images/atlantis.png"></a>
-                            <br><br>
-                            
-							Structures
-                            <br>
-                            <a href="#kennels"><img src="/images/kenneldrone.png"></a>
-                            <a href="#uefsonar"><img src="/images/ueft3sonar.png"></a>
-                            <a href="#para"><img src="/images/paragon.png"></a>
-                            <a href="#pds"><img src="/images/aeont1pd.png"></a>
-							<a href="#t4arty"><img src="/images/scathis.png"></a>
-                            <br><br>
+          <div id="pds" class="card">
+            <h3><img src="/images/aeont1pd.png"> T1 PDs</h3>
 
-							Miscellaneous
-                            <br>
-                            <a href="#cybstealth"><img src="/images/Enhancements/cybran/stealth.png"></a>
-                            <a href="#seraregen"><img src="/images/Enhancements/sera/advancedregenfield.png"></a>
-                            <br><br>
-                        </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+            <ul>
+              <li>Adjust the hitboxes and bones of the PDs to make the wall-pd template behave the same way for each faction</li>
+            </ul>
+          </div>
+
+          <div id="t4arty" class="card">
+            <h3><img src="/images/scathis.png"> T4 Artilleries</h3>
+            <p>This makes all T4 arties viable for all 3 people who play 81x81 maps.</p>
+            <ul>
+              <li>Ranges normalized to 4000 (Mavor range)</li>
+            </ul>
+          </div>
+
+        </div>
+
+        <h2>ACUs</h2>
+
+        <div id="acus">
+
+          <div id="cybranacu">
+            <div id="cybstealth" class="card">
+              <h3><img src="/images/Enhancements/cybran/stealth.png">Cybran ACU Stealth Upgrade</h3>
+              
+              <p>Gives cybran acu better chances in midgame against ACUs that can have both T2 and gun at the same time.</p>
+
+              <ul>
+                <li>EnergyCost: <strike>5000</strike> → 14000</li>
+                <li>MassCost: <strike>350</strike> → 650</li>
+                <li>BuildTime: <strike>500</strike> → 800</li>
+                <li>Provides 2000 extra HP</li>
+              </ul>
+            </div>
+
+          </div>
+
+          <div id="seraphimacu">
+
+            <div id="seraregen" class="card">
+              <h3><img src="/images/Enhancements/sera/advancedregenfield.png">Sera ACU Regen Field Upgrade</h3>
+
+              <p>This boosts the upgrade's attractiveness over the T2 upgrade and also fixes some inconsistencies where some units were getting more regen from the first upgrade tier than the second.</p>
+              
+              <ul>
+                <li>Now provides regen to the ACU itself, 10 hp/s for the first upgrade and 20 hp/s for the second</li>
+                <li>Now uses different regen floor values for units depending on their tier:
+                  <p>Basic Tier</p>
+                  <ul>
+                    <li>RegenFloorT1: 3</li>
+                    <li>RegenFloorT2: 8</li>
+                    <li>RegenFloorT3: 15</li>
+                    <li>RegenFloorT4: 25</li>
+                    <li>RegenFloorSCU: 15</li>
+                  </ul>
+                  <p>Advanced Tier</p>
+                  <ul>
+                    <li>RegenFloorT1: 15</li>
+                    <li>RegenFloorT2: 30</li>
+                    <li>RegenFloorT3: 60</li>
+                    <li>RegenFloorT4: 120</li>
+                    <li>RegenFloorSCU: 80</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="backtotop">
+          <button>
+            <a class="toptext" href="#top">Back to Top</a>
+          </button>
+        </div>
+
+        </div>
+        <div class="sidebar">
+          <div class="icongrid">
+            <h2>Contents</h2><br>
+
+            Land
+            <br>
+            <a href="#zuee"><img src="/images/zuee.png"></a>
+            <a href="#titan"><img src="/images/titan.png"></a>
+            <a href="#loya"><img src="/images/loya.png"></a>
+            <a href="#snoop"><img src="/images/snoop.png"></a>
+            <a href="#mole"><img src="/images/mole.png"></a>
+            <a href="#spirit"><img src="/images/spirit.png"></a>
+            <a href="#selen"><img src="/images/selen.png"></a>
+            <a href="#labs"><img src="/images/flare.png"></a>
+            <a href="#beetle"><img src="/images/beetle.png"></a>
+            <a href="#rhino"><img src="/images/rhino.png"></a>
+            <br><br>
+
+            Air
+            <br>
+            <a href="#t1trans"><img src="/images/aeont1trans.png"></a>
+            <a href="#scorcher"><img src="/images/t1bomber.png"></a>
+            <a href="#notha"><img src="/images/notha.png"></a>
+            <a href="#soulripper"><img src="/images/soulripper.png"></a>
+            <a href="#cstrat"><img src="/images/cybranstrat.png"></a>
+            <a href="#astrat"><img src="/images/aeonstrat.png"></a>
+            <a href="#sstrat"><img src="/images/serastrat.png"></a>
+            <a href="#ustrat"><img src="/images/uefstrat.png"></a>
+            <a href="#aeonbomber"><img src="/images/aeont1bomber.png"></a>
+            <a href="#jester"><img src="/images/jester.png"></a>
+            <br><br>
+
+            Navy
+            <br>
+            <a href="#udestro"><img src="/images/uefdestroyer.png"></a>
+            <a href="#cdestro"><img src="/images/cybrandestoryer.png"></a>
+            <a href="#adestro"><img src="/images/aeondestroyer.png"></a>
+            <a href="#sdestro"><img src="/images/seradestoryer.png"></a>
+            <a href="#atlantis"><img src="/images/atlantis.png"></a>
+            <br><br>
+            
+            Structures
+            <br>
+            <a href="#kennels"><img src="/images/kenneldrone.png"></a>
+            <a href="#uefsonar"><img src="/images/ueft3sonar.png"></a>
+            <a href="#para"><img src="/images/paragon.png"></a>
+            <a href="#pds"><img src="/images/aeont1pd.png"></a>
+            <a href="#t4arty"><img src="/images/scathis.png"></a>
+            <br><br>
+
+            ACUs
+            <br>
+            <a href="#cybstealth"><img src="/images/Enhancements/cybran/stealth.png"></a>
+            <a href="#seraregen"><img src="/images/Enhancements/sera/advancedregenfield.png"></a>
+            <br><br>
+
+          </div>
+        </div>
+      </main>  
     </body>
+    <footer >
+      <a href="../index.html">Back to Patchnote List</a>
+      <p>© 2023 FAForever</p>
+    </footer>
 </html>
