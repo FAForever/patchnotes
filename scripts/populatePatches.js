@@ -1,5 +1,5 @@
 async function populate() {
-    const requestURL = 'https://raw.githubusercontent.com/FAForever/patchnotes/master/data/patches.json';
+    const requestURL = 'https://raw.githubusercontent.com/FAForever/patchnotes/IndexPage-Overhall/data/patches.json';
     const request = new Request(requestURL);
 
     const response = await fetch(request);
@@ -55,7 +55,5 @@ function GamePatches(obj) {
     }
     container.appendChild(list);
 }
-
-
 
 populate();
