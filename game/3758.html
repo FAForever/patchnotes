@@ -1,249 +1,257 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-        <meta charset="UTF-8">
-        <title>Game Patch 3758</title>
-        <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
-        <link rel="stylesheet" href="/patchnotes.css">
-        <style>
-            a {
-                color: #fff;
-                text-decoration: none;
-            }
-            a:hover {
-                color: #c2a732;
-                text-decoration: none;
-            }
-        </style>
-    
-    
-    </head>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="description" content="FAForever Game Patchnotes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Patch 3760</title>
+    <link rel="stylesheet" href="/style/game.css">
+  </head>
+  <body>
+    <main class="grid">
+      <div class="content">
+        <div id="intro">
+            <h1>Game Patch 3758</h1>
+            <p>There are a lot of goodies in this iteration! The changelog format has been adjusted to make it easier to read. It now contains less detailed information and more general descriptions. Additionally, the in-game changelog window has been enhanced. To access more readable patch notes, you can find buttons at the bottom of the in-game changelog. These buttons will take you to the patch notes on GitHub or to the patch notes website 'patchnotes.faforever.com' for the respective branch. The website provides a user-friendly reading experience and may include helpful images to improve your understanding of the changes.</p>
+            <p>As mentioned in the previous development iteration, our focus is now primarily on AI development. This iteration establishes the groundwork for future work in this area. Over the next few months, we will be working on improving the AI's decision-making abilities by applying and introducing additional abstractions of the game state. If you'd like to help with this then feel welcome to introduce yourself in the dev-offtopic channel on Discord!</p>
+            <p>With appreciation towards all the contributors that made this patch possible,</p>
+            <p>-- Jip</p>
+          <hr>
+        </div>
 
-    <body>
-        <table id="container">
-            <tbody>
-                <tr>
-                    <td id="main">
-                        <div id="intro">
-                            <h1>Game Patch 3758</h1>
-                            <p>There are a lot of goodies in this iteration! The changelog format has been adjusted to make it easier to read. It now contains less detailed information and more general descriptions. Additionally, the in-game changelog window has been enhanced. To access more readable patch notes, you can find buttons at the bottom of the in-game changelog. These buttons will take you to the patch notes on GitHub or to the patch notes website 'patchnotes.faforever.com' for the respective branch. The website provides a user-friendly reading experience and may include helpful images to improve your understanding of the changes.</p>
+        <h2 id="feaures">Features</h2>
 
-                            <p>As mentioned in the previous development iteration, our focus is now primarily on AI development. This iteration establishes the groundwork for future work in this area. Over the next few months, we will be working on improving the AI's decision-making abilities by applying and introducing additional abstractions of the game state. If you'd like to help with this then feel welcome to introduce yourself in the dev-offtopic channel on Discord!</p>
-                            
-                            <p>With appreciation towards all the contributors that made this patch possible,</p>
-                            
-                            <p>-- Jip</p>
-                        </div>
-                        
-                        
-                        <h2>Features</h2>
+        <div class="card">
+          <ul>
+            <li>Improve the auto-balance feature by shuffling the pairs of players.</li>
+            <li>Add a hotkey to select the nearest idle tech 1 engineer</li>
+            <li>Docked engineering drones are now ignored by anti-air weapons</li>
+            <li>The recall feature now requires teams of three (remaining alive) players to all agree on a recall
+              <p>
+                We received complaints of people being recalled in the recently introduced 3v3 matchmaker without their consent. The recall feature was implemented when this matchmaker queue did not exist yet. As such we adjust the threshold slightly to prevent the negative aspects in the matchmaker while still allowing you to recall without the complete consent of a team in large team games
+              </p>
+            </li>
+            <li>Personal shields now remain enabled in transports
+              <p>
+                This behavior does not apply to bubble shields. This prevents the recharge cycle from being reset moving units around in transports. This specifically applies to ACUs with a personal shield enhancement
+              </p>
+            </li>
+          </ul>
+        </div>
 
-                        <div id="Feaures" class="card">
-                            <h3>New Features</h3>
-                            
-                            <li>Improve the auto-balance feature by shuffling the pairs of players.</li>
-                            <br>
-                            <li>Add a hotkey to select the nearest idle tech 1 engineer</li>
-                            <br>
-                            <li>Docked engineering drones are now ignored by anti-air weapons</li>
-                            <br>
-                            <li>The recall feature now requires teams of three (remaining alive) players to all agree on a recall</li>
-                            <p>We received complaints of people being recalled in the recently introduced 3v3 matchmaker without their consent. The recall feature was implemented when this matchmaker queue did not exist yet. As such we adjust the threshold slightly to prevent the negative aspects in the matchmaker while still allowing you to recall without the complete consent of a team in large team games</p>
-                            <br>
-                            <li>Personal shields now remain enabled in transports</li>
-                            <p>This behavior does not apply to bubble shields. This prevents the recharge cycle from being reset moving units around in transports. This specifically applies to ACUs with a personal shield enhancement</p>
-                        </div>
+        <h2 id="bugs">Bug Fixes</h2>
 
-                        <h2>Bug Fixes</h2>
-                        <div id="bugs" class="card">
-                            <h3>Bug Fixes</h3>
-                            <ul>
-                                <li>Fix 'OnGiven' callbacks not working properly, most notable in various campaign maps.</li>
-                                <li>Fix the teleport delay of ACUs being too short due to a bug. They are now 25 seconds again.</li>
-                                <li>Fix variables being in global scope while they should be in the local scope.</li>
-                                <li>Fix a bug where stationary missile launchers could end up launching missiles into the terrain.</li>
-                                <li>Fix a bug where states were unable to call their base class.</li>
-                                <li>Fix a bug where missile progression was not transferred when gifting a unit building a missile.</li>
-                                <li>Fix a bug where tarmacs of structures would be duplicated when transferring a structure.</li>
-                                <li>Fix a bug where the Cybran tech 1 land scout can gain veterancy.</li>
-                                <li>Fix blocking of sound banks falsely identified as duplications.</li>
-                                <li>Fix a rare bug with the veterancy system that would prevent experience distribution.</li>
-                                <li>Fix a bug where the Quantum Optics Facility was being self-conscious, refusing to be turned off.</li>
-                                <li>Fix a bug where engineering drones (of the UEF) would be ignored by anti-air weapons.</li>
-                                <li>Fix a bug where adjacency would not apply immediately to units that are building a missile.</li>
-                                <li>Fix a bug where the team color options window can have multiple instances.</li>
-                                <li>Fix a bug where civilians would sometimes not be revealed.</li>
-                                <li>Fix a bug where the game would adjust alliances with civilians after the game has started.</li>
-                                <p>Most notable on scripted maps that adjust the alliance with civilians to suit the need of the map.</p>
-                                <li>Fix a bug where the 'OnUnitKilled' callback did not trigger.</li>
-                                <p>Most notable on the 'Zone control' maps that relied on this callback to provide credits for destroying other units.</p>
-                                <li>Fix a bug where projectiles would have no launcher defined.</li>
-                                <li>Fix a bug where vision markers would not align with the terrain.</li>
-                                <p>This does not impact your intel, it fixes a visual artifact.</p>
-                            </ul>
-                        </div>
+        <div class="card">
+          <ul>
+            <li>Fix 'OnGiven' callbacks not working properly, most notable in various campaign maps.</li>
+            <li>Fix the teleport delay of ACUs being too short due to a bug. They are now 25 seconds again.</li>
+            <li>Fix variables being in global scope while they should be in the local scope.</li>
+            <li>Fix a bug where stationary missile launchers could end up launching missiles into the terrain.</li>
+            <li>Fix a bug where states were unable to call their base class.</li>
+            <li>Fix a bug where missile progression was not transferred when gifting a unit building a missile.</li>
+            <li>Fix a bug where tarmacs of structures would be duplicated when transferring a structure.</li>
+            <li>Fix a bug where the Cybran tech 1 land scout can gain veterancy.</li>
+            <li>Fix blocking of sound banks falsely identified as duplications.</li>
+            <li>Fix a rare bug with the veterancy system that would prevent experience distribution.</li>
+            <li>Fix a bug where the Quantum Optics Facility was being self-conscious, refusing to be turned off.</li>
+            <li>Fix a bug where engineering drones (of the UEF) would be ignored by anti-air weapons.</li>
+            <li>Fix a bug where adjacency would not apply immediately to units that are building a missile.</li>
+            <li>Fix a bug where the team color options window can have multiple instances.</li>
+            <li>Fix a bug where civilians would sometimes not be revealed.</li>
+            <li>Fix a bug where the game would adjust alliances with civilians after the game has started. 
+              <p>
+                Most notable on scripted maps that adjust the alliance with civilians to suit the need of the map.
+              </p>
+            </li>
+            <li>Fix a bug where the 'OnUnitKilled' callback did not trigger.
+              <p>
+                Most notable on the 'Zone control' maps that relied on this callback to provide credits for destroying other units.
+              </p>
+            </li>
+            <li>Fix a bug where projectiles would have no launcher defined.</li>
+            <li>Fix a bug where vision markers would not align with the terrain.
+              <p>
+                This does not impact your intel, it fixes a visual artifact.
+              </p>
+            </li>
+          </ul>
+        </div>
 
-                        <h2>AI</h2>
+        <h2 id="ai">AI</h2>
 
-                        <div id="ai" class="card">
-                            <p>We would like to remind people that various mods provide different AI experiences. We can highly recommend you download them from the vault and give them a spin too.</p>
+        <div class="card">
+            <p>We would like to remind people that various mods provide different AI experiences. We can highly recommend you download them from the vault and give them a spin too.</p>
 
-                            <p>A short list of AIs we recommend at this point:</p>
-                            <ul>
-                                <li>M27: made by Maudlin</li>
-                                <li>RNGAI, as made by Relent0r</li>
-                                <li>Sorian Edit, as made by Marlo</li>
-                                <li>Uveso AI, as made by Uveso</li>
-                                <li>Dilli Dally, as made by Softles</li>
-                                <li>Swarm AI, as made by Azraeel</li>
-                            </ul>
+            <p>A short list of AIs we recommend at this point:</p>
+            <ul>
+                <li>M27: made by Maudlin</li>
+                <li>RNGAI, as made by Relent0r</li>
+                <li>Sorian Edit, as made by Marlo</li>
+                <li>Uveso AI, as made by Uveso</li>
+                <li>Dilli Dally, as made by Softles</li>
+                <li>Swarm AI, as made by Azraeel</li>
+            </ul>
 
-                            <p>And not to forget the AI that ships with the Total Annihilation mod that is maintained by Dragun.</p>
+            <p>And not to forget the AI that ships with the Total Annihilation mod that is maintained by Dragun.</p>
 
-                            <h3>AI - Improved framework</h3>
+            <h3>AI - Improved framework</h3>
 
-                            <p>Before this patch, there was no 'natural' approach to creating an AI that would be entirely separate from all the other AIs. It wasn't uncommon for AIs to be (temporarily) incompatible because of this. With this new AI framework, you can create a new AI that is guaranteed to be entirely separate from other AI instances.</p>                            
+            <p>Before this patch, there was no 'natural' approach to creating an AI that would be entirely separate from all the other AIs. It wasn't uncommon for AIs to be (temporarily) incompatible because of this. With this new AI framework, you can create a new AI that is guaranteed to be entirely separate from other AI instances.</p>                            
 
-                            <p>As a consequence of this, all AI mods need to update how they set up their AI. We informed them of this months ago and helped them with these changes throughout June and we expect to see quick updates right after the patch of the AI mods that are still actively maintained.</p>
+            <p>As a consequence of this, all AI mods need to update how they set up their AI. We informed them of this months ago and helped them with these changes throughout June and we expect to see quick updates right after the patch of the AI mods that are still actively maintained.</p>
 
-                            <p>One notable change is the integration done by Relent0r of the transport logic of the LOUD AI that is developed by Sprouto. Our gratitude towards Sprouto for turning the transport logic into a module and the willingness to share that with us</p>
+            <p>One notable change is the integration done by Relent0r of the transport logic of the LOUD AI that is developed by Sprouto. Our gratitude towards Sprouto for turning the transport logic into a module and the willingness to share that with us</p>
 
 
-                            <h3>AI - Improved Adaptive AI</h3>  
+            <h3>AI - Improved Adaptive AI</h3>  
 
-                            <p>With this patch, the first notable improvements specifically the adaptive AI are in! It can by no means compete with AIs such as M27, but at least the AI won't bug out as often as it used to. This represents the first step in the right direction where a lot of time was put into creating a more consistent foundation.</p>
+            <p>With this patch, the first notable improvements specifically the adaptive AI are in! It can by no means compete with AIs such as M27, but at least the AI won't bug out as often as it used to. This represents the first step in the right direction where a lot of time was put into creating a more consistent foundation.</p>
 
-                            <h3>AI - reclaim grid</h3>
+            <h3>AI - reclaim grid</h3>
 
-                            <p>The reclaim grid represents an abstract, highly efficient data structure that the AI can use to make more informed decisions based on reclaim values. Includes a UI window to visualize the data structure
-                            </p>
+            <p>The reclaim grid represents an abstract, highly efficient data structure that the AI can use to make more informed decisions based on reclaim values. Includes a UI window to visualize the data structure
+            </p>
 
-                            <h3>AI - presence grid</h3>
+            <h3>AI - presence grid</h3>
 
-                            <p>The presence grid represents an abstract, efficient data structure that the AI can use to make more informed decisions based on what area of the map the AI thinks it controls. It divides the map into sections that are considered 'allied', 'contested' or 'hostile' while taking into account the path ability of the map. Includes a UI window to visualize the data structure</p>
+            <p>The presence grid represents an abstract, efficient data structure that the AI can use to make more informed decisions based on what area of the map the AI thinks it controls. It divides the map into sections that are considered 'allied', 'contested' or 'hostile' while taking into account the path ability of the map. Includes a UI window to visualize the data structure</p>
 
-                            <h3>AI - navigational mesh</h3>
+            <h3>AI - navigational mesh</h3>
 
-                            <p>The navigational mesh represents an abstract, efficient data structure that the AI can use to understand how to navigate the map. It is generated at the start of each map. This developer iteration reduces the generation time. On top of that it introduces various functions that can compute interesting properties based on the navigational mesh. Includes a UI window to visualize the data structure</p>
-                        </div>                    
+            <p>The navigational mesh represents an abstract, efficient data structure that the AI can use to understand how to navigate the map. It is generated at the start of each map. This developer iteration reduces the generation time. On top of that it introduces various functions that can compute interesting properties based on the navigational mesh. Includes a UI window to visualize the data structure</p>
+        </div>  
 
-                        <h2>Graphics</h2>
+        <h2 id="graphics">Graphics</h2>
+        
+        <div class="card">
+          <ul>
+              <li>Improve the fidelity of debris of units being destroyed.</li>
+              <li>Improve the quality of the explosions of units.</li>
+              <li>Enable all props (rocks, trees) to cast and receive shadows.</li>
+              <li>Add a bloom intensity slider to the graphics settings.</li>
+              <li>Reduce decal flickering on maps with noisy heightmaps.
+                <p>
+                  A note to people that create maps: this engine is not built for sharp edges and in general noisy-like terrain. It doesn't just hurt gameplay but it can also introduce various visual artifacts.
+                </p>
+              </li>
+              <li>Fix an inconsistency when the effects of the Seraphim regeneration field are applied to underwater units.</li>
+              <li>Improve the death animations of the Colossus, Spiderbot, Megalith and the Fatboy.</li>
+              <li>Death weapons can now knock over trees.</li>
+              <li>Add the impact effect of the Wasp.</li>
+          </ul>
 
-                        <div id="graphics" class="card">
-                            <ul>
-                                <li>Improve the fidelity of debris of units being destroyed.</li>
-                                <li>Improve the quality of the explosions of units.</li>
-                                <li>Enable all props (rocks, trees) to cast and receive shadows.</li>
-                                <li>Add a bloom intensity slider to the graphics settings.</li>
-                                <li>Reduce decal flickering on maps with noisy heightmaps.</li>
-                                <p>A note to people that create maps: this engine is not built for sharp edges and in general noisy-like terrain. It doesn't just hurt gameplay but it can also introduce various visual artifacts.</p>
-                                <li>Fix an inconsistency when the effects of the Seraphim regeneration field are applied to underwater units.</li>
-                                <li>Improve the death animations of the Colossus, Spiderbot, Megalith and the Fatboy.</li>
-                                <li>Death weapons can now knock over trees.</li>
-                                <li>Add the impact effect of the Wasp.</li>
-                            </ul>
+          <h3>Graphics - physics-based rendering (PBR)</h3>
 
+          <p>We started the path toward physics-based shaders in the first developer iteration of 2023. In this second iteration, we continue making preparations and improvements to be able to release the full potential of what this game can look like visually.</p>
 
-                            <h3>Graphics - physics-based rendering (PBR)</h3>
+          <p>One notable change is the introduction of a texture channel that was missing for the majority of the Cybran units. As a result, Cybran feels less bland and bits that represent lights now also appear to emit light accordingly.</p>
 
-                            <p>We started the path toward physics-based shaders in the first developer iteration of 2023. In this second iteration, we continue making preparations and improvements to be able to release the full potential of what this game can look like visually.</p>
+          <h3>Graphics - adjustments to water</h3>
 
-                            <p>One notable change is the introduction of a texture channel that was missing for the majority of the Cybran units. As a result, Cybran feels less bland and bits that represent lights now also appear to emit light accordingly.</p>
+          <p>Over time various visual artifacts related to water were introduced by FAF. Thanks to BlackYps we did not only tackle those inconsistencies but also improved the fidelity of the water in general. Units now really feel submerged in water, especially noticeable for large units (wrecks).</p>
 
-                            <h3>Graphics - adjustments to water</h3>
-
-                            <p>Over time various visual artifacts related to water were introduced by FAF. Thanks to BlackYps we did not only tackle those inconsistencies but also improved the fidelity of the water in general. Units now really feel submerged in water, especially noticeable for large units (wrecks).</p>
-
-                            <h3>Graphics - terrain shaders</h3>
-                            <p>We've learned a lot while working on the physics-based shaders for units. Empowered with that knowledge we'll also be tackling the terrain shaders. The direction is not yet set in stone but the first improvements are in that allow map authors to add map-wide normals and map-wide shadows that are part of the rendering pipeline of the terrain, instead of 'plastered' on top afterward!</p>
-
-
-                        </div>
-
-                        <h2>Performance</h2>
-
-                        <div id="performance" class="card">
-                            <ul>
-                                <li>Reduce the overhead of the economy status bar.</li>
-                                <li>Improve the performance of LazyVars by reducing table trashing.</li>
-                                <li>Improve performance of shield effects by reducing table trashing.</li>
-                                <li>Improve the performance of projectiles by reducing table trashing.</li>
-                                <li>Improve performance of <code>table.getsize</code>, <code>table.empty</code> and <code>table.getn</code> with assembly alternatives.</li>
-                                <p>One notable change is that these functions now expect a table, as suggested by it being a table function.</p>
-                                <li>Improve performance of the builder manager of AIs.</li>
-                                <li>Further sanitize the LODs of units, props and tarmacs.</li>
-                                <p>In the first development iteration, we introduced a blueprint procedure to allow us to tweak the Level of Detail (LOD) of all units and props in the game. The initial parameters were too optimistic and traded in average unnecessary detail for quite a dip in performance on weaker systems.</p>
-                                <li>Improve performance by prefetching assets that the game would otherwise trash again and again.</li>
-                                <p>To reduce the memory footprint various assets are only temporarily allocated. A common example is a unit animation. When a unit starts an animation the asset is loaded and interpreted from disk. When all animation instances are destroyed the asset is removed from memory again. Each time the asset is retrieved it involves a disk operation, and disk operations are expensive</p>
-                                <p>We've experimented with prefetching before but this time is different. We found a way to see exactly what the engine is doing. As a result, we know what assets are constantly being trashed, just to load them again not long after. In a fifteen-minute replay, some assets could be reloaded up to 50 times, which is rather excessive.</p>
-                                <p>With that information available we now apply targeted prefetching: we prefetch all assets surrounding projectiles, effects and animations.</p>
-                            </ul>
+          <h3>Graphics - terrain shaders</h3>
+          <p>We've learned a lot while working on the physics-based shaders for units. Empowered with that knowledge we'll also be tackling the terrain shaders. The direction is not yet set in stone but the first improvements are in that allow map authors to add map-wide normals and map-wide shadows that are part of the rendering pipeline of the terrain, instead of 'plastered' on top afterward!</p>
 
 
+        </div>
 
-                        </div>
+        <h2 id="performance">Performance</h2>
 
-                        <h3>Other changes</h3>
+        <div class="card">
+          <ul>
+              <li>Reduce the overhead of the economy status bar.</li>
+              <li>Improve the performance of LazyVars by reducing table trashing.</li>
+              <li>Improve performance of shield effects by reducing table trashing.</li>
+              <li>Improve the performance of projectiles by reducing table trashing.</li>
+              <li>Improve performance of <code>table.getsize</code>, <code>table.empty</code> and <code>table.getn</code> with assembly alternatives. 
+                <p>
+                  One notable change is that these functions now expect a table, as suggested by it being a table function.
+                </p>
+              </li>
+              <li>Improve performance of the builder manager of AIs.</li>
+              <li>Further sanitize the LODs of units, props and tarmacs. 
+                <p>
+                  In the first development iteration, we introduced a blueprint procedure to allow us to tweak the Level of Detail (LOD) of all units and props in the game. The initial parameters were too optimistic and traded in average unnecessary detail for quite a dip in performance on weaker systems.
+                </p>
+              </li>
+              <li>Improve performance by prefetching assets that the game would otherwise trash again and again. 
+                <p>
+                  To reduce the memory footprint various assets are only temporarily allocated. A common example is a unit animation. When a unit starts an animation the asset is loaded and interpreted from disk. When all animation instances are destroyed the asset is removed from memory again. Each time the asset is retrieved it involves a disk operation, and disk operations are expensive
+                  <br>
+                  <br>
+                  We've experimented with prefetching before but this time is different. We found a way to see exactly what the engine is doing. As a result, we know what assets are constantly being trashed, just to load them again not long after. In a fifteen-minute replay, some assets could be reloaded up to 50 times, which is rather excessive.
+                  <br>
+                  <br>
+                  With that information available we now apply targeted prefetching: we prefetch all assets surrounding projectiles, effects and animations.
+                </p>
+              </li>
+          </ul>
+        </div>
 
-                        <div id="other" class="card">
-                            <ul>
-                                <li>Remove generated indices in AI tables</li>
-                                <li>Improve the wording of the recall feature</li>
-                                <li>Tidy up various scripts</li>
-                                <li>Fix an inconsistency where the construction menu of the Megalith had a different order of units than the land factory</li>
-                                <li>Fix an inconsistency where the wrong strategic icons were applied to Cybran shields</li>
-                                <li>Introduce a hotkey to store a camera position across games, useful for taking a screenshot with exactly the same angle</li>
-                                <li>Removal of the following hotkeys:</li>
-                                    <ul>
-                                        <li>Recheck targets of weapons of selected units</li>
-                                        <li>Filter the selection to the most advanced engineer, all other engineers assist that engineer</li>
-                                    </ul>
-                                    <p>The latter didn't fit in with the idea of automation. Instead, you can do this manually by using the selection subgroups functionality</p>
-                                <li>Introduce extensive documentation on how mods work in FAF</li>
-                                <li>Add various anti-cheat guards for UI callbacks</li>
-                            </ul>
+        <h2 id="other">Other changes</h2>
 
-                        </div>
+        <div class="card">
+          <ul>
+            <li>Remove generated indices in AI tables</li>
+            <li>Improve the wording of the recall feature</li>
+            <li>Tidy up various scripts</li>
+            <li>Fix an inconsistency where the construction menu of the Megalith had a different order of units than the land factory</li>
+            <li>Fix an inconsistency where the wrong strategic icons were applied to Cybran shields</li>
+            <li>Introduce a hotkey to store a camera position across games, useful for taking a screenshot with exactly the same angle</li>
+            <li>Removal of the following hotkeys:</li>
+                <ul>
+                    <li>Recheck targets of weapons of selected units</li>
+                    <li>Filter the selection to the most advanced engineer, all other engineers assist that engineer</li>
+                </ul>
+                <p>The latter didn't fit in with the idea of automation. Instead, you can do this manually by using the selection subgroups functionality</p>
+            <li>Introduce extensive documentation on how mods work in FAF</li>
+            <li>Add various anti-cheat guards for UI callbacks</li>
+          </ul>
+        </div>
 
-                        <h3>Contributors</h3>
+        <h2>Contributors</h2>
 
-                        <div id="contributors" class="card">
-                            <ul>
-                                <li>BlackYps</li>
-                                <li>4z0t</li>
-                                <li>Jip</li>
-                                <li>Relentor</li>
-                                <li>Hdt80bro</li>
-                                <li>Scarress</li>
-                                <li>Rowey</li>
-                                <li>KionX</li>
-                                <li>Penguin</li>
-                                <li>Strogo</li>
-                                <li>MadMax</li>
-                                <li>Evildrew</li>
-                            </ul>
+        <div class="card">
+          <ul>
+            <li>BlackYps</li>
+            <li>4z0t</li>
+            <li>Jip</li>
+            <li>Relentor</li>
+            <li>Hdt80bro</li>
+            <li>Scarress</li>
+            <li>Rowey</li>
+            <li>KionX</li>
+            <li>Penguin</li>
+            <li>Strogo</li>
+            <li>MadMax</li>
+            <li>Evildrew</li>
+          </ul>
+        </div>
 
+        <div class="backtotop">
+          <button>
+            <a class="toptext" href="#top">Back to Top</a>
+          </button>
+        </div>
 
-                        </div>
-
-
-                        <p style="height: 1000px"></p>
-                    </td>
-                    
-                    <td id="sidebar">
-                        <div id="icongrid">
-                            <h2><u><a href="#container">Contents</a></u></h2>
-                            <h4>1. <a href="#Feaures">New Featuers</a></h4>
-                            <h4>2. <a href="#bugs">Bug Fixes</a></h4>
-                            <h4>3. <a href="#ai">AI Imporvements</a></h4>
-                            <h4>4. <a href="#graphics">Graphics Imporvements</a></h4>
-                            <h4>5. <a href="#performance">Performance Imporvements</a></h4>
-                            <h4>6. <a href="#other">Other Chnages</a></h4>
-                        </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </body>
+      </div>
+      <div class="sidebar">
+        <div>
+          <h2><u>Contents</u></h2>
+          
+          <h3>&gt; <a href="#feaures">New Featuers</a></h3>
+          <h3>&gt; <a href="#bugs">Bug Fixes</a></h3>
+          <h3>&gt; <a href="#ai">AI Improvements</a></h3>
+          <h3>&gt; <a href="#graphics">Graphics Improvements</a></h3>
+          <h3>&gt; <a href="#performance">Performance Improvements</a></h3>
+          <h3>&gt; <a href="#other">Other Changes</a></h3>
+        </div>
+      </div>
+    </main>
+  </body>
+  <footer>
+    <a href="./index.html">Back to Patchnote List</a>
+    <p>© 2014-2024 FAForever</p>
+  </footer>
 </html>
