@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="description" content="FAForever Game Patchnotes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Patch 3747</title>
+    <link rel="stylesheet" href="/style/game.css">
+  </head>
+  <body>
+    <main class="grid">
+      <div class="content">
+        <div id="intro">
+            <h1>Game Patch 3747</h1>
+            <p>And there it is, the last major patch of the year!</p>
+
+            <p>This patch was ambitious. The purpose was to introduce modern features into the game, while at the same time make the game easier to customize to your liking. Some of the patch can be immediately applied by players, like the extended features on control groups, camera recall functionality and the improved performance of the reclaim overview. Other features are not immediately visible but are a major step forward, like the navigational mesh we generate for the map you're playing on for AIs.</p>
+
+            <p>Previous patches primarily made changes in the code directly related to the simulation. This patch also includes changes to the code surrounding the user interface. Also refers to UI code or UI mods. It was not possible to do this patch without causing incompatibility with some of the UI mods that are out there. We introduced a list of incompatible mods at the end of this changelog. Authors can update their mod, bump the version number and the game should automatically make it available again.</p>
+
+            <p>As a minor note to the authors of UI mods: it is better to have many small UI mods that each add in a single feature, then it is to have one large UI mod that adds in many features. One example is Economy Manager - a mod often used by players - is no longer compatible because one of its dozen features is incompatible:the command feedback no longer triggers with Economy Manager enabled. Long story short: keep the UI mods small and simple, as people can enable any number of them.</p>
+
+            <p>And as this year ends I'd like to show my personal appreciation to some contributors and community members. I'll start off with hdt80bro, who has been working on the repository for the past few  months. His extensive knowledge and motivation was visible in our discussions and above all in his code changes. We're lucky to have him. Next to that I'd like to thank Madmax for always being there when I needed essentially anything. Whenever I needed a tester, Madmax is usually there ready to help confirm the stability of it. And of course there is Rowey - always ready to assist with his friendly character. Rowey has pushed the FAF Youtube that increased exposure on the development of this game, like being there when we were producing the game development series. a lot of the videos on game development. And last I'd like to thank Sprouto - creator of the LOUD community - for being an inspiration to what he managed to achieve with LOUD. Every time we talk I learn something new and I am looking forward to our next conversation.</p>
+
+            <p>And like that, a new year of development will start. And with a new year we'll take a new route how we'll further develop this game. Instead of having a 'game team' - that introduces an arbitrary boundary between contributors - we'll move towards how other projects are managed: by creating a clear, properly scoped backlog of issues that contributors can pick up. Anyone can add and discuss issues in the backlog. Once an issue is accepted it is added to a milestone. Milestones allow us to steer contributors towards a common vision. They make it immediately clear when you can expect your changes to be live. Alas - there's too much to tell and too little room in this changelog. For those interested, we'll soon make a post on the forums and release the new contribution guidelines on the repository.</p>
+
+            <p>With appreciation towards all the contributors that made this patch possible,</p>
+
+            <p>-- Jip</p>
+
+          <hr>
+        </div>
+
+        <h2 id="features">Features</h2>
+        <div id="1">
+
+          <div class="card">
+            <h3>Extend functionality of control groups</h3>
+            <p>Adds in modern features into how control groups work. This includes:
+              <ul>
+                <li>the 'stealing' units from other control groups (like in Starcraft II)</li>
+                <li>being able to toggle the control group inheritance of factories</li>
+                <li>allow you to adjust the behavior of the camera when you double tap</li>
+                <li>allow you to adjust the double tap interval</li>
+              </ul>
+            </p>
+
+            <p>And on top of that we've introduced various new hotkeys that interact with control groups.</p>
+
+            <p>You can find the settings in the game options. You can find the additional hotkeys in the hotkeys menu.</p>
+          </div>
+          <div class="card">
+            <h3>Improve cursor / command behaviors</h3>
+            <p>Acts as an integration of the 'Random UI improvements' mod of Strogo. This includes:
+              <ul>
+                <li>disabled reclaim cursor when you can't issue reclaim orders due to camera distance</li>
+                <li>manual tactical / nuke launchers no longer attach to units, and instead always</li>
+                <li>target the ground</li>
+                <li>area of effect preview when you try to issue an attack order</li>
+                <li>allow you to adjust the selection threshold, particular useful for 2K+ displays or</li>
+                <li>when watching replays</li>
+              </ul>
+            </p>
+
+            <p>You can find the settings in the game options.</p>
+          </div>
+          <div class="card">
+            <h3>Extend camera features</h3>
+            <p>Acts as an integration of Additional Camera Stuff. This includes:
+              <ul>
+                <li>Allows you to retrieve up to 9 camera locations</li>
+                <li>Allows you to restore the previous camera position</li>
+              </ul>
+            </p>
+
+            <p>You can find the additional hotkeys in the hotkeys menu.</p>
+          </div>
+          <div class="card">
+            <h3>Allow observers to view mouse position of players in-game</h3>
+            <p>In particular useful for casters. The feature does not work with replays or live games (that are replays too). In order for it to work you need to be an observer in the game, as it starts. The information is not stored in the replay either.</p>
+          </div>
+          <div class="card">
+            <h3>Introduce recall</h3>
+            <p>Adds in a recall feature. Similar to a the 'concede' feature that other games provide, it allows you to cast a team vote on whether you want to recall as a team. When you are with two or less alive players it requires all alive players of the same team to agree. When you are with three or more alive players it requires all but one of the alive players of the team to agree.</p>
+
+            <p>Was introduced because people got frustrated with the Fullshare mode in combination with the limitated player base size.</p>
+          </div>
+          <div class="card">
+            <h3>Add in successive upgrades hotkeys for Hotbuild</h3>
+            <p>Allows you to easily queue the upgrade of an upgrade using Hotbuild.</p>
+          </div>
+          <div class="card">
+            <h3>Add batching of reclaim labels</h3>
+            <p>Reclaim labels are batched as you zoom out. As a result they remain readable.</p>
+          </div>
+          <div class="card">
+            <h3>Add coloring of reclaim labels</h3>
+            <p>Reclaim labels are colored based on their value.</p>
+          </div>
+          <div class="card">
+            <h3>Add PBR blender nodes for rendering of units</h3>
+            <p>This acts as a step-up towards introducing PBR-based shaders. It is used to check the textures / assets of units and acts as an inspiration to the shader implementation.</p>
+          </div>
+          <div class="card">
+            <h3>Introduced of shared armies</h3>
+            <p>Allows you to play as one army, where you all share control over the same units. This used to be a standalone executable and is now integrated with the base game.</p>
+            <p>You can find these settings in the lobby options. Note that when applied the game is no longer rated.</p>
+          </div>
+          <div class="card">
+            <h3>Improve text markers</h3>
+            <p>When you create a text marker it is also send to the chat with camera coordinates attached. This allows you to jump to text markers.</p>
+          </div>
+          <div class="card">
+            <h3>Attempt at fixing engineer behavior for Seraphim air factories</h3>
+            <p>Engineers constructed by the Seraphim air factories get teleported instead of 'tractored' off the factory. This was the only factory that made it impossible to select the engineer during roll off. Attempting to make the unit selectable during tractoring introduced a pile of issues.</p>
+            <p>Therefore now all Seraphim air factories are magicians until we find better effects.</p>
+          </div>
+          <div class="card">
+            <h3>Add in a hotkey to filter your selection to the engineer with the highest tech</h3>
+            <p>All other engineers in your old selection will assist the selected engineer</p>
+          </div>
+          <div class="card">
+            <h3>Improve pathing surrounding props</h3>
+            <p>Only large props (the size of a frigate or larger) block pathing.</p>
+            <p>Previously a lot of props blocked pathing, in particular small rocks. This introduced a lot of noise in the occupancy layers, where it isn't clear that this noise exists. Especially when you are zoomed out, being unable to see the rocks.</p>
+            <p>The noise caused units to behave strange, suddenly stop, circle around, etc. By removing this noise we indirectly improve pathing a lot.</p>
+          </div>
+          <div class="card">
+            <h3>Introduce generated navigational mesh to interpret maps</h3>
+            <p>This feature is technically involved. The idea is similar to the marker generator that has been part of the Uveso AI for a few years now, but instead of markers we work with areas. The navigational mesh can be used by AIs to understand and interact with the </p>
+            <p>The feature is based on compression via quad trees that compress the pathing information. We use the leafs of the quad tree to create a graph. This graph is initially used for just pathfinding, but we can use the graph for so much more.</p>
+            <p>All the code related to this feature is licensed using the MIT license. We're improving it in collaboration with the AI developers. We try to convert their requests into an algorithm that computes the answer. The algorithm needs to be simple, yet efficient as there is essentially no budget to perform computationally expensive algorithms.</p>
+            <p>We're open to new contributors to help maintain and expand this exciting new feature of FAF.</p>
+          </div>
+          <div class="card">
+            <h3>Adjust factory behavior when building and finished building a unit</h3>
+            <p>Drastically reduces the time it can take for a unit to roll off the building pad of a factory. The production of a new unit starts the moment the build pad is clear. Also allows units to rotate to the correct roll off point right before being finished.</p>
+            <p>Tech 1 tanks, artillery and labs have one second additional build time to compensate for the reduction of roll off time.</p>
+          </div>
+          <div class="card">
+            <h3>Re-organize game options</h3>
+            <p>Adds in headers and groups various options together. A few options have been renamed. Others have been removed. The game options menu is a lot more organised now.</p>
+          </div>
+          <div class="card">
+            <h3>Add in a hotkey to select intelligence structures</h3>
+            <p>Requested By users</p>
+          </div>
+
+        </div>
+
+        <h2 id="bugs">Bug Fixes</h2>
+
+        <div id="2">
+
+          <div class="card">
+            <h3>Fix remote code exploit</h3>
+            <p>It was possible to inject arbitrary code into the simulation via a UI mod. This would not be able to affect your system, but it would allow you to run any code in the simulation and have that code run for all players involved.</p>
+            <p>It is highly appreciated that this was brought to our attention discretely.</p>
+          </div>
+          <div class="card">
+            <h3>Fix Harbingers preference to reclaim instead of attacking during an attack move</h3>
+            <p>They now attack move as you'd expect, instead of notoriously reclaiming the nearest tree.</p>
+          </div>
+          <div class="card">
+            <h3>Fix issues with Tractor Claws of the Colossus</h3>
+            <p>Air units are now destroyed as soon as they reach the claw and the beam of the colossus is now less likely to try and attack units that are being tractored.</p>
+          </div>
+          <div class="card">
+            <h3>Fix footprint and collision box of Ythotha</h3>
+            <p>The Ythotha is no longer afraid of walls and can again happily crush them.</p>
+          </div>
+          <div class="card">
+            <h3>Fix duration of death animations of structures</h3>
+            <p>It now matches the time it has always taken for factories to be destroyed.</p>
+          </div>
+          <div class="card">
+            <h3>Fix missing meshes and normals of various units</h3>
+            <p>Including the Summit, that now again looks a lot better.</p>
+          </div>
+          <div class="card">
+            <h3>Fix teleportation glitches</h3>
+            <p>No more teleporting Cybran ACU with a cloak upgrade.</p>
+          </div>
+          <div class="card">
+            <h3>Fix a glitch with an Atlantis and a gunship with its cargo</h3>
+            <p>No more invincible units through this weird glitch.</p>
+          </div>
+          <div class="card">
+            <h3>Allow turrets to rotate to the nearest threat again</h3>
+            <p>This was broken by the previous patch, it now functions as expected again.</p>
+          </div>
+          <div class="card">
+            <h3>Fix collision size of Titans, Loyalists and Ilshahovs for beam weapons</h3>
+            <p>Beam weapons (in particular, the Seraphim tech 2 point defense) should now more reliably hit these specific units.</p>
+          </div>
+          <div class="card">
+            <h3>Properly populate <code>AdjacentUnits</code> of structures</h3>
+            <p>Useful for AIs to quickly determine adjacent units. Only units that provide an adjacency bonus are tracked.</p> 
+          </div>
+          <div class="card">
+            <ul>
+              <li>Fix typo with missile callbacks for AIs</li>
+              <li>Fix props corrupting bomber weapon state</li>
+              <li>Add the BlueprintId to <code>Blueprint.CategoriesHash</code></li>
+              <li>Fix scaling issue with new mod manager</li>
+            </ul>
+          </div>
+        </div>
+
+        <h2 id="performance">Performance</h2>
+
+        <div id="3">
+          <div class="card">
+            <h3>Improve performance by changing <code>self.Fun(self, ...)</code> to <code>self:Fun(...)</code></h3>
+            <p>This was initially considered an improvement to performance. With the recent improvements to the benchmarking tools we found out that this isn't strictly the case. Therefore we are reverting it back to the more-readable format.</p>
+          </div>
+          <div class="card">
+            <h3>Improve performance of reclaim labels</h3>
+            <p>Drastically improves the performance of reclaim labels.</p>
+            <p>A lot of UI mods adjusted the behavior of reclaim labels. Usually they did this by using destructive hooks. That makes it impossible for us to push through these improvements. UI mods that apply destructive hooks to <code>reclaim.lua</code> have been deprecated. Their authors are highly encouraged to update their mods and are recommended to use soft hooks instead.</p>
+          </div>
+          <div class="card">
+            <ul>
+              Improve performance of AI economy conditions
+              Improve performance of AI builder conditions
+              Clean up and improve performance of imports
+            </ul>
+          </div>
+
+
+
+
+        </div>
+
+        <h2 id="coop-ai">Campagin / AI</h2>
+
+        <div id="4">
+          <div class="card">
+            <h3>Improve AI behavior and performance of the base game</h3>
+            <p>Including, but not limited to:
+              <ul>
+                <li>use alternative move functions that reduce formation issues</li>
+                <li>implement eco-over-time to better guage the economic situation</li>
+                <li>fix ACU behavior where it is unable to finish structures</li>
+                <li>fix various issues with commands not being cleared properly</li>
+                <li>fix factory manager not cleaning up destroyed factories</li>
+                <li>introduction of pathing build conditions (using navigational mesh)</li>
+              </ul>
+            </p>
+          </div>
+
+          <div class="card">
+            <ul>
+              <li>Add HQ support functions for AIs</li>
+              <li>Clean up of various build conditions</li>
+            </ul>
+          </div>
+        </div>
+
+        <h2 id="annotations">Annotations</h2>
+
+        <div id="5">
+          <div class="card">
+            <p>We're batching all pull requests with regards to annotations into one entry. That doesn't make the work less meaningful - the introductions of annotations is what Typescript is for Javascript: a completely new and improved approach to development.</p>
+            <p>You can find the plugin by searching for <code>fa-lua-vscode-extension</code> in the <code>FAForever</code> Github group, as found <a href="https://github.com/FAForever">here</a></p>
+          </div>
+        </div>
+
+        <h2 id="other">Other</h2>
+        
+        <div id="6">
+
+          <div class="card">
+            <h3>Introduce initialization decoupled layouter design pattern</h3>
+            <p>Improves the layouter UI pattern that was introduced since the last patch</p>
+          </div>
+          <div class="card">
+            <h3>Add key action localization directives</h3>
+            <p>Allows us to add in keys that are used for a hotkey to a description. Useful for tooltips and the loading screen tips.</p>
+          </div>
+          <div class="card">
+            <h3>Allow debugging drawing tools to function properly in AI games</h3>
+            <p>These are often used by AI developers to debug their code.</p>
+          </div>
+          <div class="card">
+            <h3>Allow easier testing on deploy/fafdevelop</h3>
+            <p>All files in <code>/devdata</code> are now loaded when playing on the <code>FAF Develop</code> game type</p>
+          </div>
+          <div class="card">
+            <h3>Improve workflow for testing</h3>
+            <p>Allows us to write better tests for engine-oblivious functionality</p>
+          </div>
+          <div class="card">
+            <h3>Speed up checking when a player is defeated</h3>
+            <p>In an attempt to match the old time taken to determine when a player is defeated.</p>
+          </div>
+          <div class="card">
+            <h3>Allow hovering over the Ythotha storm</h3>
+            <p>Allows you to see veterancy statistics, to finally settle the debate how useful the storm is</p>
+          </div>
+          <div class="card">
+            <h3>Introduce color library</h3>
+            <p>Allows us to easily convert numbers into colors as RGB, HSL or HSV.</p>
+          </div>
+          <div class="card">
+            <h3>Deprecate mods by version number</h3>
+            <p>Previously we could only deprecate mods by its name, regardless of its version. We can now also include the version, allowing an author to update the mod and have it automatically 'undeprecate' by doing so.</p> 
+          </div>
+          <div class="card">
+            <ul>
+              <li>Adjust order of lobby options for less scrolling</li>
+              <li>Add new and improve existing loading tips</li>
+              <li>Update description of Fullshare gamemode</li>
+              <li>Add or improve translations for traditional chinese</li>
+              <li>UI Framework: introduction of the set and support classes</li>
+              <li>Fix energy storage large strategic icon in construction menu</li>
+              <li>Create initial tests for NavDatastructures.lua</li>
+            </ul>
+          </div>
+
+
+        </div>
+
+
+        <h2>Contributors</h2>
+
+        <div class="card">
+          <ul>
+            <li>4z0t</li>
+            <li>Penguin5</li>
+            <li>Relent0r</li>
+            <li>hdt80bro</li>
+            <li>Rowey</li>
+            <li>Jip </li>
+            <li>iczero</li>
+            <li>FemtoZetta</li>
+            <li>KionX</li>
+            <li>CheeseBerry</li>
+            <li>BlackYps</li>
+            <li>YuchenJimmy</li>
+            <li>xXEddieXxx</li>
+            <li>Zjonn</li>
+            <li>ErikMekkes</li>
+          </ul>
+
+          <p>And with thanks to Fichom for creating various textures scattered over the pull requests.</p>
+        </div>
+
+        <h2 id="mods">List of incompatible mods</h2>
+        <div id="7">
+          <div class="card">
+            <p>Mods that are deprecated, based on mod folder name</p>
+            <ul>
+              <li><code>deprecatedMods["simspeed++"] = true</code></li>
+              <li><code>deprecatedMods["#quality of performance 2022"] = true</code></li>
+              <li><code>deprecatedMods["em"] = "11"</code></li>
+            </ul>
+
+            <p>As per #4119 the control groups (called selection sets in code) are completely overhauled and extended feature-wise, because of that these mods are no longer viable / broken / integrated</p>
+            <ul>
+              <li><code>deprecatedMods["group_split"] = "0.1"</code></li>
+              <li><code>deprecatedMods["Control Group Zoom Mod"] = "2"</code></li>
+              <li><code>deprecatedMods["additionalControlGroupStuff"] = true</code></li>
+            </ul>
+
+            <p>As per #4124 the cursor and command interactions are complete overhauled and extended feature-wise, because of that these mods are no longer viable / broken / integrated</p>
+            <ul>
+              <li><code>deprecatedMods["additionalCameraStuff"] = "3"</code></li>
+              <li><code>deprecatedMods["RUI"] = "1.0"</code></li>
+            </ul>
+
+            <p>As per #4232 the reclaim view is completely overhauled</p>
+            <ul>
+              <li><code>deprecatedMods["Advanced Reclaim&Selection Info"] = "1"</code></li>
+              <li><code>deprecatedMods["AdvancedReclaimInfo"] = "1"</code></li>
+              <li><code>deprecatedMods["BetterReclaimView"] = "2"</code></li>
+              <li><code>deprecatedMods["disableReclaimUI"] = "2"</code></li>
+              <li><code>deprecatedMods["DynamicReclaimGrouping"] = "1"</code></li>
+              <li><code>deprecatedMods["EzReclaim"] = "1.0"</code></li>
+              <li><code>deprecatedMods["OnScreenReclaimCounter"] = "8"</code></li>
+              <li><code>deprecatedMods["ORV"] = "1"</code></li>
+              <li><code>deprecatedMods["SmartReclaimSupport"] = "3"</code></li>
+              <li><code>deprecatedMods["DrimsUIPack"] = "3"</code></li>
+              <li><code>deprecatedMods["Rheclaim"] = "2"</code></li>
+            </ul>
+
+            <p>Note that mods like Quality of Performance are no longer required - they barely have impact on the performance of the simulation these days.</p>
+          </div>
+        </div>
+
+        <hr>
+
+        <div class="backtotop">
+          <button>
+            <a class="toptext" href="#top">Back to Top</a>
+          </button>
+        </div>
+
+      </div>
+      <div class="sidebar">
+        <div>
+          <h2><u>Contents</u></h2>
+          
+          <h3>&gt; <a href="#features">Features</a></h3>
+          <h3>&gt; <a href="#bugs">Bug Fixes</a></h3>
+          <h3>&gt; <a href="#performance">Performance</a></h3>
+          <h3>&gt; <a href="#coop-ai">Campagin / AI</a></h3>
+          <h3>&gt; <a href="#annotations">Annotations</a></h3>
+          <h3>&gt; <a href="#other">Other</a></h3>
+        </div>
+      </div>
+    </main>
+  </body>
+  <footer>
+    <a href="./index.html">Back to Patchnote List</a>
+    <p>© 2014-2024 FAForever</p>
+  </footer>
+</html>

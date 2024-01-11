@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="description" content="FAForever Game Patchnotes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Patch 3728</title>
+    <link rel="stylesheet" href="/style/game.css">
+  </head>
+  <body>
+    <main class="grid">
+      <div class="content">
+        <div id="intro">
+            <h1>Game Patch 3728</h1>
+          <hr>
+        </div>
+
+        <h2 id="feaures">Features</h2>
+
+        <div id="feat">
+          <div class="card">
+            <h3>Allow more structures to be cap-able.</h3>
+            <p>Using using a similar mechanic to storages for extractors.</p>
+
+            <b>This changes the ringing behavior to:</b>
+            <ul>
+              <li>2 clicks + shift to mass storage an upgrading t1 extractor</li>
+              <li>1 click to mass storage a t2 / t3 extractor</li>
+              <li>3 clicks to shift + mass fab cap an upgrading t2 extractor</li>
+              <li>2 clicks to shift + mass fab cap a t3 extractor</li>
+              <li>1 clicks to mass storage a t3 fabricator</li>
+              <li>1 clicks to pgen an t2 artillery</li>
+              <li>2 clicks + shift to pgen an upgrading t1 radar</li>
+              <li>1 clicks to pgen an t2 radar or t3 radar</li>
+              <li>1 click to wall a t1 pd</li>
+            </ul>
+
+            <b>General rule of thumb:</b>
+            <ul>
+              <li>Typical: click</li>
+              <li>Upgrading: shift + 2 click</li>
+              <li>Dangerous: shift + (regular click count + 1)</li>
+            </ul>
+
+            <p>Shift was already part of the feature and is extended to prevent unintended ringing.</p>
+          </div>
+
+          <div class="card">
+            <h3>Assisting behavior</h3>
+            <ul>
+              <li>When all engineers are of the same faction, they can all build the same storage. No assisting happening.</li>
+              <li>When you have engineers of two or more factions, one must assist the other as they can't build the same storages.</li>
+              <li>When you have engineers of one faction and units that can't build the storage (kennel drones, ACU) then they must assist an engineer as they can't build the storages themselves. This option can be adjusted in options -> gameplay. Search for the field 'Automated Structure Encircling'. Options are:
+                <ul>
+                  <li>Off</li>
+                  <li>Only mass storages and extractors</li>
+                  <li>Full suite</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>Add factory queue on hover</h3>
+
+            <p>This allows you to get a quick overview of the factory queue by just hovering over the unit. Especially useful for casters as you can now view the factory queue without switching to the army in question. <br><br> Can be adjusted in the options -> interface. Search for the field 'Show Factory Queue on Hover'. Options are:
+              <ul>
+                <li>Off</li>
+                <li>Only on when observing</li>
+                <li>Always</li>
+              </ul>
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Add an option to scale down the UI (to 80%) for low resolution monitors</h3>
+
+            <p>This doesn't appear to be an issue at first due to the infinite zoom but when the score board takes up 50% of your screen due to a 1024x720 resolution then it suddenly is. <br><br> Not all of the UI can manage this - please report issues in #game-general in the FAF discord when you find them.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Add quick-swap feature to lobby for the host</h3>
+
+            <p>As a host you can quickly swap two players by left-clicking on the slot numbers of two players. It highlights to teal (light / bright blue color) when in swap modus. Click the highlighted slot number to cancel.</p>
+          </div>
+
+          <div class="card">
+            <h3>Expands the disconnection dialog</h3>
+
+            <p>
+              A host can now set a lobby option to change the delay required during a disconnection dialog. <br><br>
+              This defaults to the current behavior but can be set to 10 and 30 seconds. <br><br>
+              The exit dialog is now on top of the disconnection dialog, instead of the other way around.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Overhaul of the cheat spawn menu</h3>
+
+            <p>Adds a basic prop spawn mode. Units are spawned using the command feedback on the spawn location. If spawning multiple units they spawn in a box formation. Multi column support and customizable in the game options. Dynamic support for custom factions. Adds in a toggle for revealing hidden-from-spawn-menu units</p>
+          </div>
+        
+        </div>
+
+        <h2 id="stability">Stability</h2>
+
+        <div id="stab">
+
+          <div class="card">
+            <h3> Refactor the init files of the game </h3>
+
+            <p>
+              This is an involved change but one that was due. <br><br>
+              The init files can no longer load in content that clash between the base game files or between older versions of the same mod. This could also occur when the mod was not activated for sound and / or movie files. <br><br>
+              The client supports loading content from a separate vault location, the init files need to support this functionality accordingly. The init files of the game types FAF, FAF Beta and FAF Develop support this functionality. Other game types need to be updated accordingly. <br><br>
+              The vault location determined by the client is used to load in content (maps / mods). Any other location is no longer read and therefore any map / mod in the other locations are not found by the game. If after this patch you 'lost' a few of your maps and / or mods it means that they were in an old vault location - you'd need to move those manually. <br><br>
+              Adds icon support to FAF Beta. Adds the ability to more easily block content that is integrated.
+            </p>
+
+          </div>
+
+          <div class="card">
+            <ul>
+              <li>Integrate the Nvidia Fix mod and block the mod from loading</li>
+              <li>Prevent applying bugs to insignificant units, like the Cybran build drone</li>
+              <li>Attempt to fix Rhino from missing its target</li>
+              <li>Prevent clearing critical state in AI functions</li>
+            </ul>
+          </div>
+
+        </div>
+
+        <h2 id="bugs">Bug Fixes</h2>
+
+        <div id="bug">
+
+          <div class="card">
+            <h3> Fix experimentals doing death damage upon death during construction</h3>
+
+            <ul>
+              <li>Monkeylord: only when fully complete as it sits</li>
+              <li>Megalith: only when fully complete as it sits</li>
+              <li>Colossus: when complete 50% or more</li>
+              <li>Ythotha: when complete 50% or more</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>Removes the dummy drone from the unit restriction list</h3>
+
+            <p>This drone was often misintepreted as an easy way to unrate a game. In contrast to what the name suggests it does have a function: to help gift units when a player dies and full share is on. The drone can no longer be restricted and instead there is a dedicated lobby option to unrate the game.</p>
+          </div>
+
+          <div class="card">
+            <h3>Fix Aeon aim bones being underground when building</h3>
+
+            <p>This fixes the famous issue where an unfinished t1 pd attracts a lot of fire, but because its aim bones are still underground all the attacking units shoot at the ground. No more!</p>
+          </div>
+
+          <div class="card">
+            <ul>
+              <li>Fix upvalue issue of patch 3721</li>
+              <li>Fix (mod) units being unbuildable due to error in UI</li>
+              <li>Fix overcharge occasionally basing its damage on the previous unit it hit</li>
+              <li>Fix the unpathable skirts of the Seraphim Quantum Gateway</li>
+              <li>Fire Beetle properly applies EMP / stun buffs</li>
+              <li>Fix Seraphim t3 MAA from zapping through shields</li>
+              <li>Fix consumption bug introduced by #3447</li>
+              <li>Fix Rhino overshooting its target.</li>
+              <li>Fix errors on gifting when full share is enabled</li>
+              <li>Fix typo that prevents cybran build beams from spawning</li>
+              <li>Fix inconsistency with SACU presets that prevent them from having custom strategic icons</li>
+              <li>Fix kennels not spawning their drone when you immediately queue up an upgrade</li>
+            </ul>
+          </div>
+
+        </div>
+
+        <h2 id="perfomance">Performance</h2>
+
+        <div id="perf">
+
+          <div class="card">
+            <h3>Removed old AI related code that was being run regardless of whether AIs were in-game</h3>
+
+            <p>
+              This change is involved performance-wise but does not impact gameplay. <br><br>
+              As a practical example: chain ten engineers assisting one another and make the first engineer assist a factory. With these changes they'll start assisting the factory one by one as it takes one tick (simulation tick) to detect the unit it is assisting has started working on something. <br><br>
+              The previous behavior would be that all engineers get updated immediately. This required it to search for engineers in its surrounding and all those it found would need to look up its surroundings too. This can quickly get out of hand.
+            </p>
+            
+          </div>
+
+          <div class="card">
+            <h3>Removes AI threat computations and fixes AI detection</h3>
+
+            <p>AI code was being run during every game even when no AI was present in said game. After discussing it with the AI devs this pull requests completely removes the threat computations.</p>
+          </div>
+
+          <div class="card">
+            <h3>Reduce impact on sim of common hover emitter effects</h3>
+
+            <p>Effects have an impact on the sim, in particular when they create a particle. Once the particles exist they appear to be free of charge. With this PR we reduced the number of particles created for various units such as the Aeon T1 engineer to bring them into the same cost range (sim wise) as the other engineers, without impacting their visual appearance too much. Disables the hover effects of these units all together when playing on low fidelity.
+            </p>
+
+          </div>
+
+          <div class="card">
+            <h3>Fix and improve performance on Seraphim build animations</h3>
+
+            <p>The old version had complicated logic and various computations that were not required. The new version is better for performance and a lot more smooth with regards to the build animation. </p>
+          </div>
+
+          <div class="card">
+            <ul>
+              <li>Add minor performance improvements for generic utility functions</li>
+              <li>Optimize the import function that is used by all files.</li>
+              <li>Prevent unneccessary allocations during the Aeon build animation</li>
+              <li>Optimize most common called unit functions</li>
+              <li>Optimize weapons</li>
+
+            </ul>
+          </div>
+
+        </div>
+
+        <h2 id="other">Other</h2>
+
+        <div id="others">
+
+          <div class="card">
+            <h3>Switch off debug utilities by default</h3>
+
+            <p>
+              This is only useful for developers, but it did cause a (slight) drain on resources when it was turned on even though you're not looking at the logs. It turns it off by default during each startup, you can prevent this as a developer by adding <code>debug = { enable_debug_facilities = true }</code> to your preference file
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Remove greyness when deviation is high</h3>
+
+            <p>In combination with other work, such as combining the number of games people played across the board (ladder / tmm / globals) it should become easier for people to 'get into' custom games without being called a noob beforehand or a smurf afterwards (never played custom games, but played a lot of ladder).</p>
+          </div>
+
+          <div class="card">
+            <h3>Remove game quality computations for games with more than two teams</h3>
+
+            <p>The Trueskill system is not designed to compute the quality of a game when more than (or less than) two teams are involved. Hence, the computation is gibberish anyhow.</p>
+
+          </div>
+
+          <div class="card">
+            <h3>Introduction of insignificant or dummy units</h3>
+
+            <p>
+              This introduces a new unit class that can be used to fix various bugs and glitches with the game. One such issues is the long standing bug with the Aeon build animation where the aim bones are underground at the start of construction. <br><br>
+              Sadly, this change is quite involved because a lot of the functionality expects a full-fledged unit. We've tried to catch some of these but there will be more issues that will show up, especially with scripted maps.
+            </p>
+          </div>
+
+          <div class="card">
+            <h2>Fixed various issues with the Aeon build animation</h2>
+
+            <p>As an example, hover units no longer jump to their hover elevation when they're finished. All experimentals have unique build animations that fit the style of the faction.</p>
+          </div>
+
+          <div class="card">
+            <ul>
+              <li>Update visuals for the UEF T2 PD and Destroyer</li>
+              <li>Add unit tests for generic utility functions</li>
+              <li>Fix small issues for units of the Cybran faction.</li>
+              <li>Fix capitalisation consistency</li>
+              <li>Allow trashbag to be re-used for effects</li>
+              <li>Fix UI description of teleport</li>
+              <li>Fix the attack animation of the Monkeylord</li>
+              <li>Updates the readme with the most recent dependencies</li>
+              <li>Remove the curated maps button until an alternative is available</li>
+              <li>Fix T2 seraphim sonar being restricted when t3 base spam is selected</li>
+              <li>Change default settings of auto lobby to 1.5K unit cap and full share (used by ladder / team match making)</li>
+              <li>Update regular expression of mod version removal</li>
+              <li>Restrict t2 artillery orientation to 90 degree angles</li>
+              <li>Force shader re-compilation on development branches</li>
+              <li>Update URLs to https instead of http</li>
+              <li>Fix graphics of Summit and Fatboy</li>
+              <li>Fix (build) icon of Seraphim T3 MAA</li>
+              <li>Fix Cybran ACU not having the right amount of build bots when enhanced</li>
+              <li>Add a hotkey to select all idle scouts</li>
+            </ul>
+          </div>
+
+        </div>
+
+        <h2>Contributors</h2>
+
+        <div class="card">
+          <ul>
+            <li>Askaholic</li>
+            <li>Madmax</li>
+            <li>Uveso</li>
+            <li>Rowey</li>
+            <li>Jip</li>
+            <li>KionX</li>
+            <li>Crotalus</li>
+            <li>Benzi-Junior</li>
+            <li>Balthazar</li>
+            <li>4z0t</li>
+            <li>Marlo</li>
+            <li>Eternal</li>
+            <li>Tagada</li>
+          </ul>
+        </div>
+
+        <h2>Reviewers</h2>
+
+        <div class="card">
+          <ul>
+            <li>Balthazar</li>
+            <li>Relent0r</li>
+          </ul>
+        </div>
+
+        <h2>Translators</h2>
+
+        <div class="card">
+          <ul>
+            <li>Lenkin</li>
+            <li>4z0t</li>
+          </ul>
+        </div>
+
+        <div class="backtotop">
+          <button>
+            <a class="toptext" href="#top">Back to Top</a>
+          </button>
+        </div>
+
+      </div>
+      <div class="sidebar">
+        <div>
+          <h2><u>Contents</u></h2>
+          
+          <h3>&gt; <a href="#feaures">Feaures</a></h3>
+          <h3>&gt; <a href="#stability">Stability</a></h3>
+          <h3>&gt; <a href="#bugs">Bug Fixes</a></h3>
+          <h3>&gt; <a href="#perfomance">Perfomance</a></h3>
+          <h3>&gt; <a href="#other">Other</a></h3>
+        </div>
+      </div>
+    </main>
+  </body>
+  <footer>
+    <a href="./index.html">Back to Patchnote List</a>
+    <p>© 2014-2024 FAForever</p>
+  </footer>
+</html>
