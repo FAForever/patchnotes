@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="description" content="FAForever Game Patchnotes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Patch 3762</title>
+    <link rel="stylesheet" href="/style/game.css">
+  </head>
+  <body>
+    <main class="grid">
+      <div class="content">
+        <div id="intro">
+            <h1>Patch 3763</h1>
+            <h2>Date: June 27th 2023</h2>
+            <p>See the patch notes of 3762 and 3758 for the full patch notes.</p>
+            <p>There was a misconception with the distribution of files and as a result, wrecks would be removed in the release branch when you build on top of them. It was fun while it lasted 😄</p>
+
+            <p>-- Jip</p>
+          <hr>
+        </div>
+
+        <h2 id="feature">Features</h2>
+
+        <div id="1">
+          <div class="card">
+            <h3>Enhancements to the unit restrictions menu</h3>
+            <ul>
+              <li>Filters out dummy units</li>
+              <li>Filters out insignificant units</li>
+              <li>Fixes various bugs</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>Enhancements to the unit cheat menu</h3>
+            <ul>
+              <li>Add unit count input</li>
+              <li>Add faction logo to a unit</li>
+              <li>Add tech level to a unit</li>
+              <li>Improve readability of blueprint id</li>
+              <li>Fix various styling issues</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>Allow tree groups to block a construction site</h3>
+            <p>Based on player feedback, tree groups now obstruct construction sites and are therefore reclaimed by the engineers</p>
+            <p>This is not to be confused with 'broken tree groups'. A tree group that is broken is split into individual trees. Once broken, these individual trees no longer block the construction site</p>
+          </div>
+
+          <div class="card">
+            <h3>Additional hotkeys to unpause or pause all units</h3>
+            <p>These new hotkeys allow you to express your intentions when (un)pausing a selection of units, especially when only a few of them need to be paused or unpaused</p>
+          </div>
+
+          <div class="card">
+            <h3>Additional hotkeys to surface or submerge all units</h3>
+            <p>These new hotkeys allow you to express your intentions when surfacing or submerging a selection of units, especially when only a few of them are submerged or surfaced</p>
+          </div>
+
+        </div>
+
+        <h2 id="bugs">Bug Fixes</h2>
+
+        <div id="2">
+
+          <div class="card">
+            <h3>Resolved the issue with the navigational mesh causing crashes during the save-load sequence</h3>
+            <p>Most notable when playing the campaign alone. The navigational mesh was written as a large cycle. As a consequence, once the navigational mesh was generated the save process would be unable to serialize it and crash the game</p>
+          </div>
+          <div class="card">
+            <h3>Fix the Ythotha storm discriminating allied units and patches of ground</h3>
+            <p>There was a bug that would prevent the Ythotha storm from firing upon allied units. As a result, the storm would only deal damage to hostile units. Now, the storm treats all units and ground patches equally, inflicting damage without bias.</p>
+          </div>
+          <div class="card">
+            <h3>Prevent the intel recharge thread from hijacking the work progress bar</h3>
+            <p>Most notable with the Cybran ACU once he has the stealth enhancement. This prevents the chaotic behavior when multiple Lua threads are trying to claim the progress bar</p>
+          </div>
+          <div class="card">
+            <h3>Adjusted the positioning of tech 3 anti-air units in formations</h3>
+            <p>The Bouncer and the Lightning tank have a direct fire weapon. As a result, they were considered to be a direct fire unit by the formations script. They are now recognized as anti-air units and therefore end up at the middle or the back of the formation like other anti-air units</p>
+          </div>
+          <div class="card">
+            <h3>Remove the ability to cap Tech 3 air factories</h3>
+            <p>The previous hotfix (3763) was unexpected and this change wasn't supposed to go live immediately. Regardless, we understood the feedback and are removing the behavior again</p>
+          </div>
+          <div class="card">
+            <ul>
+              <li>Sanitize the anti-surface threat value of ACUs</li>
+              <li>Fix a bug where Seraphim torpedo bombers can trick torpedo defenses</li>
+            </ul>
+          </div>
+        </div>
+
+        <h2 id="other">Other</h2>
+
+        <div id="3">
+          <div class="card">
+            <ul>
+              <li>Add platoon form callbacks for conditional builds</li>
+            </ul>
+          </div>
+        </div>
+
+        <h2>Contributors</h2>
+
+        <div class="card">
+          <ul>
+            <li>HUSSAR</li>
+            <li>Jip</li>
+            <li>Relent0r</li>
+            <li>speed2</li>
+          </ul>
+        </div>
+
+        <div class="backtotop">
+          <button>
+            <a class="toptext" href="#top">Back to Top</a>
+          </button>
+        </div>
+
+      </div>
+      <div class="sidebar">
+        <div>
+          <h2><u>Contents</u></h2>
+          
+          <h3>&gt; <a href="#feature">Feature</a></h3>
+          <h3>&gt; <a href="#bugs">Bug Fixes</a></h3>
+          <h3>&gt; <a href="#other">Others</a></h3>
+        </div>
+      </div>
+    </main>
+  </body>
+  <footer>
+    <a href="./index.html">Back to Patchnote List</a>
+    <p>© 2014-2024 FAForever</p>
+  </footer>
+</html>

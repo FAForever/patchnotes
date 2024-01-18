@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="description" content="FAForever Game Patchnotes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Patch 3762</title>
+    <link rel="stylesheet" href="/style/game.css">
+  </head>
+  <body>
+    <main class="grid">
+      <div class="content">
+        <div id="intro">
+            <h1>Patch 3765</h1>
+            <h2>Date: June 27th 2023</h2>
+            <p>See the patch notes of <a href="/game/3765.html">3765</a> for the full patch notes.</p>
+            <p>With thanks to all those that took the time to report issues.</p>
+            <p>-- Jip</p>
+          <hr>
+        </div>
+
+        <h2 id="feature">Features</h2>
+
+        <div id="1">
+          <div class="card">
+            <h3><a href="https://github.com/FAForever/fa/issues?q=label%3A%22feature%3A+capping+of+structures%22">Capping of a structure</a></h3>
+            <p>In the previous patch, we reduced the ability to cap structures by assisting a structure. Thanks to an assembly patch by 4z0t, the technical reasons for this reduction have been fixed. As a result, we are now reintroducing the feature with improvements.</p>
+            <p>The feature now sorts the build orders by the distance to the nearest engineer relative to the structure they are assisting. This helps reduce pathfinding issues. Additionally, the feature now applies a single build order to all engineers, which reduces the framerate impact that players previously experienced.</p>
+            <p>Upon release, players can enable the following assist-to-cap behaviors through the game options:
+              <ul>
+                <li>Cap an extractor with mass storages</li>
+                <li>Cap an extractor with 4 or 8 mass fabricators</li>
+                <li>Cap a radar or tech 2 artillery with tech 1 power generators</li>
+                <li>Cap tech 3 or experimental artillery with tech 3 power generators</li>
+              </ul>
+            </p>
+          </div>
+
+          <div class="card">
+            <ul>
+              <li>Introduces a hotkey to issue an upgrade to the structure currently under the mouse cursor</li>
+              <li>Introduces a hotkey to cap the structure currently under the mouse cursor</li>
+              <li>Introduces a hotkey to select all units consuming resources</li>
+              <li>Introduces the generation of Naval Area markers for AIs</li>
+            </ul>
+            <p>The average AI is now more likely to construct naval factories.</p>
+            <ul>
+              <li>Improvements to the Mods Manager</li>
+            </ul>
+            <p>No more text bleeding, and the URL dialog is temporarily removed when you open links in the lobby.</p>
+          </div>
+        </div>
+
+        <h2 id="bugs">Bug Fixes</h2>
+
+        <div id="3">
+          <div class="card">
+            <ul>
+              <li>Exclude external factory unit from the unit restrictions menu</li>
+              <li>Fix Solace dropping the torpedo salvo way behind the target</li>
+              <li>Fix a bug where the build preview of templates would reset every few seconds</li>
+            </ul>
+            <p>This was a mistake on our end. With this fix, the game is more compatible with UI mods such as Eco Manager and UI Party again</p>
+            <ul>
+              <li>Fix the bleeding of water ramps on sharp cliffs</li>
+            </ul>
+          </div>
+        </div>
+
+        <h2>Contributors</h2>
+
+        <div class="card">
+          <p>With thanks to the following people who contributed through coding:
+            <ul>
+              <li>gordenwunderlich (Nex37)</li>
+              <li>Garanas (Jip)</li>
+              <li>HUSSAR-mtrela</li>
+              <li>BlackYps</li>
+            </ul>
+          </p>
+
+          <p>With thanks to the following people who contributed through binary patches:
+            <ul>
+              <li>4z0t</li>
+              <li>Strogoo</li>
+              <li>KionX</li>
+              <li>RTD</li>
+            </ul>
+          </p>
+
+          <p>And, last but certainly not least - with thanks to those that took part in constructive discussions:
+            <ul>
+              <li>Babel</li>
+              <li>Valigo</li>
+              <li>MostLostNoob</li>
+              <li>LoliNekoTrap</li>
+            </ul>
+          </p>
+        </div>
+
+        <div class="backtotop">
+          <button>
+            <a class="toptext" href="#top">Back to Top</a>
+          </button>
+        </div>
+
+      </div>
+      <div class="sidebar">
+        <div>
+          <h2><u>Contents</u></h2>
+          
+          <h3>&gt; <a href="#feature">Feature</a></h3>
+          <h3>&gt; <a href="#bugs">Bug Fixes</a></h3>
+        </div>
+      </div>
+    </main>
+  </body>
+  <footer>
+    <a href="./index.html">Back to Patchnote List</a>
+    <p>© 2014-2024 FAForever</p>
+  </footer>
+</html>

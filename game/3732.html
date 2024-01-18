@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="description" content="FAForever Game Patchnotes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Patch 3732</title>
+    <link rel="stylesheet" href="/style/game.css">
+  </head>
+  <body>
+    <main class="grid">
+      <div class="content">
+        <div id="intro">
+            <h1>Game Patch 3732</h1>
+          <hr>
+        </div>
+
+        <h2 id="feature">Features</h2>
+
+        <div id="1" class="card">
+
+          <div class="card">
+            <h3>In-lobby auto balancing</h3>
+            <p>Introduction of in-lobby balancing for the typical two-team setup. Similar results to optimal balance but allows the host to manually tweak the starting positions and take into account parties before launching the game.</p>
+          </div>
+          <div class="card">
+            <h3>Introduction of experimental graphics</h3>
+            <p>Allows you to increase the LOD of entities and the LOD and resolution of  shadows. This can be enabled separetely in the graphics options of the game. Is applied after restarting the game.</p>
+            <p>Please read the tooltip carefully.</p>
+          </div>
+          <div class="card">
+            <h3>Introduction of lobby option to determine sharing behavior of units</h3>
+            <p>Allows the host to enable the sharing of all units, only allow the sharing of non-construction units or disable the sharing of units all together. By default sharing of all units is enabled.</p>
+          </div>
+          <div class="card">
+            <h3>Dynamic AI threat calculations</h3>
+            <p>The AI threat values have not been updated over the years - they are now computed based on unit statistics during the blueprint loading phase. Introduces a utilities window that allows you to inspect AI-related blueprint values of a unit. You need to set a hotkey for that window. You can find it in the hotkeys dialogue (F1) by searching for 'information'. Cheats need to be enabled in order for the window to show.</p>
+          </div>
+          <div class="card">
+            <h3>Allow Hives to start upgrading immediately</h3>
+            <p>Part of the Small Suggestions topic on the forum - suggested by Tagada.</p>
+          </div>
+          <div class="card">
+            <h3>Introduce connection status during matchmaking</h3>
+            <p>Adds a UI component that informs you how many players are connected while waiting for the people to connect for ladder / matchmaking.</p>
+          </div>
+          <div class="card">
+            <h3>Introduction of the (performance) profiler</h3>
+            <p>Allows us to diagnose where the performance is being used during a game. Revolutionary in terms of our capabilities of understanding where all those cycles are going.</p>
+            <p>Requires you to set a hotkey to enable it. Abuse is bannable.</p>
+          </div>
+          <div class="card">
+            <h3>Introduce toggle for mesh rendering on the minimap</h3>
+            <p>All meshes would be culled (or rendered) accordingly on the minimap even though they are, typically, never visible. Introduces a toggle to disable mesh rendering in the minimap.</p>
+            <p>This is not functional until the next release of the executable.</p>
+          </div>
+          <div class="card">
+            <h3>Adjust dynamic threat computations</h3>
+            <p>Armored command units no longer have inflated threat values. Introduces a flag to skip the dynamic threat computation all together, defaulting back to what was set in the
+              blueprint. Weapons by default produce direct fire threat, unless they are flagged to be blockable by an anti-artillery shield. In that case they only produce economic threat.</p>
+              <p>This only impacts AI-related games. With thanks to Relent0r (creator of RNGAI) for his time.</p>
+          </div>
+          <div class="card">
+            <h3>Temporarily disables weapons of a unit upon gifting</h3>
+            <p>Prevents the cheat where gifted units can immediately fire again. This was particularly relevant to bombers.</p>
+          </div>
+          <div class="card">
+            <h3>Map utilities window </h3>
+            <p>Introduces a window to help analyse a map. Can be used to visualize the threat values of an AI, check the buildability of extractors, along with ringed storages and fabricators. Can visualize all markers on a map.</p>
+            <p>Requires you to set a hotkey to enable it.</p>
+          </div>
+          <div class="card">
+            <h3>Introduction of an announcement when you receive units due to full share</h3>
+            <p>Full share unit transfer priority is now based on rating, instead of score. If no rating is available then the unit transfer is based on score</p>
+          </div>
+          <div class="card">
+            <ul>
+              <li>Display team ratings in the observer window of the lobby </li>
+              <li>Introduction of click-on-name-to-whisper feature while in the lobby</li>
+            </ul>
+          </div>
+        </div>
+
+        <h2 id="bugs">Bug Fixes</h2>
+
+        <div id="2">
+          <div class="card">
+            <h3>Remove new lines when you set a lobby title</h3>
+            <p>Prevents having lobbies in the client that occupy multiple lines, allowing them to overlap with other lobbies.</p>
+          </div>
+          <div class="card">
+            <h3>Preserve weapon bone orientation upon destruction</h3>
+            <p>There was a bug introduced last patch that causes weapons to reset their orientation right before the unit was destroyed.</p>
+          </div>
+          <div class="card">
+            <h3>Fix trampling damage</h3>
+            <p>There was a bug introduced last patch that reduced all trampling damage to zero. Surprising how little people reported about it</p>
+          </div>
+          <div class="card">
+            <h3>Fix inconsistencies with cheat menu</h3>
+            <p>The mouse click is now always registered. Prevents selected units from interfering with the cheat progress by deselecting them while spawning units and reselecting them when you are finished. Fixes veterancy issues: both for the spawn menu and all campaign missions.</p>
+          </div>
+          <div class="card">
+            <h3>Fix display name of Ythotha death weapon</h3>
+            <p>The yearly contribution of Rowey - can't wait what next year will bring us!</p>
+          </div>
+          <div class="card">
+            <ul>
+              <li>Proper UI scaling of Window class</li>
+              <li>Add missing build mode entries</li>
+              <li>Fix Cerberus turrets over extending their range</li>
+              <li>Fix encoding issues with unicode characters in the preference file</li>
+              <li>Fix issues with the color picker of the lobby</li>
+              <li>Fix various issues that people found while playing on FAF Develop</li>
+            </ul>
+            <p>With thanks to: Yudi, Archsimkat, Snagglefox, Master-Chief, Moosemax, Phong and all the other people that hosted games on FAF Develop and / or reported issues to the game team.</p>
+          </div>
+        </div>
+
+        <h2 id="other">Other</h2>
+
+        <div id="3">
+          <div class="card">
+            <h3>Improve readme of repository</h3>
+            <p>Introduces a modern readme and accurate installation instructions of the development environment. With thanks to everyone involved, including but not limited to BlackYps, Sheikah, Balthazar, Emperor, Ftx. And thanks to 4z0t  there is a complete Russian translation of the readme and the installation instructions.</p>
+          </div>
+          <div class="card">
+            <h3>Adjust map preview button</h3>
+            <p>The button to show the map preview is enlarged and remains enabled when you are ready as a player.</p>
+          </div>
+          <div class="card">
+            <h3>Add enabled mods to tooltip</h3>
+            <p>Adds the enabled ui or sim mods to the tooltip in the lobby, allowing you to preview the enabled mods without entering the mod manager. A small quality of life feature.</p>
+          </div>
+          <div class="card">
+            <h3>Chat ally option</h3>
+            <p>Adds a chat option to send to allies by default instead of to all. Chat options can be found by clicking the wrench icon on the chat dialogue when you are in-game.</p>
+          </div>
+          <div class="card">
+            <h3>Add map version to tooltip in scoreboard</h3>
+            <p>Improves the default scoreboard by introducing the map description and version
+              when hovering over the map.</p>
+          </div>
+          <div class="card">
+            <h3>Change default army color order of lobby </h3>
+            <p>Changes the default army colors to be more intuitive, as an example: when the game is 2 vs 2 then it is two shades of red versus two shades of blue.</p>
+          </div>
+          <div class="card">
+            <h3>Improve compatibility for LuaJIT</h3>
+            <p>Sadly - LuaJit itself has been cancelled due to the insignificant improvements to the simulation in comparison to the amount of work.</p>
+          </div>
+          <div class="card">
+            <h3>Enable <code>wld_RunWithTheWind</code> from the command line</h3>
+            <p>Useful when you have Ai vs Ai games</p>
+          </div>
+          <div class="card">
+            <h3>Attempts to fix the self-awareness of the ready button in the lobby</h3>
+            <p>Reduces the occurences of the ready button not being in sync with the host and other users in the lobby.</p>
+          </div>
+          <div class="card">
+            <ul>
+              <li>Improve compatibility with Lua 5.1</li>
+              <li>Allow Galacitic Colossus to retarget if the current target is unreachable </li>
+              <li>Fix some styling issues with the lobby </li>
+            </ul>
+          </div>
+        </div>
+
+        <h2 id="performance">Performance</h2>
+
+        <div id="4">
+
+          <div class="card">
+            <h3>Fix LODs of effects</h3>
+            <p>Fixes inconsistent Level of Detail (LOD) cutoffs for effects. The cutoff is used to prevent the creation and rendering of particles when they barely contribute to the final image. A lot of effects had an infinite cutoff. These particles were always created and rendered. The creation of particles has a significant impact on the sim, the rendering has an impact on your fps. We introduce a sane LOD cutoff value with which we improve the performance of the sim and your fps at the same time.</p>
+            <p>With thanks to Madmax (creator of various maps and mods) for all his effort to look at more than individual 300 effect files.</p>
+            <p>This was a well-described starters issue - you can find more of these issues on the repository.</p>
+          </div>
+          <div class="card">
+            <h3>Dynamic LOD settings </h3>
+            <p>Computes the LOD cut off values of props based on its blueprint properties. A prop that occupies less screen space will have a lower cut off value - allowing it to be culled sooner. This improves the framerate of the game in general, while having a minor impact on visual fidelity.</p>
+            <p>Technical detail: The LOD values of props in the blueprint are now ignored.</p>
+          </div>
+          <div class="card">
+            <h3>Improve performance of markers</h3>
+            <p>Allows AI developers / map scripters to work with markers without having to worry about underlying performance issues. As an example, retrieving the mass markers on a map is a common operation for AIs. If done through the base game code it would re-allocate a new table of markers each time an AI condition manager starts checking the state of the game. That is quite wasteful. This file keeps track of previous calls, caching the result. Supports adaptive and crazy rush-like maps.</p>
+            <p>Introduces a UI that allows you to inspect the cached markers. The window is toggled with 'K' by default and can be adjusted as usual. Requires cheats to be enabled.</p>
+            <p>Technical detail: this has no impact on regular games, only on games with AI once they've implemented these new routines.</p>
+          </div>
+          <div class="card">
+            <h3>Improve performance of various UI-related functions</h3>
+            <p>Replaces the global function to use a cached result. A call to <code>GetSessionClients</code> or <code>GetArmiesTable</code> created a unique table that the garbage collector can pick up two lines later. These functions are called each frame or each tick. With this caching behavior they get replenished every two seconds, or every 0.025 seconds if a fast interval is set.</p>
+          </div>
+          <div class="card">
+            <h3>Improve performance of reclaim effects </h3>
+            <p>Reduces the amount of garbage generated when an engineer is reclaiming a prop, such as a tree or a wreck.</p>
+          </div>
+          <div class="card">
+            <h3>Improve performance of shield interactions</h3>
+            <p>Significantly improves the performance when a lot of shield interactions are happening simultaniously. This is the case when shields get tickled to death, such as by a Mantis or by a bomber.</p>
+            <p>One particular use case that is significantly faster is when you have fire at Janus fly over 30 mobile shields. This took about 60% of the total budget per tick, but now only takes 10%.</p>
+          </div>
+          <div class="card">
+            <h3>Improve performance of damage over time (DOT)</h3>
+            <p>Reduction of table allocations.</p>
+          </div>
+          <div class="card">
+            <h3>Improve performance of projectile collisions</h3>
+            <p>Reduction of table allocations and engine calls.</p>
+          </div>
+          <div class="card">
+            <h3>Improve performance of unit sound interactions</h3>
+            <p>According to commit dfb363d the sound of submarine units do not work. The solution introduced is applied to all units and allocates a handful of entities per unit. These allocations are expensive! By default, units try to play the sound themselves. For submarine units we introduce one entity that plays all the sounds of the submarine.</p>
+          </div>
+          <div class="card">
+            <h3>Improve performance of utility functions of the Unit class</h3>
+            <p>Reduction of table allocations and engine calls.</p>
+          </div>
+          <div class="card">
+            <h3>Improve performance of all props, including wrecks</h3>
+            <p>Significantly reduces the number of tables allocated per prop. Simplifies some of the logic in favor of performance. Completely removes the state machine. Improves the visual fidelity of forest fires.</p>
+          </div>
+          <div class="card">
+            <h3>Improve performance of all projectiles</h3>
+            <p>Reduction of table allocations, engine calls and various logic across the projectile class hierarchy.</p>
+            <p>Part of a session available on Youtube. See the videos about improving the performance of projectiles in the playlist Game Development on the FAForever Youtube channel.</p>
+          </div>
+          <div class="card">
+            <h3>Improve performance of tree-knocking and decal creation of projectiles</h3>
+            <p>Introduces a generic approach that is highly optimized. Supports units from mod packs accordingly.</p>
+          </div>
+          <div class="card">
+            <h3>Improve performance of the UEF build effects</h3>
+            <p>Significant reduction of table allocations, engine calls and a significant reduction in the amount of Lua instructions related to these functions.</p>
+            <p>Part of a session available on Youtube. See the videos about improving the performance of UEF build effects in the playlist Game Development on the FAForever Youtube channel.</p>
+          </div>
+          <div class="card">
+            <h3>Improve performance of the Seraphim build effects</h3>
+            <p>Corrects the scope of some values and improves the consistency of the Seraphim build effect.</p>
+          </div>
+          <div class="card">
+            <h3>Improve performance of the Lua class hierarchy</h3>
+            <p>Re-implements the class hierarchy used on the Lua side of the game from scratch. It simplifies the implementation to improve the performance while retaining the same functionality. Reduces the amount of tables allocated and the amount of table-related Lua instructions. Supports automated class culling and adjust the implementation of states to reduce the memory footprint of the game.</p>
+          </div>
+          <div class="card">
+            <h3>Improve performance of exhaus effects</h3>
+            <p>Significant reduction of table allocations.</p>
+            <p>This was a well-described starters issue - you can find more of these issues on the repository.</p>
+          </div>
+          <div class="card">
+            <h3>Improve performance of veterancy buff creation</h3>
+            <p>Reduction of table allocations.</p>
+            <p>This was a well-described starters issue - you can find more of these issues on the repository.</p>
+          </div>
+          <div class="card">
+            <h3>Improve performance of OnMotionHorzEventChange</h3>
+            <p>Reduction of function calls and removes the 'OnMotionHorzStart' callback.</p>
+          </div>
+          <div class="card">
+            <ul>
+              <li>Removal of the blinking lights</li>
+              <li>Improve performance of UI related classes</li>
+            </ul>
+          </div>
+        </div>
+
+        <h2>Contributors</h2>
+
+        <div class="card">
+          <ul>
+            <li>Sheikah</li>
+            <li>FtxCommando</li>
+            <li>BlackYps</li>
+            <li>Penguin</li>
+            <li>Askaholic</li>
+            <li>Sheeo</li>
+            <li>Balthazar</li>
+            <li>4z0t</li>
+            <li>Jip</li>
+            <li>Tagada</li>
+            <li>Strogo</li>
+            <li>Rowey</li>
+            <li>Unbring</li>
+            <li>KionX</li>
+            <li>Relent0r</li>
+            <li>Brokerjoe</li>
+            <li>SkepticSpecter</li>
+            <li>Madmax</li>
+            <li>Healther</li>
+            <li>Crotalus</li>
+            <li>speed2</li>
+          </ul>
+        </div>
+
+        <hr>
+
+        <div class="backtotop">
+          <button>
+            <a class="toptext" href="#top">Back to Top</a>
+          </button>
+        </div>
+
+      </div>
+      <div class="sidebar">
+        <div>
+          <h2><u>Contents</u></h2>
+          
+          <h3>&gt; <a href="#bugs">Bug Fixes</a></h3>
+          <h3>&gt; <a href="#performance">Performance</a></h3>
+        </div>
+      </div>
+    </main>
+  </body>
+  <footer>
+    <a href="./index.html">Back to Patchnote List</a>
+    <p>© 2014-2024 FAForever</p>
+  </footer>
+</html>

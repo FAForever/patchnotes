@@ -93,6 +93,91 @@
     ],
     "game": [
         {
+            "patch": "3778",
+            "link": "game/3778.html",
+            "date": " - December 31 2023"
+        },
+        {
+            "patch": "3777",
+            "link": "game/3777.html",
+            "date": " - December 23 2023"
+        },
+        {
+            "patch": "3776",
+            "link": "game/3776.html",
+            "date": " - December 1 2023"
+        },
+        {
+            "patch": "3775",
+            "link": "game/3775.html",
+            "date": " - November 19 2023"
+        },
+        {
+            "patch": "3774",
+            "link": "game/3774.html",
+            "date": " - November 15 2023"
+        },
+        {
+            "patch": "3773",
+            "link": "game/3773.html",
+            "date": " - November 4 2023"
+        },
+        {
+            "patch": "3772",
+            "link": "game/3772.html",
+            "date": " - November 2 2023"
+        },
+        {
+            "patch": "3771",
+            "link": "game/3771.html",
+            "date": " - October 29 2023"
+        },
+        {
+            "patch": "3770",
+            "link": "game/3770.html",
+            "date": " - October 17 2023"
+        },
+        {
+            "patch": "3769",
+            "link": "game/3769.html",
+            "date": " - September 24 2023"
+        },
+        {
+            "patch": "3768",
+            "link": "game/3768.html",
+            "date": " - September 17 2023"
+        },
+        {
+            "patch": "3767",
+            "link": "game/3767.html",
+            "date": " - September 17 2023"
+        },
+        {
+            "patch": "3766",
+            "link": "game/3766.html",
+            "date": " - September 9 2023"
+        },
+        {
+            "patch": "3765",
+            "link": "game/3765.html",
+            "date": " - September 2 2023"
+        },
+        {
+            "patch": "3764",
+            "link": "game/3764.html",
+            "date": " - July 29 2023"
+        },
+        {
+            "patch": "3763",
+            "link": "game/3763.html",
+            "date": " - July 23 2023"
+        },
+        {
+            "patch": "3762",
+            "link": "game/3762.html",
+            "date": " - July 22 2023"
+        },
+        {
             "patch": "3760",
             "link": "game/3760.html",
             "date": " - June 27 2023"
@@ -176,6 +261,156 @@
             "patch": "3741",
             "link": "game/3741.html",
             "date": " - August 21 2022"
+        },
+        {
+            "patch": "3740",
+            "link": "game/3740.html",
+            "date": " - June 23 2022"
+        },
+        {
+            "patch": "3739",
+            "link": "game/3739.html",
+            "date": " - June 20 2022"
+        },
+        {
+            "patch": "3738",
+            "link": "game/3738.html",
+            "date": " - June 19 2022"
+        },
+        {
+            "patch": "3737",
+            "link": "game/3737.html",
+            "date": " - May 15 2022"
+        },
+        {
+            "patch": "3736",
+            "link": "game/3736.html",
+            "date": " - May 6 2022"
+        },
+        {
+            "patch": "3735",
+            "link": "game/3735.html",
+            "date": " - April 24 2022"
+        },
+        {
+            "patch": "3734",
+            "link": "game/3734.html",
+            "date": " - April 22 2022"
+        },        
+        {
+            "patch": "3733",
+            "link": "game/3733.html",
+            "date": " - April 22 2022"
+        },        
+        {
+            "patch": "3732",
+            "link": "game/3732.html",
+            "date": " - April 22 2022"
+        },        
+        {
+            "patch": "3731",
+            "link": "game/3731.html",
+            "date": " - December 30 2021"
+        },
+        {
+            "patch": "3730",
+            "link": "game/3730.html",
+            "date": " - December 22 2021"
+        },        
+        {
+            "patch": "3729",
+            "link": "game/3729.html",
+            "date": " - December 20 2021"
+        },        
+        {
+            "patch": "3728",
+            "link": "game/3728.html",
+            "date": " - December 20 2021"
+        },        
+        {
+            "patch": "3727",
+            "link": "game/3727.html",
+            "date": " - November 28 2021"
+        },        
+        {
+            "patch": "3726",
+            "link": "game/3726.html",
+            "date": " - December 20 2021"
+        },        
+        {
+            "patch": "3725",
+            "link": "game/3725.html",
+            "date": " - December 20 2021"
+        },        
+        {
+            "patch": "3724",
+            "link": "game/3724.html",
+            "date": " - October 4 2021"
+        },        
+        {
+            "patch": "3717",
+            "link": "game/3717.html",
+            "date": " - September 13 2020"
+        },        
+        {
+            "patch": "3716",
+            "link": "game/3716.html",
+            "date": " - September 12 2020"
+        },        
+        {
+            "patch": "3715",
+            "link": "game/3715.html",
+            "date": " - September 12 2020"
+        },        
+        {
+            "patch": "3713",
+            "link": "game/3713.html",
+            "date": " - April 6 2020"
+        },        
+        {
+            "patch": "3712",
+            "link": "game/3712.html",
+            "date": " - April 4 2020"
+        },        
+        {
+            "patch": "3711",
+            "link": "game/3711.html",
+            "date": " - March 15 2020"
+        },        
+        {
+            "patch": "3710",
+            "link": "game/3710.html",
+            "date": " - January 26 2020"
+        },        
+        {
+            "patch": "3708",
+            "link": "game/3708.html",
+            "date": " - October 19 2019"
+        },
+        {
+            "patch": "3707",
+            "link": "game/3707.html",
+            "date": " - July 14 2019"
+        },
+        {
+            "patch": "3706",
+            "link": "game/3706.html",
+            "date": " - July 14 2019"
+        },
+        {
+            "patch": "3705",
+            "link": "game/3705.html",
+            "date": " - July 5 2019"
+        },
+        {
+            "patch": "3703",
+            "link": "game/3703.html",
+            "date": " - January 13 2019"
+        },
+        {
+            "patch": "3702",
+            "link": "game/3702.html",
+            "date": " - December 28 2018"
         }
     ]
 }
