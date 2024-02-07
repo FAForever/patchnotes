@@ -13,7 +13,7 @@
 
         <div id="intro">
           <h1>FAF Beta</h1>
-          <h4>Date Updated: 17/12/23</h4>
+          <h4>Date Updated: 07/02/2024</h4>
           <p>Welcome to the FAF Beta Balance patchnotes</p>
           <p>The changes listed here are all subject to change.</p>
           <p>Disclamer: Changes here may be broken or have unforeseen side effects if you encounter anything please report it to the balance team on the <a href="https://discord.gg/pK94Dk9hNz"> Game Bug Reporting </a> Channel on the FAF Discord</p>
@@ -23,52 +23,46 @@
           <hr>
         </div>
 
+        <h2>Structures</h2>
 
-        <h2>Land</h2>
+        <div id="1">
 
-        <div id="land">
-
+          <div id="salvation" class="card">
+            <h3><img src="/images/salvation.png">T4 Arty (Salvation)</h3>
+            <p>Small Nerf to the Salvation to be close to the balance back in 2016</p>
+            <p>The drain is only increased so that the charging can actually keep up with the reload time, and it has no relevant balance consequences outside of needing 2 energy storages to fill in between charges.</p>
+            <ul>
+              <li>HP: <s>10000</s>→ 9000</li>
+              <li>EnergyDrainPerSecond: <s>10000</s> → 10714</li>
+              <li>MinRadius: <s>175</s> → 150</li>
+              <li>MuzzleChargeDelay: <s>0.15</s> → 0.2</li>
+              <li>MuzzleVelocity: <s>150</s> → 98</li>
+              <li>MuzzleVelocityReduceDistance: <s>4000</s> → 1400</li>
+              <li>RackRecoilDistance: <s>-0.5</s> → -0.625</li>
+            </ul>
+          </div>
         </div>
 
+        <h2>Mechanics</h2>
 
-        <h2>Navy</h2>
-        
-        <div id="navy">
-        </div>
-
-        <h2>ACUs</h2>
-
-        <div id="acu">
-        </div>
-
-        <hr>
-
-        <div class="backtotop">
-          <button>
-            <a class="toptext" href="#top">Back to Top</a>
-          </button>
+        <div id="2">
+          <div id="teleport" class="card">
+            <h3><img src="/images/teleport.png">Teleport</h3>
+            <p>Teleport now scales energy quadraticly so the further the distance you want to go the more Energy it will cost.</p>
+            <p>Example:
+              <ul>
+                <li>50 = 50 * 50 = 2,500</li>
+                <li>100 = 100 * 100 = 10,000</li> 
+              </ul>
+            </p>
+          </div>
         </div>
 
       </div>
-      <div class="iconSidebar">
-        <h2 class="iconSidebarTitle"><u>Contents</u></h2>
-
-        <div class="iconSidebarSubgrid">
-            <h3 class="iconSidebarSubtitle">Land</h3><br>
-            
-            <a href="#scus"><img src="/images/aeonscu.png"></a>
-
-            <h3 class="iconSidebarSubtitle">Air</h3><br>
-            
-            <h3 class="iconSidebarSubtitle">Navy</h3><br>
-            
-            <h3 class="iconSidebarSubtitle">Other</h3><br>
-
-        </div>
-    </div>
     </main>    
   </body>
-  <footer >
+  <footer>
+    <div class="backtotop"><button><a class="toptext" href="#top">Back to Top</a></button></div><br>
     <a href="./index.html">Back to Patchnote List</a>
     <p>© 2015-2024 FAForever</p>
   </footer>
