@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="description" content="FAForever Game Patchnotes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Patch 3699</title>
+    <link rel="stylesheet" href="/style/game.css">
+  </head>
+  <body>
+    <main class="grid">
+      <div class="content">
+        <div id="intro">
+            <h1>Game Patch 3696</h1>
+          <hr>
+        </div>
+
+        <h2 id="gameplay">Gameplay</h2>
+
+        <div class="card">
+          <ul>
+            <li>New feature: Dead air unit wrecks now bounce off shields. The amount of bounce depends on the unit's momentum and angle of approach. Some of the crash damage is transferred to the shield. Unit wrecks can only bounce once. Doesn't affect Experimentals.</li>
+            <li>Allow units in a transport which is shot down to leave wrecks at the crash site</li>
+            <li>Allow the Novax to build a new Satellite if the old one dies. This can only happen if it is impacted by a Nuke or ctrl-k'ed</li>
+            <li>Introduced code to slightly improve the way Tempest and Atlantis behave, particularly in being able to fire, in shallow waters</li>
+            <li>Enabled fire states on TML and SML structures and units. This allows you to command multiple launchers to fire simultaneously at multiple targets</li>
+            <li>Increased reconnect timeout from 45 to 90 seconds to better allow router reboots</li>
+            <li>HARMS now sinks to a greater depth on completion</li>
+            <li>Assist-Mex-To-Cap is now on by default</li>
+            <li>Increased Auto-Overcharge rate of fire from 3.3s to 5s</li>
+          </ul>
+        </div>
+
+        <h2 id="bugs">Bug Fixes</h2>
+
+        <div class="card">
+          <ul>
+            <li>Fixed ACU reclaiming while shooting</li>
+            <li>Fixed ACU building while shooting</li>
+            <li>Fixed Auto-Overcharge stopping working randomly until toggled</li>
+            <li>Fixed Auto-Overcharge firing while building</li>
+            <li>Fixed SML hitboxes so some are no longer immune to T2 PGen explosions</li>
+            <li>Increased Beetle hitbox size and declared new targetbones to stop everything missing it if it strafes</li>
+            <li>Fixed two move-while-building exploits</li>
+            <li>Gave Force damage to several AOE weapons so they now kill trees properly</li>
+            <li>Fixed ambient movement sounds continuing to play for sinking units</li>
+            <li>Fixed air units occasionally granting infinite intel at the crash site</li>
+            <li>Fixed unit restrictions not updating correctly when HQs are transferred between players</li>
+            <li>Fixed ancient bug which didn't deselect factory units properly, leading to accidental pausing of those units</li>
+            <li>Fixed the 'Select Onscreen Land/Air/Navy' hotkey also selecting the factories of that type</li>
+            <li>Fixed the Mex Cap feature somehow allowing storage to be built inside units built via upgrade</li>
+            <li>Fixed bug where the Aeon shields didn't visually rotate properly</li>
+            <li>Fixed adjacency visual effect being placed on the water surface when dealing with underwater mexes or hydros</li>
+            <li>Fixed ships sometimes sinking through land</li>
+            <li>Attempted a safety check to try and fix Aeon T2 shields getting the shield up despite having been destroyed in construction</li>
+            <li>Fixed cluster bombers (Janus etc) gaining a new target halfway through a bombing run</li>
+          </ul>
+        </div>
+
+        <h2 id="lobby">Lobby</h2>
+        <div class="card">
+          <ul>
+            <li>Fixed 'Random' faction using 'Random - Unbalanced' tooltip</li>
+            <li>Allow filtering of 13-16 player maps in map selection</li>
+            <li>Fixed 'Autoteams: Manual' resulting in all players being allied</li>
+            <li>Fixed autobalance functions crashing when used with uneven team numbers</li>
+            <li>Improved the ping/cpu display column, splitting it into two. The ping column only shows when it matters.</li>
+            <li>Observers are now kicked before checking connection issues when Allow Observers is false. This means they will no longer stall game launch if one or more have a connection issue.</li>
+            <li>Improved performance of Unit Manager, as well as layout, tooltips, and some icons</li>
+            <li>Fixed faction selector panel not updating properly</li>
+            <li>Removed ability for people to spam the lobby chat with the observer button</li>
+            <li>Fixed several cases of CPU rating not being broadcast properly</li>
+            <li>Added a 'New Message' button to the lobby which jumps to bottom of chat, and disabled the chat auto-hopping to bottom with every new message, if you have scrolled up</li>
+            <li>Fixed the number of active mods not updating for non-hosts when they enable/disable a UI mod</li>
+            <li>Fixed double clicking various elements in the lobby bypassing various restrictions</li>
+            <li>Added a tooltip to the map preview top right</li>
+          </ul>
+        </div>
+
+        <h2 id="ui">UI</h2>
+        <div class="card">
+          <ul>
+            <li>Added new option to change the minimum reclaim label size shown in the overlay</li>
+            <li>Enabled the STOP button for shields which can be upgraded</li>
+            <li>Removed the tech level tick from Mass Storage strategic icon to match energy storage</li>
+            <li>Fixed hotkey labels not moving properly when scrolling the build menu</li>
+            <li>Pause button is now visible and active in the Enhancements and Selection tabs</li>
+            <li>Allowed multiple nuke pings to display simultaneously</li>
+            <li>Corrected several incorrect tooltips on SCUs</li>
+            <li>You can now search for bindings or actions in the F1 key binding menu</li>
+            <li>The buttons for adding and removing key bindings have been moved to be on the same line as the binding</li>
+            <li>Added Hotbuild Preset button. This will automatically set your bindings to the Hotbuild Preset. There is also a button to set back to Default Preset.</li>
+            <li>Fixed Hotbuild conflicting with other binds</li>
+            <li>Fixed keys being able to be bound to two actions at once</li>
+            <li>Keybinding UI will now auto-assign shift-bindings to match a newly bound action, if the shift-bind is not in use</li>
+            <li>Fixed hotbuild labels in the construction UI not updating when they are re-assigned</li>
+            <li>Lots of text around the UI will now change colour to reflect your faction skin again</li>
+            <li>New Feature: Helpful tips and tricks will now show briefly on the loading screen</li>
+            <li>Fixed language changes not always taking effect on game restart properly</li>
+            <li>Removed nonfunctional language change hotloader</li>
+            <li>Fixed buttons with a countdown not counting down</li>
+          </ul>
+        </div>
+
+        <h2 id="other">Other</h2>
+        <div class="card">
+          <ul>
+            <li>Added some mods to blacklist</li>
+            <li>Allowed hooking of schook files to help future patch mechanism</li>
+            <li>Allow hot-reloading of UI files with EnableDiskWatch</li>
+            <li>Uncapped max framerate for people with monitor refresh rates <i class="fa-solid fa-arrow-right"></i> 100</li>
+            <li>Fixed desync in COOP</li>
+            <li>Allow Salem death sound on land in COOP</li>
+            <li>Allowed restricted units to be captured in COOP</li>
+            <li>Added a new objective type to COOP</li>
+            <li>Added a new icon for the Kill or Capture objective in COOP</li>
+            <li>Objective tooltip in COOP now coloured according to faction skin</li>
+            <li>Various other extensive COOP-only changes</li>
+            <li>Added CZ translation file</li>
+            <li>Added PL translation file</li>
+            <li>Improved RU translations</li>
+            <li>Improved SP translations</li>
+          </ul>
+        </div>
+
+        <h2>Contributors</h2>
+
+        <div class="card">
+          <ul>
+            <li>CookieNoob</li>
+            <li>Crotalus</li>
+            <li>Duk3Luk3</li>
+            <li>Exotic-Retard</li>
+            <li>Hussar</li>
+            <li>IceDreamer</li>
+            <li>IDragonfire</li>
+            <li>PhilipJFry</li>
+            <li>Speed2</li>
+            <li>TheKeyBlue</li>
+            <li>ThomasHiatt</li>
+            <li>Uveso</li>
+            <li>Jackherer (French translations)</li>
+            <li>UnicornNoob (Russian translations)</li>
+          </ul>
+        </div>
+      </div>
+      <div class="sidebar">
+        <div>
+          <h2><u>Contents</u></h2>
+          
+          <h3>&gt; <a href="#gameplay">Gameplay</a></h3>
+          <h3>&gt; <a href="#bugs">Bug Fixes</a></h3>
+          <h3>&gt; <a href="#ui">UI</a></h3>
+        </div>
+      </div>
+    </main>
+  </body>
+  <footer>
+    <div class="backtotop"><button><a class="toptext" href="#top">Back to Top</a></button></div><br>
+    <a href="./index.html">Back to Patchnote List</a>
+    <p>© 2014-2024 FAForever</p>
+  </footer>
+</html>
