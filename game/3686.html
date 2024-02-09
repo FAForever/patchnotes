@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="description" content="FAForever Game Patchnotes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Patch 3686</title>
+    <link rel="stylesheet" href="/style/game.css">
+  </head>
+  <body>
+    <main class="grid">
+      <div class="content">
+        <div id="intro">
+            <h1>Game Patch 3686</h1>
+          <hr>
+        </div>
+
+        <h2 id="gameplay">Gameplay</h2>
+
+        <div id="1">
+
+          <div id="notify" class="card">
+            <h3>Notify Features</h3>
+            <ul>
+              <li>Notify started as a way to allow ACU upgrade progress to be communicated nicely to the team. FAF has taken it to the next level.</li>
+              <li>Support for sending notifications about ACU upgrades, Factory Tech upgrades (HQs), Experimental construction, and Nuke and T3 Artillery construction</li>
+              <li>By default, you will see notifications about ACU upgrades only, as well as an ETA overlay at the location of the upgrading ACUs</li>
+              <li>Toggles available to define which types of messages you want to see come in from allies</li>
+              <li>Notify messages limited to only show the first of each HQ type, Experimental (Non game-ender), Nuke, or T3 Artillery to avoid spamming the chat with notifications late-game</li>
+            </ul>
+          </div>
+
+          <div id="notify-ui" class="card">
+            <h3>Notify UI</h3>
+            <ul>
+              <li>Selecting your ACU will show any upgrades it has completed for each slot above the UI in the bottom left corner</li>
+              <li>There is an in-game customisation menu UI. It can be accessed via the main menu, or with a key bind. Default binding is CTRL-ALT-F1</li>
+              <li>Full customisation of all Notify messages is enabled, including resetting to default</li>
+              <li>All message types are broadcast at all times. The menu allows you to customise which messages you see, using toggle buttons at the top of the customiser.</li>
+              <li>Colour of Notify messages can be changed inside the chat window</li>
+            </ul>
+          </div>
+
+          <div id="upgrade-queuing" class="card">
+            <h3>Upgrade Queuing</h3>
+            <ul>
+              <li>ACU Upgrades can now be queued up the same as any other construction project</li>
+              <li>Unfortunately, due to an engine limitation, upgrades cannot be UN-queued (You can only stop the ACU, cancelling the in-progress work orders)</li>
+              <li>ACUs can queue buildings from an uncompleted tech level if the upgrade is queued</li>
+              <li>Hotbuild has the ability to correctly access the uncompleted tech level buildings tooltip</li>
+            </ul>
+
+          </div>
+
+          <div id="formations" class="card">
+            <h3>Significantly Improved unit formations</h3>
+            <ul>
+              <li>Changed land and naval formations to give large units extra space instead of forcing the whole group to spread out</li>
+              <li>Moved submarines so they sit between surface vessels instead of directly under them</li>
+              <li>Changed air formation shape to spread units out more evenly and make large formations wider instead of a long line</li>
+              <li>Made guard formation denser so more units can stay close to the target</li>
+              <li>Changed shield distribution in guard formation to more efficiently cover the target and other guarding units</li>
+              <li>Fixed several unit filter issues that caused units to get the wrong positions or even be excluded from a formation altogether</li>
+              <li>Rearranged land and naval formations to give some units better positions</li>
+            </ul>
+          </div>
+
+          <div id="others" class="card">
+            <h3>Other</h3>
+            <ul>
+              <li>Blacklisted all previous Notify mod versions</li>
+              <li>Improved spread attack. It now handles most order types.</li>
+              <li>Changed the timeout on player attention pings to be per-player instead of on a global cooldown</li>
+              <li>Fixed and optimised TML leading for AIs</li>
+              <li>Increased the depth at which Megalith and Ythotha appear to be submerged in water instead of walking on land</li>
+              <li>Reverted the Energy hotbuild cycling through to Storage, in response to popular demand.</li>
+              <li>T3 Sonar can now be given assist commands. Primarily useful so they can guard a unit and stay with it.</li>
+            </ul>
+          </div>
+
+        </div>
+
+        <h2 id="bugs">Bug Fixes</h2>
+
+        <div id="2">
+          <div class="card">
+            <ul>
+              <li>Fixed an error caused by empty gunships</li>
+              <li>Fixed the spacing when tiling rotated templates being off in some situations</li>
+              <li>Fixed a bug which caused only one engineer of a group ordered to rebuild a wreck to actually attempt the task</li>
+              <li>Fixed HARMS sinking more than once in some situations</li>
+              <li>Fixed deleted orders reappearing if spread command is used</li>
+              <li>Added safeguards against a rare exploit which allowed bypassing of the share conditions</li>
+              <li>Fixed orders bugging out sometimes if units in the selection died</li>
+              <li>Fixed an error caused by a czar dying with units in the hold</li>
+              <li>Prevented air units sometimes sinking below the map after bouncing off a shield</li>
+              <li>Fixed game exit behaviour sometimes erroring or throwing logspam</li>
+              <li>Fixed Czar targeting hover units with depth charges</li>
+              <li>Fixed only one Overcharge shot being fired when multiple Overcharge commands are queued</li>
+              <li>Fixed Novax Center being unable to build a replacement satellite after a satellite is destroyed blocking a nuke</li>
+              <li>Fixed Novax satellite disappearing before hitting the ground after the control center is destroyed</li>
+              <li>Fixed subs stopping too close to their targets when given an Attack Move order</li>
+              <li>Fixed a bug that caused Hives (and possibly other Cybran units) to instantly capture a unit in some situations</li>
+              <li>Increased Cybran SACU projectile lifetime so it can hit targets at the edge of its upgraded range</li>
+              <li>Fixed some instances of transported units not dying when their transport dies</li>
+            </ul>
+          </div>
+        </div>
+
+        <h2 id="lobby">Lobby</h2>
+
+        <div class="card">
+          <ul>
+            <li>Changed "Hide Obsolete" filter in map selection to be enabled by default</li>
+            <li>Hide maps if a newer version is available locally</li>
+            <li>Fixed the title change option locking if you enter an empty string</li>
+            <li>Fixed lobby chat not behaving as expected when multi-line messages are entered</li>
+            <li>Allowed lobby chat to correctly handle variable font sizes</li>
+            <li>Fixed lobby flags being stretched</li>
+            <li>Fixed lobby presets not handling unit restrictions correctly</li>
+            <li>Fixed lobby autoteams button not syncing with the selected game options correctly</li>
+            <li>Added a warning to the host if they have selected an outdated map, asking them to update it</li>
+            <li>Fixed observers being unable to click the observer/player toggle button after being moved to observer while ready</li>
+            <li>Added a button to close all unoccupied open slots or open all closed slots</li>
+            <li>Fixed a bug where the mod manager UI could break if the host has a mod with an incomplete info file</li>
+          </ul>
+        </div>
+
+        <h2 id="ui">UI</h2>
+        <div class="card">
+          <ul>
+            <li>Added full support for UTF character set in the lobby, game chat, and other typing interfaces. This enables Russian, Chinese, Japanese, and all manner of other characters.</li>
+            <li>Fixed ShowNetworkStats not closing in some situations</li>
+            <li>Fixed the construction menu pause button not changing colour with factional skins</li>
+            <li>Added an option to have fonts change colour according to faction</li>
+            <li>Fixed observers not seeing the correct unit regen number for units with veterancy, upgrades, or other regen changes</li>
+            <li>Detail view no longer shows a cost/tick breakdown for some units incorrectly</li>
+            <li>Made loading screen hints more readable by adding a drop shadow effect</li>
+            <li>Fixed a bug causing build mode to exit when a template is ordered</li>
+            <li>Added a hotbuild key for T3 Mobile AA</li>
+            <li>Fixed a hotbuild bug causing errors when certain units were upgraded</li>
+            <li>Fixed hotbuild key label for support factory upgrades being on the wrong icon</li>
+            <li>Fixed zoom pop key action not functioning</li>
+            <li>Fixed reclaim overlay sometimes showing reclaim out of the playable areas</li>
+            <li>Put silo count/capactity label at the top of the button to avoid it being obscured by the hotkey label</li>
+            <li>Added an option to disable hotkey labels</li>
+            <li>Fixed factory templates not displaying icons for mod units</li>
+            <li>Fixed missing UI elements in replays or when the Use Factional UI Skin option is disabled</li>
+            <li>Removed "Quick Tip" prefix from the tips which show on the loading screen</li>
+            <li>Added T3 MAA to the hotkey description</li>
+          </ul>
+        </div>
+
+        <h2 id="other">Other</h2>
+        <div class="card">
+          <ul>
+            <li>Updated mods blacklist</li>
+            <li>Updated maps blacklist</li>
+            <li>Random spawn locations are no longer accurate in the UI to prevent UI mods from cheating</li>
+            <li>New random spawn modes have been added which mark opponents' spawn locations so all players can see where everyone is</li>
+            <li>Fixed an issue with offline COOP not working as intended</li>
+            <li>Significant improvements and bugfixes for COOP AI capabilities</li>
+            <li>Properly hide failed bonus objectives in COOP</li>
+            <li>Optimised Sorian-AI-related code a little</li>
+            <li>Optimised AIX-related code a little</li>
+            <li>Fixed kill objectives not working as intended in COOP</li>
+            <li>Fixed Torpedo Boat ID being incorrect from an AI perspective, causing them not to work properly</li>
+            <li>Added additional AI Naval platoon templates</li>
+            <li>Removed the hyphen from "Air Superiority Fighter" unit type to make it the same across all factions</li>
+          </ul>
+        </div>
+
+        <h2>Contributors</h2>
+
+        <div class="card">
+          <ul>
+            <li>CookieNoob</li>
+            <li>Crispweed</li>
+            <li>Crotalus</li>
+            <li>dk0x</li>
+            <li>IceDreamer</li>
+            <li>JaggedAppliance</li>
+            <li>MrNukealizer</li>
+            <li>PhilipJFry</li>
+            <li>speed2</li>
+            <li>TheKeyBlue</li>
+            <li>Uveso</li>
+          </ul>
+        </div>
+      </div>
+      <div class="sidebar">
+        <div>
+          <h2><u>Contents</u></h2>
+          
+          <h3>&gt; <a href="#gameplay">Gameplay</a></h3>
+          <h3>&gt; <a href="#bugs">Bug Fixes</a></h3>
+          <h3>&gt; <a href="#lobby">Lobby</a></h3>
+          <h3>&gt; <a href="#ui">UI</a></h3>
+          <h3>&gt; <a href="#other">Other</a></h3>
+        </div>
+      </div>
+    </main>
+  </body>
+  <footer>
+    <div class="backtotop"><button><a class="toptext" href="#top">Back to Top</a></button></div><br>
+    <a href="./index.html">Back to Patchnote List</a>
+    <p>© 2014-2024 FAForever</p>
+  </footer>
+</html>
