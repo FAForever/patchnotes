@@ -1,0 +1,401 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Patch 3629</title>
+    <link rel="stylesheet" href="../style/balance.css"/>
+</head>
+<body>
+  <main class="grid">
+    <div class="content">
+      <div id="intro">
+          <h1>Patch 3629</h1>
+          <h2>Date:<i> August 19th 2015</i></h2>
+  
+          <h4>-- The Balance Team</h4>
+      </div>
+      
+      <h2>Land</h2>
+      <div id="land">
+        <div id="t1land" class="card">
+          <h3>Tech 1 land</h3>
+
+          <h4><img src="/images/aurora.png">Aurora</h4>
+          <p>It’s a very small randomness and only when the Auroras move. They will still hit most of the time but this gives a chance for other tanks to survive longer. This value can be adjusted to make Auroras not as efficient when retreating, but good when they are still.</p>
+          <ul>
+            <li>Speed = <s>3.1</s> <i class="fa-solid fa-arrow-right"></i> 2.9</li>
+            <li>FiringRandomnessWhileMoving = <s>0</s> <i class="fa-solid fa-arrow-right"></i> 0.6</li>
+          </ul>
+
+          <h4><img src="/images/medusa.png">Medusa</h4>
+          <ul>
+            <li>T2StunDuration = <s>3</s> <i class="fa-solid fa-arrow-right"></i> 2</li>
+            <li>ReloadTime = <s>5</s> <i class="fa-solid fa-arrow-right"></i> 6</li>
+            <li>Damage = <s>195</s> <i class="fa-solid fa-arrow-right"></i> 230</li>
+            <li>DPS = <s>39</s> <i class="fa-solid fa-arrow-right"></i> 38.33</li>
+          </ul>
+
+          <h4><img src="/images/lobo.png">Lobo</h4>
+          <ul>
+            <li>Damage = <s>480</s> <i class="fa-solid fa-arrow-right"></i> 400</li>
+            <li>ReloadTime = <s>10</s> <i class="fa-solid fa-arrow-right"></i> 8.33</li>
+          </ul>
+
+          <h4><img src="/images/ueft1maa.png">All T1 Mobile AA</h4>
+          <ul>
+            <li>VisionRadius = <s>18</s> <i class="fa-solid fa-arrow-right"></i> 20</li>
+          </ul>
+
+
+        </div>
+
+        <div id="t2land" class="card">
+          <h3>Tech 2 Land</h3>
+
+          <h4><img src="/images/mongoose.png">Mongoose</h4>
+          <p>The unit tracks and targets enemy units better.</p>
+          <ul>
+            <li>TurnSpeed = <s>150</s> <i class="fa-solid fa-arrow-right"></i> 90</li>
+            <li>FiringTolerance  = <s>0.1</s> <i class="fa-solid fa-arrow-right"></i> 1</li>
+            <li>Grenade Weapon:
+              <ul>
+                <li>Damage = <s>65</s> <i class="fa-solid fa-arrow-right"></i> 50</li>
+                <li>RateOfFire  = <s>0.1</s> <i class="fa-solid fa-arrow-right"></i> 0.15</li>
+                <li>DPS = <s>26</s> <i class="fa-solid fa-arrow-right"></i> 30</li>
+                <li>FiringRandomness = <s>2</s> <i class="fa-solid fa-arrow-right"></i> 2.5</li>
+                <li>PitchRange = <s>0</s> <i class="fa-solid fa-arrow-right"></i> 55</li>
+              </ul>
+            </li>
+          </ul>
+        
+          <h4><img src="/images/ilshy.png">Ilshavoh</h4>
+          <ul>
+            <li>VetThreshold = <s>9</s> <i class="fa-solid fa-arrow-right"></i> 10</li>
+          </ul>
+
+        </div>
+
+        <div id="t3land" class="card">
+          <h3>Tech 3 Land</h3>
+
+          <h4><img src="/images/aeonsniper.png">Aeon Sniper</h4>
+          <ul>
+            <li>Damage = <s>1350</s> <i class="fa-solid fa-arrow-right"></i> 950</li>
+            <li>Reload = <s>10</s> <i class="fa-solid fa-arrow-right"></i> 7</li>
+            <li>FiringRandomnessWhileMoving = <s>0.8</s> <i class="fa-solid fa-arrow-right"></i> 0.75</li>
+            <li>FiringTolerance = <s>2</s> <i class="fa-solid fa-arrow-right"></i> 0</li>
+          </ul>
+
+          <h4><img src="/images/serasniper.png">Seraphim Sniper</h4>
+          <ul>
+            <li>Damage = <s>775</s> <i class="fa-solid fa-arrow-right"></i> 580</li>
+            <li>Reload = <s>6.7</s> <i class="fa-solid fa-arrow-right"></i> 5</li>
+            <li>FiringRandomnessWhileMoving = <s>0.8</s> <i class="fa-solid fa-arrow-right"></i> 0.75</li>
+            <li>FiringTolerance = <s>2</s> <i class="fa-solid fa-arrow-right"></i> 0</li>
+            <li>Sniper Mode:
+              <ul>
+                <li>Damage  = <s>2800</s> <i class="fa-solid fa-arrow-right"></i> 2000</li>
+                <li>Reload  = <s>20</s> <i class="fa-solid fa-arrow-right"></i> 14.5</li>
+                <li>FiringRandomnessWhileMoving = <s>0.8</s> <i class="fa-solid fa-arrow-right"></i> 0.6</li>
+              </ul>
+            </li>
+          </ul>
+
+
+        </div>
+
+      </div>
+
+      <h2>Air</h2>
+      <div id="air">
+
+        <div id="t1air" class="card">
+          <h3>Tech 1 Air</h3>
+
+          <h4><img src="/images/t1bomber.png">UEF T1 Bomber</h4>
+          <ul>
+            <li>4 Bombs with 3 AOE (Instead of 5 with 2.5 AOE)</li>
+            <li>Bombs are more spread out, and each deals 47.5 Damage instantly + 10*4 = 40 damages over 1.5 seconds = 350 total (It will never deal 350 Damage except on Factories. The maximum amount on Units </li>and small Structures is 267.5)
+            <li>TurnSpeed = 0.8 (From 0.7)</li>
+            <li>BreakOffDistance = 26 (From 18)</li>
+          </ul>
+
+          <h4><img src="/images/jester.png">Cybran Jester</h4>
+          <ul>
+            <li>Range = 20 (From 16). This fixes the fact that they stop shooting when attacking moving targets or are on Attack-Move orders)</li>
+            <li>Veterancy nerf: Threshold = 5 (From 3)</li>
+          </ul>
+
+
+        </div>
+
+        <div id="t2air" class="card">
+          <h3>Tech 2 Air</h3>
+
+          <h4><img src="/images/janus.png">Janus</h4>
+          <ul>
+            <li>Ground weapon Range = 60 (From 45)</li>
+            <li>LiftFactor = 10 (From 7) to increase the chance of dropping</li>
+            <li>Deals half its Damage instantly and the rest over time (Instead of all Damage being dealt over time)</li>
+          </ul>
+
+          <h4><img src="/images/notha.png">Notha</h4>
+          <ul>
+            <li>Ground weapon Range = 60 (From 45).</li>
+            <li>LiftFactor = 10 (From 7) to increase the chance of dropping.</li>
+          </ul>
+
+          <h4><img src="/images/corsair.png">Corsair</h4>
+          <ul>
+            <li>Anti-Ground weapon Range = 40 (From 45) so that it doesn’t completely out-range Mobile Flack (No longer able to kill them without suffering any damage)</li>
+          </ul>
+        </div>
+
+        <div id="t3air" class="card">
+          <h3>Tech 3 Air</h3>
+
+          <h4>Heavy Gunships</h4>
+          <ul>
+            <li>Speed + 2</li>
+            <li>Cost and DPS cut by roughly 25%</li>
+          </ul>
+
+          <h4><img src="/images/wailer.png">Wailer</h4>
+          <ul>
+            <li>MaxAirSpeed = 10 (From 8)</li>
+            <li>Mass = 1260</li>
+            <li>BuildTime = 6400</li>
+            <li>Energy = 42000 (From 52500)</li>
+            <li>Damage = 140 (From 150)</li>
+            <li>RateOfFire = 1.6 (From 2). DPS = 224 (From 300)</li>
+          </ul>
+
+          <h4><img src="/images/broadsword.png">Broadsword</h4>
+          <ul>
+            <li>MaxAirSpeed = 10 (From 8)</li>
+            <li>Mass = 1260</li>
+            <li>BuildTime = 6000</li>
+            <li>Energy = 42000 (From 52500)</li>
+            <li>Damage = 90 (From 100)</li>
+            <li>RateOfFire = 2.5 (From 3). DPS = 225 (From 300)</li>
+            <li>AA Damage = 8 (From 2). DPS = 12 (From 3)</li>
+          </ul>
+
+          <h4><img src="/images/restorer.png">Restorer</h4>
+          <ul>
+            <li>BuildTime = 6000 (From 4800)</li>
+            <li>Health = 6000 (From 6500)</li>
+            <li>Veterancy buff: Threshold = 15 XP (From 18)</li>
+          </ul>
+        </div>
+
+        <div id="t4air" class="card">
+          <h3>Tech 4 Air</h3>
+
+          <h4><img src="/images/soulripper.png">Soul Ripper</h4>
+          <ul>
+            <li>Veterancy adjusted to 80/160/240/320/400 (From 60/120/180/240/300)</li>
+          </ul>
+        </div>
+      </div>
+
+      <h2>Naval</h2>
+      <div id="navy">
+        <div id="t1navy" class="card">
+          <h3>Tech 1 Navy</h3>
+
+          <ul>
+            <li>Frigate Veterancy threshold = 6 XP (From 8)</li>
+          </ul>
+
+          <h4><img src="/images/cybranfrigate.png">Cybran Frigate</h4>
+          <ul>
+            <li>Damage = 45 (From 40)</li>
+            <li>RateOfFire = 1.36 (From 1.53)</li>
+            <li>DPS is unchanged</li>
+          </ul>
+
+          <h4><img src="/images/uef-frig.png">UEF Frigate</h4>
+          <ul>
+            <li>Damage = 85 (From 140)</li>
+            <li>RateOfFire = 0.588 (From 0.35)</li>
+          </ul>
+        </div>
+
+        <div id="t2navy" class="card">
+          <h3>Tech 2 Navy</h3>
+
+          <h4><img src="/images/seradestoryer.png">Destroyer</h4>
+          <ul>
+            <li>Front Gun DPS = 125 (From 105). Rear Gun DPS = 65 (From 95)</li>
+            <li>TurretYawRange = 120 (From 140)</li>
+            <li>TurretYawSpeed = 60 (From 90)</li>
+            <li>Attack Angle = 70 (From 60)</li>
+            <li>It will be slightly less efficient when micromanaged.</li>
+          </ul>
+        </div>
+
+        <div id="t3navy" class="card">
+          <h3>Tech 3 Navy</h3>
+
+          <h4><img src="/images/nukesub.png">Strategic Missile Submarines</h4>
+          <ul>
+            <li>Tactical Missile Range = 256 (From 175). This is the same as a TML. This will expand the sniping potential of these units.</li>
+            <li>Mass = 9000 (From 10000). This is the same as the Seraphim Battleship</li>
+            <li>Nuke inner ring Damage = 22000 (From 25000)</li>
+            <li>Nuke outer ring Damage = 3000 (From 500). This means units which escape the inner ring take some real Damage (500 is nothing for Naval units)</li>
+          </ul>
+
+          <h4><img src="/images/serasubhunter.png"> T3 Submarine</h4>
+          <ul>
+            <li>SizeY = 0.9 (From 0.8). This is a slightly higher hitbox to ensure Riptides and other surface weapons can hit them normally while they are surfaced.</li>
+            <li>Range = 65 (From 70)</li>
+            <li>AA DPS = 200 (From 240)</li>
+            <li>Health = 4000 (From 4500)</li>
+          </ul>
+
+          <h4><img src="/images/cybrancarrier.png">Aircraft Carrier</h4>
+          <ul>
+            <li>Cybran and Seraphim Aircraft Carriers can now build Gunships and regular Bombers.</li>
+          </ul>
+
+        </div>
+
+        <div id="t4navy" class="card">
+          <h3>Tech 4 Navy</h3>
+
+          <ul>
+            <li>2 Atlantis and their equivalent mass cost in T3 Seraphim subs still win convincingly, but the Tempest can now put up a fight even when submerged.</li>
+          </ul>
+
+          <h4><img src="/images/tempest.png">Tempest</h4>
+          <ul>
+            <li>Torpedoes are now Depth charges, which totally ignore all forms of Torpedo Defence.</li>
+            <li>Damage = 350 (From 235)</li>
+            <li>RateOfFire = 0.2 (From 0.25)</li>
+            <li>DPS = 420 (From 352)</li>
+          </ul>
+
+        </div>
+      </div>
+
+      <h2>ACUs</h2>
+      <div id="acu">
+        <div id="sera-restoration" class="card">
+          <h3><img src="/images/Enhancements/sera/regenfield.png">Seraphim Restoration Field</h3>
+          <ul>
+            <li>Add 1000HP</li>
+            <li>2% HP Regeneration (From 0.5), but capped at 15 (From 75)</li>
+          </ul>
+        </div>
+
+        <div id="sera-adv-restoration" class="card">
+          <h3><img src="/images/Enhancements/sera/advancedregenfield.png">Seraphim Advanced Regeneration Field</h3>
+          <ul>
+            <li>Name changed to Advanced Restoration Field</li>
+            <li>Adds 1500 more HP to ACU</li>
+            <li>Adds 10% HP to units nearby, as it used to do.</li>
+          </ul>
+        </div>
+      </div>
+
+      <h2>SCUs</h2>
+      <div id="scu">
+        <div id="scus" class="card">
+          <h3><img src="/images/serascu.png">All SCUS</h3>
+          <ul>
+            <li>Veterancy  = <s>20/50/90/140/200</s> <i class="fa-solid fa-arrow-right"></i> 25/50/75/100/125</li>
+          </ul>
+        </div>
+
+        <div id="scuengineer" class="card">
+          <h3><img src="/images/Enhancements/aeon/t2.png">All SCU T2</h3>
+          <ul>
+            <li>MassCost = <s>1000</s> <i class="fa-solid fa-arrow-right"></i> 800</li>
+            <li>BuildTime = <s>5040</s> <i class="fa-solid fa-arrow-right"></i> 4200 </li>
+          </ul>
+        </div>
+
+        <div id="uefdrone" class="card">
+          <h3><img src="/images/Enhancements/uef/drone.png">UEF Drone Enhancements</h3>
+          <ul>
+            <li>MassCost = <s>480</s> <i class="fa-solid fa-arrow-right"></i> 380</li>
+            <li>BuildTime = <s>20</s> <i class="fa-solid fa-arrow-right"></i> 35 </li>
+          </ul>
+
+        </div>
+
+        <div id="uefbubble" class="card">
+          <h3><img src="/images/Enhancements/uef/bubbleshield.png">UEF Bubble Sheild Enhancements</h3>
+          <ul>
+            <li>UEF SCU Bubble Shields now considered a Mobile Shield (Like Shield Boat) and will suffer from overlapping</li>
+          </ul>
+        </div>
+
+      </div>
+
+    </div>
+    <div class="sidebar">
+        <div class="iconSidebar">
+            <h2 class="iconSidebarTitle"><u>Contents</u></h2>
+            <div class="iconSidebarBlank"></div>
+
+            <div class="iconSidebarSubgrid">
+                <h3 class="iconSidebarSubtitle">Land</h3><br>
+                
+                <a href="#t1land"><img src="/images/aurora.png"></a>
+                <a href="#t1land"><img src="/images/medusa.png"></a>
+                <a href="#t1land"><img src="/images/lobo.png"></a>
+                <a href="#t1land"><img src="/images/ueft1maa.png"></a>
+                <a href="#t2land"><img src="/images/mongoose.png"></a>
+                <a href="#t2land"><img src="/images/ilshy.png"></a>
+                <a href="#t3land"><img src="/images/aeonsniper.png"></a>
+                <a href="#t3land"><img src="/images/serasniper.png"></a>
+
+                <h3 class="iconSidebarSubtitle">Air</h3><br>
+
+                <a href="#t1air"><img src="/images/t1bomber.png"></a>
+                <a href="#t1air"><img src="/images/jester.png"></a>
+                <a href="#t2air"><img src="/images/janus.png"></a>
+                <a href="#t2air"><img src="/images/notha.png"></a>
+                <a href="#t2air"><img src="/images/corsair.png"></a>
+                <a href="#t3air"><img src="/images/wailer.png"></a>
+                <a href="#t3air"><img src="/images/broadsword.png"></a>
+                <a href="#t3air"><img src="/images/restorer.png"></a>
+                <a href="#t4air"><img src="/images/soulripper.png"></a>
+
+                <h3 class="iconSidebarSubtitle">Naval</h3><br>
+
+                <a href="#t1navy"><img src="/images/cybranfrigate.png"></a>
+                <a href="#t1navy"><img src="/images/uef-frig.png"></a>
+                <a href="#t2navy"><img src="/images/seradestoryer.png"></a>
+                <a href="#t3navy"><img src="/images/nukesub.png"></a>
+                <a href="#t3navy"><img src="/images/serasubhunter.png"></a>
+                <a href="#t3navy"><img src="/images/cybrancarrier.png"></a>
+                <a href="#t4air"><img src="/images/tempest.png"></a>
+
+                <h3 class="iconSidebarSubtitle">ACUs</h3><br>
+
+                <a href="#sera-restoration"><img src="/images/Enhancements/sera/regenfield.png"></a>
+                <a href="#sera-adv-restoration"><img src="/images/Enhancements/sera/advancedregenfield.png"></a>
+
+                <h3 class="iconSidebarSubtitle">SCUs</h3><br>
+
+                <a href="#scus"><img src="/images/serascu.png"></a>
+                <a href="#scuengineer"><img src="/images/Enhancements/uef/t2.png"></a>
+                <a href="#uefdrone"><img src="/images/Enhancements/uef/drone.png"></a>
+                <a href="#uefbubble"><img src="/images/Enhancements/uef/bubblesheild.png"></a>
+
+            </div>
+
+        </div>
+    </div>
+</main>
+</body>
+<footer >
+    <div class="backtotop"><button><a class="toptext" href="#top">Back to Top</a></button></div><br>
+    <a href="../index.html">Back to Patchnote List</a>
+    <p>© 2015-2024 FAForever</p>
+</footer>
+</html>

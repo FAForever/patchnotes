@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="description" content="FAForever Game Patchnotes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Patch 3630</title>
+    <link rel="stylesheet" href="/style/game.css">
+  </head>
+  <body>
+    <main class="grid">
+      <div class="content">
+        <div id="intro">
+            <h1>Game Patch 3630</h1>
+          <hr>
+        </div>
+
+        <h2 id="bugfix">Exploits & bug fixes</h2>
+        <div id="1" class="card">
+          <ul>
+            <li>Removed dbg_ShowAiPathSpline console command from the game. That command was allowing to see units movements under the fog of war, without triggering the “XX has tried to cheat” warning/error.</li>
+            <li>Fixed an exploit were carriers where able to transport any other carrier unit (ie. fatboy, air transports,..) by ground assisting with the carrier and reclaiming the other unit.</li>
+            <li>Fixed a bug introduced by the “Duplicating building with wreckages” exploit fix, where building lower/higher tech building over wreckages were canceled.</li>
+            <li>Fixed a bug/exploit where splash damage were transferred twice when a shield collapse (noticeable with the Seraphim T4 bomber, but also affecting all area of effect damage).</li>
+            <li>Fixed a bug where bombers stop dropping bombs after ground attack on trees.</li>
+            <li>Cybran T3 gunships now make a sound when destroyed.</li>
+            <li>UEF depth charges now make a sound when launched.</li>
+          </ul>
+        </div>
+
+        <h2 id="performances">Performances</h2>
+        <div id="2" class="card">
+          <ul>
+            <li>Improved path finding late-game. Previously, some units weren’t answering to move order.</li>
+            <li>Fixed a lot of AI related script errors (should slightly improve performances with AIs).</li>
+          </ul>
+        </div>
+
+        <h2 id="ai">AI</h2>
+        <div id="3" class="card">
+          <ul>
+            <li>Implemented Duncan fixes for AI. Most of them were already there, but the standard AI should behave slightly better (Sorian AI is still way better).</li>
+          </ul>
+        </div>
+
+        <h2 id="ui">UI</h2>
+        <div id="4" class="card">
+          <ul>
+            <li>Hotbuild & GazUI mods are now implemented in FA :</li>
+            <li>Press F1 to rebind keys. A lot of new selection options are now available (Select idling scouts, select all land factories on screen, select all air without transports,….).</li>
+            <li>New options are now available in the option menu. They are described in the tool-tip. (Big strategic icons, “draggable” build queues, rotating templates, better economic panel, ..)</li>
+            <li>SCU manager is implemented. You have a little icon in the avatar panel (below score) to do upgrades sequentially on SCUs. Two paths are available and configurable : Combat & Engineer. You can also bind the “SCU marker” (F1) shortcut to automatically upgrade SCUs near that marker.</li>
+            <li>Hotbuild is a new build mode allowing you to press several time a key to go through all kind of buildings. Works also to build units in factories through the same shortcut. Check the Hotbuilding section of the keymapper (F1)</li>
+          </ul>
+        </div>
+
+        <h2 id="gaz">Important note for current users of GazUI/Hotbuild.</h2>
+        <div id="5" class="card">
+          <p>It’s very likely that a mod version of GAZUI will mess with your game.</p>
+          <p>Using your current hotbuild mod shouldn’t do anything bad, except that the mod is messing with key-binding. So use it at your own risk.</p>
+
+          <h3>GazUI</h3>
+          <p>All your options should be keep the same way as before. You will get new options for selecting units, as well as fixes for big Strategic icons option and SCU manager fixes.</p>
+
+          <h3>Hotbuild</h3>
+          <p>The existing mod was more an hack than a mod.</p>
+          <p>But the new way of key binding hotbuild will allow you to rebind it more easily and really fast. The order of the options in they key bind menu (F1) is the same as the original mod.</p>
+          <p>Meaning that to have the default key bind of the original mod for US keyboard, you should bind, in order:
+            <code>W</code>,<code>E</code>,<code>R</code>,<code>T</code>,<code>Y</code>,<code>U</code><br>
+            <code>S</code>,<code>D</code>,<code>F</code>,<code>G</code>,<code>H</code>,<code>J</code>,<code>K</code>,<code>L</code>
+            <code>Z</code>,<code>X</code>,<code>C</code>,<code>V</code>,<code>B</code>,<code>N</code>,<code>M</code>
+          </p>
+          <p>As you can see, it is the key in the order of your keyboard</p>
+          <p>The integrated mod will take care of binding the corresponding shift/alt combos. If there is a shortcut on one of these combo (ie. shift-W is already used), the combo won’t be made, and a warning will show in the log (game.log) :
+            <code>
+              WARNING: Shift-W is already bind
+            </code>
+          </p>
+          <p>You can be okay with that or unbind the key. It will retry to make the hotbuild combo immediately (you don’t need to restart FA or your game).</p>
+        </div>
+
+        <h2 id="contributors">Contributors</h2>
+        <div class="card">
+          <ul>
+            <li>Sheeo</li>
+            <li>Pip </li>
+            <li>Icedreamer</li>
+          </ul>
+        </div>
+
+      </div>
+      <div class="sidebar">
+        <div>
+          <h2><u>Contents</u></h2>
+          
+          <h3>&gt; <a href="#bugfix">Exploits & bug fixes</a></h3>
+          <h3>&gt; <a href="#performances">Performances</a></h3>
+          <h3>&gt; <a href="#ai">AI</a></h3>
+          <h3>&gt; <a href="#ui">UI</a></h3>
+          <h3>&gt; <a href="#gaz">GazUI/Hotbuuild</a></h3>
+        </div>
+      </div>
+    </main>
+  </body>
+  <footer>
+    <div class="backtotop"><button><a class="toptext" href="#top">Back to Top</a></button></div><br>
+    <a href="./index.html">Back to Patchnote List</a>
+    <p>© 2014-2024 FAForever</p>
+  </footer>
+</html>
