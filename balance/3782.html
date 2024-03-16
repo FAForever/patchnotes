@@ -12,8 +12,8 @@
         <div class="content">
             <div id="intro">
                 <h1>Patch 3782</h1>
-                <h2>Date:<i> March xxxx 2024</i></h2>
-                <p>The Majority of this Patch Included most land units getting the ability to have better time going backwards in the aim to help the movement of units</p>
+                <h2>Date:<i> March 15 2024</i></h2>
+                <p>This balance update comprises numerous minor adjustments to certain units, providing them with backup capabilities at a distance. Additionally, there are a few significant changes, such as the introduction of the new Teleport mechanic, alongside some slight nerfs.</p>
                 <h4>-- Balance Team</h4>
                 <hr>
             </div>
@@ -185,6 +185,7 @@
 
                     <h4><img src="/images/blaze.png">Blaze</h4>
                     <ul>
+                        <li>Health: <s>1100</s> <i class="fa-solid fa-arrow-right"></i> 1000</li>
                         <li>BackUpDistance: <s>0</s> <i class="fa-solid fa-arrow-right"></i> 8</li>
                         <li>MaxSpeedReverse: <s>0</s> <i class="fa-solid fa-arrow-right"></i> 4.3</li>
                     </ul>
@@ -426,7 +427,40 @@
 
             <h2>Structure</h2>
             <div id="5">
-                <div id="salvation" class="card">
+                <div id="sonar" class="card">
+                    <h3>Tech 3 Sonar &amp; Sera T2 Sonar</h3>
+
+                    <h4><img src="/images/ueft3sonar.png">UEF</h4>
+                    <ul>
+                        <li>BackUpDistance: <s>0</s> <i class="fa-solid fa-arrow-right"></i> 10</li>
+                        <li>MaxSpeedReverse: <s>0</s> <i class="fa-solid fa-arrow-right"></i> 4.5</li>
+                    </ul>
+
+                    <h4><img src="/images/aeont3sonar.png">Aeon</h4>
+                    <ul>
+                        <li>BackUpDistance: <s>0</s> <i class="fa-solid fa-arrow-right"></i> 10</li>
+                        <li>MaxSpeedReverse: <s>0</s> <i class="fa-solid fa-arrow-right"></i> 4.5</li>
+                    </ul>
+
+                    <h4><img src="/images/cybrant3sonar.png">Cybran</h4>
+                    <ul>
+                        <li>BackUpDistance: <s>0</s> <i class="fa-solid fa-arrow-right"></i> 10</li>
+                        <li>MaxSpeedReverse: <s>0</s> <i class="fa-solid fa-arrow-right"></i> 4.5</li>
+                    </ul>
+
+                    <h4><img src="/images/serat2sonar.png">Sera</h4>
+                    <ul>
+                        <li>BackUpDistance: <s>0</s> <i class="fa-solid fa-arrow-right"></i> 8</li>
+                        <li>MaxAcceleration: <s>2.5</s> <i class="fa-solid fa-arrow-right"></i> 2.8</li>
+                        <li>MaxBrake: <s>2.5</s> <i class="fa-solid fa-arrow-right"></i> 2.8</li>
+                        <li>MaxSpeed: <s>2.5</s> <i class="fa-solid fa-arrow-right"></i> 2.8</li>
+                        <li>MaxSpeedReverse: <s>0</s> <i class="fa-solid fa-arrow-right"></i> 2.8</li>
+                        <li>TurnRate: <s>20</s> <i class="fa-solid fa-arrow-right"></i> 60</li>
+                    </ul>
+
+                </div>
+
+              <div id="salvation" class="card">
                     <h3><img src="/images/salvation.png">T4 Arty (Salvation)</h3>
                     <p>Small Nerf to the Salvation to be close to the balance back in 2016</p>
                     <p>The drain is only increased so that the charging can actually keep up with the reload time, and it has no relevant balance consequences outside of needing 2 energy storages to fill in between charges.</p>
@@ -446,17 +480,13 @@
             <div id="6">
                 <div id="teleport" class="card">
                     <h3><img src="/images/Enhancements/sera/teleport.png">Teleport</h3>
-                    <p>Teleport now scales energy quadratically so the further the distance you want to go the more Energy it will cost.</p>
-                    <p>Example:
-                      <ul>
-                        <li>50 Distance = 50 * 50 = 2,500</li>
-                        <li>100 Distance = 100 * 100 = 10,000</li> 
-                      </ul>
-                    </p>
+                    <p>Teleport duration and energy costs now increase as you're trying to jump further. The minimum is a duration of 15 seconds at a cost of 5.000 energy per second. The maximum is a duration of 50 seconds at a cost of 50.000 energy per second. The maximum can only be reached on maps of size 40x40 or larger.</p>
+                    <p>This is implemented as an alternative to a maximum teleport range. This implementation still allows people to jump as far as they wish but they're naturally constrained by their own economy.</p>
+                    <p>The expected costs of the teleport are displayed next to the cursor when you're trying to issue a teleport order. This uses the distance from the world position of the cursor to the unit. When you hold shift it instead uses the distance from the world position of the cursor to the last move and/or teleport order of the unit.</p>
                 </div>
 
                 <div id="wreks" class="card">
-                    <h3>Wrecks for Structures and Experimentals</h3>
+                    <h3><img src="/images/orders/mechanic.png">Wrecks for Structures and Experimentals</h3>
                     <p>Before this update, if a Structure or Experimental build hadn't been completed but had reached over 50% completion, it would generate a wreck. However, with this alteration, Structures or Experimentals won't produce any wrecks while still under construction.</p>
                 </div>
 
@@ -469,6 +499,7 @@
                 <div class="iconSidebarSubgrid">
 
                     <h3 class="iconSidebarSubtitle">Land</h3><br>
+                    <!-- ----------------LAND-------------------------- -->
                     <a href="#t1scouts"><img src="/images/snoop.png" /></a>
                     <a href="#t1aa"><img src="/images/ueft1maa.png" /></a>
                     <a href="#t1tank"><img src="/images/ueft1tank.png" /></a>
@@ -483,20 +514,27 @@
                     <a href="#t3tanky"><img src="/images/brick.png" /></a>
                     <a href="#exp"><img src="/images/megalith.png" /></a>
 
+                    <!-- ----------------AIR-------------------------- -->
                     <h3 class="iconSidebarSubtitle">Air</h3><br>
                     <a href="#torps"><img src="/images/ueft2torp.png" /></a>
                     <a href="#cybranasf"><img src="/images/cybranasf.png" /></a>
                     
+                    <!-- ----------------NAVY-------------------------- -->
                     <h3 class="iconSidebarSubtitle">Navy</h3><br>
         
+                    <!-- ----------------ACU/SCUs-------------------------- -->
                     <h3 class="iconSidebarSubtitle">ACU/SCUs</h3><br>
                     <a href="#aeonchrono"><img src="/images/Enhancements/aeon/chrono.png" /></a>
         
+                    <!-- ----------------STRUCTURE-------------------------- -->
                     <h3 class="iconSidebarSubtitle">Structure</h3><br>
+                    <a href="#sonar"><img src="/images/ueft3sonar.png" /></a>
                     <a href="#salvation"><img src="/images/salvation.png" /></a>
 
+                    <!-- ----------------MECHANICS-------------------------- -->
                     <h3 class="iconSidebarSubtitle">Mechanics</h3><br>
                     <a href="#teleport"><img src="/images/Enhancements/sera/teleport.png" /></a>
+                    <a href="#wreks"><img src="/images/orders/mechanic.png" /></a>
 
                 </div>
             </div>
