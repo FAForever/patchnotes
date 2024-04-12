@@ -1,9 +1,7 @@
 @import './root.css';
-
-video {
-    width: 900px;
-    height: 100%;
-}
+@import './components/images.css';
+@import './components/card.css';
+@import './components/video.css';
 
 .grid {
     padding: 10px;

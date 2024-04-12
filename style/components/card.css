@@ -1,0 +1,20 @@
+/*
+##########################################################################
+##
+##  Card
+##  The card is the section where their is generally text or information
+##
+##########################################################################
+*/
+
+.card {
+    background: var(--Primary-Card);
+    border-radius: 15px;
+    padding: 5px 15px;
+    margin: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    color: var(--Secondary-Text);
+}
+.card img {
+    margin-right: 15px;
+}

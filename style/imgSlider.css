@@ -1,13 +1,13 @@
 @import 'root.css';
 
-.img-Slider {
+.imgSlider {
     position: relative;
     display: inline-block;
     line-height: 0;
     border-radius: 1em;
 }
 
-.img-Slider > div {
+.imgSlider > div {
     border-right: 2px solid #00000099;
     position: absolute;
     position: 0 0 0 0;
@@ -17,7 +17,7 @@
     resize: horizontal;
 }
 
-.img-Slider > div:before {
+.imgSlider > div:before {
     content: "";
     position: absolute;
     right: 0;
@@ -32,7 +32,7 @@
     filter: drop-shadow(0 0 10px black);
 }
 
-.img-Slider img {
+.imgSlider img {
     border-radius: 1em;
     user-select: none;
     max-width: 730px;
