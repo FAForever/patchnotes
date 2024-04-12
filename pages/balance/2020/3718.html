@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta charset="UTF-8">
+    <title>Patch 3718</title>
+    <link rel="stylesheet" href="/style/balance.css" />
+  </head>
+  <body>
+    <main class="grid">
+
+      <div class="content">
+
+        <div id="intro">
+          <h1>Patch 3718</h1>
+          <h2>Date:<i> November 29 2020</i></h2>
+          <p>Welcome to the patchnotes for the 3718 patch.</p>
+          <p>This patch aims to increase the power of early attacking options through buffs to tech 1 bombers and labs. It also aims to align the strength of tech one tanks more closely through adjustments to aurora and mantis.</p>
+          <p>Tech two mobile shields and range bots get a slight nerf. Overcharge now operates at a fixed energy cost per damage with a ratio of 1:4 damage to energy. A minimum of 5k energy is required. </p>
+          <p>We wish you good luck and much fun playing with the new patch!</p>                                
+          <h4>-- The Balance Team</h4>
+        </div>
+
+        <h2>Land</h2>
+
+        <div id="land">
+
+          <div id="t1tank" class="card">
+            <h3>Tech 1 Tank</h3>
+
+            <div id="aurora">                            
+              <h3><img src="/assets/images/units/aeon/land/T1Tank.png"> Aurora</h3>
+
+              <ul>
+                  <li>Mass Cost: <s>52</s> <i class="fa-solid fa-arrow-right"></i> 54</li>
+                  <li>Power Cost: <s>260</s> <i class="fa-solid fa-arrow-right"></i> 270</li>
+                  <li>Build Time: <s>260</s> <i class="fa-solid fa-arrow-right"></i> 270</li>
+                  <li>Health: <s>140</s> <i class="fa-solid fa-arrow-right"></i> 155</li>
+                  <li>Speed: <s>2.9</s> <i class="fa-solid fa-arrow-right"></i> 3</li>
+                  <li>RateOfFire: <s>0.66</s> <i class="fa-solid fa-arrow-right"></i> 0.6</li>
+              </ul>
+            </div>
+
+            <div id="mantis">                            
+              <h3><img src="/assets/images/units/cybran/land/T1Tank.png"> Mantis</h3>
+
+              <ul>
+                  <li>Mass Cost: <s>52</s> <i class="fa-solid fa-arrow-right"></i> 56</li>
+                  <li>Build Time: <s>260</s> <i class="fa-solid fa-arrow-right"></i> 265</li>
+              </ul>
+            </div>
+          </div>
+
+          <div id="t1lab" class="card">
+            <h3>Tech 1 Light Assault Bot (LAB)</h3>
+            
+            <div id="flare">                            
+              <h3><img src="/assets/images/units/aeon/land/T1LightAssultBot.png"> Flare</h3>
+
+              <ul>
+                <li>Mass Cost: <s>35</s> <i class="fa-solid fa-arrow-right"></i> 42</li>
+                <li>Power Cost: <s>140</s> <i class="fa-solid fa-arrow-right"></i> 165</li>
+                <li>Build Time: <s>120</s> <i class="fa-solid fa-arrow-right"></i> 140</li>
+                <li>Health: <s>70</s> <i class="fa-solid fa-arrow-right"></i> 115</li>
+                <li>Speed: <s>4</s> <i class="fa-solid fa-arrow-right"></i> 3.8</li>
+                <li>Damage: <s>7</s> <i class="fa-solid fa-arrow-right"></i> 9</li>
+              </ul>
+            </div>
+            
+            <div id="hunter">                            
+              <h3><img src="/assets/images/units/cybran/land/T1LightAssultBot.png"> Hunter</h3>
+
+              <ul>
+                <li>Health: <s>65</s> <i class="fa-solid fa-arrow-right"></i> 90</li>
+              </ul>
+            </div>
+            
+            <div id="mechmarine">                            
+              <h3><img src="/assets/images/units/uef/land/T1LightAssultBot.png"> Mech Marine</h3>
+              <ul>
+                <li>Mass Cost: <s>35</s> <i class="fa-solid fa-arrow-right"></i> 30</li>
+                <li>Power Cost: <s>120</s> <i class="fa-solid fa-arrow-right"></i> 100</li>
+                <li>Build Time: <s>120</s> <i class="fa-solid fa-arrow-right"></i> 100</li>
+                <li>Health: <s>75</s> <i class="fa-solid fa-arrow-right"></i> 60</li>
+                <li>Speed: <s>4</s> <i class="fa-solid fa-arrow-right"></i> 4.2</li>
+                <li>Turn rate: <s>45</s> <i class="fa-solid fa-arrow-right"></i> 50</li>
+                <li>TurretYawSpeed: <s>180</s> <i class="fa-solid fa-arrow-right"></i> 200</li>
+              </ul>
+            </div>
+            
+            <div id="selen">                            
+              <h3><img src="/assets/images/units/sera/land/T1Scout.png"> Selen</h3>
+              <ul>
+                <li>Build Time: <s>80</s> <i class="fa-solid fa-arrow-right"></i> 90</li>
+                <li>Speed: <s>4</s> <i class="fa-solid fa-arrow-right"></i> 3.8</li>
+                <li>Range: <s>16</s> <i class="fa-solid fa-arrow-right"></i> 18</li>
+                <li>Turret SlavedToBody: <s>True</s> <i class="fa-solid fa-arrow-right"></i> False</li>
+                <li>TurretYawRange: <s>30</s> <i class="fa-solid fa-arrow-right"></i> 360</li>
+                <li>TurretYawSpeed: <s>180</s> <i class="fa-solid fa-arrow-right"></i> 120</li>
+              </ul>
+            </div>
+
+          </div>
+
+          <div id="t2range" class="card">
+            <h3>Tech 2 Range Bots</h3>
+
+            <div id="mongoose">
+              <h3><img src="/assets/images/units/uef/land/T2RangeBot.png"> Mongoose</h3>
+              <ul>
+                <li>MaxSpeed: <s>3.2</s> <i class="fa-solid fa-arrow-right"></i> 2.8</li>
+              </ul>
+            </div>
+            
+            <div id="hoplite">
+              <h3><img src="/assets/images/units/cybran/land/T2RangeBot.png"> Hoplite</h3>
+              <ul>
+                <li>MaxSpeed: <s>3.6</s> <i class="fa-solid fa-arrow-right"></i> 3.3</li>
+              </ul>
+            </div>
+          </div>
+
+          <div id="t2mshield" class="card">
+            <h3>Tech 2 Mobile Shields</h3>
+            
+            <div id="asylum">
+              <h3><img src="/assets/images/units/aeon/land/T2MobileShiled.png"> Asylum</h3>
+              <ul>
+                <li>Energy maintenance: <s>35</s> <i class="fa-solid fa-arrow-right"></i> 45</li>
+              </ul>
+            </div>
+            
+            <div id="parashield">
+              <h3><img src="/assets/images/units/uef/land/T2MobileShield.png"> Parashield</h3>
+              <ul>
+                <li>Energy maintenance: <s>60</s> <i class="fa-solid fa-arrow-right"></i> 80</li>
+                <li>MaxSpeed: <s>4</s> <i class="fa-solid fa-arrow-right"></i> 3.5</li>
+              </ul>
+            </div>
+
+
+          </div>
+        </div>
+
+        <h2>Air</h2>
+
+        <div id="air">
+
+          <div id="airscout" class="card">
+            <h3><img src="/assets/images/units/cybran/air/T1AirScout.png"> Air scout</h3>
+            <ul>
+              <li>Power Cost: <s>420</s> <i class="fa-solid fa-arrow-right"></i> 580</li>
+              <li>Build Time: <s>145</s> <i class="fa-solid fa-arrow-right"></i> 200</li>
+            </ul>
+          </div>
+        
+          <div id="t1bomber" class="card">
+            <h3><img src="/assets/images/units/uef/air/T1Bommber.png"> T1 bomber</h3>
+            <ul>
+              <li>Mass cost: <s>105</s> <i class="fa-solid fa-arrow-right"></i> 90</li>
+              <li>Energy cost: <s>2450</s> <i class="fa-solid fa-arrow-right"></i> 2050</li>
+              <li>Build time: <s>700</s> <i class="fa-solid fa-arrow-right"></i> 500</li>
+              <li>BreakOffDistance: <s>24</s> <i class="fa-solid fa-arrow-right"></i> 32</li>
+              <li>RadarRadius: <s>0</s> <i class="fa-solid fa-arrow-right"></i> 42</li>
+            </ul>
+          </div>
+        
+          <div id="jester" class="card">
+            <h3><img src="/assets/images/units/cybran/air/T1Gunship.png"> Jester</h3>
+            <ul>
+              <li>Mass cost: <s>200</s> <i class="fa-solid fa-arrow-right"></i> 170</li>
+              <li>Energy cost: <s>5000</s> <i class="fa-solid fa-arrow-right"></i> 4250</li>
+              <li>Build time: <s>1000</s> <i class="fa-solid fa-arrow-right"></i> 850</li>
+              <li>Health: <s>525</s> <i class="fa-solid fa-arrow-right"></i> 350</li>
+              <li>MaxSpeed: <s>12</s> <i class="fa-solid fa-arrow-right"></i> 9</li>
+              <li>Damage: <s>16</s> <i class="fa-solid fa-arrow-right"></i> 15</li>
+            </ul>
+          </div>                        
+        
+
+        </div>
+
+        <h2>Structures</h2>
+
+        <div id="structures">
+
+          <div id="t3cybransonar" class="card">
+            <h3><img src="/assets/images/units/cybran/structure/T3Sonar.png">Cybran T3 Sonar</h3>
+            <ul>
+              <li>Sonar Stealth: <s>90</s> <i class="fa-solid fa-arrow-right"></i> 70</li>
+              <li>Radar Stealth: <s>45</s> <i class="fa-solid fa-arrow-right"></i> 70</li>
+            </ul>
+          </div>
+        
+          <div id="yolo" class="card">    
+            <h3><img src="/assets/images/units/sera/structure/T4NukeLauncher.png">Yolona-Oss</h3>
+          
+            <p>The Yolona-Oss has its animation reduced to increase the speed of its firing cycle. It also explodes like other strategic missile launchers when killed. </p>
+            
+            <ul>
+              <li>Death Weapon:</li>
+              <ul>
+                <li>Inner Ring Damage: 20000</li>
+                <li>Inner Ring Radius: 15</li>
+                <li>Outer Ring Damage: 5000</li>
+                <li>Outer Ring Radius: 20</li>
+              </ul>
+            </ul>
+            <ul>
+              <li>WeaponRepackTimeout: <s>32.5</s> <i class="fa-solid fa-arrow-right"></i> 20</li>                                
+            </ul>
+          </div>
+        </div>
+
+        <h2>Miscellaneous</h2>
+
+        <div id="misc">
+
+          <div id="oc" class="card">
+            <h3><img src="/assets/images/orders/overcharge.png">Overcharge</h3>
+            <p>Overcharge is changed from a variable system to a fixed damage per energy used. The ratio is 1:4 damage to energy drained and the minimum damage is 1250, maintaining the minimum energy required to Overcharge at 5k.</p>
+            <p>The damage dealt by overcharge scales with the amount of energy drained from storage.</p>
+            <p>Overcharge will use as much energy as is needed to kill the highest health unit hit</p>
+            <p>The minimum damage is 1250 at a cost of 5k energy.</p>
+            <p>The maximum damage is 15k at a cost of 60k energy.</p>
+            <p>Overcharge will drain a maximum of 90% of stored energy.</p>
+            <p>Damage vs buildings is 800 for 5k energy as before.</p>
+            <p>Damage vs commanders is 400 for 5k energy as before.</p>
+          </div>
+        
+          <div id="snipemode" class="card">
+            <h3><img src="/assets/images/orders/snipemode.png">Target Priorities</h3>
+    
+            <p>Many units had their target priorities updated to enabled them to function more effectively. Find all the details <a href="https://github.com/FAForever/fa/pull/3072">here.</a></p>
+          </div>
+        
+          <div id="nuke" class="card">    
+            <h3><img src="/assets/images/units/uef/structure/T3NukeLauncher.png">Nukes</h3>
+
+            <b><u>Experimental Nuclear Missile</u></b>
+            <ul>
+              <li>Health: <s>60</s> <i class="fa-solid fa-arrow-right"></i> 60000</li>
+            </ul>
+
+            <b><u>Nuclear Missile</u></b>
+            <ul>
+              <li>Health: <s>25</s> <i class="fa-solid fa-arrow-right"></i> 25000</li>
+            </ul>
+        
+            <b><u>Anti-nuke missile</u></b>
+            <ul>
+              <li>Damage: <s>30</s> <i class="fa-solid fa-arrow-right"></i> 30000</li>
+            </ul>
+          </div>
+        
+          <div id="airfac" class="card">    
+            <h3><img src="/assets/images/units/aeon/structure/T2AirFactoryHQ.png">Air Factory Rolloff</h3>
+        
+            <p>Air factory rolloff times have been equalized between factions.</p>
+          </div>
+        
+          <div id="aircrash" class="card">    
+            <h3><img src="/assets/images/units/uef/air/T3Strat.png">T3 Air Crash Damage</h3>
+        
+            <p>The crash damage of T3 air units has been increased and made more consistent.</p>
+          </div>
+        
+          <div id="vision" class="card">
+            <h3><img src="/assets/images/units/sera/air/T1AirScout.png">Vision Fix</h3>
+          
+            <p>Fixed the vision effects of Lobos and Seraphim air scouts.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="sidebar">
+        <div class="iconSidebar">
+          <h2 class="iconSidebarTitle">Contents</h2>
+          <div class="iconSidebarBlank"></div>
+  
+          <div class="iconSidebarSubgrid">
+              <h3 class="iconSidebarSubtitle">Land</h3><br>
+              <a href="#aurora"><img src="/assets/images/units/aeon/land/T1Tank.png"></a>
+              <a href="#mantis"><img src="/assets/images/units/cybran/land/T1Tank.png"></a>
+              <a href="#flare"><img src="/assets/images/units/aeon/land/T1LightAssultBot.png"></a>
+              <a href="#hunter"><img src="/assets/images/units/cybran/land/T1LightAssultBot.png"></a>
+              <a href="#mechmarine"><img src="/assets/images/units/uef/land/T1LightAssultBot.png"></a>
+              <a href="#selen"><img src="/assets/images/units/sera/land/T1Scout.png"></a>
+              <a href="#mongoose"><img src="/assets/images/units/uef/land/T2RangeBot.png"></a>
+              <a href="#hoplite"><img src="/assets/images/units/cybran/land/T2RangeBot.png"></a>
+              <a href="#asylum"><img src="/assets/images/units/aeon/land/T2MobileShiled.png"></a>
+              <a href="#parashield"><img src="/assets/images/units/uef/land/T2MobileShield.png"></a>
+  
+              <h3 class="iconSidebarSubtitle">Air</h3><br>
+              <a href="#airscout"><img src="/assets/images/units/aeon/air/T1Airscout.png"></a>
+              <a href="#t1bomber"><img src="/assets/images/units/uef/air/T1Bommber.png"></a>
+              <a href="#jester"><img src="/assets/images/units/cybran/air/T1Gunship.png"></a>
+  
+              <h3 class="iconSidebarSubtitle">Structures</h3><br>
+              <a href="#t3cybransonar"><img src="/assets/images/units/cybran/structure/T3Sonar.png"></a>
+              <a href="#yolo"><img src="/assets/images/units/sera/structure/T4NukeLauncher.png"></a>
+  
+              <h3 class="iconSidebarSubtitle">Mechanics</h3><br>
+              <a href="#oc"><img src="/assets/images/orders/overcharge.png"></a>
+              <a href="#snipemode"><img src="/assets/images/orders/snipemode.png"></a>
+              <a href="#nuke"><img src="/assets/images/units/uef/structure/T3NukeLauncher.png"></a>
+              <a href="#airfac"><img src="/assets/images/units/aeon/structure/T2AirFactoryHQ.png"></a>
+              <a href="#aircrash"><img src="/assets/images/units/uef/air/T3Strat.png"></a>
+              <a href="#vision"><img src="/assets/images/units/sera/air/T1AirScout.png"></a>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+  <footer >
+    <div class="backtotop"><button><a class="toptext" href="#top">Back to Top</a></button></div><br>
+    <a href="/../index.html">Back to Patchnote List</a>
+    <p>© 2015-2024 FAForever</p>
+  </footer>
+</html>

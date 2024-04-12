@@ -1,5 +1,5 @@
 async function populate() {
-    const requestURL = 'https://raw.githubusercontent.com/FAForever/patchnotes/master/data/patches.json';
+    const requestURL = '../assets/data/patches.json';
     const request = new Request(requestURL);
 
     const response = await fetch(request);
@@ -11,7 +11,7 @@ async function populate() {
 
 
 function BalancePatch(obj) {
-    const container = document.querySelector(".balanceList");
+    const container = document.querySelector(".BalanceJSONList");
     const list = document.createElement("ul");
 
     const patches = obj.balance;
@@ -34,7 +34,7 @@ function BalancePatch(obj) {
 }
 
 function GamePatches(obj) {
-    const container = document.querySelector(".gameList");
+    const container = document.querySelector(".GameJSONList");
     const list = document.createElement("ul");
 
     const patches = obj.game;

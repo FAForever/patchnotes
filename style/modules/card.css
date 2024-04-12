@@ -1,0 +1,15 @@
+@import '../root.css';
+
+.Card {
+    background: var(--Primary-Card);
+    border-radius: 1em;
+    padding: 5px 15px;
+    margin: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    color: var(--Secondary-Text);
+}
+
+.Card img {
+    margin-right: 15px;
+}
+

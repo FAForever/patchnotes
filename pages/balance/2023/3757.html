@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+    <meta charset="UTF-8" />
+    <title>Patch 3757</title>
+    <link rel="stylesheet" href="/style/balance.css"/>
+  </head>
+  <body>
+    <main class="grid">
+      <div class="content">
+
+        <div id="intro">
+          <h1>Patch 3757</h1>
+          <h2>Date:<i> May 20 2023</i></h2>
+          <p> Welcome to the patchnotes for the 3757 patch.</p>
+          <p> A balance patch has been released with a few important changes that have been planned for a while, but were delayed. </p>
+          <p>We hope you enjoy this new patch</p>
+          <p>-- The Balance Team</p>
+        </div>
+
+        <h2>Land</h2>
+
+        <div id="land">
+
+          <div id="gc" class="card">
+            <h3><img src="/assets/images/units/aeon/land/T4GC.png"/> Galactic Colossus </h3>
+            <p> Previously the claws would instantaneously destroy the unit upon arrival. This matched the old behavior, but with the bug fixes of the claws it was only slightly too strong. </p>
+            <ul>
+              <li>Claw Damage: 730 dps</li>
+            </ul>
+          </div>
+
+        </div>
+
+        <h2>Structures</h2>
+
+        <div id="structures">
+
+          <div id="airstaging" class="card">
+            <h3><img src="/assets/images/units/cybran/structure/T1AirStaging.png"/> Air Staging Facility</h3>
+            
+            <p> When they were moved from tech 2 to tech 1 their build time was not reduced accordingly. </p>
+            <ul>
+              <li>Build Time: <s>450</s> <i class="fa-solid fa-arrow-right"></i> 350</li>
+            </ul>
+          </div>
+
+        </div>
+
+        <h2>ACUs</h2>
+
+        <div id="acus">
+          <div id="aeonacu">
+
+            <div id="Chrono" class="card">
+              <h3><img src="/assets/images/Enhancements/aeon/chrono.png"/> Chrono Dampener</h3>
+              <ul>
+                <li> The chrono dampener received several buffs over the past year. With this patch we nerf it by changing how the Chrono Dampener behaves. </li>
+                <li> The old behavior applies the same stun on all units over a large radius every 5.0 seconds. The stun duration was 3.5 seconds. </li>
+                <li> The new behavior applies a diminishing stun based on the distance of the unit to the ACU over a large radius every 5.0 seconds. The stun is applied in slices of 0.4 seconds. There are 10 slices. Units that are on top of the ACU receive all slices, and are therefore stunned for 4.0 seconds. Units at the outer edge of the radius receive only a single slice and are therefore stunned for 0.4 seconds. </li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div class="sidebar">
+        <div class="iconSidebar">
+          <h2 class="iconSidebarTitle">Contents</h2>
+          <div class="iconSidebarBlank"></div>
+  
+          <div class="iconSidebarSubgrid">
+              <h3 class="iconSidebarSubtitle">Land</h3><br>
+              <a href="#GC"><img src="/assets/images/units/aeon/land/T4GC.png"/></a>
+  
+              <h3 class="iconSidebarSubtitle">Structures</h3><br>
+              <a href="#airstaging"><img src="/assets/images/units/cybran/structure/T1AirStaging.png"/></a>
+  
+              <h3 class="iconSidebarSubtitle">ACU</h3><br>
+              <a href="#Chrono"><img src="/assets/images/Enhancements/aeon/chrono.png"></a>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+  <footer >
+    <div class="backtotop"><button><a class="toptext" href="#top">Back to Top</a></button></div><br>
+    <a href="/../index.html">Back to Patchnote List</a>
+    <p>© 2015-2024 FAForever</p>
+  </footer>
+</html>

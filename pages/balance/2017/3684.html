@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta charset="UTF-8">
+        <title>Patch 3684</title>
+        <link rel="stylesheet" href="/style/balance.css"/>
+    </head>
+    <body>
+        <main class="grid">
+            <div class="content">
+            
+                <div id="intro">
+                    <h1>Patch 3684</h1>
+                    <h2>Date:<i> May 27, 2017</i></h2>
+                    <p>Welcome to the patchnotes for the 3684 patch.</p>
+                    <p>Included in this patch are a veterancy overhaul, factory HP changes(yes, again), a sera second gun buff, reduced wreck reclaim rate and more.</p>
+                    <p>Try out the new features and changes, and leave your feedback and replays on the balance forum. Thank you.</p>
+                    <h4>-- The Balance Team</h4>
+                </div>
+
+                <h2>Land</h2>
+
+                <div id="land">
+
+                    <div id="aurora" class="card">
+                        <h3><img src="/assets/images/units/aeon/land/T1Tank.png">Aurora</h3>
+                        <p>Aurora now shoot a bit less accurately while moving to reduce their effectiveness while kiting.</p>
+                        <ul>
+                            <li>FiringRandomnessWhileMoving: <s>0.1</s> <i class="fa-solid fa-arrow-right"></i> 0.3</li>
+                        </ul>
+                    </div>
+
+                    <div id="mml" class="card">
+                        <h3><img src="/assets/images/units/uef/land/T2MobileML.png">Mobile Missile Launchers</h3>
+            			<p>The mobile missile launchers of Aeon, Seraphim and UEF are buffed to bring them closer in strength to Cybran MMLs. The MMLs are also given different traits to distinguish them from each other. UEF fires in volleys of three. Aeon missiles have 2 hp but travel much slower. Sera missiles fly faster.</p>
+			            
+                        <h3>Aeon</h3>
+                        <p>Missile:</p>
+                        <ul>                           
+                            <li>Health: <s>1</s> <i class="fa-solid fa-arrow-right"></i> 2</li>
+                            <li>MaxSpeed: <s>12</s> <i class="fa-solid fa-arrow-right"></i> 8</li>
+                            <li>Acceleration: <s>3</s> <i class="fa-solid fa-arrow-right"></i> 2</li>
+                            <li>InitialSpeed: <s>3</s> <i class="fa-solid fa-arrow-right"></i> 2</li>
+                        </ul>
+                        <h3>UEF</h3>
+                        <ul>
+                            <li>RoF: <s>0.2</s> <i class="fa-solid fa-arrow-right"></i> 0.1</li>
+                            <li>MuzzleSalvoSize: <s>1</s> <i class="fa-solid fa-arrow-right"></i> 3</li>
+                        </ul>
+                        <h3>Seraphim</h3>
+                        <ul>
+                            <li>Muzzle Velocity: <s>3</s> <i class="fa-solid fa-arrow-right"></i> 4</li>
+                            <li>RoF: <s>0.15</s> <i class="fa-solid fa-arrow-right"></i> 0.1666</li>
+                            <li>Missile:</li> 
+                            <ul>
+                                <li>MaxSpeed: <s>12</s> <i class="fa-solid fa-arrow-right"></i> 15</li>
+                                <li>Acceleration: <s>3</s> <i class="fa-solid fa-arrow-right"></i> 4</li>
+                                <li>InitialSpeed: <s>3</s> <i class="fa-solid fa-arrow-right"></i> 4</li>                                
+                            </ul>
+                        </ul>
+                    </div>
+
+                    <div id="sparky" class="card">
+                        <h3><img src="/assets/images/units/uef/land/T2FieldEngie.png">Sparky</h3>
+                        <p>Reintroduced power drain on Sparkies since the bug that did prevent units with power drain from supporting other units has been fixed.</p>
+                        <ul>
+                            <li>Energy Maintenance cost: <s>0</s> <i class="fa-solid fa-arrow-right"></i> 15</li>
+                        </ul>
+                    </div>
+
+                    <div id="harb" class="card">
+                        <h3><img src="/assets/images/units/aeon/land/T3Tank.png">Harbinger</h3>
+                        <p>Increase Harbinger BuildRate to compensate for the global reduced reclaim speed.</p>
+                        <ul>
+                            <li>BuildRate: <s>3</s> <i class="fa-solid fa-arrow-right"></i> 5</li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <h2>Air</h2>
+
+                <div id="air">
+
+                    <div id="janus" class="card">
+                        <h3><img src="/assets/images/units/uef/air/T2FighterBomber.png">Janus</h3>
+                        <p>A Janus damage miscalculation is corrected. There was also a very abusable bug which has been found and now fixed.</p>
+                        <ul>
+                            <li>DoT Pulses: <s>15</s> <i class="fa-solid fa-arrow-right"></i> 10</li>
+                            <li>Fixed a bug that made cluster bombs gain a new target halfway through a run.</li>
+                        </ul>
+
+                    </div>
+
+                    <div id="t1bomber" class="card">
+
+                        <h3><img src="/assets/images/units/uef/air/T1Bommber.png">Scorcher</h3>
+                        <p>The UEF t1 bomber gets an increase in the burn time of its bombs to stop it from regularly one shotting t1 tanks that are moving.</p>
+                        <ul>
+                            <li>DoTTime: <s>1.5</s> <i class="fa-solid fa-arrow-right"></i> 4.2</li>
+                        </ul>
+
+                    </div>
+
+                </div>
+
+                <h2>Structures</h2>
+
+                <div id="structures">
+
+                    <div id="flack" class="card">
+
+                        <h3><img src="/assets/images/units/aeon/structure/T2Flack.png">Static Flak</h3>
+                        <p>Static flak is buffed to allow it to hit T3 Air units more regularly.</p>
+                        <p>Aeon</p>
+                        <ul>
+                            <li>Muzzle Velocity: <s>30</s> <i class="fa-solid fa-arrow-right"></i> 35</li>
+                        </ul>
+                        <p>UEF</p>
+                        <ul>
+                            <li>Muzzle Velocity: <s>25</s> <i class="fa-solid fa-arrow-right"></i> 35</li>
+                        </ul>
+                        <p>Seraphim</p>
+                        <ul>
+                            <li>Muzzle Velocity: <s>25</s> <i class="fa-solid fa-arrow-right"></i> 35</li>
+                            <li>FiringRandomness: <s>2.5</s> <i class="fa-solid fa-arrow-right"></i> 2</li>
+                            <li>AoE: <s>3</s> <i class="fa-solid fa-arrow-right"></i> 4</li>
+                        </ul>
+                        <p>Cybran</p>
+                        <ul>
+                            <li>Muzzle Velocity: <s>20</s> <i class="fa-solid fa-arrow-right"></i> 30</li>
+                        </ul>
+                    </div>
+
+                    <div id="Factory HPs" class="card">
+                        <h3>Factory HPs</h3>
+                        <p>Factory HPs are being overhauled to some degree once again, and hopefully for the last time in the near future. Naval factory HPs are the main focus here. Given that navy is a more expensive and generally powerful arena than land or air on a given tech level, it has had some of its hp restored. HP values have also been realigned to make them very easy to learn should you feel the need to, to make predicting the number of units needed to snipe a factory much easier.</p>
+					    <h3><img src="/assets/images/units/aeon/structure/T1AirFactory.png"> T1 Land/Air + T2 Land/Air Support Factory</h3>
+						<ul>
+                            <li>UEF: 4000</li>
+                            <li>Sera: 3500</li>
+							<li>Aeon: <s>3100</s> <i class="fa-solid fa-arrow-right"></i> 3200</li>
+                            <li>Cybran: <s>2500</s> <i class="fa-solid fa-arrow-right"></i> 2750</li>
+                            <li>Cybran regen: <s>6</s> <i class="fa-solid fa-arrow-right"></i> 9</li>
+						</ul>
+
+                        <h3><img src="/assets/images/units/aeon/structure/T1NavalFactory.png"> T1 Naval Factory</h3>
+						<ul>
+                            <li>UEF: <s>4000</s> <i class="fa-solid fa-arrow-right"></i> 4500</li>
+                            <li>Sera: <s>3500</s> <i class="fa-solid fa-arrow-right"></i> 4000</li>
+							<li>Aeon: <s>3100</s> <i class="fa-solid fa-arrow-right"></i> 3700</li>
+                            <li>Cybran: <s>2500</s> <i class="fa-solid fa-arrow-right"></i> 3200</li>
+                            <li>Cybran regen: <s>6</s> <i class="fa-solid fa-arrow-right"></i> 10</li>
+						</ul>
+
+						<h3><img src="/assets/images/units/cybran/structure/T2LandFacHQ.png">T2 Land/Air HQ + T3 Land/Air Support Factory</h3>
+						<ul>
+							<li>UEF: 8000</li>
+                            <li>Sera: 7000</li>
+							<li>Aeon: <s>6200</s> <i class="fa-solid fa-arrow-right"></i> 6400</li>
+                            <li>Cybran: <s>5000</s> <i class="fa-solid fa-arrow-right"></i> 5500</li>
+                            <li>Cybran regen: 20</li>
+						</ul>
+
+						<h3><img src="/assets/images/units/uef/structure/T2NavalFacHQ.png"> T2 Naval HQ</h3>
+						<ul>
+							<li>UEF: <s>13000</s> <i class="fa-solid fa-arrow-right"></i> 16000</li>
+                            <li>Sera: <s>11000</s> <i class="fa-solid fa-arrow-right"></i> 14000</li>
+							<li>Aeon: <s>10000</s> <i class="fa-solid fa-arrow-right"></i> 12800</li>
+                            <li>Cybran: <s>8000</s> <i class="fa-solid fa-arrow-right"></i> 11000</li>
+                            <li>Cybran regen: <s>30</s> <i class="fa-solid fa-arrow-right"></i> 40</li>
+						</ul>
+
+                        <h3><img src="/assets/images/units/uef/structure/T2NavalFacHQ.png"> T2 Naval Support Factory</h3>
+						<ul>
+							<li>UEF: <s>6500</s> <i class="fa-solid fa-arrow-right"></i> 8000</li>
+                            <li>Sera: <s>5500</s> <i class="fa-solid fa-arrow-right"></i> 7000</li>
+							<li>Aeon: <s>5000</s> <i class="fa-solid fa-arrow-right"></i> 6400</li>
+                            <li>Cybran: <s>4000</s> <i class="fa-solid fa-arrow-right"></i> 5500</li>
+                            <li>Cybran regen: <s>12</s> <i class="fa-solid fa-arrow-right"></i> 20</li>
+						</ul>
+
+						<h3><img src="/assets/images/units/cybran/structure/T3NavalHQ.png"> T3 Land/Air HQ</h3>
+						<ul>
+							<li>UEF: 16000</li>
+                            <li>Sera: 14000</li>
+							<li>Aeon: <s>12400</s> <i class="fa-solid fa-arrow-right"></i> 12800</li>
+                            <li>Cybran: <s>10000</s> <i class="fa-solid fa-arrow-right"></i> 11000</li>
+                            <li>Cybran regen: 40</li>
+						</ul>
+
+						<h3><img src="/assets/images/units/cybran/structure/T3NavalHQ.png"> T3 Naval HQ</h3>
+						<ul>
+							<li>UEF: 26000</li>
+                            <li>Sera: <s>22000</s> <i class="fa-solid fa-arrow-right"></i> 23000</li>
+							<li>Aeon: <s>20000</s> <i class="fa-solid fa-arrow-right"></i> 21000</li>
+                            <li>Cybran: <s>16000</s> <i class="fa-solid fa-arrow-right"></i> 17000</li>
+                            <li>Cybran regen: 60</li>
+						</ul>
+
+                        <h3><img src="/assets/images/units/cybran/structure/T3NavalHQ.png"> T3 Naval Support Factory</h3>
+						<ul>
+							<li>UEF: <s>17000</s> <i class="fa-solid fa-arrow-right"></i> 16000</li>
+                            <li>Sera: <s>15000</s> <i class="fa-solid fa-arrow-right"></i> 14000</li>
+							<li>Aeon: <s>13000</s> <i class="fa-solid fa-arrow-right"></i> 12800</li>
+                            <li>Cybran: 11000</li>
+                            <li>Cybran regen: 40</li>
+						</ul>
+
+						<h3><img src="/assets/images/units/aeon/structure/T1Hydrocarbon.png"> Cybran Regeneration</h3>
+						<ul>
+							<li>Mass Storage Regen: <s>4</s> <i class="fa-solid fa-arrow-right"></i> 3</li>
+							<li>Hydrocarbon Power Plant Regen: <s>6</s> <i class="fa-solid fa-arrow-right"></i> 5</li>
+						</ul>
+
+					</div>
+
+                </div>
+
+                <h2>ACU</h2>
+
+                <div id="acu">
+                    <div id="seracom">
+
+                        <div id="seraaoe" class="card">
+                            <h3><img src="/assets/images/Enhancements/sera/aoe.png">Refracting Chronotron Amplifier</h3>
+                            <p>The Seraphim second gun is one of the rarest upgrades, many players have never even seen it used in a game. We are buffing it with increased damage and AoE, while increasing the mass cost and decreasing the energy cost to keep it as a very powerful lategame option for an aggressive acu and even tele-sniping.</p>
+                            <ul>
+                                <li>Mass cost: <s>3500</s> <i class="fa-solid fa-arrow-right"></i> 4800</li>
+                                <li>Energy cost: <s>300000</s> <i class="fa-solid fa-arrow-right"></i> 270000</li>
+                                <li>AOE: <s>2</s> <i class="fa-solid fa-arrow-right"></i> 2.7</li>
+                                <li>Additional damage: <s>400</s> <i class="fa-solid fa-arrow-right"></i> 750</li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                    <div id="aeoncom">
+                        <div id="personalsheild" class="card">
+                            <h3><img src="/assets/images/Enhancements/aeon/shield.png">Personal Shield Generator</h3>
+                            <p>Since the Aeon Personal Shield Generator was reworked in 3662, it was found that the recharge time of the shield was too low. The recharge time is increased to 1 minute 30 seconds.</p>
+                            <ul>
+                                <li>ShieldRechargeTime: <s>65</s> <i class="fa-solid fa-arrow-right"></i> 90</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <h2>Mechanic</h2>
+
+                <div id="mechanics">
+
+                    <div id="reclaim" class="card">
+                        <h3><img src="/assets/images/orders/Reclaim_icon.png"> Reclaim</h3>
+                        <p>There have been some changes discussed for a long time in the community and one of them is decreasing the speed of reclaiming. A T1 engy can reclaim 50 mass/s which is a very high rate. This makes reclaim fields disappear very quickly after being deposited. We have decided to reduce the reclaim rate by half for wrecks to allow reclaim fields to be more contestable to improve the dynamic map control element created by reclaim fields.</p>
+                        <ul>
+                            <li>Reclaim time of unit wrecks has been doubled. Props and live units are unaffected.</li>
+                            <li>The mass and energy value of split trees has been increased by 25% to balance against the inefficiency of reclaiming trees individually.</li>
+                        </ul>
+                    </div>
+
+                    <div id="experimentals" class="card">
+                        <p>Instant healing for Experimentals is a somewhat problematic feature, later vets give very large healing boosts which can create coin-flip moments and encourage suiciding XPs in rather keeping them alive. In compensation, regen gained from later vets is increased dramatically. XPs will now regain a flat 10% of their base hp on every Veteran level rather than the previous 10%/20%/30%/40%/50% of base health regained on respective vets. This will reward people for keeping their XPs alive which fits much better with the idea of veterancy and is more interesting than gambling on getting those large and unpredictable instant heals..</p>
+                        <h3>All Units except ACUs</h3>
+                        <ul>
+                            <li>Veteran level 1 health regained: 10% of base HP</li>
+                            <li>Veteran level 2 health regained: <s>20% of base HP</s> <i class="fa-solid fa-arrow-right"></i> 10%</li>
+                            <li>Veteran level 3 health regained: <s>30% of base HP</s> <i class="fa-solid fa-arrow-right"></i> 10%</li>
+                            <li>Veteran level 4 health regained: <s>40% of base HP</s> <i class="fa-solid fa-arrow-right"></i> 10%</li>
+                            <li>Veteran level 5 health regained: <s>50% of base HP</s> <i class="fa-solid fa-arrow-right"></i> 10%</li>
+                        </ul>
+                        <h3><img src="/assets/images/units/cybran/land/T4Mega.png">Megalith</h3>
+                        <ul>
+                            <li>Veteran level 1 regen: 10</li>
+                            <li>Veteran level 2 regen: <s>20</s> <i class="fa-solid fa-arrow-right"></i> 65</li>
+                            <li>Veteran level 3 regen: <s>30</s> <i class="fa-solid fa-arrow-right"></i> 120</li>
+                            <li>Veteran level 4 regen: <s>40</s> <i class="fa-solid fa-arrow-right"></i> 180</li>
+                            <li>Veteran level 5 regen: <s>50</s> <i class="fa-solid fa-arrow-right"></i> 235</li>
+                        </ul>
+                        <h3><img src="/assets/images/units/cybran/air/T4Gunship.png">Soul Ripper</h3>
+                        <ul>
+                            <li>Veteran level 1 regen: 10</li>
+                            <li>Veteran level 2 regen: <s>20</s> <i class="fa-solid fa-arrow-right"></i> 55</li>
+                            <li>Veteran level 3 regen: <s>30</s> <i class="fa-solid fa-arrow-right"></i> 105</li>
+                            <li>Veteran level 4 regen: <s>40</s> <i class="fa-solid fa-arrow-right"></i> 155</li>
+                            <li>Veteran level 5 regen: <s>50</s> <i class="fa-solid fa-arrow-right"></i> 200</li>
+                        </ul>
+                        <h3><img src="/assets/images/units/cybran/land/T4Monkey.png">Monkeylord</h3>
+                        <ul>
+                            <li>Veteran level 1 regen: 10</li>
+                            <li>Veteran level 2 regen: <s>20</s> <i class="fa-solid fa-arrow-right"></i> 40</li>
+                            <li>Veteran level 3 regen: <s>30</s> <i class="fa-solid fa-arrow-right"></i> 70</li>
+                            <li>Veteran level 4 regen: <s>40</s> <i class="fa-solid fa-arrow-right"></i> 95</li>
+                            <li>Veteran level 5 regen: <s>50</s> <i class="fa-solid fa-arrow-right"></i> 125</li>
+                        </ul>
+                        <h3><img src="/assets/images/units/cybran/land/T4MobileArty.png">Scathis</h3>
+                        <ul>
+                            <li>Veteran level 1 regen: 10</li>
+                            <li>Veteran level 2 regen: <s>20</s> <i class="fa-solid fa-arrow-right"></i> 25</li>
+                            <li>Veteran level 3 regen: <s>30</s> <i class="fa-solid fa-arrow-right"></i> 45</li>
+                            <li>Veteran level 4 regen: <s>40</s> <i class="fa-solid fa-arrow-right"></i> 60</li>
+                            <li>Veteran level 5 regen: <s>50</s> <i class="fa-solid fa-arrow-right"></i> 80</li>
+                        </ul>
+                        <h3><img src="/assets/images/units/aeon/land/T4GC.png">Galactic Colossus</h3>
+                        <ul>
+                            <li>Veteran level 1 regen: 10</li>
+                            <li>Veteran level 2 regen: <s>20</s> <i class="fa-solid fa-arrow-right"></i> 60</li>
+                            <li>Veteran level 3 regen: <s>30</s> <i class="fa-solid fa-arrow-right"></i> 115</li>
+                            <li>Veteran level 4 regen: <s>40</s> <i class="fa-solid fa-arrow-right"></i> 165</li>
+                            <li>Veteran level 5 regen: <s>50</s> <i class="fa-solid fa-arrow-right"></i> 215</li>
+                        </ul>
+                        <h3><img src="/assets/images/units/aeon/naval/T4Battleship.png">Tempest</h3>
+                        <ul>
+                            <li>Veteran level 1 regen: 10</li>
+                            <li>Veteran level 2 regen: <s>20</s> <i class="fa-solid fa-arrow-right"></i> 45</li>
+                            <li>Veteran level 3 regen: <s>30</s> <i class="fa-solid fa-arrow-right"></i> 80</li>
+                            <li>Veteran level 4 regen: <s>40</s> <i class="fa-solid fa-arrow-right"></i> 115</li>
+                            <li>Veteran level 5 regen: <s>50</s> <i class="fa-solid fa-arrow-right"></i> 150</li>
+                        </ul>
+                        <h3><img src="/assets/images/units/aeon/air/T4AircraftCarrier.png">Czar</h3>
+                        <ul>
+                            <li>Veteran level 1 regen: 10</li>
+                            <li>Veteran level 2 regen: <s>20</s> <i class="fa-solid fa-arrow-right"></i> 45</li>
+                            <li>Veteran level 3 regen: <s>30</s> <i class="fa-solid fa-arrow-right"></i> 80</li>
+                            <li>Veteran level 4 regen: <s>40</s> <i class="fa-solid fa-arrow-right"></i> 115</li>
+                            <li>Veteran level 5 regen: <s>50</s> <i class="fa-solid fa-arrow-right"></i> 145</li>
+                        </ul>
+                        <h3><img src="/assets/images/units/uef/naval/T4AircraftCarrier.png">Atlantis</h3>
+                        <ul>
+                            <li>Veteran level 1 regen: 10</li>
+                            <li>Veteran level 2 regen: <s>20</s> <i class="fa-solid fa-arrow-right"></i> 35</li>
+                            <li>Veteran level 3 regen: <s>30</s> <i class="fa-solid fa-arrow-right"></i> 65</li>
+                            <li>Veteran level 4 regen: <s>40</s> <i class="fa-solid fa-arrow-right"></i> 90</li>
+                            <li>Veteran level 5 regen: <s>50</s> <i class="fa-solid fa-arrow-right"></i> 115</li>
+                        </ul>
+                        <h3><img src="/assets/images/units/sera/land/T4Bot.png">Ythotha</h3>
+                        <ul>
+                            <li>Veteran level 1 regen: 15</li>
+                            <li>Veteran level 2 regen: <s>30</s> <i class="fa-solid fa-arrow-right"></i> 60</li>
+                            <li>Veteran level 3 regen: <s>45</s> <i class="fa-solid fa-arrow-right"></i> 100</li>
+                            <li>Veteran level 4 regen: <s>60</s> <i class="fa-solid fa-arrow-right"></i> 145</li>
+                            <li>Veteran level 5 regen: <s>75</s> <i class="fa-solid fa-arrow-right"></i> 185</li>
+                        </ul>
+                        <h3><img src="/assets/images/units/sera/air/T4Bomber.png">Ahwassa</h3>
+                        <ul>
+                            <li>Veteran level 1 regen: 15</li>
+                            <li>Veteran level 2 regen: <s>30</s> <i class="fa-solid fa-arrow-right"></i> 50</li>
+                            <li>Veteran level 3 regen: <s>45</s> <i class="fa-solid fa-arrow-right"></i> 90</li>
+                            <li>Veteran level 4 regen: <s>60</s> <i class="fa-solid fa-arrow-right"></i> 125</li>
+                            <li>Veteran level 5 regen: <s>75</s> <i class="fa-solid fa-arrow-right"></i> 160</li>
+                        </ul>
+                        <h3><img src="/assets/images/units/uef/land/T4Fatboy.png">Fatboy</h3>
+                        <ul>
+                            <li>Veteran level 1 regen: 15</li>
+                            <li>Veteran level 2 regen: <s>30</s> <i class="fa-solid fa-arrow-right"></i> 35</li>
+                            <li>Veteran level 3 regen: <s>45</s> <i class="fa-solid fa-arrow-right"></i> 55</li>
+                            <li>Veteran level 4 regen: <s>60</s> <i class="fa-solid fa-arrow-right"></i> 75</li>
+                            <li>Veteran level 5 regen: <s>75</s> <i class="fa-solid fa-arrow-right"></i> 95</li>
+                        </ul>
+                    </div>
+                
+                </div>
+
+                <h2>Miscellaneous</h2>
+                
+                <div id="Miscellaneous" class="card">
+                        <h3><img src="/assets/images/units/cybran/land/T4Mega.png">Megalith</h3>
+                        <p>Megalith build power is reduced and the megalith eggs' build time is also reduced to nerf the Megalith's ability to reclaim at a very high rate.</p>
+                        <ul>
+                            <li>BuildRate: <s>180</s> <i class="fa-solid fa-arrow-right"></i> 45</li>
+                            <li>Egg BuildTimes reduced by 50%</li>
+                        </ul>
+                        
+                        <h3>Satellite</h3>
+                        <p>Satellite crash damage is reduced to deter ctrl-k abuse.</p>
+                        <ul>
+                            <li>Crash Damage: <s>3000</s> <i class="fa-solid fa-arrow-right"></i> 1000</li>
+                        </ul>
+                        
+                </div>
+            </div>
+            <div class="sidebar">
+                <div class="iconSidebar">
+                    <h2 class="iconSidebarTitle">Contents</h2>
+                    <div class="iconSidebarBlank"></div>
+
+                    <div class="iconSidebarSubgrid">
+
+                        <h3 class="iconSidebarSubtitle">Land</h3><br>
+    
+                        <a href="#aurora"><img src="/assets/images/units/aeon/land/T1Tank.png"></a>
+                        <a href="#mml"><img src="/assets/images/units/uef/land/T2MobileML.png"></a>
+                        <a href="#land"><img src="/assets/images/units/uef/land/T2FieldEngie.png"></a>
+                        <a href="#harb"><img src="/assets/images/units/aeon/land/T3Engie.png"></a>
+
+                        <h3 class="iconSidebarSubtitle">Air</h3><br>
+                        <a href="#janus"><img src="/assets/images/units/uef/air/T2FighterBomber.png"></a>
+                        <a href="#t1bomber"><img src="/assets/images/units/uef/air/T1Bommber.png"></a>
+
+                        <h3 class="iconSidebarSubtitle">Structures</h3><br>
+    
+                        <a href="#structures"><img src="/assets/images/units/aeon/structure/T2Flack.png"></a>
+                        <a href="#Factory HPs"><img src="/assets/images/units/aeon/structure/T1AirFactory.png"></a>
+
+                        <h3 class="iconSidebarSubtitle">ACUs</h3><br>
+
+                        <a href="#seraaoe"><img src="/assets/images/Enhancements/sera/aoe.png"></a>
+                        <a href="#personalsheild"><img src="/assets/images/Enhancements/aeon/shield.png"></a>
+
+                        <h3 class="iconSidebarSubtitle">Mechanics</h3><br>
+
+                        <a href="#reclaim"><img src="/assets/images/orders/Reclaim_icon.png"></a>
+                        <a href="#experimentals"><img src="/assets/images/orders/mechanic.png"></a>
+
+                        <h3 class="iconSidebarSubtitle">Miscellaneous</h3><br>
+
+                        <a href="#Miscellaneous"><img src="/assets/images/orders/mechanic.png"></a>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </body>
+    <footer >
+        <div class="backtotop"><button><a class="toptext" href="#top">Back to Top</a></button></div><br>
+        <a href="/../index.html">Back to Patchnote List</a>
+        <p>© 2015-2024 FAForever</p>
+    </footer>
+</html>

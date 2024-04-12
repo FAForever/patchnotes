@@ -1,7 +1,6 @@
 @import 'root.css';
 
 /* Tags*/
-
 html {
     background-size: cover;
     background-repeat: no-repeat;   
@@ -25,7 +24,7 @@ ul { columns: 3;}
 
 /* Classes*/
 
-.grid {
+.Grid {
     display: grid;
     padding: 10px;
     grid-template-columns: .25fr 2.5fr 2.5fr .25fr;
@@ -33,71 +32,64 @@ ul { columns: 3;}
     margin: 10px;
 }
 
-.gridBG {
+.GridBackground {
     background: var(--Primary-Grid-BG);
     border-radius: 15px;
     backdrop-filter: blur(10px);
 }
 
-.blank {
+.Space {
     padding: 10px;
     text-align: center;
     grid-row: 1;
     grid-column: 2 / span 2;
 }
 
-.title {
+.Title {
     padding: 10px;
     text-align: center;
     grid-row: 2;
     grid-column: 2 / span 2;
 }
 
-.title h1 {
+.Title h1 {
     font-size: 40px;
 }
-.title p {
+.Title p {
     font-size: 16px;
     color: var(--Primary-Text);
 }
 
-.balance {
+.BalanceContainer {
     padding: 10px;
     grid-column: 2 ;
     grid-row: 3;
 }
-.balancelist {
+.BalanceJSONList {
     grid-row: 3;
 }
 
-.game {
+.GameContainer {
     padding: 10px;
     grid-column: 3 ;
     grid-row: 3;
 }
-.gamelist {
+.GameJSONList {
     grid-row: 3;
 }
 
-.balanceChanges {
+.BalanceDev {
     padding: 10px;
     grid-column: 2;
     grid-row: 4;
     text-align: center;
 }
 
-.support {
+.Support {
     padding: 10px;
     grid-column: 3;
     grid-row: 4;
     text-align: center;
-}
-
-.header {
-    background: var(--Primary-BG);
-    padding: 20px;
-    text-align: center;
-    font-size: 30px;
 }
 
 
