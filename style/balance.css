@@ -1,5 +1,223 @@
 @import './root.css';
 
+
+.BalanceChanges {
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    grid-gap: 20px;
+    gap: 20px;
+    grid-column: 2;
+}
+
+.BalanceChange {
+    position: relative;
+    background: hsla(0, 0%, 100%, .05);
+    width: 100%;
+}
+
+.info {
+    padding: 15px 40px 18px;
+    background: hsla(0, 0%, 59.6%, .32157);
+    box-shadow: 0 1px 3px rgba(0,0,0,.6);
+
+}
+
+.flexRow {
+    display: flex;
+}
+
+.flexWrap {
+    flex-wrap: wrap;
+}
+
+.flexCenter {
+    justify-content: center;
+    align-items: center;
+}
+.flexSpaceBetween {
+    justify-content: space-between;
+}
+
+.patch {
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.date {
+    margin-right: 10px;
+    padding-right: 10px;
+    border-right: 1px solid hsla(0, 0%, 100%, .5);
+}
+
+.message {
+    font-size: 14px;
+}
+
+.changes {
+    padding: 20px 40px;
+}
+.changesStats {
+    padding: 0;
+}
+
+.changes>div:not(:last-child) {
+    border-bottom: 1px solid hsla(0, 0%, 100%, .1);
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+
+.depth-0{
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.depth-1 {
+    font-size: 16px;
+    font-weight: 550;
+}
+
+.depth-2 {
+    margin-left: 25px;
+    font-size: 16px;
+    font-weight: 550;
+}
+.depth-3 {
+    margin-left: 30px;
+    font-size: 16px;
+    font-weight: 550;
+}
+
+.valueBlock {
+    display: flex;
+    align-items: flex-start;
+    font-size: 16px;
+    margin-right: 10px;
+    padding: 2px 0;
+}
+
+.propTitle {
+    display: flex;
+    align-items: center;
+    grid-gap: 7px;
+    gap:7px;
+    margin-left: 15px;
+    border-left: 3px solid hsla(0, 0%, 100%, .3);
+    padding-left: 7px;
+}
+
+.propTitle {
+    display: flex;
+    align-items: center;
+    grid-gap: 7px;
+    gap:7px;
+    margin-bottom: 5px;
+}
+.propMainTitle {
+    display: flex;
+    align-items: center;
+    grid-gap: 7px;
+    gap:7px;
+    margin-bottom: 5px;
+}
+
+.propName {
+    display: flex;
+    align-items: center;
+    grid-gap: 7px;
+    gap:7px;
+    margin-bottom: 5px;
+    color: #fff;
+}
+
+.propChange {
+    font-size: 16px;
+    border-left: none;
+    padding-left: 3px;
+    margin-left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    grid-gap: 3px;
+    gap: 3px;
+}
+
+a.propName {
+    display: flex;
+    flex-wrap: wrap;
+    grid-gap: 5px;
+    gap:5px;
+    align-items: center;
+    color: #fff;
+}
+
+.badge {
+    display: inline-flex;
+    font-weight: 300;
+    background: rgba(0,0,0,.6);
+    border: 1px solid hsla(0, 0%, 100%, .2);
+    border-radius: 3px;
+    padding: 0 7px;
+    align-self: center;
+    font-size: 14px;
+}
+
+.unitImg {
+    width: 35px;
+    height: 35px;
+}
+
+.uef{
+    filter: invert(44%) sepia(87%) saturate(705%) hue-rotate(171deg) brightness(98%) contrast(94%);  
+    width: 35px;
+    height: 35px;
+}
+
+.cybran{
+    filter: invert(20%) sepia(47%) saturate(2292%) hue-rotate(335deg) brightness(156%) contrast(107%);  
+    width: 35px;
+    height: 35px;
+}
+
+.aeon{
+    filter: invert(61%) sepia(12%) saturate(2280%) hue-rotate(73deg) brightness(95%) contrast(82%);
+    width: 35px;
+    height: 35px;
+}
+
+.sera {
+    filter: invert(74%) sepia(39%) saturate(1931%) hue-rotate(353deg) brightness(105%) contrast(104%);  
+    width: 35px;
+    height: 35px;
+}
+
+.badgeNerf{
+    background-color: rgba(172, 31,31, .7);
+}
+
+.badgeBuff{
+    background-color: rgba(86, 167,39, .7);
+}
+
+.badgeAdded{
+    background-color: rgba(31, 52,172, .7);
+}
+
+.badgeRemoved{
+    background-color: rgba(190, 92,0, .7);
+}
+
+
+
+
+
+
+
+
+
+
+
+
 video {
     width: 900px;
     height: 100%;
@@ -140,4 +358,9 @@ footer a {
 footer a:hover {
     color: var(--Link-Hover);
     text-decoration: none;
+}
+
+
+.mdi-arrow-right-thick {
+    font-size: 20px;
 }

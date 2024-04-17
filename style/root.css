@@ -2,13 +2,14 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Ubuntu&display=swap');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css');
+@import url('https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css');
 
 /* Declating Default Colors */
 
 :root{
 
     /* Primary Backgrounds */
-    --Primary-BG: #333;
+    --Primary-BG: #111;
     --Primary-Dark-BG: #222;
     --Primary-Light-BG: #666;
 
