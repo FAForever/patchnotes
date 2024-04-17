@@ -1,7 +1,7 @@
 @import '../style/root.css';
-@import '../style/modules/card.css';
-@import '../style/modules/images.css';
-@import '../style/modules/video.css';
+@import '../style/components/card.css';
+@import '../style/components/images.css';
+@import '../style/components/video.css';
 
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Ubuntu', sans-serif;
