@@ -12,7 +12,7 @@ h1, h2, h3, h4, h5, h6 {
 footer {
     text-align: center;
     font-size: 16px;
-    color: var(--Primary-Text);
+    color: var(--Text);
     padding: 10px;
     margin: 10px;
 }
@@ -49,7 +49,7 @@ footer a:hover {
 }
 
 .Intro p {
-    color: var(--Primary-Text-light);
+    color: var(--Text);
 }
 
 .Sidebar {
@@ -58,17 +58,17 @@ footer a:hover {
 }
 
 .Sidebar h2 a {
-    color: var(--Primary-Text);
+    color: var(--Text);
     text-decoration: none;
 }
 
 .IconSidebar {
     position: sticky;
     top: 20px;
-    background: var(--Primary-IconGrid-BG);
+    background: var(--IconGrid-Background);
     padding: 5px 20px 20px 20px;
     margin-left: 5px;
-    color: var(--Primary-Text);
+    color: var(--Text);
     text-align: justify;
     border-radius: 15px;
     display: grid;
@@ -108,9 +108,9 @@ footer a:hover {
 .IconGrid {
     position: sticky;
     top: 20px;
-    background: var(--Primary-IconGrid-BG);
+    background: var(--IconGrid-Background);
     padding: 5px 20px 20px 20px;
-    color: var(--Primary-Text);
+    color: var(--Text);
     text-align: justify;
     border-radius: 15px;
 }
@@ -131,7 +131,7 @@ footer a:hover {
 
 .BackToTop a {
     text-decoration: none;
-    color: var(--Secondary-Text);
+    color: var(--Text);
 }
 
 .TopText {

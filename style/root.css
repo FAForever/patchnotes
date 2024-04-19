@@ -4,21 +4,8 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css');
 
 
-
-
-
-/* Light Mode */
-@media (prefers-color-scheme: light){
-
-}
-
-/* Dark Mode */
-@media (prefers-color-scheme: dark){
-    :root{
+/*
         --Primary-BG: #181818;
-        --Primary-Dark-BG: #222;
-        --Primary-Light-BG: #666;
-        --Secondary-BG: #fff;
         --Primary-Grid-BG: rgba(51, 51, 51, 0.85);
         --Primary-IconGrid-BG: #2b2b2b;
         --Primary-Text: #d1d1d1;
@@ -37,71 +24,42 @@
         --Link-Hover: #d9c415;
         --Strike: #a5a5a5;
         --Footer: #1c1c1c;
-    }
-}
+*/
 
-
-
-
-
-
-/* Declating Default Colors */
+/* Declaring Default Colors */
 
 :root{
+    color-scheme: light dark;
 
-    /* Primary Backgrounds */
-    --Primary-BG: #333;
-    --Primary-Dark-BG: #222;
-    --Primary-Light-BG: #666;
-
-    /* Seconday Backgrounds*/
-    --Secondary-BG: #fff;
-
-    /* Primary Grid Background*/
-    --Primary-Grid-BG: rgba(51,51,51,0.85);
-
-    /* Primary IconGrid Background*/
-    --Primary-IconGrid-BG: #4d5c50;
-
-    /* Primary Text Color */
-    --Primary-Text: #fff;
-    --Primary-Text-light: #ddd;
-
-    /* Secondary Text Color */
-    --Secondary-Text: #000;
-
-    /* Primary Card Color */
-    --Primary-Card: #fff;
-
-    /* Tags */
-    --buff: rgba(86,167,39,.7);
-    --nerf: rgba(172,31,31,.7);
-    --stats: rgba(0,0,0,.6);
-    --removed: rgba(190,92,0,.6);
-    --added: rgba(31,52,172,.7);
-
-    /* Link Colors */
-    --Link: #fff;
-    --Link-Card: #000;
-    --Link-Unvisited: #87cefa;
-    --Link-Visited: #dc143c;
-    --Link-Hover: #c2a732;
-
-    /* Other */
-    --Strike: #888; 
-    --Footer: #666;
-    --DM-HR : #444;
-    --LM-HR : #555;
+    /* Variables*/
+        --Background: light-dark(#666,#181818);
+        --Grid-Background: light-dark(rgba(51,51,51,0.85),rgba(93, 91, 91, 0.85));
+        --IconGrid-Background: light-dark(#4d5c50,#2b2b2b);
+        --Text: light-dark(#000,#d1d1d1);
+        --Card: light-dark(#000,#2b2b2b);
+        --Buffs: light-dark(rgba(86,167,39,.7),rgba(86,167,39,.7));
+        --Nerfs: light-dark(rgba(172,31,31,.7),rgba(172,31,31,.7));
+        --Stats: light-dark(rgba(0,0,0,.6),rgba(0,0,0,.6));
+        --Removed: light-dark(rgba(190,92,0,.6),rgba(190,92,0,.6));
+        --Added: light-dark(rgba(31,52,172,.7),rgba(31,52,172,.7));
+        --Link: light-dark(#fff,#000);
+        --Link-Card: light-dark(#000,#fff);
+        --Link-Unvisited: light-dark(#87cefa,#87cefa);
+        --Link-Visited: light-dark(#dc143c,#dc143c);
+        --Link-Hover: light-dark(#c2a732,#c2a732);
+        --Strike: light-dark(#888,#fff);
+        --Footer: light-dark(#666,#1c1c1c);
+        --HR: light-dark(#444,#555);
 }
 
 /* Base Elemets */
 
 body {
-    background: var(--Primary-BG);
+    background: var(--Background);
     font-family: sans-serif;
     font-size: 16px;
     line-height: 22px;
-    color: var(--Primary-Text);
+    color: var(--Text);
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -110,6 +68,8 @@ body {
 h1 {font-size: 30px;}
 h2 {font-size: 25px;}
 h3 {font-size: 20px;}
+
+hr {color: var(--HR);}
 
 s{
     color: var(--Strike);
