@@ -10,11 +10,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 footer {
+    background: var(--Footer);
     text-align: center;
     font-size: 16px;
     color: var(--Text);
     padding: 10px;
-    margin: 10px;
+    margin: 0px;
+    grid-column: 1;
 }
 
 footer a {
