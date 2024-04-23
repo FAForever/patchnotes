@@ -29,24 +29,38 @@
 /* Declaring Default Colors */
 
 :root{
+    /* Color Scheme */
     color-scheme: light dark;
 
-    /* Variables*/
-        --Background: light-dark(#666,#181818);
-        --Grid-Background: light-dark(rgba(51,51,51,0.85),rgba(93, 91, 91, 0.85));
+    /* Background Colors */
+        --Background: light-dark(#666,#222931);
+        --White-Background: light-dark(#fff,#EEE);
+        --Accent-Background: light-dark(#333,#393E46);
+        --Accent-Color: light-dark(#fff,#FD7014);
+        --Grid-Background: light-dark(rgba(51,51,51,0.85),rgba(51, 51, 51, 0.85));
         --IconGrid-Background: light-dark(#4d5c50,#2b2b2b);
+    
+    /* Text Colors*/
         --Text: light-dark(#000,#d1d1d1);
+    
+    /* Card Colors*/
         --Card: light-dark(#000,#2b2b2b);
+
+    /* Changes Colors*/
         --Buffs: light-dark(rgba(86,167,39,.7),rgba(86,167,39,.7));
         --Nerfs: light-dark(rgba(172,31,31,.7),rgba(172,31,31,.7));
-        --Stats: light-dark(rgba(0,0,0,.6),rgba(0,0,0,.6));
         --Removed: light-dark(rgba(190,92,0,.6),rgba(190,92,0,.6));
         --Added: light-dark(rgba(31,52,172,.7),rgba(31,52,172,.7));
+        --Stats: light-dark(rgba(0,0,0,.6),rgba(0,0,0,.6));
+    
+    /* Link Colors*/
         --Link: light-dark(#fff,#000);
         --Link-Card: light-dark(#000,#fff);
         --Link-Unvisited: light-dark(#87cefa,#87cefa);
         --Link-Visited: light-dark(#dc143c,#dc143c);
         --Link-Hover: light-dark(#c2a732,#c2a732);
+    
+    /* Other Colors*/
         --Strike: light-dark(#888,#fff);
         --Footer: light-dark(#666,#1c1c1c);
         --HR: light-dark(#444,#555);

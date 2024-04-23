@@ -33,7 +33,7 @@ ul { columns: 3;}
 }
 
 .GridBackground {
-    background: var(--Primary-Grid-BG);
+    background: var(--Grid-Background);
     border-radius: 15px;
     backdrop-filter: blur(10px);
 }
@@ -57,7 +57,7 @@ ul { columns: 3;}
 }
 .Title p {
     font-size: 16px;
-    color: var(--Primary-Text);
+    color: var(--Text);
 }
 
 .BalanceContainer {
