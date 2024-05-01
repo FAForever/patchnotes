@@ -34,7 +34,7 @@ ul { columns: 4;}
 }
 
 .gridBG {
-    background: var(--Primary-Grid-BG);
+    background: var(--IndexGridBackground);
     border-radius: 15px;
     backdrop-filter: blur(10px);
 }
@@ -58,7 +58,7 @@ ul { columns: 4;}
 }
 .title p {
     font-size: 16px;
-    color: var(--Primary-Text);
+    color: var(--Text);
 }
 
 .game {
@@ -78,7 +78,7 @@ ul { columns: 4;}
 }
 
 .header {
-    background: var(--Primary-BG);
+    background: var(--Background);
     padding: 20px;
     text-align: center;
     font-size: 30px;

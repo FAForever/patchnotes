@@ -1,6 +1,11 @@
 {
     "balance": [
         {
+            "patch": "3809",
+            "link": "pages/balance/2024/3809.html",
+            "date": " - April 20 2024"
+        },
+        {
             "patch": "3801",
             "link": "pages/balance/2024/3801.html",
             "date": " - March 15 2024"
@@ -152,6 +157,21 @@
         }
     ],
     "game": [
+        {
+            "patch": "3809",
+            "link": "pages/game/2024/3809.html",
+            "date": " - April 20 2024"
+        },
+        {
+            "patch": "3808",
+            "link": "pages/game/2024/3808.html",
+            "date": " - April 7 2024"
+        },
+        {
+            "patch": "3807",
+            "link": "pages/game/2024/3807.html",
+            "date": " - April 3 2024"
+        },
         {
             "patch": "3806",
             "link": "pages/game/2024/3806.html",

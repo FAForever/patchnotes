@@ -3,67 +3,41 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Ubuntu&display=swap');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css');
 
-
-/*
-        --Primary-BG: #181818;
-        --Primary-Grid-BG: rgba(51, 51, 51, 0.85);
-        --Primary-IconGrid-BG: #2b2b2b;
-        --Primary-Text: #d1d1d1;
-        --Primary-Text-light: #ddd;
-        --Secondary-Text: #c1c1c1;
-        --Primary-Card: #2b2b2b;
-        --buff: rgba(86, 167, 39, .7);
-        --nerf: rgba(172, 31, 31, .7);
-        --stats: rgba(0, 0, 0, .6);
-        --removed: rgba(190, 92, 0, .6);
-        --added: rgba(31, 52, 172, .7);
-        --Link: #fff;
-        --Link-Card: #000;
-        --Link-Unvisited: #b38b03;
-        --Link-Visited: #c16013;
-        --Link-Hover: #d9c415;
-        --Strike: #a5a5a5;
-        --Footer: #1c1c1c;
-*/
-
 /* Declaring Default Colors */
 
 :root{
-    /* Color Scheme */
-    color-scheme: light dark;
 
     /* Background Colors */
-        --Background: light-dark(#666,#222931);
-        --White-Background: light-dark(#fff,#EEE);
-        --Accent-Background: light-dark(#333,#393E46);
-        --Accent-Color: light-dark(#fff,#FD7014);
-        --Grid-Background: light-dark(rgba(51,51,51,0.85),rgba(51, 51, 51, 0.85));
-        --IconGrid-Background: light-dark(#4d5c50,#2b2b2b);
-    
-    /* Text Colors*/
-        --Text: light-dark(#000,#d1d1d1);
-    
-    /* Card Colors*/
-        --Card: light-dark(#000,#2b2b2b);
+    --Background: #222831;
+    --IndexGridBackground: rgba(57,62,70,0.85);
+    --IconGridBackground: #393e46;
 
-    /* Changes Colors*/
-        --Buffs: light-dark(rgba(86,167,39,.7),rgba(86,167,39,.7));
-        --Nerfs: light-dark(rgba(172,31,31,.7),rgba(172,31,31,.7));
-        --Removed: light-dark(rgba(190,92,0,.6),rgba(190,92,0,.6));
-        --Added: light-dark(rgba(31,52,172,.7),rgba(31,52,172,.7));
-        --Stats: light-dark(rgba(0,0,0,.6),rgba(0,0,0,.6));
-    
-    /* Link Colors*/
-        --Link: light-dark(#fff,#000);
-        --Link-Card: light-dark(#000,#fff);
-        --Link-Unvisited: light-dark(#87cefa,#87cefa);
-        --Link-Visited: light-dark(#dc143c,#dc143c);
-        --Link-Hover: light-dark(#c2a732,#c2a732);
-    
-    /* Other Colors*/
-        --Strike: light-dark(#888,#fff);
-        --Footer: light-dark(#666,#1c1c1c);
-        --HR: light-dark(#444,#555);
+    /* Text Color */
+    --Text: #EEE;
+    --Top: #000;
+
+    /* Card Color */
+    --Card: #393e46;
+
+    /* Tags */
+    --buff: rgba(86,167,39,.7);
+    --nerf: rgba(172,31,31,.7);
+    --stats: rgba(0,0,0,.6);
+    --removed: rgba(190,92,0,.6);
+    --added: rgba(31,52,172,.7);
+
+    /* Link Colors */
+    --Link: #fff;
+    --Link-Card: #000;
+    --Link-Unvisited: #87cefa;
+    --Link-Visited: #dc143c;
+    --Link-Hover: #c2a732;
+
+    /* Other */
+    --Strike: #999; 
+    --Footer: #666;
+    --DM-HR : #444;
+    --LM-HR : #555;
 }
 
 /* Base Elemets */
@@ -79,15 +53,26 @@ body {
     padding: 0;
 }
 
+h1, h2, h3, h4 {
+    color: var(--Text);
+}
+
+ul, li {
+    color: var(--Text);
+}
+
+p {
+    color: var(--Text);
+}
+
 h1 {font-size: 30px;}
 h2 {font-size: 25px;}
 h3 {font-size: 20px;}
 
+
 hr {color: var(--HR);}
 
-s{
-    color: var(--Strike);
-}
+s {color: var(--Strike);}
 
 img {
     vertical-align: middle;
@@ -112,4 +97,32 @@ a:active {
 video {
     width: 900px;
     height: 100%;
+}
+
+
+
+/* Faction Images */
+
+.UEF {
+    filter: invert(44%) sepia(87%) saturate(705%) hue-rotate(171deg) brightness(98%) contrast(94%);  
+    width: 35px;
+    height: 35px;
+}
+
+.AEON {
+    filter: invert(61%) sepia(12%) saturate(2280%) hue-rotate(73deg) brightness(95%) contrast(82%);
+    width: 35px;
+    height: 35px;
+}
+
+.CYBRAN {
+    filter: invert(20%) sepia(47%) saturate(2292%) hue-rotate(335deg) brightness(156%) contrast(107%);  
+    width: 35px;
+    height: 35px;
+}
+
+.SERAPHIM {
+    filter: invert(74%) sepia(39%) saturate(1931%) hue-rotate(353deg) brightness(105%) contrast(104%);  
+    width: 35px;
+    height: 35px;
 }

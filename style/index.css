@@ -33,7 +33,7 @@ ul { columns: 3;}
 }
 
 .GridBackground {
-    background: var(--Grid-Background);
+    background: var(--IndexGridBackground);
     border-radius: 15px;
     backdrop-filter: blur(10px);
 }

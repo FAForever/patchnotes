@@ -25,7 +25,7 @@
 }
 
 .Intro p {
-    color: var(--Primary-Text-light);
+    color: var(--Text);
 }
 
 .Sidebar {
@@ -34,17 +34,17 @@
 }
 
 .Sidebar h2 a {
-    color: var(--Primary-Text);
+    color: var(--Text);
     text-decoration: none;
 }
 
 .IconGrid {
     position: sticky;
     top: 20px;
-    background: var(--Primary-Grid-BG);
+    background: var(--Background);
     padding: 5px 20px 20px 20px;
     margin-left: 5px;
-    color: var(--Primary-Text);
+    color: var(--Text);
     text-align: justify;
     border-radius: 15px;
 }
@@ -71,7 +71,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .BackToTop a {
     text-decoration: none;
-    color: var(--Seconday-Text);
+    color: var(--Top);
 }
 
 .TopText {
@@ -81,7 +81,7 @@ h1, h2, h3, h4, h5, h6 {
 footer {
     text-align: center;
     font-size: 16px;
-    color: var(--Primary-Text);
+    color: var(--Text);
     padding: 10px;
     margin: 10px;
 }
