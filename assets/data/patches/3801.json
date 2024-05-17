@@ -1,0 +1,999 @@
+{
+    "ID": 3801,
+    "Name": "Patch 3801",
+    "Date": "2024-03-15",
+    "Description": "This balance update comprises numerous minor adjustments to certain units, providing them with backup capabilities at a distance. Additionally, there are a few significant changes, such as the introduction of the new Teleport mechanic, alongside some slight nerfs.",
+    "Author": "Balance Team",
+    "Data": {
+        "Land": [
+            {
+                "Heading" : "Tech 1 Scouts",
+                "Units" : [
+                    {
+                        "UnitID" : "uel0101",
+                        "Name" : "Snoop",
+                        "Img" : "uel0101_icon.dds",
+                        "Changes" : [
+                            {
+                                "Field" : "BackUpDistance",
+                                "Change" : [2,6]
+                            }
+                        ]
+                    },
+                    {
+                        "UnitID" : "uel0106",
+                        "Name" : "Sprit",
+                        "Img" : "uel0106_icon.dds",
+                        "Changes" : [
+                            {
+                                "Field" : "BackUpDistance",
+                                "Change" : [2,6]
+                            },
+                            {
+                                "Field" : "MaxSpeedReverse",
+                                "Change" : [3,4.6]
+                            }
+                        ]
+                    },
+                    {
+                        "UnitID" : "uel0103",
+                        "Name" : "Mole",
+                        "Img" : "uel0103_icon.dds",
+                        "Changes" : [
+                            {
+                                "Field" : "BackUpDistance",
+                                "Change" : [0,6]
+                            },
+                            {
+                                "Field" : "MaxSpeedReverse",
+                                "Change" : [0,4.8]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "Heading" : "Tech 1 Anti-Air",
+                "Units" : [
+                    {
+                        "UnitID" : "uel0101",
+                        "Name" : "Archer",
+                        "Img" : "uel0101_icon.dds",
+                        "Changes" : [
+                            {
+                                "Field" : "BackUpDistance",
+                                "Change" : [0,6]
+                            },
+                            {
+                                "Field" : "RotateOnSpot",
+                                "Change" : [true,false]
+                            }
+                        ]
+                    },
+                    {
+                        "UnitID" : "uel0106",
+                        "Name" : "Sky Slammer",
+                        "Img" : "uel0106_icon.dds",
+                        "Changes" : [
+                            {
+                                "Field" : "BackUpDistance",
+                                "Change" : [0,6]
+                            },
+                            {
+                                "Field" : "MaxSpeedReverse",
+                                "Change" : [0,2.9]
+                            },
+                            {
+                                "Field" : "RotateOnSpot",
+                                "Change" : [true,false]
+                            }
+                        ]
+                    },
+                    {
+                        "UnitID" : "uel0103",
+                        "Name" : "Thistle",
+                        "Img" : "uel0103_icon.dds",
+                        "Changes" : [
+                            {
+                                "Field" : "BackUpDistance",
+                                "Change" : [0,6]
+                            },
+                            {
+                                "Field" : "RotateOnStop",
+                                "Change" : [true,false]
+                            }
+                        ]
+                    },
+                    {
+                        "UnitID" : "uel0103",
+                        "Name" : "Ia-istle",
+                        "Img" : "uel0103_icon.dds",
+                        "Changes" : [
+                            {
+                                "Field" : "BackUpDistance",
+                                "Change" : [0,6]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "Heading" : "Tech 1 Mobile Artilleries",
+                "Units" : [
+                    {
+                        "UnitID" : "uel0101",
+                        "Name" : "Lobo",
+                        "Img" : "uel0101_icon.dds",
+                        "Changes" : [
+                            {
+                                "Field" : "BackUpDistance",
+                                "Change" : [2,6]
+                            }
+                        ]
+                    },
+                    {
+                        "UnitID" : "uel0106",
+                        "Name" : "Fervor",
+                        "Img" : "uel0106_icon.dds",
+                        "Changes" : [
+                            {
+                                "Field" : "BackUpDistance",
+                                "Change" : [0,6]
+                            },
+                            {
+                                "Field" : "MaxSpeedReverse",
+                                "Change" : [0,2.7]
+                            },
+                            {
+                                "Field" : "RotateOnSpot",
+                                "Change" : [true,false]
+                            }
+                        ]
+                    },
+                    {
+                        "UnitID" : "uel0103",
+                        "Name" : "Medusa",
+                        "Img" : "uel0103_icon.dds",
+                        "Changes" : [
+                            {
+                                "Field" : "BackUpDistance",
+                                "Change" : [0,6]
+                            },
+                            {
+                                "Field" : "MaxSpeedReverse",
+                                "Change" : [0,2.9]
+                            },
+                            {
+                                "Field" : "RotateOnStop",
+                                "Change" : [true,false]
+                            }
+                        ]
+                    },
+                    {
+                        "UnitID" : "uel0103",
+                        "Name" : "Zthuee",
+                        "Img" : "uel0103_icon.dds",
+                        "Changes" : [
+                            {
+                                "Field" : "BackUpDistance",
+                                "Change" : [0,6]
+                            },
+                            {
+                                "Field" : "MaxSpeedReverse",
+                                "Change" : [0,2.7]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "Heading" : "Tech 2 Mobile Shield",
+                "Units" : [
+                    {
+                        "UnitID" : "uel0101",
+                        "Name" : "Parashield",
+                        "Img" : "uel0101_icon.dds",
+                        "Changes" : [
+                            {
+                                "Field" : "BackUpDistance",
+                                "Change" : [0,8]
+                            },
+                            {
+                                "Field" : "MaxSpeedReverse",
+                                "Change" : [0,3.5]
+                            },
+                            {
+                                "Field" : "RotateOnSpot",
+                                "Change" : [true,false]
+                            }
+                        ]
+                    },
+                    {
+                        "UnitID" : "uel0101",
+                        "Name" : "Parashield",
+                        "Img" : "uel0101_icon.dds",
+                        "Changes" : [
+                            {
+                                "Field" : "BackUpDistance",
+                                "Change" : [0,8]
+                            },
+                            {
+                                "Field" : "MaxSpeedReverse",
+                                "Change" : [0,4]
+                            },
+                            {
+                                "Field" : "RotateOnSpot",
+                                "Change" : [true,false]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "Heading" : "Tech 2 Mobile Flack",
+                "Units" : [
+                    {
+                        "UnitID" : "uel0101",
+                        "Name" : "Sky Boxer",
+                        "Img" : "uel0101_icon.dds",
+                        "Changes" : [
+                            {
+                                "Field" : "BackUpDistance",
+                                "Change" : [0,8]
+                            },
+                            {
+                                "Field" : "MaxSpeedReverse",
+                                "Change" : [0,3.1]
+                            },
+                            {
+                                "Field" : "RotateOnSpot",
+                                "Change" : [true,false]
+                            }
+                        ]
+                    },
+                    {
+                        "UnitID" : "uel0106",
+                        "Name" : "Ascendant",
+                        "Img" : "uel0106_icon.dds",
+                        "Changes" : [
+                            {
+                                "Field" : "BackUpDistance",
+                                "Change" : [0,8]
+                            },
+                            {
+                                "Field" : "MaxSpeedReverse",
+                                "Change" : [0,2.7]
+                            },
+                            {
+                                "Field" : "RotateOnSpot",
+                                "Change" : [true,false]
+                            }
+                        ]
+                    },
+                    {
+                        "UnitID" : "uel0103",
+                        "Name" : "Banger",
+                        "Img" : "uel0103_icon.dds",
+                        "Changes" : [
+                            {
+                                "Field" : "BackUpDistance",
+                                "Change" : [0,8]
+                            },
+                            {
+                                "Field" : "MaxSpeedReverse",
+                                "Change" : [0,2.9]
+                            },
+                            {
+                                "Field" : "RotateOnStop",
+                                "Change" : [true,false]
+                            }
+                        ]
+                    },
+                    {
+                        "UnitID" : "uel0103",
+                        "Name" : "Iashavoh",
+                        "Img" : "uel0103_icon.dds",
+                        "Changes" : [
+                            {
+                                "Field" : "BackUpDistance",
+                                "Change" : [0,8]
+                            },
+                            {
+                                "Field" : "MaxSpeedReverse",
+                                "Change" : [0,2.6]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "Heading" : "Tech 2 Amphibious Tanks",
+                "Units" : [
+                    {
+                        "UnitID" : "uel0101",
+                        "Name" : "Riptide",
+                        "Img" : "uel0101_icon.dds",
+                        "Changes" : [
+                            {
+                                "Field" : "BackUpDistance",
+                                "Change" : [0,8]
+                            },
+                            {
+                                "Field" : "MaxSpeedReverse",
+                                "Change" : [0,3.7]
+                            },
+                            {
+                                "Field" : "RotateOnSpot",
+                                "Change" : [true,false]
+                            }
+                        ]
+                    },
+                    {
+                        "UnitID" : "uel0106",
+                        "Name" : "Blaze",
+                        "Img" : "uel0106_icon.dds",
+                        "Changes" : [
+                            {
+                                "Field" : "Health",
+                                "Change" : [1100,1000]
+                            },
+                            {
+                                "Field" : "BackUpDistance",
+                                "Change" : [0,8]
+                            },
+                            {
+                                "Field" : "MaxSpeedReverse",
+                                "Change" : [0,4.3]
+                            }
+                        ]
+                    },
+                    {
+                        "UnitID" : "uel0103",
+                        "Name" : "Banger",
+                        "Img" : "uel0103_icon.dds",
+                        "Changes" : [
+                            {
+                                "Field" : "BackUpDistance",
+                                "Change" : [0,8]
+                            },
+                            {
+                                "Field" : "MaxSpeedReverse",
+                                "Change" : [0,3.7]
+                            },
+                            {
+                                "Field" : "RotateOnStop",
+                                "Change" : [true,false]
+                            }
+                        ]
+                    },
+                    {
+                        "UnitID" : "uel0103",
+                        "Name" : "Iashavoh",
+                        "Img" : "uel0103_icon.dds",
+                        "Changes" : [
+                            {
+                                "Field" : "BackUpDistance",
+                                "Change" : [0,8]
+                            },
+                            {
+                                "Field" : "MaxSpeedReverse",
+                                "Change" : [0,4]
+                            },
+                            {
+                                "Field" : "RotateOnSpot",
+                                "Change" : [true,false]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "Heading" : "Tech 2 Tanks",
+                "Units" : [
+                    {
+                        "UnitID" : "uel0101",
+                        "Name" : "Pillar",
+                        "Img" : "uel0101_icon.dds",
+                        "Changes" : [
+                            {
+                                "Field" : "BackUpDistance",
+                                "Change" : [0,8]
+                            },
+                            {
+                                "Field" : "MaxSpeedReverse",
+                                "Change" : [0,3.1]
+                            },
+                            {
+                                "Field" : "RotateOnSpot",
+                                "Change" : [true,false]
+                            }
+                        ]
+                    },
+                    {
+                        "UnitID" : "uel0106",
+                        "Name" : "Obsidian",
+                        "Img" : "uel0106_icon.dds",
+                        "Changes" : [
+                            {
+                                "Field" : "BackUpDistance",
+                                "Change" : [0,8]
+                            },
+                            {
+                                "Field" : "MaxSpeedReverse",
+                                "Change" : [0,2.7]
+                            },
+                            {
+                                "Field" : "RotateOnSpot",
+                                "Change" : [true,false]
+                            }
+                        ]
+                    },
+                    {
+                        "UnitID" : "uel0103",
+                        "Name" : "Rhino",
+                        "Img" : "uel0103_icon.dds",
+                        "Changes" : [
+                            {
+                                "Field" : "BackUpDistance",
+                                "Change" : [0,8]
+                            },
+                            {
+                                "Field" : "MaxSpeedReverse",
+                                "Change" : [0,2.9]
+                            },
+                            {
+                                "Field" : "RotateOnStop",
+                                "Change" : [true,false]
+                            }
+                        ]
+                    },
+                    {
+                        "UnitID" : "uel0103",
+                        "Name" : "Ilshavoh",
+                        "Img" : "uel0103_icon.dds",
+                        "Changes" : [
+                            {
+                                "Field" : "BackUpDistance",
+                                "Change" : [0,8]
+                            },
+                            {
+                                "Field" : "MaxSpeedReverse",
+                                "Change" : [0,2.6]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "Heading" : "Mobile Missile Launchers",
+                "Units" : [
+                    {
+                        "UnitID" : "uel0101",
+                        "Name" : "Flapjack",
+                        "Img" : "uel0101_icon.dds",
+                        "Changes" : [
+                            {
+                                "Field" : "BackUpDistance",
+                                "Change" : [4,8]
+                            },
+                            {
+                                "Field" : "RotateOnSpot",
+                                "Change" : [true,false]
+                            }
+                        ]
+                    },
+                    {
+                        "UnitID" : "uel0106",
+                        "Name" : "Spearhead",
+                        "Img" : "uel0106_icon.dds",
+                        "Changes" : [
+                            {
+                                "Field" : "BackUpDistance",
+                                "Change" : [4,10]
+                            },
+                            {
+                                "Field" : "MaxSpeedReverse",
+                                "Change" : [2.5,2.8]
+                            },
+                            {
+                                "Field" : "RotateOnSpot",
+                                "Change" : [true,false]
+                            }
+                        ]
+                    },
+                    {
+                        "UnitID" : "uel0103",
+                        "Name" : "Evensong",
+                        "Img" : "uel0103_icon.dds",
+                        "Changes" : [
+                            {
+                                "Field" : "BackUpDistance",
+                                "Change" : [4,8]
+                            },
+                            {
+                                "Field" : "RotateOnStop",
+                                "Change" : [true,false]
+                            }
+                        ]
+                    },
+                    {
+                        "UnitID" : "uel0103",
+                        "Name" : "Viper",
+                        "Img" : "uel0103_icon.dds",
+                        "Changes" : [
+                            {
+                                "Field" : "BackUpDistance",
+                                "Change" : [4,8]
+                            },
+                            {
+                                "Field" : "RotateOnStop",
+                                "Change" : [true,false]
+                            }
+                        ]
+                    },
+                    {
+                        "UnitID" : "uel0103",
+                        "Name" : "Ythisah",
+                        "Img" : "uel0103_icon.dds",
+                        "Changes" : [
+                            {
+                                "Field" : "BackUpDistance",
+                                "Change" : [0,8]
+                            },
+                            {
+                                "Field" : "RotateOnSpot",
+                                "Change" : [true,false]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "Heading" : "Tech 3 Mobile Anti-Air",
+                "Units" : [
+                    {
+                        "UnitID" : "uel0101",
+                        "Name" : "Cougar",
+                        "Img" : "uel0101_icon.dds",
+                        "Changes" : [
+                            {
+                                "Field" : "BackUpDistance",
+                                "Change" : [4,10]
+                            },
+                            {
+                                "Field" : "MaxSpeedReverse",
+                                "Change" : [1.4,3.3]
+                            },
+                            {
+                                "Field" : "RotateOnSpot",
+                                "Change" : [true,false]
+                            }
+                        ]
+                    },
+                    {
+                        "UnitID" : "uel0106",
+                        "Name" : "Uyanah",
+                        "Img" : "uel0106_icon.dds",
+                        "Changes" : [
+                            {
+                                "Field" : "BackUpDistance",
+                                "Change" : [4,10]
+                            },
+                            {
+                                "Field" : "MaxSpeedReverse",
+                                "Change" : [1.4,3.4]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "Heading" : "Tech 3 Mobile Artilleries",
+                "Units" : [
+                    {
+                        "UnitID" : "uel0101",
+                        "Name" : "Demolisher",
+                        "Img" : "uel0101_icon.dds",
+                        "Changes" : [
+                            {
+                                "Field" : "BackUpDistance",
+                                "Change" : [0,10]
+                            },
+                            {
+                                "Field" : "MaxSpeedReverse",
+                                "Change" : [0,2.2]
+                            },
+                            {
+                                "Field" : "RotateOnSpot",
+                                "Change" : [true,false]
+                            }
+                        ]
+                    },
+                    {
+                        "UnitID" : "uel0106",
+                        "Name" : "Serenity",
+                        "Img" : "uel0106_icon.dds",
+                        "Changes" : [
+                            {
+                                "Field" : "BackUpDistance",
+                                "Change" : [0,10]
+                            },
+                            {
+                                "Field" : "MaxSpeedReverse",
+                                "Change" : [0,2.2]
+                            },
+                            {
+                                "Field" : "RotateOnSpot",
+                                "Change" : [true,false]
+                            }
+                        ]
+                    },
+                    {
+                        "UnitID" : "uel0103",
+                        "Name" : "Trebuchet",
+                        "Img" : "uel0103_icon.dds",
+                        "Changes" : [
+                            {
+                                "Field" : "BackUpDistance",
+                                "Change" : [0,10]
+                            },
+                            {
+                                "Field" : "MaxSpeedReverse",
+                                "Change" : [0,2.2]
+                            },
+                            {
+                                "Field" : "RotateOnStop",
+                                "Change" : [true,false]
+                            }
+                        ]
+                    },
+                    {
+                        "UnitID" : "uel0103",
+                        "Name" : "Uyanah",
+                        "Img" : "uel0103_icon.dds",
+                        "Changes" : [
+                            {
+                                "Field" : "BackUpDistance",
+                                "Change" : [0,10]
+                            },
+                            {
+                                "Field" : "MaxSpeedReverse",
+                                "Change" : [0,2.2]
+                            },
+                            {
+                                "Field" : "RotateOnSpot",
+                                "Change" : [true,false]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "Heading" : "Tech 3 Tanks",
+                "Units" : [
+                    {
+                        "UnitID" : "uel0101",
+                        "Name" : "Cougar",
+                        "Img" : "uel0101_icon.dds",
+                        "Changes" : [
+                            {
+                                "Field" : "BackUpDistance",
+                                "Change" : [0,10]
+                            }
+                        ]
+                    },
+                    {
+                        "UnitID" : "uel0106",
+                        "Name" : "Uyanah",
+                        "Img" : "uel0106_icon.dds",
+                        "Changes" : [
+                            {
+                                "Field" : "BackUpDistance",
+                                "Change" : [15,10]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "Heading" : "Experimentals",
+                "Units" : [
+                    {
+                        "UnitID" : "uel0101",
+                        "Name" : "Megalith",
+                        "Img" : "uel0101_icon.dds",
+                        "Changes" : [
+                            {
+                                "Field" : "BackUpDistance",
+                                "Change" : [12,15]
+                            },
+                            {
+                                "Field" : "MaxSpeedReverse",
+                                "Change" : [0,2.95]
+                            },
+                            {
+                                "Field" : "RotateOnSpot",
+                                "Change" : [true,false]
+                            }
+                        ]
+                    },
+                    {
+                        "UnitID" : "uel0106",
+                        "Name" : "Scathis",
+                        "Img" : "uel0106_icon.dds",
+                        "Changes" : [
+                            {
+                                "Field" : "BackUpDistance",
+                                "Change" : [0,15]
+                            },
+                            {
+                                "Field" : "MaxSpeedReverse",
+                                "Change" : [0,1.5]
+                            },
+                            {
+                                "Field" : "RotateOnSpot",
+                                "Change" : [true,false]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "Air": [
+            {
+                "Heading" : "Torpedo Bombers",
+                "Units" : [
+                    {
+                        "UnitID" : "uel0101",
+                        "Name" : "Stork",
+                        "Img" : "uel0101_icon.dds",
+                        "Changes" : [
+                            {
+                                "Field" : "Damage",
+                                "Change" : [150,187.56]
+                            },
+                            {
+                                "Field" : "SalvoSize",
+                                "Change" : [5,4]
+                            }
+                        ]
+                    },
+                    {
+                        "UnitID" : "uel0106",
+                        "Name" : "Skimmer",
+                        "Img" : "uel0106_icon.dds",
+                        "Changes" : [
+                            {
+                                "Field" : "Damage",
+                                "Change" : [150,187.5]
+                            },
+                            {
+                                "Field" : "SalvoSize",
+                                "Change" : [5,4]
+                            }
+                        ]
+                    },
+                    {
+                        "UnitID" : "uel0103",
+                        "Name" : "Solace",
+                        "Img" : "uel0103_icon.dds",
+                        "Changes" : [
+                            {
+                                "Field" : "BreakOffDistance",
+                                "Change" : [42,44]
+                            },
+                            {
+                                "Field" : "Damage",
+                                "Change" : [500,400]
+                            },
+                            {
+                                "Field" : "MaxRadius",
+                                "Change" : [32,26]
+                            },
+                            {
+                                "Field" : "SalvoDelay",
+                                "Change" : [0.4,0.2]
+                            },
+                            {
+                                "Field" : "SalvoSize",
+                                "Change" : [4,5]
+                            },
+                            {
+                                "Field" : "RateOfFire",
+                                "Change" : [0.08,0.1]
+                            }
+                        ]
+                    },
+                    {
+                        "UnitID" : "uel0106",
+                        "Name" : "Cormorant",
+                        "Img" : "uel0106_icon.dds",
+                        "Changes" : [
+                            {
+                                "Field" : "Damage",
+                                "Change" : [30,37.5]
+                            },
+                            {
+                                "Field" : "SalvoSize",
+                                "Change" : [5,4]
+                            }
+                        ]
+                    },
+                    {
+                        "UnitID" : "uel0106",
+                        "Name" : "Uosioz",
+                        "Img" : "uel0106_icon.dds",
+                        "Changes" : [
+                            {
+                                "Field" : "Damage",
+                                "Change" : [150,375]
+                            },
+                            {
+                                "Field" : "SalvoSize",
+                                "Change" : [5,2]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "Heading" : "Cybran ASF",
+                "Units" : [
+                    {
+                        "UnitID" : "uel0101",
+                        "Name" : "Gemini",
+                        "Img" : "uel0101_icon.dds",
+                        "Changes" : [
+                            {
+                                "Field" : "StealthEnergyDrain",
+                                "Change" : [25,30]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "Naval": [],
+        "ACU-SCU": [
+            {
+                "Heading" : "Aeon ACU",
+                "Units" : [
+                    {
+                        "UnitID" : "uel0101",
+                        "Name" : "Chrono Dampener",
+                        "Img" : "uel0101_icon.dds",
+                        "Changes" : [
+                            {
+                                "Field" : "FireUnderWater",
+                                "Change" : [false,true]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "Structures": [
+            {
+                "Heading" : "Sonar",
+                "Units" : [
+                    {
+                        "UnitID" : "uel0101",
+                        "Name" : "Seraphim Tech 2",
+                        "Img" : "uel0101_icon.dds",
+                        "Changes" : [
+                            {
+                                "Field" : "BackUpDistance",
+                                "Change" : [0,8]
+                            },
+                            {
+                                "Field" : "MaxAcceleration",
+                                "Change" : [2.5,2.5]
+                            },
+                            {
+                                "Field" : "MaxBrake",
+                                "Change" : [2.5,2.8]
+                            },
+                            {
+                                "Field" : "MaxSpeed",
+                                "Change" : [2.5,2.8]
+                            },
+                            {
+                                "Field" : "MaxSpeedReverse",
+                                "Change" : [0,2.8]
+                            },
+                            {
+                                "Field" : "TurnRate",
+                                "Change" : [20,60]
+                            }
+                        ]
+                    },
+                    {
+                        "UnitID" : "uel0106",
+                        "Name" : "Aeon Tech 3",
+                        "Img" : "uel0106_icon.dds",
+                        "Changes" : [
+                            {
+                                "Field" : "BackUpDistance",
+                                "Change" : [0,10]
+                            },
+                            {
+                                "Field" : "MaxSpeedReverse",
+                                "Change" : [0,4.5]
+                            }
+                        ]
+                    },
+                    {
+                        "UnitID" : "uel0103",
+                        "Name" : "Cybran Tech 3",
+                        "Img" : "uel0103_icon.dds",
+                        "Changes" : [
+                            {
+                                "Field" : "BackUpDistance",
+                                "Change" : [0,10]
+                            },
+                            {
+                                "Field" : "MaxSpeedReverse",
+                                "Change" : [0,4.5]
+                            }
+                        ]
+                    },
+                    {
+                        "UnitID" : "uel0106",
+                        "Name" : "UEF Tech 3",
+                        "Img" : "uel0106_icon.dds",
+                        "Changes" : [
+                            {
+                                "Field" : "BackUpDistance",
+                                "Change" : [0,10]
+                            },
+                            {
+                                "Field" : "MaxSpeedReverse",
+                                "Change" : [0,4.5]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "Heading" : "Experimentals",
+                "Units" : [
+                    {
+                        "UnitID" : "uel0101",
+                        "Name" : "Salvation",
+                        "Img" : "uel0101_icon.dds",
+                        "Changes" : [
+                            {
+                                "Field" : "Health",
+                                "Change" : [10000,9000]
+                            },
+                            {
+                                "Field" : "EnergyDrainPerSecond",
+                                "Change" : [10000,10714]
+                            },
+                            {
+                                "Field" : "MinRadius",
+                                "Change" : [175,150]
+                            },
+                            {
+                                "Field" : "MuzzleChargeDelay",
+                                "Change" : [0.15,0.2]
+                            },
+                            {
+                                "Field" : "MuzzleVelocity",
+                                "Change" : [150,98]
+                            },
+                            {
+                                "Field" : "MuzzleVelocityReduceDistance",
+                                "Change" : [4000,1400]
+                            },
+                            {
+                                "Field" : "RackRecoilDistance",
+                                "Change" : [-0.5,-0.625]
+                            }                          
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}
