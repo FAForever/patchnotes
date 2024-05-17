@@ -1,0 +1,349 @@
+{
+    "ID": 3809,
+    "Name": "Patch 3809",
+    "Date": "2024-03-15",
+    "Description": "Small Balance Change to Cybran TML.",
+    "Author": "Balance Team",
+    "Data": {
+        "Land": [],
+        "Air": [
+            {
+                "Heading" : "Tech 2 Fighter Bombers",
+                "Units" : [
+                    {
+                        "UnitID" : "uea0203",
+                        "Name" : "Janus",
+                        "Img" : "uea0203_icon.dds",
+                        "Changes" : [
+                            {
+                                "Field" : "InitialDamage",
+                                "Change" : [15,20]
+                            },
+                            {
+                                "Field" : "TotalInitialDamage",
+                                "Change" : [300,400]
+                            },
+                            {
+                                "Field" : "DamageOverTime",
+                                "Change" : [1500,1600]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "Naval": [],
+        "Structures": [
+            {
+                "Heading" : "Mass Storage",
+                "Units" : [
+                    {
+                        "UnitID" : "uel0101",
+                        "Name" : "UEF",
+                        "Img" : "uel0101_icon.dds",
+                        "Changes" : [
+                            {
+                                "Field" : "Health",
+                                "Change" : [760,1200]
+                            }
+                        ]
+                    },
+                    {
+                        "UnitID" : "uel0101",
+                        "Name" : "Seraphim",
+                        "Img" : "uel0101_icon.dds",
+                        "Changes" : [
+                            {
+                                "Field" : "Health",
+                                "Change" : [600,1100]
+                            }
+                        ]
+                    },
+                    {
+                        "UnitID" : "uel0101",
+                        "Name" : "Aeon",
+                        "Img" : "uel0101_icon.dds",
+                        "Changes" : [
+                            {
+                                "Field" : "Health",
+                                "Change" : [600,1000]
+                            }
+                        ]
+                    },
+                    {
+                        "UnitID" : "uel0101",
+                        "Name" : "Cybran",
+                        "Img" : "uel0101_icon.dds",
+                        "Changes" : [
+                            {
+                                "Field" : "Health",
+                                "Change" : [500,800]
+                            },
+                            {
+                                "Field" : "HealthRegen",
+                                "Change" : [1,4]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "Heading" : "Seraphim Structures",
+                "Units" : [
+                    {
+                        "UnitID" : "uel0101",
+                        "Name" : "Tech 1 Buildings",
+                        "Img" : "uel0101_icon.dds",
+                        "Changes" : [
+                            {
+                                "Field" : "Land/Air/Naval Factory Health",
+                                "Change" : [3100,3500]
+                            },
+                            {
+                                "Field" : "Power Generator Health",
+                                "Change" : [600,650]
+                            },
+                            {
+                                "Field" : "Hydrocarbon PowerPlant Health",
+                                "Change" : [1600,1700]
+                            },
+                            {
+                                "Field" : "Mass Extractor Health",
+                                "Change" : [600,650]
+                            },
+                            {
+                                "Field" : "Wall Segment Health",
+                                "Change" : [2000,2500]
+                            }
+                        ]
+                    },
+                    {
+                        "UnitID" : "uel0101",
+                        "Name" : "Tech 2 Buildings",
+                        "Img" : "uel0101_icon.dds",
+                        "Changes" : [
+                            {
+                                "Field" : "Land/Air Factory HQ Health",
+                                "Change" : [6200,7000]
+                            },
+                            {
+                                "Field" : "Naval Factory HQ Health",
+                                "Change" : [10000,11000]
+                            },
+                            {
+                                "Field" : "Air/Land Support Factory Health",
+                                "Change" : [3100,3500]
+                            },
+                            {
+                                "Field" : "Naval Support Factory Health",
+                                "Change" : [5000,5500]
+                            },
+                            {
+                                "Field" : "Power Generator / Mass Extractor Health",
+                                "Change" : [1900,2000]
+                            }
+                        ]
+                    },
+                    {
+                        "UnitID" : "uel0101",
+                        "Name" : "Tech 3 Buildings",
+                        "Img" : "uel0101_icon.dds",
+                        "Changes" : [
+                            {
+                                "Field" : "Land/Air Factory HQ Health",
+                                "Change" : [12400,14000]
+                            },
+                            {
+                                "Field" : "Naval Factory HQ Health",
+                                "Change" : [20000,22000]
+                            },
+                            {
+                                "Field" : "Air/Land Support Factory Health",
+                                "Change" : [6200,7000]
+                            },
+                            {
+                                "Field" : "Naval Support Factory Health",
+                                "Change" : [10000,15000]
+                            },
+                            {
+                                "Field" : "Power Generator / Mass Extractor Health",
+                                "Change" : [6200,7000]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "Heading" : "Cybran Structures Regeneration",
+                "Units" : [
+                    {
+                        "UnitID" : "uel0101",
+                        "Name" : "Tech 1 Buildings",
+                        "Img" : "uel0101_icon.dds",
+                        "Changes" : [
+                            {
+                                "Field" : "Land/Air/Naval Factory",
+                                "Change" : [3,6]
+                            },
+                            {
+                                "Field" : "Power Generator/ Mass Extractor",
+                                "Change" : [1,2]
+                            },
+                            {
+                                "Field" : "Hydrocarbon PowerPlant",
+                                "Change" : [1,6]
+                            },
+                            {
+                                "Field" : "Wall Segment",
+                                "Change" : [3,6]
+                            }
+                        ]
+                    },
+                    {
+                        "UnitID" : "uel0101",
+                        "Name" : "Tech 2 Buildings",
+                        "Img" : "uel0101_icon.dds",
+                        "Changes" : [
+                            {
+                                "Field" : "Land/Air Factory HQ",
+                                "Change" : [10,20]
+                            },
+                            {
+                                "Field" : "Naval Factory HQ",
+                                "Change" : [15,30]
+                            },
+                            {
+                                "Field" : "Air/Land Support Factory",
+                                "Change" : [3,6]
+                            },
+                            {
+                                "Field" : "Naval Support Factory",
+                                "Change" : [6,12]
+                            },
+                            {
+                                "Field" : "Power Generator / Mass Extractor",
+                                "Change" : [3,6]
+                            }
+                        ]
+                    },
+                    {
+                        "UnitID" : "uel0101",
+                        "Name" : "Tech 3 Buildings",
+                        "Img" : "uel0101_icon.dds",
+                        "Changes" : [
+                            {
+                                "Field" : "Land Factory HQ",
+                                "Change" : [20,40]
+                            },
+                            {
+                                "Field" : "Air Factory HQ",
+                                "Change" : [20,40]
+                            },
+                            {
+                                "Field" : "Naval Factory HQ",
+                                "Change" : [30,60]
+                            },
+                            {
+                                "Field" : "Air/Land Support Factory",
+                                "Change" : [10,20]
+                            },
+                            {
+                                "Field" : "Naval Support Factory",
+                                "Change" : [15,30]
+                            },
+                            {
+                                "Field" : "Power Generator / Mass Extractor Health",
+                                "Change" : [10,20]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "Heading" : "Tech 2 Naval factory",
+                "Units" : [
+                    {
+                        "UnitID" : "uel0101",
+                        "Name" : "UEF",
+                        "Img" : "uel0101_icon.dds",
+                        "Changes" : [
+                            {
+                                "Field" : "Health",
+                                "Change" : [6000,6500]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "Heading" : "Tech 3 Naval factory",
+                "Units" : [
+                    {
+                        "UnitID" : "uel0101",
+                        "Name" : "UEF",
+                        "Img" : "uel0101_icon.dds",
+                        "Changes" : [
+                            {
+                                "Field" : "Health",
+                                "Change" : [13000,17000]
+                            }
+                        ]
+                    },
+                    {
+                        "UnitID" : "uel0101",
+                        "Name" : "Seraphim",
+                        "Img" : "uel0101_icon.dds",
+                        "Changes" : [
+                            {
+                                "Field" : "Health",
+                                "Change" : [10000,15000]
+                            }
+                        ]
+                    },
+                    {
+                        "UnitID" : "uel0101",
+                        "Name" : "Aeon",
+                        "Img" : "uel0101_icon.dds",
+                        "Changes" : [
+                            {
+                                "Field" : "Health",
+                                "Change" : [10000,13000]
+                            }
+                        ]
+                    },
+                    {
+                        "UnitID" : "uel0101",
+                        "Name" : "Cybran",
+                        "Img" : "uel0101_icon.dds",
+                        "Changes" : [
+                            {
+                                "Field" : "Health",
+                                "Change" : [8000,11000]
+                            },
+                            {
+                                "Field" : "HealthRegen",
+                                "Change" : [15,30]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "Heading" : "Intel Structure",
+                "Units" : [
+                    {
+                        "UnitID" : "uel0101",
+                        "Name" : "Tech 2 Radar",
+                        "Img" : "uel0101_icon.dds",
+                        "Changes" : [
+                            {
+                                "Field" : "MaintenanceCost",
+                                "Change" : [250,200]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

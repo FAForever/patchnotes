@@ -1,0 +1,48 @@
+{
+    "ID": 3809,
+    "Name": "Patch 3809",
+    "Date": "2024-03-15",
+    "Description": "Small Balance Change to Cybran TML.",
+    "Author": "Balance Team",
+    "Data": {
+        "Land": [
+            {
+                "Heading" : "Experimental",
+                "Units" : [
+                    {
+                        "UnitID" : "url0101",
+                        "Name" : "Galactic Colossus",
+                        "Img" : "url0101_icon.dds",
+                        "Changes" : [
+                            {
+                                "Field" : "Claw Damage",
+                                "Change" : [0,730]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "Air": [],
+        "Naval": [],
+        "ACU-SCU": [],
+        "Structures": [
+            {
+                "Heading" : "Air Staging Facility",
+                "Units" : [
+                    {
+                        "UnitID" : "url0101",
+                        "Name" : "All",
+                        "Img" : "url0101_icon.dds",
+                        "Changes" : [
+                            {
+                                "Field" : "BuildTime",
+                                "Change" : [450,350]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

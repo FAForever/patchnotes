@@ -1,0 +1,130 @@
+{
+    "ID": 3809,
+    "Name": "Patch 3809",
+    "Date": "2024-03-15",
+    "Description": "Small Balance Change to Cybran TML.",
+    "Author": "Balance Team",
+    "Data": {
+        "Land": [
+            {
+                "Heading" : "Mobile Stealth Field",
+                "Units" : [
+                    {
+                        "UnitID" : "url0101",
+                        "Name" : "Deceiver",
+                        "Img" : "url0101_icon.dds",
+                        "Changes" : [
+                            {
+                                "Field" : "Range",
+                                "Change" : [23,24]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "Heading" : "Tech 3 Tank",
+                "Units" : [
+                    {
+                        "UnitID" : "url0101",
+                        "Name" : "Othuum",
+                        "Img" : "url0101_icon.dds",
+                        "Changes" : [
+                            {
+                                "Field" : "MaxSpeedReverse",
+                                "Change" : [0,2.85]
+                            },
+                            {
+                                "Field" : "BackUpDistance",
+                                "Change" : [0,15]
+                            },
+                            {
+                                "Field" : "RotateOnSpot",
+                                "Change" : [true,false]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "Air": [],
+        "Naval": [
+            {
+                "Heading" : "Tech 3 Missile Ship",
+                "Units" : [
+                    {
+                        "UnitID" : "url0101",
+                        "Name" : "Torrent",
+                        "Img" : "url0101_icon.dds",
+                        "Changes" : [
+                            {
+                                "Field" : "Health",
+                                "Change" : [15000,7500]
+                            },
+                            {
+                                "Field" : "MassCost",
+                                "Change" : [8000,4000]
+                            },
+                            {
+                                "Field" : "EnergyCost",
+                                "Change" : [80000,40000]
+                            },
+                            {
+                                "Field" : "Damage",
+                                "Change" : [800,200]
+                            },
+                            {
+                                "Field" : "DamageRadius",
+                                "Change" : [2,3]
+                            },
+                            {
+                                "Field" : "SalvoSize",
+                                "Change" : [5,10]
+                            },
+                            {
+                                "Field" : "SalvoDelay",
+                                "Change" : [1,0.6]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "ACU-SCU": [
+            {
+                "Heading" : "UEF ACU",
+                "Units" : [
+                    {
+                        "UnitID" : "xsl0301",
+                        "Name" : "Teleport",
+                        "Img" : "xsl0301_icon.dds",
+                        "Changes" : [
+                            {
+                                "Field" : "Slot",
+                                "Change" : ["Back","Left"]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "Structures": [
+            {
+                "Heading" : "Tactical Missile Launcher",
+                "Units" : [
+                    {
+                        "UnitID" : "uel0101",
+                        "Name" : "Cybran",
+                        "Img" : "uel0101_icon.dds",
+                        "Changes" : [
+                            {
+                                "Field" : "RateOfFire",
+                                "Change" : [3,1.5]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

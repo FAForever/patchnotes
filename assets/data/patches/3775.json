@@ -1,0 +1,1065 @@
+{
+    "ID": 3809,
+    "Name": "Patch 3809",
+    "Date": "2024-03-15",
+    "Description": "Small Balance Change to Cybran TML.",
+    "Author": "Balance Team",
+    "Data": {
+        "Land": [
+            {
+                "Heading" : "Mobile Bomb",
+                "Units" : [
+                    {
+                        "UnitID" : "url0101",
+                        "Name" : "Fire Beetle",
+                        "Img" : "url0101_icon.dds",
+                        "Changes" : [
+                            {
+                                "Field" : "BuildTime",
+                                "Change" : [700,550]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "Heading" : "Tech 2 Mobile Missile Launcher",
+                "Units" : [
+                    {
+                        "UnitID" : "url0101",
+                        "Name" : "All",
+                        "Img" : "url0101_icon.dds",
+                        "Changes" : [
+                            {
+                                "Field" : "EnergyCost",
+                                "Change" : [1500,1350]
+                            },
+                            {
+                                "Field" : "MassCost",
+                                "Change" : [200,100]
+                            },
+                            {
+                                "Field" : "BuildTime",
+                                "Change" : [1000,800]
+                            },
+                            {
+                                "Field" : "MaxRange",
+                                "Change" : [60,65]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "Heading" : "Tech 3 Mobile Anti-Air",
+                "Units" : [
+                    {
+                        "UnitID" : "url0101",
+                        "Name" : "Aeon",
+                        "Img" : "url0101_icon.dds",
+                        "Changes" : [
+                            {
+                                "Field" : "EnergyCost",
+                                "Change" : [10000,7500]
+                            },
+                            {
+                                "Field" : "MassCost",
+                                "Change" : [800,600]
+                            },
+                            {
+                                "Field" : "BuildTime",
+                                "Change" : [4000,3000]
+                            },
+                            {
+                                "Field" : "Health",
+                                "Change" : [2000,1700]
+                            }
+                        ]
+                    },
+                    {
+                        "UnitID" : "url0101",
+                        "Name" : "UEF",
+                        "Img" : "url0101_icon.dds",
+                        "Changes" : [
+                            {
+                                "Field" : "EnergyCost",
+                                "Change" : [10000,7500]
+                            },
+                            {
+                                "Field" : "MassCost",
+                                "Change" : [800,600]
+                            },
+                            {
+                                "Field" : "BuildTime",
+                                "Change" : [4000,3000]
+                            },
+                            {
+                                "Field" : "Health",
+                                "Change" : [2200,1900]
+                            }
+                        ]
+                    },
+                    {
+                        "UnitID" : "url0101",
+                        "Name" : "Cybran",
+                        "Img" : "url0101_icon.dds",
+                        "Changes" : [
+                            {
+                                "Field" : "EnergyCost",
+                                "Change" : [10000,7500]
+                            },
+                            {
+                                "Field" : "MassCost",
+                                "Change" : [800,600]
+                            },
+                            {
+                                "Field" : "BuildTime",
+                                "Change" : [4000,3000]
+                            }
+                        ]
+                    },
+                    {
+                        "UnitID" : "url0101",
+                        "Name" : "Seraphim",
+                        "Img" : "url0101_icon.dds",
+                        "Changes" : [
+                            {
+                                "Field" : "EnergyCost",
+                                "Change" : [12800,9600]
+                            },
+                            {
+                                "Field" : "MassCost",
+                                "Change" : [960,720]
+                            },
+                            {
+                                "Field" : "BuildTime",
+                                "Change" : [4800,3600]
+                            },
+                            {
+                                "Field" : "Health",
+                                "Change" : [2100,1800]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "Heading" : "Tech 3 Shield Disruptor",
+                "Units" : [
+                    {
+                        "UnitID" : "url0101",
+                        "Name" : "Absolver",
+                        "Img" : "url0101_icon.dds",
+                        "Changes" : [
+                            {
+                                "Field" : "Health",
+                                "Change" : [1200,800]
+                            },
+                            {
+                                "Field" : "Range",
+                                "Change" : [75,65]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "Heading" : "Tech 3 Tanks",
+                "Units" : [
+                    {
+                        "UnitID" : "url0101",
+                        "Name" : "Brick",
+                        "Img" : "url0101_icon.dds",
+                        "Changes" : [
+                            {
+                                "Field" : "Main Gun Range",
+                                "Change" : [32,34]
+                            },
+                            {
+                                "Field" : "Torpedo Range",
+                                "Change" : [32,34]
+                            },
+                            {
+                                "Field" : "Anti-Torpedo Range",
+                                "Change" : [32,34]
+                            },
+                            {
+                                "Field" : "MaxAcceleration",
+                                "Change" : [2.3,2.4]
+                            },
+                            {
+                                "Field" : "MaxBrake",
+                                "Change" : [2.3,2.4]
+                            },
+                            {
+                                "Field" : "MaxSpeed",
+                                "Change" : [2.3,2.4]
+                            },
+                            {
+                                "Field" : "MaxSpeedReverse",
+                                "Change" : [2.3,2.4]
+                            }
+                        ]
+                    },
+                    {
+                        "UnitID" : "url0101",
+                        "Name" : "Harbinger",
+                        "Img" : "url0101_icon.dds",
+                        "Changes" : [
+                            {
+                                "Field" : "MaxAcceleration",
+                                "Change" : [3.2,3.3]
+                            },
+                            {
+                                "Field" : "MaxBrake",
+                                "Change" : [2.85,2.95]
+                            },
+                            {
+                                "Field" : "MaxSpeed",
+                                "Change" : [2.85,2.95]
+                            }
+                        ]
+                    },
+                    {
+                        "UnitID" : "url0101",
+                        "Name" : "Othuum",
+                        "Img" : "url0101_icon.dds",
+                        "Changes" : [
+                            {
+                                "Field" : "MaxAcceleration",
+                                "Change" : [3.5,3.55]
+                            },
+                            {
+                                "Field" : "MaxBrake",
+                                "Change" : [2.75,2.85]
+                            },
+                            {
+                                "Field" : "MaxSpeed",
+                                "Change" : [2.75,2.85]
+                            }
+                        ]
+                    },
+                    {
+                        "UnitID" : "url0101",
+                        "Name" : "Percival",
+                        "Img" : "url0101_icon.dds",
+                        "Changes" : [
+                            {
+                                "Field" : "MaxAcceleration",
+                                "Change" : [2.1,2.2]
+                            },
+                            {
+                                "Field" : "MaxBrake",
+                                "Change" : [2.1,2.2]
+                            },
+                            {
+                                "Field" : "MaxSpeed",
+                                "Change" : [2.1,2.2]
+                            },
+                            {
+                                "Field" : "MaxSpeedReverse",
+                                "Change" : [2.1,2.2]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "Heading" : "Tech 3 Sniper Bots",
+                "Units" : [
+                    {
+                        "UnitID" : "url0101",
+                        "Name" : "Aeon",
+                        "Img" : "url0101_icon.dds",
+                        "Changes" : [
+                            {
+                                "Field" : "MassCost",
+                                "Change" : [880,700]
+                            },
+                            {
+                                "Field" : "EnergyCost",
+                                "Change" : [14080,25000]
+                            },
+                            {
+                                "Field" : "MaxRadius",
+                                "Change" : [70,60]
+                            },
+                            {
+                                "Field" : "MaxAcceleration",
+                                "Change" : [2.6,2.4]
+                            },
+                            {
+                                "Field" : "MaxBrake",
+                                "Change" : [2.6,2.4]
+                            },
+                            {
+                                "Field" : "MaxSpeed",
+                                "Change" : [2.6,2.4]
+                            }
+                        ]
+                    },
+                    {
+                        "UnitID" : "url0101",
+                        "Name" : "Aeon",
+                        "Img" : "url0101_icon.dds",
+                        "Changes" : [
+                            {
+                                "Field" : "MassCost",
+                                "Change" : [960,780]
+                            },
+                            {
+                                "Field" : "EnergyCost",
+                                "Change" : [15360,27000]
+                            },
+                            {
+                                "Field" : "MainMaxRadius",
+                                "Change" : [65,55]
+                            },
+                            {
+                                "Field" : "SecondMaxRadius",
+                                "Change" : [75,65]
+                            },
+                            {
+                                "Field" : "MaxAcceleration",
+                                "Change" : [2.4,2.2]
+                            },
+                            {
+                                "Field" : "MaxBrake",
+                                "Change" : [2.4,2.2]
+                            },
+                            {
+                                "Field" : "MaxSpeed",
+                                "Change" : [2.4,2.2]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "Heading" : "Tech 3 Mobile Artillery",
+                "Units" : [
+                    {
+                        "UnitID" : "url0101",
+                        "Name" : "Demolisher",
+                        "Img" : "url0101_icon.dds",
+                        "Changes" : [
+                            {
+                                "Field" : "UnpackSpeed",
+                                "Change" : [0.5,1]
+                            }
+                        ]
+                    },
+                    {
+                        "UnitID" : "url0101",
+                        "Name" : "Trebuchet",
+                        "Img" : "url0101_icon.dds",
+                        "Changes" : [
+                            {
+                                "Field" : "UnpackSpeed",
+                                "Change" : [0.4,0.8]
+                            }
+                        ]
+                    },
+                    {
+                        "UnitID" : "url0101",
+                        "Name" : "Suthanus",
+                        "Img" : "url0101_icon.dds",
+                        "Changes" : [
+                            {
+                                "Field" : "UnpackSpeed",
+                                "Change" : [0.22,0.44]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "Heading" : "Experimentals",
+                "Units" : [
+                    {
+                        "UnitID" : "url0101",
+                        "Name" : "Fatboy",
+                        "Img" : "url0101_icon.dds",
+                        "Changes" : [
+                            {
+                                "Field" : "BackUpDistance",
+                                "Change" : [15,30]
+                            }
+                        ]
+                    },
+                    {
+                        "UnitID" : "url0101",
+                        "Name" : "Galactic Colossus",
+                        "Img" : "url0101_icon.dds",
+                        "Changes" : [
+                            {
+                                "Field" : "MaxAcceleration",
+                                "Change" : [2.5,2.4]
+                            },
+                            {
+                                "Field" : "MaxBrake",
+                                "Change" : [2.5,2.4]
+                            },
+                            {
+                                "Field" : "MaxSpeed",
+                                "Change" : [2.5,2.4]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "Air": [
+            {
+                "Heading" : "Tech 2 Transports",
+                "Units" : [
+                    {
+                        "UnitID" : "xsl0301",
+                        "Name" : "All",
+                        "Img" : "xsl0301_icon.dds",
+                        "Changes" : [
+                            {
+                                "Field" : "MovementSpeed",
+                                "Change" : [14.3,13.5]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "Heading" : "Tech 2 FighterBomber",
+                "Units" : [
+                    {
+                        "UnitID" : "xsl0301",
+                        "Name" : "Janus",
+                        "Img" : "xsl0301_icon.dds",
+                        "Changes" : [
+                            {
+                                "Field" : "MassCost",
+                                "Change" : [420,360]
+                            },
+                            {
+                                "Field" : "EnergyCost",
+                                "Change" : [8400,12600]
+                            },
+                            {
+                                "Field" : "BuildTime",
+                                "Change" : [2400,2800]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "Heading" : "Tech 2 Gunship",
+                "Units" : [
+                    {
+                        "UnitID" : "xsl0301",
+                        "Name" : "Stinger",
+                        "Img" : "xsl0301_icon.dds",
+                        "Changes" : [
+                            {
+                                "Field" : "MassCost",
+                                "Change" : [240,192]
+                            },
+                            {
+                                "Field" : "EnergyCost",
+                                "Change" : [4800,3840]
+                            },
+                            {
+                                "Field" : "BuildTime",
+                                "Change" : [1600,1280]
+                            },
+                            {
+                                "Field" : "Health",
+                                "Change" : [880,700]
+                            },
+                            {
+                                "Field" : "DPS",
+                                "Change" : [66.6,53]
+                            },
+                            {
+                                "Field" : "MovementSpeed",
+                                "Change" : [12,13.5]
+                            }
+                        ]
+                    },
+                    {
+                        "UnitID" : "xsl0301",
+                        "Name" : "Vulthoo",
+                        "Img" : "xsl0301_icon.dds",
+                        "Changes" : [
+                            {
+                                "Field" : "MassCost",
+                                "Change" : [300,500]
+                            },
+                            {
+                                "Field" : "EnergyCost",
+                                "Change" : [6000,10000]
+                            },
+                            {
+                                "Field" : "BuildTime",
+                                "Change" : [2000,3300]
+                            },
+                            {
+                                "Field" : "Health",
+                                "Change" : [1080,1800]
+                            },
+                            {
+                                "Field" : "Damage",
+                                "Change" : [16,19.2]
+                            },
+                            {
+                                "Field" : "MaxAirspeed",
+                                "Change" : [12,11]
+                            },
+                            {
+                                "Field" : "UniformScale",
+                                "Change" : [0.06,0.066]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "Heading" : "Tech 2 Torpedo Bomber",
+                "Units" : [
+                    {
+                        "UnitID" : "xsl0301",
+                        "Name" : "Aeon",
+                        "Img" : "xsl0301_icon.dds",
+                        "Changes" : [
+                            {
+                                "Field" : "Damage",
+                                "Change" : [250,150]
+                            },
+                            {
+                                "Field" : "MuzzleSalvoDelay",
+                                "Change" : [0.6,0.2]
+                            },
+                            {
+                                "Field" : "MuzzleSalvoSize",
+                                "Change" : [3,5]
+                            }
+                        ]
+                    },
+                    {
+                        "UnitID" : "xsl0301",
+                        "Name" : "UEF",
+                        "Img" : "xsl0301_icon.dds",
+                        "Changes" : [
+                            {
+                                "Field" : "Damage",
+                                "Change" : [250,150]
+                            },
+                            {
+                                "Field" : "MuzzleSalvoDelay",
+                                "Change" : [0.6,0.2]
+                            },
+                            {
+                                "Field" : "MuzzleSalvoSize",
+                                "Change" : [3,5]
+                            }
+                        ]
+                    },
+                    {
+                        "UnitID" : "xsl0301",
+                        "Name" : "Cybran",
+                        "Img" : "xsl0301_icon.dds",
+                        "Changes" : [
+                            {
+                                "Field" : "Damage",
+                                "Change" : [50,30]
+                            },
+                            {
+                                "Field" : "MuzzleSalvoDelay",
+                                "Change" : [0.6,0.2]
+                            },
+                            {
+                                "Field" : "MuzzleSalvoSize",
+                                "Change" : [3,5]
+                            }
+                        ]
+                    },
+                    {
+                        "UnitID" : "xsl0301",
+                        "Name" : "Seraphim",
+                        "Img" : "xsl0301_icon.dds",
+                        "Changes" : [
+                            {
+                                "Field" : "Damage",
+                                "Change" : [250,150]
+                            },
+                            {
+                                "Field" : "MuzzleSalvoDelay",
+                                "Change" : [0.6,0.1]
+                            },
+                            {
+                                "Field" : "MuzzleSalvoSize",
+                                "Change" : [3,5]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "Heading" : "Tech 2 Guided Missile",
+                "Units" : [
+                    {
+                        "UnitID" : "xsl0301",
+                        "Name" : "Mercy",
+                        "Img" : "xsl0301_icon.dds",
+                        "Changes" : [
+                            {
+                                "Field" : "Damage",
+                                "Change" : [30,50]
+                            },
+                            {
+                                "Field" : "Total Damage",
+                                "Change" : [600,1000]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "Heading" : "Tech 3 ASF",
+                "Units" : [
+                    {
+                        "UnitID" : "xsl0301",
+                        "Name" : "Aeon",
+                        "Img" : "xsl0301_icon.dds",
+                        "Changes" : [
+                            {
+                                "Field" : "MassCost",
+                                "Change" : [350,450]
+                            },
+                            {
+                                "Field" : "EnergyCost",
+                                "Change" : [40000,51200]
+                            },
+                            {
+                                "Field" : "BuildTime",
+                                "Change" : [3000,3840]
+                            },
+                            {
+                                "Field" : "Damage",
+                                "Change" : [405,505]
+                            },
+                            {
+                                "Field" : "Health",
+                                "Change" : [1750,2250]
+                            }
+                        ]
+                    },
+                    {
+                        "UnitID" : "xsl0301",
+                        "Name" : "UEF",
+                        "Img" : "xsl0301_icon.dds",
+                        "Changes" : [
+                            {
+                                "Field" : "MassCost",
+                                "Change" : [350,450]
+                            },
+                            {
+                                "Field" : "EnergyCost",
+                                "Change" : [40000,51200]
+                            },
+                            {
+                                "Field" : "BuildTime",
+                                "Change" : [3000,3840]
+                            },
+                            {
+                                "Field" : "Damage",
+                                "Change" : [200,250]
+                            },
+                            {
+                                "Field" : "Health",
+                                "Change" : [1800,2300]
+                            }
+                        ]
+                    },
+                    {
+                        "UnitID" : "xsl0301",
+                        "Name" : "Cybran",
+                        "Img" : "xsl0301_icon.dds",
+                        "Changes" : [
+                            {
+                                "Field" : "MassCost",
+                                "Change" : [350,450]
+                            },
+                            {
+                                "Field" : "EnergyCost",
+                                "Change" : [40000,51200]
+                            },
+                            {
+                                "Field" : "BuildTime",
+                                "Change" : [3000,3840]
+                            },
+                            {
+                                "Field" : "Damage",
+                                "Change" : [200,250]
+                            },
+                            {
+                                "Field" : "Health",
+                                "Change" : [1725,2225]
+                            }
+                        ]
+                    },
+                    {
+                        "UnitID" : "xsl0301",
+                        "Name" : "Seraphim",
+                        "Img" : "xsl0301_icon.dds",
+                        "Changes" : [
+                            {
+                                "Field" : "MassCost",
+                                "Change" : [350,450]
+                            },
+                            {
+                                "Field" : "EnergyCost",
+                                "Change" : [40000,51200]
+                            },
+                            {
+                                "Field" : "BuildTime",
+                                "Change" : [3000,3840]
+                            },
+                            {
+                                "Field" : "Damage",
+                                "Change" : [405,505]
+                            },
+                            {
+                                "Field" : "Health",
+                                "Change" : [1775,2275]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "Naval": [
+            {
+                "Heading" : "Tech 2 Cruiser",
+                "Units" : [
+                    {
+                        "UnitID" : "url0101",
+                        "Name" : "Aeon",
+                        "Img" : "url0101_icon.dds",
+                        "Changes" : [
+                            {
+                                "Field" : "AA AoE Radius",
+                                "Change" : [0,1]
+                            },
+                            {
+                                "Field" : "Health",
+                                "Change" : [3850,3250]
+                            },
+                            {
+                                "Field" : "AA Range",
+                                "Change" : [60,70]
+                            }
+                        ]
+                    },
+                    {
+                        "UnitID" : "url0101",
+                        "Name" : "UEF",
+                        "Img" : "url0101_icon.dds",
+                        "Changes" : [
+                            {
+                                "Field" : "AA AoE Radius",
+                                "Change" : [0,1]
+                            },
+                            {
+                                "Field" : "Health",
+                                "Change" : [3100,2500]
+                            },
+                            {
+                                "Field" : "AA Range",
+                                "Change" : [60,70]
+                            }
+                        ]
+                    },
+                    {
+                        "UnitID" : "url0101",
+                        "Name" : "Cybran",
+                        "Img" : "url0101_icon.dds",
+                        "Changes" : [
+                            {
+                                "Field" : "AA AoE Radius",
+                                "Change" : [0,1]
+                            },
+                            {
+                                "Field" : "Health",
+                                "Change" : [3600,3000]
+                            },
+                            {
+                                "Field" : "AA Range",
+                                "Change" : [60,70]
+                            }
+                        ]
+                    },
+                    {
+                        "UnitID" : "url0101",
+                        "Name" : "Cybran",
+                        "Img" : "url0101_icon.dds",
+                        "Changes" : [
+                            {
+                                "Field" : "Health",
+                                "Change" : [3000,2700]
+                            },
+                            {
+                                "Field" : "2nd AA Range",
+                                "Change" : [45,70]
+                            },
+                            {
+                                "Field" : "Flak AA Range",
+                                "Change" : [55,60]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "Heading" : "Experimentals",
+                "Units" : [
+                    {
+                        "UnitID" : "url0101",
+                        "Name" : "Atlantis",
+                        "Img" : "url0101_icon.dds",
+                        "Changes" : [
+                            {
+                                "Field" : "BackUpDistance",
+                                "Change" : [15,30]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "ACU-SCU": [
+            {
+                "Heading" : "UEF ACU",
+                "Units" : [
+                    {
+                        "UnitID" : "xsl0301",
+                        "Name" : "Teleport",
+                        "Img" : "xsl0301_icon.dds",
+                        "Changes" : [
+                            {
+                                "Field" : "Slot",
+                                "Change" : ["Back","Left"]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "Structures": [
+            {
+                "Heading" : "Walls",
+                "Units" : [
+                    {
+                        "UnitID" : "uel0101",
+                        "Name" : "All",
+                        "Img" : "uel0101_icon.dds",
+                        "Changes" : [
+                            {
+                                "Field" : "Health",
+                                "Change" : ["X", 500]
+                            },
+                            {
+                                "Field" : "EnergyCost",
+                                "Change" : [10,20]
+                            },
+                            {
+                                "Field" : "MassCost",
+                                "Change" : [2,3]
+                            },
+                            {
+                                "Field" : "BuildTime",
+                                "Change" : [20,15]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "Heading" : "Land Factories",
+                "Units" : [
+                    {
+                        "UnitID" : "uel0101",
+                        "Name" : "HQs",
+                        "Img" : "uel0101_icon.dds",
+                        "Changes" : [
+                            {
+                                "Field" : "Tech 3 BuildTime",
+                                "Change" : [12100,12000]
+                            }
+                        ]
+                    },
+                    {
+                        "UnitID" : "uel0101",
+                        "Name" : "Support",
+                        "Img" : "uel0101_icon.dds",
+                        "Changes" : [
+                            {
+                                "Field" : "Tech 2 BuildTime",
+                                "Change" : [1600,1200]
+                            },
+                            {
+                                "Field" : "Tech 3 BuildTime",
+                                "Change" : [4000,3200]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "Heading" : "Air Factories",
+                "Units" : [
+                    {
+                        "UnitID" : "uel0101",
+                        "Name" : "HQs",
+                        "Img" : "uel0101_icon.dds",
+                        "Changes" : [
+                            {
+                                "Field" : "Tech 3 BuildTime",
+                                "Change" : [12100,12000]
+                            }
+                        ]
+                    },
+                    {
+                        "UnitID" : "uel0101",
+                        "Name" : "Support",
+                        "Img" : "uel0101_icon.dds",
+                        "Changes" : [
+                            {
+                                "Field" : "Tech 2 BuildTime",
+                                "Change" : [1300,1200]
+                            },
+                            {
+                                "Field" : "Tech 3 BuildTime",
+                                "Change" : [4000,3200]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "Heading" : "Naval Factories",
+                "Units" : [
+                    {
+                        "UnitID" : "uel0101",
+                        "Name" : "HQs",
+                        "Img" : "uel0101_icon.dds",
+                        "Changes" : [
+                            {
+                                "Field" : "Tech 2 BuildTime",
+                                "Change" : [3600,3200]
+                            },
+                            {
+                                "Field" : "Tech 3 BuildTime",
+                                "Change" : [11250,21600]
+                            }
+                        ]
+                    },
+                    {
+                        "UnitID" : "uel0101",
+                        "Name" : "Support",
+                        "Img" : "uel0101_icon.dds",
+                        "Changes" : [
+                            {
+                                "Field" : "Tech 2 BuildTime",
+                                "Change" : [3000,2000]
+                            },
+                            {
+                                "Field" : "Tech 3 BuildTime",
+                                "Change" : [3500,10800]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "Heading" : "Tech 2 Artillery",
+                "Units" : [
+                    {
+                        "UnitID" : "uel0101",
+                        "Name" : "Aeon",
+                        "Img" : "uel0101_icon.dds",
+                        "Changes" : [
+                            {
+                                "Field" : "FiringRandomness",
+                                "Change" : [1.75,2]
+                            },
+                            {
+                                "Field" : "MaxRadius",
+                                "Change" : [128,115]
+                            }
+                        ]
+                    },
+                    {
+                        "UnitID" : "uel0101",
+                        "Name" : "UEF",
+                        "Img" : "uel0101_icon.dds",
+                        "Changes" : [
+                            {
+                                "Field" : "FiringRandomness",
+                                "Change" : [2.25,2.5]
+                            },
+                            {
+                                "Field" : "MaxRadius",
+                                "Change" : [128,115]
+                            }
+                        ]
+                    },
+                    {
+                        "UnitID" : "uel0101",
+                        "Name" : "Cybran",
+                        "Img" : "uel0101_icon.dds",
+                        "Changes" : [
+                            {
+                                "Field" : "FiringRandomness",
+                                "Change" : [2.75,3]
+                            },
+                            {
+                                "Field" : "MaxRadius",
+                                "Change" : [128,115]
+                            }
+                        ]
+                    },
+                    {
+                        "UnitID" : "uel0101",
+                        "Name" : "Seraphim",
+                        "Img" : "uel0101_icon.dds",
+                        "Changes" : [
+                            {
+                                "Field" : "FiringRandomness",
+                                "Change" : [1.75,2]
+                            },
+                            {
+                                "Field" : "MaxRadius",
+                                "Change" : [128,115]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "Heading" : "Tech 2 Power Generator",
+                "Units" : [
+                    {
+                        "UnitID" : "uel0101",
+                        "Name" : "All",
+                        "Img" : "uel0101_icon.dds",
+                        "Changes" : [
+                            {
+                                "Field" : "Active Energy Adjacency Buff",
+                                "Change" : [-18.75,-15.62]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

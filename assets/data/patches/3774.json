@@ -1,0 +1,73 @@
+{
+    "ID": 3809,
+    "Name": "Patch 3809",
+    "Date": "2024-03-15",
+    "Description": "Small Balance Change to Cybran TML.",
+    "Author": "Balance Team",
+    "Data": {
+        "Land": [
+            {
+                "Heading" : "Experimental",
+                "Units" : [
+                    {
+                        "UnitID" : "url0101",
+                        "Name" : "Ythotha",
+                        "Img" : "url0101_icon.dds",
+                        "Changes" : [
+                            {
+                                "Field" : "TurnRate",
+                                "Change" : [40,60]
+                            },
+                            {
+                                "Field" : "EyeWeaponRange",
+                                "Change" : [45,47]
+                            },
+                            {
+                                "Field" : "LeftArmRange",
+                                "Change" : [45,47]
+                            },
+                            {
+                                "Field" : "RightArmRange",
+                                "Change" : [15,47]
+                            },
+                            {
+                                "Field" : "AA Range",
+                                "Change" : [45,47]
+                            },
+                            {
+                                "Field" : "AA AoE",
+                                "Change" : [1.5,4]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "Air": [
+            {
+                "Heading" : "Tech 2 FighterBomber",
+                "Units" : [
+                    {
+                        "UnitID" : "ura0307",
+                        "Name" : "Janus",
+                        "Img" : "ura0307_icon.dds",
+                        "Changes" : [
+                            {
+                                "Field" : "Damage Over Time",
+                                "Change" : [4.2,6]
+                            },
+                            {
+                                "Field" : "Initial Damage",
+                                "Change" : [30,15]
+                            }
+
+                        ]
+                    }
+                ]
+            }
+        ],
+        "Naval": [],
+        "ACU-SCU": [],
+        "Structures": []
+    }
+}

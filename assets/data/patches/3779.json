@@ -1,0 +1,85 @@
+{
+    "ID": 3779,
+    "Name": "Patch 3779",
+    "Date": "2024-03-15",
+    "Description": "This Patch The Loyalists can now redirect missiles and the ownership is switched to TMD can Intercept as well as Seraphim SCU also gets a Slight Eco Bonus",
+    "Author": "Balance Team",
+    "Data": {
+        "Land": [],
+        "Air": [],
+        "Naval": [
+            {
+                "Heading" : "Tech 3 Submarine",
+                "Units" : [
+                    {
+                        "UnitID" : "ues0103",
+                        "Name" : "Sub-Hunter",
+                        "Img" : "ues0103_icon.dds",
+                        "Changes" : [
+                            {
+                                "Field" : "MuzzleSalvoDelay",
+                                "Change" : [1,0.7]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "ACU-SCU": [
+            {
+                "Heading" : "UEF ACU",
+                "Units" : [
+                    {
+                        "UnitID" : "xsl0301",
+                        "Name" : "Teleport",
+                        "Img" : "xsl0301_icon.dds",
+                        "Changes" : [
+                            {
+                                "Field" : "Slot",
+                                "Change" : ["Left","Back"]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "Heading" : "Seraphim SCU",
+                "Units" : [
+                    {
+                        "UnitID" : "xsl0301",
+                        "Name" : "Base SCU",
+                        "Img" : "xsl0301_icon.dds",
+                        "Changes" : [
+                            {
+                                "Field" : "MassProduction",
+                                "Change" : [1,3]
+                            },
+                            {
+                                "Field" : "EnergyProduction",
+                                "Change" : [100,300]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "Structures": [
+            {
+                "Heading" : "Point Defence",
+                "Units" : [
+                    {
+                        "UnitID" : "uel0101",
+                        "Name" : "Ravager",
+                        "Img" : "uel0101_icon.dds",
+                        "Changes" : [
+                            {
+                                "Field" : "FriendlyFire",
+                                "Change" : [true,false]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

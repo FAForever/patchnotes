@@ -1,0 +1,31 @@
+{
+    "ID": 3809,
+    "Name": "Patch 3809",
+    "Date": "2024-03-15",
+    "Description": "Small Balance Change to Cybran TML.",
+    "Author": "Balance Team",
+    "Data": {
+        "Land": [],
+        "Air": [],
+        "Naval": [],
+        "ACU-SCU": [],
+        "Structures": [
+            {
+                "Heading" : "Tactical Missile Launcher",
+                "Units" : [
+                    {
+                        "UnitID" : "uel0101",
+                        "Name" : "Cybran",
+                        "Img" : "uel0101_icon.dds",
+                        "Changes" : [
+                            {
+                                "Field" : "RateOfFire",
+                                "Change" : [3,1.5]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

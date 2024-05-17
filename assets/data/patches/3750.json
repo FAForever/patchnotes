@@ -1,0 +1,53 @@
+{
+    "ID": 3809,
+    "Name": "Patch 3809",
+    "Date": "2024-03-15",
+    "Description": "Small Balance Change to Cybran TML.",
+    "Author": "Balance Team",
+    "Data": {
+        "Land": [
+            {
+                "Heading" : "Tech 2 Mobile Shield",
+                "Units" : [
+                    {
+                        "UnitID" : "url0101",
+                        "Name" : "Asylum",
+                        "Img" : "url0101_icon.dds",
+                        "Changes" : [
+                            {
+                                "Field" : "EnergyMaintenanceCost",
+                                "Change" : [45,55]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "Air": [
+            {
+                "Heading" : "Tech 2 FighterBomber",
+                "Units" : [
+                    {
+                        "UnitID" : "ura0307",
+                        "Name" : "Janus",
+                        "Img" : "ura0307_icon.dds",
+                        "Changes" : [
+                            {
+                                "Field" : "Damage Over Time",
+                                "Change" : [4.2,6]
+                            },
+                            {
+                                "Field" : "Initial Damage",
+                                "Change" : [30,15]
+                            }
+
+                        ]
+                    }
+                ]
+            }
+        ],
+        "Naval": [],
+        "ACU-SCU": [],
+        "Structures": []
+    }
+}

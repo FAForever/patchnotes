@@ -1,0 +1,31 @@
+{
+    "ID": 3809,
+    "Name": "Patch 3809",
+    "Date": "2024-03-15",
+    "Description": "Small Balance Change to Cybran TML.",
+    "Author": "Balance Team",
+    "Data": {
+        "Land": [],
+        "Air": [],
+        "Naval": [],
+        "ACU-SCU": [            
+            {
+                "Heading" : "UEF ACU",
+                "Units" : [
+                    {
+                        "UnitID" : "xsl0301",
+                        "Name" : "Teleport",
+                        "Img" : "xsl0301_icon.dds",
+                        "Changes" : [
+                            {
+                                "Field" : "Slot",
+                                "Change" : ["Left","Back"]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "Structures": []
+    }
+}
