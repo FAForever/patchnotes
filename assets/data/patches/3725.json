@@ -1,394 +1,632 @@
 {
-    "ID": 3809,
-    "Name": "Patch 3809",
-    "Date": "2024-03-15",
-    "Description": "Small Balance Change to Cybran TML.",
-    "Author": "Balance Team",
-    "Data": {
-        "Land": [
-            {
-                "Heading" : "Tech 1 Scout",
-                "Units" : [
-                    {
-                        "UnitID" : "url0101",
-                        "Name" : "Snoop",
-                        "Img" : "url0101_icon.dds",
-                        "Changes" : [
-                            {
-                                "Field" : "BuildTime",
-                                "Change" : [80,60]
-                            }
-                        ]
-                    },
-                    {
-                        "UnitID" : "url0101",
-                        "Name" : "Mole",
-                        "Img" : "url0101_icon.dds",
-                        "Changes" : [
-                            {
-                                "Field" : "EnergyCost",
-                                "Change" : [80,60]
-                            },
-                            {
-                                "Field" : "MaintenanceCost",
-                                "Change" : [5,1]
-                            },
-                            {
-                                "Field" : "BuildTime",
-                                "Change" : [80,60]
-                            }
-                        ]
-                    },
-                    {
-                        "UnitID" : "url0101",
-                        "Name" : "Spirit",
-                        "Img" : "url0101_icon.dds",
-                        "Changes" : [
-                            {
-                                "Field" : "EnergyCost",
-                                "Change" : [40,60]
-                            },
-                            {
-                                "Field" : "BuildTime",
-                                "Change" : [80,60]
-                            }
-                        ]
-                    },
-                    {
-                        "UnitID" : "url0101",
-                        "Name" : "Selen",
-                        "Img" : "url0101_icon.dds",
-                        "Changes" : [
-                            {
-                                "Field" : "BuildTime",
-                                "Change" : [80,60]
-                            },
-                            {
-                                "Field" : "MaintenanceCost",
-                                "Change" : [0,1]
-                            },
-                            {
-                                "Field" : "StealthWaitTime",
-                                "Change" : [1,3]
-                            },
-                            {
-                                "Field" : "Vision/Stealth Range",
-                                "Change" : [0.8,0.6]
-                            }
-                        ]
-                    }
-                ]
-            },
-            {
-                "Heading" : "Tech 1 Mobile Artillery",
-                "Units" : [
-                    {
-                        "UnitID" : "url0101",
-                        "Name" : "Zthuee",
-                        "Img" : "url0101_icon.dds",
-                        "Changes" : [
-                            {
-                                "Field" : "BuildTime",
-                                "Change" : [180,270]
-                            }
-                        ]
-                    }
-                ]
-            },
-            {
-                "Heading" : "Tech 2 Mobile Bomb",
-                "Units" : [
-                    {
-                        "UnitID" : "url0101",
-                        "Name" : "Fire Beetle",
-                        "Img" : "url0101_icon.dds",
-                        "Changes" : [
-                            {
-                                "Field" : "Health",
-                                "Change" : [350,400]
-                            },
-                            {
-                                "Field" : "ExplosionRadius",
-                                "Change" : [6,6.5]
-                            },
-                            {
-                                "Field" : "MaxAcceleration",
-                                "Change" : [5,7]
-                            },
-                            {
-                                "Field" : "TurnRate",
-                                "Change" : [160,200]
-                            }
-                        ]
-                    }
-                ]
-            },
-            {
-                "Heading" : "Tech 3 Assault Bots",
-                "Units" : [
-                    {
-                        "UnitID" : "url0101",
-                        "Name" : "Titan",
-                        "Img" : "url0101_icon.dds",
-                        "Changes" : [
-                            {
-                                "Field" : "EnergyCost",
-                                "Change" : [5400,5250]
-                            },
-                            {
-                                "Field" : "BuildTime",
-                                "Change" : [2400,2160]
-                            }
-                        ]
-                    },
-                    {
-                        "UnitID" : "url0101",
-                        "Name" : "Loyalist",
-                        "Img" : "url0101_icon.dds",
-                        "Changes" : [
-                            {
-                                "Field" : "EnergyCost",
-                                "Change" : [5400,5250]
-                            },
-                            {
-                                "Field" : "BuildTime",
-                                "Change" : [2400,2160]
-                            }
-                        ]
-                    }
-                ]
-            }
-        ],
-        "Air": [
-            {
-                "Heading" : "Tech 1 Bomber",
-                "Units" : [
-                    {
-                        "UnitID" : "ura0307",
-                        "Name" : "Scorcher",
-                        "Img" : "ura0307_icon.dds",
-                        "Changes" : [
-                            {
-                                "Field" : "Damage",
-                                "Change" : [4,4.5]
-                            },
-                            {
-                                "Field" : "InitialDamage",
-                                "Change" : [47.5,42.5]
-                            },
-                            {
-                                "Field" : "MuzzleSalvoDelay",
-                                "Change" : [0.3,0.2]
-                            }
-
-                        ]
-                    }
-                ]
-            },
-            {
-                "Heading" : "Tech 2 Fighter Bomber",
-                "Units" : [
-                    {
-                        "UnitID" : "ura0307",
-                        "Name" : "Notha",
-                        "Img" : "ura0307_icon.dds",
-                        "Changes" : [
-                            {
-                                "Field" : "Health",
-                                "Change" : [1175,1000]
-                            }
-                        ]
-                    }
-                ]
-            },
-            {
-                "Heading" : "Tech 3 Strategic Bomber",
-                "Units" : [
-                    {
-                        "UnitID" : "ura0307",
-                        "Name" : "Revenant",
-                        "Img" : "ura0307_icon.dds",
-                        "Changes" : [
-                            {
-                                "Field" : "DamageRadius",
-                                "Change" : [7,6.5]
-                            },
-                            {
-                                "Field" : "EnergyCost",
-                                "Change" : [65,150]
-                            }
-                        ]
-                    },
-                    {
-                        "UnitID" : "ura0307",
-                        "Name" : "Shocker",
-                        "Img" : "ura0307_icon.dds",
-                        "Changes" : [
-                            {
-                                "Field" : "Damage",
-                                "Change" : [3450,3000]
-                            },
-                            {
-                                "Field" : "DamageRadius",
-                                "Change" : [4,5.25]
-                            }
-                        ]
-                    },
-                    {
-                        "UnitID" : "ura0307",
-                        "Name" : "Sinntha",
-                        "Img" : "ura0307_icon.dds",
-                        "Changes" : [
-                            {
-                                "Field" : "Damage",
-                                "Change" : [3250,3000]
-                            },
-                            {
-                                "Field" : "DamageRadius",
-                                "Change" : [5,6]
-                            }
-                        ]
-                    },
-                    {
-                        "UnitID" : "ura0307",
-                        "Name" : "Ambassador",
-                        "Img" : "ura0307_icon.dds",
-                        "Changes" : [
-                            {
-                                "Field" : "Damage",
-                                "Change" : [3000,3100]
-                            },
-                            {
-                                "Field" : "DamageRadius",
-                                "Change" : [6,5.5]
-                            }
-                        ]
-                    }
-                ]
-            },
-            {
-                "Heading" : "Experimental",
-                "Units" : [
-                    {
-                        "UnitID" : "ura0307",
-                        "Name" : "Soul Ripper",
-                        "Img" : "ura0307_icon.dds",
-                        "Changes" : [
-                            {
-                                "Field" : "StealthMaintenanceCost",
-                                "Change" : [0,-600]
-                            }
-                        ]
-                    }
-                ]
-            }
-        ],
-        "Naval": [
-            {
-                "Heading" : "Tech 2 Destroyer",
-                "Units" : [
-                    {
-                        "UnitID" : "urs0201",
-                        "Name" : "UEF",
-                        "Img" : "urs0201_icon.dds",
-                        "Changes" : [
-                            {
-                                "Field" : "TurretYawRange",
-                                "Change" : [140,160]
-                            },
-                            {
-                                "Field" : "TurretYawSpeed",
-                                "Change" : [90,100]
-                            }
-                        ]
-                    },
-                    {
-                        "UnitID" : "urs0201",
-                        "Name" : "Cybran",
-                        "Img" : "urs0201_icon.dds",
-                        "Changes" : [
-                            {
-                                "Field" : "TurretYawRange",
-                                "Change" : [135,140]
-                            }
-                        ]
-                    },
-                    {
-                        "UnitID" : "urs0201",
-                        "Name" : "Aeon",
-                        "Img" : "urs0201_icon.dds",
-                        "Changes" : [
-                            {
-                                "Field" : "TurretYawRange",
-                                "Change" : [160,140]
-                            },
-                            {
-                                "Field" : "TurretYawSpeed",
-                                "Change" : [100,90]
-                            }
-                        ]
-                    }
-                ]
-            }
-        ],
-        "ACU-SCU": [
-            {
-                "Heading" : "Cybran ACU",
-                "Units" : [
-                    {
-                        "UnitID" : "urs0201",
-                        "Name" : "Stealth Enhancement",
-                        "Img" : "urs0201_icon.dds",
-                        "Changes" : [
-                            {
-                                "Field" : "EnergyCost",
-                                "Change" : [5000,14000]
-                            },
-                            {
-                                "Field" : "MassCost",
-                                "Change" : [350,650]
-                            },
-                            {
-                                "Field" : "BuildTime",
-                                "Change" : [500,650]
-                            },
-                            {
-                                "Field" : "Health",
-                                "Change" : [0,2000]
-                            }
-                        ]
-                    }
-                ]
-            },
-            {
-                "Heading" : "Seraphim ACU",
-                "Units" : [
-                    {
-                        "UnitID" : "urs0201",
-                        "Name" : "Regen Field Enhancement",
-                        "Img" : "urs0201_icon.dds",
-                        "Changes" : [
-                            {
-                                "Field" : "EnergyCost",
-                                "Change" : [5000,14000]
-                            },
-                            {
-                                "Field" : "MassCost",
-                                "Change" : [350,650]
-                            },
-                            {
-                                "Field" : "BuildTime",
-                                "Change" : [500,650]
-                            },
-                            {
-                                "Field" : "Health",
-                                "Change" : [0,2000]
-                            }
-                        ]
-                    }
-                ]
-            }
-        ],
-        "Structures": []
-    }
+    "patch" : {
+        "number" : "3725",
+        "date" : "November 26th 2023",
+        "description" : "Small Balance Change to Cybran TML.",
+        "team" : "Balance Team"
+    },
+    "Land": [
+        {
+            "Heading": "Tech 1 Land Scouts",
+            "Units": [
+                {
+                    "UnitID": "url0101",
+                    "Name": "Snoop",
+                    "Img": "/assets/images/units/uef/land/T1Scout.png",
+                    "Changes": [
+                        {
+                            "Field": "BuildTime",
+                            "Change": [80, 60]
+                        }
+                    ]
+                },
+                {
+                    "UnitID": "url0101",
+                    "Name": "Mole",
+                    "Img": "/assets/images/units/uef/land/T1Scout.png",
+                    "Changes": [
+                        {
+                            "Field": "BuildCostEnergy",
+                            "Change": [80, 60]
+                        },
+                        {
+                            "Field": "EnergyMaintenanceCost",
+                            "Change": [5, 1]
+                        },
+                        {
+                            "Field": "BuildTime",
+                            "Change": [80, 60]
+                        }
+                    ]
+                },
+                {
+                    "UnitID": "url0101",
+                    "Name": "Spirit",
+                    "Img": "/assets/images/units/uef/land/T1Scout.png",
+                    "Changes": [
+                        {
+                            "Field": "BuildCostEnergy",
+                            "Change": [40, 60]
+                        },
+                        {
+                            "Field": "BuildTime",
+                            "Change": [80, 60]
+                        }
+                    ]
+                },
+                {
+                    "UnitID": "url0101",
+                    "Name": "Selen",
+                    "Img": "/assets/images/units/uef/land/T1Scout.png",
+                    "Changes": [
+                        {
+                            "Field": "BuildTime",
+                            "Change": [80, 60]
+                        },
+                        {
+                            "Field": "EnergyMaintenanceCost",
+                            "Change": [0, 1]
+                        },
+                        {
+                            "Field": "StealthWaitTime",
+                            "Change": [1, 3]
+                        },
+                        {
+                            "Field": "Vision and radar range are now multiplied by 0.6 when entering cloak mode",
+                            "Change": [0.8, 0.6]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "Heading": "Tech 1 Mobile Artillery",
+            "Units": [
+                {
+                    "UnitID": "url0101",
+                    "Name": "Zthuee",
+                    "Img": "/assets/images/units/uef/land/T1Scout.png",
+                    "Changes": [
+                        {
+                            "Field": "BuildTime",
+                            "Change": [180, 270]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "Heading": "Tech 3 Assault Bots",
+            "Units": [
+                {
+                    "UnitID": "url0101",
+                    "Name": "Titan",
+                    "Img": "/assets/images/units/uef/land/T1Scout.png",
+                    "Changes": [
+                        {
+                            "Field": "BuildCostEnergy",
+                            "Change": [5400, 5250]
+                        },
+                        {
+                            "Field": "BuildTime",
+                            "Change": [2400, 2160]
+                        }
+                    ]
+                },
+                {
+                    "UnitID": "url0101",
+                    "Name": "Loyalist",
+                    "Img": "/assets/images/units/uef/land/T1Scout.png",
+                    "Changes": [
+                        {
+                            "Field": "BuildCostEnergy",
+                            "Change": [5400, 5250]
+                        },
+                        {
+                            "Field": "BuildTime",
+                            "Change": [2400, 2160]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "Heading": "Tech 2 Mobile Bomb",
+            "Units": [
+                {
+                    "UnitID": "url0101",
+                    "Name": "Fire beetles",
+                    "Img": "/assets/images/units/uef/land/T1Scout.png",
+                    "Changes": [
+                        {
+                            "Field": "HP",
+                            "Change": [350, 400]
+                        },
+                        {
+                            "Field": "ExplosionRadius",
+                            "Change": [6, 6.5]
+                        },
+                        {
+                            "Field": "MaxAcceleration",
+                            "Change": [5, 7]
+                        },
+                        {
+                            "Field": "TurnRate",
+                            "Change": [160, 200]
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "Air": [
+        {
+            "Heading": "T1 Transports",
+            "Units": [
+                {
+                    "UnitID": "url0101",
+                    "Name": "T1 Transports",
+                    "Img": "/assets/images/units/uef/land/T1Scout.png",
+                    "Changes": [
+                        {
+                            "Field": "Add dummy weapons to T1 transports which allows LABs inside the transport to focus fire targets",
+                            "Change": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "Heading": "Scorcher",
+            "Units": [
+                {
+                    "UnitID": "url0101",
+                    "Name": "Scorcher",
+                    "Img": "/assets/images/units/uef/land/T1Scout.png",
+                    "Changes": [
+                        {
+                            "Field": "Damage",
+                            "Change": [4, 4.5]
+                        },
+                        {
+                            "Field": "InitialDamage",
+                            "Change": [47.5, 42.5]
+                        },
+                        {
+                            "Field": "MuzzleSalvoDelay",
+                            "Change": [0.3, 0.2]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "Heading": "Notha",
+            "Units": [
+                {
+                    "UnitID": "url0101",
+                    "Name": "Notha",
+                    "Img": "/assets/images/units/uef/land/T1Scout.png",
+                    "Changes": [
+                        {
+                            "Field": "HP",
+                            "Change": [1175, 1000]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "Heading": "Soul Ripper",
+            "Units": [
+                {
+                    "UnitID": "url0101",
+                    "Name": "Soul Ripper",
+                    "Img": "/assets/images/units/uef/land/T1Scout.png",
+                    "Changes": [
+                        {
+                            "Field": "Add Stealth at -600 energy maintenance cost",
+                            "Change": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "Heading": "Strategic Bombers",
+            "Units": [
+                {
+                    "UnitID": "url0101",
+                    "Name": "Revenant",
+                    "Img": "/assets/images/units/uef/land/T1Scout.png",
+                    "Changes": [
+                        {
+                            "Field": "DamageRadius",
+                            "Change": [7, 6.5]
+                        },
+                        {
+                            "Field": "EnergyMaintenanceCost",
+                            "Change": [65, 150]
+                        },
+                        {
+                            "Field": "Double the amount of mass killed required to vet",
+                            "Change": []
+                        }
+                    ]
+                },
+                {
+                    "UnitID": "url0101",
+                    "Name": "Shocker",
+                    "Img": "/assets/images/units/uef/land/T1Scout.png",
+                    "Changes": [
+                        {
+                            "Field": "Damage",
+                            "Change": [3450, 3000]
+                        },
+                        {
+                            "Field": "DamageRadius",
+                            "Change": [4, 5.25]
+                        },
+                        {
+                            "Field": "Added a 3s stun of units up to and including T3",
+                            "Change": []
+                        },
+                        {
+                            "Field": "Double the amount of mass killed required to vet",
+                            "Change": []
+                        }
+                    ]
+                },
+                {
+                    "UnitID": "url0101",
+                    "Name": "Sinntha",
+                    "Img": "/assets/images/units/uef/land/T1Scout.png",
+                    "Changes": [
+                        {
+                            "Field": "Damage",
+                            "Change": [3250, 3000]
+                        },
+                        {
+                            "Field": "DamageRadius",
+                            "Change": [5, 6]
+                        },
+                        {
+                            "Field": "Double the amount of mass killed required to vet",
+                            "Change": []
+                        }
+                    ]
+                },
+                {
+                    "UnitID": "url0101",
+                    "Name": "Ambassador",
+                    "Img": "/assets/images/units/uef/land/T1Scout.png",
+                    "Changes": [
+                        {
+                            "Field": "Damage",
+                            "Change": [3000, 3100]
+                        },
+                        {
+                            "Field": "DamageRadius",
+                            "Change": [6, 5.5]
+                        },
+                        {
+                            "Field": "Double the amount of mass killed required to vet",
+                            "Change": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "Heading": "Shimmer",
+            "Units": [
+                {
+                    "UnitID": "url0101",
+                    "Name": "Shimmer",
+                    "Img": "/assets/images/units/uef/land/T1Scout.png",
+                    "Changes": [
+                        {
+                            "Field": "Better match the EMP radius to the damage radius",
+                            "Change": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "Heading": "Jester",
+            "Units": [
+                {
+                    "UnitID": "url0101",
+                    "Name": "Jester",
+                    "Img": "/assets/images/units/uef/land/T1Scout.png",
+                    "Changes": [
+                        {
+                            "Field": "Fix the bug where it would not do damage to moving units",
+                            "Change": []
+                        },
+                        {
+                            "Field": "Replace splash damage with soft projectile homing",
+                            "Change": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "Navy": [
+        {
+            "Heading": "Tech 2 Destroyer",
+            "Units": [
+                {
+                    "UnitID": "url0101",
+                    "Name": "UEF",
+                    "Img": "/assets/images/units/uef/land/T1Scout.png",
+                    "Changes": [
+                        {
+                            "Field": "TurretYawRange",
+                            "Change": [140, 160]
+                        },
+                        {
+                            "Field": "TurretYawSpeed",
+                            "Change": [90, 100]
+                        },
+                        {
+                            "Field": "Torpedo firing cycle adjusted to combat torpedo defense better",
+                            "Change": []
+                        }
+                    ]
+                },
+                {
+                    "UnitID": "url0101",
+                    "Name": "Cybran",
+                    "Img": "/assets/images/units/uef/land/T1Scout.png",
+                    "Changes": [
+                        {
+                            "Field": "TurretYawRange",
+                            "Change": [135, 140]
+                        }
+                    ]
+                },
+                {
+                    "UnitID": "url0101",
+                    "Name": "Aeon",
+                    "Img": "/assets/images/units/uef/land/T1Scout.png",
+                    "Changes": [
+                        {
+                            "Field": "TurretYawRange",
+                            "Change": [160, 150]
+                        },
+                        {
+                            "Field": "TurretYawSpeed",
+                            "Change": [100, 90]
+                        }
+                    ]
+                },
+                {
+                    "UnitID": "url0101",
+                    "Name": "Seraphim",
+                    "Img": "/assets/images/units/uef/land/T1Scout.png",
+                    "Changes": [
+                        {
+                            "Field": "Torpedo firing cycle adjusted to combat torpedo defense better",
+                            "Change": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "Heading": "Atlantis",
+            "Units": [
+                {
+                    "UnitID": "url0101",
+                    "Name": "Atlantis",
+                    "Img": "/assets/images/units/uef/land/T1Scout.png",
+                    "Changes": [
+                        {
+                            "Field": "Fix the AA behaving in a way inconsistent with the stats, adjust the stats to preserve the current balance",
+                            "Change": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "Acus": [
+        {
+            "Heading": "Cybran ACU Stealth Upgrade",
+            "Units": [
+                {
+                    "UnitID": "cybranacu",
+                    "Name": "Cybran ACU Stealth Upgrade",
+                    "Img": "/assets/images/Enhancements/cybran/stealth.png",
+                    "Changes": [
+                        {
+                            "Field": "Gives cybran acu better chances in mid-game against ACUs that can have both T2 and gun at the same time.",
+                            "Change": []
+                        },
+                        {
+                            "Field": "EnergyCost",
+                            "Change": [5000, 14000]
+                        },
+                        {
+                            "Field": "MassCost",
+                            "Change": [350, 650]
+                        },
+                        {
+                            "Field": "BuildTime",
+                            "Change": [500, 800]
+                        },
+                        {
+                            "Field": "Provides 2000 extra HP",
+                            "Change": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "Heading": "Sera ACU Regen Field Upgrade",
+            "Units": [
+                {
+                    "UnitID": "seraphimacu",
+                    "Name": "Sera ACU Regen Field Upgrade",
+                    "Img": "/assets/images/Enhancements/sera/advancedregenfield.png",
+                    "Changes": [
+                        {
+                            "Field": "This boosts the upgrade's attractiveness over the T2 upgrade and also fixes some inconsistencies where some units were getting more regen from the first upgrade tier than the second.",
+                            "Change": []
+                        },
+                        {
+                            "Field": "Now provides regen to the ACU itself, 10 hp/s for the first upgrade and 20 hp/s for the second",
+                            "Change": []
+                        },
+                        {
+                            "Field": "Now uses different regen floor values for units depending on their tier:",
+                            "Change": []
+                        },
+                        {
+                            "Field": "Basic Tier",
+                            "Change": []
+                        },
+                        {
+                            "Field": "RegenFloorT1",
+                            "Change": [3]
+                        },
+                        {
+                            "Field": "RegenFloorT2",
+                            "Change": [8]
+                        },
+                        {
+                            "Field": "RegenFloorT3",
+                            "Change": [15]
+                        },
+                        {
+                            "Field": "RegenFloorT4",
+                            "Change": [25]
+                        },
+                        {
+                            "Field": "RegenFloorSCU",
+                            "Change": [15]
+                        },
+                        {
+                            "Field": "Advanced Tier",
+                            "Change": []
+                        },
+                        {
+                            "Field": "RegenFloorT1",
+                            "Change": [15]
+                        },
+                        {
+                            "Field": "RegenFloorT2",
+                            "Change": [30]
+                        },
+                        {
+                            "Field": "RegenFloorT3",
+                            "Change": [60]
+                        },
+                        {
+                            "Field": "RegenFloorT4",
+                            "Change": [120]
+                        },
+                        {
+                            "Field": "RegenFloorSCU",
+                            "Change": [80]
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "Structure": [
+        {
+            "Heading": "Kennel Drones",
+            "Units": [
+                {
+                    "UnitID": "url0101",
+                    "Name": "Kennel Drones",
+                    "Img": "/assets/images/units/uef/land/T1Scout.png",
+                    "Changes": [
+                        {
+                            "Field": "Now have higher selection priority than buildings",
+                            "Change": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "Heading": "UEF T3 Sonar",
+            "Units": [
+                {
+                    "UnitID": "url0101",
+                    "Name": "UEF T3 Sonar",
+                    "Img": "/assets/images/units/uef/land/T1Scout.png",
+                    "Changes": [
+                        {
+                            "Field": "Add Jamming",
+                            "Change": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "Heading": "Paragon",
+            "Units": [
+                {
+                    "UnitID": "url0101",
+                    "Name": "Paragon",
+                    "Img": "/assets/images/units/uef/land/T1Scout.png",
+                    "Changes": [
+                        {
+                            "Field": "This will prevent the bug where despite not draining more E than paragon provides you still go into stall and drop shields.",
+                            "Change": []
+                        },
+                        {
+                            "Field": "Add a 100,000 E storage",
+                            "Change": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "Heading": "T1 PDs",
+            "Units": [
+                {
+                    "UnitID": "url0101",
+                    "Name": "T1 PDs",
+                    "Img": "/assets/images/units/uef/land/T1Scout.png",
+                    "Changes": [
+                        {
+                            "Field": "Adjust the hitboxes and bones of the PDs to make the wall-pd template behave the same way for each faction",
+                            "Change": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "Heading": "T4 Artilleries",
+            "Units": [
+                {
+                    "UnitID": "url0101",
+                    "Name": "T4 Artilleries",
+                    "Img": "/assets/images/units/uef/land/T1Scout.png",
+                    "Changes": [
+                        {
+                            "Field": "This makes all T4 arties viable for all 3 people who play 81x81 maps.",
+                            "Change": []
+                        },
+                        {
+                            "Field": "Ranges normalized to 4000 (Mavor range)",
+                            "Change": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
 }

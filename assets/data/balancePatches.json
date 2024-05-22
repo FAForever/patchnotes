@@ -1,0 +1,573 @@
+{
+    "3725" : {
+        "Patch" : {
+            "number" : "3725",
+            "date" : "November 26th 2023",
+            "description" : "Small Balance Change to Cybran TML.",
+            "team" : "Balance Team"
+        },
+        "Land": [
+            {
+              "Heading": "Tech 1 Land Scouts",
+              "Units": [
+                {
+                  "UnitID": "url0101",
+                  "Name": "Snoop",
+                  "Img": "/assets/images/units/uef/land/T1Scout.png",
+                  "Changes": [
+                    {
+                      "Field": "BuildTime",
+                      "Change": [80, 60]
+                    }
+                  ],
+                  "AdditionalChanges": []
+                },
+                {
+                  "UnitID": "url0101",
+                  "Name": "Mole",
+                  "Img": "/assets/images/units/uef/land/T1Scout.png",
+                  "Changes": [
+                    {
+                      "Field": "BuildCostEnergy",
+                      "Change": [80, 60]
+                    },
+                    {
+                      "Field": "EnergyMaintenanceCost",
+                      "Change": [5, 1]
+                    },
+                    {
+                      "Field": "BuildTime",
+                      "Change": [80, 60]
+                    }
+                  ],
+                  "AdditionalChanges": []
+                },
+                {
+                  "UnitID": "url0101",
+                  "Name": "Spirit",
+                  "Img": "/assets/images/units/uef/land/T1Scout.png",
+                  "Changes": [
+                    {
+                      "Field": "BuildCostEnergy",
+                      "Change": [40, 60]
+                    },
+                    {
+                      "Field": "BuildTime",
+                      "Change": [80, 60]
+                    }
+                  ],
+                  "AdditionalChanges": []
+                },
+                {
+                  "UnitID": "url0101",
+                  "Name": "Selen",
+                  "Img": "/assets/images/units/uef/land/T1Scout.png",
+                  "Changes": [
+                    {
+                      "Field": "BuildTime",
+                      "Change": [80, 60]
+                    },
+                    {
+                      "Field": "EnergyMaintenanceCost",
+                      "Change": [0, 1]
+                    },
+                    {
+                      "Field": "StealthWaitTime",
+                      "Change": [1, 3]
+                    },
+                    {
+                      "Field": "Vision and radar range are now multiplied by 0.6 when entering cloak mode",
+                      "Change": [0.8, 0.6]
+                    }
+                  ],
+                  "AdditionalChanges": []
+                }
+              ]
+            },
+            {
+              "Heading": "Tech 1 Mobile Artillery",
+              "Units": [
+                {
+                  "UnitID": "url0101",
+                  "Name": "Zthuee",
+                  "Img": "/assets/images/units/uef/land/T1Scout.png",
+                  "Changes": [
+                    {
+                      "Field": "BuildTime",
+                      "Change": [180, 270]
+                    }
+                  ],
+                  "AdditionalChanges": []
+                }
+              ]
+            },
+            {
+              "Heading": "Tech 3 Assault Bots",
+              "Units": [
+                {
+                  "UnitID": "url0101",
+                  "Name": "Titan",
+                  "Img": "/assets/images/units/uef/land/T1Scout.png",
+                  "Changes": [
+                    {
+                      "Field": "BuildCostEnergy",
+                      "Change": [5400, 5250]
+                    },
+                    {
+                      "Field": "BuildTime",
+                      "Change": [2400, 2160]
+                    }
+                  ],
+                  "AdditionalChanges": []
+                },
+                {
+                  "UnitID": "url0101",
+                  "Name": "Loyalist",
+                  "Img": "/assets/images/units/uef/land/T1Scout.png",
+                  "Changes": [
+                    {
+                      "Field": "BuildCostEnergy",
+                      "Change": [5400, 5250]
+                    },
+                    {
+                      "Field": "BuildTime",
+                      "Change": [2400, 2160]
+                    }
+                  ],
+                  "AdditionalChanges": []
+                }
+              ]
+            },
+            {
+              "Heading": "Tech 2 Mobile Bomb",
+              "Units": [
+                {
+                  "UnitID": "url0101",
+                  "Name": "Fire beetles",
+                  "Img": "/assets/images/units/uef/land/T1Scout.png",
+                  "Changes": [
+                    {
+                      "Field": "Damage",
+                      "Change": [4, 4.5]
+                    },
+                    {
+                      "Field": "InitialDamage",
+                      "Change": [47.5, 42.5]
+                    },
+                    {
+                      "Field": "MuzzleSalvoDelay",
+                      "Change": [0.3, 0.2]
+                    }
+                  ],
+                  "AdditionalChanges": []
+                }
+              ]
+            }
+        ],
+        "Air": [
+            {
+              "Heading": "T1 Transports",
+              "Units": [
+                {
+                  "UnitID": "url0101",
+                  "Name": "UEF",
+                  "Img": "/assets/images/units/uef/land/T1Scout.png",
+                  "Changes": [],
+                  "AdditionalChanges": [
+                    {
+                      "Field": "Add dummy weapons to T1 transports which allows LABs inside the transport to focus fire targets"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "Heading": "Scorcher",
+              "Units": [
+                {
+                  "UnitID": "url0101",
+                  "Name": "Scorcher",
+                  "Img": "/assets/images/units/uef/land/T1Scout.png",
+                  "Changes": [
+                    {
+                      "Field": "Damage",
+                      "Change": [4, 4.5]
+                    },
+                    {
+                      "Field": "InitialDamage",
+                      "Change": [47.5, 42.5]
+                    },
+                    {
+                      "Field": "MuzzleSalvoDelay",
+                      "Change": [0.3, 0.2]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "Heading": "Notha",
+              "Units": [
+                {
+                  "UnitID": "url0101",
+                  "Name": "Notha",
+                  "Img": "/assets/images/units/uef/land/T1Scout.png",
+                  "Changes": [
+                    {
+                      "Field": "HP",
+                      "Change": [1175, 1000]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "Heading": "Soul Ripper",
+              "Units": [
+                {
+                  "UnitID": "url0101",
+                  "Name": "Soul Ripper",
+                  "Img": "/assets/images/units/uef/land/T1Scout.png",
+                  "Changes": [],
+                  "AdditionalChanges": [
+                    {
+                      "Field": "Add Stealth at -600 energy maintenance cost"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "Heading": "Strategic Bombers",
+              "Units": [
+                {
+                  "UnitID": "url0101",
+                  "Name": "Revenant",
+                  "Img": "/assets/images/units/uef/land/T1Scout.png",
+                  "Changes": [
+                    {
+                      "Field": "DamageRadius",
+                      "Change": [7, 6.5]
+                    },
+                    {
+                      "Field": "EnergyMaintenanceCost",
+                      "Change": [65, 150]
+                    }
+                  ],
+                  "AdditionalChanges": [
+                    {
+                      "Field": "Double the amount of mass killed required to vet"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "Heading": "Shimmer",
+              "Units": [
+                {
+                  "UnitID": "url0101",
+                  "Name": "Shimmer",
+                  "Img": "/assets/images/units/uef/land/T1Scout.png",
+                  "Changes": [],
+                  "AdditionalChanges": [
+                    {
+                      "Field": "Better match the EMP radius to the damage radius"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "Heading": "Jester",
+              "Units": [
+                {
+                  "UnitID": "url0101",
+                  "Name": "Jester",
+                  "Img": "/assets/images/units/uef/land/T1Scout.png",
+                  "Changes": [],
+                  "AdditionalChanges": [
+                    {
+                      "Field": "Fix the bug where it would not do damage to moving units"
+                    },
+                    {
+                      "Field": "Replace splash damage with soft projectile homing"
+                    }
+                  ]
+                }
+              ]
+            }
+        ],
+        "Navy": [
+            {
+              "Heading": "Tech 2 Destroyer",
+              "Units": [
+                {
+                  "UnitID": "url0101",
+                  "Name": "UEF",
+                  "Img": "/assets/images/units/uef/land/T1Scout.png",
+                  "Changes": [
+                    {
+                      "Field": "TurretYawRange",
+                      "Change": [140, 160]
+                    },
+                    {
+                      "Field": "TurretYawSpeed",
+                      "Change": [90, 100]
+                    }
+                  ],
+                  "AdditionalChanges": [
+                    {
+                      "Field": "Torpedo firing cycle adjusted to combat torpedo defense better"
+                    }
+                  ]
+                },
+                {
+                  "UnitID": "url0101",
+                  "Name": "Cybran",
+                  "Img": "/assets/images/units/uef/land/T1Scout.png",
+                  "Changes": [
+                    {
+                      "Field": "TurretYawRange",
+                      "Change": [135, 140]
+                    }
+                  ],
+                  "AdditionalChanges": []
+                },
+                {
+                  "UnitID": "url0101",
+                  "Name": "Aeon",
+                  "Img": "/assets/images/units/uef/land/T1Scout.png",
+                  "Changes": [
+                    {
+                      "Field": "TurretYawRange",
+                      "Change": [160, 150]
+                    },
+                    {
+                      "Field": "TurretYawSpeed",
+                      "Change": [100, 90]
+                    }
+                  ],
+                  "AdditionalChanges": []
+                },
+                {
+                  "UnitID": "url0101",
+                  "Name": "Seraphim",
+                  "Img": "/assets/images/units/uef/land/T1Scout.png",
+                  "Changes": [],
+                  "AdditionalChanges": [
+                    {
+                      "Field": "Torpedo firing cycle adjusted to combat torpedo defense better"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "Heading": "Atlantis",
+              "Units": [
+                {
+                  "UnitID": "url0101",
+                  "Name": "Atlantis",
+                  "Img": "/assets/images/units/uef/land/T1Scout.png",
+                  "Changes": [],
+                  "AdditionalChanges": [
+                    {
+                      "Field": "Fix the AA behaving in a way inconsistent with the stats, adjust the stats to preserve the current balance"
+                    }
+                  ]
+                }
+              ]
+            }
+        ],
+        "Acus": [
+            {
+              "Heading": "Cybran ACU Stealth Upgrade",
+              "Units": [
+                {
+                  "UnitID": "cybranacu",
+                  "Name": "Cybran ACU Stealth Upgrade",
+                  "Img": "/assets/images/Enhancements/cybran/stealth.png",
+                  "Changes": [
+                    {
+                      "Field": "Gives cybran acu better chances in mid-game against ACUs that can have both T2 and gun at the same time."
+                    },
+                    {
+                      "Field": "EnergyCost",
+                      "Change": [5000, 14000]
+                    },
+                    {
+                      "Field": "MassCost",
+                      "Change": [350, 650]
+                    },
+                    {
+                      "Field": "BuildTime",
+                      "Change": [500, 800]
+                    },
+                    {
+                      "Field": "Provides 2000 extra HP"
+                    }
+                  ],
+                  "AdditionalChanges": []
+                }
+              ]
+            },
+            {
+              "Heading": "Sera ACU Regen Field Upgrade",
+              "Units": [
+                {
+                  "UnitID": "seraphimacu",
+                  "Name": "Sera ACU Regen Field Upgrade",
+                  "Img": "/assets/images/Enhancements/sera/advancedregenfield.png",
+                  "Changes": [
+                    {
+                      "Field": "This boosts the upgrade's attractiveness over the T2 upgrade and also fixes some inconsistencies where some units were getting more regen from the first upgrade tier than the second."
+                    },
+                    {
+                      "Field": "Now provides regen to the ACU itself, 10 hp/s for the first upgrade and 20 hp/s for the second"
+                    },
+                    {
+                      "Field": "Now uses different regen floor values for units depending on their tier:"
+                    },
+                    {
+                      "Field": "Basic Tier"
+                    },
+                    {
+                      "Field": "RegenFloorT1",
+                      "Change": [3]
+                    },
+                    {
+                      "Field": "RegenFloorT2",
+                      "Change": [8]
+                    },
+                    {
+                      "Field": "RegenFloorT3",
+                      "Change": [15]
+                    },
+                    {
+                      "Field": "RegenFloorT4",
+                      "Change": [25]
+                    },
+                    {
+                      "Field": "RegenFloorSCU",
+                      "Change": [15]
+                    },
+                    {
+                      "Field": "Advanced Tier"
+                    },
+                    {
+                      "Field": "RegenFloorT1",
+                      "Change": [15]
+                    },
+                    {
+                      "Field": "RegenFloorT2",
+                      "Change": [30]
+                    },
+                    {
+                      "Field": "RegenFloorT3",
+                      "Change": [60]
+                    },
+                    {
+                      "Field": "RegenFloorT4",
+                      "Change": [120]
+                    },
+                    {
+                      "Field": "RegenFloorSCU",
+                      "Change": [80]
+                    }
+                  ],
+                  "AdditionalChanges": []
+                }
+              ]
+            }
+        ],
+        "Structure": [
+            {
+            "Heading": "Kennel Drones",
+            "Units": [
+                {
+                "UnitID": "url0101",
+                "Name": "Kennel Drones",
+                "Img": "/assets/images/units/uef/land/T1Scout.png",
+                "Changes": [],
+                "AdditionalChanges": [
+                    {
+                    "Field": "Now have higher selection priority than buildings"
+                    }
+                ]
+                }
+            ]
+            },
+            {
+            "Heading": "UEF T3 Sonar",
+            "Units": [
+                {
+                "UnitID": "url0101",
+                "Name": "UEF T3 Sonar",
+                "Img": "/assets/images/units/uef/land/T1Scout.png",
+                "Changes": [],
+                "AdditionalChanges": [
+                    {
+                    "Field": "Add Jamming"
+                    }
+                ]
+                }
+            ]
+            },
+            {
+            "Heading": "Paragon",
+            "Units": [
+                {
+                "UnitID": "url0101",
+                "Name": "Paragon",
+                "Img": "/assets/images/units/uef/land/T1Scout.png",
+                "Changes": [],
+                "AdditionalChanges": [
+                    {
+                    "Field": "This will prevent the bug where despite not draining more E than paragon provides you still go into stall and drop shields."
+                    },
+                    {
+                    "Field": "Add a 100,000 E storage"
+                    }
+                ]
+                }
+            ]
+            },
+            {
+            "Heading": "T1 PDs",
+            "Units": [
+                {
+                "UnitID": "url0101",
+                "Name": "T1 PDs",
+                "Img": "/assets/images/units/uef/land/T1Scout.png",
+                "Changes": [],
+                "AdditionalChanges": [
+                    {
+                    "Field": "Adjust the hitboxes and bones of the PDs to make the wall-pd template behave the same way for each faction"
+                    }
+                ]
+                }
+            ]
+            },
+            {
+            "Heading": "T4 Artilleries",
+            "Units": [
+                {
+                "UnitID": "url0101",
+                "Name": "T4 Artilleries",
+                "Img": "/assets/images/units/uef/land/T1Scout.png",
+                "Changes": [],
+                "AdditionalChanges": [
+                    {
+                    "Field": "This makes all T4 arties viable for all 3 people who play 81x81 maps."
+                    },
+                    {
+                    "Field": "Ranges normalized to 4000 (Mavor range)"
+                    }
+                ]
+                }
+            ]
+            }
+        ]
+    }
+}
