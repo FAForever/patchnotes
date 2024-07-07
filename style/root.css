@@ -1,46 +1,46 @@
-/* Importing Google Font*/
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:wght@300&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Ubuntu&display=swap");
-@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css");
+/* Importing Google Font and Font Awesome */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Ubuntu&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css');
 
-/* Declaring Default Colors */
-
+/* Declaring Default Color */
 :root {
-  /* Background Colors */
-  --Background: #222831;
-  --IndexGridBackground: rgba(57, 62, 70, 0.85);
-  --IconGridBackground: #393e46;
+    /* Background Color */
+    --Background: #222831;
+    --FooterBackground: #393e46;
+    --IndexGridBackground: rgba(57, 62, 70, 0.85);
+    --IconGridBackground: #393e46;
 
-  /* Text Color */
-  --Text: #eee;
-  --Top: #000;
+    /* Text Color */
+    --Text: #EEE;
+    --Top: #000;
 
-  /* Card Color */
-  --Card: #393e46;
+    /* Card Color */
+    --Card: #393e46;
 
-  /* Tags */
-  --buff: rgba(86, 167, 39, 0.7);
-  --nerf: rgba(172, 31, 31, 0.7);
-  --stats: rgba(0, 0, 0, 0.6);
-  --removed: rgba(190, 92, 0, 0.6);
-  --added: rgba(31, 52, 172, 0.7);
+    /* Tags */
+    --buff: rgba(86, 167, 39, 0.7);
+    --nerf: rgba(172, 31, 31, 0.7);
+    --stats: rgba(0, 0, 0, 0.6);
+    --removed: rgba(190, 92, 0, 0.6);
+    --added: rgba(31, 52, 172, 0.7);
 
-  /* Link Colors */
-  --Link: #fff;
-  --Link-Card: #000;
-  --Link-Unvisited: #87cefa;
-  --Link-Visited: #dc143c;
-  --Link-Hover: #c2a732;
+    /* Link Color */
+    --Link: #eee;
+    --Link-Card: #000;
+    --Link-Unvisited: #87cefa;
+    --Link-Visited: #dc143c;
+    --Link-Hover: #c2a732;
 
-  /* Other */
-  --Strike: #999;
-  --Footer: #666;
-  --DM-HR: #444;
-  --LM-HR: #555;
+    /* Other */
+    --Strike: #999;
+    --Line: #444;
+    --LM-HR: #555;
+    --ButtonBackground: #4474c1;
+    --ButtonText: #fff;
+    --IconGlow: rgba(255, 255, 255, 0.7);
 }
 
 /* Base Elements */
-
 body {
   background: var(--Background);
   font-family: sans-serif;
@@ -52,31 +52,14 @@ body {
   padding: 0;
 }
 
-h1,
-h2,
-h3,
-h4 {
-  color: var(--Text);
+h1, h2, h3, h4, ul, li, p, footer {
+    color: var(--Text);
+    margin: 0;
 }
 
-ul,
-li {
-  color: var(--Text);
-}
-
-p {
-  color: var(--Text);
-}
-
-h1 {
-  font-size: 30px;
-}
-h2 {
-  font-size: 25px;
-}
-h3 {
-  font-size: 20px;
-}
+h1 { font-size: 30px; }
+h2 { font-size: 25px; }
+h3 { font-size: 20px; }
 
 s {
   color: var(--Strike);
@@ -88,51 +71,49 @@ img {
   height: 60px;
 }
 
-a {
-  color: var(--Link-Unvisited);
-  text-decoration: none;
-}
-a:visited {
-  color: var(--Link-Visited);
-}
-a:hover {
-  color: var(--Link-Hover);
-}
-a:active {
-  color: var(--Link-Active);
-}
-
 video {
   width: 900px;
   height: 100%;
 }
 
+footer {
+    text-align: center;
+    font-size: 16px;
+    background: var(--FooterBackground);
+    padding: 10px 0 5px;
+}
+
 /* Faction Images */
+.UEF, .AEON, .CYBRAN, .SERAPHIM {
+    width: 35px;
+    height: 35px;
+}
 
 .UEF {
-  filter: invert(44%) sepia(87%) saturate(705%) hue-rotate(171deg)
-    brightness(98%) contrast(94%);
-  width: 35px;
-  height: 35px;
+    filter: invert(44%) sepia(87%) saturate(705%) hue-rotate(171deg) brightness(98%) contrast(94%);
 }
 
 .AEON {
-  filter: invert(61%) sepia(12%) saturate(2280%) hue-rotate(73deg)
-    brightness(95%) contrast(82%);
-  width: 35px;
-  height: 35px;
+    filter: invert(61%) sepia(12%) saturate(2280%) hue-rotate(73deg) brightness(95%) contrast(82%);
 }
 
 .CYBRAN {
-  filter: invert(20%) sepia(47%) saturate(2292%) hue-rotate(335deg)
-    brightness(156%) contrast(107%);
-  width: 35px;
-  height: 35px;
+    filter: invert(20%) sepia(47%) saturate(2292%) hue-rotate(335deg) brightness(156%) contrast(107%);
 }
 
 .SERAPHIM {
-  filter: invert(74%) sepia(39%) saturate(1931%) hue-rotate(353deg)
-    brightness(105%) contrast(104%);
-  width: 35px;
-  height: 35px;
+    filter: invert(74%) sepia(39%) saturate(1931%) hue-rotate(353deg) brightness(105%) contrast(104%);
+}
+
+/* Flexbox Utility Classes */
+.FlexboxContainer {
+    display: flex;
+}
+
+.FlexGrow1 {
+    flex-grow: 1;
+}
+
+.FlexGrow4 {
+    flex-grow: 4;
 }

@@ -1,543 +1,1224 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="description" content="FAF Patch 3782 page" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8"/>
+    <meta name="description" content="FAF Patch 3782 page"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Patch 3801</title>
     <link rel="stylesheet" href="/style/balance.css"/>
 </head>
 <body>
-    <main class="Grid">
-        <div class="Content">
-            <div id="Intro">
-                <header class="FlexboxContainer">
-                    <h1 class="FlexGrow4">Patch 3801</h1>
-                    <h4 class="FlexGrow1" id="date">Date:<i> March 15 2024</i></h4>
-                </header>
-                <p>This balance update comprises numerous minor adjustments to certain units, providing them with backup capabilities at a distance. Additionally, there are a few significant changes, such as the introduction of the new Teleport mechanic, alongside some slight nerf's.</p>
-                <h3> Balance Team</h3>
-                <hr>
-            </div>
-
-            <h2>Land</h2>
-            <div id="1">
-                <div id="t1scouts" class="Card">
-                    <h3>T1 Scouts</h3>
-
-                    <h4><img src="/assets/images/units/uef/land/T1Scout.png" alt="Snoop">Snoop</h4>
-                    <ul>
-                        <li>BackUpDistance: <s>2</s> <i class="fa-solid fa-arrow-right"></i> 6</li>
-                    </ul>
-
-                    <h4><img src="/assets/images/units/aeon/land/T1Scout.png" alt="Spirit">Spirit</h4>
-                    <ul>
-                        <li>BackUpDistance: <s>2</s> <i class="fa-solid fa-arrow-right"></i> 6</li>
-                        <li>MaxSpeedReverse: <s>3</s> <i class="fa-solid fa-arrow-right"></i> 4.6</li>
-                    </ul>
-
-                    <h4><img src="/assets/images/units/cybran/land/T1Scout.png" alt="Mole">Mole</h4>
-                    <ul>
-                        <li>BackUpDistance: <s>0</s> <i class="fa-solid fa-arrow-right"></i> 6</li>
-                        <li>MaxSpeedReverse: <s>0</s> <i class="fa-solid fa-arrow-right"></i> 4.8</li>
-                    </ul>
-                </div>
-
-                <div id="t1aa" class="Card">
-                    <h3>T1 Anti-Air</h3>
-
-                    <h4><img src="/assets/images/units/uef/land/T1MobileAA.png">Archer</h4>
-                    <ul>
-                        <li>BackUpDistance: <s>0</s> <i class="fa-solid fa-arrow-right"></i> 6</li>
-                        <li>RotateOnStop: <s>true</s> <i class="fa-solid fa-arrow-right"></i> false</li>
-                    </ul>
-
-                    <h4><img src="/assets/images/units/cybran/land/T1MobileAA.png">Sky Slammer</h4>
-                    <ul>
-                        <li>BackUpDistance: <s>0</s> <i class="fa-solid fa-arrow-right"></i> 6</li>
-                        <li>MaxSpeedReverse: <s>0</s> <i class="fa-solid fa-arrow-right"></i> 2.9</li>
-                        <li>RotateOnStop: <s>true</s> <i class="fa-solid fa-arrow-right"></i> false</li>
-                    </ul>
-
-                    <h4><img src="/assets/images/units/aeon/land/T1MobileAA.png">Thistle</h4>
-                    <ul>
-                        <li>BackUpDistance: <s>0</s> <i class="fa-solid fa-arrow-right"></i> 6</li>
-                        <li>RotateOnStop: <s>true</s> <i class="fa-solid fa-arrow-right"></i> false</li>
-                    </ul>
-
-                    <h4><img src="/assets/images/units/sera/land/T1MobileAA.png">Ia-istle</h4>
-                    <ul>
-                        <li>BackUpDistance: <s>0</s> <i class="fa-solid fa-arrow-right"></i> 6</li>
-                    </ul>
-
-                </div>
-
-                <div id="t1tank" class="Card">
-                    <h3>T1 Tank</h3>
-
-                    <h4><img src="/assets/images/units/uef/land/T1Tank.png">Striker</h4>
-                    <ul>
-                        <li>BackUpDistance: <s>0</s> <i class="fa-solid fa-arrow-right"></i> 6</li>
-                        <li>MaxSpeedReverse: <s>0</s> <i class="fa-solid fa-arrow-right"></i> 3.4</li>
-                        <li>RotateOnStop: <s>true</s> <i class="fa-solid fa-arrow-right"></i> false</li>
-                    </ul>
-
-                    <h4><img src="/assets/images/units/aeon/land/T1Tank.png">Aurora</h4>
-                    <ul>
-                        <li>BackUpDistance: <s>0</s> <i class="fa-solid fa-arrow-right"></i> 6</li>
-                    </ul>
-
-                    <h4><img src="/assets/images/units/sera/land/T1Tank.png">Thaam</h4>
-                    <ul>
-                        <li>BackUpDistance: <s>0</s> <i class="fa-solid fa-arrow-right"></i> 6</li>
-                        <li>MaxSpeedReverse: <s>0</s> <i class="fa-solid fa-arrow-right"></i> 3.5</li>
-                        <li>RotateOnStop: <s>true</s> <i class="fa-solid fa-arrow-right"></i> false</li>
-                    </ul>
-                </div>
-
-                <div id="t1arty" class="Card">
-                    <h3>T1 Mobile Artilleries</h3>
-
-                    <h4><img src="/assets/images/units/uef/land/T1MobileArty.png">Lobo</h4>
-                    <ul>
-                        <li>BackUpDistance: <s>2</s> <i class="fa-solid fa-arrow-right"></i> 6</li>
-                    </ul>
-
-                    <h4><img src="/assets/images/units/aeon/land/T1MobileArty.png">Fervor</h4>
-                    <ul>
-                        <li>BackUpDistance: <s>0</s> <i class="fa-solid fa-arrow-right"></i> 6</li>
-                        <li>MaxSpeedReverse: <s>0</s> <i class="fa-solid fa-arrow-right"></i> 2.7</li>
-                        <li>RotateOnStop: <s>true</s> <i class="fa-solid fa-arrow-right"></i> false</li>
-                    </ul>
-
-                    <h4><img src="/assets/images/units/cybran/land/T1MobileArty.png">Medusa</h4>
-                    <ul>
-                        <li>BackUpDistance: <s>0</s> <i class="fa-solid fa-arrow-right"></i> 6</li>
-                        <li>MaxSpeedReverse: <s>0</s> <i class="fa-solid fa-arrow-right"></i> 2.9</li>
-                        <li>RotateOnStop: <s>true</s> <i class="fa-solid fa-arrow-right"></i> false</li>
-                    </ul>
-
-                    <h4><img src="/assets/images/units/sera/land/T1MobileArty.png">Zthuee</h4>
-                    <ul>
-                        <li>BackUpDistance: <s>0</s> <i class="fa-solid fa-arrow-right"></i> 6</li>
-                        <li>MaxSpeedReverse: <s>0</s> <i class="fa-solid fa-arrow-right"></i> 2.7</li>
-                    </ul>
-                </div>
-
-                <div id="t2shield" class="Card">
-                    <h3>T2 Mobile Shield</h3>
-
-                    <h4><img src="/assets/images/units/uef/land/T2MobileShield.png">Parashield</h4>
-                    <ul>
-                        <li>BackUpDistance: <s>0</s> <i class="fa-solid fa-arrow-right"></i> 8</li>
-                        <li>MaxSpeedReverse: <s>0</s> <i class="fa-solid fa-arrow-right"></i> 3.5</li>
-                        <li>RotateOnStop: <s>true</s> <i class="fa-solid fa-arrow-right"></i> false</li>
-                    </ul>
-
-                    <h4><img src="/assets/images/units/aeon/land/T2MobileShiled.png">Asylum</h4>
-                    <ul>
-                        <li>BackUpDistance: <s>0</s> <i class="fa-solid fa-arrow-right"></i> 8</li>
-                        <li>MaxSpeedReverse: <s>0</s> <i class="fa-solid fa-arrow-right"></i> 4</li>
-                        <li>RotateOnStop: <s>true</s> <i class="fa-solid fa-arrow-right"></i> false</li>
-                    </ul>
-
-                </div>
-
-                <div id="t2flack" class="Card">
-                    <h3>T2 Mobile Flack</h3>
-
-                    <h4><img src="/assets/images/units/uef/land/T2MobileFlack.png">Sky Boxer</h4>
-                    <ul>
-                        <li>BackUpDistance: <s>0</s> <i class="fa-solid fa-arrow-right"></i> 8</li>
-                        <li>MaxSpeedReverse: <s>0</s> <i class="fa-solid fa-arrow-right"></i> 3.1</li>
-                        <li>RotateOnStop: <s>true</s> <i class="fa-solid fa-arrow-right"></i> false</li>
-                    </ul>
-
-                    <h4><img src="/assets/images/units/aeon/land/T2MobileFlak.png">Ascendant</h4>
-                    <ul>
-                        <li>BackUpDistance: <s>0</s> <i class="fa-solid fa-arrow-right"></i> 8</li>
-                        <li>MaxSpeedReverse: <s>0</s> <i class="fa-solid fa-arrow-right"></i> 2.7</li>
-                        <li>RotateOnStop: <s>true</s> <i class="fa-solid fa-arrow-right"></i> false</li>
-                    </ul>
-
-                    <h4><img src="/assets/images/units/cybran/land/T2MobileFlack.png">Banger</h4>
-                    <ul>
-                        <li>BackUpDistance: <s>0</s> <i class="fa-solid fa-arrow-right"></i> 8</li>
-                        <li>MaxSpeedReverse: <s>0</s> <i class="fa-solid fa-arrow-right"></i> 2.9</li>
-                        <li>RotateOnStop: <s>true</s> <i class="fa-solid fa-arrow-right"></i> false</li>
-                    </ul>
-
-                    <h4><img src="/assets/images/units/sera/land/T2HoverFlack.png">Iashavoh</h4>
-                    <ul>
-                        <li>BackUpDistance: <s>0</s> <i class="fa-solid fa-arrow-right"></i> 8</li>
-                        <li>MaxSpeedReverse: <s>0</s> <i class="fa-solid fa-arrow-right"></i> 2.6</li>
-                    </ul>
-
-                </div>
-
-                <div id="t2amphibtank" class="Card">
-                    <h3>T2 Amphibious Tanks</h3>
-
-                    <h4><img src="/assets/images/units/uef/land/T2HoverTank.png">Riptide</h4>
-                    <ul>
-                        <li>BackUpDistance: <s>0</s> <i class="fa-solid fa-arrow-right"></i> 8</li>
-                        <li>MaxSpeedReverse: <s>0</s> <i class="fa-solid fa-arrow-right"></i> 3.7</li>
-                        <li>RotateOnStop: <s>true</s> <i class="fa-solid fa-arrow-right"></i> false</li>
-                    </ul>
-
-                    <h4><img src="/assets/images/units/aeon/land/T2HoverTank.png">Blaze</h4>
-                    <ul>
-                        <li>Health: <s>1100</s> <i class="fa-solid fa-arrow-right"></i> 1000</li>
-                        <li>BackUpDistance: <s>0</s> <i class="fa-solid fa-arrow-right"></i> 8</li>
-                        <li>MaxSpeedReverse: <s>0</s> <i class="fa-solid fa-arrow-right"></i> 4.3</li>
-                    </ul>
-
-                    <h4><img src="/assets/images/units/cybran/land/T2HoverTank.png">Wagner</h4>
-                    <ul>
-                        <li>BackUpDistance: <s>0</s> <i class="fa-solid fa-arrow-right"></i> 8</li>
-                        <li>MaxSpeedReverse: <s>0</s> <i class="fa-solid fa-arrow-right"></i> 3.7</li>
-                        <li>RotateOnStop: <s>true</s> <i class="fa-solid fa-arrow-right"></i> false</li>
-                    </ul>
-
-                    <h4><img src="/assets/images/units/sera/land/T2HoverTank.png">Yenzyne</h4>
-                    <ul>
-                        <li>BackUpDistance: <s>0</s> <i class="fa-solid fa-arrow-right"></i> 8</li>
-                        <li>MaxSpeedReverse: <s>0</s> <i class="fa-solid fa-arrow-right"></i> 4</li>
-                        <li>RotateOnStop: <s>true</s> <i class="fa-solid fa-arrow-right"></i> false</li>
-                    </ul>
-
-                </div>
-                
-                <div id="t2tank" class="Card">
-                    <h3>T2 Tanks</h3>
-
-                    <h4><img src="/assets/images/units/uef/land/T2Tank.png">Pillar</h4>
-                    <ul>
-                        <li>BackUpDistance: <s>0</s> <i class="fa-solid fa-arrow-right"></i> 8</li>
-                        <li>MaxSpeedReverse: <s>0</s> <i class="fa-solid fa-arrow-right"></i> 3.1</li>
-                        <li>RotateOnStop: <s>true</s> <i class="fa-solid fa-arrow-right"></i> false</li>
-                    </ul>
-
-                    <h4><img src="/assets/images/units/aeon/land/T2Tank.png">Obsidian</h4>
-                    <ul>
-                        <li>BackUpDistance: <s>0</s> <i class="fa-solid fa-arrow-right"></i> 8</li>
-                        <li>MaxSpeedReverse: <s>0</s> <i class="fa-solid fa-arrow-right"></i> 2.7</li>
-                        <li>RotateOnStop: <s>true</s> <i class="fa-solid fa-arrow-right"></i> false</li>
-                    </ul>
-
-                    <h4><img src="/assets/images/units/cybran/land/T2Tank.png">Rhino</h4>
-                    <ul>
-                        <li>BackUpDistance: <s>0</s> <i class="fa-solid fa-arrow-right"></i> 8</li>
-                        <li>MaxSpeedReverse: <s>0</s> <i class="fa-solid fa-arrow-right"></i> 2.9</li>
-                        <li>RotateOnStop: <s>true</s> <i class="fa-solid fa-arrow-right"></i> false</li>
-                    </ul>
-
-                    <h4><img src="/assets/images/units/sera/land/T2Tank.png">Ilshavoh</h4>
-                    <ul>
-                        <li>BackUpDistance: <s>0</s> <i class="fa-solid fa-arrow-right"></i> 8</li>
-                        <li>MaxSpeedReverse: <s>0</s> <i class="fa-solid fa-arrow-right"></i> 2.6</li>
-                    </ul>
-
-                </div>
-
-                <div id="mmls" class="Card">
-                    <h3>Mobile Missile Launchers</h3>
-
-                    <h4><img src="/assets/images/units/uef/land/T2MobileML.png">Flapjack</h4>
-                    <ul>
-                        <li>BackUpDistance: <s>4</s> <i class="fa-solid fa-arrow-right"></i> 8</li>
-                        <li>RotateOnStop: <s>true</s> <i class="fa-solid fa-arrow-right"></i> false</li>
-                    </ul>
-
-                    <h4><img src="/assets/images/units/uef/land/T3MobileML.png">Spearhead</h4>
-                    <ul>
-                        <li>BackUpDistance: <s>4</s> <i class="fa-solid fa-arrow-right"></i> 10</li>
-                        <li>MaxSpeedReverse: <s>2.5</s> <i class="fa-solid fa-arrow-right"></i> 2.8</li>
-                        <li>RotateOnStop: <s>true</s> <i class="fa-solid fa-arrow-right"></i> false</li>
-                    </ul>
-
-                    <h4><img src="/assets/images/units/aeon/land/T2MobileML.png">Evensong</h4>
-                    <ul>
-                        <li>BackUpDistance: <s>4</s> <i class="fa-solid fa-arrow-right"></i> 8</li>
-                        <li>RotateOnStop: <s>true</s> <i class="fa-solid fa-arrow-right"></i> false</li>
-                    </ul>
-
-                    <h4><img src="/assets/images/units/cybran/land/T2MobileML.png">Viper</h4>
-                    <ul>
-                        <li>BackUpDistance: <s>4</s> <i class="fa-solid fa-arrow-right"></i> 8</li>
-                        <li>RotateOnStop: <s>true</s> <i class="fa-solid fa-arrow-right"></i> false</li>
-                    </ul>
-
-                    <h4><img src="/assets/images/units/sera/land/T2MobileML.png">Ythisah</h4>
-                    <ul>
-                        <li>BackUpDistance: <s>0</s> <i class="fa-solid fa-arrow-right"></i> 8</li>
-                        <li>RotateOnStop: <s>true</s> <i class="fa-solid fa-arrow-right"></i> false</li>
-                    </ul>
-
-                </div>
-
-                <div id="t3mma" class="Card">
-                    <h3>T3 Mobile Anti-Air</h3>
-
-                    <h4><img src="/assets/images/units/uef/land/T3MobileAA.png">Cougar</h4>
-                    <ul>
-                        <li>BackUpDistance: <s>4</s> <i class="fa-solid fa-arrow-right"></i> 10</li>
-                        <li>MaxSpeedReverse: <s>1.4</s> <i class="fa-solid fa-arrow-right"></i> 3.3</li>
-                        <li>RotateOnStop: <s>true</s> <i class="fa-solid fa-arrow-right"></i> false</li>
-                    </ul>
-
-                    <h4><img src="/assets/images/units/sera/land/T3MobileAA.png">Uyanah</h4>
-                    <ul>
-                        <li>BackUpDistance: <s>4</s> <i class="fa-solid fa-arrow-right"></i> 10</li>
-                        <li>MaxSpeedReverse: <s>1.4</s> <i class="fa-solid fa-arrow-right"></i> 3.4</li>
-                    </ul>
-                </div>
-
-                <div id="t3arty" class="Card">
-                    <h3>T3 Mobile Artilleries</h3>
-
-                    <h4><img src="/assets/images/units/uef/land/T3MobileArty.png">Demolisher</h4>
-                    <ul>
-                        <li>BackUpDistance: <s>0</s> <i class="fa-solid fa-arrow-right"></i> 10</li>
-                        <li>MaxSpeedReverse: <s>0</s> <i class="fa-solid fa-arrow-right"></i> 2.2</li>
-                        <li>RotateOnStop: <s>true</s> <i class="fa-solid fa-arrow-right"></i> false</li>
-                    </ul>
-
-                    <h4><img src="/assets/images/units/aeon/land/T3MobileArty.png">Serenity</h4>
-                    <ul>
-                        <li>BackUpDistance: <s>0</s> <i class="fa-solid fa-arrow-right"></i> 10</li>
-                        <li>MaxSpeedReverse: <s>0</s> <i class="fa-solid fa-arrow-right"></i> 2.2</li>
-                        <li>RotateOnStop: <s>true</s> <i class="fa-solid fa-arrow-right"></i> false</li>
-                    </ul>
-
-                    <h4><img src="/assets/images/units/cybran/land/T3MobileArty.png">Trebuchet</h4>
-                    <ul>
-                        <li>BackUpDistance: <s>0</s> <i class="fa-solid fa-arrow-right"></i> 10</li>
-                        <li>MaxSpeedReverse: <s>0</s> <i class="fa-solid fa-arrow-right"></i> 2.2</li>
-                        <li>RotateOnStop: <s>true</s> <i class="fa-solid fa-arrow-right"></i> false</li>
-                    </ul>
-
-                    <h4><img src="/assets/images/units/sera/land/T3MobileArty.png">Uyanah</h4>
-                    <ul>
-                        <li>BackUpDistance: <s>0</s> <i class="fa-solid fa-arrow-right"></i> 10</li>
-                        <li>MaxSpeedReverse: <s>0</s> <i class="fa-solid fa-arrow-right"></i> 2.2</li>
-                        <li>RotateOnStop: <s>true</s> <i class="fa-solid fa-arrow-right"></i> false</li>
-                    </ul>
-                </div>
-
-                <div id="t3tanky" class="Card">
-                    <h3>T3 Tanks</h3>
-
-                    <h4><img src="/assets/images/units/cybran/land/T3Tank.png">The Brick</h4>
-                    <ul>
-                        <li>BackUpDistance: <s>0</s> <i class="fa-solid fa-arrow-right"></i> 10</li>
-                    </ul>
-
-                    <h4><img src="/assets/images/units/sera/land/T3Tank.png">Othuum</h4>
-                    <ul>
-                        <li>BackUpDistance: <s>15</s> <i class="fa-solid fa-arrow-right"></i> 10</li>
-                    </ul>
-                </div>
-
-                <div id="exp" class="Card">
-                    <h3>Experimentals</h3>
-
-                    <h4><img src="/assets/images/units/cybran/land/T4Mega.png">Megalith</h4>
-                    <ul>
-                        <li>BackUpDistance: <s>12</s> <i class="fa-solid fa-arrow-right"></i> 15</li>
-                        <li>MaxSpeedReverse: <s>0</s> <i class="fa-solid fa-arrow-right"></i> 2.95</li>
-                        <li>RotateOnStop: <s>true</s> <i class="fa-solid fa-arrow-right"></i> false</li>
-                    </ul>
-
-                    <h4><img src="/assets/images/units/cybran/land/T4MobileArty.png">Scathis</h4>
-                    <ul>
-                        <li>BackUpDistance: <s>0</s> <i class="fa-solid fa-arrow-right"></i> 15</li>
-                        <li>MaxSpeedReverse: <s>0</s> <i class="fa-solid fa-arrow-right"></i> 1.5</li>
-                        <li>RotateOnStop: <s>true</s> <i class="fa-solid fa-arrow-right"></i> false</li>
-                    </ul>
-                </div>
-            </div>
-
-            <h2>Air</h2>
-            <div id="2">
-                <div id="torps" class="Card">
-                    <h3>Torpedo Bombers</h3>
-
-                    <h4><img src="/assets/images/units/uef/air/T2TorpedoBomber.png">Stork</h4>
-                    <ul>
-                        <li>Damage: <s>150</s> <i class="fa-solid fa-arrow-right"></i> 187.5</li>
-                        <li>SalvoSize: <s>5</s> <i class="fa-solid fa-arrow-right"></i> 4</li>
-                    </ul>
-
-                    <h4><img src="/assets/images/units/aeon/air/T2TorpedoBomber.png">Skimmer</h4>
-                    <ul>
-                        <li>Damage: <s>150</s> <i class="fa-solid fa-arrow-right"></i> 187.5</li>
-                        <li>SalvoSize: <s>5</s> <i class="fa-solid fa-arrow-right"></i> 4</li>
-                    </ul>
-
-                    <h4><img src="/assets/images/units/aeon/air/T3TorpedoBomber.png">Solace</h4>
-                    <ul>
-                        <li>BreakOffDistance: <s>42</s> <i class="fa-solid fa-arrow-right"></i> 44</li>
-                        <li>Damage: <s>500</s> <i class="fa-solid fa-arrow-right"></i> 400</li>
-                        <li>MaxRadius: <s>32</s> <i class="fa-solid fa-arrow-right"></i> 26</li>
-                        <li>SalvoDelay: <s>0.4</s> <i class="fa-solid fa-arrow-right"></i> 0.2</li>
-                        <li>SalvoSize: <s>4</s> <i class="fa-solid fa-arrow-right"></i> 5</li>
-                        <li>RateOfFire: <s>0.08</s> <i class="fa-solid fa-arrow-right"></i> 0.1</li>
-                    </ul>
-
-                    <h4><img src="/assets/images/units/cybran/air/T2TorpedoBomber.png">Cormorant</h4>
-                    <ul>
-                        <li>Damage: <s>30</s> <i class="fa-solid fa-arrow-right"></i> 37.5</li>
-                        <li>SalvoSize: <s>5</s> <i class="fa-solid fa-arrow-right"></i> 4</li>
-                    </ul>
-
-                    <h4><img src="/assets/images/units/sera/air/T2TorpedoBomber.png">Uosioz</h4>
-                    <ul>
-                        <li>Damage: <s>150</s> <i class="fa-solid fa-arrow-right"></i> 375</li>
-                        <li>SalvoSize: <s>5</s> <i class="fa-solid fa-arrow-right"></i> 2</li>
-                    </ul>
-                </div>
-
-                <div id="cybranasf" class="Card">
-                    <h3>Cybran ASF</h3>
-
-                    <h4><img src="/assets/images/units/cybran/air/T3ASF.png">Gemini</h4>
-                    <ul>
-                        <li>StealthEnergyDrain: <s>25</s> <i class="fa-solid fa-arrow-right"></i> 30</li>
-                    </ul>
-                </div>
-            </div>
-
-            <h2>ACU/SCUs</h2>
-            <div id="4">
-                <div id="aeonchrono" class="Card">
-                    <h3><img src="/assets/images/Enhancements/aeon/chrono.png">Chrono Dampener</h3>
-                    <p>Chrono Dampener now can fire underwater</p>
-                </div>
-            </div>
-
-            <h2>Structure</h2>
-            <div id="5">
-                <div id="sonar" class="Card">
-                    <h3>Tech 3 Sonar &amp; Sera T2 Sonar</h3>
-
-                    <h4><img src="/assets/images/units/uef/structure/T3Sonar.png">UEF</h4>
-                    <ul>
-                        <li>BackUpDistance: <s>0</s> <i class="fa-solid fa-arrow-right"></i> 10</li>
-                        <li>MaxSpeedReverse: <s>0</s> <i class="fa-solid fa-arrow-right"></i> 4.5</li>
-                    </ul>
-
-                    <h4><img src="/assets/images/units/aeon/structure/T3Sonar.png">Aeon</h4>
-                    <ul>
-                        <li>BackUpDistance: <s>0</s> <i class="fa-solid fa-arrow-right"></i> 10</li>
-                        <li>MaxSpeedReverse: <s>0</s> <i class="fa-solid fa-arrow-right"></i> 4.5</li>
-                    </ul>
-
-                    <h4><img src="/assets/images/units/cybran/structure/T3Sonar.png">Cybran</h4>
-                    <ul>
-                        <li>BackUpDistance: <s>0</s> <i class="fa-solid fa-arrow-right"></i> 10</li>
-                        <li>MaxSpeedReverse: <s>0</s> <i class="fa-solid fa-arrow-right"></i> 4.5</li>
-                    </ul>
-
-                    <h4><img src="/assets/images/units/sera/structure/T2Sonar.png">Sera</h4>
-                    <ul>
-                        <li>BackUpDistance: <s>0</s> <i class="fa-solid fa-arrow-right"></i> 8</li>
-                        <li>MaxAcceleration: <s>2.5</s> <i class="fa-solid fa-arrow-right"></i> 2.8</li>
-                        <li>MaxBrake: <s>2.5</s> <i class="fa-solid fa-arrow-right"></i> 2.8</li>
-                        <li>MaxSpeed: <s>2.5</s> <i class="fa-solid fa-arrow-right"></i> 2.8</li>
-                        <li>MaxSpeedReverse: <s>0</s> <i class="fa-solid fa-arrow-right"></i> 2.8</li>
-                        <li>TurnRate: <s>20</s> <i class="fa-solid fa-arrow-right"></i> 60</li>
-                    </ul>
-
-                </div>
-
-              <div id="salvation" class="Card">
-                    <h3><img src="/assets/images/units/aeon/structure/T4RapidArty.png">T4 Arty (Salvation)</h3>
-                    <p>Small Nerf to the Salvation to be close to the balance back in 2016</p>
-                    <p>The drain is only increased so that the charging can actually keep up with the reload time, and it has no relevant balance consequences outside of needing 2 energy storages to fill in between charges.</p>
-                    <ul>
-                      <li>HP: <s>10000</s> <i class="fa-solid fa-arrow-right"></i> 9000</li>
-                      <li>EnergyDrainPerSecond: <s>10000</s> <i class="fa-solid fa-arrow-right"></i> 10714</li>
-                      <li>MinRadius: <s>175</s> <i class="fa-solid fa-arrow-right"></i> 150</li>
-                      <li>MuzzleChargeDelay: <s>0.15</s> <i class="fa-solid fa-arrow-right"></i> 0.2</li>
-                      <li>MuzzleVelocity: <s>150</s> <i class="fa-solid fa-arrow-right"></i> 98</li>
-                      <li>MuzzleVelocityReduceDistance: <s>4000</s> <i class="fa-solid fa-arrow-right"></i> 1400</li>
-                      <li>RackRecoilDistance: <s>-0.5</s> <i class="fa-solid fa-arrow-right"></i> -0.625</li>
-                    </ul>
-                </div>
-            </div>
-
-            <h2>Mechanics</h2>
-            <div id="6">
-                <div id="teleport" class="Card">
-                    <h3><img src="/assets/images/Enhancements/sera/teleport.png">Teleport</h3>
-                    <p>Teleport duration and energy costs now increase as you're trying to jump further. The minimum is a duration of 15 seconds at a cost of 5.000 energy per second. The maximum is a duration of 50 seconds at a cost of 50.000 energy per second. The maximum can only be reached on maps of size 40x40 or larger.</p>
-
-                    <video src="/assets/images/balance/3801/tellychnage.mp4" class="imgFeature" controls></video>
-
-                    <p>This is implemented as an alternative to a maximum teleport range. This implementation still allows people to jump as far as they wish but they're naturally constrained by their own economy.</p>
-                    <p>The expected costs of the teleport are displayed next to the cursor when you're trying to issue a teleport order. This uses the distance from the world position of the cursor to the unit. When you hold shift it instead uses the distance from the world position of the cursor to the last move and/or teleport order of the unit.</p>
-                </div>
-
-                <div id="wreks" class="Card">
-                    <h3><img src="/assets/images/orders/mechanic.png">Wrecks for Structures and Experimentals</h3>
-                    <p>Before this update, if a Structure or Experimental build hadn't been completed but had reached over 50% completion, it would generate a wreck. However, with this alteration, Structures or Experimentals won't produce any wrecks while still under construction.</p>
-                </div>
-
-            </div>
+  <main class="Grid">
+    <div class="Content">
+      <div class="Intro" id="Intro">
+        <header class="FlexboxContainer">
+          <h1 class="FlexGrow4">Patch 3801</h1>
+          <h4 class="FlexGrow1 Date">Date:<i> March 15 2024</i></h4>
+        </header>
+        <p>This balance update comprises numerous minor adjustments to certain units, providing them with backup capabilities at a distance. Additionally, there are a few significant changes, such as the introduction of the new Teleport mechanic, alongside some slight nerfs.</p>
+        <h3> Balance Team</h3>
+        <hr>
+      </div>
+
+      <h2>Land</h2> 
+        <div id="1">
+          <div id="t1scouts" class="Card">
+            <h3 class="SectionHeader"><u>Tech 1 Scouts</u></h3>
+              <h4><img src="/assets/images/units/uef/land/T1Scout.png" alt="Snoop">Snoop</h4>
+                <ul>
+                  <li>
+                    <b>BackUpDistance :</b>
+                    <span class="Stat">2</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                    <span class="Stat">6</span>
+                  </li>
+                </ul>
+
+              <h4><img src="/assets/images/units/aeon/land/T1Scout.png" alt="Spirit">Spirit</h4>
+                <ul>
+                    <li>
+                        <b>BackUpDistance :</b>
+                        <span class="Stat">2</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                        <span class="Stat">6</span>
+                    </li>
+                    <li>
+                        <b>MaxSpeedReverse :</b>
+                        <span class="Stat">3</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                        <span class="Stat">4.6</span>
+                    </li>
+                </ul>
+
+              <h4><img src="/assets/images/units/cybran/land/T1Scout.png" alt="Mole">Mole</h4>
+                <ul>
+                    <li>
+                        <b>BackUpDistance :</b>
+                        <span class="Stat">2</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                        <span class="Stat">6</span>
+                    </li>
+                    <li>
+                        <b>MaxSpeedReverse :</b>
+                        <span class="Stat">0</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                        <span class="Stat">4.8</span>
+                    </li>
+                </ul>
+          </div>
+
+          <div id="t1aa" class="Card">
+            <h3 class="SectionHeader"><u>Tech 1 Anti-Air</u></h3>
+
+            <h4><img src="/assets/images/units/uef/land/T1MobileAA.png">Archer</h4>
+              <ul>
+                <li>
+                  <b>BackUpDistance :</b>
+                  <span class="Stat">0</span>
+                  <i class="fa-solid fa-arrow-right"></i>
+                  <span class="Stat">6</span>
+                </li>
+                <li>
+                  <b>RotateOnStop :</b>
+                  <span class="Stat">True</span>
+                  <i class="fa-solid fa-arrow-right"></i>
+                  <span class="Stat">False</span>
+                </li>
+              </ul>
+
+            <h4><img src="/assets/images/units/cybran/land/T1MobileAA.png">Sky Slammer</h4>
+              <ul>
+                <li>
+                  <b>BackUpDistance :</b>
+                  <span class="Stat">0</span>
+                  <i class="fa-solid fa-arrow-right"></i>
+                  <span class="Stat">6</span>
+                </li>
+                <li>
+                  <b>MaxSpeedReverse :</b>
+                  <span class="Stat">0</span>
+                  <i class="fa-solid fa-arrow-right"></i>
+                  <span class="Stat">2.9</span>
+                </li>
+                <li>
+                  <b>RotateOnStop :</b>
+                  <span class="Stat">True</span>
+                  <i class="fa-solid fa-arrow-right"></i>
+                  <span class="Stat">False</span>
+                </li>
+              </ul>
+
+            <h4><img src="/assets/images/units/aeon/land/T1MobileAA.png">Thistle</h4>
+              <ul>
+                <li>
+                  <b>BackUpDistance :</b>
+                  <span class="Stat">0</span>
+                  <i class="fa-solid fa-arrow-right"></i>
+                  <span class="Stat">6</span>
+                </li>
+
+                <li>
+                  <b>RotateOnStop :</b>
+                  <span class="Stat">True</span>
+                  <i class="fa-solid fa-arrow-right"></i>
+                  <span class="Stat">False</span>
+                </li>
+              </ul>
+
+            <h4><img src="/assets/images/units/sera/land/T1MobileAA.png">Ia-istle</h4>
+              <ul>
+                  <li>
+                    <b>BackUpDistance :</b>
+                    <span class="Stat">0</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                    <span class="Stat">6</span>
+                  </li>
+              </ul>
+          </div>
+
+          <div id="t1tank" class="Card">
+            <h3 class="SectionHeader"><u>Tech 1 Tank</u></h3>
+          
+            <h4><img src="/assets/images/units/uef/land/T1Tank.png">Striker</h4>
+            <ul>
+              <li>
+                <b>BackUpDistance :</b>
+                <span class="Stat">0</span>
+                <i class="fa-solid fa-arrow-right"></i>
+                <span class="Stat">6</span>
+              </li>
+              <li>
+                <b>MaxSpeedReverse :</b>
+                <span class="Stat">0</span>
+                <i class="fa-solid fa-arrow-right"></i>
+                <span class="Stat">3.4</span>
+              </li>
+              <li>
+                <b>RotateOnStop :</b>
+                <span class="Stat">true</span>
+                <i class="fa-solid fa-arrow-right"></i>
+                <span class="Stat">false</span>
+              </li>
+            </ul>
+          
+            <h4><img src="/assets/images/units/aeon/land/T1Tank.png">Aurora</h4>
+            <ul>
+              <li>
+                <b>BackUpDistance :</b>
+                <span class="Stat">0</span>
+                <i class="fa-solid fa-arrow-right"></i>
+                <span class="Stat">6</span>
+              </li>
+            </ul>
+          
+            <h4><img src="/assets/images/units/sera/land/T1Tank.png">Thaam</h4>
+            <ul>
+              <li>
+                <b>BackUpDistance :</b>
+                <span class="Stat">0</span>
+                <i class="fa-solid fa-arrow-right"></i>
+                <span class="Stat">6</span>
+              </li>
+              <li>
+                <b>MaxSpeedReverse :</b>
+                <span class="Stat">0</span>
+                <i class="fa-solid fa-arrow-right"></i>
+                <span class="Stat">3.5</span>
+              </li>
+              <li>
+                <b>RotateOnStop :</b>
+                <span class="Stat">true</span>
+                <i class="fa-solid fa-arrow-right"></i>
+                <span class="Stat">false</span>
+              </li>
+            </ul>
+          </div>
+          
+          <div id="t1arty" class="Card">
+            <h3 class="SectionHeader"><u>Tech 1 Mobile Artilleries</u></h3>
+          
+            <h4><img src="/assets/images/units/uef/land/T1MobileArty.png">Lobo</h4>
+            <ul>
+              <li>
+                <b>BackUpDistance :</b>
+                <span class="Stat">2</span>
+                <i class="fa-solid fa-arrow-right"></i>
+                <span class="Stat">6</span>
+              </li>
+            </ul>
+          
+            <h4><img src="/assets/images/units/aeon/land/T1MobileArty.png">Fervor</h4>
+            <ul>
+              <li>
+                <b>BackUpDistance :</b>
+                <span class="Stat">0</span>
+                <i class="fa-solid fa-arrow-right"></i>
+                <span class="Stat">6</span>
+              </li>
+              <li>
+                <b>MaxSpeedReverse :</b>
+                <span class="Stat">0</span>
+                <i class="fa-solid fa-arrow-right"></i>
+                <span class="Stat">2.7</span>
+              </li>
+              <li>
+                <b>RotateOnStop :</b>
+                <span class="Stat">true</span>
+                <i class="fa-solid fa-arrow-right"></i>
+                <span class="Stat">false</span>
+              </li>
+            </ul>
+          
+            <h4><img src="/assets/images/units/cybran/land/T1MobileArty.png">Medusa</h4>
+            <ul>
+              <li>
+                <b>BackUpDistance :</b>
+                <span class="Stat">0</span>
+                <i class="fa-solid fa-arrow-right"></i>
+                <span class="Stat">6</span>
+              </li>
+              <li>
+                <b>MaxSpeedReverse :</b>
+                <span class="Stat">0</span>
+                <i class="fa-solid fa-arrow-right"></i>
+                <span class="Stat">2.9</span>
+              </li>
+              <li>
+                <b>RotateOnStop :</b>
+                <span class="Stat">true</span>
+                <i class="fa-solid fa-arrow-right"></i>
+                <span class="Stat">false</span>
+              </li>
+            </ul>
+          
+            <h4><img src="/assets/images/units/sera/land/T1MobileArty.png">Zthuee</h4>
+            <ul>
+              <li>
+                <b>BackUpDistance :</b>
+                <span class="Stat">0</span>
+                <i class="fa-solid fa-arrow-right"></i>
+                <span class="Stat">6</span>
+              </li>
+              <li>
+                <b>MaxSpeedReverse :</b>
+                <span class="Stat">0</span>
+                <i class="fa-solid fa-arrow-right"></i>
+                <span class="Stat">2.7</span>
+              </li>
+            </ul>
+          </div>
+          
+          <div id="t2shield" class="Card">
+            <h3 class="SectionHeader"><u>Tech 2 Mobile Shield</u></h3>
+          
+            <h4><img src="/assets/images/units/uef/land/T2MobileShield.png">Parashield</h4>
+            <ul>
+              <li>
+                <b>BackUpDistance :</b>
+                <span class="Stat">0</span>
+                <i class="fa-solid fa-arrow-right"></i>
+                <span class="Stat">8</span>
+              </li>
+              <li>
+                <b>MaxSpeedReverse :</b>
+                <span class="Stat">0</span>
+                <i class="fa-solid fa-arrow-right"></i>
+                <span class="Stat">3.5</span>
+              </li>
+              <li>
+                <b>RotateOnStop :</b>
+                <span class="Stat">true</span>
+                <i class="fa-solid fa-arrow-right"></i>
+                <span class="Stat">false</span>
+              </li>
+            </ul>
+          
+            <h4><img src="/assets/images/units/aeon/land/T2MobileShiled.png">Asylum</h4>
+            <ul>
+              <li>
+                <b>BackUpDistance :</b>
+                <span class="Stat">0</span>
+                <i class="fa-solid fa-arrow-right"></i>
+                <span class="Stat">8</span>
+              </li>
+              <li>
+                <b>MaxSpeedReverse :</b>
+                <span class="Stat">0</span>
+                <i class="fa-solid fa-arrow-right"></i>
+                <span class="Stat">4</span>
+              </li>
+              <li>
+                <b>RotateOnStop :</b>
+                <span class="Stat">true</span>
+                <i class="fa-solid fa-arrow-right"></i>
+                <span class="Stat">false</span>
+              </li>
+            </ul>
+          </div>
+
+          <div id="t2flack" class="Card">
+            <h3 class="SectionHeader"><u>Tech 2 Mobile Flack</u></h3>
+          
+            <h4><img src="/assets/images/units/uef/land/T2MobileFlack.png">Sky Boxer</h4>
+            <ul>
+              <li>
+                <b>BackUpDistance :</b>
+                <span class="Stat">0</span>
+                <i class="fa-solid fa-arrow-right"></i>
+                <span class="Stat">8</span>
+              </li>
+              <li>
+                <b>MaxSpeedReverse :</b>
+                <span class="Stat">0</span>
+                <i class="fa-solid fa-arrow-right"></i>
+                <span class="Stat">3.1</span>
+              </li>
+              <li>
+                <b>RotateOnStop :</b>
+                <span class="Stat">true</span>
+                <i class="fa-solid fa-arrow-right"></i>
+                <span class="Stat">false</span>
+              </li>
+            </ul>
+          
+            <h4><img src="/assets/images/units/aeon/land/T2MobileFlak.png">Ascendant</h4>
+            <ul>
+              <li>
+                <b>BackUpDistance :</b>
+                <span class="Stat">0</span>
+                <i class="fa-solid fa-arrow-right"></i>
+                <span class="Stat">8</span>
+              </li>
+              <li>
+                <b>MaxSpeedReverse :</b>
+                <span class="Stat">0</span>
+                <i class="fa-solid fa-arrow-right"></i>
+                <span class="Stat">2.7</span>
+              </li>
+              <li>
+                <b>RotateOnStop :</b>
+                <span class="Stat">true</span>
+                <i class="fa-solid fa-arrow-right"></i>
+                <span class="Stat">false</span>
+              </li>
+            </ul>
+          
+            <h4><img src="/assets/images/units/cybran/land/T2MobileFlack.png">Banger</h4>
+            <ul>
+              <li>
+                <b>BackUpDistance :</b>
+                <span class="Stat">0</span>
+                <i class="fa-solid fa-arrow-right"></i>
+                <span class="Stat">8</span>
+              </li>
+              <li>
+                <b>MaxSpeedReverse :</b>
+                <span class="Stat">0</span>
+                <i class="fa-solid fa-arrow-right"></i>
+                <span class="Stat">2.9</span>
+              </li>
+              <li>
+                <b>RotateOnStop :</b>
+                <span class="Stat">true</span>
+                <i class="fa-solid fa-arrow-right"></i>
+                <span class="Stat">false</span>
+              </li>
+            </ul>
+          
+            <h4><img src="/assets/images/units/sera/land/T2HoverFlack.png">Iashavoh</h4>
+            <ul>
+              <li>
+                <b>BackUpDistance :</b>
+                <span class="Stat">0</span>
+                <i class="fa-solid fa-arrow-right"></i>
+                <span class="Stat">8</span>
+              </li>
+              <li>
+                <b>MaxSpeedReverse :</b>
+                <span class="Stat">0</span>
+                <i class="fa-solid fa-arrow-right"></i>
+                <span class="Stat">2.6</span>
+              </li>
+            </ul>
+          </div>
+          
+          <div id="t2amphibtank" class="Card">
+            <h3 class="SectionHeader"><u>Tech 2 Amphibious Tanks</u></h3>
+          
+            <h4><img src="/assets/images/units/uef/land/T2HoverTank.png">Riptide</h4>
+            <ul>
+              <li>
+                <b>BackUpDistance :</b>
+                <span class="Stat">0</span>
+                <i class="fa-solid fa-arrow-right"></i>
+                <span class="Stat">8</span>
+              </li>
+              <li>
+                <b>MaxSpeedReverse :</b>
+                <span class="Stat">0</span>
+                <i class="fa-solid fa-arrow-right"></i>
+                <span class="Stat">3.7</span>
+              </li>
+              <li>
+                <b>RotateOnStop :</b>
+                <span class="Stat">true</span>
+                <i class="fa-solid fa-arrow-right"></i>
+                <span class="Stat">false</span>
+              </li>
+            </ul>
+          
+            <h4><img src="/assets/images/units/aeon/land/T2HoverTank.png">Blaze</h4>
+            <ul>
+              <li>
+                <b>Health :</b>
+                <span class="Stat">1100</span>
+                <i class="fa-solid fa-arrow-right"></i>
+                <span class="Stat">1000</span>
+              </li>
+              <li>
+                <b>BackUpDistance :</b>
+                <span class="Stat">0</span>
+                <i class="fa-solid fa-arrow-right"></i>
+                <span class="Stat">8</span>
+              </li>
+              <li>
+                <b>MaxSpeedReverse :</b>
+                <span class="Stat">0</span>
+                <i class="fa-solid fa-arrow-right"></i>
+                <span class="Stat">4.3</span>
+              </li>
+            </ul>
+          
+            <h4><img src="/assets/images/units/cybran/land/T2HoverTank.png">Wagner</h4>
+            <ul>
+              <li>
+                <b>BackUpDistance :</b>
+                <span class="Stat">0</span>
+                <i class="fa-solid fa-arrow-right"></i>
+                <span class="Stat">8</span>
+              </li>
+              <li>
+                <b>MaxSpeedReverse :</b>
+                <span class="Stat">0</span>
+                <i class="fa-solid fa-arrow-right"></i>
+                <span class="Stat">3.7</span>
+              </li>
+              <li>
+                <b>RotateOnStop :</b>
+                <span class="Stat">true</span>
+                <i class="fa-solid fa-arrow-right"></i>
+                <span class="Stat">false</span>
+              </li>
+            </ul>
+          
+            <h4><img src="/assets/images/units/sera/land/T2HoverTank.png">Yenzyne</h4>
+            <ul>
+              <li>
+                <b>BackUpDistance :</b>
+                <span class="Stat">0</span>
+                <i class="fa-solid fa-arrow-right"></i>
+                <span class="Stat">8</span>
+              </li>
+              <li>
+                <b>MaxSpeedReverse :</b>
+                <span class="Stat">0</span>
+                <i class="fa-solid fa-arrow-right"></i>
+                <span class="Stat">4</span>
+              </li>
+              <li>
+                <b>RotateOnStop :</b>
+                <span class="Stat">true</span>
+                <i class="fa-solid fa-arrow-right"></i>
+                <span class="Stat">false</span>
+              </li>
+            </ul>
+          </div>
+          
+          <div id="t2tank" class="Card">
+            <h3 class="SectionHeader"><u>Tech 2 Tanks</u></h3>
+          
+            <h4><img src="/assets/images/units/uef/land/T2Tank.png">Pillar</h4>
+            <ul>
+              <li>
+                <b>BackUpDistance :</b>
+                <span class="Stat">0</span>
+                <i class="fa-solid fa-arrow-right"></i>
+                <span class="Stat">8</span>
+              </li>
+              <li>
+                <b>MaxSpeedReverse :</b>
+                <span class="Stat">0</span>
+                <i class="fa-solid fa-arrow-right"></i>
+                <span class="Stat">3.1</span>
+              </li>
+              <li>
+                <b>RotateOnStop :</b>
+                <span class="Stat">true</span>
+                <i class="fa-solid fa-arrow-right"></i>
+                <span class="Stat">false</span>
+              </li>
+            </ul>
+          
+            <h4><img src="/assets/images/units/aeon/land/T2Tank.png">Obsidian</h4>
+            <ul>
+              <li>
+                <b>BackUpDistance :</b>
+                <span class="Stat">0</span>
+                <i class="fa-solid fa-arrow-right"></i>
+                <span class="Stat">8</span>
+              </li>
+              <li>
+                <b>MaxSpeedReverse :</b>
+                <span class="Stat">0</span>
+                <i class="fa-solid fa-arrow-right"></i>
+                <span class="Stat">2.7</span>
+              </li>
+              <li>
+                <b>RotateOnStop :</b>
+                <span class="Stat">true</span>
+                <i class="fa-solid fa-arrow-right"></i>
+                <span class="Stat">false</span>
+              </li>
+            </ul>
+          
+            <h4><img src="/assets/images/units/cybran/land/T2Tank.png">Rhino</h4>
+            <ul>
+              <li>
+                <b>BackUpDistance :</b>
+                <span class="Stat">0</span>
+                <i class="fa-solid fa-arrow-right"></i>
+                <span class="Stat">8</span>
+              </li>
+              <li>
+                <b>MaxSpeedReverse :</b>
+                <span class="Stat">0</span>
+                <i class="fa-solid fa-arrow-right"></i>
+                <span class="Stat">2.9</span>
+              </li>
+              <li>
+                <b>RotateOnStop :</b>
+                <span class="Stat">true</span>
+                <i class="fa-solid fa-arrow-right"></i>
+                <span class="Stat">false</span>
+              </li>
+            </ul>
+          
+            <h4><img src="/assets/images/units/sera/land/T2Tank.png">Ilshavoh</h4>
+            <ul>
+              <li>
+                <b>BackUpDistance :</b>
+                <span class="Stat">0</span>
+                <i class="fa-solid fa-arrow-right"></i>
+                <span class="Stat">8</span>
+              </li>
+              <li>
+                <b>MaxSpeedReverse :</b>
+                <span class="Stat">0</span>
+                <i class="fa-solid fa-arrow-right"></i>
+                <span class="Stat">2.6</span>
+              </li>
+            </ul>
+          </div>
+          
+          <div id="mmls" class="Card">
+            <h3 class="SectionHeader"><u>Mobile Missile Launchers</u></h3>
+          
+            <h4><img src="/assets/images/units/uef/land/T2MobileML.png">Flapjack</h4>
+            <ul>
+              <li>
+                <b>BackUpDistance :</b>
+                <span class="Stat">4</span>
+                <i class="fa-solid fa-arrow-right"></i>
+                <span class="Stat">8</span>
+              </li>
+              <li>
+                <b>RotateOnStop :</b>
+                <span class="Stat">true</span>
+                <i class="fa-solid fa-arrow-right"></i>
+                <span class="Stat">false</span>
+              </li>
+            </ul>
+          
+            <h4><img src="/assets/images/units/uef/land/T3MobileML.png">Spearhead</h4>
+            <ul>
+              <li>
+                <b>BackUpDistance :</b>
+                <span class="Stat">4</span>
+                <i class="fa-solid fa-arrow-right"></i>
+                <span class="Stat">10</span>
+              </li>
+              <li>
+                <b>MaxSpeedReverse :</b>
+                <span class="Stat">2.5</span>
+                <i class="fa-solid fa-arrow-right"></i>
+                <span class="Stat">2.8</span>
+              </li>
+              <li>
+                <b>RotateOnStop :</b>
+                <span class="Stat">true</span>
+                <i class="fa-solid fa-arrow-right"></i>
+                <span class="Stat">false</span>
+              </li>
+            </ul>
+          
+            <h4><img src="/assets/images/units/aeon/land/T2MobileML.png">Evensong</h4>
+            <ul>
+              <li>
+                <b>BackUpDistance :</b>
+                <span class="Stat">4</span>
+                <i class="fa-solid fa-arrow-right"></i>
+                <span class="Stat">8</span>
+              </li>
+              <li>
+                <b>RotateOnStop :</b>
+                <span class="Stat">true</span>
+                <i class="fa-solid fa-arrow-right"></i>
+                <span class="Stat">false</span>
+              </li>
+            </ul>
+          
+            <h4><img src="/assets/images/units/cybran/land/T2MobileML.png">Viper</h4>
+            <ul>
+              <li>
+                <b>BackUpDistance :</b>
+                <span class="Stat">4</span>
+                <i class="fa-solid fa-arrow-right"></i>
+                <span class="Stat">8</span>
+              </li>
+              <li>
+                <b>RotateOnStop :</b>
+                <span class="Stat">true</span>
+                <i class="fa-solid fa-arrow-right"></i>
+                <span class="Stat">false</span>
+              </li>
+            </ul>
+          
+            <h4><img src="/assets/images/units/sera/land/T2MobileML.png">Ythisah</h4>
+            <ul>
+              <li>
+                <b>BackUpDistance :</b>
+                <span class="Stat">0</span>
+                <i class="fa-solid fa-arrow-right"></i>
+                <span class="Stat">8</span>
+              </li>
+              <li>
+                <b>RotateOnStop :</b>
+                <span class="Stat">true</span>
+                <i class="fa-solid fa-arrow-right"></i>
+                <span class="Stat">false</span>
+              </li>
+            </ul>
+          </div>
+          
+          <div id="t3mma" class="Card">
+            <h3 class="SectionHeader"><u>Tech 3 Mobile Anti-Air</u></h3>
+          
+            <h4><img src="/assets/images/units/uef/land/T3MobileAA.png">Cougar</h4>
+            <ul>
+              <li>
+                <b>BackUpDistance :</b>
+                <span class="Stat">4</span>
+                <i class="fa-solid fa-arrow-right"></i>
+                <span class="Stat">10</span>
+              </li>
+              <li>
+                <b>MaxSpeedReverse :</b>
+                <span class="Stat">1.4</span>
+                <i class="fa-solid fa-arrow-right"></i>
+                <span class="Stat">3.3</span>
+              </li>
+              <li>
+                <b>RotateOnStop :</b>
+                <span class="Stat">true</span>
+                <i class="fa-solid fa-arrow-right"></i>
+                <span class="Stat">false</span>
+              </li>
+            </ul>
+          
+            <h4><img src="/assets/images/units/sera/land/T3MobileAA.png">Uyanah</h4>
+            <ul>
+              <li>
+                <b>BackUpDistance :</b>
+                <span class="Stat">4</span>
+                <i class="fa-solid fa-arrow-right"></i>
+                <span class="Stat">10</span>
+              </li>
+              <li>
+                <b>MaxSpeedReverse :</b>
+                <span class="Stat">1.4</span>
+                <i class="fa-solid fa-arrow-right"></i>
+                <span class="Stat">3.4</span>
+              </li>
+            </ul>
+          </div>
+          
+          <div id="t3arty" class="Card">
+            <h3 class="SectionHeader"><u>Tech 3 Mobile Artilleries</u></h3>
+          
+            <h4><img src="/assets/images/units/uef/land/T3MobileArty.png">Demolisher</h4>
+            <ul>
+              <li>
+                <b>BackUpDistance :</b>
+                <span class="Stat">0</span>
+                <i class="fa-solid fa-arrow-right"></i>
+                <span class="Stat">10</span>
+              </li>
+              <li>
+                <b>MaxSpeedReverse :</b>
+                <span class="Stat">0</span>
+                <i class="fa-solid fa-arrow-right"></i>
+                <span class="Stat">2.2</span>
+              </li>
+              <li>
+                <b>RotateOnStop :</b>
+                <span class="Stat">true</span>
+                <i class="fa-solid fa-arrow-right"></i>
+                <span class="Stat">false</span>
+              </li>
+            </ul>
+          
+            <h4><img src="/assets/images/units/aeon/land/T3MobileArty.png">Serenity</h4>
+            <ul>
+              <li>
+                <b>BackUpDistance :</b>
+                <span class="Stat">0</span>
+                <i class="fa-solid fa-arrow-right"></i>
+                <span class="Stat">10</span>
+              </li>
+              <li>
+                <b>MaxSpeedReverse :</b>
+                <span class="Stat">0</span>
+                <i class="fa-solid fa-arrow-right"></i>
+                <span class="Stat">2.2</span>
+              </li>
+              <li>
+                <b>RotateOnStop :</b>
+                <span class="Stat">true</span>
+                <i class="fa-solid fa-arrow-right"></i>
+                <span class="Stat">false</span>
+              </li>
+            </ul>
+          
+            <h4><img src="/assets/images/units/cybran/land/T3MobileArty.png">Trebuchet</h4>
+            <ul>
+              <li>
+                <b>BackUpDistance :</b>
+                <span class="Stat">0</span>
+                <i class="fa-solid fa-arrow-right"></i>
+                <span class="Stat">10</span>
+              </li>
+              <li>
+                <b>MaxSpeedReverse :</b>
+                <span class="Stat">0</span>
+                <i class="fa-solid fa-arrow-right"></i>
+                <span class="Stat">2.2</span>
+              </li>
+              <li>
+                <b>RotateOnStop :</b>
+                <span class="Stat">true</span>
+                <i class="fa-solid fa-arrow-right"></i>
+                <span class="Stat">false</span>
+              </li>
+            </ul>
+          
+            <h4><img src="/assets/images/units/sera/land/T3MobileArty.png">Uyanah</h4>
+            <ul>
+              <li>
+                <b>BackUpDistance :</b>
+                <span class="Stat">0</span>
+                <i class="fa-solid fa-arrow-right"></i>
+                <span class="Stat">10</span>
+              </li>
+              <li>
+                <b>MaxSpeedReverse :</b>
+                <span class="Stat">0</span>
+                <i class="fa-solid fa-arrow-right"></i>
+                <span class="Stat">2.2</span>
+              </li>
+              <li>
+                <b>RotateOnStop :</b>
+                <span class="Stat">true</span>
+                <i class="fa-solid fa-arrow-right"></i>
+                <span class="Stat">false</span>
+              </li>
+            </ul>
+          </div>
+          
+          <div id="t3tanky" class="Card">
+            <h3 class="SectionHeader"><u>Tech 3 Tanks</u></h3>
+          
+            <h4><img src="/assets/images/units/cybran/land/T3Tank.png">The Brick</h4>
+            <ul>
+              <li>
+                <b>BackUpDistance :</b>
+                <span class="Stat">0</span>
+                <i class="fa-solid fa-arrow-right"></i>
+                <span class="Stat">10</span>
+              </li>
+            </ul>
+          
+            <h4><img src="/assets/images/units/sera/land/T3Tank.png">Othuum</h4>
+            <ul>
+              <li>
+                <b>BackUpDistance :</b>
+                <span class="Stat">15</span>
+                <i class="fa-solid fa-arrow-right"></i>
+                <span class="Stat">10</span>
+              </li>
+            </ul>
+          </div>
+          
+          <div id="exp" class="Card">
+            <h3 class="SectionHeader"><u>Experimentals</u></h3>
+          
+            <h4><img src="/assets/images/units/cybran/land/T4Mega.png">Megalith</h4>
+            <ul>
+              <li>
+                <b>BackUpDistance :</b>
+                <span class="Stat">12</span>
+                <i class="fa-solid fa-arrow-right"></i>
+                <span class="Stat">15</span>
+              </li>
+              <li>
+                <b>MaxSpeedReverse :</b>
+                <span class="Stat">0</span>
+                <i class="fa-solid fa-arrow-right"></i>
+                <span class="Stat">2.95</span>
+              </li>
+              <li>
+                <b>RotateOnStop :</b>
+                <span class="Stat">true</span>
+                <i class="fa-solid fa-arrow-right"></i>
+                <span class="Stat">false</span>
+              </li>
+            </ul>
+          
+            <h4><img src="/assets/images/units/cybran/land/T4MobileArty.png">Scathis</h4>
+            <ul>
+              <li>
+                <b>BackUpDistance :</b>
+                <span class="Stat">0</span>
+                <i class="fa-solid fa-arrow-right"></i>
+                <span class="Stat">15</span>
+              </li>
+              <li>
+                <b>MaxSpeedReverse :</b>
+                <span class="Stat">0</span>
+                <i class="fa-solid fa-arrow-right"></i>
+                <span class="Stat">1.5</span>
+              </li>
+              <li>
+                <b>RotateOnStop :</b>
+                <span class="Stat">true</span>
+                <i class="fa-solid fa-arrow-right"></i>
+                <span class="Stat">false</span>
+              </li>
+            </ul>
+          </div>
         </div>
-        <div class="Sidebar">
-            <div class="IconSidebar">
-                <h2 class="IconSidebarTitle">Contents</h2>
-                <div class="IconSidebarSpace"></div>
-                <div class="IconSidebarSubgrid">
 
-                    <h3 class="IconSidebarSubtitle">Land</h3><br>
-                    <!-- ----------------LAND-------------------------- -->
-                    <a href="#t1scouts"><img src="/assets/images/units/uef/land/T1Scout.png" /></a>
-                    <a href="#t1aa"><img src="/assets/images/units/uef/land/T1MobileAA.png" /></a>
-                    <a href="#t1tank"><img src="/assets/images/units/uef/land/T1Tank.png" /></a>
-                    <a href="#t1arty"><img src="/assets/images/units/uef/land/T1MobileArty.png" /></a>
-                    <a href="#t2shield"><img src="/assets/images/units/uef/land/T2MobileShield.png" /></a>
-                    <a href="#t2flack"><img src="/assets/images/units/uef/land/T2MobileFlack.png" /></a>
-                    <a href="#t2amphibtank"><img src="/assets/images/units/uef/land/T2HoverTank.png" /></a>
-                    <a href="#t2tank"><img src="/assets/images/units/uef/land/T2Tank.png" /></a>
-                    <a href="#mmls"><img src="/assets/images/units/uef/land/T2MobileML.png" /></a>
-                    <a href="#t3mma"><img src="/assets/images/units/uef/land/T3MobileAA.png" /></a>
-                    <a href="#t3arty"><img src="/assets/images/units/uef/land/T3MobileArty.png" /></a>
-                    <a href="#t3tanky"><img src="/assets/images/units/cybran/land/T3Tank.png" /></a>
-                    <a href="#exp"><img src="/assets/images/units/cybran/land/T4Mega.png" /></a>
-
-                    <!-- ----------------AIR-------------------------- -->
-                    <h3 class="IconSidebarSubtitle">Air</h3><br>
-                    <a href="#torps"><img src="/assets/images/units/uef/air/T2TorpedoBomber.png" /></a>
-                    <a href="#cybranasf"><img src="/assets/images/units/cybran/air/T3ASF.png" /></a>
-                    
-                    <!-- ----------------NAVY--------------------------
-                    <h3 class="IconSidebarSubtitle">Navy</h3><br>
-                    -->
-        
-                    <!-- ----------------ACU/SCUs-------------------------- -->
-                    <h3 class="IconSidebarSubtitle">ACU/SCUs</h3><br>
-                    <a href="#aeonchrono"><img src="/assets/images/Enhancements/aeon/chrono.png" /></a>
-        
-                    <!-- ----------------STRUCTURE-------------------------- -->
-                    <h3 class="IconSidebarSubtitle">Structure</h3><br>
-                    <a href="#sonar"><img src="/assets/images/units/uef/structure/T3Sonar.png" /></a>
-                    <a href="#salvation"><img src="/assets/images/units/aeon/structure/T4RapidArty.png" /></a>
-
-                    <!-- ----------------MECHANICS-------------------------- -->
-                    <h3 class="IconSidebarSubtitle">Mechanics</h3><br>
-                    <a href="#teleport"><img src="/assets/images/Enhancements/sera/teleport.png" /></a>
-                    <a href="#wreks"><img src="/assets/images/orders/mechanic.png" /></a>
-                </div>
-            </div>
+      <h2>Air</h2>
+        <div id="2">
+          <div id="torps" class="Card">
+            <h3 class="SectionHeader"><u>Torpedo Bombers</u></h3>
+          
+            <h4><img src="/assets/images/units/uef/air/T2TorpedoBomber.png">Stork</h4>
+            <ul>
+              <li>
+                <b>Damage :</b>
+                <span class="Stat">150</span>
+                <i class="fa-solid fa-arrow-right"></i>
+                <span class="Stat">187.5</span>
+              </li>
+              <li>
+                <b>SalvoSize :</b>
+                <span class="Stat">5</span>
+                <i class="fa-solid fa-arrow-right"></i>
+                <span class="Stat">4</span>
+              </li>
+            </ul>
+          
+            <h4><img src="/assets/images/units/aeon/air/T2TorpedoBomber.png">Skimmer</h4>
+            <ul>
+              <li>
+                <b>Damage :</b>
+                <span class="Stat">150</span>
+                <i class="fa-solid fa-arrow-right"></i>
+                <span class="Stat">187.5</span>
+              </li>
+              <li>
+                <b>SalvoSize :</b>
+                <span class="Stat">5</span>
+                <i class="fa-solid fa-arrow-right"></i>
+                <span class="Stat">4</span>
+              </li>
+            </ul>
+          
+            <h4><img src="/assets/images/units/aeon/air/T3TorpedoBomber.png">Solace</h4>
+            <ul>
+              <li>
+                <b>BreakOffDistance :</b>
+                <span class="Stat">42</span>
+                <i class="fa-solid fa-arrow-right"></i>
+                <span class="Stat">44</span>
+              </li>
+              <li>
+                <b>Damage :</b>
+                <span class="Stat">500</span>
+                <i class="fa-solid fa-arrow-right"></i>
+                <span class="Stat">400</span>
+              </li>
+              <li>
+                <b>MaxRadius :</b>
+                <span class="Stat">32</span>
+                <i class="fa-solid fa-arrow-right"></i>
+                <span class="Stat">26</span>
+              </li>
+              <li>
+                <b>SalvoDelay :</b>
+                <span class="Stat">0.4</span>
+                <i class="fa-solid fa-arrow-right"></i>
+                <span class="Stat">0.2</span>
+              </li>
+              <li>
+                <b>SalvoSize :</b>
+                <span class="Stat">4</span>
+                <i class="fa-solid fa-arrow-right"></i>
+                <span class="Stat">5</span>
+              </li>
+              <li>
+                <b>RateOfFire :</b>
+                <span class="Stat">0.08</span>
+                <i class="fa-solid fa-arrow-right"></i>
+                <span class="Stat">0.1</span>
+              </li>
+            </ul>
+          
+            <h4><img src="/assets/images/units/cybran/air/T2TorpedoBomber.png">Cormorant</h4>
+            <ul>
+              <li>
+                <b>Damage :</b>
+                <span class="Stat">30</span>
+                <i class="fa-solid fa-arrow-right"></i>
+                <span class="Stat">37.5</span>
+              </li>
+              <li>
+                <b>SalvoSize :</b>
+                <span class="Stat">5</span>
+                <i class="fa-solid fa-arrow-right"></i>
+                <span class="Stat">4</span>
+              </li>
+            </ul>
+          
+            <h4><img src="/assets/images/units/sera/air/T2TorpedoBomber.png">Uosioz</h4>
+            <ul>
+              <li>
+                <b>Damage :</b>
+                <span class="Stat">150</span>
+                <i class="fa-solid fa-arrow-right"></i>
+                <span class="Stat">375</span>
+              </li>
+              <li>
+                <b>SalvoSize :</b>
+                <span class="Stat">5</span>
+                <i class="fa-solid fa-arrow-right"></i>
+                <span class="Stat">2</span>
+              </li>
+            </ul>
+          </div>
+          
+          <div id="cybranasf" class="Card">
+            <h3 class="SectionHeader"><u>Cybran ASF</u></h3>
+          
+            <h4><img src="/assets/images/units/cybran/air/T3ASF.png">Gemini</h4>
+            <ul>
+              <li>
+                <b>StealthEnergyDrain :</b>
+                <span class="Stat">25</span>
+                <i class="fa-solid fa-arrow-right"></i>
+                <span class="Stat">30</span>
+              </li>
+            </ul>
+          </div>
         </div>
-    </main>
+
+      <h2>ACU/SCUs</h2>
+        <div id="4">
+          <div id="aeonchrono" class="Card">
+            <h3 class="SectionHeader"><u>Aeon Upgrades</u></h3>
+
+            <h4><img src="/assets/images/Enhancements/aeon/chrono.png">Chrono Dampener</h4>
+            <ul>
+              <li>
+                <b>ChronoDampenerFireUnderWater :</b>
+                <span class="Stat">False</span>
+                <i class="fa-solid fa-arrow-right"></i>
+                <span class="Stat">True</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      <h2>Structure</h2>
+        <div id="5">
+          <div id="sonar" class="Card">
+            <h3 class="SectionHeader"><u>Tech 3 Sonar &amp; Sera Tech 2 Sonar</u></h3>
+          
+            <h4><img src="/assets/images/units/uef/structure/T3Sonar.png">UEF</h4>
+            <ul>
+              <li>
+                <b>BackUpDistance :</b>
+                <span class="Stat">0</span>
+                <i class="fa-solid fa-arrow-right"></i>
+                <span class="Stat">10</span>
+              </li>
+              <li>
+                <b>MaxSpeedReverse :</b>
+                <span class="Stat">0</span>
+                <i class="fa-solid fa-arrow-right"></i>
+                <span class="Stat">4.5</span>
+              </li>
+            </ul>
+          
+            <h4><img src="/assets/images/units/aeon/structure/T3Sonar.png">Aeon</h4>
+            <ul>
+              <li>
+                <b>BackUpDistance :</b>
+                <span class="Stat">0</span>
+                <i class="fa-solid fa-arrow-right"></i>
+                <span class="Stat">10</span>
+              </li>
+              <li>
+                <b>MaxSpeedReverse :</b>
+                <span class="Stat">0</span>
+                <i class="fa-solid fa-arrow-right"></i>
+                <span class="Stat">4.5</span>
+              </li>
+            </ul>
+          
+            <h4><img src="/assets/images/units/cybran/structure/T3Sonar.png">Cybran</h4>
+            <ul>
+              <li>
+                <b>BackUpDistance :</b>
+                <span class="Stat">0</span>
+                <i class="fa-solid fa-arrow-right"></i>
+                <span class="Stat">10</span>
+              </li>
+              <li>
+                <b>MaxSpeedReverse :</b>
+                <span class="Stat">0</span>
+                <i class="fa-solid fa-arrow-right"></i>
+                <span class="Stat">4.5</span>
+              </li>
+            </ul>
+          
+            <h4><img src="/assets/images/units/sera/structure/T2Sonar.png">Sera</h4>
+            <ul>
+              <li>
+                <b>BackUpDistance :</b>
+                <span class="Stat">0</span>
+                <i class="fa-solid fa-arrow-right"></i>
+                <span class="Stat">8</span>
+              </li>
+              <li>
+                <b>MaxAcceleration :</b>
+                <span class="Stat">2.5</span>
+                <i class="fa-solid fa-arrow-right"></i>
+                <span class="Stat">2.8</span>
+              </li>
+              <li>
+                <b>MaxBrake :</b>
+                <span class="Stat">2.5</span>
+                <i class="fa-solid fa-arrow-right"></i>
+                <span class="Stat">2.8</span>
+              </li>
+              <li>
+                <b>MaxSpeed :</b>
+                <span class="Stat">2.5</span>
+                <i class="fa-solid fa-arrow-right"></i>
+                <span class="Stat">2.8</span>
+              </li>
+              <li>
+                <b>MaxSpeedReverse :</b>
+                <span class="Stat">0</span>
+                <i class="fa-solid fa-arrow-right"></i>
+                <span class="Stat">2.8</span>
+              </li>
+              <li>
+                <b>TurnRate :</b>
+                <span class="Stat">20</span>
+                <i class="fa-solid fa-arrow-right"></i>
+                <span class="Stat">60</span>
+              </li>
+            </ul>
+          </div>
+          
+          <div id="salvation" class="Card">
+            <h3 class="SectionHeader"><u>Experimentals</u></h3>
+
+            <h4><img src="/assets/images/units/aeon/structure/T4RapidArty.png">T4 Arty (Salvation)</h4>
+            <p>Small Nerf to the Salvation to be close to the balance back in 2016</p>
+            <p>The drain is only increased so that the charging can actually keep up with the reload time, and it has no relevant balance consequences outside of needing 2 energy storages to fill in between charges.</p>
+            <ul>
+              <li>
+                <b>HP :</b>
+                <span class="Stat">10000</span>
+                <i class="fa-solid fa-arrow-right"></i>
+                <span class="Stat">9000</span>
+              </li>
+              <li>
+                <b>EnergyDrainPerSecond :</b>
+                <span class="Stat">10000</span>
+                <i class="fa-solid fa-arrow-right"></i>
+                <span class="Stat">10714</span>
+              </li>
+              <li>
+                <b>MinRadius :</b>
+                <span class="Stat">175</span>
+                <i class="fa-solid fa-arrow-right"></i>
+                <span class="Stat">150</span>
+              </li>
+              <li>
+                <b>MuzzleChargeDelay :</b>
+                <span class="Stat">0.15</span>
+                <i class="fa-solid fa-arrow-right"></i>
+                <span class="Stat">0.2</span>
+              </li>
+              <li>
+                <b>MuzzleVelocity :</b>
+                <span class="Stat">150</span>
+                <i class="fa-solid fa-arrow-right"></i>
+                <span class="Stat">98</span>
+              </li>
+              <li>
+                <b>MuzzleVelocityReduceDistance :</b>
+                <span class="Stat">4000</span>
+                <i class="fa-solid fa-arrow-right"></i>
+                <span class="Stat">1400</span>
+              </li>
+              <li>
+                <b>RackRecoilDistance :</b>
+                <span class="Stat">-0.5</span>
+                <i class="fa-solid fa-arrow-right"></i>
+                <span class="Stat">-0.625</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </div>
+    <div class="Sidebar">
+      <div class="IconSidebar">
+        <h2 class="IconSidebarTitle"><u>Contents</u></h2>
+        <div class="IconSidebarSubgrid">
+
+          <h3 class="IconSidebarSubtitle"> Land </h3>
+          <!-- ----------------LAND-------------------------- -->
+          <a aria-label="t1scout"      href="#t1scouts">      <img aria-label="unit-icon" src="/assets/images/units/uef/land/T1Scout.png"/>           </a>
+          <a aria-label="t1aa"         href="#t1aa">          <img aria-label="unit-icon" src="/assets/images/units/uef/land/T1MobileAA.png"/>        </a>
+          <a aria-label="t1tank"       href="#t1tank">        <img aria-label="unit-icon" src="/assets/images/units/uef/land/T1Tank.png"/>            </a>
+          <a aria-label="t1arty"       href="#t1arty">        <img aria-label="unit-icon" src="/assets/images/units/uef/land/T1MobileArty.png"/>      </a>
+          <a aria-label="t2shield"     href="#t2shield">      <img aria-label="unit-icon" src="/assets/images/units/uef/land/T2MobileShield.png"/>    </a>
+          <a aria-label="t2flack"      href="#t2flack">       <img aria-label="unit-icon" src="/assets/images/units/uef/land/T2MobileFlack.png" />    </a>
+          <a aria-label="t2amphibtank" href="#t2amphibtank">  <img aria-label="unit-icon" src="/assets/images/units/uef/land/T2HoverTank.png"/>       </a>
+          <a aria-label="t2tank"       href="#t2tank">        <img aria-label="unit-icon" src="/assets/images/units/uef/land/T2Tank.png"/>            </a>
+          <a aria-label="mmls"         href="#mmls">          <img aria-label="unit-icon" src="/assets/images/units/uef/land/T2MobileML.png"/>        </a>
+          <a aria-label="t3mma"        href="#t3mma">         <img aria-label="unit-icon" src="/assets/images/units/uef/land/T3MobileAA.png"/>        </a>
+          <a aria-label="t3arty"       href="#t3arty">        <img aria-label="unit-icon" src="/assets/images/units/uef/land/T3MobileArty.png"/>      </a>
+          <a aria-label="t3tanky"      href="#t3tanky">       <img aria-label="unit-icon" src="/assets/images/units/cybran/land/T3Tank.png"/>         </a>
+          <a aria-label="exp"          href="#exp">           <img aria-label="unit-icon" src="/assets/images/units/cybran/land/T4Mega.png"/>         </a>
+
+          <h3 class="IconSidebarSubtitle"> Air </h3>
+          <!-- ----------------AIR-------------------------- -->
+          <a aria-label="torps"        href="#torps">         <img aria-label="unit-icon" src="/assets/images/units/uef/air/T2TorpedoBomber.png"/>    </a>
+          <a aria-label="cybranasf"    href="#cybranasf">     <img aria-label="unit-icon" src="/assets/images/units/cybran/air/T3ASF.png"/>           </a>
+
+          <!-- ----------------ACU/SCUs-------------------------- -->
+          <h3 class="IconSidebarSubtitle"> Acu &amp; Sacu </h3>
+          <a aria-label="Chrono"       href="#aeonchrono">    <img aria-label="unit-icon" src="/assets/images/Enhancements/aeon/chrono.png"/>         </a>
+
+          <!-- ----------------STRUCTURE-------------------------- -->
+          <h3 class="IconSidebarSubtitle"> Structure </h3>
+          <a aria-label="sonar"        href="#sonar">         <img aria-label="unit-icon" src="/assets/images/units/uef/structure/T3Sonar.png" />     </a>
+          <a aria-label="salvation"    href="#salvation">     <img aria-label="unit-icon" src="/assets/images/units/aeon/structure/T4RapidArty.png"/> </a>
+        </div>
+      </div>
+    </div>
+  </main>
 </body>
 <footer>
-    <div class="BackToTop"><button><a class="TopText" href="#top">Back to Top</a></button></div><br>
-    <a href="/../index.html">Back to Patchnote List</a>
+  <div class="BackToTop">
+    <a class="TopText" href="#top">
+      <i class="fas fa-arrow-up"></i> Back to Top
+    </a>
+  </div>
+  <div class="FooterLinks">
+    <a href="/../index.html">
+      <i class="fas fa-list"></i> Back to Patchnote List
+    </a>
+  </div>
+  <div class="Copyright">
     <p>© 2015-2024 FAForever</p>
+  </div>
 </footer>
+
 </html>

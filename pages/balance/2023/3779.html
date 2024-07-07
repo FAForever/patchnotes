@@ -102,33 +102,6 @@
                 </div>
             </div>
 
-            <h2>Mechanics</h2>
-            <div id="7">
-                <div id="tml" class="Card">
-                    <h3><img src="/assets/images/orders/tml.webp">TML</h3>
-                    <p>Improved the behavior of tactical missiles across the board.</p>
-                    <p>Targeting behavior now considers the full orientation of the unit, enhancing accuracy against units on slopes.</p>
-                    <p>Adjusted zig-zag behavior to reduce last-minute zig-zagging before impact, making Aeon tactical missiles more accurate.</p>
-                </div>
-
-                <div id="intel range" class="Card">
-                    <h3><img src="/assets/images/orders/mechanic.png">Fix intel ranges being inaccurate</h3>
-                    <p>This is a complicated but interesting change. For the player, intel is visualized as a perfect circle. However, for the engine, intel is processed in a grid. The grid is coarse - the size of a cell for vision is 2 walls, and for all other types of (counter) intel, it is 4 walls.</p>
-                    <p>This has consequences. Imagine four units with a radar radius of 28, 29, 30, and 31. Visually, it appears that the last unit with a radar radius of 31 provides more intel than the unit with a radar radius of 28. For the engine, however, because the size of a cell in the intel grid is 4 walls large, it doesn't matter - the units with 29, 30, and 31 radar range provide as much intel as the unit with 28 radar range.</p>
-                    <p>With these changes, we reviewed all intel radii to ensure the value aligns with the value that the intel grid actually applies. As a result, the intel radius of units may appear smaller, but for the engine, they are the same. Therefore, the intel radii that you see now are more accurate.</p>
-                    <p>An extensive test suite is also introduced to keep the intel ranges of units accurate as time passes.</p>
-                </div>
-
-                <div id="intel-freq" class="Card">
-                    <h3><img src="/assets/images/orders/mechanic.png">Increase the intel update frequency from 3 seconds to 0.5 seconds</h3>
-                    <p>In the average case, intel would only update every 3 seconds (or 30 ticks). With thanks to an assembly patch, intel now updates every 0.5 seconds (or 5 ticks). This impacts not just what you see as a player but also how quickly the weapons of your units may react to blips that suddenly pop up in their range.</p>
-                </div>
-
-                <div id="vision" class="Card">
-                    <h3><img src="/assets/images/orders/mechanic.png">Revert of the 15% global vision range increase as introduced by game version 3761</h3>
-                    <p>The vision range of various units was increased because of the slow update frequency of intel. With thanks to the assembly patch, the update frequency of intel is increased with 600%, and therefore, we're reverting the global vision range increase.</p>
-                </div>
-            </div>
         </div>
         <div class="Sidebar">
             <div class="IconSidebar">
@@ -154,19 +127,24 @@
                     <a href="#eye"><img src="/assets/images/units/aeon/structure/T4Optics.png" /></a>
                     <a href="#ravanger"><img src="/assets/images/units/uef/structure/T3PointDef.png" /></a>
 
-                    <h3 class="IconSidebarSubtitle">Mechanics</h3><br>
-                    <a href="#tml"><img src="/assets/images/orders/tml.webp" /></a>
-                    <a href="#intel range"><img src="/assets/images/orders/mechanic.png" /></a>
-                    <a href="#intel-freq"><img src="/assets/images/orders/mechanic.png" /></a>
-                    <a href="#vision"><img src="/assets/images/orders/mechanic.png" /></a>
                 </div>
             </div>
         </div>
     </main>
 </body>
 <footer>
-    <div class="BackToTop"><button><a class="TopText" href="#top">Back to Top</a></button></div><br>
-    <a href="/../index.html">Back to Patchnote List</a>
+  <div class="BackToTop">
+    <a class="TopText" href="#top">
+      <i class="fas fa-arrow-up"></i> Back to Top
+    </a>
+  </div>
+  <div class="FooterLinks">
+    <a href="/../index.html">
+      <i class="fas fa-list"></i> Back to Patchnote List
+    </a>
+  </div>
+  <div class="Copyright">
     <p>© 2015-2024 FAForever</p>
+  </div>
 </footer>
 </html>

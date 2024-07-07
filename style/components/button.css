@@ -1,0 +1,14 @@
+button {
+ border-radius: 5px;
+ padding: 8px;
+ background: var(--ButtonBackground);   
+ color: var(--ButtonText);
+ border: none;
+ text-decoration: none;
+ font-size: 18px;
+}
+
+button a{
+    color: var(--Link);
+    text-decoration: none;
+}
