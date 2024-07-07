@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="description" content="FAF Patch 3782 page" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Patch 38XX</title>
+    <title>Patch 3810</title>
     <link rel="stylesheet" href="/style/balance.css"/>
 </head>
 <body>
@@ -12,8 +12,8 @@
         <div class="Content">
             <div id="Intro">
                 <header class="FlexboxContainer">
-                    <h1 class="FlexGrow4">Patch 38XX</h1>
-                    <h4 class="FlexGrow1" id="date">Date:<i> XXXX XX 2024</i></h4>
+                    <h1 class="FlexGrow4">Patch 3810</h1>
+                    <h4 class="FlexGrow1" id="date">Date:<i> July 7th 2024</i></h4>
                 </header>
                 <p>This balance update comprises numerous minor adjustments to certain units, providing them with backup capabilities at a distance. Additionally, there are a few significant changes, such as the introduction of the new Teleport mechanic, alongside some slight nerf's.</p>
                 <h3> Balance Team</h3>
@@ -45,20 +45,64 @@
                 <div id="rangebot" class="Card">
                     <h3>T2 Range Bot</h3>
 
+                    <p>Allow Mongoose to fire from transports.</p>
+
                     <h4><img src="/assets/images/units/uef/land/T2RangeBot.png">Mongoose</h4>
                     <ul>
                         <li>ShootFromTransport: <s>False</s> <i class="fa-solid fa-arrow-right"></i> True</li>
+                    </ul>
+
+                    <h4><img src="/assets/images/units/cybran/land/T2RangeBot.png">Hoplite</h4>
+                    <ul>
+                        <li>MuzzleVelocity: <s>20</s> <i class="fa-solid fa-arrow-right"></i> 25</li>
+                    </ul>
+                </div>
+
+                <div id="ilshy" class="Card">
+                    <h3>T2 Bot</h3>
+
+                    <h4><img src="/assets/images/units/sera/land/T2Tank.png">Ilshavoh</h4>
+                    <ul>
+                        <li>MaxTurnRate: <s>75</s> <i class="fa-solid fa-arrow-right"></i> 90</li>
+                        <li>TurnOnSpotRate: <s>45</s> <i class="fa-solid fa-arrow-right"></i> 90</li>
+                    </ul>
+                </div>
+
+                <div id="othuum" class="Card">
+                    <h3>Tech 3 Tank</h3>
+
+                    <h4><img src="/assets/images/units/sera/land/T3Tank.png">Othuum</h4>
+
+                    <p>Greatly increase Othuum's maneuverability and slightly increase the range of its short range guns to make it better in early T3 rushes and T3 raids.</p>
+
+                    <ul>
+                        <li>TurnRate: <s>75</s> <i class="fa-solid fa-arrow-right"></i> 90</li>
+                        <li>MaxBrake: <s>2.85</s> <i class="fa-solid fa-arrow-right"></i> 3.55</li>
+                        <li>Bolters:
+                            <ul>
+                                <li>Range: <s>20</s> <i class="fa-solid fa-arrow-right"></i> 22</li>
+                                <li>YawSpeed: <s>120</s> <i class="fa-solid fa-arrow-right"></i> 170</li>
+                            </ul>
+                        </li>
+                        <li>Cannon:
+                            <ul>
+                                <li>YawSpeed: <s>90</s> <i class="fa-solid fa-arrow-right"></i> 125</li>
+                            </ul>
+                        </li>
                     </ul>
                 </div>
 
                 <div id="t3mma" class="Card">
                     <h3>T3 Mobile Anti-Air</h3>
 
+                    <p>Increase UEF T3 MAA's damage and DPS, and swap its speed with Aeon's T3 MAA.</p>
+
+                    <p>This brings its DPS closer in line with other factions. It can now take out a strategic bomber in 3 salvo's instead of 4. And with the increased movement speed it can better keep up to Titans and Parashields. Swapping the speed with Redeemer maintains a semblance of faction diversity. Redeemer was chosen because it doesn't really need its speed due to asylums being far too quick (4.0) to keep up with, and harbingers being relatively slow at 3.0 speed.</p>
+
                     <h4><img src="/assets/images/units/uef/land/T3MobileAA.png">Cougar</h4>
                     <ul>
+                        <li>DamagePerVolley: <s>1200</s> <i class="fa-solid fa-arrow-right"></i> 1400</li>
                         <li>Speed: <s>3.3</s> <i class="fa-solid fa-arrow-right"></i> 3.5</li>
-                        <li>BrakeSpeed: <s>3.3</s> <i class="fa-solid fa-arrow-right"></i> 3.5</li>
-                        <li>ReverseSpeed: <s>3.3</s> <i class="fa-solid fa-arrow-right"></i> 3.5</li>
                         <li>SalvoSize: <s>12</s> <i class="fa-solid fa-arrow-right"></i> 14</li>
                         <li>ReloadTime: <s>4.5</s> <i class="fa-solid fa-arrow-right"></i> 4.3</li>
                     </ul>
@@ -70,8 +114,31 @@
                 </div>
             </div>
 
-            <h2>Naval</h2>
+            <h2>Air</h2>
             <div id="2">
+                <div id="t2gunship" class="Card">
+                    <h3>Tech 2 Gunship</h3>
+
+                    <h4><img src="/assets/images/units/sera/air/T2Gunship.png">Vulthoo</h4>
+
+                    <ul>
+                        <li>Damage: <s>19.2</s> <i class="fa-solid fa-arrow-right"></i> 20</li>
+                        <li>MaxRadius: <s>22</s> <i class="fa-solid fa-arrow-right"></i> 24</li>
+                    </ul>
+                </div>
+                <div id="t3gunship" class="Card">
+                    <h3>Tech 3 Gunship</h3>
+
+                    <h4><img src="/assets/images/units/cybran/air/T3Gunship.png">Wailer</h4>
+                    <ul>
+                        <li>MuzzleVelocity: <s>13</s> <i class="fa-solid fa-arrow-right"></i> 22</li>
+                        <li>ProjectileLifetime: <s>2</s> <i class="fa-solid fa-arrow-right"></i> 2.4</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h2>Naval</h2>
+            <div id="3">
                 <div id="destroyers" class="Card">
                     <h3>Tech 2 Destroyers</h3>
 
@@ -93,18 +160,31 @@
                     </ul>
                 </div>
 
+                <div id="baracuda" class="Card">
+                    <h3>Tech 2 Sub </h3>
+
+                    <h4><img src="/assets/images/units/cybran/naval/T2Sub.png">Barracuda</h4>
+                    <ul>
+                        <li>EnergyMaintenanceCost: <s>30</s> <i class="fa-solid fa-arrow-right"></i> 45</li>
+                    </ul>
+
+                </div>
+
                 <div id="sub-hunter" class="Card">
                     <h3><img src="/assets/images/units/sera/naval/T3SubHunter.png" alt="sub-hunter">T3 Sub Hunter</h3>
+
+                    <p>After receiving several buffs, the Seraphim Tech 3 Submarine Hunter has become too oppressive, especially in larger formations. These changes aim to bring it back in line, while preserving its identity.</p>
+
                     <ul>
                         <li>Main Weapon:
                             <ul>
-                              <li>Damage: <s>290</s> <i class="fa-solid fa-arrow-right"></i> 380</li>
+                              <li>Damage(DPS): <s>290(363)</s> <i class="fa-solid fa-arrow-right"></i> 380(338)</li>
+                              <li>RateOfFire: <s>0.25</s> <i class="fa-solid fa-arrow-right"></i> 0.22</li>
                               <li>SalvoDelay: <s>0.7</s> <i class="fa-solid fa-arrow-right"></i> 1</li>
                               <li>SalvoSize: <s>5</s> <i class="fa-solid fa-arrow-right"></i> 4</li>
-                              <li>RateOfFire: <s>0.25</s> <i class="fa-solid fa-arrow-right"></i> 0.22</li>
                             </ul>
                         </li>
-                        <li> Anit-Torps:
+                        <li> Anit-Torpedoes:
                           <ul>
                             <li>RateOfFire: <s>0.15</s> <i class="fa-solid fa-arrow-right"></i> 0.1</li>
                           </ul>
@@ -113,8 +193,24 @@
                 </div>
 
                 <div id="n-experimental" class="Card">
-                    <h3><img src="/assets/images/units/aeon/naval/T4Battleship.png" alt="Tempest">Tempest</h3>
+                    <h3>Experimental Naval</h3>
+
+                    <h4><img src="/assets/images/units/aeon/naval/T4Battleship.png" alt="Tempest">Tempest</h4>
                     <ul>
+                        <li>VetMassMult: <s>0.5</s> <i class="fa-solid fa-arrow-right"></i> 0.75</li>  
+                        <li>Cannon:
+                            <ul>
+                                <li>Damage: <s>8000</s> <i class="fa-solid fa-arrow-right"></i> 10000</li>  
+                                <li>RateOfFire: <s>0.1</s> <i class="fa-solid fa-arrow-right"></i> 0.08</li>
+                            </ul>
+                        </li>
+                        <li>Depth Charge:
+                            <ul>
+                                <li>MaxRadius: <s>80</s> <i class="fa-solid fa-arrow-right"></i> 65</li>
+                                <li>RateOfFire: <s>0.2</s> <i class="fa-solid fa-arrow-right"></i> 0.1667</li>
+                                <li>DPS: <s>420</s> <i class="fa-solid fa-arrow-right"></i> 350</li>
+                            </ul>
+                        </li>
                         <li>Anit-Torpedo:
                             <ul>
                               <li>MinRadius: <s>5</s> <i class="fa-solid fa-arrow-right"></i> 10</li>
@@ -122,11 +218,17 @@
                             </ul>
                         </li>
                     </ul>
+
+                    <h4><img src="/assets/images/units/uef/naval/T4AircraftCarrier.png">Atlantis</h4>
+                    <ul>
+                        <li>TurnRate: <s>12</s> <i class="fa-solid fa-arrow-right"></i> 18</li>  
+                        <li>VetMassMult: <s>0.5</s> <i class="fa-solid fa-arrow-right"></i> 0.75</li>  
+                    </ul>
                 </div>
             </div>
 
             <h2>Structure</h2>
-            <div id="3">
+            <div id="4">
 
                 <div id="radar" class="Card">
                     <h3>Radars</h3>
@@ -186,7 +288,7 @@
       
                 </div>
 
-                <div id="sheilds" class="Card">
+                <div id="shields" class="Card">
                     <h3>Tech 2 Shield</h3>
       
                     <h4><img src="/assets/images/units/aeon/structure/T2SheildGen.png">Aeon</h4>
@@ -228,7 +330,7 @@
                 <div id="tmls" class="Card">
                     <h3>TMLs</h3>
       
-                    <p>Each TML now comes equipped with a Small Death Weapon upon destruction, capable of inflicting damage to nearby assisting engineers.</p>
+                    <p>Reduce the hit points of stationary tactical missile launchers (TML) and make them volatile.</p>
       
                     <h4><img src="/assets/images/units/aeon/structure/T2TML.png">Aeon/UEF/Sera</h4>
                     <ul>
@@ -246,19 +348,42 @@
       
                 </div>
 
+                <div id="arty" class="Card">
+                    <h3>Experimental Artillery</h3>
+      
+                    <h4><img src="/assets/images/units/aeon/structure/T4RapidArty.png">Salvation</h4>
+
+                    <p>After being fixed a long time ago, the adjacency bonus made Salvation more effective than Mavor as a game ending artillery as recently discovered. Since Salvation's purpose is to be spammed en masse after a Paragon, and not to be built independently as a superior artillery piece, the adjacency bonus that makes building Salvation without Paragon overpowered is nerfed.</p>
+      
+                    <ul>
+                      <li>AdjacencyBonus: <s>42%</s> <i class="fa-solid fa-arrow-right"></i> 20%</li>
+                    </ul>
+                </div>
+
             </div>
 
-            <h2>Mechanics</h2>
-            <div id="4">
+            <h2>ACU</h2>
+            <div id="5">
+                <div id="uef">
+                    <div id="bubble" class="card">
+                        <h3><img src="/assets/images/Enhancements/uef/bubbleshield.png">UEF Bubble-Shield</h3>
+    
+                        <p>Reduce the costs of the UEF Bubble Shield Upgrade.</p>
 
-                <div id="teleport" class="Card">
-                    <h3>Teleport</h3>
-                    <p>Increased the Teleport effect by 25% so it slightly more visible now.</p>
-                 </div>
-      
-                <div id="vettransport" class="Card">
-                    <h3>Transport cargo killing and veterancy</h3>
-                    <p> The mass of all cargo is distributed to the killer(s)</p>
+                        <ul>
+                            <li>EnergyCost: <s>70,000</s> <i class="fa-solid fa-arrow-right"></i> 45,000</li>
+                            <li>MassCost: <s>2000</s> <i class="fa-solid fa-arrow-right"></i> 1400</li>
+                            <li>BuildTime: <s>1700</s> <i class="fa-solid fa-arrow-right"></i> 1500</li>
+                            <li>Shield:
+                                <ul>
+                                    <li>Health: <s>7000</s> <i class="fa-solid fa-arrow-right"></i> 5000</li>
+                                    <li>RechargeTime: <s>60</s> <i class="fa-solid fa-arrow-right"></i> 45</li>
+                                    <li>RegenRate: <s>67</s> <i class="fa-solid fa-arrow-right"></i> 60</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    </div>
                 </div>
             </div>
         </div>
@@ -273,32 +398,36 @@
                     <a href="#t1scout"><img src="/assets/images/units/sera/land/T1Scout.png" /></a>
                     <a href="#t1aa"><img src="/assets/images/units/aeon/land/T1MobileAA.png" /></a>
                     <a href="#rangebot"><img src="/assets/images/units/uef/land/T2RangeBot.png" /></a>
+                    <a href="#ilshy"><img src="/assets/images/units/sera/land/T2Tank.png" /></a>
+                    <a href="#othuum"><img src="/assets/images/units/sera/land/T3Tank.png" /></a>
                     <a href="#t3mma"><img src="/assets/images/units/uef/land/T3MobileAA.png" /></a>
 
+                    
+                    <h3 class="IconSidebarSubtitle">Land</h3><br>
                     <!-- ----------------AIR-------------------------- -->
-
+                    <a href="#t2gunship"><img src="/assets/images/units/sera/air/T2Gunship.png" /></a>
+                    <a href="#t3gunship"><img src="/assets/images/units/cybran/air/T3Gunship.png" /></a>
 
                     <h3 class="IconSidebarSubtitle">Navy</h3><br>
                     <!-- ----------------NAVY-------------------------- -->
                     <a href="#destroyers"><img src="/assets/images/units/cybran/naval/T2Destoryer.png" /></a>
                     <a href="#cooper"><img src="/assets/images/units/uef/naval/T2TorpBoat.png" /></a>
+                    <a href="#baracuda"><img src="/assets/images/units/cybran/naval/T2Sub.png" /></a>
                     <a href="#sub-hunter"><img src="/assets/images/units/sera/naval/T3SubHunter.png" /></a>
                     <a href="#n-experimental"><img src="/assets/images/units/aeon/naval/T4Battleship.png" /></a>
                             
-                    <!-- ----------------ACU/SCUs-------------------------- -->
-        
-
                     <h3 class="IconSidebarSubtitle">Structure</h3><br>
                     <!-- ----------------STRUCTURE-------------------------- -->
                     <a href="#radar"><img src="/assets/images/units/uef/structure/T2Radar.png" /></a>
                     <a href="#sonar"><img src="/assets/images/units/uef/structure/T3Sonar.png" /></a>
                     <a href="#sheilds"><img src="/assets/images/units/aeon/structure/T2SheildGen.png" /></a>
                     <a href="#tmls"><img src="/assets/images/units/cybran/structure/T2Tml.png" /></a>
+                    <a href="#arty"><img src="/assets/images/units/aeon/structure/T4RapidArty.png" /></a>
 
-                    <!-- ----------------MECHANICS-------------------------- -->
-                    <h3 class="IconSidebarSubtitle">Mechanics</h3><br>
-                    <a href="#teleport"><img src="/assets/images/Enhancements/sera/teleport.png" /></a>
-                    <a href="#vettransport"><img src="/assets/images/orders/mechanic.png" /></a>
+                    <h3 class="IconSidebarSubtitle">ACU</h3><br>
+                    <!-- ----------------ACU/SCUs-------------------------- -->
+                    <a href="#bubble"><img src="/assets/images/Enhancements/uef/bubbleshield.png"/></a>
+
                 </div>
             </div>
         </div>
