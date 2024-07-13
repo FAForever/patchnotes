@@ -64,10 +64,6 @@ li {
   padding-left: 10px;
 }
 
-.FlexboxContainer {
-  padding-left: 10px;
-}
-
 /* Sidebar */
 .Sidebar {
   grid-column: 3; /* Positioning within the grid */
