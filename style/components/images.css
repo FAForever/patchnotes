@@ -1,44 +1,71 @@
 .ImageSlider {
-    position: relative;
-    display: inline-block;
-    line-height: 0;
-    border-radius: 1em;
+  position: relative;
+  display: block;
+  overflow: hidden;
+  border-radius: 1em;
+  max-width: 100%;
 }
 
 .ImageSlider > div {
-    border-right: 2px solid #00000099;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 25px;
-    max-width: 100%;
-    overflow: hidden;
-    resize: horizontal;
+  border-right: 2px solid rgba(0, 0, 0, 0.6);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30px;
+  max-width: 100%;
+  overflow: hidden;
+  resize: horizontal;
+  z-index: 1;
 }
 
 .ImageSlider > div:before {
-    content: "";
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    width: 13px;
-    height: 13px;
-    padding: 5px;
-    background: linear-gradient(-45deg, white 50%, transparent 0);
-    background-clip: content-box;
-    cursor: ew-resize;
-    filter: drop-shadow(0 0 10px black);
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 16px;
+  height: 16px;
+  padding: 5px;
+  background: linear-gradient(-45deg, white 50%, transparent 0);
+  background-clip: content-box;
+  cursor: ew-resize;
+  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.6));
 }
 
 .ImageSlider img {
-    border-radius: 1em;
-    user-select: none;
-    max-width: 730px;
+  display: block;
+  border-radius: 1em;
+  user-select: none;
+  width: 100%;
+  height: auto;
 }
 
 .ImageShowcase {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 15px;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .ImageSlider > div {
+    width: 25px; /* Smaller handle for medium screens */
+  }
+
+  .ImageSlider > div:before {
+    width: 14px; /* Adjusted handle size */
+    height: 14px; /* Adjusted handle size */
+  }
+}
+
+@media (max-width: 420px) {
+  .ImageSlider > div {
+    width: 20px; /* Smaller handle for small screens */
+  }
+
+  .ImageSlider > div:before {
+    width: 12px; /* Adjusted handle size */
+    height: 12px; /* Adjusted handle size */
+  }
 }

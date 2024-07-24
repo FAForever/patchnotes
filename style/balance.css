@@ -13,6 +13,7 @@ h6 {
   font-family: "Ubuntu", sans-serif;
   font-style: normal;
   font-weight: normal;
+  margin: 10px 0;
 }
 
 a {
@@ -21,20 +22,28 @@ a {
 }
 
 ul {
-  padding: 10px 25px 10px 25px;
+  padding: 10px 25px;
 }
 
 li {
-  padding: 5px 0 5px 0;
+  padding: 5px 0;
   list-style: none;
 }
 
+header {
+  padding: 15px;
+}
+
+.patchDescription {
+  margin: 10px;
+}
+
 .Grid {
-  padding: 10px; /* Space inside the grid container */
-  display: grid; /* Enable grid layout */
-  grid-template-columns: 1fr 3fr 0.75fr; /* Define column sizes */
-  gap: 20px; /* Space between grid items */
-  margin: 0; /* Remove default margin */
+  padding: 10px;
+  display: grid;
+  grid-template-columns: 1fr 3fr 0.75fr;
+  gap: 20px;
+  margin: 0;
 }
 
 .Content {
@@ -85,29 +94,23 @@ li {
   position: sticky; /* Sticky positioning */
   top: 20px; /* Distance from the top */
   background: var(--IconGridBackground); /* Background color */
-  padding: 5px 20px 20px 20px; /* Padding */
+  padding: 5px 20px; /* Padding */
   margin-left: 5px; /* Margin from the left */
   color: var(--Text); /* Text color */
   text-align: justify; /* Text alignment */
   border-radius: 15px; /* Border radius */
   display: grid; /* Enable grid layout */
   grid-template-columns: repeat(4, 1fr); /* Four column layout */
-  row-gap: 5px; /* Space between rows */
-  column-gap: 5px; /* Space between columns */
+  gap: 5px; /* Space between rows */
 }
 
 /* Title in Icon Sidebar */
-.IconSidebarTitle {
+.IconSidebarTitle,
+.IconSidebarSubtitle {
   grid-column: 1 / -1; /* Spanning full width */
   text-align: center; /* Centred text */
   margin: 0; /* Remove default margin */
-  padding: 10px 0 10px 0; /* Padding */
-}
-
-.IconSidebarSubtitle {
-  grid-column: 1 / -1;
-  text-align: left;
-  margin: 0;
+  padding: 10px 0; /* Padding */
 }
 
 /* Subgrid in Icon Sidebar */
@@ -160,9 +163,64 @@ li {
 .Stat {
   border-radius: 8px;
   border: lightgray 1px solid;
-  padding: 3px 8px 3px 8px;
+  padding: 3px 8px;
 }
 
 .SectionHeader {
-  padding: 10px 0 10px 0;
+  padding: 10px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .Grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .Sidebar {
+    grid-column: 1;
+  }
+
+  .Content {
+    grid-column: 1;
+  }
+
+  .IconSidebar {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .IconSidebarSubgrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .IconGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 420px) {
+  .Grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .Sidebar {
+    grid-column: 1;
+  }
+
+  .Content {
+    grid-column: 1;
+  }
+
+  .IconSidebar {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .IconSidebarSubgrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .IconGrid {
+    grid-template-columns: 1fr;
+  }
 }

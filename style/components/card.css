@@ -1,15 +1,40 @@
-@import '../root.css';
+@import "../root.css";
 
 .Card {
-    background: var(--Card);
-    border-radius: 1em;
-    padding: 5px 15px;
-    margin: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    color: var(--Text);
+  background: var(--Card);
+  border-radius: 1em;
+  padding: 10px 20px;
+  margin: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  color: var(--Text);
+  display: flex;
+  flex-direction: column;
 }
 
 .Card img {
-    margin-right: 15px;
+  margin-bottom: 15px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.5em;
 }
 
+/* Responsive design */
+@media (max-width: 768px) {
+  .Card {
+    padding: 8px 16px; /* Adjust padding for medium screens */
+    margin: 15px; /* Adjust margin for medium screens */
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.4); /* Slightly lighter shadow */
+  }
+}
+
+@media (max-width: 420px) {
+  .Card {
+    padding: 6px 12px; /* Adjust padding for small screens */
+    margin: 10px; /* Adjust margin for small screens */
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.3); /* Lighter shadow for smaller screens */
+  }
+
+  .Card img {
+    margin-bottom: 10px; /* Adjust spacing below the image */
+  }
+}
