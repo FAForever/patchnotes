@@ -15,9 +15,8 @@
                 <header class="FlexboxContainer">
                     <h1 class="FlexGrow4">Patch 3810</h1>
                     <h4 class="FlexGrow1" id="date">Date:<i> July 7th 2024</i></h4>
-                </header>
-                <p class="patchDescription">This balance update comprises numerous minor adjustments to certain units, providing them with backup capabilities at a distance. Additionally, there are a few significant changes, such as the introduction of the new Teleport mechanic, alongside some slight nerf's.</p>
-                <h3>-- The Balance Team</h3>
+                </header><br>
+                <p>This balance update comprises numerous adjustments to various units. Of particular note are the nerfs to the Yathsou (Seraphim Submarine Hunter) and the Tempest (Aeon Experimental Battleship), which were too oppressive.<h3>-- The Balance Team</h3></p>
                 <hr>
             </div>
 
@@ -143,6 +142,9 @@
                     <h3>Tech 3 Gunship</h3>
 
                     <h4><img src="/assets/images/units/cybran/air/T3Gunship.png">Wailer</h4>
+                    
+                    <p>Increase the velocity and lifetime of the Wailer's AA-missiles, since they often expired before they were able to reach their target.</p>
+
                     <ul>
                         <li>MuzzleVelocity: <s>13</s> <i class="fa-solid fa-arrow-right"></i> 22</li>
                         <li>ProjectileLifetime: <s>2</s> <i class="fa-solid fa-arrow-right"></i> 2.4</li>
@@ -168,6 +170,9 @@
 
                 <div id="cooper" class="Card">
                     <h3><img src="/assets/images/units/uef/naval/T2TorpBoat.png" alt="Cooper">Cooper</h3>
+                    
+                    <p>The Cooper is a unit that is usually used relatively close to the frontlines. This change provides it with slightly more survivability, while still emphasizing the need to micro it properly and keep it behind your destroyers.</p>
+
                     <ul>
                         <li>Health: <s>1750</s> <i class="fa-solid fa-arrow-right"></i> 2000</li>
                     </ul>
@@ -191,7 +196,7 @@
                     <ul>
                         <li>Main Weapon:
                             <ul>
-                              <li>Damage(DPS): <s>290(363)</s> <i class="fa-solid fa-arrow-right"></i> 380(338)</li>
+                              <li>Damage (DPS): <s>290 (363)</s> <i class="fa-solid fa-arrow-right"></i> 380 (338)</li>
                               <li>RateOfFire: <s>0.25</s> <i class="fa-solid fa-arrow-right"></i> 0.22</li>
                               <li>SalvoDelay: <s>0.7</s> <i class="fa-solid fa-arrow-right"></i> 1</li>
                               <li>SalvoSize: <s>5</s> <i class="fa-solid fa-arrow-right"></i> 4</li>
@@ -209,6 +214,11 @@
                     <h3>Experimental Naval</h3>
 
                     <h4><img src="/assets/images/units/aeon/naval/T4Battleship.png" alt="Tempest">Tempest</h4>
+                    
+                    <p>Tone down the Tempest, as it has become too oppressive and snowballed too quickly. Most importantly, its extremely powerful depth charges now fire once every 6 seconds instead of once every 5 seconds and have a reduced range. Additionally, the amount of mass required for it to attain one level of veterancy is increased from 12k to 18k.</p>
+
+                    <p>Additionally, the targeting of its torpedo defense is fixed by splitting it into two separate weapons, instead of one weapon with two muzzles. Previously, both anti-torpedo projectiles would usually home in on the same torpedo.</p>
+
                     <ul>
                         <li>VetMassMult: <s>0.5</s> <i class="fa-solid fa-arrow-right"></i> 0.75</li>  
                         <li>Cannon:
@@ -233,6 +243,9 @@
                     </ul>
 
                     <h4><img src="/assets/images/units/uef/naval/T4AircraftCarrier.png">Atlantis</h4>
+
+                    <p>Buff the Atlantis' maneuverability. As a tradeoff, the amount of mass required for it to attain one level of veterancy is increased from 6k to a more reasonable 9k.</p>
+
                     <ul>
                         <li>TurnRate: <s>12</s> <i class="fa-solid fa-arrow-right"></i> 18</li>  
                         <li>VetMassMult: <s>0.5</s> <i class="fa-solid fa-arrow-right"></i> 0.75</li>  
@@ -338,11 +351,6 @@
                     <ul>
                       <li>BuildTime: <s>4988</s> <i class="fa-solid fa-arrow-right"></i> 5000</li>
                     </ul>
-      
-                    <hr>
-      
-                    <h3>ACU Explosion vs Shields</h3>
-                    <p>ACU death nuke is now absorbed by shields doing the 2500dmg to the shield</p>
                 </div>
 
                 <div id="tmls" class="Card">
@@ -386,7 +394,7 @@
                     <div id="bubble" class="Card">
                         <h3><img src="/assets/images/Enhancements/uef/bubbleshield.png">UEF Bubble-Shield</h3>
     
-                        <p>Reduce the costs of the UEF Bubble Shield Upgrade.</p>
+                        <p>The cost of the UEF Bubble Shield Upgrade is reduced to allow for it to be built earlier.</p>
 
                         <ul>
                             <li>EnergyCost: <s>70,000</s> <i class="fa-solid fa-arrow-right"></i> 45,000</li>
@@ -401,6 +409,17 @@
                             </li>
                         </ul>
 
+                    </div>
+                </div>
+            </div>
+            
+            <h2>Mechanics</h2>
+            <div id="6">
+                <div id="mechanics">
+                    <div id="mechanics" class="Card">
+                        <h3><img src="/assets/images/orders/mechanic.png">ACU Explosions vs. Shields</h3>
+
+                        <p>Static shields can now absorb the damage from an ACU's death nuke.</p>
                     </div>
                 </div>
             </div>
@@ -445,6 +464,10 @@
                     <h3 class="IconSidebarSubtitle">ACU</h3>
                     <!-- ----------------ACU/SCUs-------------------------- -->
                     <a href="#bubble"><img src="/assets/images/Enhancements/uef/bubbleshield.png"/></a>
+                    
+                    <h3 class="IconSidebarSubtitle">MECHANICS</h3>
+                    <!-- ----------------MECHANICS-------------------------- -->
+                    <a href="#mechanics"><img src="/assets/images/orders/mechanic.png" /></a>
 
                 </div>
             </div>
