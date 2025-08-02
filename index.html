@@ -5,15 +5,21 @@
     <title>FAForever Patchnotes - Balance & Game Updates</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Browse and access the latest FAForever balance and game patch notes in an easy-to-read format.">
+    <meta name="keywords" content="FAForever, Supreme Commander, Forged Alliance, balance patches, game updates, strategy game">
+    <meta name="author" content="FAForever">
+    
+    <!-- Performance optimizations -->
+    <link rel="preconnect" href="https://raw.githubusercontent.com">
+    <link rel="dns-prefetch" href="https://raw.githubusercontent.com">
     
     <!-- META Tags For Discord and Social Sharing -->
-    <meta name="twitter:image:src" content="https://raw.githubusercontent.com/FAForever/patchnotes/master/images/thumbnail/thumbnail.png">
+    <meta name="twitter:image:src" content="https://raw.githubusercontent.com/FAForever/patchnotes/master/assets/images/thumbnail/thumbnail.png">
     <meta name="twitter:site" content="@FAForever">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="FAForever Patchnotes - Balance & Game Updates">
     <meta name="twitter:description" content="Browse and access the latest FAForever balance and game patch notes in an easy-to-read format.">
     
-    <meta property="og:image:url" content="https://raw.githubusercontent.com/FAForever/patchnotes/master/images/thumbnail/thumbnail.png">
+    <meta property="og:image:url" content="https://raw.githubusercontent.com/FAForever/patchnotes/master/assets/images/thumbnail/thumbnail.png">
     <meta property="og:image:alt" content="FAForever Patchnote Site">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="600">
@@ -25,18 +31,19 @@
 
     <!-- External CSS -->
     <link rel="stylesheet" href="./style/index.css">
-    <link rel="icon" href="path/to/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
 
     <!-- External Scripts -->
     <script src="./scripts/backgroundRandom.js" defer></script>
     <script src="./scripts/populatePatches.js" defer></script>
+    <script src="./scripts/themeSwitch.js" defer></script>
   </head>
   <body>
     <main class="GridContainer">
       <div class="Space"></div>
 
       <!-- Title Section -->
-      <div class="Title GridItemBackground">
+      <header class="Title GridItemBackground">
         <h1>
           <img alt="UEF Faction Logo" class="UEF" src="./assets/images/faction/UEF.svg" loading="lazy">
           <img alt="Cybran Faction Logo" class="CYBRAN" src="./assets/images/faction/Cybran.svg" loading="lazy">
@@ -44,12 +51,17 @@
           <img alt="Aeon Faction Logo" class="AEON" src="./assets/images/faction/Aeon.svg" loading="lazy">
           <img alt="Seraphim Faction Logo" class="SERAPHIM" src="./assets/images/faction/Seraphim.svg" loading="lazy">
         </h1>
-      </div>
+      </header>
 
       <!-- Balance Patch Section -->
-      <div class="BalanceContainer GridItemBackground">
-        <h2>Balance</h2>
-        <div class="BalanceJSONList"></div>
+      <section class="BalanceContainer GridItemBackground">
+        <h2>Balance Patches</h2>
+        <div class="BalanceJSONList" role="list" aria-label="List of balance patches"></div>
+      </section>
+
+      <!-- Theme Toggle -->
+      <div class="ThemeToggleContainer">
+        <button id="themeToggleButton">Toggle Theme</button>
       </div>
 
     </main>
