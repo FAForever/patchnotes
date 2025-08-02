@@ -9,10 +9,10 @@ async function populate() {
     }
 
     const patches = await response.json();
-    const { balance = [], game = [] } = patches; // Provide empty arrays as fallback
+    const { balance = [] } = patches; // Provide empty arrays as fallback
 
-    if (balance.length === 0 && game.length === 0) {
-      throw new Error('Invalid data format: Missing Balance or Game data.');
+    if (balance.length === 0) {
+      throw new Error('Invalid data format: Missing Balance data.');
     }
 
     // Render only if data exists
@@ -20,12 +20,6 @@ async function populate() {
       renderPatchList(balance, '.BalanceJSONList');
     } else {
       console.warn('No balance data available.');
-    }
-
-    if (game.length > 0) {
-      renderPatchList(game, '.GameJSONList');
-    } else {
-      console.warn('No game data available.');
     }
   } catch (error) {
     console.error('There has been a problem with your fetch operation:', error);

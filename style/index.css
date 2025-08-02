@@ -107,6 +107,12 @@ a:active {
   text-align: left;
 }
 
+.BalanceJSONList li + li {
+  border-top: 1px solid var(--Line);
+  padding-top: 5px;
+  margin-top: 5px;
+}
+
 /* Media Queries */
 @media only screen and (min-width: 1400px) {
   /* Custom styles for desktops if any */

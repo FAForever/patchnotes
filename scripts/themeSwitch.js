@@ -5,11 +5,14 @@ function toggleTheme() {
   const htmlElement = document.documentElement;
   const isLightMode = htmlElement.classList.toggle(LIGHT_MODE_CLASS);
   const newTheme = isLightMode ? 'light' : 'dark';
+
   try {
     localStorage.setItem(THEME_KEY, newTheme);
   } catch (e) {
     console.warn('Unable to access localStorage. Theme will reset on reload.');
   }
+
+  
 }
 
 function loadTheme() {
