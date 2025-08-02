@@ -1,39 +1,44 @@
-*** This Site has now be Deprecated ***
-
-
 # FAF Patchnotes
 
-This Simple website contains All Current and Previous Patchnotes for Game and Balance
-
-
-# Patchnotes Faforever
-
-This repository contains the source code and documentation for the Patchnotes Faforever website. Patchnotes Faforever is a platform that provides comprehensive patch notes for the popular real-time strategy game, Forged Alliance Forever.
-
-## About
-
-Patchnotes Faforever is dedicated to providing players of Forged Alliance Forever with detailed and up-to-date information about game patches, changes, and updates. It aims to be a centralized resource for players to stay informed about the latest developments in the game.
-
-## Features
-
-- Access to patch notes for all major updates of Forged Alliance Forever.
-- Detailed information about changes to units and gameplay mechanics.
-- User-friendly interface for seamless navigation and browsing of patch notes.
-
-## Usage
-
-To access Patchnotes Faforever, simply visit [https://patchnotes.faforever.com/](https://patchnotes.faforever.com/) in your web browser. From there, you can browse through the available patch notes, search for specific changes, and stay informed about the latest updates to the game.
-
-## Contributing
-
-Contributions to Patchnotes Faforever are welcome! If you'd like to contribute to the development of the website or suggest improvements, please feel free to submit a pull request or open an issue on this GitHub repository.
-
-The source code for Patchnotes Faforever is licensed under the [MIT License](LICENSE).
-
-## Acknowledgements
-
-Patchnotes Faforever is made possible thanks to the hard work and dedication of its contributors. Special thanks to the Forged Alliance Forever community for their support and feedback.
+This simple website provides access to all current and previous patch notes for *Forged Alliance Forever* (FAF), including game updates and balance changes.
 
 ---
 
-[Visit Patchnotes Faforever](https://patchnotes.faforever.com/)
+# Patchnotes Faforever
+
+This repository contains the source code and documentation for the **Patchnotes Faforever** website — a platform dedicated to sharing comprehensive patch notes for the real-time strategy game *Forged Alliance Forever*.
+
+## Overview
+
+**Patchnotes Faforever** serves as a centralised hub for players to stay informed about the latest game updates, balance changes, and development progress for FAF. Whether you're a long-time player or just starting, you’ll find organised, detailed patch information here.
+
+## Features
+
+- Complete archive of patch notes for all major and minor updates.
+- In-depth breakdowns of unit changes, gameplay mechanics, and bug fixes.
+- Clean, user-friendly interface for browsing and searching.
+
+## How to Use
+
+To view the patch notes, simply visit:  
+👉 [https://patchnotes.faforever.com/](https://patchnotes.faforever.com/)
+
+From there, you can explore patch histories, search for specific changes, or read up on recent updates.
+
+## Contributing
+
+Contributions are welcome!  
+If you’d like to help improve the site or suggest new features, feel free to:
+
+- Submit a pull request
+- Open an issue on this repository
+
+This project is open-source and available under the [MIT License](LICENSE).
+
+## Acknowledgements
+
+A big thank you to the FAF community and all contributors for their continued support and feedback — your efforts help keep the game and this project alive and thriving.
+
+---
+
+🔗 **Visit Patchnotes Faforever:** [https://patchnotes.faforever.com/](https://patchnotes.faforever.com/)
