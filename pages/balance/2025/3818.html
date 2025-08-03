@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="FAForever Patch 3811 page with detailed balance updates for the T4 Fatboy and other units." />
+    <meta name="description" content="FAForever Patch 3818 page with detailed balance updates for T3 snipers, Brick tanks, naval units, and various other improvements." />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>FAForever Patch 3811 - Balance Update</title>
+    <title>FAForever Patch 3818 - Balance Update</title>
     <link rel="stylesheet" href="/style/balance.css"/>
     <script src="/scripts/themeSwitch.js" defer></script>
 </head>
@@ -13,46 +13,258 @@
         <div class="Content">
             <section id="Intro">
                 <header class="FlexboxContainer">
-                    <h1 class="FlexGrow-4">Patch 3811</h1>
-                    <h4 class="FlexGrow-1" id="date">Date: <time datetime="2024-07-07">July 7th 2024</time></h4>
+                    <h1 class="FlexGrow-4">Patch 3818</h1>
+                    <h4 class="FlexGrow-1" id="date">Date: <time datetime="2025-02-14">February 14th 2025</time></h4>
                 </header>
-                <p class="patchDescription">This balance update comprises minor adjustments to certain units, including changes to the T4 Fatboy.</p>
+                <p class="patchDescription">This balance update comprises minor adjustments to certain units, including changes to T3 snipers, naval units, and various other improvements.</p>
                 <h3>-- The Balance Team</h3>
                 <hr>
             </section>
 
-            <section>
+            <section id="Land">
                 <h2>Land Units</h2>
-                <article id="t4fatboy" class="Card">
-                    <h3><img src="/assets/images/units/uef/land/T4Fatboy.png" alt="T4 Fatboy Unit"/> T4 Fatboy</h3>
-                    <p>The Fatboy has been in an awkward position for some time. These changes aim to address the issues while preserving its identity.</p>
+
+                <article id="t3snipers" class="Card">
+                    <h3>T3 Snipers</h3>
+                    <p>Buff the power of sniper bots as they have become too expensive and micro-intensive to use compared to saving for a T4 to counter Bricks and Percivals. The changes improve the leniency for their micro and improve their firing accuracy.</p>
+
+                    <h4><img src="/assets/images/units/aeon/land/T3Sniper.png">Aeon</h4>
+                    <ul>
+                        <li>Speed: <s>2.4</s> <i class="fa-solid fa-arrow-right"></i> 2.5</li>
+                        <li>FiringTolerance: <s>2</s> <i class="fa-solid fa-arrow-right"></i> 0</li>
+                        <li>FiringRandomness: <s>0.3</s> <i class="fa-solid fa-arrow-right"></i> 0.1</li>
+
+                    </ul>
+
+                    <h4><img src="/assets/images/units/sera/land/T3Sniper.png">Sera</h4>
+                    <ul>
+                        <li>Speed(SnipeMode): <s>2.2(1.65)</s> <i class="fa-solid fa-arrow-right"></i> 2.3(2)</li>
+                        <li>FiringTolerance(SnipeMode): <s>3(0.5)</s> <i class="fa-solid fa-arrow-right"></i> 0(0)</li>
+                        <li>FiringRandomness(SnipeMode): <s>0.4(0.2)</s> <i class="fa-solid fa-arrow-right"></i> 0.18(0.05)</li>
+                    </ul>
+                </article>
+
+                <article id="t3tank" class="Card">
+                    <h3><img src="/assets/images/units/cybran/land/T3Tank.png">Brick</h3>
+                    <p>Nerf the Brick against Percivals and other T3, as the 32 -> 34 range buff from #5547 made it obsolete Percivals and a bit too strong against Harbingers/Othuums, which resulted in huge spam of Bricks instead of moving onto the other units in the Cybran faction.</p>
 
                     <ul>
+                        <li>Main Cannon:
+                            <ul>
+                                <li>Max Radius: <s>34</s> <i class="fa-solid fa-arrow-right"></i> 33</li>
+                                <li>Damage(DPS): <s>125(312.5)</s> <i class="fa-solid fa-arrow-right"></i> 118(295)</li>
+                            </ul>
+                        </li>
+                        <li>Turn Rate: <s>68.75</s> <i class="fa-solid fa-arrow-right"></i> 75</li>
+                    </ul>
+                </article>
+
+                <article id="t4land" class="Card">
+                    <h3><img src="/assets/images/units/cybran/land/T4Mega.png">Megalith</h3>
+
+                    <ul>
+                        <li>Anti-Torp Flare:
+                            <ul>
+                                <li>Min Radius: <s>0</s> <i class="fa-solid fa-arrow-right"></i> 5</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </article>
+
+            </section>
+
+            <section id="Air">
+                <h2>Air Units</h2>
+                
+                <article id="t2gunship" class="Card">
+                    <h3><img src="/assets/images/units/sera/air/T2Gunship.png"/> Vulthoo</h3>
+                    <p>Adjust several minor stats to better align the Vulthoo with its role as a ‘Tech 2.5 unit’.</p>
+
+                    <ul>
+                        <li>FuelRechargeRate: <s>5</s> <i class="fa-solid fa-arrow-right"></i> 10</li>
+                        <li>FuelUseTime: <s>400</s> <i class="fa-solid fa-arrow-right"></i> 600</li>
+                        <li>AirCrashDamage: <s>100</s> <i class="fa-solid fa-arrow-right"></i> 200</li>
+                        <li>Heavy Phasic AutoGun (x2):
+                            <ul>
+                                <li>TurretPitch: <s>-20</s> <i class="fa-solid fa-arrow-right"></i> -40</li>
+                                <li>TurretPitchRange: <s>60</s> <i class="fa-solid fa-arrow-right"></i> 90</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </article>
+
+                <article id="t4air" class="Card">
+                    <h3><img src="/assets/images/units/aeon/air/T4AircraftCarrier.png" alt="T4 Fatboy Unit"/> CZAR</h3>
+                    <p>Improve the performance of the currently underused Czar by increasing its survivability and improving the targeting of its flak cannons.</p>
+
+                    <ul>
+                        <li>Vision Radius: <s>70</s> <i class="fa-solid fa-arrow-right"></i> 100</li>
                         <li>Shield:
                             <ul>
-                                <li>Recharge Time: <s>120</s> <i class="fa-solid fa-arrow-right"></i> 75/s</li>
-                                <li>Regeneration Rate: <s>100</s> <i class="fa-solid fa-arrow-right"></i> 200/s</li>
+                                <li>RechargeTime: <s>120</s> <i class="fa-solid fa-arrow-right"></i> 100</li>
+                                <li>Regen Rate: <s>180</s> <i class="fa-solid fa-arrow-right"></i> 240</li>
                             </ul>
                         </li>
-                        <li>Anti-Air Guns:
+                        <li>Fizz Launcher 1:
                             <ul>
-                                <li>Range: <s>45</s> <i class="fa-solid fa-arrow-right"></i> 55</li>
-                                <li>Damage: <s>20</s> <i class="fa-solid fa-arrow-right"></i> 40</li>
+                                <li>FiringTolerance: <s>3</s> <i class="fa-solid fa-arrow-right"></i> 10</li>
+                                <li>HeadingArcRange: <s>120</s> <i class="fa-solid fa-arrow-right"></i> 90</li>
                             </ul>
                         </li>
-                        <li>Collision Size:
+                        <li>Fizz Launcher 2:
                             <ul>
-                                <li>Uniform Scale: <s>2.22</s> <i class="fa-solid fa-arrow-right"></i> 2.15</li>
-                                <li>Shield Size: <s>25</s> <i class="fa-solid fa-arrow-right"></i> 24</li>
-                                <li>Size X: <s>5.5</s> <i class="fa-solid fa-arrow-right"></i> 5.2</li>
-                                <li>Size Y: <s>1.5</s> <i class="fa-solid fa-arrow-right"></i> 1.4</li>
-                                <li>Size Z: <s>8</s> <i class="fa-solid fa-arrow-right"></i> 7.5</li>
+                                <li>FiringTolerance: <s>1</s> <i class="fa-solid fa-arrow-right"></i> 10</li>
+                                <li>HeadingArcRange: <s>120</s> <i class="fa-solid fa-arrow-right"></i> 90</li>
+                                <li>PrefersPrimaryWeaponTarget: <s>True</s> <i class="fa-solid fa-arrow-right"></i> False</li>
                             </ul>
                         </li>
                     </ul>
                 </article>
             </section>
+        
+            <section id="Navy">
+                <h2>Naval Units</h2>
+                
+                <article id="t1sub" class="Card">
+                    <h3><img src="/assets/images/units/sera/naval/T1Sub.png"/> Sou-istle</h3>
+
+                    <ul>
+                        <li>Torpedo Defense:
+                            <ul>
+                                <li>FiringTolerance: <s>0</s> <i class="fa-solid fa-arrow-right"></i> 180</li>
+                                <li>Min Radius: <s>0</s> <i class="fa-solid fa-arrow-right"></i> 5</li>
+                                <li>UseFiringSolutionInsteadOfAimBone: <s>False</s> <i class="fa-solid fa-arrow-right"></i> True</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </article>
+
+                <article id="t2sub" class="Card">
+                    <h3><img src="/assets/images/units/cybran/naval/T2Sub.png"/> Barracuda</h3>
+
+                    <ul>
+                        <li>Torpedo Defense:
+                            <ul>
+                                <li>Min Radius: <s>0</s> <i class="fa-solid fa-arrow-right"></i> 5</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </article>
+
+                <article id="t2destroyer" class="Card">
+                    <h3><img src="/assets/images/units/sera/naval/T2Destroyer.png"/> Uashavoh</h3>
+                    <p>The Seraphim destroyer is currently too powerful due to its micro potential. To address this, its underwater speed has been reduced to allow for more counterplay potential: Aeon and Cybran destroyers can catch Seraphim destroyers that overcommitted, and all destroyers (particularly UEF) can flee from submerged Seraphim destroyers and get out of torpedo range.Nerf the frontal turret of the Seraphim Destroyer, as the unit has proven to be too strong in direct combat with other destroyers. To prevent it from becoming too weak against Tech 2 Torpedo Launchers due to this change, its torpedo defense is buffed by improving its targeting and reload time. This should also make the unit more resilient against sub spam.</p>
+
+                    <ul>
+                        <li>Underwater Speed: <s>5</s> <i class="fa-solid fa-arrow-right"></i> 4.5</li>
+                        <li>Frontal Turret:
+                            <ul>
+                                <li>Damage: <s>50</s> <i class="fa-solid fa-arrow-right"></i> 45</li>
+                                <li>DPS: <s>137</s> <i class="fa-solid fa-arrow-right"></i> 123</li>
+                            </ul>
+                        </li>
+                        <li>Torpedo Defense:
+                            <ul>
+                                <li>FiringTolerance: <s>90</s> <i class="fa-solid fa-arrow-right"></i> 180</li>
+                                <li>Min Radius: <s>15</s> <i class="fa-solid fa-arrow-right"></i> 5</li>
+                                <li>Reload Speed: <s>3.3s</s> <i class="fa-solid fa-arrow-right"></i> 3s</li>
+                                <li>UseFiringSolutionInsteadOfAimBone: <s>False</s> <i class="fa-solid fa-arrow-right"></i> True</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </article>
+
+                <article id="t3subhunter" class="Card">
+                    <h3><img src="/assets/images/units/sera/naval/T3SubHunter.png"/> Yathsou (Subhunter)</h3>
+                    <p>Further rebalance various stats of the Seraphim Tech 3 Submarine Hunter to make it less oppressive. The overall aim of these changes is to allow for more counterplay against it, especially with Destroyers and Tech 2 Submarines. This PR is a continuation of #5895, which was a step in the right direction but ultimately did not nerf the unit enough.</p>
+
+                    <ul>
+                        <li>MaxAcceleration: <s>6</s> <i class="fa-solid fa-arrow-right"></i> 5.5</li>
+                        <li>MaxBrake: <s>6</s> <i class="fa-solid fa-arrow-right"></i> 5.5</li>
+                        <li>MaxSpeed: <s>5</s> <i class="fa-solid fa-arrow-right"></i> 4.6</li>
+                        <li>MaxSpeedReverse: <s>5</s> <i class="fa-solid fa-arrow-right"></i> 4.6</li>
+                        <li>MaxSteerForce: <s>5</s> <i class="fa-solid fa-arrow-right"></i> 4.6</li>
+                        <li>Torpedo:
+                            <ul>
+                                <li>Damage: <s>380</s> <i class="fa-solid fa-arrow-right"></i> 375</li>
+                                <li>RateOfFire: <s>10/45</s> <i class="fa-solid fa-arrow-right"></i> 10/50</li>
+                                <li>DPS: <s>338</s> <i class="fa-solid fa-arrow-right"></i> 300</li>
+                                <li>MuzzleSalvoDelay: <s>1</s> <i class="fa-solid fa-arrow-right"></i> 1.1</li>
+                                <li>FiringTolerance: <s>2000</s> <i class="fa-solid fa-arrow-right"></i> 180</li>
+                            </ul>
+                        </li>
+                        <li>Anti-Torp:
+                            <ul>
+                                <li>Min Radius: <s>0</s> <i class="fa-solid fa-arrow-right"></i> 5</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </article>
+
+            </section>
+
+            <section id="ACU">
+                <h2>ACU's</h2>
+
+                <article id="uefacu" class="Card">
+                    <h3><img src="/assets/images/units/uef/land/ACU.png"> UEF ACU</h3>
+                    <p>Buff UEF ACU Drone’s rebuild costs by making it half the upgrade’s cost. Previously it was too high due to not being changed alongside the upgrade’s cost, and had an unreasonable drain for a T1 economy. Additionally, the drone now rebuilds based off the ACU’s buildpower instead of a hardcoded 10 seconds.</p>
+
+                    <h4><img src="/assets/images/Enhancements/uef/drone.png">Drone</h4>
+                    <ul>
+                        <li>Rebuild Mass Cost: <s>160</s> <i class="fa-solid fa-arrow-right"></i> 60</li>
+                        <li>Rebuild Energy Cost: <s>1600</s> <i class="fa-solid fa-arrow-right"></i> 800</li>
+                        <li>Rebuild Time: <s>10s</s> <i class="fa-solid fa-arrow-right"></i> 200 Buildtime</li>
+                    </ul>
+                </article>
+
+            </section>
+        
+            <section id="Structures">
+                <h2>Structures</h2>
+
+                <article id="shieldgen" class="Card">
+                    <h3><img src="/assets/images/units/uef/structure/T3ShieldGen.png"> UEF T3 Shield Generator</h3>
+                    <p>Increase the UEF T3 shield’s regen start time (the amount of time after taking damage before regeneration starts) to make it consistent with other shields, as it was missed by accident during regen start time changes a long time ago.</p>
+
+                    <ul>
+                        <li>Regen Start Time: <s>1s</s> <i class="fa-solid fa-arrow-right"></i> 3s</li>
+                    </ul>
+                </article>
+
+                <article id="pointdefence" class="Card">
+                    <h3>T2 Point Defence</h3>
+                    <p>Reduce the damage of Aeon and Seraphim T2 PD, as they have better DPS/mass than the UEF PD, and the Aeon one has higher muzzle velocity while the Seraphim one has a beam weapon.</p>
+
+                    <h4>Aeon</h4>
+                    <ul>
+                        <li>Damage(DPS): <s>600(150)</s> <i class="fa-solid fa-arrow-right"></i> 560(140)</li>
+                    </ul>
+
+                    <h4>Sera</h4>
+                    <ul>
+                        <li>Damage(DPS): <s>605(151)</s> <i class="fa-solid fa-arrow-right"></i> 550(138)</li>
+                    </ul>
+                </article>
+
+                <article id="sonar" class="Card">
+                    <h3><img src="/assets/images/units/aeon/structure/T3Sonar.png">T3 Aeon Sonar</h3>
+
+                    <ul>
+                        <li>Anti-Torp:
+                            <ul>
+                                <li>FiringTolerance: <s>2</s> <i class="fa-solid fa-arrow-right"></i> 180</li>
+                                <li>Min Radius: <s>0</s> <i class="fa-solid fa-arrow-right"></i> 5</li>
+                                <li>UseFiringSolutionInsteadOfAimBone: <s>False</s> <i class="fa-solid fa-arrow-right"></i> True</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                </article>
+
+            </section>
         </div>
+
 
         <aside class="Sidebar" role="navigation" aria-label="Sidebar navigation">
             <div class="IconSidebar">
@@ -60,7 +272,27 @@
                 <div class="IconSidebarSpace"></div>
                 <nav class="IconSidebarSubgrid">
                     <h3 class="IconSidebarSubtitle">Land</h3>
-                    <a href="#t4fatboy"><img src="/assets/images/units/uef/land/T4Fatboy.png" alt="T4 Fatboy Thumbnail" loading="lazy"/></a>
+                    <a href="#t3snipers"><img src="/assets/images/units/aeon/land/T3Sniper.png" alt="T3 Sniper Thumbnail" loading="lazy"/></a>
+                    <a href="#t3tank"><img src="/assets/images/units/cybran/land/T3Tank.png" alt="T3 Tank Thumbnail" loading="lazy"/></a>
+                    <a href="#t4land"><img src="/assets/images/units/cybran/land/T4Mega.png" alt="T4 Megalith Thumbnail" loading="lazy"/></a>
+                    
+                    <h3 class="IconSidebarSubtitle">Air</h3>
+                    <a href="#t2gunship"><img src="/assets/images/units/sera/air/T2Gunship.png" alt="T2 Gunship Thumbnail" loading="lazy"/></a>
+                    <a href="#t4air"><img src="/assets/images/units/aeon/air/T4AircraftCarrier.png" alt="T4 CZAR Thumbnail" loading="lazy"/></a>
+                    
+                    <h3 class="IconSidebarSubtitle">Naval</h3>
+                    <a href="#t1sub"><img src="/assets/images/units/sera/naval/T1Sub.png" alt="T1 Sub Thumbnail" loading="lazy"/></a>
+                    <a href="#t2sub"><img src="/assets/images/units/cybran/naval/T2Sub.png" alt="T2 Sub Thumbnail" loading="lazy"/></a>
+                    <a href="#t2destroyer"><img src="/assets/images/units/sera/naval/T2Destroyer.png" alt="T2 Destroyer Thumbnail" loading="lazy"/></a>
+                    <a href="#t3subhunter"><img src="/assets/images/units/sera/naval/T3SubHunter.png" alt="T3 SubHunter Thumbnail" loading="lazy"/></a>
+                    
+                    <h3 class="IconSidebarSubtitle">ACU's</h3>
+                    <a href="#uefacu"><img src="/assets/images/units/uef/land/ACU.png" alt="UEF ACU Thumbnail" loading="lazy"/></a>
+                    
+                    <h3 class="IconSidebarSubtitle">Structures</h3>
+                    <a href="#shieldgen"><img src="/assets/images/units/uef/structure/T3ShieldGen.png" alt="T3 Shield Generator Thumbnail" loading="lazy"/></a>
+                    <a href="#pointdefence"><img src="/assets/images/units/aeon/structure/T2PointDefense.png" alt="T2 Point Defence Thumbnail" loading="lazy"/></a>
+                    <a href="#sonar"><img src="/assets/images/units/aeon/structure/T3Sonar.png" alt="T3 Sonar Thumbnail" loading="lazy"/></a>
                 </nav>
             </div>
         </aside>
