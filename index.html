@@ -8,9 +8,25 @@
     <meta name="keywords" content="FAForever, Supreme Commander, Forged Alliance, balance patches, game updates, strategy game">
     <meta name="author" content="FAForever">
     
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://faforever.com/patchnotes">
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="./manifest.json">
+    <meta name="theme-color" content="#00d2ff">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="FA Patches">
+    <link rel="apple-touch-icon" href="./assets/images/icons/icon-192x192.png">
+    
     <!-- Performance optimizations -->
     <link rel="preconnect" href="https://raw.githubusercontent.com">
     <link rel="dns-prefetch" href="https://raw.githubusercontent.com">
+    <link rel="preload" href="./style/index.css" as="style">
+    <link rel="preload" href="./assets/images/faction/UEF.svg" as="image">
+    <link rel="preload" href="./assets/images/faction/Cybran.svg" as="image">
+    <link rel="preload" href="./assets/images/faction/Aeon.svg" as="image">
+    <link rel="preload" href="./assets/images/faction/Seraphim.svg" as="image">
     
     <!-- META Tags For Discord and Social Sharing -->
     <meta name="twitter:image:src" content="https://raw.githubusercontent.com/FAForever/patchnotes/master/assets/images/thumbnail/thumbnail.png">
@@ -29,17 +45,44 @@
     <meta property="og:url" content="https://faforever.com/patchnotes">
     <meta property="og:description" content="Browse and access the latest FAForever balance and game patch notes in an easy-to-read format.">
 
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "FAForever Patchnotes",
+      "description": "Browse and access the latest FAForever balance and game patch notes in an easy-to-read format.",
+      "url": "https://faforever.com/patchnotes",
+      "publisher": {
+        "@type": "Organization",
+        "name": "FAForever",
+        "url": "https://faforever.com"
+      },
+      "mainEntity": {
+        "@type": "WebPage",
+        "@id": "https://faforever.com/patchnotes",
+        "name": "Balance Patches",
+        "description": "Collection of Supreme Commander: Forged Alliance Forever balance and game updates"
+      }
+    }
+    </script>
+
     <!-- External CSS -->
     <link rel="stylesheet" href="./style/index.css">
+    <link rel="stylesheet" href="./style/pwa.css">
     <link rel="icon" href="./favicon.ico" type="image/x-icon">
 
     <!-- External Scripts -->
     <script src="./scripts/backgroundRandom.js" defer></script>
     <script src="./scripts/populatePatches.js" defer></script>
     <script src="./scripts/themeSwitch.js" defer></script>
+    <script src="./scripts/pwa.js" defer></script>
   </head>
   <body>
-    <main class="GridContainer">
+    <!-- Skip to main content for accessibility -->
+    <a href="#main-content" class="skip-link" aria-label="Skip to main content">Skip to main content</a>
+    
+    <main id="main-content" class="GridContainer">
       <div class="Space"></div>
 
       <!-- Title Section -->
@@ -61,7 +104,7 @@
 
       <!-- Theme Toggle -->
       <div class="ThemeToggleContainer">
-        <button id="themeToggleButton">Toggle Theme</button>
+        <button id="themeToggleButton" aria-label="Switch to light theme" title="Switch color theme">Switch to Light</button>
       </div>
 
     </main>

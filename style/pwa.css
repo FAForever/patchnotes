@@ -1,0 +1,174 @@
+/* PWA-specific styles */
+
+/* Install/Update Banners */
+#pwa-install-banner,
+#pwa-update-banner,
+#pwa-success-banner,
+#pwa-complete-banner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: var(--Accent-Color);
+  color: var(--Text-Primary);
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  animation: slideDown 0.3s ease-out;
+  transform: translateZ(0); /* Force hardware acceleration */
+}
+
+/* Ensure body adjusts when banners are present */
+body.pwa-banner-active {
+  padding-top: 70px;
+  transition: padding-top 0.3s ease-out;
+}
+
+@media (max-width: 768px) {
+  body.pwa-banner-active {
+    padding-top: 90px;
+  }
+}
+
+.pwa-banner-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.pwa-banner-text {
+  flex: 1;
+}
+
+.pwa-banner-text strong {
+  display: block;
+  font-size: 1.1em;
+  margin-bottom: 4px;
+}
+
+.pwa-banner-text p {
+  margin: 0;
+  font-size: 0.9em;
+  opacity: 0.9;
+}
+
+.pwa-banner-actions {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.pwa-btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.9em;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.pwa-btn-primary {
+  background: var(--Text-Primary);
+  color: var(--Accent-Color);
+}
+
+.pwa-btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.pwa-btn-secondary {
+  background: transparent;
+  color: var(--Text-Primary);
+  border: 1px solid var(--Text-Primary);
+  padding: 6px 10px;
+  font-size: 1.2em;
+  line-height: 1;
+}
+
+.pwa-btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Success/Complete banners */
+#pwa-success-banner,
+#pwa-complete-banner {
+  background: #4CAF50;
+}
+
+/* Animation */
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+}
+
+/* Banner exit animation */
+.pwa-banner-exiting {
+  animation: slideUp 0.3s ease-in forwards;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .pwa-banner-content {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+  
+  .pwa-banner-actions {
+    justify-content: center;
+  }
+  
+  .pwa-btn {
+    min-width: 80px;
+  }
+}
+
+/* Hide PWA banners when in standalone mode */
+@media (display-mode: standalone) {
+  #pwa-install-banner {
+    display: none;
+  }
+}
+
+/* iOS specific adjustments */
+@supports (-webkit-touch-callout: none) {
+  .pwa-banner-content {
+    padding-top: calc(12px + env(safe-area-inset-top));
+  }
+  
+  body.pwa-banner-active {
+    padding-top: calc(70px + env(safe-area-inset-top));
+  }
+  
+  @media (max-width: 768px) {
+    body.pwa-banner-active {
+      padding-top: calc(90px + env(safe-area-inset-top));
+    }
+  }
+}
+
+/* Remove the old problematic selectors */
+/* This was causing issues with CSS selector support */
