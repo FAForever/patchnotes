@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="FAForever Patch 3811 page with detailed balance updates for the T4 Fatboy and other units." />
+    <meta name="description" content="FAForever Patch 3822 page with detailed balance updates for naval units, T3 artillery, teleport mechanics, and various other improvements." />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>FAForever Patch 3811 - Balance Update</title>
+    <title>FAForever Patch 3822 - Balance Update</title>
     <link rel="stylesheet" href="/style/balance.css"/>
     <script src="/scripts/themeSwitch.js" defer></script>
 </head>
@@ -13,44 +13,242 @@
         <div class="Content">
             <section id="Intro">
                 <header class="FlexboxContainer">
-                    <h1 class="FlexGrow-4">Patch 3811</h1>
-                    <h4 class="FlexGrow-1" id="date">Date: <time datetime="2024-07-07">July 7th 2024</time></h4>
+                    <h1 class="FlexGrow-4">Patch 3822</h1>
+                    <h4 class="FlexGrow-1" id="date">Date: <time datetime="2025-05-19">May 19th 2025</time></h4>
                 </header>
-                <p class="patchDescription">This balance update comprises minor adjustments to certain units, including changes to the T4 Fatboy.</p>
+                <p class="patchDescription">This patch delivers major balance improvements across multiple systems. The UEF's Cooper torpedo boat is buffed with reduced cost, improved sonar, and slightly higher DPS, helping address UEF navy’s T2 weaknesses. T3 artillery for all factions is rebalanced with adjusted costs, accuracy, and damage to ensure fairer performance against shielded targets. Additional tweaks fix air unit targeting bugs, improve teleport balance, enhance Cybran naval missile defense, and refine units like the Othuum, Solace, and Valiant for better counterplay and consistency.</p>
                 <h3>-- The Balance Team</h3>
                 <hr>
             </section>
 
-            <section>
+            <section id="Land">
                 <h2>Land Units</h2>
-                <article id="t4fatboy" class="Card">
-                    <h3><img src="/assets/images/units/uef/land/T4Fatboy.png" alt="T4 Fatboy Unit"/> T4 Fatboy</h3>
-                    <p>The Fatboy has been in an awkward position for some time. These changes aim to address the issues while preserving its identity.</p>
+
+                <article id="t3tank" class="Card">
+                    <h3><img src="/assets/images/units/sera/land/T3Tank.png"/> Othuum</h3>
+                    <p>Improve Othuum’s ranged capabilities and pathfinding so that it can better compete with higher range units, particularly Harbingers. Some DPS is shifted from the short ranged weapons to the long range weapon. The muzzle velocity is slightly reduced to encourage occasional dodging. To improve pathfinding the Othuums hitbox is made shorter, this reduces how often Othuums in larger formations bump into the rear of the Othuum in front of them.</p>
 
                     <ul>
-                        <li>Shield:
+                        <li>Main Cannon:
                             <ul>
-                                <li>Recharge Time: <s>120</s> <i class="fa-solid fa-arrow-right"></i> 75/s</li>
-                                <li>Regeneration Rate: <s>100</s> <i class="fa-solid fa-arrow-right"></i> 200/s</li>
+                                <li>Reload Time (DPS): <s>4s (156)</s> <i class="fa-solid fa-arrow-right"></i> 3.4s (184)</li>
+                                <li>Muzzle Velocity: <s>40</s> <i class="fa-solid fa-arrow-right"></i> 36</li>
                             </ul>
                         </li>
-                        <li>Anti-Air Guns:
+                        <li>Short Range Cannon:
                             <ul>
-                                <li>Range: <s>45</s> <i class="fa-solid fa-arrow-right"></i> 55</li>
-                                <li>Damage: <s>20</s> <i class="fa-solid fa-arrow-right"></i> 40</li>
-                            </ul>
-                        </li>
-                        <li>Collision Size:
-                            <ul>
-                                <li>Uniform Scale: <s>2.22</s> <i class="fa-solid fa-arrow-right"></i> 2.15</li>
-                                <li>Shield Size: <s>25</s> <i class="fa-solid fa-arrow-right"></i> 24</li>
-                                <li>Size X: <s>5.5</s> <i class="fa-solid fa-arrow-right"></i> 5.2</li>
-                                <li>Size Y: <s>1.5</s> <i class="fa-solid fa-arrow-right"></i> 1.4</li>
-                                <li>Size Z: <s>8</s> <i class="fa-solid fa-arrow-right"></i> 7.5</li>
+                                <li>Damage (DPS): <s>64 (256)</s> <i class="fa-solid fa-arrow-right"></i> 57 (228)</li>
                             </ul>
                         </li>
                     </ul>
                 </article>
+
+                <article id="t3sniper" class="Card">
+                    <h3><img src="/assets/images/units/aeon/land/T3Sniper.png"/> Sprite Striker</h3>
+                    <p>Fix the Aeon sniper missing when walking towards/away from the target due to insufficient turret pitch speed to compensate the walk animation.</p>
+
+                    <ul>
+                        <li>Turret Pitch Speed: <s>30</s> <i class="fa-solid fa-arrow-right"></i> 50</li>
+                    </ul>
+                </article>
+
+            </section>
+
+            <section id="Air">
+                <h2>Air Units</h2>
+
+                <article id="t3torpbomber" class="Card">
+                    <h3><img src="/assets/images/units/aeon/air/T3TorpedoBomber.png"/> Solace</h3>
+                    <p>In the last patch the Solace was changed - the number of child projectiles for the Solace was accidentally increased from 2 to 3 resulting in massively increased total damage. This change is reversed only partially as the Solace was underused with the lower damage. In addition, the damage is now properly split from the main projectile to the child projectile, which comes into play when the main projectile falls on top of an enemy.</p>
+
+                    <ul>
+                        <li>Damage per Volley: <s>6000</s> <i class="fa-solid fa-arrow-right"></i> 5000
+                            <ul>
+                                <li>Number of Child Projectile Per Torpedo: <s>3</s> <i class="fa-solid fa-arrow-right"></i> 2</li>
+                                <li>Main Projectile Damage: <s>400</s> <i class="fa-solid fa-arrow-right"></i> 1000</li>
+                                <li>Child Projectile Damage: <s>400</s> <i class="fa-solid fa-arrow-right"></i> 500</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </article>
+            </section>
+
+            <section id="Naval">
+                <h2>Naval Units</h2>
+
+                <article id="t2torpboat" class="Card">
+                    <h3><img src="/assets/images/units/uef/naval/T2TorpBoat.png"/> Cooper</h3>
+                    <p>Adjust the Cooper’s stats to compensate for previous changes to its hitbox, which allowed torpedoes to hit it more reliably. This also serves as an additional buff to the Cooper, as it was one of the primary reasons UEF navy underperformed. UEF naval gameplay now relies less on building as few Coopers as you can get away with, and overbuilding them is less punishing. The Cooper is made slightly larger to prevent it from becoming too effective against Exodus in the early Tech 2 naval stage. Its SonarRadius was smaller than its WaterVisionRadius, rendering this stat pointless, the sonar radius is increased so the Cooper can now spot other naval units more effectively.</p>
+
+                    <ul>
+                        <li>Mass Cost: <s>810</s> <i class="fa-solid fa-arrow-right"></i> 750</li>
+                        <li>Energy Cost: <s>6480</s> <i class="fa-solid fa-arrow-right"></i> 6000</li>
+                        <li>Build Time: <s>3240</s> <i class="fa-solid fa-arrow-right"></i> 3000</li>
+                        <li>Sonar Radius: <s>36</s> <i class="fa-solid fa-arrow-right"></i> 72</li>
+
+                        <li>Torpedos:
+                            <ul>
+                                <li>RateOfFire(DPS): <s>10/33(97)</s> <i class="fa-solid fa-arrow-right"></i> 10/32(100)</li>
+                            </ul>
+                        </li>
+                        <li>Unit Size / Hitbox:
+                            <ul>
+                                <li>SizeX: <s>0.75</s> <i class="fa-solid fa-arrow-right"></i> 0.8</li>
+                                <li>SizeY: <s>0.925</s> <i class="fa-solid fa-arrow-right"></i> 1</li>
+                                <li>SizeZ: <s>2</s> <i class="fa-solid fa-arrow-right"></i> 2.2</li>
+                                <li>Uniform Scale: <s>0.065</s> <i class="fa-solid fa-arrow-right"></i> 0.07</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </article>
+
+                <article id="t2destroyer" class="Card">
+                    <h3><img src="/assets/images/units/uef/naval/T2Destroyer.png"/> Valiant</h3>
+                    <p>The UEF T2 navy stage has been rather weak with their destroyer often losing to other destroyers. To address this, the DPS, speed, and turn rate are increased at the cost of HP. The speed and turn rate should allow the destroyer to take better fights, and the increased damage with reduced HP should encourage more proactive usage while also making shield boats more synergistic.</p>
+
+                    <ul>
+                        <li>Health: <s>8000</s> <i class="fa-solid fa-arrow-right"></i> 7200</li>
+                        <li>Max Speed: <s>5</s> <i class="fa-solid fa-arrow-right"></i> 5.5</li>
+                        <li>Max Acceleration: <s>5</s> <i class="fa-solid fa-arrow-right"></i> 5.5</li>
+                        <li>Max Braking: <s>5</s> <i class="fa-solid fa-arrow-right"></i> 5.5</li>
+                        <li>Turn Rate: <s>50</s> <i class="fa-solid fa-arrow-right"></i> 55</li>
+                        <li>Main Cannon:
+                            <ul>
+                                <li>Damage (DPS): <s>275 (275)</s> <i class="fa-solid fa-arrow-right"></i> 305 (305)</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </article>
+
+                <article id="t2cruiser" class="Card">
+                    <h3><img src="/assets/images/units/cybran/naval/T2Cruiser.png"/> Siren</h3>
+
+                    <ul>
+                        <li>Reload Time: <s>4s</s> <i class="fa-solid fa-arrow-right"></i> 1.9s</li>
+                        <li>Range: <s>20</s> <i class="fa-solid fa-arrow-right"></i> 44</li>
+                        <li>Max Target Height: <s>8</s> <i class="fa-solid fa-arrow-right"></i> Infinite</li>
+                    </ul>
+                </article>
+                
+                <article id="t3carrier" class="Card">
+                    <h3><img src="/assets/images/units/cybran/naval/T3AircraftCarrier.png"/> Command Class</h3>
+
+                    <ul>
+                        <li>Reload Time: <s>2.5s</s> <i class="fa-solid fa-arrow-right"></i> 1.9s</li>
+                        <li>Range: <s>26</s> <i class="fa-solid fa-arrow-right"></i> 44</li>
+                        <li>Max Target Height: <s>10</s> <i class="fa-solid fa-arrow-right"></i> Infinite</li>
+                    </ul>
+                </article>
+
+            </section>
+
+            <section id="ACU">
+                <h2>ACUs & SACUs</h2>
+
+                <article id="teleport" class="Card">
+                    <h3><img src="/assets/images/Enhancements/uef/teleport.png">Personal Teleport</h3>
+                    <p> While the introduction of variable teleport speeds and costs was an overall positive change for the balance of the game, shorter-ranged jumps have become too powerful as a result. The previous minimum teleport time was set at 15 seconds, which was quite short and did not allow much leeway for counterplay. The changes aims to remedy this issue without nerfing the mechanic excessively. The minimum teleport time and minimum energy usage are both increased, alongside the introduction of a new formula for the distance-based variable teleport time and energy usage calculations.</p>
+
+                    <ul>
+                        <li>Teleport Delay: <s>15s</s> <i class="fa-solid fa-arrow-right"></i> 20 s</li>
+                        <li>Flat Energy Cost: <s>75000</s> <i class="fa-solid fa-arrow-right"></i> 100000</li>
+                        <li>Introduce a new formula for teleport time and energy usage.</li>
+                    </ul>
+                </article>
+
+                <article id="sensors" class="Card">
+                    <h3><img src="/assets/images/Enhancements/aeon/sensor.png">Sensor System</h3>
+                    <p>Reduce the Aeon ACU sensor upgrade’s omni radius to make fire beetles a more viable option against Aeon, and to allow more counterplay for cloaked units in general.</p>
+
+                    <ul>
+                        <li>Omni Radius: <s>80</s> <i class="fa-solid fa-arrow-right"></i> 36</li>
+                    </ul>
+                </article>
+
+            </section>
+
+            <section id="Structure">
+                <h2>Structures</h2>
+
+                <article id="tml" class="Card">
+                    <h3>T2 Tactical Missle Launchers</h3>
+                    <ul>
+                        <li>The hitboxes of all tactical missiles are increased slightly, to prevent TMDs from missing them by overshooting.</li>
+                        <li>Seraphim and UEF TMLs fly lower.</li>
+                        <li>The max speed of the Seraphim TML is reduced because it was too fast compared to other TMLs; for example, it was able to reach its target over 10s faster at longer ranges. Additionally, the terminal speed of the missile as it nears its target is also reduced, so that it serves as a more legitimate balancing factor.</li>
+                        <li>Nerf the Seraphim ACU TML’s oppressive close range combat potential by reducing its speed.</li>
+                    </ul>
+                </article>
+
+                <article id="tmd" class="Card">
+                    <h3>T2 Tactical Missle Defenses</h3>
+                    <ul>
+                        <li>Cybran and UEF TMDs no longer run out of beamlength/lifetime, which could previously cause their projectiles to expire before reaching their target. This change should also ensure compatibility with mods that introduce missiles flying at very high altitudes.</li>
+                        <li>Unify the `MuzzleVelocity` stats of all UEF TMDs.</li>
+                        <li>Remove unnecessary firing tolerance stats, which theoretically could have caused TMDs to miss.</li>
+                    </ul>
+                </article>
+
+                <article id="t3artys" class="Card">
+                    <h3>T3 Stationary Artilleries</h3>
+                    <p>Rebalance cost, damage, reload, and accuracy stats of T3 static artillery to make them more equal against heavily shielded targets.
+
+                    Costs are now spread evenly across 70-79k mass to fit the varied DPS amounts of different artilleries. Overall they’re more expensive, aside from Cybran. Accuracy and DPS are adjusted so that artilleries have similar performance for their new costs against heavily shielded late-game targets. Damage is adjusted to even out performance against different T3 shields and give UEF some diversity from Seraphim.</p>
+
+                    <h4><img src="/assets/images/units/aeon/structure/T3StaticArty.png">Emissary</h4>
+                    <ul>
+                        <li>Mass Cost: <s>73200</s> <i class="fa-solid fa-arrow-right"></i> 79000 </li>
+                        <li>Energy Cost: <s>1372500</s> <i class="fa-solid fa-arrow-right"></i> 1481000</li>
+                        <li>Build Time: <s>120000</s> <i class="fa-solid fa-arrow-right"></i> 129500</li>
+                        <li>Firing Randomness: 0.35</li>
+                        <li>DPS with 4 T3 Pgens: 1000</li>
+                    </ul>
+
+                    <h4><img src="/assets/images/units/uef/structure/T3StaticArty.png">Duke</h4>
+                    <ul>
+                        <li>Mass Cost: <s>72000</s> <i class="fa-solid fa-arrow-right"></i> 76000 </li>
+                        <li>Energy Cost: <s>1350000</s> <i class="fa-solid fa-arrow-right"></i> 1424000</li>
+                        <li>Build Time: <s>115000</s> <i class="fa-solid fa-arrow-right"></i> 121400</li>
+                        <li>Firing Randomness: <s>0.525</s> <i class="fa-solid fa-arrow-right"></i> 0.467</li>
+                        <li>DPS with 4 T3 Pgens: <s>917</s> <i class="fa-solid fa-arrow-right"></i>980
+                            <ul>
+                            <li>Damage: <s>5500</s> <i class="fa-solid fa-arrow-right"></i> 7840</li>
+                            <li>Base Reload: <s>10s</s> <i class="fa-solid fa-arrow-right"></i> 13.3s</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <h4><img src="/assets/images/units/sera/structure/T3StaticArty.png">Hovatham</h4>
+                    <ul>
+                        <li>Mass Cost: <s>70800</s> <i class="fa-solid fa-arrow-right"></i> 73000 </li>
+                        <li>Energy Cost: <s>1327500</s> <i class="fa-solid fa-arrow-right"></i> 1369000</li>
+                        <li>Build Time: <s>110000</s> <i class="fa-solid fa-arrow-right"></i> 113400</li>
+                        <li>Firing Randomness: <s>0.675</s> <i class="fa-solid fa-arrow-right"></i> 0.560</li>
+                        <li>DPS with 4 T3 Pgens: <s>833</s> <i class="fa-solid fa-arrow-right"></i>935
+                            <ul>
+                            <li>Damage: <s>5000</s> <i class="fa-solid fa-arrow-right"></i> 5800</li>
+                            <li>Base Reload: <s>10s</s> <i class="fa-solid fa-arrow-right"></i> 10.4s</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <h4><img src="/assets/images/units/cybran/structure/T3StaticArty.png">Disruptor</h4>
+                    <ul>
+                        <li>Mass Cost: <s>69600</s> <i class="fa-solid fa-arrow-right"></i> 70000 </li>
+                        <li>Energy Cost: <s>1305000</s> <i class="fa-solid fa-arrow-right"></i> 1313000</li>
+                        <li>Build Time: <s>105000</s> <i class="fa-solid fa-arrow-right"></i> 105600</li>
+                        <li>Firing Randomness: <s>0.75</s> <i class="fa-solid fa-arrow-right"></i> 0.646</li>
+                        <li>DPS with 4 T3 Pgens: <s>804</s> <i class="fa-solid fa-arrow-right"></i> 844
+                            <ul>
+                            <li>Damage: <s>3700</s> <i class="fa-solid fa-arrow-right"></i> 3800</li>
+                            <li>Base Reload: <s>7.7s</s> <i class="fa-solid fa-arrow-right"></i> 7.5s</li>
+                            <li>The DPS isn’t increased as much as other artillery due to the large accuracy buff and the large splash.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </article>
+
+
             </section>
         </div>
 
@@ -60,7 +258,26 @@
                 <div class="IconSidebarSpace"></div>
                 <nav class="IconSidebarSubgrid">
                     <h3 class="IconSidebarSubtitle">Land</h3>
-                    <a href="#t4fatboy"><img src="/assets/images/units/uef/land/T4Fatboy.png" alt="T4 Fatboy Thumbnail" loading="lazy"/></a>
+                    <a href="#t3tank"><img src="/assets/images/units/sera/land/T3Tank.png" alt="T3 Tank Thumbnail" loading="lazy"/></a>
+                    <a href="#t3sniper"><img src="/assets/images/units/aeon/land/T3Sniper.png" alt="T3 Sniper Thumbnail" loading="lazy"/></a>
+                    
+                    <h3 class="IconSidebarSubtitle">Air</h3>
+                    <a href="#t3torpbomber"><img src="/assets/images/units/aeon/air/T3TorpedoBomber.png" alt="T3 Torpedo Bomber Thumbnail" loading="lazy"/></a>
+                    
+                    <h3 class="IconSidebarSubtitle">Naval</h3>
+                    <a href="#t2torpboat"><img src="/assets/images/units/uef/naval/T2TorpBoat.png" alt="T2 Torpedo Boat Thumbnail" loading="lazy"/></a>
+                    <a href="#t2destroyer"><img src="/assets/images/units/uef/naval/T2Destroyer.png" alt="T2 Destroyer Thumbnail" loading="lazy"/></a>
+                    <a href="#t2cruiser"><img src="/assets/images/units/cybran/naval/T2Cruiser.png" alt="T2 Cruiser Thumbnail" loading="lazy"/></a>
+                    <a href="#t3carrier"><img src="/assets/images/units/cybran/naval/T3AircraftCarrier.png" alt="T3 Aircraft Carrier Thumbnail" loading="lazy"/></a>
+                    
+                    <h3 class="IconSidebarSubtitle">ACU & SACU</h3>
+                    <a href="#teleport"><img src="/assets/images/Enhancements/uef/teleport.png" alt="Teleport Enhancement Thumbnail" loading="lazy"/></a>
+                    <a href="#sensors"><img src="/assets/images/Enhancements/aeon/sensor.png" alt="Sensor Enhancement Thumbnail" loading="lazy"/></a>
+                    
+                    <h3 class="IconSidebarSubtitle">Structures</h3>
+                    <a href="#tml"><img src="/assets/images/units/cybran/structure/T2Tml.png" alt="T2 TML Thumbnail" loading="lazy"/></a>
+                    <a href="#tmd"><img src="/assets/images/units/aeon/structure/T2TMD.png" alt="T2 TMD Thumbnail" loading="lazy"/></a>
+                    <a href="#t3artys"><img src="/assets/images/units/aeon/structure/T3StaticArty.png" alt="T3 Artillery Thumbnail" loading="lazy"/></a>
                 </nav>
             </div>
         </aside>
