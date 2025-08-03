@@ -1,5 +1,5 @@
 function setBackground(mediaQuery) {
-  const htmlElement = document.documentElement;
+  const bodyElement = document.body;
   const imgs = [
     '../assets/images/backgrounds/1.jpg',
     '../assets/images/backgrounds/2.jpg',
@@ -16,12 +16,12 @@ function setBackground(mediaQuery) {
   });
 
   if (mediaQuery.matches) {
-    htmlElement.style.backgroundColor = 'var(--Background)';
-    htmlElement.style.backgroundImage = 'none';
+    bodyElement.style.backgroundColor = 'var(--Background)';
+    bodyElement.style.backgroundImage = 'none';
   } else {
     const randomImg = imgs[Math.floor(Math.random() * imgs.length)];
-    htmlElement.style.backgroundImage = `url(${randomImg})`;
-    htmlElement.style.backgroundColor = 'transparent';
+    bodyElement.style.backgroundImage = `url(${randomImg})`;
+    bodyElement.style.backgroundColor = 'transparent';
   }
 }
 

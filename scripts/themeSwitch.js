@@ -4,13 +4,17 @@ const LIGHT_MODE_CLASS = 'light-mode';
 function toggleTheme() {
   const htmlElement = document.documentElement;
   const themeToggleButton = document.querySelector('#themeToggleButton');
+  const themeText = themeToggleButton?.querySelector('.theme-text');
   const isLightMode = htmlElement.classList.toggle(LIGHT_MODE_CLASS);
   const newTheme = isLightMode ? 'light' : 'dark';
 
   // Update button text and aria-label for better accessibility
-  if (themeToggleButton) {
-    themeToggleButton.textContent = isLightMode ? 'Switch to Dark' : 'Switch to Light';
+  if (themeToggleButton && themeText) {
+    themeText.textContent = isLightMode ? 'Light' : 'Dark';
     themeToggleButton.setAttribute('aria-label', 
+      isLightMode ? 'Switch to dark theme' : 'Switch to light theme'
+    );
+    themeToggleButton.setAttribute('title', 
       isLightMode ? 'Switch to dark theme' : 'Switch to light theme'
     );
   }
@@ -25,6 +29,7 @@ function toggleTheme() {
 function loadTheme() {
   const htmlElement = document.documentElement;
   const themeToggleButton = document.querySelector('#themeToggleButton');
+  const themeText = themeToggleButton?.querySelector('.theme-text');
   let savedTheme;
 
   try {
@@ -42,9 +47,12 @@ function loadTheme() {
   }
 
   // Update button text and aria-label on load
-  if (themeToggleButton) {
-    themeToggleButton.textContent = isLightMode ? 'Switch to Dark' : 'Switch to Light';
+  if (themeToggleButton && themeText) {
+    themeText.textContent = isLightMode ? 'Light' : 'Dark';
     themeToggleButton.setAttribute('aria-label', 
+      isLightMode ? 'Switch to dark theme' : 'Switch to light theme'
+    );
+    themeToggleButton.setAttribute('title', 
       isLightMode ? 'Switch to dark theme' : 'Switch to light theme'
     );
   }
