@@ -1,5 +1,9 @@
 async function populate() {
   const requestURL = '../assets/data/patches.json';
+  const container = document.querySelector('.BalanceJSONList');
+  
+  // Show loading state
+  showLoadingState(container);
 
   try {
     const response = await fetch(requestURL, { cache: 'no-cache' });
@@ -18,12 +22,52 @@ async function populate() {
     // Render only if data exists
     if (balance.length > 0) {
       renderPatchList(balance, '.BalanceJSONList');
+      
+      // Initialize search with patch data
+      if (window.patchSearch) {
+        window.patchSearch.setPatches(balance);
+      }
     } else {
-      console.warn('No balance data available.');
+      showEmptyState(container);
     }
   } catch (error) {
     console.error('There has been a problem with your fetch operation:', error);
+    showErrorState(container, error.message);
   }
+}
+
+function showLoadingState(container) {
+  if (!container) return;
+  
+  container.innerHTML = `
+    <div class="loading-state">
+      <div class="loading-spinner"></div>
+      <p>Loading patches...</p>
+    </div>
+  `;
+}
+
+function showErrorState(container, message) {
+  if (!container) return;
+  
+  container.innerHTML = `
+    <div class="error-state">
+      <p>❌ Failed to load patches</p>
+      <p class="error-details">${message}</p>
+      <button onclick="populate()" class="retry-btn">Try Again</button>
+    </div>
+  `;
+}
+
+function showEmptyState(container) {
+  if (!container) return;
+  
+  container.innerHTML = `
+    <div class="empty-state">
+      <p>📝 No patches available</p>
+      <p>Check back later for updates!</p>
+    </div>
+  `;
 }
 
 function renderPatchList(patchList, containerSelector) {
@@ -37,18 +81,32 @@ function renderPatchList(patchList, containerSelector) {
   const fragment = document.createDocumentFragment(); // Use DocumentFragment for better performance
 
   patchList.forEach(
-    ({ patch = 'Unknown Patch', link = '#', date = 'Unknown Date' }) => {
+    ({ patch = 'Unknown Patch', link = '#', date = 'Unknown Date' }, index) => {
       const listItem = document.createElement('li');
+      listItem.className = 'patch-item';
+      
+      // Add latest badge for first item
+      if (index === 0) {
+        listItem.classList.add('latest');
+      }
 
       const linkElement = document.createElement('a');
-      linkElement.textContent = patch;
+      linkElement.className = 'patch-link';
       linkElement.href = link;
-      linkElement.target = '_blank';
+      linkElement.setAttribute('aria-label', `View patch ${patch} details`);
+      
+      // Create patch info structure
+      linkElement.innerHTML = `
+        <div class="patch-info">
+          <div class="patch-header">
+            <span class="patch-number">Patch ${patch}</span>
+            ${index === 0 ? '<span class="latest-badge">Latest</span>' : ''}
+          </div>
+          <span class="patch-date">${date}</span>
+        </div>
+      `;
 
-      const dateElement = document.createElement('span');
-      dateElement.textContent = date;
-
-      listItem.append(linkElement, dateElement);
+      listItem.appendChild(linkElement);
       fragment.appendChild(listItem);
     }
   );

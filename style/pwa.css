@@ -9,10 +9,15 @@
   top: 0;
   left: 0;
   right: 0;
-  background: var(--Accent-Color);
+  background: rgba(0, 210, 255, 0.9);
+  backdrop-filter: blur(15px) saturate(180%);
+  -webkit-backdrop-filter: blur(15px) saturate(180%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.125);
   color: var(--Text-Primary);
   z-index: 1000;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 
+    0 2px 8px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
   animation: slideDown 0.3s ease-out;
   transform: translateZ(0); /* Force hardware acceleration */
 }
