@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="FAF Patch 3813 balance changes including hover flak mobility, Fire Beetle transport optimization, amphibious tank adjustments, and various unit tweaks.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FAForever Patch 3813 - Balance Update</title>
+    <link rel="stylesheet" href="/style/balance.css"/>
+    <script src="/scripts/themeSwitch.js" defer></script>
+</head>
+<body>
+    <main class="Grid">
+        <div class="Content">
+            <section id="Intro">
+                <header class="FlexboxContainer">
+                    <h1 class="FlexGrow-4">Patch 3813</h1>
+                    <h4 class="FlexGrow-1" id="date">Date: <time datetime="2024-08-15">August 15th 2024</time></h4>
+                </header>
+                <p class="patchDescription">The balance changes adjust unit stats for better gameplay clarity and fairness, including mobility tweaks, cost balancing, vision reductions, and weapon effectiveness.</p>
+                <h3>-- The Balance Team</h3>
+                <hr>
+            </section>
+
+            <section name="Land Units">
+                <h2>Land Units</h2>
+
+                <article id="t2flack" class="Card">
+                    <h3> T2 Hover Flack</h3>
+                    <p>Reduce the speed of hover flak on water to be the same as on land. This makes it less oppressive supporting hover raids and more exposed when supporting naval fleets.</p>
+
+                    <h4><img src="/assets/images/units/aeon/land/T2HoverTank.png" alt="">Aeon</h4>
+                    <ul>
+                        <li>Water Speed Multiplier(Water Speed): <s>1.35(3.65)</s> <i class="fa-solid fa-arrow-right"></i> 1(2.7)</li>
+                    </ul>
+
+                    <h4><img src="/assets/images/units/sera/land/T2HoverFlack.png" alt="">Sera</h4>
+                    <ul>
+                        <li>Water Speed Multiplier(Water Speed): <s>1.4(3.64)</s> <i class="fa-solid fa-arrow-right"></i> 1(2.6)</li>
+                    </ul>
+                </article>
+
+                <article id="t2mobilebomb" class="Card">
+                    <h3><img src="/assets/images/units/cybran/land/T2MobileBomb.png" alt="">Fire Beetle</h3>
+                    <p>Unlike other Tech 2 units, the Fire Beetle only takes up one clamp on transports, the same as Tech 1 units. To ensure that it does not slow transports down excessively, the Fire Beetle's TransportSpeedReduction stat is reduced to match that of Tech 1 units.</p>
+
+                    <ul>
+                        <li>TransportSpeedReduction: <s>0.3</s> <i class="fa-solid fa-arrow-right"></i> 0.15</li>
+                    </ul>
+                </article>
+
+                <article id="t2hovertank" class="Card">
+
+                    <h3>Tech 2 Amphibious Tanks</h3>
+
+                    <p>Reduce Blaze speed to make it easier to catch and reduce its powerful raiding capabilities. Additionally, reduce T2 Amphibious Tank vision by 2 to give them a weapon range disadvantage of 2 when behind enemy lines and lacking intel, similar to T2 land tanks. Riptide is an exception, as it already has a short 18 vision/weapon range.</p>
+
+                    <h4><img src="/assets/images/units/aeon/land/T2HoverTank.png"> Blaze</h4>
+                    <ul>
+                        <li>Speed: <s>4.3</s> <i class="fa-solid fa-arrow-right"></i> 4</li>
+                        <li>Vision Radius: <s>24</s> <i class="fa-solid fa-arrow-right"></i> 22</li>
+                    </ul>
+
+                    <h4><img src="/assets/images/units/sera/land/T2HoverTank.png"> Yenzyne</h4>
+                    <ul>
+                        <li>Vision Radius: <s>20</s> <i class="fa-solid fa-arrow-right"></i> 18</li>
+                    </ul>
+
+                    <h4><img src="/assets/images/units/sera/land/T2HoverTank.png"> Wagner</h4>
+                    <ul>
+                        <li>Vision Radius: <s>22</s> <i class="fa-solid fa-arrow-right"></i> 20</li>
+                    </ul>
+                </article>
+
+                <article id="t3empmml" class="Card">
+                    <h3>The Pulsar (Cybran T3 Mobile EMP Missile Launcher)</h3>
+                    <p>The Pulsar receives various tweaks in anticipation of its future introduction into the game. Additionally, the Pulsar’s files have been updated to remove the last remnants of its former name. Initially, the unit was called Othismash.</p>
+
+                    <ul>
+                        <li>Categories Added:
+                            <ul>
+                                <li>PRODUCTDL</li>
+                                <li>SNIPEMODE</li>
+                            </ul>
+                        </li>
+                        <li>Weapon:
+                            <ul>
+                                <li>Damage Radius: <s>0</s> <i class="fa-solid fa-arrow-right"></i> 1</li>
+                                <li>TurretPitchRange: <s>15</s> <i class="fa-solid fa-arrow-right"></i> 40</li>
+                                <li>TurretPitchSpeed: <s>20</s> <i class="fa-solid fa-arrow-right"></i> 50</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+
+                </article>
+
+                <article id="t4exp" class="Card">
+                    <h3><img src="/assets/images/units/sera/land/T4Bot.png"> Ythotha</h3>
+                    <p>Remove the ability for the Ythotha to walk backwards, preventing exploitation of its movement mechanics during combat.</p>
+
+                    <ul>
+                        <li>MaxSpeedReverse: <s>2.5</s> <i class="fa-solid fa-arrow-right"></i> 0</li>
+                    </ul>
+                </article>
+
+
+            </section>
+
+            
+            <section name="Air Units">
+                <h2>Air Units</h2>
+
+                <article id="t2bomb" class="Card">
+                    <h3><img src="/assets/images/units/aeon/air/T2Mercy.png"> Mercy</h3>
+                    <p>Buff the cost of the Mercy to suit its new role of killing large numbers of low HP targets such as armies, T1 pgens, and engineers. The buildtime is reduced an extra amount compared to other costs since it is a kamikaze unit.</p>
+                    <ul>
+                        <li>Mass Cost: <s>300</s> <i class="fa-solid fa-arrow-right"></i> 230</li>
+                        <li>Energy Cost: <s>6000</s> <i class="fa-solid fa-arrow-right"></i> 4600</li>
+                        <li>Build Time: <s>2000</s> <i class="fa-solid fa-arrow-right"></i> 1200</li>
+                    </ul>
+                </article>
+
+                <article id="t3asf" class="Card">
+                    <h3><img src="/assets/images/units/uef/air/T3ASF.png"> T3 ASF</h3>
+                    <p> Remove ASF’s armor against Ahwassa bomb, as it is no longer necessary with the new delayed explosion.</p>
+                    <ul>
+                        <li>Damage taken from Ahwassa bomb 10% -> 100%</li>
+                    </ul>
+                </article>
+
+                <article id="t4air" class="Card">
+                    <h3><img src="/assets/images/units/cybran/air/T4Gunship.png"> Soul Ripper </h3>
+                    <p> The Soul Ripper’s Iridium Rocket Packs gain the same area of effect radius as its primary weapons. Visually, these weapons appeared like they dealt damage in an area of effect, however, this was never the case. Due to being very inaccurate, this caused them to underperform against smaller units.</p>
+
+                    <ul>
+                        <li>Iridium Rocket Packs (x2):
+                            <ul>
+                                <li>Damage Radius: <s>0</s> <i class="fa-solid fa-arrow-right"></i> 3</li>
+                                <li>Damage: <s>190</s> <i class="fa-solid fa-arrow-right"></i> 150</li>
+                                <li>DPS: <s>285</s> <i class="fa-solid fa-arrow-right"></i> 225</li>
+                            </ul>
+                    </ul>
+                </article>
+
+            </section>
+
+            <section name="Naval Units">
+                <h2>Naval Units</h2>
+
+                <article id="t2cruisers" class="Card">
+                    <h3><img src="/assets/images/units/aeon/naval/T2Cruiser.png">Aeon Cruiser</h3>
+                    <p>Unify the MuzzleVelocity stat of the Aeon Cruiser’s missile launchers. The Infinity Class is equipped with two copies of Zealot AA Missile launchers. These two weapons function identically except for their MuzzleVelocity stat, where one weapon has a higher value than the other. This is misleading because the models look the same, and the unit databases imply that both have a MuzzleVelocity of 40. In terms of gameplay, there is virtually no difference.</p>
+                    
+                    <ul>
+                        <li>Zealot AA Missile (Right Battery):
+                            <ul>
+                                <li>MuzzleVelocity: <s>40</s> <i class="fa-solid fa-arrow-right"></i> 55</li>
+                            </ul>
+                        </li>
+                        <li>Zealot AA Missile (Left Battery):
+                            <ul>
+                                <li>MuzzleVelocity: <s>30</s> <i class="fa-solid fa-arrow-right"></i> 35</li>
+                            </ul>
+                    </ul>
+                </article>
+
+                <article id="t3aircraftcarrier" class="Card">
+                    <h3>T3 Cybran & Seraphim Aircraft Carriers</h3>
+                    <p>Add strong tracking capabilities (like the Seraphim SAM) to the AA of the Cybran and Seraphim carriers so that they do not miss their shots.</p>
+                    
+                    <ul>
+                        <li>Cybran carrier had an especially poor hit rate at the edge of its range because its weak tracking disabled its ability to lead targets</li>
+                    </ul>
+                </article>
+
+            </section>
+
+            <section name="ACU Units">
+                <h2>ACU's</h2>
+
+                <article id="cybranacu" class="Card">
+                    <h3><img src="/assets/images/units/cybran/land/ACU.png">Cybran ACU</h3>
+                    <p>When the Nano-Repair upgrade was introduced to the Cybran ACU, the MuzzleSalvoSize of its torpedo upgrade was nerfed to prevent the combination from being too oppressive. Unfortunately, this change resulted in the torpedo upgrade being weak even against lower quantities of torpedo defenses, since a single anti-torpedo projectile can negate 500 damage. To alleviate this issue, the torpedo upgrade now launches 3 instead of 2 torpedoes, but at a slightly lower DPS. Additionally, as with most other Cybran torpedoes, their damage is now dealt in multiple pulses.</p>
+                    
+                    <h4><img src="/assets/images/Enhancements/cybran/torp.png" alt="">Nanite Torpedo Launcher</h4>
+                    <ul>
+                        <li>Damage: <s>500</s> <i class="fa-solid fa-arrow-right"></i> 60</li>
+                        <li>Damage over Time Pulses: <s>0</s> <i class="fa-solid fa-arrow-right"></i> 5</li>
+                        <li>MuzzleSalvoSize: <s>2</s> <i class="fa-solid fa-arrow-right"></i> 3</li>
+                        <li>DPS: <s>250</s> <i class="fa-solid fa-arrow-right"></i> 225</li>
+                    </ul>
+                </article>
+
+
+            </section>
+        </div>
+
+        <aside class="Sidebar" role="navigation" aria-label="Sidebar navigation">
+            <div class="IconSidebar">
+                <h2 class="IconSidebarTitle">Contents</h2>
+                <div class="IconSidebarSpace"></div>
+                <nav class="IconSidebarSubgrid">
+                    <h3 class="IconSidebarSubtitle">Land</h3>
+
+                    <a href="#t2flack"><img src="/assets/images/units/aeon/land/T2HoverTank.png" alt="T2 Hover Flack Thumbnail" loading="lazy"/></a>
+                    <a href="#t2mobilebomb"><img src="/assets/images/units/cybran/land/T2MobileBomb.png" alt="T2 Mobile Bomb Thumbnail" loading="lazy"/></a>
+                    <a href="#t2hovertank"><img src="/assets/images/units/aeon/land/T2HoverTank.png" alt="T2 Hover Tank Thumbnail" loading="lazy"/></a>
+                    <a href="#t3empmml"><img src="/assets/images/units/cybran/land/T3MobileAA.png" alt="T3 Mobile EMP Thumbnail" loading="lazy"/></a>
+                    <a href="#t4exp"><img src="/assets/images/units/sera/land/T4Bot.png" alt="T4 Bot Thumbnail" loading="lazy"/></a>
+                    
+                    <h3 class="IconSidebarSubtitle">Air</h3>
+                    <a href="#t2bomb"><img src="/assets/images/units/aeon/air/T2Mercy.png" alt="T2 Mercy Thumbnail" loading="lazy"/></a>
+                    <a href="#t3asf"><img src="/assets/images/units/uef/air/T3ASF.png" alt="T3 ASF Thumbnail" loading="lazy"/></a>
+                    <a href="#t4air"><img src="/assets/images/units/cybran/air/T4Gunship.png" alt="T4 Gunship Thumbnail" loading="lazy"/></a>
+                    <h3 class="IconSidebarSubtitle">Naval</h3>
+                    <a href="#t2cruisers"><img src="/assets/images/units/aeon/naval/T2Cruiser.png" alt="T2 Cruiser Thumbnail" loading="lazy"/></a>
+                    <a href="#t3aircraftcarrier"><img src="/assets/images/units/cybran/naval/T3AircraftCarrier.png" alt="T3 Aircraft Carrier Thumbnail" loading="lazy"/></a>
+
+                    <h3 class="IconSidebarSubtitle">ACU's</h3>
+                    <a href="#cybranacu"><img src="/assets/images/units/cybran/land/ACU.png" alt="Cybran ACU Thumbnail" loading="lazy"/></a>
+                </nav>
+            </div>
+        </aside>
+    </main>
+
+    <footer>
+        <div class="BackToTop">
+            <button><a class="TopText" href="#top">Back to Top</a></button>
+        </div>
+        <br>
+        <a href="/index.html">Back to Patchnote List</a>
+        <p>© 2015-2025 FAForever</p>
+        <button id="themeToggleButton">Toggle Theme</button>
+    </footer>
+</body>
+</html>
