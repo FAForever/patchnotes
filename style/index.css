@@ -360,6 +360,16 @@ a:active {
   .BalanceJSONList {
     max-height: 400px;
     padding: 10px;
+    columns: 1; /* Force single column on mobile */
+    min-height: 150px;
+  }
+  
+  /* Ensure patch items are visible on mobile */
+  .patch-item {
+    display: block !important;
+    width: 100% !important;
+    margin-bottom: 8px !important;
+    break-inside: avoid;
   }
 }
 
@@ -693,8 +703,13 @@ a:active {
 }
 
 .BalanceJSONList {
-  columns: 2;
+  columns: 4; /* Default to 4 columns on large screens */
+  column-gap: 20px;
   text-align: left;
+  min-height: 200px; /* Ensure container has height */
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .BalanceJSONList li + li {
@@ -703,28 +718,55 @@ a:active {
   margin-top: 5px;
 }
 
-/* Media Queries */
+/* Media Queries - Responsive Column System */
 @media only screen and (min-width: 1400px) {
-  /* Custom styles for desktops if any */
+  /* Large desktops: 4 columns */
+  ul {
+    columns: 4;
+    column-gap: 25px;
+  }
+  
+  .BalanceJSONList {
+    columns: 4;
+    column-gap: 25px;
+  }
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1399px) {
+  /* Medium desktops: 3 columns */
   ul {
-    columns: 2;
-    column-gap: 20px; /* Maintain column spacing */
+    columns: 3;
+    column-gap: 20px;
+  }
+  
+  .BalanceJSONList {
+    columns: 3;
+    column-gap: 20px;
   }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
+  /* Tablets: 2 columns */
   ul {
-    columns: 1;
-    column-gap: 20px; /* Maintain column spacing */
+    columns: 2;
+    column-gap: 20px;
+  }
+  
+  .BalanceJSONList {
+    columns: 2;
+    column-gap: 20px;
   }
 }
 
 @media only screen and (max-width: 767px) {
+  /* Mobile: 1 column */
   ul {
     columns: 1;
+  }
+  
+  .BalanceJSONList {
+    columns: 1;
+    column-gap: 0;
   }
   
   .GridContainer {
@@ -768,8 +810,14 @@ a:active {
 }
 
 @media screen and (max-width: 500px) {
+  /* Small mobile: 1 column */
   ul {
     columns: 1;
+  }
+  
+  .BalanceJSONList {
+    columns: 1;
+    column-gap: 0;
   }
   
   .GridContainer {
