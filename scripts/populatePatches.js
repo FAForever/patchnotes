@@ -33,11 +33,20 @@ async function populate() {
 
     // Render only if data exists
     if (balance.length > 0) {
-      renderPatchList(balance, '.BalanceJSONList');
+      // Mobile optimization: limit to last 10 patches on mobile devices
+      const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+      const patchesToRender = isMobile ? balance.slice(0, 10) : balance;
+      
+      console.log('Mobile Debug - Is mobile device:', isMobile);
+      console.log('Mobile Debug - User agent:', navigator.userAgent);
+      console.log('Mobile Debug - Total patches available:', balance.length);
+      console.log('Mobile Debug - Patches to render:', patchesToRender.length);
+      
+      renderPatchList(patchesToRender, '.BalanceJSONList');
       
       // Initialize search with patch data
       if (window.patchSearch) {
-        window.patchSearch.setPatches(balance);
+        window.patchSearch.setPatches(patchesToRender);
       }
     } else {
       showEmptyState(container);
