@@ -26,27 +26,6 @@
   }
 }
 
-/* Accessibility */
-.skip-link {
-  position: absolute;
-  top: -40px;
-  left: 6px;
-  background: var(--Accent-Color);
-  color: var(--Text-Primary);
-  padding: 8px;
-  text-decoration: none;
-  border-radius: 4px;
-  z-index: 1000;
-  font-weight: bold;
-  border: 2px solid var(--Text-Primary);
-}
-
-.skip-link:focus {
-  top: 6px;
-  outline: 2px solid var(--Text-Primary);
-  outline-offset: 2px;
-}
-
 /* Tags */
 html {
   min-height: 100%;
@@ -102,14 +81,15 @@ a:active {
 /* Grid and Layout - Updated January 2025 */
 .GridContainer {
   display: grid !important;
-  padding: 10px;
-  grid-template-columns: 5% 90% 5% !important; /* Consistent percentage-based layout */
+  padding: 20px 0 0 0 !important; /* Small top padding for breathing room */
+  margin: 0 !important; /* No margin to use full width */
+  grid-template-columns: 3% 94% 3% !important; /* Consistent percentage-based layout */
   grid-template-rows: auto auto;
   grid-gap: 20px;
-  margin: 10px;
   flex: 1; /* Take up remaining space to push footer down */
-  width: 100vw;
-  max-width: 100%;
+  width: 100vw !important; /* Full viewport width */
+  max-width: 100% !important;
+  box-sizing: border-box;
 }
 
 .GridItemBackground {
@@ -148,7 +128,7 @@ a:active {
 
 .Title {
   grid-row: 1;
-  grid-column: 2; /* Center column (90%) */
+  grid-column: 2; /* Center column (94%) */
 }
 .Title h1 {
   font-size: 40px;
@@ -161,7 +141,7 @@ a:active {
 
 .BalanceContainer {
   grid-row: 2;
-  grid-column: 2; /* Center column (90%) */
+  grid-column: 2; /* Center column (94%) */
 }
 
 /* Search and Filter Controls */
@@ -827,19 +807,20 @@ a:active {
   }
   
   .GridContainer {
-    display: grid;
-    grid-template-columns: 5% 90% 5%; /* Consistent with global layout */
+    display: grid !important;
+    grid-template-columns: 3% 94% 3% !important; /* Consistent with global layout */
     grid-template-rows: auto auto;
     padding: 0;
     margin: 0;
-    width: 100vw;
-    max-width: 100%;
+    width: 100vw !important;
+    max-width: 100% !important;
     grid-gap: 0;
+    box-sizing: border-box;
   }
   
   .Title {
-    grid-row: 1;
-    grid-column: 2; /* Center column (90%) */
+    grid-row: 1 !important;
+    grid-column: 2 !important; /* Center column (94%) */
     width: 100%;
     margin: 0;
     padding: 5px;
@@ -852,8 +833,8 @@ a:active {
   }
   
   .BalanceContainer {
-    grid-row: 2;
-    grid-column: 2; /* Center column (90%) */
+    grid-row: 2 !important;
+    grid-column: 2 !important; /* Center column (94%) */
     width: 100%;
     margin: 0;
     padding: 0;
@@ -928,24 +909,25 @@ a:active {
   }
   
   .GridContainer {
-    display: grid;
-    grid-template-columns: 3% 94% 3%; /* Percentage-based: even smaller sides for small screens */
+    display: grid !important;
+    grid-template-columns: 3% 94% 3% !important; /* Percentage-based: even smaller sides for small screens */
     grid-template-rows: auto auto;
     padding: 0;
     margin: 0;
-    width: 100vw;
-    max-width: 100%;
+    width: 100vw !important;
+    max-width: 100% !important;
     grid-gap: 0;
+    box-sizing: border-box;
   }
   
   .Title {
-    grid-row: 1;
-    grid-column: 2; /* Center column (94%) */
+    grid-row: 1 !important;
+    grid-column: 2 !important; /* Center column (94%) */
   }
   
   .BalanceContainer {
-    grid-row: 2;
-    grid-column: 2; /* Center column (94%) */
+    grid-row: 2 !important;
+    grid-column: 2 !important; /* Center column (94%) */
   }
   
   .Title h1 {
