@@ -38,6 +38,502 @@ header {
   margin: 10px;
 }
 
+/* ===== ENHANCED CARD DESIGN ===== */
+
+/* Base Card Structure - Used for all cards */
+.Card {
+    background: var(--Card);
+    border: 1px solid var(--Line);
+    border-radius: 16px;
+    margin: 24px 0;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 
+        0 4px 20px rgba(0, 0, 0, 0.08),
+        0 2px 8px rgba(0, 0, 0, 0.04);
+    position: relative;
+}
+
+.Card:hover {
+    transform: translateY(-6px);
+    box-shadow: 
+        0 20px 40px rgba(0, 0, 0, 0.15),
+        0 8px 24px rgba(0, 0, 0, 0.08);
+    border-color: var(--Link);
+}
+
+/* Enhanced Card - For major unit changes */
+.Card.enhanced {
+    border: 2px solid var(--Line);
+    background: linear-gradient(145deg, var(--Card) 0%, var(--IconGridBackground) 100%);
+}
+
+.Card.enhanced:hover {
+    border-color: var(--Link);
+    box-shadow: 
+        0 24px 48px rgba(0, 0, 0, 0.18),
+        0 12px 32px rgba(0, 0, 0, 0.12);
+}
+
+/* Card Header - Professional styling */
+.CardHeader {
+    background: linear-gradient(135deg, var(--IconGridBackground) 0%, var(--Card) 100%);
+    padding: 32px;
+    border-bottom: 3px solid var(--Line);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.CardHeader::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--Link) 0%, transparent 100%);
+}
+
+.UnitInfo {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.UnitIcon {
+    width: 72px;
+    height: 72px;
+    border-radius: 12px;
+    border: 3px solid var(--Line);
+    background: var(--Background);
+    padding: 6px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+}
+
+.UnitIcon:hover {
+    transform: scale(1.05);
+}
+
+.UnitDetails h3 {
+    margin: 0 0 8px 0;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--Text-Primary);
+    letter-spacing: -0.025em;
+    line-height: 1.2;
+}
+
+.UnitCode {
+    display: inline-block;
+    background: var(--Background);
+    color: var(--Text-Secondary);
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-family: 'JetBrains Mono', 'Courier New', monospace;
+    font-weight: 500;
+    margin-bottom: 8px;
+    border: 1px solid var(--Line);
+    letter-spacing: 0.5px;
+}
+
+.FactionBadge {
+    display: inline-block;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 2px solid transparent;
+    backdrop-filter: blur(10px);
+}
+
+.FactionBadge.aeon { 
+    background: linear-gradient(135deg, rgba(74, 222, 128, 0.25) 0%, rgba(74, 222, 128, 0.15) 100%);
+    color: var(--Text-Primary); 
+    border-color: rgba(74, 222, 128, 0.6);
+}
+.FactionBadge.uef { 
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.25) 0%, rgba(59, 130, 246, 0.15) 100%);
+    color: var(--Text-Primary); 
+    border-color: rgba(59, 130, 246, 0.6);
+}
+.FactionBadge.cybran { 
+    background: linear-gradient(135deg, rgba(239, 68, 68, 0.25) 0%, rgba(239, 68, 68, 0.15) 100%);
+    color: var(--Text-Primary); 
+    border-color: rgba(239, 68, 68, 0.6);
+}
+.FactionBadge.sera { 
+    background: linear-gradient(135deg, rgba(245, 158, 11, 0.25) 0%, rgba(245, 158, 11, 0.15) 100%);
+    color: var(--Text-Primary); 
+    border-color: rgba(245, 158, 11, 0.6);
+}
+.FactionBadge.rework { 
+    background: linear-gradient(135deg, rgba(168, 85, 247, 0.25) 0%, rgba(168, 85, 247, 0.15) 100%);
+    color: var(--Text-Primary); 
+    border-color: rgba(168, 85, 247, 0.6);
+}
+
+.ChangeTypeBadge {
+    padding: 12px 24px;
+    border-radius: 24px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 2px solid transparent;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.ChangeTypeBadge.buff { 
+    background: linear-gradient(135deg, rgba(34, 197, 94, 0.3) 0%, rgba(34, 197, 94, 0.2) 100%);
+    color: var(--Text-Primary); 
+    border-color: rgba(34, 197, 94, 0.6);
+}
+.ChangeTypeBadge.nerf { 
+    background: linear-gradient(135deg, rgba(239, 68, 68, 0.3) 0%, rgba(239, 68, 68, 0.2) 100%);
+    color: var(--Text-Primary); 
+    border-color: rgba(239, 68, 68, 0.6);
+}
+.ChangeTypeBadge.fix { 
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.3) 0%, rgba(59, 130, 246, 0.2) 100%);
+    color: var(--Text-Primary); 
+    border-color: rgba(59, 130, 246, 0.6);
+}
+.ChangeTypeBadge.rework { 
+    background: linear-gradient(135deg, rgba(245, 158, 11, 0.3) 0%, rgba(245, 158, 11, 0.2) 100%);
+    color: var(--Text-Primary); 
+    border-color: rgba(245, 158, 11, 0.6);
+}
+
+/* Card Content - Professional styling */
+.CardContent {
+    padding: 32px;
+}
+
+.ChangeDescription {
+    color: var(--Text-Secondary);
+    line-height: 1.7;
+    margin-bottom: 32px;
+    padding: 24px;
+    background: var(--IconGridBackground);
+    border-left: 4px solid var(--Link);
+    border-radius: 0 12px 12px 0;
+    font-size: 1.05rem;
+    position: relative;
+}
+
+.ChangeDescription::before {
+    content: '"';
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    font-size: 2rem;
+    color: var(--Link);
+    opacity: 0.3;
+}
+
+.ChangesList {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.ChangeGroup {
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    overflow: visible;
+    transition: none;
+    margin-bottom: 0;
+}
+
+.ChangeGroup:hover {
+    border-color: transparent;
+    box-shadow: none;
+}
+
+.ChangeGroupTitle {
+    background: linear-gradient(135deg, var(--IconGridBackground) 0%, var(--Card) 100%);
+    padding: 16px 24px;
+    margin: 0 0 0 0;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--Text-Primary);
+    border: none;
+    border-radius: 0;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    letter-spacing: -0.015em;
+    border-bottom: 3px solid var(--Line);
+    position: relative;
+}
+
+.ChangeGroupTitle::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--Link) 0%, transparent 100%);
+}
+
+.ChangeGroupTitle i {
+    color: var(--Link);
+    width: 20px;
+    font-size: 1.1rem;
+}
+
+.Changes {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+}
+
+/* Clean stat changes - only color-coded left borders */
+.Changes li {
+    padding: 12px 20px;
+    border-bottom: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 0.2s ease;
+    border-left: 4px solid transparent;
+    background: none;
+    margin-bottom: 8px;
+    margin-left: 0;
+}
+
+/* Indent changes that come after sub-headers */
+.Changes li:not(.sub-header) {
+    margin-left: 24px;
+}
+
+.Changes li:last-child {
+    border-bottom: none;
+}
+
+.Changes li:hover {
+    background: rgba(var(--Link-RGB), 0.03);
+    padding-left: 24px;
+}
+
+.Changes li.buff {
+    border-left-color: rgba(34, 197, 94, 0.9);
+}
+
+.Changes li.nerf {
+    border-left-color: rgba(239, 68, 68, 0.9);
+}
+
+.Changes li.fix {
+    border-left-color: rgba(59, 130, 246, 0.9);
+}
+
+.Changes li.addition {
+    border-left-color: rgba(59, 130, 246, 0.9);
+}
+
+/* Stat change labels as sub-headers - cleaner approach */
+.Changes li.sub-header {
+    background: transparent;
+    border-left: 4px solid var(--Link);
+    font-weight: 700;
+    color: var(--Text-Primary);
+    margin: 12px 0 8px 0;
+    justify-content: flex-start;
+    padding: 12px 20px;
+    font-size: 1.1rem;
+}
+
+.Changes li.sub-header:first-child {
+    margin-top: 8px;
+}
+
+.Changes li.sub-header:hover {
+    background: transparent;
+    padding-left: 20px;
+}
+
+.ChangeLabel {
+    font-weight: 600;
+    color: var(--Text-Primary);
+    flex: 1;
+    font-size: 1rem;
+}
+
+.ChangeValue {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-family: 'JetBrains Mono', 'Courier New', monospace;
+    font-size: 0.95rem;
+}
+
+.OldValue {
+    color: var(--Text-Secondary);
+    text-decoration: line-through;
+    opacity: 0.7;
+}
+
+.NewValue {
+    color: var(--Text-Primary);
+    font-weight: 700;
+}
+
+.ChangeArrow {
+    color: var(--Link);
+    font-size: 1rem;
+    margin: 0 4px;
+}
+
+/* Simple Card - For minor changes and group updates */
+.Card.simple {
+    padding: 28px;
+    background: var(--Card);
+}
+
+.Card.simple h3 {
+    margin: 0 0 20px 0;
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--Text-Primary);
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding-bottom: 16px;
+    border-bottom: 3px solid var(--Line);
+    letter-spacing: -0.025em;
+}
+
+.Card.simple h3 img {
+    width: 56px;
+    height: 56px;
+    border-radius: 8px;
+    border: 2px solid var(--Line);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.Card.simple h4 {
+    color: var(--Text-Primary);
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin: 24px 0 16px 0;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    letter-spacing: -0.015em;
+}
+
+.Card.simple h4 img {
+    width: 40px;
+    height: 40px;
+    border-radius: 6px;
+    border: 1px solid var(--Line);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* ===== END ENHANCED CARD DESIGN ===== */
+
+/* ===== RESPONSIVE ENHANCEMENTS FOR CARDS ===== */
+
+@media (max-width: 1024px) {
+    .CardHeader {
+        flex-direction: column;
+        gap: 20px;
+        align-items: flex-start;
+        padding: 28px;
+    }
+    
+    .UnitInfo {
+        width: 100%;
+    }
+    
+    .ChangeTypeBadge {
+        align-self: flex-end;
+    }
+    
+    .UnitDetails h3 {
+        font-size: 1.75rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .CardHeader {
+        padding: 24px;
+    }
+    
+    .CardContent {
+        padding: 24px;
+    }
+    
+    .UnitIcon {
+        width: 64px;
+        height: 64px;
+    }
+    
+    .UnitDetails h3 {
+        font-size: 1.5rem;
+    }
+    
+    .Change {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+        padding: 20px 24px;
+    }
+    
+    .ChangeValue {
+        width: 100%;
+        justify-content: flex-end;
+    }
+    
+    .ChangeDescription {
+        padding: 20px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .CardHeader {
+        padding: 20px;
+    }
+    
+    .CardContent {
+        padding: 20px;
+    }
+    
+    .UnitIcon {
+        width: 56px;
+        height: 56px;
+    }
+    
+    .UnitDetails h3 {
+        font-size: 1.3rem;
+    }
+    
+    .ChangeGroupTitle {
+        padding: 14px 20px;
+        font-size: 1.1rem;
+    }
+    
+    .Change {
+        padding: 16px 20px;
+    }
+}
+
+/* ===== END RESPONSIVE ENHANCEMENTS ===== */
+
 .Grid {
   padding: 10px;
   display: grid;

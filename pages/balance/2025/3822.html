@@ -25,23 +25,61 @@
             <section id="Land">
                 <h2>Land Units</h2>
 
-                <article id="t3tank" class="Card">
-                    <h3><img src="/assets/images/units/sera/land/T3Tank.png"/> Othuum</h3>
-                    <p>Improve Othuum’s ranged capabilities and pathfinding so that it can better compete with higher range units, particularly Harbingers. Some DPS is shifted from the short ranged weapons to the long range weapon. The muzzle velocity is slightly reduced to encourage occasional dodging. To improve pathfinding the Othuums hitbox is made shorter, this reduces how often Othuums in larger formations bump into the rear of the Othuum in front of them.</p>
+                <article id="t3tank" class="Card enhanced">
+                <!-- Card Header Section -->
+                    <header class="CardHeader">
+                        <div class="UnitInfo">
+                            <img src="/assets/images/units/sera/land/T3Tank.png" class="UnitIcon" alt="Othuum"/>
+                            <div class="UnitDetails">
+                                <h3 class="UnitName">Othuum</h3>
+                                <span class="UnitCode">XSL0303</span>
+                                <span class="FactionBadge sera">Seraphim</span>
+                            </div>
+                        </div>
+                        <div class="ChangeTypeBadge buff">Buff</div>
+                    </header>
 
-                    <ul>
-                        <li>Main Cannon:
-                            <ul>
-                                <li>Reload Time (DPS): <s>4s (156)</s> <i class="fa-solid fa-arrow-right"></i> 3.4s (184)</li>
-                                <li>Muzzle Velocity: <s>40</s> <i class="fa-solid fa-arrow-right"></i> 36</li>
-                            </ul>
-                        </li>
-                        <li>Short Range Cannon:
-                            <ul>
-                                <li>Damage (DPS): <s>64 (256)</s> <i class="fa-solid fa-arrow-right"></i> 57 (228)</li>
-                            </ul>
-                        </li>
-                    </ul>
+                    <!-- Card Content Section -->
+                    <div class="CardContent">
+                        <p class="ChangeDescription">Improve Othuum's ranged capabilities and pathfinding so that it can better compete with higher range units, particularly Harbingers. Some DPS is shifted from the short ranged weapons to the long range weapon. The muzzle velocity is slightly reduced to encourage occasional dodging. To improve pathfinding the Othuums hitbox is made shorter, this reduces how often Othuums in larger formations bump into the rear of the Othuum in front of them.</p>n">
+
+                        <div class="ChangesList">
+                            <div class="ChangeGroup">
+                                <h4 class="ChangeGroupTitle">
+                                    <i class="fas fa-crosshairs"></i>
+                                    Weapons
+                                </h4>
+                                <ul class="Changes">
+                                    <li class="sub-header"><strong>Main Cannon</strong></li>
+                                    <li class="buff">
+                                        <span class="ChangeLabel">Reload Time (DPS):</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">4s (156)</s> 
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                            <strong class="NewValue">3.4s (184)</strong>
+                                        </span>
+                                    </li>
+                                    <li class="nerf">
+                                        <span class="ChangeLabel">Muzzle Velocity:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">40</s> 
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                            <strong class="NewValue">36</strong>
+                                        </span>
+                                    </li>
+                                    <li class="sub-header"><strong>Short Range Cannon</strong></li>
+                                    <li class="nerf">
+                                        <span class="ChangeLabel">Damage (DPS):</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">64 (256)</s> 
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                            <strong class="NewValue">57 (228)</strong>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </article>
 
                 <article id="t3sniper" class="Card">
