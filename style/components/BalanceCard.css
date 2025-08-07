@@ -1,0 +1,944 @@
+@import '../root.css';
+
+/* ===== BALANCE CARD COMPONENT ===== */
+
+/* ===== BASE CARD STRUCTURE ===== */
+
+/* Base Card Structure - Used for all balance cards */
+.Card {
+    background: linear-gradient(145deg, var(--Card) 0%, var(--IconGridBackground) 100%);
+    border: 1px solid var(--Line);
+    border-radius: 16px;
+    margin: 24px 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 
+        0 6px 20px rgba(0, 0, 0, 0.1),
+        0 2px 8px rgba(0, 0, 0, 0.06);
+    position: relative;
+}
+
+.Card:hover {
+    transform: translateY(-6px);
+    box-shadow: 
+        0 16px 32px rgba(0, 0, 0, 0.15),
+        0 6px 16px rgba(0, 0, 0, 0.1);
+    border-color: var(--Link);
+}
+
+/* Enhanced Card - For major unit changes */
+.Card.enhanced {
+    border: 2px solid var(--Line);
+    background: linear-gradient(145deg, var(--Card) 0%, var(--IconGridBackground) 100%);
+    position: relative;
+    overflow: hidden;
+    padding: 16px 24px;
+}
+
+.Card.enhanced:hover {
+    transform: translateY(-8px);
+    box-shadow: 
+        0 24px 48px rgba(0, 0, 0, 0.2),
+        0 12px 24px rgba(0, 0, 0, 0.12);
+    border-color: var(--Link);
+}
+
+/* Simple Card - For minor changes and group updates */
+.Card.simple {
+    padding: 28px;
+    background: linear-gradient(145deg, var(--Card) 0%, var(--IconGridBackground) 100%);
+}
+
+.Card.simple h3 {
+    margin: 0 0 20px 0;
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--Text-Primary);
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding-bottom: 16px;
+    border-bottom: 3px solid var(--Line);
+    letter-spacing: -0.025em;
+}
+
+.Card.simple h3 img {
+    width: 56px;
+    height: 56px;
+    border-radius: 8px;
+    border: 2px solid var(--Line);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.Card.simple h4 {
+    color: var(--Text-Primary);
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin: 24px 0 16px 0;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    letter-spacing: -0.015em;
+}
+
+.Card.simple h4 img {
+    width: 40px;
+    height: 40px;
+    border-radius: 6px;
+    border: 1px solid var(--Line);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* Card Header - Professional styling */
+.CardHeader {
+    background: linear-gradient(135deg, var(--IconGridBackground) 0%, var(--Card) 100%);
+    padding: 32px;
+    border-bottom: 3px solid var(--Line);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.CardHeader::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--Link) 0%, transparent 100%);
+    transform: scaleX(0);
+    transition: transform 0.4s ease;
+}
+
+.Card:hover .CardHeader::after {
+    transform: scaleX(1);
+}
+
+.UnitInfo {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    flex: 1;
+}
+
+.UnitIcon {
+    width: 80px;
+    height: 80px;
+    border-radius: 16px;
+    border: 3px solid var(--Line);
+    background: linear-gradient(135deg, var(--Background) 0%, var(--Card) 100%);
+    padding: 8px;
+    box-shadow: 
+        0 12px 32px rgba(0, 0, 0, 0.2),
+        0 4px 16px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+}
+
+.UnitIcon::before {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    border-radius: 18px;
+    padding: 2px;
+    background: linear-gradient(135deg, var(--Link), transparent);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: xor;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.UnitIcon:hover {
+    transform: scale(1.08) rotate(2deg);
+    box-shadow: 
+        0 16px 40px rgba(0, 0, 0, 0.25),
+        0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.UnitIcon:hover::before {
+    opacity: 1;
+}
+
+.UnitNameRow {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 12px;
+}
+
+.UnitDetails h3 {
+    margin: 0;
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: var(--Text-Primary);
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+    background: linear-gradient(135deg, var(--Text-Primary) 0%, var(--Link) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.UnitCode {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--Background) 0%, var(--IconGridBackground) 100%);
+    color: var(--Text-Secondary);
+    padding: 8px 16px;
+    border-radius: 12px;
+    font-size: 0.85rem;
+    font-family: 'JetBrains Mono', 'Courier New', monospace;
+    font-weight: 600;
+    margin-bottom: 0;
+    border: 2px solid var(--Line);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.UnitCode:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+    border-color: var(--Link);
+}
+
+/* Faction Badges */
+.FactionBadge {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 24px;
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    border: 2px solid transparent;
+    backdrop-filter: blur(15px);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.FactionBadge::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+.FactionBadge:hover::before {
+    left: 100%;
+}
+
+.FactionBadge.sera { 
+    background: linear-gradient(135deg, rgba(245, 158, 11, 0.3) 0%, rgba(245, 158, 11, 0.15) 100%);
+    color: var(--Text-Primary); 
+    border-color: rgba(245, 158, 11, 0.8);
+    box-shadow: 0 6px 20px rgba(245, 158, 11, 0.2);
+}
+
+.FactionBadge.sera:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(245, 158, 11, 0.3);
+    border-color: rgba(245, 158, 11, 1);
+}
+
+.FactionBadge.aeon { 
+    background: linear-gradient(135deg, rgba(74, 222, 128, 0.3) 0%, rgba(74, 222, 128, 0.15) 100%);
+    color: var(--Text-Primary); 
+    border-color: rgba(74, 222, 128, 0.8);
+    box-shadow: 0 6px 20px rgba(74, 222, 128, 0.2);
+}
+
+.FactionBadge.aeon:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(74, 222, 128, 0.3);
+    border-color: rgba(74, 222, 128, 1);
+}
+
+.FactionBadge.uef { 
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.3) 0%, rgba(59, 130, 246, 0.15) 100%);
+    color: var(--Text-Primary); 
+    border-color: rgba(59, 130, 246, 0.8);
+    box-shadow: 0 6px 20px rgba(59, 130, 246, 0.2);
+}
+
+.FactionBadge.uef:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(59, 130, 246, 0.3);
+    border-color: rgba(59, 130, 246, 1);
+}
+
+.FactionBadge.cybran { 
+    background: linear-gradient(135deg, rgba(239, 68, 68, 0.3) 0%, rgba(239, 68, 68, 0.15) 100%);
+    color: var(--Text-Primary); 
+    border-color: rgba(239, 68, 68, 0.8);
+    box-shadow: 0 6px 20px rgba(239, 68, 68, 0.2);
+}
+
+.FactionBadge.cybran:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(239, 68, 68, 0.3);
+    border-color: rgba(239, 68, 68, 1);
+}
+
+.FactionBadge.rework { 
+    background: linear-gradient(135deg, rgba(168, 85, 247, 0.3) 0%, rgba(168, 85, 247, 0.15) 100%);
+    color: var(--Text-Primary); 
+    border-color: rgba(168, 85, 247, 0.8);
+    box-shadow: 0 6px 20px rgba(168, 85, 247, 0.2);
+}
+
+.FactionBadge.rework:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(168, 85, 247, 0.3);
+    border-color: rgba(168, 85, 247, 1);
+}
+
+.FactionBadge.universal { 
+    background: linear-gradient(135deg, rgba(156, 163, 175, 0.3) 0%, rgba(156, 163, 175, 0.15) 100%);
+    color: var(--Text-Primary); 
+    border-color: rgba(156, 163, 175, 0.8);
+    box-shadow: 0 6px 20px rgba(156, 163, 175, 0.2);
+}
+
+.FactionBadge.universal:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(156, 163, 175, 0.3);
+    border-color: rgba(156, 163, 175, 1);
+}
+
+/* Change Type Badges */
+.ChangeTypeBadge {
+    padding: 14px 28px;
+    border-radius: 28px;
+    font-size: 0.85rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    border: 2px solid transparent;
+    backdrop-filter: blur(15px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.ChangeTypeBadge::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.6s ease;
+}
+
+.ChangeTypeBadge:hover::before {
+    left: 100%;
+}
+
+.ChangeTypeBadge:hover {
+    transform: translateY(-3px) scale(1.05);
+}
+
+.ChangeTypeBadge.buff { 
+    background: linear-gradient(135deg, rgba(34, 197, 94, 0.4) 0%, rgba(34, 197, 94, 0.25) 100%);
+    color: var(--Text-Primary); 
+    border-color: rgba(34, 197, 94, 0.8);
+    box-shadow: 0 6px 20px rgba(34, 197, 94, 0.2);
+}
+
+.ChangeTypeBadge.buff:hover {
+    box-shadow: 0 10px 30px rgba(34, 197, 94, 0.3);
+    border-color: rgba(34, 197, 94, 1);
+}
+
+.ChangeTypeBadge.nerf { 
+    background: linear-gradient(135deg, rgba(239, 68, 68, 0.3) 0%, rgba(239, 68, 68, 0.2) 100%);
+    color: var(--Text-Primary); 
+    border-color: rgba(239, 68, 68, 0.6);
+}
+
+.ChangeTypeBadge.fix { 
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.3) 0%, rgba(59, 130, 246, 0.2) 100%);
+    color: var(--Text-Primary); 
+    border-color: rgba(59, 130, 246, 0.6);
+}
+
+.ChangeTypeBadge.rework { 
+    background: linear-gradient(135deg, rgba(245, 158, 11, 0.3) 0%, rgba(245, 158, 11, 0.2) 100%);
+    color: var(--Text-Primary); 
+    border-color: rgba(245, 158, 11, 0.6);
+}
+
+/* Card Content - Professional styling */
+.CardContent {
+    padding: 32px;
+}
+
+.ChangeDescription {
+    color: var(--Text-Secondary);
+    line-height: 1.8;
+    margin-bottom: 32px;
+    padding: 28px 28px 28px 48px;
+    background: linear-gradient(135deg, var(--IconGridBackground) 0%, rgba(var(--Card-RGB, 44, 62, 80), 0.8) 100%);
+    border-left: none;
+    border-radius: 16px;
+    font-size: 1.1rem;
+    position: relative;
+    margin-left: 0;
+    box-shadow: 
+        inset 0 1px 3px rgba(0, 0, 0, 0.1),
+        0 4px 16px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(var(--Link-RGB, 52, 152, 219), 0.2);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+.ChangeDescription:hover {
+    transform: translateY(-2px);
+    box-shadow: 
+        inset 0 1px 3px rgba(0, 0, 0, 0.15),
+        0 8px 24px rgba(0, 0, 0, 0.12);
+    border-color: rgba(var(--Link-RGB, 52, 152, 219), 0.4);
+}
+
+.ChangeDescription::before {
+    content: '"';
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: var(--Link);
+    opacity: 0.4;
+    font-family: 'Georgia', serif;
+    line-height: 1;
+}
+
+/* Changes List */
+.ChangesList {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    margin-top: 24px;
+}
+
+.ChangeGroup {
+    background: linear-gradient(135deg, var(--Card) 0%, var(--IconGridBackground) 100%);
+    border: 1px solid var(--Line);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    margin-bottom: 0;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.ChangeGroup:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    border-color: var(--Link);
+}
+
+.ChangeGroupTitle {
+    background: linear-gradient(135deg, var(--IconGridBackground) 0%, var(--Card) 100%);
+    padding: 20px 28px;
+    margin: 0;
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: var(--Text-Primary);
+    border: none;
+    border-radius: 0;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    letter-spacing: -0.02em;
+    position: relative;
+    transition: all 0.3s ease;
+    border-bottom: 2px solid rgba(var(--Link-RGB, 52, 152, 219), 0.2);
+}
+
+.ChangeGroupTitle:hover {
+    background: linear-gradient(135deg, var(--Link) 0%, var(--IconGridBackground) 100%);
+    color: white;
+}
+
+.ChangeGroupTitle::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: var(--Link);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.ChangeGroupTitle:hover::after {
+    transform: scaleX(1);
+}
+
+.ChangeGroupTitle i {
+    color: var(--Link);
+    width: 24px;
+    font-size: 1.2rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.ChangeGroupTitle:hover i {
+    color: white;
+}
+
+/* Unit Icons in Change Group Titles */
+.ChangeGroupTitle .UnitIcon {
+    width: 80px;
+    height: 80px;
+    border-radius: 16px;
+    border: 3px solid rgba(var(--Link-RGB, 52, 152, 219), 0.3);
+    background: rgba(var(--Card-RGB, 255, 255, 255), 0.9);
+    padding: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.ChangeGroupTitle:hover .UnitIcon {
+    border-color: rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.95);
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Changes */
+.Changes {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    background: var(--Card);
+    border: none;
+    border-radius: 0;
+}
+
+/* Clean stat changes - enhanced styling */
+.Changes li {
+    padding: 16px 28px;
+    border-bottom: 1px solid rgba(var(--Line-RGB, 189, 195, 199), 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 0.3s ease;
+    border-left: 4px solid transparent;
+    background: none;
+    margin-bottom: 0;
+    margin-left: 0;
+    position: relative;
+}
+
+/* Indent changes that come after sub-headers */
+.Changes li:not(.sub-header) {
+    margin-left: 0;
+    padding-left: 56px;
+    background: linear-gradient(135deg, var(--Background) 0%, var(--Card) 100%);
+    position: relative;
+}
+
+/* Add visual connector for indented items */
+.Changes li:not(.sub-header)::before {
+    content: '';
+    position: absolute;
+    left: 28px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(180deg, rgba(var(--Line-RGB, 189, 195, 199), 0.3) 0%, rgba(var(--Line-RGB, 189, 195, 199), 0.1) 100%);
+}
+
+/* Add horizontal connector line */
+.Changes li:not(.sub-header)::after {
+    content: '';
+    position: absolute;
+    left: 28px;
+    top: 50%;
+    width: 16px;
+    height: 2px;
+    background: rgba(var(--Line-RGB, 189, 195, 199), 0.3);
+    transform: translateY(-50%);
+}
+
+/* Style for last item under a sub-header or before next sub-header */
+.Changes li:not(.sub-header):last-child::before,
+.Changes li:not(.sub-header) + .sub-header::before {
+    background: linear-gradient(180deg, rgba(var(--Line-RGB, 189, 195, 199), 0.3) 0%, transparent 70%);
+}
+
+.Changes li:last-child {
+    border-bottom: none;
+}
+
+.Changes li:hover {
+    background: linear-gradient(135deg, rgba(var(--Link-RGB, 52, 152, 219), 0.05) 0%, rgba(var(--Link-RGB, 52, 152, 219), 0.02) 100%);
+    transform: translateX(4px);
+    box-shadow: inset 4px 0 0 var(--Link);
+}
+
+/* Enhanced hover for indented items */
+.Changes li:not(.sub-header):hover::before {
+    background: linear-gradient(180deg, var(--Link) 0%, rgba(var(--Link-RGB, 52, 152, 219), 0.3) 100%);
+}
+
+.Changes li:not(.sub-header):hover::after {
+    background: var(--Link);
+}
+
+.Changes li.buff {
+    border-left-color: rgba(34, 197, 94, 0.9);
+}
+
+.Changes li.buff:hover {
+    background: linear-gradient(135deg, rgba(34, 197, 94, 0.08) 0%, rgba(34, 197, 94, 0.03) 100%);
+    box-shadow: inset 4px 0 0 rgba(34, 197, 94, 0.9);
+}
+
+.Changes li.nerf {
+    border-left-color: rgba(239, 68, 68, 0.9);
+}
+
+.Changes li.nerf:hover {
+    background: linear-gradient(135deg, rgba(239, 68, 68, 0.08) 0%, rgba(239, 68, 68, 0.03) 100%);
+    box-shadow: inset 4px 0 0 rgba(239, 68, 68, 0.9);
+}
+
+.Changes li.fix {
+    border-left-color: rgba(59, 130, 246, 0.9);
+}
+
+.Changes li.fix:hover {
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.08) 0%, rgba(59, 130, 246, 0.03) 100%);
+    box-shadow: inset 4px 0 0 rgba(59, 130, 246, 0.9);
+}
+
+.Changes li.addition {
+    border-left-color: rgba(59, 130, 246, 0.9);
+}
+
+.Changes li.addition:hover {
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.08) 0%, rgba(59, 130, 246, 0.03) 100%);
+    box-shadow: inset 4px 0 0 rgba(59, 130, 246, 0.9);
+}
+
+.Changes li.change {
+    border-left-color: rgba(59, 130, 246, 0.9);
+}
+
+.Changes li.change:hover {
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.08) 0%, rgba(59, 130, 246, 0.03) 100%);
+    box-shadow: inset 4px 0 0 rgba(59, 130, 246, 0.9);
+}
+
+/* Stat change labels as sub-headers - enhanced design */
+.Changes li.sub-header {
+    background: linear-gradient(135deg, var(--IconGridBackground) 0%, var(--Card) 100%);
+    border-left: 4px solid var(--Link);
+    font-weight: 800;
+    color: var(--Text-Primary);
+    margin: 0;
+    justify-content: flex-start;
+    padding: 18px 28px;
+    font-size: 1.15rem;
+    border-bottom: 1px solid rgba(var(--Line-RGB, 189, 195, 199), 0.5);
+    position: relative;
+    letter-spacing: -0.01em;
+}
+
+.Changes li.sub-header:first-child {
+    margin-top: 0;
+}
+
+.Changes li.sub-header:hover {
+    background: linear-gradient(135deg, var(--Link) 0%, var(--IconGridBackground) 100%);
+    color: white;
+    transform: none;
+    box-shadow: none;
+}
+
+.Changes li.sub-header::before {
+    content: '';
+    margin-right: 12px;
+    font-size: 0.8rem;
+    opacity: 0.7;
+    transition: all 0.3s ease;
+}
+
+.Changes li.sub-header:hover::before {
+    transform: none;
+    opacity: 1;
+}
+
+.Changes li.sub-header i {
+    margin-left: auto;
+    color: var(--Link);
+    font-size: 0.9rem;
+    opacity: 0.7;
+    transition: all 0.3s ease;
+}
+
+.Changes li.sub-header:hover i {
+    color: white;
+    opacity: 1;
+}
+
+/* Change Values */
+.ChangeLabel {
+    font-weight: 600;
+    color: var(--Text-Primary);
+    flex: 1;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.ChangeLabel::before {
+    content: '•';
+    color: var(--Link);
+    font-weight: 900;
+    font-size: 1.2rem;
+}
+
+.ChangeValue {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-family: 'JetBrains Mono', 'Courier New', monospace;
+    font-size: 0.95rem;
+    background: rgba(var(--Background-RGB, 52, 73, 94), 0.5);
+    padding: 8px 16px;
+    border-radius: 12px;
+    border: 1px solid rgba(var(--Line-RGB, 189, 195, 199), 0.3);
+    transition: all 0.3s ease;
+}
+
+.ChangeValue:hover {
+    background: rgba(var(--Link-RGB, 52, 152, 219), 0.1);
+    border-color: var(--Link);
+    transform: scale(1.02);
+}
+
+.OldValue {
+    color: var(--Text-Secondary);
+    text-decoration: line-through;
+    opacity: 0.7;
+    background: rgba(239, 68, 68, 0.1);
+    padding: 4px 8px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.NewValue {
+    color: var(--Text-Primary);
+    font-weight: 700;
+    background: rgba(34, 197, 94, 0.15);
+    padding: 4px 8px;
+    border-radius: 6px;
+    border: 1px solid rgba(34, 197, 94, 0.3);
+    transition: all 0.3s ease;
+}
+
+.NewValue:hover {
+    background: rgba(34, 197, 94, 0.25);
+    border-color: rgba(34, 197, 94, 0.5);
+    transform: scale(1.05);
+}
+
+.ChangeArrow {
+    color: var(--Link);
+    font-size: 1.1rem;
+    margin: 0 4px;
+    font-weight: 900;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.ChangeArrow:hover {
+    transform: translateX(2px);
+    color: var(--Text-Primary);
+}
+
+/* Unit icons in card headings - base desktop size */
+.Card h3 img {
+    width: 48px;
+    height: 48px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+/* ===== RESPONSIVE ENHANCEMENTS FOR BALANCE CARDS ===== */
+
+@media (max-width: 1024px) {
+    .CardHeader {
+        flex-direction: column;
+        gap: 20px;
+        align-items: flex-start;
+        padding: 28px;
+    }
+    
+    .UnitInfo {
+        width: 100%;
+    }
+    
+    .ChangeTypeBadge {
+        align-self: flex-end;
+    }
+    
+    .UnitDetails h3 {
+        font-size: 1.75rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .CardHeader {
+        padding: 24px;
+    }
+    
+    .CardContent {
+        padding: 24px;
+    }
+    
+    .UnitIcon {
+        width: 64px;
+        height: 64px;
+    }
+    
+    .UnitDetails h3 {
+        font-size: 1.5rem;
+    }
+    
+    .ChangesList {
+        gap: 24px;
+    }
+    
+    .ChangeGroupTitle {
+        padding: 16px 20px;
+        font-size: 1.2rem;
+    }
+    
+    .Changes li {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+        padding: 16px 20px;
+    }
+    
+    .Changes li:not(.sub-header) {
+        padding-left: 32px;
+    }
+    
+    .Changes li.sub-header {
+        padding: 16px 20px;
+        font-size: 1.1rem;
+    }
+    
+    .ChangeValue {
+        width: 100%;
+        justify-content: flex-end;
+        padding: 10px 14px;
+    }
+    
+    .ChangeDescription {
+        padding: 20px 20px 20px 40px;
+        font-size: 1rem;
+        margin-left: 0;
+    }
+
+    /* Improve cards on mobile */
+    .Card {
+        margin: 10px 0;
+        padding: 15px;
+    }
+    
+    .Card.enhanced {
+        padding: 16px 24px;
+    }
+    
+    .Card h3 {
+        font-size: 1.1em;
+        margin-bottom: 10px;
+    }
+    
+    .Card img {
+        width: 42px;
+        height: 42px;
+        margin-right: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .CardHeader {
+        padding: 20px;
+    }
+    
+    .CardContent {
+        padding: 20px;
+    }
+    
+    .UnitIcon {
+        width: 56px;
+        height: 56px;
+    }
+    
+    .UnitDetails h3 {
+        font-size: 1.3rem;
+    }
+    
+    .ChangesList {
+        gap: 20px;
+    }
+    
+    .ChangeGroupTitle {
+        padding: 14px 16px;
+        font-size: 1.1rem;
+    }
+    
+    .Changes li {
+        padding: 14px 16px;
+    }
+    
+    .Changes li:not(.sub-header) {
+        padding-left: 28px;
+    }
+    
+    .Changes li.sub-header {
+        padding: 14px 16px;
+        font-size: 1rem;
+    }
+    
+    .ChangeValue {
+        padding: 8px 12px;
+        font-size: 0.9rem;
+    }
+
+    .Card {
+        padding: 10px;
+    }
+    
+    .Card h3 {
+        font-size: 1em;
+    }
+    
+    .Card img {
+        width: 36px;
+        height: 36px;
+    }
+}
+
+/* ===== END BALANCE CARD COMPONENT ===== */
