@@ -8,6 +8,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer"/>
 <link rel="stylesheet" href="/style/balance.css"/>
 <script src="/scripts/themeSwitch.js" defer></script>
+<script src="/scripts/contentSidemenu.js" defer></script>
 </head>
 <body>
     <main class="Grid">
@@ -1106,33 +1107,233 @@
             </section>
         </div>
 
-        <aside class="Sidebar" role="navigation" aria-label="Sidebar navigation">
-            <div class="IconSidebar">
-                <h2 class="IconSidebarTitle">Contents</h2>
-                <div class="IconSidebarSpace"></div>
-                <nav class="IconSidebarSubgrid">
-                    <h3 class="IconSidebarSubtitle">Land</h3>
-                    <a href="#t3tank"><img src="/assets/images/units/sera/land/T3Tank.png" alt="T3 Tank Thumbnail" loading="lazy"/></a>
-                    <a href="#t3sniper"><img src="/assets/images/units/aeon/land/T3Sniper.png" alt="T3 Sniper Thumbnail" loading="lazy"/></a>
-                    
-                    <h3 class="IconSidebarSubtitle">Air</h3>
-                    <a href="#t3torpbomber"><img src="/assets/images/units/aeon/air/T3TorpedoBomber.png" alt="T3 Torpedo Bomber Thumbnail" loading="lazy"/></a>
-                    
-                    <h3 class="IconSidebarSubtitle">Naval</h3>
-                    <a href="#t2torpboat"><img src="/assets/images/units/uef/naval/T2TorpBoat.png" alt="T2 Torpedo Boat Thumbnail" loading="lazy"/></a>
-                    <a href="#t2destroyer"><img src="/assets/images/units/uef/naval/T2Destroyer.png" alt="T2 Destroyer Thumbnail" loading="lazy"/></a>
-                    <a href="#t2cruiser"><img src="/assets/images/units/cybran/naval/T2Cruiser.png" alt="T2 Cruiser Thumbnail" loading="lazy"/></a>
-                    <a href="#t3carrier"><img src="/assets/images/units/cybran/naval/T3AircraftCarrier.png" alt="T3 Aircraft Carrier Thumbnail" loading="lazy"/></a>
-                    
-                    <h3 class="IconSidebarSubtitle">ACU & SACU</h3>
-                    <a href="#teleport"><img src="/assets/images/Enhancements/uef/teleport.png" alt="Teleport Enhancement Thumbnail" loading="lazy"/></a>
-                    <a href="#sensors"><img src="/assets/images/Enhancements/aeon/sensor.png" alt="Sensor Enhancement Thumbnail" loading="lazy"/></a>
-                    
-                    <h3 class="IconSidebarSubtitle">Structures</h3>
-                    <a href="#tml"><img src="/assets/images/units/cybran/structure/T2Tml.png" alt="T2 TML Thumbnail" loading="lazy"/></a>
-                    <a href="#tmd"><img src="/assets/images/units/aeon/structure/T2TMD.png" alt="T2 TMD Thumbnail" loading="lazy"/></a>
-                    <a href="#t3artys"><img src="/assets/images/units/aeon/structure/T3StaticArty.png" alt="T3 Artillery Thumbnail" loading="lazy"/></a>
+        <aside class="Sidebar" role="navigation" aria-label="Quick Navigation">
+            <div class="ContentSidemenu">
+                <!-- Quick Navigation Header -->
+                <header class="SidemenuHeader">
+                    <h2 class="SidemenuTitle">
+                        <i class="fas fa-list-ul" aria-hidden="true"></i>
+                        Quick Navigation
+                    </h2>
+                    <div class="ProgressBar">
+                        <div class="ProgressFill" id="readingProgress"></div>
+                    </div>
+                </header>
+
+                <!-- Quick Actions Panel -->
+                <div class="QuickActions">
+                    <button class="QuickActionBtn" onclick="scrollToTop()" title="Back to Top">
+                        <i class="fas fa-arrow-up"></i>
+                        <span>Top</span>
+                    </button>
+                    <button class="QuickActionBtn" onclick="toggleAllSections()" title="Expand/Collapse All">
+                        <i class="fas fa-expand-arrows-alt"></i>
+                        <span>Toggle</span>
+                    </button>
+                    <button class="QuickActionBtn" onclick="printPage()" title="Print Page">
+                        <i class="fas fa-print"></i>
+                        <span>Print</span>
+                    </button>
+                </div>
+
+                <!-- Content Navigation -->
+                <nav class="ContentNav" role="navigation">
+                    <!-- Intro Section -->
+                    <div class="NavSection active">
+                        <button class="SectionToggle" aria-expanded="true" data-target="intro-items">
+                            <i class="fas fa-info-circle SectionIcon"></i>
+                            <span class="SectionTitle">Introduction</span>
+                            <span class="ItemCount">1</span>
+                            <i class="fas fa-chevron-down ToggleIcon"></i>
+                        </button>
+                        <ul class="SectionItems" id="intro-items">
+                            <li class="NavItem">
+                                <a href="#Intro" class="NavLink">
+                                    <i class="fas fa-scroll"></i>
+                                    <span>Patch Overview</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Land Units Section -->
+                    <div class="NavSection active">
+                        <button class="SectionToggle" aria-expanded="true" data-target="land-items">
+                            <i class="fas fa-tank SectionIcon"></i>
+                            <span class="SectionTitle">Land Units</span>
+                            <span class="ItemCount">2</span>
+                            <i class="fas fa-chevron-down ToggleIcon"></i>
+                        </button>
+                        <ul class="SectionItems" id="land-items">
+                            <li class="NavItem">
+                                <a href="#t3tank" class="NavLink">
+                                    <img src="/assets/images/units/sera/land/T3Tank.png" class="UnitThumb" alt="Othuum"/>
+                                    <div class="LinkContent">
+                                        <span class="UnitName">Othuum</span>
+                                        <span class="ChangeType buff">Buff</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="NavItem">
+                                <a href="#t3sniper" class="NavLink">
+                                    <img src="/assets/images/units/aeon/land/T3Sniper.png" class="UnitThumb" alt="Sprite Striker"/>
+                                    <div class="LinkContent">
+                                        <span class="UnitName">Sprite Striker</span>
+                                        <span class="ChangeType buff">Buff</span>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Air Units Section -->
+                    <div class="NavSection active">
+                        <button class="SectionToggle" aria-expanded="true" data-target="air-items">
+                            <span class="SectionTitle">Air Units</span>
+                            <span class="ItemCount">1</span>
+                            <i class="fas fa-chevron-down ToggleIcon"></i>
+                        </button>
+                        <ul class="SectionItems" id="air-items">
+                            <li class="NavItem">
+                                <a href="#t3torpbomber" class="NavLink">
+                                    <img src="/assets/images/units/aeon/air/T3TorpedoBomber.png" class="UnitThumb" alt="Solace"/>
+                                    <div class="LinkContent">
+                                        <span class="UnitName">Solace</span>
+                                        <span class="ChangeType nerf">Nerf</span>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Naval Units Section -->
+                    <div class="NavSection active">
+                        <button class="SectionToggle" aria-expanded="true" data-target="naval-items">
+                            <span class="SectionTitle">Naval Units</span>
+                            <span class="ItemCount">4</span>
+                            <i class="fas fa-chevron-down ToggleIcon"></i>
+                        </button>
+                        <ul class="SectionItems" id="naval-items">
+                            <li class="NavItem">
+                                <a href="#t2torpboat" class="NavLink">
+                                    <img src="/assets/images/units/uef/naval/T2TorpBoat.png" class="UnitThumb" alt="Cooper"/>
+                                    <div class="LinkContent">
+                                        <span class="UnitName">Cooper</span>
+                                        <span class="ChangeType buff">Buff</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="NavItem">
+                                <a href="#t2destroyer" class="NavLink">
+                                    <img src="/assets/images/units/uef/naval/T2Destroyer.png" class="UnitThumb" alt="Valiant"/>
+                                    <div class="LinkContent">
+                                        <span class="UnitName">Valiant</span>
+                                        <span class="ChangeType buff">Buff</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="NavItem">
+                                <a href="#t2cruiser" class="NavLink">
+                                    <img src="/assets/images/units/cybran/naval/T2Cruiser.png" class="UnitThumb" alt="Siren"/>
+                                    <div class="LinkContent">
+                                        <span class="UnitName">Siren</span>
+                                        <span class="ChangeType buff">Buff</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="NavItem">
+                                <a href="#t3carrier" class="NavLink">
+                                    <img src="/assets/images/units/cybran/naval/T3AircraftCarrier.png" class="UnitThumb" alt="Command Class"/>
+                                    <div class="LinkContent">
+                                        <span class="UnitName">Command Class</span>
+                                        <span class="ChangeType buff">Buff</span>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- ACU & SACU Section -->
+                    <div class="NavSection active">
+                        <button class="SectionToggle" aria-expanded="true" data-target="acu-items">
+                            <span class="SectionTitle">ACU & SACU</span>
+                            <span class="ItemCount">2</span>
+                            <i class="fas fa-chevron-down ToggleIcon"></i>
+                        </button>
+                        <ul class="SectionItems" id="acu-items">
+                            <li class="NavItem">
+                                <a href="#teleport" class="NavLink">
+                                    <img src="/assets/images/Enhancements/uef/teleport.png" class="UnitThumb" alt="Personal Teleport"/>
+                                    <div class="LinkContent">
+                                        <span class="UnitName">Personal Teleport</span>
+                                        <span class="ChangeType nerf">Nerf</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="NavItem">
+                                <a href="#sensors" class="NavLink">
+                                    <img src="/assets/images/Enhancements/aeon/sensor.png" class="UnitThumb" alt="Sensor System"/>
+                                    <div class="LinkContent">
+                                        <span class="UnitName">Sensor System</span>
+                                        <span class="ChangeType nerf">Nerf</span>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Structures Section -->
+                    <div class="NavSection active">
+                        <button class="SectionToggle" aria-expanded="true" data-target="structure-items">
+                            <span class="SectionTitle">Structures</span>
+                            <span class="ItemCount">3</span>
+                            <i class="fas fa-chevron-down ToggleIcon"></i>
+                        </button>
+                        <ul class="SectionItems" id="structure-items">
+                            <li class="NavItem">
+                                <a href="#tml" class="NavLink">
+                                    <img src="/assets/images/units/cybran/structure/T2Tml.png" class="UnitThumb" alt="T2 TML"/>
+                                    <div class="LinkContent">
+                                        <span class="UnitName">T2 Tactical Missile Launchers</span>
+                                        <span class="ChangeType fix">Fix</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="NavItem">
+                                <a href="#tmd" class="NavLink">
+                                    <img src="/assets/images/units/aeon/structure/T2TMD.png" class="UnitThumb" alt="T2 TMD"/>
+                                    <div class="LinkContent">
+                                        <span class="UnitName">T2 Tactical Missile Defenses</span>
+                                        <span class="ChangeType fix">Fix</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="NavItem">
+                                <a href="#t3artys" class="NavLink">
+                                    <img src="/assets/images/units/aeon/structure/T3StaticArty.png" class="UnitThumb" alt="T3 Artillery"/>
+                                    <div class="LinkContent">
+                                        <span class="UnitName">T3 Stationary Artilleries</span>
+                                        <span class="ChangeType rework">Rework</span>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </nav>
+
+                <!-- Footer Info -->
+                <div class="SidemenuFooter">
+                    <div class="PatchStats">
+                        <div class="StatItem">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span>May 19, 2025</span>
+                        </div>
+                        <div class="StatItem">
+                            <i class="fas fa-balance-scale"></i>
+                            <span>13 Changes</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </aside>
     </main>

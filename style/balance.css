@@ -733,3 +733,373 @@ header {
     flex: none;
   }
 }
+
+/* Enhanced Content Sidemenu Styling */
+.ContentSidemenu {
+  background: linear-gradient(135deg, rgba(45, 52, 62, 0.95) 0%, rgba(32, 38, 47, 0.95) 100%);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.3),
+    0 4px 16px rgba(0, 0, 0, 0.2);
+  position: sticky;
+  top: 20px;
+  max-height: calc(100vh - 40px);
+  overflow-y: auto;
+  color: var(--Text-Primary);
+}
+
+/* Sidemenu Header */
+.SidemenuHeader {
+  padding: 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.SidemenuTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0 0 1rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--Text-Primary);
+}
+
+.SidemenuTitle i {
+  color: #87cefa;
+  font-size: 1.1rem;
+}
+
+/* Reading Progress Bar */
+.ProgressBar {
+  width: 100%;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.ProgressFill {
+  height: 100%;
+  background: linear-gradient(90deg, #87cefa, #c2a732);
+  width: 0%;
+  transition: width 0.3s ease;
+}
+
+/* Quick Actions Panel */
+.QuickActions {
+  display: flex;
+  gap: 0.5rem;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.QuickActionBtn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 0.5rem;
+  color: var(--Text-Secondary);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  flex: 1;
+  font-size: 0.75rem;
+}
+
+.QuickActionBtn:hover {
+  background: rgba(135, 206, 250, 0.1);
+  border-color: rgba(135, 206, 250, 0.3);
+  color: #87cefa;
+  transform: translateY(-2px);
+}
+
+.QuickActionBtn i {
+  font-size: 1rem;
+}
+
+.QuickActionBtn span {
+  font-size: 0.7rem;
+  font-weight: 500;
+}
+
+/* Content Navigation */
+.ContentNav {
+  padding: 1rem 0;
+}
+
+/* Navigation Sections */
+.NavSection {
+  margin-bottom: 0.5rem;
+}
+
+.SectionToggle {
+  width: 100%;
+  background: none;
+  border: none;
+  color: var(--Text-Primary);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 1.5rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.SectionToggle:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: #87cefa;
+}
+
+.SectionToggle:hover .SectionIcon {
+  color: #87cefa;
+}
+
+.SectionIcon {
+  color: var(--Text-Secondary);
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.SectionTitle {
+  flex: 1;
+  text-align: left;
+}
+
+.ItemCount {
+  background: rgba(135, 206, 250, 0.2);
+  color: #87cefa;
+  border-radius: 12px;
+  padding: 0.125rem 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  min-width: 1.5rem;
+  text-align: center;
+}
+
+.ToggleIcon {
+  color: var(--Text-Secondary);
+  font-size: 0.8rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.NavSection.collapsed .ToggleIcon {
+  transform: rotate(-90deg);
+}
+
+.NavSection.collapsed .SectionItems {
+  display: none;
+}
+
+/* Section Items List */
+.SectionItems {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background: rgba(0, 0, 0, 0.1);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Navigation Items */
+.NavItem {
+  margin: 0;
+}
+
+.NavLink {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1.5rem;
+  color: var(--Text-Secondary);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+  border-left: 3px solid transparent;
+}
+
+.NavLink:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--Text-Primary);
+  border-left-color: #87cefa;
+}
+
+.NavLink.active {
+  background: rgba(135, 206, 250, 0.1);
+  color: #87cefa;
+  border-left-color: #87cefa;
+}
+
+/* Unit Thumbnails */
+.UnitThumb {
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  object-fit: cover;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 2px;
+  flex-shrink: 0;
+}
+
+/* Link Content */
+.LinkContent {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  flex: 1;
+  min-width: 0;
+}
+
+.UnitName {
+  font-size: 0.85rem;
+  font-weight: 500;
+  line-height: 1.2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Change Type Badges */
+.ChangeType {
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 0.125rem 0.5rem;
+  border-radius: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  width: fit-content;
+}
+
+.ChangeType.buff {
+  background: rgba(76, 175, 80, 0.2);
+  color: #4caf50;
+  border: 1px solid rgba(76, 175, 80, 0.3);
+}
+
+.ChangeType.nerf {
+  background: rgba(244, 67, 54, 0.2);
+  color: #f44336;
+  border: 1px solid rgba(244, 67, 54, 0.3);
+}
+
+.ChangeType.fix {
+  background: rgba(255, 193, 7, 0.2);
+  color: #ffc107;
+  border: 1px solid rgba(255, 193, 7, 0.3);
+}
+
+.ChangeType.rework {
+  background: rgba(156, 39, 176, 0.2);
+  color: #9c27b0;
+  border: 1px solid rgba(156, 39, 176, 0.3);
+}
+
+/* Sidemenu Footer */
+.SidemenuFooter {
+  padding: 1rem 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 0 0 16px 16px;
+}
+
+.PatchStats {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.StatItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  color: var(--Text-Secondary);
+}
+
+.StatItem i {
+  color: #87cefa;
+  font-size: 0.9rem;
+  width: 1rem;
+  text-align: center;
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+  .ContentSidemenu {
+    position: relative;
+    top: 0;
+    max-height: none;
+    margin-bottom: 1rem;
+  }
+  
+  .SidemenuHeader {
+    padding: 1rem;
+  }
+  
+  .SidemenuTitle {
+    font-size: 1.1rem;
+  }
+  
+  .QuickActions {
+    padding: 0.75rem 1rem;
+  }
+  
+  .QuickActionBtn {
+    padding: 0.375rem;
+  }
+  
+  .QuickActionBtn span {
+    font-size: 0.65rem;
+  }
+  
+  .SectionToggle {
+    padding: 0.75rem 1rem;
+    font-size: 0.9rem;
+  }
+  
+  .NavLink {
+    padding: 0.625rem 1rem;
+  }
+  
+  .UnitThumb {
+    width: 28px;
+    height: 28px;
+  }
+  
+  .UnitName {
+    font-size: 0.8rem;
+  }
+  
+  .ChangeType {
+    font-size: 0.65rem;
+  }
+  
+  .SidemenuFooter {
+    padding: 0.75rem 1rem;
+  }
+}
+
+/* Custom Scrollbar for Sidemenu */
+.ContentSidemenu::-webkit-scrollbar {
+  width: 6px;
+}
+
+.ContentSidemenu::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 3px;
+}
+
+.ContentSidemenu::-webkit-scrollbar-thumb {
+  background: rgba(135, 206, 250, 0.3);
+  border-radius: 3px;
+}
+
+.ContentSidemenu::-webkit-scrollbar-thumb:hover {
+  background: rgba(135, 206, 250, 0.5);
+}
