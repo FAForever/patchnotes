@@ -1,5 +1,6 @@
 @import '../style/root.css';
 @import '../style/components/card.css';
+@import '../style/components/BalanceCard.css';
 @import '../style/components/images.css';
 @import '../style/components/video.css';
 @import '../style/components/button.css';
@@ -174,6 +175,14 @@ header {
   vertical-align: middle; /* Align with text */
 }
 
+/* Unit icons in card headings - base desktop size */
+.Card h3 img {
+  width: 48px; /* Icon width */
+  height: 48px; /* Icon height */
+  margin-right: 10px; /* Space between icon and text */
+  vertical-align: middle; /* Align with text */
+}
+
 .SectionHeader {
   padding: 10px 0;
 }
@@ -300,6 +309,10 @@ header {
   .Card {
     margin: 10px 0;
     padding: 15px;
+  }
+  
+  .Card.enhanced {
+    padding: 16px 24px;
   }
   
   .Card h3 {
@@ -541,6 +554,183 @@ header {
   }
 }
 
+/* Remove left spacing and indentation */
+.Grid {
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+}
+
+.Content {
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+}
+
+.Card:not(.enhanced), .ChangesList, .Changes {
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+    border-left: none !important;
+}
+
+/* Enhanced cards keep their padding */
+.Card.enhanced {
+    margin-left: 0 !important;
+    border-left: none !important;
+}
+
+/* Keep CardContent padding but remove left border */
+.CardContent {
+    border-left: none !important;
+}
+
+/* Enhanced Intro Section Styling */
+.IntroSection {
+  background: linear-gradient(135deg, rgba(57, 62, 70, 0.95) 0%, rgba(34, 40, 49, 0.9) 100%);
+  backdrop-filter: blur(8px);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.3),
+    0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.PatchHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.PatchTitleGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.PatchTitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #eee;
+  margin: 0;
+  background: linear-gradient(135deg, #87cefa, #c2a732);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.PatchVersion {
+  font-size: 0.875rem;
+  color: var(--Text-Secondary);
+  background: rgba(0, 210, 255, 0.2);
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 210, 255, 0.3);
+  width: fit-content;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+}
+
+.PatchMeta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.5rem;
+}
+
+.PatchDate {
+  font-size: 1rem;
+  color: var(--Text-Primary);
+  font-weight: 500;
+}
+
+.PatchStatus {
+  font-size: 0.75rem;
+  color: #4caf50;
+  background: rgba(76, 175, 80, 0.2);
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  border: 1px solid rgba(76, 175, 80, 0.3);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+}
+
+.PatchSummary {
+  margin: 1.5rem 0;
+}
+
+.PatchSummary .patchDescription {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--Text-Primary);
+  margin: 0;
+  text-align: justify;
+}
+
+.PatchCredits {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.TeamSignature {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  justify-content: center;
+}
+
+.TeamIcon {
+  font-size: 1.25rem;
+  opacity: 0.8;
+}
+
+.TeamName {
+  font-size: 1.1rem;
+  color: var(--Text-Secondary);
+  font-weight: 500;
+  font-style: italic;
+}
+
+.SectionDivider {
+  border: none;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  margin: 2rem 0;
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+  .IntroSection {
+    padding: 1.5rem;
+    border-radius: 12px;
+  }
+  
+  .PatchHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  
+  .PatchMeta {
+    align-items: flex-start;
+    width: 100%;
+  }
+  
+  .PatchTitle {
+    font-size: 2rem;
+  }
+  
+  .PatchSummary .patchDescription {
+    font-size: 1rem;
+    text-align: left;
+  }
+}
+
 @media (max-width: 480px) {
   .FooterActions {
     flex-direction: column;
@@ -550,4 +740,374 @@ header {
   .PrintButton {
     flex: none;
   }
+}
+
+/* Enhanced Content Sidemenu Styling */
+.ContentSidemenu {
+  background: linear-gradient(135deg, rgba(45, 52, 62, 0.95) 0%, rgba(32, 38, 47, 0.95) 100%);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.3),
+    0 4px 16px rgba(0, 0, 0, 0.2);
+  position: sticky;
+  top: 20px;
+  max-height: calc(100vh - 40px);
+  overflow-y: auto;
+  color: var(--Text-Primary);
+}
+
+/* Sidemenu Header */
+.SidemenuHeader {
+  padding: 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.SidemenuTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0 0 1rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--Text-Primary);
+}
+
+.SidemenuTitle i {
+  color: #87cefa;
+  font-size: 1.1rem;
+}
+
+/* Reading Progress Bar */
+.ProgressBar {
+  width: 100%;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.ProgressFill {
+  height: 100%;
+  background: linear-gradient(90deg, #87cefa, #c2a732);
+  width: 0%;
+  transition: width 0.3s ease;
+}
+
+/* Quick Actions Panel */
+.QuickActions {
+  display: flex;
+  gap: 0.5rem;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.QuickActionBtn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 0.5rem;
+  color: var(--Text-Secondary);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  flex: 1;
+  font-size: 0.75rem;
+}
+
+.QuickActionBtn:hover {
+  background: rgba(135, 206, 250, 0.1);
+  border-color: rgba(135, 206, 250, 0.3);
+  color: #87cefa;
+  transform: translateY(-2px);
+}
+
+.QuickActionBtn i {
+  font-size: 1rem;
+}
+
+.QuickActionBtn span {
+  font-size: 0.7rem;
+  font-weight: 500;
+}
+
+/* Content Navigation */
+.ContentNav {
+  padding: 1rem 0;
+}
+
+/* Navigation Sections */
+.NavSection {
+  margin-bottom: 0.5rem;
+}
+
+.SectionToggle {
+  width: 100%;
+  background: none;
+  border: none;
+  color: var(--Text-Primary);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 1.5rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.SectionToggle:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: #87cefa;
+}
+
+.SectionToggle:hover .SectionIcon {
+  color: #87cefa;
+}
+
+.SectionIcon {
+  color: var(--Text-Secondary);
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.SectionTitle {
+  flex: 1;
+  text-align: left;
+}
+
+.ItemCount {
+  background: rgba(135, 206, 250, 0.2);
+  color: #87cefa;
+  border-radius: 12px;
+  padding: 0.125rem 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  min-width: 1.5rem;
+  text-align: center;
+}
+
+.ToggleIcon {
+  color: var(--Text-Secondary);
+  font-size: 0.8rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.NavSection.collapsed .ToggleIcon {
+  transform: rotate(-90deg);
+}
+
+.NavSection.collapsed .SectionItems {
+  display: none;
+}
+
+/* Section Items List */
+.SectionItems {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background: rgba(0, 0, 0, 0.1);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Navigation Items */
+.NavItem {
+  margin: 0;
+}
+
+.NavLink {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1.5rem;
+  color: var(--Text-Secondary);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+  border-left: 3px solid transparent;
+}
+
+.NavLink:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--Text-Primary);
+  border-left-color: #87cefa;
+}
+
+.NavLink.active {
+  background: rgba(135, 206, 250, 0.1);
+  color: #87cefa;
+  border-left-color: #87cefa;
+}
+
+/* Unit Thumbnails */
+.UnitThumb {
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  object-fit: cover;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 2px;
+  flex-shrink: 0;
+}
+
+/* Link Content */
+.LinkContent {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  flex: 1;
+  min-width: 0;
+}
+
+.UnitName {
+  font-size: 0.85rem;
+  font-weight: 500;
+  line-height: 1.2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Change Type Badges */
+.ChangeType {
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 0.125rem 0.5rem;
+  border-radius: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  width: fit-content;
+}
+
+.ChangeType.buff {
+  background: rgba(76, 175, 80, 0.2);
+  color: #4caf50;
+  border: 1px solid rgba(76, 175, 80, 0.3);
+}
+
+.ChangeType.nerf {
+  background: rgba(244, 67, 54, 0.2);
+  color: #f44336;
+  border: 1px solid rgba(244, 67, 54, 0.3);
+}
+
+.ChangeType.fix {
+  background: rgba(255, 193, 7, 0.2);
+  color: #ffc107;
+  border: 1px solid rgba(255, 193, 7, 0.3);
+}
+
+.ChangeType.rework {
+  background: rgba(156, 39, 176, 0.2);
+  color: #9c27b0;
+  border: 1px solid rgba(156, 39, 176, 0.3);
+}
+
+/* Sidemenu Footer */
+.SidemenuFooter {
+  padding: 1rem 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 0 0 16px 16px;
+}
+
+.PatchStats {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.StatItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  color: var(--Text-Secondary);
+}
+
+.StatItem i {
+  color: #87cefa;
+  font-size: 0.9rem;
+  width: 1rem;
+  text-align: center;
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+  .ContentSidemenu {
+    position: relative;
+    top: 0;
+    max-height: none;
+    margin-bottom: 1rem;
+  }
+  
+  .SidemenuHeader {
+    padding: 1rem;
+  }
+  
+  .SidemenuTitle {
+    font-size: 1.1rem;
+  }
+  
+  .QuickActions {
+    padding: 0.75rem 1rem;
+  }
+  
+  .QuickActionBtn {
+    padding: 0.375rem;
+  }
+  
+  .QuickActionBtn span {
+    font-size: 0.65rem;
+  }
+  
+  .SectionToggle {
+    padding: 0.75rem 1rem;
+    font-size: 0.9rem;
+  }
+  
+  .NavLink {
+    padding: 0.625rem 1rem;
+  }
+  
+  .UnitThumb {
+    width: 28px;
+    height: 28px;
+  }
+  
+  .UnitName {
+    font-size: 0.8rem;
+  }
+  
+  .ChangeType {
+    font-size: 0.65rem;
+  }
+  
+  .SidemenuFooter {
+    padding: 0.75rem 1rem;
+  }
+}
+
+/* Custom Scrollbar for Sidemenu */
+.ContentSidemenu::-webkit-scrollbar {
+  width: 6px;
+}
+
+.ContentSidemenu::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 3px;
+}
+
+.ContentSidemenu::-webkit-scrollbar-thumb {
+  background: rgba(135, 206, 250, 0.3);
+  border-radius: 3px;
+}
+
+.ContentSidemenu::-webkit-scrollbar-thumb:hover {
+  background: rgba(135, 206, 250, 0.5);
 }
