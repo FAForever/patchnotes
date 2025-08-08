@@ -1,0 +1,62 @@
+/* ========================================
+   LAYOUT STYLES - Grid System and Basic Layout
+   ======================================== */
+
+.Grid {
+  padding: 10px;
+  display: grid;
+  grid-template-columns: 1fr 3fr 0.75fr;
+  gap: 20px;
+  margin: 0;
+  padding-left: 0 !important;
+  margin-left: 0 !important;
+}
+
+.Content {
+  grid-column: 2;
+  margin-left: 0 !important;
+  padding-left: 0 !important;
+}
+
+.Date {
+  text-align: right;
+  padding-right: 10px;
+}
+
+.FlexboxContainer {
+  padding-left: 10px;
+}
+
+.SectionHeader {
+  padding: 10px 0;
+}
+
+.BackToTop {
+  text-align: center;
+  border-radius: 50%;
+}
+
+/* Remove left spacing and indentation */
+.Card:not(.enhanced), .ChangesList, .Changes {
+  margin-left: 0 !important;
+  padding-left: 0 !important;
+  border-left: none !important;
+}
+
+/* Enhanced cards keep their padding */
+.Card.enhanced {
+  margin-left: 0 !important;
+  border-left: none !important;
+}
+
+/* Keep CardContent padding but remove left border */
+.CardContent {
+  border-left: none !important;
+}
+
+.SectionDivider {
+  border: none;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  margin: 2rem 0;
+}

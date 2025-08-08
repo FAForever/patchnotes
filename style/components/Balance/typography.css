@@ -1,0 +1,69 @@
+/* ========================================
+   TYPOGRAPHY STYLES - Headings, Text, Links
+   ======================================== */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Ubuntu', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  margin: 10px 0;
+}
+
+a {
+  color: var(--Link);
+  text-decoration: underline;
+}
+
+ul {
+  padding: 10px 25px;
+}
+
+li {
+  padding: 5px 0;
+  list-style: none;
+}
+
+header {
+  padding: 15px;
+}
+
+.patchDescription {
+  margin: 10px;
+}
+
+.Card a {
+  color: var(--Link-Card);
+  text-decoration: underline;
+}
+
+.Card a:hover {
+  color: var(--Link-Hover);
+}
+
+.Intro p {
+  color: var(--Text);
+  padding: 10px;
+}
+
+.Intro h3 {
+  padding-left: 10px;
+}
+
+.Stat {
+  border-radius: 8px;
+  border: lightgray 1px solid;
+  padding: 3px 8px;
+}
+
+/* Unit icons in card headings - base desktop size */
+.Card h3 img {
+  width: 48px;
+  height: 48px;
+  margin-right: 10px;
+  vertical-align: middle;
+}

@@ -1,0 +1,82 @@
+/* ========================================
+   SIDEBAR STYLES - Sidebar and Icon Grids
+   ======================================== */
+
+/* Sidebar */
+.Sidebar {
+  grid-column: 3;
+  position: relative;
+}
+
+/* Sidebar Title */
+.Sidebar h2 a {
+  color: var(--Text);
+  text-decoration: none;
+}
+
+/*Icon Sidebar Container */
+.IconSidebar {
+  position: sticky;
+  top: 20px;
+  background: var(--IconGridBackground);
+  padding: 5px 20px;
+  margin-left: 5px;
+  color: var(--Text);
+  text-align: justify;
+  border-radius: 15px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5px;
+}
+
+/* Title in Icon Sidebar */
+.IconSidebarTitle,
+.IconSidebarSubtitle {
+  grid-column: 1 / -1;
+  text-align: center;
+  margin: 0;
+  padding: 10px 0;
+}
+
+/* Subgrid in Icon Sidebar */
+.IconSidebarSubgrid {
+  display: grid;
+  grid-template-columns: repeat(4, 0.15fr);
+  gap: 5px;
+}
+
+/* Icon in Subgrid */
+.IconSidebarSubgrid img {
+  width: 60px;
+  height: 60px;
+  text-decoration: none;
+  color: #3498db;
+  transition: box-shadow 0.3s ease;
+  border-radius: 10px;
+}
+
+.IconSidebarSubgrid img:hover {
+  box-shadow: 0 0 10px var(--IconGlow);
+}
+
+/* Icon Grid Container */
+.IconGrid {
+  position: sticky;
+  top: 20px;
+  background: var(--IconGridBackgroundG);
+  padding: 5px 20px 20px;
+  color: var(--Text);
+  text-align: justify;
+  border-radius: 15px;
+}
+
+/* Icon Grid Title */
+.IconGrid h2 {
+  margin: 10px;
+}
+
+/* Icons in Icon Grid */
+.IconGrid img {
+  width: 55px;
+  height: 55px;
+}

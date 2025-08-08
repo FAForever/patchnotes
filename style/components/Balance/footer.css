@@ -1,0 +1,144 @@
+/* ========================================
+   FOOTER STYLES
+   ======================================== */
+
+.SiteFooter {
+  background: linear-gradient(135deg, var(--Card-Background, #2c3e50) 0%, var(--Background, #34495e) 100%);
+  border-top: 3px solid var(--Link, #3498db);
+  margin-top: 40px;
+  padding: 0;
+  color: var(--Text, #ecf0f1);
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.FooterContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.FooterSection {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.FooterTitle {
+  font-size: 1.2em;
+  font-weight: 600;
+  color: var(--Link, #3498db);
+  margin: 0 0 10px 0;
+  border-bottom: 2px solid var(--Link, #3498db);
+  padding-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.FooterNav,
+.FooterActions,
+.FooterLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.FooterLink {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--Text, #bdc3c7);
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  font-size: 0.95em;
+}
+
+.FooterLink:hover {
+  background-color: rgba(52, 152, 219, 0.1);
+  color: var(--Link, #3498db);
+  transform: translateX(5px);
+}
+
+.FooterLink i {
+  width: 18px;
+  text-align: center;
+  opacity: 0.8;
+}
+
+.ThemeToggle,
+.PrintButton {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--Button-Background, #3498db);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.9em;
+  font-family: inherit;
+}
+
+.ThemeToggle:hover,
+.PrintButton:hover {
+  background: var(--Button-Hover, #2980b9);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3);
+}
+
+.FooterInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.PatchInfo {
+  background: rgba(52, 152, 219, 0.1);
+  padding: 15px;
+  border-radius: 8px;
+  border-left: 4px solid var(--Link, #3498db);
+  margin: 0;
+}
+
+.Copyright {
+  margin: 0;
+  font-size: 0.9em;
+  opacity: 0.8;
+  line-height: 1.5;
+}
+
+.External::after {
+  content: '↗';
+  margin-left: 5px;
+  opacity: 0.6;
+}
+
+.FooterBottom {
+  background: rgba(0, 0, 0, 0.2);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 15px 20px;
+}
+
+.FooterBottomContent {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85em;
+  opacity: 0.7;
+}
+
+.LastUpdated,
+.BuildInfo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}

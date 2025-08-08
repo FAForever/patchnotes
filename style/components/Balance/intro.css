@@ -1,0 +1,117 @@
+/* ========================================
+   INTRO SECTION STYLES - Enhanced Patch Header
+   ======================================== */
+
+/* Enhanced Intro Section Styling */
+.IntroSection {
+  background: linear-gradient(135deg, rgba(57, 62, 70, 0.95) 0%, rgba(34, 40, 49, 0.9) 100%);
+  backdrop-filter: blur(8px);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.3),
+    0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.PatchHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.PatchTitleGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.PatchTitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #eee;
+  margin: 0;
+  background: linear-gradient(135deg, #87cefa, #c2a732);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.PatchVersion {
+  font-size: 0.875rem;
+  color: var(--Text-Secondary);
+  background: rgba(0, 210, 255, 0.2);
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 210, 255, 0.3);
+  width: fit-content;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+}
+
+.PatchMeta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.5rem;
+}
+
+.PatchDate {
+  font-size: 1rem;
+  color: var(--Text-Primary);
+  font-weight: 500;
+}
+
+.PatchStatus {
+  font-size: 0.75rem;
+  color: #4caf50;
+  background: rgba(76, 175, 80, 0.2);
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  border: 1px solid rgba(76, 175, 80, 0.3);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+}
+
+.PatchSummary {
+  margin: 1.5rem 0;
+}
+
+.PatchSummary .patchDescription {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--Text-Primary);
+  margin: 0;
+  text-align: justify;
+}
+
+.PatchCredits {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.TeamSignature {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  justify-content: center;
+}
+
+.TeamIcon {
+  font-size: 1.25rem;
+  opacity: 0.8;
+}
+
+.TeamName {
+  font-size: 1.1rem;
+  color: var(--Text-Secondary);
+  font-weight: 500;
+  font-style: italic;
+}
