@@ -11,7 +11,7 @@ h6 {
   font-family: 'Ubuntu', sans-serif;
   font-style: normal;
   font-weight: normal;
-  margin: 10px 0;
+  margin: 8px 0; /* Reduced from 10px */
 }
 
 a {
@@ -20,20 +20,20 @@ a {
 }
 
 ul {
-  padding: 10px 25px;
+  padding: 8px 20px; /* Reduced from 10px 25px */
 }
 
 li {
-  padding: 5px 0;
+  padding: 4px 0; /* Reduced from 5px */
   list-style: none;
 }
 
 header {
-  padding: 15px;
+  padding: 12px; /* Reduced from 15px */
 }
 
 .patchDescription {
-  margin: 10px;
+  margin: 8px; /* Reduced from 10px */
 }
 
 .Card a {
@@ -47,23 +47,23 @@ header {
 
 .Intro p {
   color: var(--Text);
-  padding: 10px;
+  padding: 8px; /* Reduced from 10px */
 }
 
 .Intro h3 {
-  padding-left: 10px;
+  padding-left: 8px; /* Reduced from 10px */
 }
 
 .Stat {
-  border-radius: 8px;
+  border-radius: 6px; /* Reduced from 8px */
   border: lightgray 1px solid;
-  padding: 3px 8px;
+  padding: 2px 6px; /* Reduced from 3px 8px */
 }
 
 /* Unit icons in card headings - base desktop size */
 .Card h3 img {
-  width: 48px;
-  height: 48px;
-  margin-right: 10px;
+  width: 38px; /* Reduced from 48px */
+  height: 38px; /* Reduced from 48px */
+  margin-right: 8px; /* Reduced from 10px */
   vertical-align: middle;
 }

@@ -6,7 +6,7 @@
 @media (max-width: 768px) {
   .Grid {
     grid-template-columns: 1fr;
-    gap: 15px;
+    gap: 12px; /* Reduced from 15px */
   }
 
   .Sidebar {
@@ -33,7 +33,7 @@
 @media (max-width: 420px) {
   .Grid {
     grid-template-columns: 1fr;
-    gap: 10px;
+    gap: 8px; /* Reduced from 10px */
   }
 
   .Sidebar {
@@ -61,8 +61,8 @@
 @media (max-width: 768px) {
   .Grid {
     grid-template-columns: 1fr !important;
-    padding: 5px;
-    gap: 15px;
+    padding: 4px; /* Reduced from 5px */
+    gap: 12px; /* Reduced from 15px */
   }
   
   .Content {
@@ -73,81 +73,81 @@
   .Sidebar {
     grid-column: 1;
     order: 2;
-    margin-top: 20px;
+    margin-top: 16px; /* Reduced from 20px */
   }
   
   /* Make sidebar horizontal on mobile */
   .IconSidebarSubgrid {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 8px; /* Reduced from 10px */
     justify-content: center;
   }
   
   .IconSidebarSubgrid img {
-    width: 48px;
-    height: 48px;
+    width: 38px; /* Reduced from 48px */
+    height: 38px; /* Reduced from 48px */
   }
   
   .IconSidebarSubtitle {
     width: 100%;
     text-align: center;
-    margin: 15px 0 5px 0;
-    font-size: 0.9em;
+    margin: 12px 0 4px 0; /* Reduced from 15px 0 5px 0 */
+    font-size: 0.72em; /* Reduced from 0.9em */
   }
   
   /* Improve header on mobile */
   .FlexboxContainer {
     flex-direction: column;
     text-align: center;
-    padding: 10px;
+    padding: 8px; /* Reduced from 10px */
   }
   
   .FlexGrow-4 h1,
   h1 {
-    font-size: 1.8em;
-    margin-bottom: 10px;
+    font-size: 1.44em; /* Reduced from 1.8em */
+    margin-bottom: 8px; /* Reduced from 10px */
   }
   
   .FlexGrow-1 {
-    font-size: 0.9em;
+    font-size: 0.72em; /* Reduced from 0.9em */
     color: var(--Text-Secondary);
   }
   
   /* Better spacing for mobile */
   .patchDescription {
-    margin: 15px 5px;
+    margin: 12px 4px; /* Reduced from 15px 5px */
     line-height: 1.5;
   }
   
   /* Improve cards on mobile */
   .Card {
-    margin: 10px 0;
-    padding: 15px;
+    margin: 8px 0; /* Reduced from 10px 0 */
+    padding: 12px; /* Reduced from 15px */
   }
   
   .Card.enhanced {
-    padding: 16px 24px;
+    padding: 13px 19px; /* Reduced from 16px 24px */
   }
   
   .Card h3 {
-    font-size: 1.1em;
-    margin-bottom: 10px;
+    font-size: 0.88em; /* Reduced from 1.1em */
+    margin-bottom: 8px; /* Reduced from 10px */
   }
   
   .Card img {
-    width: 42px;
-    height: 42px;
-    margin-right: 10px;
+    width: 34px; /* Reduced from 42px */
+    height: 34px; /* Reduced from 42px */
+    margin-right: 8px; /* Reduced from 10px */
   }
   
   /* Better list styling on mobile */
   ul {
-    padding: 5px 20px;
+    padding: 4px 16px; /* Reduced from 5px 20px */
   }
   
   li {
-    padding: 3px 0;
+    padding: 2px 0; /* Reduced from 3px 0 */
     font-size: 0.95em;
     line-height: 1.4;
   }

@@ -17,16 +17,16 @@
 /*Icon Sidebar Container */
 .IconSidebar {
   position: sticky;
-  top: 20px;
+  top: 16px; /* Reduced from 20px */
   background: var(--IconGridBackground);
-  padding: 5px 20px;
-  margin-left: 5px;
+  padding: 4px 16px; /* Reduced from 5px 20px */
+  margin-left: 4px; /* Reduced from 5px */
   color: var(--Text);
   text-align: justify;
-  border-radius: 15px;
+  border-radius: 12px; /* Reduced from 15px */
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 5px;
+  gap: 4px; /* Reduced from 5px */
 }
 
 /* Title in Icon Sidebar */
@@ -35,48 +35,48 @@
   grid-column: 1 / -1;
   text-align: center;
   margin: 0;
-  padding: 10px 0;
+  padding: 8px 0; /* Reduced from 10px */
 }
 
 /* Subgrid in Icon Sidebar */
 .IconSidebarSubgrid {
   display: grid;
   grid-template-columns: repeat(4, 0.15fr);
-  gap: 5px;
+  gap: 4px; /* Reduced from 5px */
 }
 
 /* Icon in Subgrid */
 .IconSidebarSubgrid img {
-  width: 60px;
-  height: 60px;
+  width: 48px; /* Reduced from 60px */
+  height: 48px; /* Reduced from 60px */
   text-decoration: none;
   color: #3498db;
   transition: box-shadow 0.3s ease;
-  border-radius: 10px;
+  border-radius: 8px; /* Reduced from 10px */
 }
 
 .IconSidebarSubgrid img:hover {
-  box-shadow: 0 0 10px var(--IconGlow);
+  box-shadow: 0 0 8px var(--IconGlow); /* Reduced from 10px */
 }
 
 /* Icon Grid Container */
 .IconGrid {
   position: sticky;
-  top: 20px;
+  top: 16px; /* Reduced from 20px */
   background: var(--IconGridBackgroundG);
-  padding: 5px 20px 20px;
+  padding: 4px 16px 16px; /* Reduced from 5px 20px 20px */
   color: var(--Text);
   text-align: justify;
-  border-radius: 15px;
+  border-radius: 12px; /* Reduced from 15px */
 }
 
 /* Icon Grid Title */
 .IconGrid h2 {
-  margin: 10px;
+  margin: 8px; /* Reduced from 10px */
 }
 
 /* Icons in Icon Grid */
 .IconGrid img {
-  width: 55px;
-  height: 55px;
+  width: 44px; /* Reduced from 55px */
+  height: 44px; /* Reduced from 55px */
 }
