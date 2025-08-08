@@ -40,7 +40,7 @@
             <section id="Land">
                 <h2>Land Units</h2>
 
-                <article id="t3tank" class="Card enhanced">
+                <article id="seraphim_t3tank" class="Card enhanced">
                 <!-- Card Header Section -->
                     <header class="CardHeader">
                         <div class="UnitInfo">
@@ -98,7 +98,7 @@
                     </div>
                 </article>
 
-                <article id="t3sniper" class="Card enhanced">
+                <article id="aeon_t3sniper" class="Card enhanced">
                 <!-- Card Header Section -->
                     <header class="CardHeader">
                         <div class="UnitInfo">
@@ -143,7 +143,7 @@
             <section id="Air">
                 <h2>Air Units</h2>
 
-                <article id="t3torpbomber" class="Card enhanced">
+                <article id="aeon_t3torpbomber" class="Card enhanced">
                 <!-- Card Header Section -->
                     <header class="CardHeader">
                         <div class="UnitInfo">
@@ -212,7 +212,7 @@
             <section id="Naval">
                 <h2>Naval Units</h2>
 
-                <article id="t2torpboat" class="Card enhanced">
+                <article id="uef_t2torpboat" class="Card enhanced">
                     <!-- Card Header Section -->
                     <header class="CardHeader">
                         <div class="UnitInfo">
@@ -346,7 +346,7 @@
                     </div>
                 </article>
 
-                <article id="t2destroyer" class="Card enhanced">
+                <article id="uef_t2destroyer" class="Card enhanced">
                     <!-- Card Header Section -->
                     <header class="CardHeader">
                         <div class="UnitInfo">
@@ -449,7 +449,7 @@
                     </div>
                 </article>
 
-                <article id="t2cruiser" class="Card">
+                <article id="cybran_t2cruiser" class="Card">
                     <!-- Card Header Section -->
                     <header class="CardHeader">
                         <div class="UnitInfo">
@@ -507,8 +507,8 @@
                         </div>
                     </div>
                 </article>
-                
-                <article id="t3carrier" class="Card enhanced">
+
+                <article id="cybran_t3carrier" class="Card enhanced">
                     <!-- Card Header Section -->
                     <header class="CardHeader">
                         <div class="UnitInfo">
@@ -816,20 +816,20 @@
                     </div>
                 </article>
 
-                <article id="t3artys" class="Card enhanced">
+                <article id="aeon_t3artys" class="Card enhanced">
                     <!-- Card Header Section -->
                     <header class="CardHeader">
                         <div class="UnitInfo">
-                            <img src="/assets/images/units/aeon/structure/T3StaticArty.png" class="UnitIcon" alt="T3 Stationary Artilleries"/>
+                            <img src="/assets/images/units/aeon/structure/T3StaticArty.png" class="UnitIcon" alt="Emissary"/>
                             <div class="UnitDetails">
                                 <div class="UnitNameRow">
-                                    <h3 class="UnitName">T3 Stationary Artilleries</h3>
-                                    <span class="UnitCode">Multi-Faction</span>
+                                    <h3 class="UnitName">Emissary</h3>
+                                    <span class="UnitCode">UAB2302</span>
                                 </div>
-                                <span class="FactionBadge universal">Universal</span>
+                                <span class="FactionBadge aeon">Aeon</span>
                             </div>
                         </div>
-                        <div class="ChangeTypeBadge rework">Rework</div>
+                        <div class="ChangeTypeBadge buff">Buff</div>
                     </header>
 
                     <!-- Card Content Section -->
@@ -839,13 +839,9 @@
                         <div class="ChangesList">
                             <!-- Aeon Emissary -->
                             <div class="ChangeGroup">
-                                <h4 class="ChangeGroupTitle">
-                                    <img src="/assets/images/units/aeon/structure/T3StaticArty.png" class="UnitIcon" alt="Emissary">
-                                    Emissary (Aeon)
-                                </h4>
+                                <h4 class="ChangeGroupTitle">Economy</h4>
 
                                 <ul class="Changes">
-                                    <li class="sub-header"><strong>Economy</strong></li>
                                     <li class="nerf">
                                         <span class="ChangeLabel">Mass Cost:</span>
                                         <span class="ChangeValue">
@@ -870,31 +866,59 @@
                                             <strong class="NewValue">129,500</strong>
                                         </span>
                                     </li>
-                                    <li class="sub-header"><strong>Performance</strong></li>
-                                    <li class="change">
+                                </ul>
+                            </div>
+
+                            <!-- Weapons Changes -->
+                            <div class="ChangeGroup">
+                                <h4 class="ChangeGroupTitle">Weapons</h4>
+                                <ul class="Changes">
+                                    <li class="buff">
                                         <span class="ChangeLabel">Firing Randomness:</span>
                                         <span class="ChangeValue">
+                                            <s class="OldValue">0.400</s> 
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
                                             <strong class="NewValue">0.35</strong>
                                         </span>
                                     </li>
-                                    <li class="change">
+                                    <li class="buff">
                                         <span class="ChangeLabel">DPS with 4 T3 Pgens:</span>
                                         <span class="ChangeValue">
+                                            <s class="OldValue">900</s> 
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
                                             <strong class="NewValue">1000</strong>
                                         </span>
                                     </li>
                                 </ul>
                             </div>
+                        </div>
+                    </div>
+                </article>
 
-                            <!-- UEF Duke -->
+                <article id="uef_t3artys" class="Card enhanced">
+                    <!-- Card Header Section -->
+                    <header class="CardHeader">
+                        <div class="UnitInfo">
+                            <img src="/assets/images/units/uef/structure/T3StaticArty.png" class="UnitIcon" alt="Duke"/>
+                            <div class="UnitDetails">
+                                <div class="UnitNameRow">
+                                    <h3 class="UnitName">Duke</h3>
+                                    <span class="UnitCode">UEB2302</span>
+                                </div>
+                                <span class="FactionBadge uef">UEF</span>
+                            </div>
+                        </div>
+                        <div class="ChangeTypeBadge buff">Buff</div>
+                    </header>
+
+                    <!-- Card Content Section -->
+                    <div class="CardContent">
+                        <p class="ChangeDescription">Rebalance cost, damage, reload, and accuracy stats of T3 static artillery to make them more equal against heavily shielded targets. Costs are now spread evenly across 70-79k mass to fit the varied DPS amounts of different artilleries. Overall they’re more expensive, aside from Cybran. Accuracy and DPS are adjusted so that artilleries have similar performance for their new costs against heavily shielded late-game targets. Damage is adjusted to even out performance against different T3 shields and give UEF some diversity from Seraphim.</p>
+
+                        <div class="ChangesList">
                             <div class="ChangeGroup">
-                                <h4 class="ChangeGroupTitle">
-                                    <img src="/assets/images/units/uef/structure/T3StaticArty.png" class="UnitIcon" alt="Duke">
-                                    Duke (UEF)
-                                </h4>
-
+                                <h4 class="ChangeGroupTitle">Economy</h4>
                                 <ul class="Changes">
-                                    <li class="sub-header"><strong>Economy</strong></li>
                                     <li class="nerf">
                                         <span class="ChangeLabel">Mass Cost:</span>
                                         <span class="ChangeValue">
@@ -919,7 +943,11 @@
                                             <strong class="NewValue">121,400</strong>
                                         </span>
                                     </li>
-                                    <li class="sub-header"><strong>Weapons</strong></li>
+                                </ul>
+                            </div>
+                            <div class="ChangeGroup">
+                                <h4 class="ChangeGroupTitle">Weapons</h4>
+                                <ul class="Changes">
                                     <li class="buff">
                                         <span class="ChangeLabel">Firing Randomness:</span>
                                         <span class="ChangeValue">
@@ -955,16 +983,34 @@
                                     </li>
                                 </ul>
                             </div>
+                        </div>
+                    </div>
+                </article>
 
-                            <!-- Seraphim Hovatham -->
+                <article id="seraphim_t3artys" class="Card enhanced">
+                    <!-- Card Header Section -->
+                    <header class="CardHeader">
+                        <div class="UnitInfo">
+                            <img src="/assets/images/units/sera/structure/T3StaticArty.png" class="UnitIcon" alt="Hovatham"/>
+                            <div class="UnitDetails">
+                                <div class="UnitNameRow">
+                                    <h3 class="UnitName">Hovatham</h3>
+                                    <span class="UnitCode">XSB2302</span>
+                                </div>
+                                <span class="FactionBadge sera">Seraphim</span>
+                            </div>
+                        </div>
+                        <div class="ChangeTypeBadge buff">Buff</div>
+                    </header>
+
+                    <!-- Card Content Section -->
+                    <div class="CardContent">
+                        <p class="ChangeDescription">Rebalance cost, damage, reload, and accuracy stats of T3 static artillery to make them more equal against heavily shielded targets. Costs are now spread evenly across 70-79k mass to fit the varied DPS amounts of different artilleries. Overall they’re more expensive, aside from Cybran. Accuracy and DPS are adjusted so that artilleries have similar performance for their new costs against heavily shielded late-game targets. Damage is adjusted to even out performance against different T3 shields and give UEF some diversity from Seraphim.</p>
+
+                        <div class="ChangesList">
                             <div class="ChangeGroup">
-                                <h4 class="ChangeGroupTitle">
-                                    <img src="/assets/images/units/sera/structure/T3StaticArty.png" class="UnitIcon" alt="Hovatham">
-                                    Hovatham (Seraphim)
-                                </h4>
-
+                                <h4 class="ChangeGroupTitle">Economy</h4>
                                 <ul class="Changes">
-                                    <li class="sub-header"><strong>Economy</strong></li>
                                     <li class="nerf">
                                         <span class="ChangeLabel">Mass Cost:</span>
                                         <span class="ChangeValue">
@@ -989,7 +1035,11 @@
                                             <strong class="NewValue">113,400</strong>
                                         </span>
                                     </li>
-                                    <li class="sub-header"><strong>Weapons</strong></li>
+                                </ul>
+                            </div>
+                            <div class="ChangeGroup">
+                                <h4 class="ChangeGroupTitle">Weapons</h4>
+                                <ul class="Changes">
                                     <li class="buff">
                                         <span class="ChangeLabel">Firing Randomness:</span>
                                         <span class="ChangeValue">
@@ -1025,17 +1075,36 @@
                                     </li>
                                 </ul>
                             </div>
+                        </div>
+                    </div>
+                </article>
 
+                <article id="cybran_t3artys" class="Card enhanced">
+                    <!-- Card Header Section -->
+                    <header class="CardHeader">
+                        <div class="UnitInfo">
+                            <img src="/assets/images/units/cybran/structure/T3StaticArty.png" class="UnitIcon" alt="Disruptor"/>
+                            <div class="UnitDetails">
+                                <div class="UnitNameRow">
+                                    <h3 class="UnitName">Disruptor</h3>
+                                    <span class="UnitCode">URB2302</span>
+                                </div>
+                                <span class="FactionBadge cybran">Cybran</span>
+                            </div>
+                        </div>
+                        <div class="ChangeTypeBadge buff">Buff</div>
+                    </header>
+
+                    <!-- Card Content Section -->
+                    <div class="CardContent">
+                        <p class="ChangeDescription">Rebalance cost, damage, reload, and accuracy stats of T3 static artillery to make them more equal against heavily shielded targets. Costs are now spread evenly across 70-79k mass to fit the varied DPS amounts of different artilleries. Overall they’re more expensive, aside from Cybran. Accuracy and DPS are adjusted so that artilleries have similar performance for their new costs against heavily shielded late-game targets. Damage is adjusted to even out performance against different T3 shields and give UEF some diversity from Seraphim.</p>
+
+                        <div class="ChangesList">
                             <!-- Cybran Disruptor -->
                             <div class="ChangeGroup">
-                                <h4 class="ChangeGroupTitle">
-                                    <img src="/assets/images/units/cybran/structure/T3StaticArty.png" class="UnitIcon" alt="Disruptor">
-                                    Disruptor (Cybran)
-                                </h4>
-
+                                <h4 class="ChangeGroupTitle">Economy</h4>
                                 <ul class="Changes">
-                                    <li class="sub-header"><strong>Economy</strong></li>
-                                    <li class="buff">
+                                    <li class="nerf">
                                         <span class="ChangeLabel">Mass Cost:</span>
                                         <span class="ChangeValue">
                                             <s class="OldValue">69,600</s> 
@@ -1043,7 +1112,7 @@
                                             <strong class="NewValue">70,000</strong>
                                         </span>
                                     </li>
-                                    <li class="buff">
+                                    <li class="nerf">
                                         <span class="ChangeLabel">Energy Cost:</span>
                                         <span class="ChangeValue">
                                             <s class="OldValue">1,305,000</s> 
@@ -1051,7 +1120,7 @@
                                             <strong class="NewValue">1,313,000</strong>
                                         </span>
                                     </li>
-                                    <li class="buff">
+                                    <li class="nerf">
                                         <span class="ChangeLabel">Build Time:</span>
                                         <span class="ChangeValue">
                                             <s class="OldValue">105,000</s> 
@@ -1059,7 +1128,11 @@
                                             <strong class="NewValue">105,600</strong>
                                         </span>
                                     </li>
-                                    <li class="sub-header"><strong>Weapons</strong></li>
+                                </ul>
+                            </div>
+                            <div class="ChangeGroup">
+                                <h4 class="ChangeGroupTitle">Weapons</h4>
+                                <ul class="Changes">
                                     <li class="buff">
                                         <span class="ChangeLabel">Firing Randomness:</span>
                                         <span class="ChangeValue">
@@ -1104,6 +1177,7 @@
                         </div>
                     </div>
                 </article>
+
             </section>
         </div>
 
@@ -1166,7 +1240,7 @@
                         </button>
                         <ul class="SectionItems" id="land-items">
                             <li class="NavItem">
-                                <a href="#t3tank" class="NavLink">
+                                <a href="#seraphim_t3tank" class="NavLink">
                                     <img src="/assets/images/units/sera/land/T3Tank.png" class="UnitThumb" alt="Othuum"/>
                                     <div class="LinkContent">
                                         <span class="UnitName">Othuum</span>
@@ -1175,7 +1249,7 @@
                                 </a>
                             </li>
                             <li class="NavItem">
-                                <a href="#t3sniper" class="NavLink">
+                                <a href="#aeon_t3sniper" class="NavLink">
                                     <img src="/assets/images/units/aeon/land/T3Sniper.png" class="UnitThumb" alt="Sprite Striker"/>
                                     <div class="LinkContent">
                                         <span class="UnitName">Sprite Striker</span>
@@ -1189,13 +1263,14 @@
                     <!-- Air Units Section -->
                     <div class="NavSection active">
                         <button class="SectionToggle" aria-expanded="true" data-target="air-items">
+                            <i class="fas fa-plane SectionIcon"></i>
                             <span class="SectionTitle">Air Units</span>
                             <span class="ItemCount">1</span>
                             <i class="fas fa-chevron-down ToggleIcon"></i>
                         </button>
                         <ul class="SectionItems" id="air-items">
                             <li class="NavItem">
-                                <a href="#t3torpbomber" class="NavLink">
+                                <a href="#aeon_t3torpbomber" class="NavLink">
                                     <img src="/assets/images/units/aeon/air/T3TorpedoBomber.png" class="UnitThumb" alt="Solace"/>
                                     <div class="LinkContent">
                                         <span class="UnitName">Solace</span>
@@ -1209,13 +1284,14 @@
                     <!-- Naval Units Section -->
                     <div class="NavSection active">
                         <button class="SectionToggle" aria-expanded="true" data-target="naval-items">
+                            <i class="fas fa-ship SectionIcon"></i>
                             <span class="SectionTitle">Naval Units</span>
                             <span class="ItemCount">4</span>
                             <i class="fas fa-chevron-down ToggleIcon"></i>
                         </button>
                         <ul class="SectionItems" id="naval-items">
                             <li class="NavItem">
-                                <a href="#t2torpboat" class="NavLink">
+                                <a href="#uef_t2torpboat" class="NavLink">
                                     <img src="/assets/images/units/uef/naval/T2TorpBoat.png" class="UnitThumb" alt="Cooper"/>
                                     <div class="LinkContent">
                                         <span class="UnitName">Cooper</span>
@@ -1224,7 +1300,7 @@
                                 </a>
                             </li>
                             <li class="NavItem">
-                                <a href="#t2destroyer" class="NavLink">
+                                <a href="#uef_t2destroyer" class="NavLink">
                                     <img src="/assets/images/units/uef/naval/T2Destroyer.png" class="UnitThumb" alt="Valiant"/>
                                     <div class="LinkContent">
                                         <span class="UnitName">Valiant</span>
@@ -1233,7 +1309,7 @@
                                 </a>
                             </li>
                             <li class="NavItem">
-                                <a href="#t2cruiser" class="NavLink">
+                                <a href="#cybran_t2cruiser" class="NavLink">
                                     <img src="/assets/images/units/cybran/naval/T2Cruiser.png" class="UnitThumb" alt="Siren"/>
                                     <div class="LinkContent">
                                         <span class="UnitName">Siren</span>
@@ -1242,7 +1318,7 @@
                                 </a>
                             </li>
                             <li class="NavItem">
-                                <a href="#t3carrier" class="NavLink">
+                                <a href="#cybran_t3carrier" class="NavLink">
                                     <img src="/assets/images/units/cybran/naval/T3AircraftCarrier.png" class="UnitThumb" alt="Command Class"/>
                                     <div class="LinkContent">
                                         <span class="UnitName">Command Class</span>
@@ -1256,6 +1332,7 @@
                     <!-- ACU & SACU Section -->
                     <div class="NavSection active">
                         <button class="SectionToggle" aria-expanded="true" data-target="acu-items">
+                            <i class="fas fa-robot SectionIcon"></i>
                             <span class="SectionTitle">ACU & SACU</span>
                             <span class="ItemCount">2</span>
                             <i class="fas fa-chevron-down ToggleIcon"></i>
@@ -1285,8 +1362,9 @@
                     <!-- Structures Section -->
                     <div class="NavSection active">
                         <button class="SectionToggle" aria-expanded="true" data-target="structure-items">
+                            <i class="fas fa-building SectionIcon"></i>
                             <span class="SectionTitle">Structures</span>
-                            <span class="ItemCount">3</span>
+                            <span class="ItemCount">7</span>
                             <i class="fas fa-chevron-down ToggleIcon"></i>
                         </button>
                         <ul class="SectionItems" id="structure-items">
@@ -1309,11 +1387,38 @@
                                 </a>
                             </li>
                             <li class="NavItem">
-                                <a href="#t3artys" class="NavLink">
-                                    <img src="/assets/images/units/aeon/structure/T3StaticArty.png" class="UnitThumb" alt="T3 Artillery"/>
+                                <a href="#aeon_t3artys" class="NavLink">
+                                    <img src="/assets/images/units/aeon/structure/T3StaticArty.png" class="UnitThumb" alt="Emissary"/>
                                     <div class="LinkContent">
-                                        <span class="UnitName">T3 Stationary Artilleries</span>
-                                        <span class="ChangeType rework">Rework</span>
+                                        <span class="UnitName">Emissary</span>
+                                        <span class="ChangeType buff">Buff</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="NavItem">
+                                <a href="#uef_t3artys" class="NavLink">
+                                    <img src="/assets/images/units/uef/structure/T3StaticArty.png" class="UnitThumb" alt="Duke"/>
+                                    <div class="LinkContent">
+                                        <span class="UnitName">Duke</span>
+                                        <span class="ChangeType buff">Buff</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="NavItem">
+                                <a href="#seraphim_t3artys" class="NavLink">
+                                    <img src="/assets/images/units/sera/structure/T3StaticArty.png" class="UnitThumb" alt="Hovatham"/>
+                                    <div class="LinkContent">
+                                        <span class="UnitName">Hovatham</span>
+                                        <span class="ChangeType buff">Buff</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="NavItem">
+                                <a href="#cybran_t3artys" class="NavLink">
+                                    <img src="/assets/images/units/cybran/structure/T3StaticArty.png" class="UnitThumb" alt="Disruptor"/>
+                                    <div class="LinkContent">
+                                        <span class="UnitName">Disruptor</span>
+                                        <span class="ChangeType buff">Buff</span>
                                     </div>
                                 </a>
                             </li>
