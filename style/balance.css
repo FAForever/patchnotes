@@ -122,8 +122,8 @@ header {
 
 /* Icon in Subgrid */
 .IconSidebarSubgrid img {
-  width: 50px; /* Icon width */
-  height: 50px; /* Icon height */
+  width: 60px; /* Icon width */
+  height: 60px; /* Icon height */
   text-decoration: none; /* Remove underline from links */
   color: #3498db; /* Icon color */
   transition: box-shadow 0.3s ease; /* Smooth box shadow transition */
@@ -151,8 +151,8 @@ header {
 
 /* Icons in Icon Grid */
 .IconGrid img {
-  width: 45px; /* Icon width */
-  height: 45px; /* Icon height */
+  width: 55px; /* Icon width */
+  height: 55px; /* Icon height */
 }
 
 .BackToTop {
@@ -164,6 +164,14 @@ header {
   border-radius: 8px;
   border: lightgray 1px solid;
   padding: 3px 8px;
+}
+
+/* Unit icons in card headings - base desktop size */
+.Card h3 img {
+  width: 48px; /* Icon width */
+  height: 48px; /* Icon height */
+  margin-right: 10px; /* Space between icon and text */
+  vertical-align: middle; /* Align with text */
 }
 
 .SectionHeader {
@@ -222,5 +230,324 @@ header {
 
   .IconGrid {
     grid-template-columns: 1fr;
+  }
+}
+
+/* Mobile Responsiveness - Added January 2025 */
+@media (max-width: 768px) {
+  .Grid {
+    grid-template-columns: 1fr !important;
+    padding: 5px;
+    gap: 15px;
+  }
+  
+  .Content {
+    grid-column: 1;
+    order: 1;
+  }
+  
+  .Sidebar {
+    grid-column: 1;
+    order: 2;
+    margin-top: 20px;
+  }
+  
+  /* Make sidebar horizontal on mobile */
+  .IconSidebarSubgrid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+  
+  .IconSidebarSubgrid img {
+    width: 48px;
+    height: 48px;
+  }
+  
+  .IconSidebarSubtitle {
+    width: 100%;
+    text-align: center;
+    margin: 15px 0 5px 0;
+    font-size: 0.9em;
+  }
+  
+  /* Improve header on mobile */
+  .FlexboxContainer {
+    flex-direction: column;
+    text-align: center;
+    padding: 10px;
+  }
+  
+  .FlexGrow-4 h1,
+  h1 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+  }
+  
+  .FlexGrow-1 {
+    font-size: 0.9em;
+    color: var(--Text-Secondary);
+  }
+  
+  /* Better spacing for mobile */
+  .patchDescription {
+    margin: 15px 5px;
+    line-height: 1.5;
+  }
+  
+  /* Improve cards on mobile */
+  .Card {
+    margin: 10px 0;
+    padding: 15px;
+  }
+  
+  .Card h3 {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+  }
+  
+  .Card img {
+    width: 42px;
+    height: 42px;
+    margin-right: 10px;
+  }
+  
+  /* Better list styling on mobile */
+  ul {
+    padding: 5px 20px;
+  }
+  
+  li {
+    padding: 3px 0;
+    font-size: 0.95em;
+    line-height: 1.4;
+  }
+  
+  /* Footer improvements */
+  footer {
+    padding: 15px 10px;
+    text-align: center;
+  }
+  
+  .BackToTop button {
+    padding: 10px 15px;
+    margin-bottom: 10px;
+  }
+}
+
+/* Small mobile devices */
+@media (max-width: 480px) {
+  .Grid {
+    padding: 2px;
+    gap: 10px;
+  }
+  
+  .IconSidebar {
+    padding: 10px;
+    margin-left: 0;
+  }
+  
+  .Card {
+    padding: 10px;
+  }
+  
+  .Card h3 {
+    font-size: 1em;
+  }
+  
+  .Card img {
+    width: 36px;
+    height: 36px;
+  }
+  
+  h1 {
+    font-size: 1.5em;
+  }
+  
+  h2 {
+    font-size: 1.3em;
+  }
+}
+
+/* ========================================
+   FOOTER STYLES
+   ======================================== */
+
+.SiteFooter {
+  background: linear-gradient(135deg, var(--Card-Background, #2c3e50) 0%, var(--Background, #34495e) 100%);
+  border-top: 3px solid var(--Link, #3498db);
+  margin-top: 40px;
+  padding: 0;
+  color: var(--Text, #ecf0f1);
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.FooterContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.FooterSection {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.FooterTitle {
+  font-size: 1.2em;
+  font-weight: 600;
+  color: var(--Link, #3498db);
+  margin: 0 0 10px 0;
+  border-bottom: 2px solid var(--Link, #3498db);
+  padding-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.FooterNav,
+.FooterActions,
+.FooterLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.FooterLink {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--Text, #bdc3c7);
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  font-size: 0.95em;
+}
+
+.FooterLink:hover {
+  background-color: rgba(52, 152, 219, 0.1);
+  color: var(--Link, #3498db);
+  transform: translateX(5px);
+}
+
+.FooterLink i {
+  width: 18px;
+  text-align: center;
+  opacity: 0.8;
+}
+
+.ThemeToggle,
+.PrintButton {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--Button-Background, #3498db);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.9em;
+  font-family: inherit;
+}
+
+.ThemeToggle:hover,
+.PrintButton:hover {
+  background: var(--Button-Hover, #2980b9);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3);
+}
+
+.FooterInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.PatchInfo {
+  background: rgba(52, 152, 219, 0.1);
+  padding: 15px;
+  border-radius: 8px;
+  border-left: 4px solid var(--Link, #3498db);
+  margin: 0;
+}
+
+.Copyright {
+  margin: 0;
+  font-size: 0.9em;
+  opacity: 0.8;
+  line-height: 1.5;
+}
+
+.External::after {
+  content: '↗';
+  margin-left: 5px;
+  opacity: 0.6;
+}
+
+.FooterBottom {
+  background: rgba(0, 0, 0, 0.2);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 15px 20px;
+}
+
+.FooterBottomContent {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85em;
+  opacity: 0.7;
+}
+
+.LastUpdated,
+.BuildInfo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Mobile Footer Styles */
+@media (max-width: 768px) {
+  .FooterContainer {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    padding: 30px 15px;
+  }
+  
+  .FooterBottomContent {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+  
+  .FooterActions {
+    flex-direction: row;
+    gap: 10px;
+  }
+  
+  .ThemeToggle,
+  .PrintButton {
+    flex: 1;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .FooterActions {
+    flex-direction: column;
+  }
+  
+  .ThemeToggle,
+  .PrintButton {
+    flex: none;
   }
 }
