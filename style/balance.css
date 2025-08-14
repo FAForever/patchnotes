@@ -1,18 +1,15 @@
 @import '../style/root.css';
-@import '../style/components/card.css';
-@import '../style/components/BalanceCard.css';
 @import '../style/components/images.css';
 @import '../style/components/video.css';
 @import '../style/components/button.css';
 
-/* Balance page components */
-@import '../style/components/balance/layout.css';
-@import '../style/components/balance/typography.css';
-@import '../style/components/balance/sidebar.css';
-@import '../style/components/balance/footer.css';
-@import '../style/components/balance/intro.css';
-@import '../style/components/balance/sidemenu.css';
-@import '../style/components/balance/responsive.css';
-@import '../style/components/balance/PatchCard.css';
 
-/* Core balance page styles that are specific to balance functionality */
+/* Patchnote Styling */
+@import '../style/components/patch_card.css';
+@import '../style/components/patch_footer.css';
+@import '../style/components/patch_intro.css';
+@import '../style/components/patch_layout.css';
+@import '../style/components/patch_responsive.css';
+@import '../style/components/patch_sidebar.css';
+@import '../style/components/patch_sidemenu.css';
+@import '../style/components/patch_typography.css';

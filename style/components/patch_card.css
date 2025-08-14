@@ -5,9 +5,9 @@
 /* ===== BASE CARD STRUCTURE ===== */
 
 /* Base Card Structure - Used for all balance cards */
-.Card {
+.PatchCard {
+    border: 2px solid var(--Line);
     background: linear-gradient(145deg, var(--Card) 0%, var(--IconGridBackground) 100%);
-    border: 1px solid var(--Line);
     border-radius: 16px;
     margin: 24px 0;
     overflow: hidden;
@@ -16,26 +16,10 @@
         0 6px 20px rgba(0, 0, 0, 0.1),
         0 2px 8px rgba(0, 0, 0, 0.06);
     position: relative;
-}
-
-.Card:hover {
-    transform: translateY(-6px);
-    box-shadow: 
-        0 16px 32px rgba(0, 0, 0, 0.15),
-        0 6px 16px rgba(0, 0, 0, 0.1);
-    border-color: var(--Link);
-}
-
-/* Enhanced Card - For major unit changes */
-.Card.enhanced {
-    border: 2px solid var(--Line);
-    background: linear-gradient(145deg, var(--Card) 0%, var(--IconGridBackground) 100%);
-    position: relative;
-    overflow: hidden;
     padding: 16px 24px;
 }
 
-.Card.enhanced:hover {
+.PatchCard:hover {
     transform: translateY(-8px);
     box-shadow: 
         0 24px 48px rgba(0, 0, 0, 0.2),
@@ -43,54 +27,8 @@
     border-color: var(--Link);
 }
 
-/* Simple Card - For minor changes and group updates */
-.Card.simple {
-    padding: 28px;
-    background: linear-gradient(145deg, var(--Card) 0%, var(--IconGridBackground) 100%);
-}
-
-.Card.simple h3 {
-    margin: 0 0 20px 0;
-    font-size: 1.75rem;
-    font-weight: 700;
-    color: var(--Text-Primary);
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    padding-bottom: 16px;
-    border-bottom: 3px solid var(--Line);
-    letter-spacing: -0.025em;
-}
-
-.Card.simple h3 img {
-    width: 56px;
-    height: 56px;
-    border-radius: 8px;
-    border: 2px solid var(--Line);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-.Card.simple h4 {
-    color: var(--Text-Primary);
-    font-size: 1.3rem;
-    font-weight: 600;
-    margin: 24px 0 16px 0;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    letter-spacing: -0.015em;
-}
-
-.Card.simple h4 img {
-    width: 40px;
-    height: 40px;
-    border-radius: 6px;
-    border: 1px solid var(--Line);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-}
-
 /* Card Header - Professional styling */
-.CardHeader {
+.PatchCardHeader {
     background: linear-gradient(135deg, var(--IconGridBackground) 0%, var(--Card) 100%);
     padding: 32px;
     border-bottom: 3px solid var(--Line);
@@ -101,7 +39,7 @@
     transition: all 0.3s ease;
 }
 
-.CardHeader::after {
+.PatchCardHeader::after {
     content: '';
     position: absolute;
     bottom: 0;
@@ -113,7 +51,7 @@
     transition: transform 0.4s ease;
 }
 
-.Card:hover .CardHeader::after {
+.PatchCard:hover .PatchCardHeader::after {
     transform: scaleX(1);
 }
 
@@ -381,7 +319,7 @@
 }
 
 /* Card Content - Professional styling */
-.CardContent {
+.PatchCardContent {
     padding: 32px;
 }
 
@@ -785,7 +723,7 @@
 /* ===== RESPONSIVE ENHANCEMENTS FOR BALANCE CARDS ===== */
 
 @media (max-width: 1024px) {
-    .CardHeader {
+    .PatchCardHeader {
         flex-direction: column;
         gap: 20px;
         align-items: flex-start;
@@ -806,11 +744,11 @@
 }
 
 @media (max-width: 768px) {
-    .CardHeader {
+    .PatchCardHeader {
         padding: 24px;
     }
     
-    .CardContent {
+    .PatchCardContent {
         padding: 24px;
     }
     
@@ -883,11 +821,11 @@
 }
 
 @media (max-width: 480px) {
-    .CardHeader {
+    .PatchCardHeader {
         padding: 20px;
     }
     
-    .CardContent {
+    .PatchCardContent {
         padding: 20px;
     }
     

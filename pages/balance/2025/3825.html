@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="description" content="FAForever Patch 3825 page with detailed balance updates for naval units, T3 artillery, teleport mechanics, and various other improvements." />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>FAForever Patch 3825 - Balance Update</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+<link rel="stylesheet" href="/style/balance.css"/>
+<script src="/scripts/themeSwitch.js" defer></script>
+<script src="/scripts/contentSidemenu.js" defer></script>
+</head>
+<body>
+    <main class="Grid">
+        <div class="Content">
+
+            <section id="Intro" class="IntroSection">
+                <header class="PatchHeader">
+                    <div class="PatchTitleGroup">
+                        <h1 class="PatchTitle">Patch 3825</h1>
+                        <span class="PatchVersion">Balance Update</span>
+                    </div>
+                    <div class="PatchMeta">
+                        <time datetime="2025-08-15" class="PatchDate">August 15th, 2025</time>
+                        <span class="PatchStatus">Released</span>
+                    </div>
+                </header>
+                <p class="patchDescription">This patch delivers major balance improvements across multiple systems. The UEF's Cooper torpedo boat is buffed with reduced cost, improved sonar, and slightly higher DPS, helping address UEF navy’s T2 weaknesses. T3 artillery for all factions is rebalanced with adjusted costs, accuracy, and damage to ensure fairer performance against shielded targets. Additional tweaks fix air unit targeting bugs, improve teleport balance, enhance Cybran naval missile defense, and refine units like the Othuum, Solace, and Valiant for better counterplay and consistency.</p>
+                
+                <footer class="PatchCredits">
+                    <div class="TeamSignature">
+                        <span class="TeamIcon">⚖️</span>
+                        <span class="TeamName">The Balance Team</span>
+                    </div>
+                </footer>
+                
+                <hr class="SectionDivider">
+            </section>
+
+            <section id="Land">
+                <h2>Land Units</h2>
+
+                <article id="cybran_t1_aa" class="PatchCard">
+                <!-- Card Header Section -->
+                    <header class="PatchCardHeader">
+                        <div class="UnitInfo">
+                            <img src="/assets/images/units/cybran/land/T1MobileAA.png" class="UnitIcon" alt="Sky Slammer"/>
+                            <div class="UnitDetails">
+                                <div class="UnitNameRow">
+                                    <h3 class="UnitName">Sky Slammer</h3>
+                                    <span class="UnitCode">URL0104</span>
+                                </div>
+                                <span class="FactionBadge cybran">Cybran</span>
+                            </div>
+                        </div>
+                        <div class="ChangeTypeBadge nerf">Nerf</div>
+                    </header>
+
+                    <!-- Card Content Section -->
+                    <div class="PatchCardContent">
+                        <p class="ChangeDescription">Reduce the damage of the Cybran T1 mobile anti-air since its projectiles can now retarget, and it no longer needs so much damage to match the AA of other factions</p>
+
+                        <div class="ChangesList">
+                            <div class="ChangeGroup">
+                                <h4 class="ChangeGroupTitle">
+                                    Weapons
+                                </h4>
+                                <ul class="Changes">
+                                    <li class="sub-header"><strong>Nanodart Launcher</strong></li>
+                                    <li class="nerf">
+                                        <span class="ChangeLabel">Damage (DPS):</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">16 (32)</s> 
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                            <strong class="NewValue">14 (28)</strong>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+            </section>
+
+            <section id="Naval">
+                <h2>Naval Units</h2>
+
+                <article id="uef_t2shieldboat" class="PatchCard">
+                    <!-- Card Header Section -->
+                    <header class="PatchCardHeader">
+                        <div class="UnitInfo">
+                            <img src="/assets/images/units/uef/naval/T2ShieldBoat.png" class="UnitIcon" alt="Bulwark"/>
+                            <div class="UnitDetails">
+                                <div class="UnitNameRow">
+                                    <h3 class="UnitName">Bulwark</h3>
+                                    <span class="UnitCode">XES0205</span>
+                                </div>
+                                <span class="FactionBadge uef">UEF</span>
+                            </div>
+                        </div>
+                        <div class="ChangeTypeBadge nerf">Nerf</div>
+                    </header>
+
+                    <!-- Card Content Section -->
+                    <div class="CardContent">
+                        <p class="ChangeDescription">Reduce the Bulwark's oversized dimensions to better reflect its current role and cost efficiency. Previous FAF changes significantly increased the unit's scale, making it nearly as large as a destroyer despite being a relatively inexpensive support vessel. With the Bulwark's recent rework emphasizing affordability over raw effectiveness, its massive size no longer aligns with its tactical purpose. These adjustments restore appropriate proportions for a cost-effective T2 support unit while maintaining its core shielding functionality.</p>
+
+                        <div class="ChangesList">
+                            <!-- Display Changes -->
+                            <div class="ChangeGroup">
+                                <h4 class="ChangeGroupTitle">
+                                    Display
+                                </h4>
+                                <ul class="Changes">
+                                    <li class="nerf">
+                                        <span class="ChangeLabel">Uniform Scale:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">0.135</s> 
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                            <strong class="NewValue">0.11</strong>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <!-- Physics Changes -->
+                            <div class="ChangeGroup">
+                                <h4 class="ChangeGroupTitle">
+                                    Physics
+                                </h4>
+                                <ul class="Changes">
+                                    <li class="sub-header"><strong>Hitbox Size</strong></li>
+                                    <li class="nerf">
+                                        <span class="ChangeLabel">SizeX:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">1.25</s> 
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                            <strong class="NewValue">1.1</strong>
+                                        </span>
+                                    </li>
+                                        <li class="nerf">
+                                        <span class="ChangeLabel">SizeY:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">1.5</s> 
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                            <strong class="NewValue">1.3</strong>
+                                        </span>
+                                    </li>
+                                        <li class="nerf">
+                                        <span class="ChangeLabel">SizeZ:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">3.6</s> 
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                            <strong class="NewValue">3.2</strong>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </article>
+
+                <article id="cybran_t2stealthboat" class="PatchCard">
+                    <!-- Card Header Section -->
+                    <header class="PatchCardHeader">
+                        <div class="UnitInfo">
+                            <img src="/assets/images/units/cybran//naval/T2StealthBoat.png" class="UnitIcon" alt="CI:18 Mermaid"/>
+                            <div class="UnitDetails">
+                                <div class="UnitNameRow">
+                                    <h3 class="UnitName">CI:18 Mermaid</h3>
+                                    <span class="UnitCode">XRS0205</span>
+                                </div>
+                                <span class="FactionBadge cybran">Cybran</span>
+                            </div>
+                        </div>
+                        <div class="ChangeTypeBadge nerf">Nerf</div>
+
+                    </header>
+
+                    <!-- Card Content Section -->
+                    <div class="PatchCardContent">
+                        <p class="ChangeDescription">Reduce the Mermaid's excessive size and durability to promote better counterplay opportunities and prevent it from becoming overpowered. Previous FAF changes dramatically increased the unit's scale, making this relatively affordable support vessel nearly as large as a destroyer. The Mermaid's current combination of high HP-to-mass ratio and oversized dimensions makes it too resilient for its cost, limiting strategic options for opponents. These adjustments scale back both its physical presence and survivability to create more tactical vulnerability while preserving its core counter-intelligence capabilities.</p>
+
+                        <div class="ChangesList">
+                            <!-- Defence Changes -->
+                            <div class="ChangeGroup">
+                                <h4 class="ChangeGroupTitle">
+                                    Defence
+                                </h4>
+                                <ul class="Changes">
+                                    <li class="nerf">
+                                        <span class="ChangeLabel">Health:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">1500</s> 
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                            <strong class="NewValue">1000</strong>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <!-- Display Changes -->
+                            <div class="ChangeGroup">
+                                <h4 class="ChangeGroupTitle">
+                                    Display:
+                                </h4>
+                                <ul class="Changes">
+                                    <li class="nerf">
+                                        <span class="ChangeLabel">Uniform Scale:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">0.12</s> 
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                            <strong class="NewValue">0.10</strong>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <!-- Physics Changes -->
+                            <div class="ChangeGroup">
+                                <h4 class="ChangeGroupTitle">
+                                    Physics:
+                                </h4>
+                                <ul class="Changes">
+                                    <li class="sub-header"><strong>Hitbox Size</strong></li>
+                                    <li class="nerf">
+                                        <span class="ChangeLabel">SizeX:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">1.25</s> 
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                            <strong class="NewValue">1.1</strong>
+                                        </span>
+                                    </li>
+                                    <li class="nerf">
+                                        <span class="ChangeLabel">SizeY:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">1.5</s> 
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                            <strong class="NewValue">1.3</strong>
+                                        </span>
+                                    </li>
+                                    <li class="nerf">
+                                        <span class="ChangeLabel">SizeZ:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">3.6</s> 
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                            <strong class="NewValue">3.2</strong>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </article>
+
+                <article id="sera_t1sub" class="PatchCard">
+                    <!-- Card Header Section -->
+                    <header class="PatchCardHeader">
+                        <div class="UnitInfo">
+                            <img src="/assets/images/units/sera/naval/T1Sub.png" class="UnitIcon" alt="Sou-istle"/>
+                            <div class="UnitDetails">
+                                <div class="UnitNameRow">
+                                    <h3 class="UnitName">Sou-istle</h3>
+                                    <span class="UnitCode">XSS0203</span>   
+                                </div>
+                                <span class="FactionBadge sera">Seraphim</span>
+                            </div>
+                        </div>
+                        <div class="ChangeTypeBadge nerf">Nerf</div>
+
+                    </header>
+
+                    <!-- Card Content Section -->
+                    <div class="PatchCardContent">
+                        <p class="ChangeDescription">Increase the reload time of the Seraphim T1 submarine's anti-torpedo defense so that it is less dominant against other T1 subs. This slows down their snowballing and allows for a transition into T2 counters (T2 subs, Coopers, Seraphim and Aeon destroyers)</p>
+
+                        <div class="ChangesList">
+                            <!-- Weapon Changes -->
+                            <div class="ChangeGroup">
+                                <h4 class="ChangeGroupTitle">
+                                    Weapons
+                                </h4>
+                                <ul class="Changes">
+                                    <li class="sub-header"><strong>Anti-Torpedo Defence:</strong></li>
+                                    <li class="nerf">
+                                        <span class="ChangeLabel">Reload Time:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">5s</s> 
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                            <strong class="NewValue">13s</strong>
+                                        </span>
+                                    </li>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+
+            </section>
+
+            <section id="ACUs">
+                <h2>ACUs & SACUs</h2>
+
+                <article id="range" class="PatchCard">
+                    <!-- Card Header Section -->
+                    <header class="PatchCardHeader">
+                        <div class="UnitInfo">
+                            <img src="/assets/images/Enhancements/aeon/range.png" class="UnitIcon" alt="Range"/>
+                            <div class="UnitDetails">
+                                <div class="UnitNameRow">
+                                    <h3 class="UnitName">Range</h3>
+                                    <span class="UnitCode">Enhancement</span>
+                                </div>
+                                <span class="FactionBadge aeon">Aeon</span>
+                            </div>
+                        </div>
+                        <div class="ChangeTypeBadge nerf">Nerf</div>
+                    </header>
+
+                    <!-- Card Content Section -->
+                    <div class="PatchCardContent">
+                        <p class="ChangeDescription">Rebalance the Aeon ACU's first range upgrade costs to create strategic parity with other factions' gun upgrade options. The increased investment required for the range upgrade ensures that combined range and speed upgrades match the total cost of other factions' comprehensive gun improvements. This change also equalizes the individual costs of speed and range upgrades, preventing players from exploiting cost disparities to rush specific upgrades on smaller maps where early positioning advantages can be decisive.</p>
+
+                        <div class="ChangesList">
+                            <!-- Enhancement Changes -->
+                            <div class="ChangeGroup">
+                                <h4 class="ChangeGroupTitle">
+                                    Economy
+                                </h4>
+                                <ul class="Changes">
+                                    <li class="nerf">
+                                        <span class="ChangeLabel">Mass Cost:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">300</s> 
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                            <strong class="NewValue">400</strong>
+                                        </span>
+                                    </li>
+                                    <li class="nerf">
+                                        <span class="ChangeLabel">Energy Cost:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">6000</s> 
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                            <strong class="NewValue">12000</strong>
+                                        </span>
+                                    </li>
+                                    <li class="nerf">
+                                        <span class="ChangeLabel">Build Time:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">350</s> 
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                            <strong class="NewValue">400</strong>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article id="firerate" class="PatchCard">
+                    <!-- Card Header Section -->
+                    <header class="PatchCardHeader">
+                        <div class="UnitInfo">
+                            <img src="/assets/images/Enhancements/aeon/speed.png" class="UnitIcon" alt="Speed Enhancement"/>
+                            <div class="UnitDetails">
+                                <div class="UnitNameRow">
+                                    <h3 class="UnitName">Speed</h3>
+                                    <span class="UnitCode">Enhancement</span>
+                                </div>
+                                <span class="FactionBadge aeon">Aeon</span>
+                            </div>
+                        </div>
+                        <div class="ChangeTypeBadge buff">Buff</div>
+                    </header>
+
+                    <!-- Card Content Section -->
+                    <div class="PatchCardContent">
+                        <p class="ChangeDescription">Reduce the fire rate upgrade costs to balance the overall investment required for Aeon ACU enhancement paths. By lowering the fire rate upgrade costs to match the new range upgrade pricing, both individual upgrades now require equal investment, preventing strategic exploitation where players could prioritize cheaper upgrades for early game advantages. This adjustment ensures that Aeon players must make meaningful tactical decisions between range and fire rate improvements without cost-based bias influencing their upgrade priorities on smaller maps.</p>
+
+                        <div class="ChangesList">
+                            <!-- Enhancement Changes -->
+                            <div class="ChangeGroup">
+                                <h4 class="ChangeGroupTitle">
+                                    Economy
+                                </h4>
+                                <ul class="Changes">
+                                    <li class="buff">
+                                        <span class="ChangeLabel">Mass Cost:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">500</s> 
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                            <strong class="NewValue">400</strong>
+                                        </span>
+                                    </li>
+                                    <li class="buff">
+                                        <span class="ChangeLabel">Energy Cost:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">15000</s> 
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                            <strong class="NewValue">12000</strong>
+                                        </span>
+                                    </li>
+                                    <li class="buff">
+                                        <span class="ChangeLabel">Build Time:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">500</s> 
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                            <strong class="NewValue">400</strong>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article id="torpedo" class="PatchCard">
+                    <!-- Card Header Section -->
+                    <header class="PatchCardHeader">
+                        <div class="UnitInfo">
+                            <img src="/assets/images/Enhancements/cybran/torp.png" class="UnitIcon" alt="Nanite Torpedo Launcher"/>
+                            <div class="UnitDetails">
+                                <div class="UnitNameRow">
+                                    <h3 class="UnitName">Nanite Torpedo Launcher</h3>
+                                    <span class="UnitCode">Enhancement</span>
+                                </div>
+                                <span class="FactionBadge cybran">Cybran</span>
+                            </div>
+                        </div>
+                        <div class="ChangeTypeBadge buff">Buff</div>
+                    </header>
+
+                    <!-- Card Content Section -->
+                    <div class="PatchCardContent">
+                        <p class="ChangeDescription">Improve the Cybran ACU's Nanite Torpedo system's ability to overcome enemy torpedo defenses by increasing the salvo size from 3 to 4 torpedoes per burst. Despite previous improvements in patch #6476 that increased the salvo size to 3, the upgrade continued to struggle against well-defended naval positions with multiple torpedo defense systems. This enhancement maintains the same overall damage per second while delivering torpedoes in larger volleys, significantly improving penetration capability against layered torpedo defenses and making the upgrade more viable in contested naval engagements.</p>
+
+                        <div class="ChangesList">
+                            <!-- Enhancement Changes -->
+                            <div class="ChangeGroup">
+                                <h4 class="ChangeGroupTitle">
+                                    Weapon
+                                </h4>
+                                <ul class="Changes">
+                                    <li class="nerf">
+                                        <span class="ChangeLabel">Damage (DPS):</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">60 (225)</s> 
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                            <strong class="NewValue">45 (225)</strong>
+                                        </span>
+                                    </li>
+                                    <li class="buff">
+                                        <span class="ChangeLabel">Muzzle Salvo Size:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">3</s> 
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                            <strong class="NewValue">4</strong>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article id="nano-repair" class="PatchCard">
+                    <!-- Card Header Section -->
+                    <header class="PatchCardHeader">
+                        <div class="UnitInfo">
+                            <img src="/assets/images/Enhancements/cybran/nano.png" class="UnitIcon" alt="Nano-Repair System"/>
+                            <div class="UnitDetails">
+                                <div class="UnitNameRow">
+                                    <h3 class="UnitName">Nano-Repair System</h3>
+                                    <span class="UnitCode">Enhancement</span>
+                                </div>
+                                <span class="FactionBadge cybran">Cybran</span>
+                            </div>
+                        </div>
+                        <div class="ChangeTypeBadge nerf">Nerf</div>
+                    </header>
+
+                    <!-- Card Content Section -->
+                    <div class="PatchCardContent">
+                        <p class="ChangeDescription">Nerf the Cybran ACU's Nano-Repair System, as it has proven to be an oppressive tool that causes Cybran ACUs to overperform during the Tech 2 stage.</p>
+
+                        <div class="ChangesList">
+                            <!-- Enhancement Changes -->
+                            <div class="ChangeGroup">
+                                <h4 class="ChangeGroupTitle">
+                                    Defence
+                                </h4>
+                                <ul class="Changes">
+                                    <li class="nerf">
+                                        <span class="ChangeLabel">Regen Rate:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">60 HP/s</s> 
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                            <strong class="NewValue">50 HP/s</strong>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+            </section>
+        </div>
+
+        <aside class="Sidebar" role="navigation" aria-label="Quick Navigation">
+            <div class="ContentSidemenu">
+                <!-- Quick Navigation Header -->
+                <header class="SidemenuHeader">
+                    <h2 class="SidemenuTitle">
+                        <i class="fas fa-list-ul" aria-hidden="true"></i>
+                        Quick Navigation
+                    </h2>
+                    <div class="ProgressBar">
+                        <div class="ProgressFill" id="readingProgress"></div>
+                    </div>
+                </header>
+
+                <!-- Quick Actions Panel -->
+                <div class="QuickActions">
+                    <button class="QuickActionBtn" onclick="scrollToTop()" title="Back to Top">
+                        <i class="fas fa-arrow-up"></i>
+                        <span>Top</span>
+                    </button>
+                    <button class="QuickActionBtn" onclick="toggleAllSections()" title="Expand/Collapse All">
+                        <i class="fas fa-expand-arrows-alt"></i>
+                        <span>Toggle</span>
+                    </button>
+                    <button class="QuickActionBtn" onclick="printPage()" title="Print Page">
+                        <i class="fas fa-print"></i>
+                        <span>Print</span>
+                    </button>
+                </div>
+
+                <!-- Content Navigation -->
+                <nav class="ContentNav" role="navigation">
+                    <!-- Intro Section -->
+                    <div class="NavSection active">
+                        <button class="SectionToggle" aria-expanded="true" data-target="intro-items">
+                            <i class="fas fa-info-circle SectionIcon"></i>
+                            <span class="SectionTitle">Introduction</span>
+                            <span class="ItemCount">1</span>
+                            <i class="fas fa-chevron-down ToggleIcon"></i>
+                        </button>
+                        <ul class="SectionItems" id="intro-items">
+                            <li class="NavItem">
+                                <a href="#Intro" class="NavLink">
+                                    <i class="fas fa-scroll"></i>
+                                    <span>Patch Overview</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Land Units Section -->
+                    <div class="NavSection active">
+                        <button class="SectionToggle" aria-expanded="true" data-target="land-items">
+                            <i class="fas fa-tank SectionIcon"></i>
+                            <span class="SectionTitle">Land Units</span>
+                            <span class="ItemCount">1</span>
+                            <i class="fas fa-chevron-down ToggleIcon"></i>
+                        </button>
+                        <ul class="SectionItems" id="land-items">
+                            <li class="NavItem">
+                                <a href="#cybran_t1_aa" class="NavLink">
+                                    <img src="/assets/images/units/cybran/land/T1MobileAA.png" class="UnitThumb" alt="Sky Slammer"/>
+                                    <div class="LinkContent">
+                                        <span class="UnitName">Sky Slammer</span>
+                                        <span class="ChangeType nerf">Nerf</span>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Naval Units Section -->
+                    <div class="NavSection active">
+                        <button class="SectionToggle" aria-expanded="true" data-target="naval-items">
+                            <i class="fas fa-ship SectionIcon"></i>
+                            <span class="SectionTitle">Naval Units</span>
+                            <span class="ItemCount">3</span>
+                            <i class="fas fa-chevron-down ToggleIcon"></i>
+                        </button>
+                        <ul class="SectionItems" id="naval-items">
+                            <li class="NavItem">
+                                <a href="#uef_t2shieldboat" class="NavLink">
+                                    <img src="/assets/images/units/uef/naval/T2ShieldBoat.png" class="UnitThumb" alt="Bulwark"/>
+                                    <div class="LinkContent">
+                                        <span class="UnitName">Bulwark</span>
+                                        <span class="ChangeType nerf">Nerf</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="NavItem">
+                                <a href="#cybran_t2stealthboat" class="NavLink">
+                                    <img src="/assets/images/units/cybran/naval/T2StealthBoat.png" class="UnitThumb" alt="CI:18 Mermaid"/>
+                                    <div class="LinkContent">
+                                        <span class="UnitName">CI:18 Mermaid</span>
+                                        <span class="ChangeType nerf">Nerf</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="NavItem">
+                                <a href="#sera_t1sub" class="NavLink">
+                                    <img src="/assets/images/units/sera/naval/T1Sub.png" class="UnitThumb" alt="Sou-istle"/>
+                                    <div class="LinkContent">
+                                        <span class="UnitName">Sou-istle</span>
+                                        <span class="ChangeType nerf">Nerf</span>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- ACU & SACU Section -->
+                    <div class="NavSection active">
+                        <button class="SectionToggle" aria-expanded="true" data-target="acu-items">
+                            <i class="fas fa-robot SectionIcon"></i>
+                            <span class="SectionTitle">ACU & SACU</span>
+                            <span class="ItemCount">4</span>
+                            <i class="fas fa-chevron-down ToggleIcon"></i>
+                        </button>
+                        <ul class="SectionItems" id="acu-items">
+                            <li class="NavItem">
+                                <a href="#range" class="NavLink">
+                                    <img src="/assets/images/Enhancements/aeon/range.png" class="UnitThumb" alt="Range"/>
+                                    <div class="LinkContent">
+                                        <span class="UnitName">Range</span>
+                                        <span class="ChangeType nerf">Nerf</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="NavItem">
+                                <a href="#firerate" class="NavLink">
+                                    <img src="/assets/images/Enhancements/aeon/speed.png" class="UnitThumb" alt="Speed Enhancement"/>
+                                    <div class="LinkContent">
+                                        <span class="UnitName">Speed</span>
+                                        <span class="ChangeType buff">Buff</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="NavItem">
+                                <a href="#torpedo" class="NavLink">
+                                    <img src="/assets/images/Enhancements/cybran/torp.png" class="UnitThumb" alt="Nanite Torpedo Launcher"/>
+                                    <div class="LinkContent">
+                                        <span class="UnitName">Nanite Torpedo Launcher</span>
+                                        <span class="ChangeType buff">Buff</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="NavItem">
+                                <a href="#nano-repair" class="NavLink">
+                                    <img src="/assets/images/Enhancements/cybran/nano.png" class="UnitThumb" alt="Nano-Repair System"/>
+                                    <div class="LinkContent">
+                                        <span class="UnitName">Nano-Repair System</span>
+                                        <span class="ChangeType nerf">Nerf</span>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+
+                <!-- Footer Info -->
+                <div class="SidemenuFooter">
+                    <div class="PatchStats">
+                        <div class="StatItem">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span>August 15, 2025</span>
+                        </div>
+                        <div class="StatItem">
+                            <i class="fas fa-balance-scale"></i>
+                            <span>8 Changes</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+    </main>
+
+    <footer class="SiteFooter">
+        <div class="FooterContainer">
+            <!-- Navigation Section -->
+            <div class="FooterSection">
+                <h4 class="FooterTitle">Navigation</h4>
+                <nav class="FooterNav">
+                    <a href="/index.html" class="FooterLink">
+                        <i class="fas fa-home" aria-hidden="true"></i>
+                        All Patch Notes
+                    </a>
+                    <a href="#top" class="FooterLink BackToTopLink">
+                        <i class="fas fa-arrow-up" aria-hidden="true"></i>
+                        Back to Top
+                    </a>
+                </nav>
+            </div>
+
+            <!-- Quick Actions Section -->
+            <div class="FooterSection">
+                <h4 class="FooterTitle">Quick Actions</h4>
+                <div class="FooterActions">
+                    <button id="themeToggleButton" class="ThemeToggle">
+                        <i class="fas fa-palette" aria-hidden="true"></i>
+                        <span class="ToggleText">Toggle Theme</span>
+                    </button>
+                    <button class="PrintButton" onclick="window.print()">
+                        <i class="fas fa-print" aria-hidden="true"></i>
+                        <span>Print Page</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- About Section -->
+            <div class="FooterSection">
+                <h4 class="FooterTitle">About</h4>
+                <div class="FooterInfo">
+                    <p class="PatchInfo">
+                        <strong>Patch 3825</strong><br>
+                        Released: August 15th, 2025
+                    </p>
+                    <p class="Copyright">
+                        © 2015-2025 <strong>FAForever</strong><br>
+                        Community-driven balance updates
+                    </p>
+                </div>
+            </div>
+
+            <!-- Social/Links Section -->
+            <div class="FooterSection">
+                <h4 class="FooterTitle">Community</h4>
+                <div class="FooterLinks">
+                    <a href="https://www.faforever.com" class="FooterLink External" target="_blank" rel="noopener">
+                        <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+                        FAForever.com
+                    </a>
+                    <a href="https://discord.gg/mXahAXy" class="FooterLink External" target="_blank" rel="noopener">
+                        <i class="fab fa-discord" aria-hidden="true"></i>
+                        Discord
+                    </a>
+                    <a href="https://github.com/FAForever" class="FooterLink External" target="_blank" rel="noopener">
+                        <i class="fab fa-github" aria-hidden="true"></i>
+                        GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="FooterBottom">
+            <div class="FooterBottomContent">
+                <span class="LastUpdated">Last updated: <time datetime="2025-08-15">August 15th, 2025</time></span>
+                <span class="BuildInfo">Balance Team • Patch Notes v3825</span>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

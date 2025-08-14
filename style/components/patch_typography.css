@@ -36,12 +36,12 @@ header {
   margin: 8px; /* Reduced from 10px */
 }
 
-.Card a {
+.PatchCard a {
   color: var(--Link-Card);
   text-decoration: underline;
 }
 
-.Card a:hover {
+.PatchCard a:hover {
   color: var(--Link-Hover);
 }
 
@@ -61,7 +61,7 @@ header {
 }
 
 /* Unit icons in card headings - base desktop size */
-.Card h3 img {
+.PatchCard h3 img {
   width: 38px; /* Reduced from 48px */
   height: 38px; /* Reduced from 48px */
   margin-right: 8px; /* Reduced from 10px */

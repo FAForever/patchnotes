@@ -36,21 +36,8 @@
   border-radius: 50%;
 }
 
-/* Remove left spacing and indentation */
-.Card:not(.enhanced), .ChangesList, .Changes {
-  margin-left: 0 !important;
-  padding-left: 0 !important;
-  border-left: none !important;
-}
-
-/* Enhanced cards keep their padding */
-.Card.enhanced {
-  margin-left: 0 !important;
-  border-left: none !important;
-}
-
 /* Keep CardContent padding but remove left border */
-.CardContent {
+.PatchCardContent {
   border-left: none !important;
 }
 
