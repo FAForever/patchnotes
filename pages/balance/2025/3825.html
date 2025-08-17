@@ -303,6 +303,51 @@
 
             </section>
 
+            <section id="Air">
+                <h2>Air Units</h2>
+
+                <article id="cybran_t4gunship" class="PatchCard">
+                    <!-- Card Header Section -->
+                    <header class="PatchCardHeader">
+                        <div class="UnitInfo">
+                            <img src="/assets/images/units/cybran/air/T4Gunship.png" class="UnitIcon" alt="Soul Ripper"/>
+                            <div class="UnitDetails">
+                                <div class="UnitNameRow">
+                                    <h3 class="UnitName">Soul Ripper</h3>
+                                    <span class="UnitCode">URA0401</span>
+                                </div>
+                                <span class="FactionBadge cybran">Cybran</span>
+                            </div>
+                        </div>
+                        <div class="ChangeTypeBadge buff">Buff</div>
+                    </header>
+
+                    <!-- Card Content Section -->
+                    <div class="CardContent">
+                        <p class="ChangeDescription">Add ability for Soul Ripper weapons to fire at gunships. Gunships can fire at other gunships, so the Soul Ripper should be able to do this too.</p>
+
+                        <div class="ChangesList">
+                            <!-- Display Changes -->
+                            <div class="ChangeGroup">
+                                <h4 class="ChangeGroupTitle">
+                                    Weapons
+                                </h4>
+                                <ul class="Changes">
+                                    <li class="buff">
+                                        <span class="ChangeLabel">Can Shoot at other Gunships:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">False</s> 
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                            <strong class="NewValue">True</strong>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </section>
+
             <section id="ACUs">
                 <h2>ACUs & SACUs</h2>
 
@@ -511,6 +556,105 @@
                 </article>
 
             </section>
+
+            <section id="Structures">
+                <h2>Structures</h2>
+
+                <article id="aeon_t2shield" class="PatchCard">
+                    <!-- Card Header Section -->
+                    <header class="PatchCardHeader">
+                        <div class="UnitInfo">
+                            <img src="/assets/images/units/aeon/structure/T2SheildGen.png" class="UnitIcon" alt="Shield of Light"/>
+                            <div class="UnitDetails">
+                                <div class="UnitNameRow">
+                                    <h3 class="UnitName">Shield of Light</h3>
+                                    <span class="UnitCode">UAB4202</span>
+                                </div>
+                                <span class="FactionBadge aeon">Aeon</span>
+                            </div>
+                        </div>
+                        <div class="ChangeTypeBadge buff">Buff</div>
+                    </header>
+
+                    <!-- Card Content Section -->
+                    <div class="CardContent">
+                        <p class="ChangeDescription">The Aeon T2 shield can now be upgraded to T3. It has the same 20 buildpower as UEF and Seraphim T2 shields.</p>
+
+                        <div class="ChangesList">
+                            <!-- Display Changes -->
+                            <div class="ChangeGroup">
+                                <h4 class="ChangeGroupTitle">
+                                    Display
+                                </h4>
+                                <ul class="Changes">
+                                    <li class="buff">
+                                        <span class="ChangeLabel">Upgradeable:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">False</s> 
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                            <strong class="NewValue">True</strong>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </section>
+
+            <section id="Other">
+                <h2>Other</h2>
+
+                <article id="mechanics" class="PatchCard">
+                    <!-- Card Header Section -->
+                    <header class="PatchCardHeader">
+                        <div class="UnitInfo">
+                            <img src="/assets/images/orders/mechanic.png" class="UnitIcon" alt="Mechanics"/>
+                            <div class="UnitDetails">
+                                <div class="UnitNameRow">
+                                    <h3 class="UnitName">Game Mechanics</h3>
+                                </div>
+                                <span class="FactionBadge universal">Universal</span>
+                            </div>
+                        </div>
+                        <div class="ChangeTypeBadge nerf">Nerf</div>
+                    </header>
+
+                    <!-- Card Content Section -->
+                    <div class="CardContent">
+                        <p class="ChangeDescription">Blocking the ACU with quickly started but unfinished 1x1 structures which decay only very slowly such as T1 point defense, is often considered unfair as the ACU’s pathfinding can get ruined to a point where the ACU is completely stuck and effectively unable to move, because of the unbuilt structures. While the mechanic of blocking an opponents movement by quickly starting a building in front of them is a valid strategy, most buildings in the game such as factories or other structures larger than 1x1 leave gaps inbetween them even if built right next to each other, allowing some way to escape while still slowing down movement as the ACU walked around them. As 1x1 structures can completely block movement when built next to each other, their very slow decay makes them far more oppressive when used for such a strategy. To allow some more counterplay, these structures will now decay more quickly when below 10% completion. This means that quickly spamming many barely started T1 PD’s for example will now also have them disappear more quickly, making it more difficult to fully trap the enemy, giving them a better chance to escape while still retaining the advantage of slowing the enemy down.</p>
+
+                        <p class="ChangeDescription">
+                        When below 10% completion structures with a 1x1 footprint now have the decay rate of walls
+                        </p>
+
+                        <div class="ChangesList">
+                            <div class="ChangeGroup">
+                                <h4 class="ChangeGroupTitle">
+                                    Affected Structures
+                                </h4>
+                                <ul class="Changes">
+                                    <li class="nerf">
+                                        <span class="ChangeValue">
+                                            <strong class="NewValue">T1 Point Defence</strong>
+                                        </span>
+                                    </li>
+                                    <li class="nerf">
+                                        <span class="ChangeValue">
+                                            <strong class="NewValue">T1 Static Anit-Air</strong>
+                                        </span>
+                                    </li>
+                                    <li class="nerf">
+                                        <span class="ChangeValue">
+                                            <strong class="NewValue">T1 Torpedo Launchers</strong>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </section>
         </div>
 
         <aside class="Sidebar" role="navigation" aria-label="Quick Navigation">
@@ -669,6 +813,69 @@
                             </li>
                         </ul>
                     </div>
+
+                    <!-- Air Units Section -->
+                    <div class="NavSection active">
+                        <button class="SectionToggle" aria-expanded="true" data-target="air-items">
+                            <i class="fas fa-plane SectionIcon"></i>
+                            <span class="SectionTitle">Air Units</span>
+                            <span class="ItemCount">1</span>
+                            <i class="fas fa-chevron-down ToggleIcon"></i>
+                        </button>
+                        <ul class="SectionItems" id="air-items">
+                            <li class="NavItem">
+                                <a href="#cybran_t4gunship" class="NavLink">
+                                    <img src="/assets/images/units/cybran/air/T4Gunship.png" class="UnitThumb" alt="Soul Ripper"/>
+                                    <div class="LinkContent">
+                                        <span class="UnitName">Soul Ripper</span>
+                                        <span class="ChangeType buff">Buff</span>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Structures Section -->
+                    <div class="NavSection active">
+                        <button class="SectionToggle" aria-expanded="true" data-target="structures-items">
+                            <i class="fas fa-building SectionIcon"></i>
+                            <span class="SectionTitle">Structures</span>
+                            <span class="ItemCount">1</span>
+                            <i class="fas fa-chevron-down ToggleIcon"></i>
+                        </button>
+                        <ul class="SectionItems" id="structures-items">
+                            <li class="NavItem">
+                                <a href="#aeon_t2shield" class="NavLink">
+                                    <img src="/assets/images/units/aeon/structure/T2SheildGen.png" class="UnitThumb" alt="Shield of Light"/>
+                                    <div class="LinkContent">
+                                        <span class="UnitName">Shield of Light</span>
+                                        <span class="ChangeType buff">Buff</span>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Other Section -->
+                    <div class="NavSection active">
+                        <button class="SectionToggle" aria-expanded="true" data-target="other-items">
+                            <i class="fas fa-cogs SectionIcon"></i>
+                            <span class="SectionTitle">Other</span>
+                            <span class="ItemCount">1</span>
+                            <i class="fas fa-chevron-down ToggleIcon"></i>
+                        </button>
+                        <ul class="SectionItems" id="other-items">
+                            <li class="NavItem">
+                                <a href="#mechanics" class="NavLink">
+                                    <img src="/assets/images/orders/mechanic.png" class="UnitThumb" alt="Game Mechanics"/>
+                                    <div class="LinkContent">
+                                        <span class="UnitName">Game Mechanics</span>
+                                        <span class="ChangeType nerf">Nerf</span>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </nav>
 
                 <!-- Footer Info -->
@@ -680,7 +887,7 @@
                         </div>
                         <div class="StatItem">
                             <i class="fas fa-balance-scale"></i>
-                            <span>8 Changes</span>
+                            <span>11 Changes</span>
                         </div>
                     </div>
                 </div>
