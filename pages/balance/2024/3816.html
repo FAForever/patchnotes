@@ -136,7 +136,7 @@
                     <!-- Air Section -->
                     <div class="NavSection">
                         <button class="SectionToggle" aria-expanded="false" data-target="air-items">
-                            <i class="fas fa-fighter-jet SectionIcon"></i>
+                            <i class="fas fa-plane SectionIcon"></i>
                             <span class="SectionTitle">Air Units</span>
                             <span class="ItemCount">1</span>
                             <i class="fas fa-chevron-down ToggleIcon"></i>
@@ -144,24 +144,29 @@
                         <ul class="SectionItems" id="air-items">
                             <li class="NavItem">
                                 <a href="#t2gunship" class="NavLink">
-                                    <img src="/assets/images/units/sera/air/T2Gunship.png" alt="T2 Gunship" class="UnitThumb">
-                                    <span>Vulthoo</span>
-                                    <span class="ChangeBadge buff">Buff</span>
+                                    <img src="/assets/images/units/sera/air/T2Gunship.png" class="UnitThumb" alt="Vulthoo"/>
+                                    <div class="LinkContent">
+                                        <span class="UnitName">Vulthoo</span>
+                                        <span class="ChangeType buff">Buff</span>
+                                    </div>
                                 </a>
                             </li>
                         </ul>
                     </div>
                 </nav>
 
-                <!-- Enhanced Theme Toggle -->
-                <div class="ThemeToggleContainer">
-                    <button id="themeToggleButton" class="ThemeToggleBtn" aria-label="Switch to light theme" title="Switch to light theme">
-                        <div class="ThemeToggleIcon">
-                            <i class="fas fa-moon" aria-hidden="true"></i>
-                            <i class="fas fa-sun" aria-hidden="true"></i>
+                <!-- Footer Info -->
+                <div class="SidemenuFooter">
+                    <div class="PatchStats">
+                        <div class="StatItem">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span>December 10, 2024</span>
                         </div>
-                        <span class="theme-text">Dark</span>
-                    </button>
+                        <div class="StatItem">
+                            <i class="fas fa-balance-scale"></i>
+                            <span>1 Change</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </aside>
@@ -242,6 +247,6 @@
             </div>
         </div>
     </footer>
-    
+
 </body>
 </html>
