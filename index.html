@@ -21,12 +21,16 @@
     
     <!-- Performance optimizations -->
     <link rel="preconnect" href="https://raw.githubusercontent.com">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     <link rel="dns-prefetch" href="https://raw.githubusercontent.com">
-    <link rel="preload" href="./style/index.css?v=2.0" as="style">
+    <link rel="preload" href="./style/index.css?v=2.2" as="style">
     <link rel="preload" href="./assets/images/faction/UEF.svg" as="image">
     <link rel="preload" href="./assets/images/faction/Cybran.svg" as="image">
     <link rel="preload" href="./assets/images/faction/Aeon.svg" as="image">
     <link rel="preload" href="./assets/images/faction/Seraphim.svg" as="image">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
     
     <!-- META Tags For Discord and Social Sharing -->
     <meta name="twitter:image:src" content="https://raw.githubusercontent.com/FAForever/patchnotes/master/assets/images/thumbnail/thumbnail.png">
@@ -68,7 +72,7 @@
     </script>
 
     <!-- External CSS -->
-    <link rel="stylesheet" href="./style/index.css?v=2.0">
+    <link rel="stylesheet" href="./style/index.css?v=2.2">
     <link rel="stylesheet" href="./style/pwa.css">
     <link rel="icon" href="./favicon.ico" type="image/x-icon">
 
@@ -86,62 +90,232 @@
     <main id="main-content" class="GridContainer">
       <div class="Space"></div>
 
-      <!-- Title Section -->
-      <header class="Title GridItemBackground">
-        <h1>
-          <img alt="UEF Faction Logo" class="UEF" src="./assets/images/faction/UEF.svg" loading="lazy">
-          <img alt="Cybran Faction Logo" class="CYBRAN" src="./assets/images/faction/Cybran.svg" loading="lazy">
-          FAForever Patchnotes
-          <img alt="Aeon Faction Logo" class="AEON" src="./assets/images/faction/Aeon.svg" loading="lazy">
-          <img alt="Seraphim Faction Logo" class="SERAPHIM" src="./assets/images/faction/Seraphim.svg" loading="lazy">
-        </h1>
-      </header>
-
-      <!-- Balance Patch Section -->
-      <section class="BalanceContainer GridItemBackground">
-        <h2>Balance Patches</h2>
-        <!-- Search and Filter Controls -->
-        <div class="patch-controls">
-          <div class="search-container">
-            <input 
-              type="search" 
-              id="patch-search" 
-              placeholder="Search patches..." 
-              aria-label="Search through patch notes"
-              autocomplete="off"
-            >
-            <button type="button" id="clear-search" aria-label="Clear search" title="Clear search">×</button>
+      <!-- Enhanced Hero Section -->
+      <header class="HeroSection GridItemBackground">
+        <div class="HeroContent">
+          <div class="HeroLeft">
+            <div class="HeroTitle">
+              <img alt="UEF Faction Logo" class="FactionIcon UEF" src="./assets/images/faction/UEF.svg" loading="lazy">
+              <img alt="Cybran Faction Logo" class="FactionIcon CYBRAN" src="./assets/images/faction/Cybran.svg" loading="lazy">
+              <h1>FAForever Patchnotes</h1>
+              <img alt="Aeon Faction Logo" class="FactionIcon AEON" src="./assets/images/faction/Aeon.svg" loading="lazy">
+              <img alt="Seraphim Faction Logo" class="FactionIcon SERAPHIM" src="./assets/images/faction/Seraphim.svg" loading="lazy">
+            </div>
+            <p class="HeroSubtitle">
+              Comprehensive archive of Supreme Commander: Forged Alliance Forever balance updates
+            </p>
           </div>
-          
-          <div class="filter-container">
-            <label for="year-filter">Filter by year:</label>
-            <select id="year-filter" aria-label="Filter patches by year">
-              <option value="">All years</option>
-            </select>
+          <div class="HeroRight">
+            <div class="HeroStats">
+              <div class="StatItem">
+                <span class="StatNumber" id="total-patches">--</span>
+                <span class="StatLabel">Total</span>
+              </div>
+              <div class="StatItem">
+                <span class="StatNumber" id="latest-year">--</span>
+                <span class="StatLabel">This Year</span>
+              </div>
+            </div>
+            <div class="HeroActions">
+              <a href="#" id="latest-patch-btn" class="PrimaryButton" aria-label="View latest patch">
+                <i class="fas fa-rocket" aria-hidden="true"></i>
+                <span>Latest</span>
+              </a>
+              <button type="button" id="random-patch-btn" class="SecondaryButton" aria-label="View random patch">
+                <i class="fas fa-shuffle" aria-hidden="true"></i>
+                <span>Random</span>
+              </button>
+            </div>
           </div>
         </div>
-        
-        <div class="BalanceJSONList" role="list" aria-label="List of balance patches"></div>
+      </header>
+
+      <!-- Enhanced Patch Browser Section -->
+      <section class="PatchBrowser GridItemBackground">
+        <div class="SectionHeader">
+          <h2>
+            <i class="fas fa-list" aria-hidden="true"></i>
+            Browse Patches
+          </h2>
+          <div class="SectionActions">
+            <button type="button" class="ViewToggle active" data-view="list" aria-label="Switch to grid view" title="Switch to grid view">
+              <i class="fas fa-list" aria-hidden="true"></i>
+            </button>
+            <button type="button" class="ViewToggle" data-view="grid" aria-label="Switch to list view" title="Switch to list view">
+              <i class="fas fa-th-large" aria-hidden="true"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Enhanced Search and Filter Controls -->
+        <div class="PatchControls">
+          <div class="SearchRow">
+            <div class="SearchContainer">
+              <i class="fas fa-search SearchIcon" aria-hidden="true"></i>
+              <input 
+                type="search" 
+                id="patch-search" 
+                placeholder="Search patches by number, content, or units..." 
+                aria-label="Search through patch notes"
+                autocomplete="off"
+              >
+              <button type="button" id="clear-search" class="ClearButton" aria-label="Clear search" title="Clear search">
+                <i class="fas fa-times" aria-hidden="true"></i>
+              </button>
+            </div>
+            <div class="SearchStats">
+              <span id="search-results">Showing all patches</span>
+            </div>
+          </div>
+          
+          <div class="FilterRow">
+            <div class="FilterGroup">
+              <label for="year-filter" class="FilterLabel">
+                <i class="fas fa-calendar" aria-hidden="true"></i>
+                Year
+              </label>
+              <select id="year-filter" class="FilterSelect" aria-label="Filter patches by year">
+                <option value="">All years</option>
+              </select>
+            </div>
+            
+            <div class="FilterGroup">
+              <label for="sort-filter" class="FilterLabel">
+                <i class="fas fa-sort" aria-hidden="true"></i>
+                Sort
+              </label>
+              <select id="sort-filter" class="FilterSelect" aria-label="Sort patches">
+                <option value="newest">Newest First</option>
+                <option value="oldest">Oldest First</option>
+                <option value="number-desc">Patch Number (High to Low)</option>
+                <option value="number-asc">Patch Number (Low to High)</option>
+              </select>
+            </div>
+
+            <div class="QuickFilters">
+              <button type="button" class="QuickFilter active" data-filter="all">
+                <i class="fas fa-globe" aria-hidden="true"></i>
+                All
+              </button>
+              <button type="button" class="QuickFilter" data-filter="recent">
+                <i class="fas fa-clock" aria-hidden="true"></i>
+                Recent
+              </button>
+              <button type="button" class="QuickFilter" data-filter="2025">
+                <i class="fas fa-star" aria-hidden="true"></i>
+                2025
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Loading State -->
+        <div id="loading-state" class="LoadingState" style="display: none;">
+          <div class="LoadingSkeleton">
+            <div class="SkeletonItem"></div>
+            <div class="SkeletonItem"></div>
+            <div class="SkeletonItem"></div>
+            <div class="SkeletonItem"></div>
+          </div>
+          <p>Loading patches...</p>
+        </div>
+
+        <!-- Patch List Container -->
+        <div class="PatchListContainer">
+          <div class="BalanceJSONList" role="list" aria-label="List of balance patches" aria-live="polite"></div>
+        </div>
+
+        <!-- No Results State -->
+        <div id="no-results" class="NoResults" style="display: none;">
+          <div class="NoResultsIcon">
+            <i class="fas fa-search" aria-hidden="true"></i>
+          </div>
+          <h3>No patches found</h3>
+          <p>Try adjusting your search terms or filters.</p>
+          <button type="button" id="clear-all-filters" class="SecondaryButton">
+            <i class="fas fa-undo" aria-hidden="true"></i>
+            Clear all filters
+          </button>
+        </div>
       </section>
 
     </main>
     
     <!-- Footer -->
-    <footer class="site-footer">
-      <div class="footer-content">
-        <div class="footer-info">
-          <p>&copy; 2025 <a href="https://faforever.com" target="_blank" rel="noopener noreferrer">FAForever</a> Community</p>
-          <p>Supreme Commander: Forged Alliance Forever Patch Notes</p>
+    <footer class="SiteFooter">
+        <div class="FooterContainer">
+            <!-- Navigation Section -->
+            <div class="FooterSection">
+                <h4 class="FooterTitle">Navigation</h4>
+                <nav class="FooterNav">
+                    <a href="#main-content" class="FooterLink">
+                        <i class="fas fa-list" aria-hidden="true"></i>
+                        Patch List
+                    </a>
+                    <a href="#top" class="FooterLink BackToTopLink">
+                        <i class="fas fa-arrow-up" aria-hidden="true"></i>
+                        Back to Top
+                    </a>
+                </nav>
+            </div>
+
+            <!-- Quick Actions Section -->
+            <div class="FooterSection">
+                <h4 class="FooterTitle">Quick Actions</h4>
+                <div class="FooterActions">
+                    <button id="themeToggleButton" class="ThemeToggle">
+                        <i class="fas fa-palette" aria-hidden="true"></i>
+                        <span class="ToggleText">Toggle Theme</span>
+                    </button>
+                    <button class="PrintButton" onclick="window.print()">
+                        <i class="fas fa-print" aria-hidden="true"></i>
+                        <span>Print Page</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- About Section -->
+            <div class="FooterSection">
+                <h4 class="FooterTitle">About</h4>
+                <div class="FooterInfo">
+                    <p class="PatchInfo">
+                        <strong>FAForever Patch Notes</strong><br>
+                        Complete balance update archive
+                    </p>
+                    <p class="Copyright">
+                        © 2015-2025 <strong>FAForever</strong><br>
+                        Community-driven balance updates
+                    </p>
+                </div>
+            </div>
+
+            <!-- Social/Links Section -->
+            <div class="FooterSection">
+                <h4 class="FooterTitle">Community</h4>
+                <div class="FooterLinks">
+                    <a href="https://www.faforever.com" class="FooterLink External" target="_blank" rel="noopener">
+                        <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+                        FAForever.com
+                    </a>
+                    <a href="https://discord.gg/mXahAXy" class="FooterLink External" target="_blank" rel="noopener">
+                        <i class="fab fa-discord" aria-hidden="true"></i>
+                        Discord
+                    </a>
+                    <a href="https://github.com/FAForever" class="FooterLink External" target="_blank" rel="noopener">
+                        <i class="fab fa-github" aria-hidden="true"></i>
+                        GitHub
+                    </a>
+                </div>
+            </div>
         </div>
-        
-        <div class="footer-controls">
-          <button id="themeToggleButton" class="theme-toggle-btn" aria-label="Switch to light theme" title="Switch color theme">
-            <span class="theme-icon dark-icon">🌙</span>
-            <span class="theme-icon light-icon">☀️</span>
-            <span class="theme-text">Dark</span>
-          </button>
+
+        <!-- Bottom Bar -->
+        <div class="FooterBottom">
+            <div class="FooterBottomContent">
+                <span class="LastUpdated">Last updated: <time datetime="2025-08-21">August 21st, 2025</time></span>
+                <span class="BuildInfo">Balance Team • Patch Notes Archive</span>
+            </div>
         </div>
-      </div>
     </footer>
     
     <!-- Back to Top Button -->

@@ -1,0 +1,935 @@
+/* ========================================
+   ENHANCED UI COMPONENTS
+   Modern interface improvements for index page
+   ======================================== */
+
+/* ========================================
+   HERO SECTION
+   ======================================== */
+
+.HeroSection {
+  text-align: left;
+  padding: 1rem 2rem;
+  margin-bottom: 1rem;
+  position: relative;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  grid-row: 1;
+  grid-column: 2;
+}
+
+.HeroContent {
+  max-width: none;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.HeroLeft {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex: 1;
+  min-width: 300px;
+}
+
+.HeroRight {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-shrink: 0;
+}
+
+.HeroTitle {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 0;
+  flex-wrap: wrap;
+}
+
+.HeroTitle h1 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--Accent-Color), #00b8d4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: 0;
+}
+
+.FactionIcon {
+  width: 32px;
+  height: 32px;
+  transition: transform 0.3s ease;
+}
+
+.FactionIcon:hover {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.HeroSubtitle {
+  font-size: 0.9rem;
+  color: var(--Text-Secondary);
+  margin: 0.25rem 0 0 0;
+  line-height: 1.4;
+}
+
+/* Hero Statistics - Horizontal Layout */
+.HeroStats {
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+  flex-wrap: wrap;
+}
+
+.StatItem {
+  text-align: center;
+  padding: 0.5rem 0.75rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  transition: transform 0.2s ease, background 0.2s ease;
+  min-width: 80px;
+}
+
+.StatItem:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.StatNumber {
+  display: block;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--Accent-Color);
+  line-height: 1;
+}
+
+.StatLabel {
+  font-size: 0.75rem;
+  color: var(--Text-Secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-top: 0.25rem;
+}
+
+/* Hero Actions - Compact Horizontal */
+.HeroActions {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.PrimaryButton, .SecondaryButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  border: 2px solid transparent;
+  cursor: pointer;
+  font-size: 0.85rem;
+  white-space: nowrap;
+}
+
+.PrimaryButton {
+  background: linear-gradient(135deg, var(--Accent-Color), #00b8d4);
+  color: white;
+  box-shadow: 0 4px 12px rgba(0, 210, 255, 0.3);
+}
+
+.PrimaryButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 210, 255, 0.4);
+}
+
+.SecondaryButton {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--Text);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.SecondaryButton:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: var(--Accent-Color);
+  transform: translateY(-1px);
+}
+
+/* ========================================
+   PATCH BROWSER SECTION
+   ======================================== */
+
+.PatchBrowser {
+  padding: 1rem 2rem;
+  grid-row: 2;
+  grid-column: 2;
+}
+
+.SectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.SectionHeader h2 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.75rem;
+  margin: 0;
+  color: var(--Text);
+}
+
+.SectionActions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.ViewToggle {
+  padding: 0.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+  color: var(--Text);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.ViewToggle:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: var(--Accent-Color);
+}
+
+/* ========================================
+   ENHANCED CONTROLS
+   ======================================== */
+
+.PatchControls {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.SearchRow {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  align-items: center;
+}
+
+.SearchContainer {
+  flex: 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.SearchIcon {
+  position: absolute;
+  left: 1rem;
+  color: var(--Text-Secondary);
+  z-index: 2;
+}
+
+#patch-search {
+  width: 100%;
+  padding: 0.875rem 1rem 0.875rem 2.5rem;
+  background: rgba(255, 255, 255, 0.08);
+  border: 2px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  color: var(--Text);
+  font-size: 1rem;
+  transition: all 0.2s ease;
+}
+
+#patch-search:focus {
+  outline: none;
+  border-color: var(--Accent-Color);
+  box-shadow: 0 0 0 3px rgba(0, 210, 255, 0.2);
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.ClearButton {
+  position: absolute;
+  right: 0.5rem;
+  padding: 0.5rem;
+  background: none;
+  border: none;
+  color: var(--Text-Secondary);
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.ClearButton.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.ClearButton:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--Text);
+}
+
+.SearchStats {
+  font-size: 0.875rem;
+  color: var(--Text-Secondary);
+  white-space: nowrap;
+}
+
+/* Filter Row */
+.FilterRow {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.FilterGroup {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.FilterLabel {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.875rem;
+  color: var(--Text-Secondary);
+  font-weight: 500;
+}
+
+.FilterSelect {
+  padding: 0.5rem 2.5rem 0.5rem 0.75rem;
+  background: var(--Card, rgba(255, 255, 255, 0.08));
+  border: 1px solid var(--Line, rgba(255, 255, 255, 0.15));
+  border-radius: 6px;
+  color: var(--Text);
+  font-size: 0.875rem;
+  min-width: 120px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  
+  /* Remove all browser default arrows completely */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  
+  /* Remove IE/Edge default arrow */
+  background: var(--Card, rgba(255, 255, 255, 0.08));
+  
+  /* Remove Firefox default styling */
+  background-clip: padding-box;
+  background-origin: padding-box;
+}
+
+/* Completely remove IE/Edge dropdown arrow */
+.FilterSelect::-ms-expand {
+  display: none;
+}
+
+.FilterGroup {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  position: relative;
+}
+
+/* Add dropdown arrow only to the specific dropdowns */
+#year-filter,
+#sort-filter {
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6,9 12,15 18,9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 0.5rem center;
+  background-size: 1rem;
+}
+
+.FilterSelect:focus {
+  outline: none;
+  border-color: var(--Accent-Color);
+  background-color: var(--Card, rgba(255, 255, 255, 0.12));
+  box-shadow: 0 0 0 2px rgba(0, 210, 255, 0.2);
+}
+
+.FilterSelect:hover {
+  background-color: var(--Card, rgba(255, 255, 255, 0.1));
+  border-color: var(--Accent-Color, rgba(255, 255, 255, 0.3));
+}
+
+/* Style the dropdown options */
+.FilterSelect option {
+  background: var(--Background, #222831);
+  color: var(--Text, #ffffff);
+  padding: 0.5rem;
+  border: none;
+  font-size: 0.875rem;
+}
+
+.FilterSelect option:hover,
+.FilterSelect option:focus,
+.FilterSelect option:checked {
+  background: var(--Accent-Color, #00d2ff);
+  color: #ffffff;
+}
+
+/* Dark theme specific adjustments (default) */
+:root:not(.light-mode) .FilterSelect {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6,9 12,15 18,9'%3e%3c/polyline%3e%3c/svg%3e");
+}
+
+:root:not(.light-mode) .FilterSelect option {
+  background: #1a1a1a;
+  color: #ffffff;
+}
+
+/* Light theme specific adjustments */
+:root.light-mode .FilterSelect {
+  background: rgba(0, 0, 0, 0.05);
+  border-color: rgba(0, 0, 0, 0.15);
+  color: #333333;
+}
+
+:root.light-mode #year-filter,
+:root.light-mode #sort-filter {
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23333333' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6,9 12,15 18,9'%3e%3c/polyline%3e%3c/svg%3e");
+}
+
+:root.light-mode .FilterSelect:focus {
+  background-color: rgba(0, 0, 0, 0.08);
+}
+
+:root.light-mode .FilterSelect:hover {
+  background-color: rgba(0, 0, 0, 0.06);
+}
+
+:root.light-mode .FilterSelect option {
+  background: #ffffff;
+  color: #333333;
+}
+
+:root.light-mode .FilterSelect option:hover,
+:root.light-mode .FilterSelect option:focus,
+:root.light-mode .FilterSelect option:checked {
+  background: var(--Accent-Color, #00d2ff);
+  color: #ffffff;
+}
+
+/* Quick Filters */
+.QuickFilters {
+  display: flex;
+  gap: 0.5rem;
+  margin-left: auto;
+}
+
+.QuickFilter {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.5rem 0.75rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  color: var(--Text-Secondary);
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.QuickFilter:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--Text);
+}
+
+.QuickFilter.active {
+  background: var(--Accent-Color);
+  color: white;
+  border-color: var(--Accent-Color);
+}
+
+/* ========================================
+   LOADING & EMPTY STATES
+   ======================================== */
+
+.LoadingState {
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.LoadingSkeleton {
+  display: grid;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.SkeletonItem {
+  height: 80px;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.05) 25%,
+    rgba(255, 255, 255, 0.1) 50%,
+    rgba(255, 255, 255, 0.05) 75%
+  );
+  background-size: 200% 100%;
+  animation: skeleton-loading 1.5s infinite;
+  border-radius: 8px;
+}
+
+@keyframes skeleton-loading {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+.NoResults {
+  text-align: center;
+  padding: 3rem 1rem;
+  color: var(--Text-Secondary);
+}
+
+.NoResultsIcon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  opacity: 0.5;
+}
+
+.NoResults h3 {
+  margin: 0 0 0.5rem 0;
+  color: var(--Text);
+}
+
+.NoResults p {
+  margin-bottom: 1.5rem;
+}
+
+/* ========================================
+   PATCH LIST CONTAINER
+   ======================================== */
+
+.PatchListContainer {
+  min-height: 400px;
+  position: relative;
+}
+
+/* Enhanced patch list - remove max-height and make it flow naturally */
+.BalanceJSONList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 0;
+  max-height: none !important; /* Override existing max-height */
+  overflow: visible !important; /* Override existing scroll behavior */
+}
+
+/* Enhanced patch items with better card styling */
+.BalanceJSONList .patch-item {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  margin: 0; /* Remove existing margin */
+  overflow: hidden;
+  position: relative;
+}
+
+.BalanceJSONList .patch-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(180deg, var(--Accent-Color), transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.BalanceJSONList .patch-item:hover::before {
+  opacity: 1;
+}
+
+.BalanceJSONList .patch-item.latest::before {
+  opacity: 1;
+  background: linear-gradient(180deg, var(--Accent-Color), #00b8d4);
+}
+
+.BalanceJSONList .patch-item:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: var(--Accent-Color);
+  transform: translateY(-2px);
+  box-shadow: 
+    0 8px 24px rgba(0, 210, 255, 0.15),
+    0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.BalanceJSONList .patch-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  text-decoration: none;
+  color: inherit;
+  border-radius: 10px;
+  min-height: 60px;
+}
+
+.BalanceJSONList .patch-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  flex: 1;
+}
+
+.BalanceJSONList .patch-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.BalanceJSONList .patch-number {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--Accent-Color);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.BalanceJSONList .patch-number::before {
+  content: '#';
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
+.BalanceJSONList .patch-date {
+  font-size: 0.9rem;
+  color: var(--Text-Secondary);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.BalanceJSONList .patch-date::before {
+  content: '📅';
+  font-size: 0.8rem;
+}
+
+.BalanceJSONList .latest-badge {
+  background: linear-gradient(135deg, var(--Accent-Color), #00b8d4);
+  color: white;
+  padding: 0.25rem 0.6rem;
+  border-radius: 12px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 8px rgba(0, 210, 255, 0.3);
+}
+
+/* ========================================
+   VIEW TOGGLE FUNCTIONALITY
+   ======================================== */
+
+/* View Toggle Button Styles */
+.ViewToggle {
+  padding: 0.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+  color: var(--Text);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.ViewToggle:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: var(--Accent-Color);
+}
+
+.ViewToggle.active {
+  background: var(--Accent-Color);
+  border-color: var(--Accent-Color);
+  color: white;
+}
+
+/* Grid View Layout */
+.BalanceJSONList.grid-view {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+.BalanceJSONList.grid-view .patch-item {
+  min-height: 140px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.04));
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  position: relative;
+  overflow: hidden;
+}
+
+.BalanceJSONList.grid-view .patch-item::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(-45deg, var(--Accent-Color), transparent);
+  opacity: 0.3;
+  border-radius: 0 0 0 100%;
+}
+
+.BalanceJSONList.grid-view .patch-item.latest::after {
+  opacity: 0.6;
+}
+
+.BalanceJSONList.grid-view .patch-link {
+  flex-direction: column;
+  text-align: center;
+  padding: 1.25rem;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  gap: 0.75rem;
+}
+
+.BalanceJSONList.grid-view .patch-info {
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.BalanceJSONList.grid-view .patch-header {
+  justify-content: center;
+  margin-bottom: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.BalanceJSONList.grid-view .patch-number {
+  font-size: 1.3rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.BalanceJSONList.grid-view .patch-date {
+  font-size: 0.85rem;
+  text-align: center;
+  justify-content: center;
+}
+
+.BalanceJSONList.grid-view .latest-badge {
+  margin-top: 0.5rem;
+  font-size: 0.65rem;
+  padding: 0.3rem 0.7rem;
+}
+
+/* List View Layout (Default) */
+.BalanceJSONList.list-view {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.BalanceJSONList.list-view .patch-link {
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  text-align: left;
+  padding: 1rem;
+  min-height: 60px;
+}
+
+.BalanceJSONList.list-view .patch-info {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.25rem;
+}
+
+.BalanceJSONList.list-view .patch-header {
+  justify-content: flex-start;
+}
+
+.BalanceJSONList.grid-view .patch-item:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 
+    0 12px 32px rgba(0, 210, 255, 0.2),
+    0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.BalanceJSONList.list-view .patch-item:hover {
+  transform: translateX(4px);
+  box-shadow: 
+    0 8px 24px rgba(0, 210, 255, 0.15),
+    0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Add subtle animations */
+.BalanceJSONList .patch-number {
+  position: relative;
+}
+
+.BalanceJSONList .patch-item:hover .patch-number::before {
+  color: var(--Accent-Color);
+  transform: scale(1.1);
+  transition: all 0.2s ease;
+}
+
+/* Enhanced latest badge styling */
+.BalanceJSONList .patch-item.latest {
+  background: linear-gradient(135deg, 
+    rgba(0, 210, 255, 0.12), 
+    rgba(0, 184, 212, 0.08),
+    rgba(255, 255, 255, 0.04)
+  );
+  border-color: rgba(0, 210, 255, 0.3);
+}
+
+.BalanceJSONList .patch-item.latest .patch-number {
+  color: #ffffff;
+  text-shadow: 0 0 8px rgba(0, 210, 255, 0.6);
+}
+
+/* Add subtle pattern for visual interest */
+.BalanceJSONList.grid-view .patch-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, 
+    transparent, 
+    var(--Accent-Color), 
+    transparent
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.BalanceJSONList.grid-view .patch-item:hover::before {
+  opacity: 0.8;
+}
+
+.BalanceJSONList.list-view .patch-date {
+  margin-left: auto;
+  text-align: right;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 0.25rem 0.5rem;
+  border-radius: 6px;
+  font-size: 0.8rem;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+
+@media (max-width: 768px) {
+  .HeroContent {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+  }
+  
+  .HeroLeft {
+    min-width: auto;
+    text-align: center;
+  }
+  
+  .HeroRight {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .HeroTitle {
+    justify-content: center;
+    gap: 0.5rem;
+  }
+  
+  .HeroTitle h1 {
+    font-size: 1.5rem;
+  }
+  
+  .FactionIcon {
+    width: 28px;
+    height: 28px;
+  }
+  
+  .HeroStats {
+    gap: 0.75rem;
+  }
+  
+  .SearchRow {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .FilterRow {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+  }
+  
+  .QuickFilters {
+    margin-left: 0;
+    justify-content: center;
+  }
+  
+  .BalanceJSONList .patch-link {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.75rem;
+  }
+  
+  .BalanceJSONList .patch-header {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .HeroSection, .PatchBrowser {
+    padding: 1rem;
+  }
+  
+  .PatchControls {
+    padding: 1rem;
+  }
+  
+  .HeroContent {
+    gap: 0.75rem;
+  }
+  
+  .HeroRight {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .HeroActions {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .PrimaryButton, .SecondaryButton {
+    width: 100%;
+    justify-content: center;
+  }
+}

@@ -1,17 +1,16 @@
 // Service Worker for FAForever Patchnotes PWA
-const CACHE_NAME = 'faforever-patchnotes-v2.1';
-const STATIC_CACHE = 'static-v2.1';
-const DYNAMIC_CACHE = 'dynamic-v2.1';
-const CSS_CACHE = 'css-v2.1';
+const CACHE_NAME = 'faforever-patchnotes-v2.2';
+const STATIC_CACHE = 'static-v2.2';
+const DYNAMIC_CACHE = 'dynamic-v2.2';
+const CSS_CACHE = 'css-v2.2';
 
 // Cache version - increment this when styles change
-const CACHE_VERSION = '2.1.0';
+const CACHE_VERSION = '2.2.0';
 
 // Assets to cache immediately (excluding CSS to allow fresh loading)
 const STATIC_ASSETS = [
   '/',
   '/index.html',
-  '/scripts/backgroundRandom.js',
   '/scripts/populatePatches.js',
   '/scripts/coreUI.js',
   '/scripts/contentSidemenu.js',

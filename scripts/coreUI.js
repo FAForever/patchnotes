@@ -98,43 +98,23 @@
     // BACKGROUND MANAGEMENT
     // ========================================
     
-    const backgroundImages = [
-        './assets/images/backgrounds/1.jpg',
-        './assets/images/backgrounds/2.jpg',
-        './assets/images/backgrounds/3.jpg',
-        './assets/images/backgrounds/4.jpg',
-        './assets/images/backgrounds/5.jpg',
-        './assets/images/backgrounds/6.jpg',
-    ];
-
-    function preloadBackgrounds() {
-        backgroundImages.forEach((img) => {
-            const image = new Image();
-            image.src = img;
-        });
-    }
-
     function updateBackground() {
         const bodyElement = document.body;
-        const isMobile = window.matchMedia('(max-width: 420px)').matches;
         
-        if (isMobile) {
-            bodyElement.style.backgroundColor = 'var(--Background)';
-            bodyElement.style.backgroundImage = 'none';
-        } else {
-            const randomImg = backgroundImages[Math.floor(Math.random() * backgroundImages.length)];
-            bodyElement.style.backgroundImage = `url(${randomImg})`;
-            bodyElement.style.backgroundColor = 'transparent';
-        }
+        // Always use solid background color - no more photo backgrounds
+        bodyElement.style.backgroundColor = 'var(--Background)';
+        bodyElement.style.backgroundImage = 'none';
+        bodyElement.style.backgroundAttachment = 'initial';
+        bodyElement.style.backgroundSize = 'initial';
+        bodyElement.style.backgroundPosition = 'initial';
+        bodyElement.style.backgroundRepeat = 'initial';
     }
 
     function initBackground() {
-        preloadBackgrounds();
         updateBackground();
         
-        // Listen for screen size changes
-        const mediaQuery = window.matchMedia('(max-width: 420px)');
-        mediaQuery.addEventListener('change', updateBackground);
+        // Listen for theme changes to update background accordingly
+        window.addEventListener('stylesLoaded', updateBackground);
     }
 
     // ========================================

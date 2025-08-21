@@ -76,8 +76,8 @@
      */
     function addSharedScripts() {
         const scripts = [
-            { src: '/scripts/coreUI.js?v=1724259600&cache=bypass', defer: false },
-            { src: '/scripts/contentSidemenu.js?v=1724259600&cache=bypass', defer: true }
+            { src: '/scripts/coreUI.js?v=1724260000&cache=bypass', defer: false },
+            { src: '/scripts/contentSidemenu.js?v=1724260000&cache=bypass', defer: true }
         ];
         
         scripts.forEach(config => {
