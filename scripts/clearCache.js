@@ -1,35 +1,105 @@
 /**
  * Service Worker Cache Cleaner
- * Run this in browser console to clear service worker cache
+ * Updated to work with new service worker message handling
  */
 
-// Clear Service Worker Cache
-if ('serviceWorker' in navigator && 'caches' in window) {
-    // Unregister service worker
-    navigator.serviceWorker.getRegistrations().then(function(registrations) {
-        for(let registration of registrations) {
-            console.log('Unregistering service worker:', registration);
-            registration.unregister();
+// Clear Service Worker Cache with messaging
+async function clearServiceWorkerCache() {
+    if ('serviceWorker' in navigator) {
+        try {
+            const registration = await navigator.serviceWorker.ready;
+            
+            if (registration.active) {
+                // Send message to service worker to clear cache
+                const messageChannel = new MessageChannel();
+                
+                return new Promise((resolve) => {
+                    messageChannel.port1.onmessage = (event) => {
+                        if (event.data.success) {
+                            console.log('✅ Service Worker cache cleared successfully');
+                            resolve(true);
+                        }
+                    };
+                    
+                    registration.active.postMessage(
+                        { type: 'CLEAR_CACHE' },
+                        [messageChannel.port2]
+                    );
+                });
+            }
+        } catch (error) {
+            console.error('❌ Failed to clear service worker cache:', error);
+            return false;
         }
-    });
+    }
+    return false;
+}
+
+// Clear CSS Cache specifically
+async function clearCSSCache() {
+    if ('serviceWorker' in navigator) {
+        try {
+            const registration = await navigator.serviceWorker.ready;
+            
+            if (registration.active) {
+                const messageChannel = new MessageChannel();
+                
+                return new Promise((resolve) => {
+                    messageChannel.port1.onmessage = (event) => {
+                        if (event.data.success) {
+                            console.log('✅ CSS cache cleared successfully');
+                            resolve(true);
+                        }
+                    };
+                    
+                    registration.active.postMessage(
+                        { type: 'CLEAR_CSS_CACHE' },
+                        [messageChannel.port2]
+                    );
+                });
+            }
+        } catch (error) {
+            console.error('❌ Failed to clear CSS cache:', error);
+            return false;
+        }
+    }
+    return false;
+}
+
+// Complete cache clear function
+async function clearAllCaches() {
+    console.log('🧹 Starting cache clearing process...');
     
-    // Clear all caches
-    caches.keys().then(function(cacheNames) {
-        return Promise.all(
-            cacheNames.map(function(cacheName) {
-                console.log('Deleting cache:', cacheName);
+    // Clear service worker caches
+    await clearServiceWorkerCache();
+    
+    // Clear browser caches directly
+    if ('caches' in window) {
+        const cacheNames = await caches.keys();
+        await Promise.all(
+            cacheNames.map(cacheName => {
+                console.log('🗑️ Deleting browser cache:', cacheName);
                 return caches.delete(cacheName);
             })
         );
-    }).then(function() {
-        console.log('All caches cleared!');
-        console.log('Please refresh the page to see updated styles.');
-    });
-} else {
-    console.log('Service Workers or Cache API not supported');
+    }
+    
+    // Clear local storage
+    localStorage.clear();
+    sessionStorage.clear();
+    console.log('🗑️ Local storage cleared');
+    
+    console.log('✨ All caches cleared! Reloading page...');
+    
+    // Force reload from server
+    window.location.reload(true);
 }
 
-// Also clear localStorage and sessionStorage
-localStorage.clear();
-sessionStorage.clear();
-console.log('Local storage cleared!');
+// Export for use in console or other scripts
+if (typeof module !== 'undefined' && module.exports) {
+    module.exports = { clearAllCaches, clearServiceWorkerCache, clearCSSCache };
+} else {
+    window.clearAllCaches = clearAllCaches;
+    window.clearServiceWorkerCache = clearServiceWorkerCache;
+    window.clearCSSCache = clearCSSCache;
+}

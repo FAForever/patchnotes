@@ -1,24 +1,35 @@
 // Service Worker for FAForever Patchnotes PWA
-const CACHE_NAME = 'faforever-patchnotes-v1';
-const STATIC_CACHE = 'static-v1';
-const DYNAMIC_CACHE = 'dynamic-v1';
+const CACHE_NAME = 'faforever-patchnotes-v2.1';
+const STATIC_CACHE = 'static-v2.1';
+const DYNAMIC_CACHE = 'dynamic-v2.1';
+const CSS_CACHE = 'css-v2.1';
 
-// Assets to cache immediately
+// Cache version - increment this when styles change
+const CACHE_VERSION = '2.1.0';
+
+// Assets to cache immediately (excluding CSS to allow fresh loading)
 const STATIC_ASSETS = [
   '/',
   '/index.html',
-  '/style/index.css',
-  '/style/root.css',
-  '/style/balance.css',
   '/scripts/backgroundRandom.js',
   '/scripts/populatePatches.js',
   '/scripts/themeSwitch.js',
+  '/scripts/headConfig.js',
+  '/scripts/styleLoader.js',
   '/assets/images/faction/UEF.svg',
   '/assets/images/faction/Cybran.svg',
   '/assets/images/faction/Aeon.svg',
   '/assets/images/faction/Seraphim.svg',
   '/assets/data/patches.json',
   '/favicon.ico'
+];
+
+// CSS files that should be force-refreshed
+const CSS_ASSETS = [
+  '/style/index.css',
+  '/style/root.css',
+  '/style/balance.css',
+  '/style/critical.css'
 ];
 
 // Install event - cache static assets
@@ -45,7 +56,7 @@ self.addEventListener('activate', event => {
     caches.keys().then(cacheNames => {
       return Promise.all(
         cacheNames.map(cache => {
-          if (cache !== STATIC_CACHE && cache !== DYNAMIC_CACHE) {
+          if (cache !== STATIC_CACHE && cache !== DYNAMIC_CACHE && cache !== CSS_CACHE) {
             console.log('Service Worker: Clearing old cache', cache);
             return caches.delete(cache);
           }
@@ -65,6 +76,14 @@ self.addEventListener('fetch', event => {
   
   // Skip external requests
   if (!event.request.url.startsWith(self.location.origin)) return;
+
+  // Special handling for CSS files with cache-busting
+  if (event.request.url.includes('.css')) {
+    event.respondWith(
+      handleCSSRequest(event.request)
+    );
+    return;
+  }
 
   event.respondWith(
     caches.match(event.request)
@@ -107,11 +126,94 @@ self.addEventListener('fetch', event => {
   );
 });
 
+// Special CSS handling function
+async function handleCSSRequest(request) {
+  try {
+    console.log('Service Worker: Handling CSS request', request.url);
+    
+    // Always try network first for CSS files with version parameters
+    if (request.url.includes('?v=') || request.url.includes('cache=bypass')) {
+      console.log('Service Worker: Bypassing cache for versioned CSS', request.url);
+      const response = await fetch(request);
+      
+      if (response && response.status === 200) {
+        // Cache the new version
+        const cache = await caches.open(CSS_CACHE);
+        cache.put(request, response.clone());
+        return response;
+      }
+    }
+    
+    // Try cache first for regular CSS requests
+    const cachedResponse = await caches.match(request);
+    if (cachedResponse) {
+      console.log('Service Worker: Serving CSS from cache', request.url);
+      
+      // Also try to update in background
+      fetch(request)
+        .then(response => {
+          if (response && response.status === 200) {
+            caches.open(CSS_CACHE).then(cache => {
+              cache.put(request, response);
+            });
+          }
+        })
+        .catch(() => {}); // Ignore background update errors
+      
+      return cachedResponse;
+    }
+    
+    // Fallback to network
+    const response = await fetch(request);
+    if (response && response.status === 200) {
+      const cache = await caches.open(CSS_CACHE);
+      cache.put(request, response.clone());
+    }
+    return response;
+    
+  } catch (error) {
+    console.error('Service Worker: CSS request failed', error);
+    return new Response('/* CSS loading failed */', {
+      headers: { 'Content-Type': 'text/css' }
+    });
+  }
+}
+
 // Background sync for when connection is restored
 self.addEventListener('sync', event => {
   if (event.tag === 'background-sync') {
     console.log('Service Worker: Background sync');
     // Could update cache with latest patches when connection restored
+  }
+});
+
+// Message event - handle cache clearing requests
+self.addEventListener('message', event => {
+  if (event.data && event.data.type === 'CLEAR_CACHE') {
+    console.log('Service Worker: Clearing cache on request');
+    event.waitUntil(
+      caches.keys().then(cacheNames => {
+        return Promise.all(
+          cacheNames.map(cacheName => {
+            console.log('Service Worker: Deleting cache', cacheName);
+            return caches.delete(cacheName);
+          })
+        );
+      }).then(() => {
+        console.log('Service Worker: All caches cleared');
+        event.ports[0].postMessage({ success: true });
+      })
+    );
+  }
+  
+  if (event.data && event.data.type === 'CLEAR_CSS_CACHE') {
+    console.log('Service Worker: Clearing CSS cache on request');
+    event.waitUntil(
+      caches.delete(CSS_CACHE).then(() => {
+        console.log('Service Worker: CSS cache cleared');
+        event.ports[0].postMessage({ success: true });
+      })
+    );
   }
 });
 
