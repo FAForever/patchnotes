@@ -267,11 +267,46 @@
     // ========================================
     // INITIALIZATION
     // ========================================
+    // ========================================
+    // FACTION RANDOMIZATION
+    // ========================================
+    
+    function initRandomFactions() {
+        const factions = [
+            { name: 'UEF', src: './assets/images/faction/UEF.svg', alt: 'UEF Faction Logo' },
+            { name: 'Cybran', src: './assets/images/faction/Cybran.svg', alt: 'Cybran Faction Logo' },
+            { name: 'Aeon', src: './assets/images/faction/Aeon.svg', alt: 'Aeon Faction Logo' },
+            { name: 'Seraphim', src: './assets/images/faction/Seraphim.svg', alt: 'Seraphim Faction Logo' }
+        ];
+        
+        // Shuffle array and pick first 2
+        const shuffled = [...factions].sort(() => Math.random() - 0.5);
+        const selectedFactions = shuffled.slice(0, 2);
+        
+        // Update left faction icon
+        const leftIcon = document.getElementById('faction-left');
+        if (leftIcon && selectedFactions[0]) {
+            leftIcon.src = selectedFactions[0].src;
+            leftIcon.alt = selectedFactions[0].alt;
+            leftIcon.className = `FactionIcon ${selectedFactions[0].name.toUpperCase()}`;
+        }
+        
+        // Update right faction icon
+        const rightIcon = document.getElementById('faction-right');
+        if (rightIcon && selectedFactions[1]) {
+            rightIcon.src = selectedFactions[1].src;
+            rightIcon.alt = selectedFactions[1].alt;
+            rightIcon.className = `FactionIcon ${selectedFactions[1].name.toUpperCase()}`;
+        }
+        
+        console.log('Random factions loaded:', selectedFactions.map(f => f.name));
+    }
     
     function init() {
         initTheme();
         initBackground();
         initStyleLoader();
+        initRandomFactions();
     }
     
     // Initialize when DOM is ready
@@ -303,5 +338,6 @@
     window.clearAllCaches = clearAllCaches;
     window.clearServiceWorkerCache = clearServiceWorkerCache;
     window.clearCSSCache = clearCSSCache;
+    window.randomizeFactions = initRandomFactions;
     
 })();
