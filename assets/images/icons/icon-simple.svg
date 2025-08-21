@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Background -->
+  <rect width="512" height="512" fill="#222831" rx="64"/>
+  
+  <!-- Simple FA logo for small sizes -->
+  <g transform="translate(256,256)">
+    <!-- Background circle -->
+    <circle r="180" fill="#00d2ff" opacity="0.15"/>
+    <circle r="160" fill="none" stroke="#00d2ff" stroke-width="12"/>
+    
+    <!-- Large FA text -->
+    <text x="0" y="30" text-anchor="middle" font-family="Arial Black, sans-serif" font-size="180" font-weight="900" fill="#00d2ff">FA</text>
+  </g>
+</svg>

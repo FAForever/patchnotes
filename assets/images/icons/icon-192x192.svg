@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 192" width="192" height="192">
+  <rect width="192" height="192" fill="#222831" rx="24"/>
+  <g transform="translate(96,96)">
+    <circle r="67" fill="#00d2ff" opacity="0.15"/>
+    <circle r="64" fill="none" stroke="#00d2ff" stroke-width="3"/>
+    <text x="0" y="23" text-anchor="middle" font-family="Arial Black, sans-serif" font-size="67" font-weight="900" fill="#00d2ff">FA</text>
+    <text x="0" y="53" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="600" fill="#EEEEEE">PATCHES</text>
+  </g>
+</svg>

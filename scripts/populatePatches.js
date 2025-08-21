@@ -195,9 +195,9 @@ function renderPatchList(patchList, containerSelector) {
   container.innerHTML = ''; // Clear existing content
   container.appendChild(fragment);
   
-  // Set default list view if not already set
+  // Set default grid view if not already set
   if (!container.classList.contains('list-view') && !container.classList.contains('grid-view')) {
-    container.classList.add('list-view');
+    container.classList.add('grid-view');
   }
   
   console.log('Mobile Debug - Patch list rendered successfully');

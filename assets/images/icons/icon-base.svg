@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Background -->
+  <rect width="512" height="512" fill="#222831" rx="64"/>
+  
+  <!-- FAForever inspired design -->
+  <g transform="translate(256,256)">
+    <!-- Central circle -->
+    <circle r="120" fill="#00d2ff" opacity="0.2"/>
+    <circle r="100" fill="none" stroke="#00d2ff" stroke-width="8"/>
+    
+    <!-- FA text styled -->
+    <text x="0" y="-20" text-anchor="middle" font-family="Arial Black, sans-serif" font-size="100" font-weight="900" fill="#00d2ff">FA</text>
+    
+    <!-- Forever text -->
+    <text x="0" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="36" font-weight="600" fill="#EEEEEE">FOREVER</text>
+    
+    <!-- Patch notes indicator -->
+    <text x="0" y="80" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="400" fill="#76ABAE">PATCHES</text>
+    
+    <!-- Decorative elements -->
+    <circle cx="-150" cy="-80" r="4" fill="#00d2ff" opacity="0.6"/>
+    <circle cx="150" cy="-80" r="4" fill="#00d2ff" opacity="0.6"/>
+    <circle cx="-150" cy="80" r="4" fill="#00d2ff" opacity="0.6"/>
+    <circle cx="150" cy="80" r="4" fill="#00d2ff" opacity="0.6"/>
+  </g>
+</svg>
