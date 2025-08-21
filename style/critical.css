@@ -1,0 +1,37 @@
+/* ========================================
+   CRITICAL CSS - FOUC Prevention
+   ======================================== */
+
+/* Prevent Flash of Unstyled Content */
+body { 
+    visibility: hidden; 
+    opacity: 0; 
+    transition: opacity 0.2s ease;
+}
+
+body.styles-loaded { 
+    visibility: visible; 
+    opacity: 1; 
+}
+
+/* Ensure layout stability during load */
+.Grid { 
+    display: grid;
+    min-height: 100vh;
+}
+
+/* Basic loading state for critical elements */
+.PatchCard {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+body.styles-loaded .PatchCard {
+    opacity: 1;
+}
+
+/* Prevent layout shift */
+.ContentSidemenu,
+.Sidebar {
+    min-height: 200px;
+}

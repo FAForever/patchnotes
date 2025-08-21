@@ -1,15 +1,14 @@
-@import '../style/root.css';
-@import '../style/components/images.css';
-@import '../style/components/video.css';
-@import '../style/components/button.css';
+/* Import Root CSS and Components */
+@import './root.css';
+@import './components/images.css';
+@import './components/button.css';
 
-
-/* Patchnote Styling */
-@import '../style/components/patch_card.css';
-@import '../style/components/patch_footer.css';
-@import '../style/components/patch_intro.css';
-@import '../style/components/patch_layout.css';
-@import '../style/components/patch_responsive.css';
-@import '../style/components/patch_sidebar.css';
-@import '../style/components/patch_sidemenu.css';
-@import '../style/components/patch_typography.css';
+/* Patchnote Styling Components */
+@import './components/patch_layout.css';
+@import './components/patch_typography.css';
+@import './components/patch_card.css';
+@import './components/patch_intro.css';
+@import './components/patch_sidebar.css';
+@import './components/patch_sidemenu.css';
+@import './components/patch_footer.css';
+@import './components/patch_responsive.css';
