@@ -5,45 +5,164 @@
     <meta name="description" content="FAForever Patch 3816 page with detailed balance updates for the Vulthoo gunship." />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FAForever Patch 3816 - Balance Update</title>
-    <link rel="stylesheet" href="/style/balance.css"/>
-    <script src="/scripts/themeSwitch.js" defer></script>
+
+    <!-- Critical CSS for immediate loading -->
+    <link rel="stylesheet" href="/style/critical.css?v=1724259600" />
+
+    <!-- Load head configuration and shared resources -->
+    <script src="/scripts/headConfig.js?v=1724259600"></script>
 </head>
 <body>
     <main class="Grid">
         <div class="Content">
-            <section id="Intro">
-                <header class="FlexboxContainer">
-                    <h1 class="FlexGrow-4">Patch 3816</h1>
-                    <h4 class="FlexGrow-1" id="date">Date: <time datetime="2024-12-10">December 10th 2024</time></h4>
+            <section id="Intro" class="IntroSection">
+                <header class="PatchHeader">
+                    <div class="PatchTitleGroup">
+                        <h1 class="PatchTitle">Patch 3816</h1>
+                        <span class="PatchVersion">Balance Update</span>
+                    </div>
+                    <div class="PatchMeta">
+                        <time datetime="2024-12-10" class="PatchDate">December 10th, 2024</time>
+                        <span class="PatchStatus">Released</span>
+                    </div>
                 </header>
                 <p class="patchDescription">Reduced the build time of the Vulthoo to make it more viable during early Tech 2, addressing its underperformance post-rework.</p>
-                <h3>-- The Balance Team</h3>
-                <hr>
+                
+                <footer class="PatchCredits">
+                    <div class="TeamSignature">
+                        <span class="TeamIcon">⚖️</span>
+                        <span class="TeamName">The Balance Team</span>
+                    </div>
+                </footer>
+                
+                <hr class="SectionDivider">
             </section>
 
-            <section name="Air Units">
+            <section id="Air">
                 <h2>Air Units</h2>
 
-                <article id="t2gunship" class="Card">
-                    <h3><img src="/assets/images/units/sera/air/T2Gunship.png"/> Vulthoo</h3>
-                    <p>Vulthoo have been underperforming after their rework. Their biggest weak point was the excessive amount of build time required which made it impractical to make them in the earlier stages of tech 2 especially.</p>
+                <article id="t2gunship" class="PatchCard">
+                    <!-- Card Header Section -->
+                    <header class="PatchCardHeader">
+                        <div class="UnitInfo">
+                            <img src="/assets/images/units/sera/air/T2Gunship.png" class="UnitIcon" alt="Vulthoo"/>
+                            <div class="UnitDetails">
+                                <div class="UnitNameRow">
+                                    <h3 class="UnitName">Vulthoo</h3>
+                                    <span class="UnitCode">XSA0204</span>
+                                </div>
+                                <span class="FactionBadge seraphim">Seraphim</span>
+                            </div>
+                        </div>
+                        <div class="ChangeTypeBadge buff">Buff</div>
+                    </header>
 
-                    <ul>
-                        <li>Build Time: <s>3300</s> <i class="fa-solid fa-arrow-right"></i> 2700</li>
-                    </ul>
+                    <!-- Card Content Section -->
+                    <div class="CardContent">
+                        <p class="ChangeDescription">Vulthoo have been underperforming after their rework. Their biggest weak point was the excessive amount of build time required which made it impractical to make them in the earlier stages of tech 2 especially.</p>
+
+                        <div class="ChangesList">
+                            <div class="ChangeGroup">
+                                <h4 class="ChangeGroupTitle">
+                                    Construction
+                                </h4>
+                                <ul class="Changes">
+                                    <li class="buff">
+                                        <span class="ChangeLabel">Build Time:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">3300</s> 
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                            <strong class="NewValue">2700</strong>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </article>
             </section>
 
         </div>
 
         <aside class="Sidebar" role="navigation" aria-label="Sidebar navigation">
-            <div class="IconSidebar">
-                <h2 class="IconSidebarTitle">Contents</h2>
-                <div class="IconSidebarSpace"></div>
-                <nav class="IconSidebarSubgrid">
-                    <h3 class="IconSidebarSubtitle">Air</h3>
-                    <a href="#t2gunship"><img src="/assets/images/units/sera/air/T2Gunship.png" alt="T2 Gunship Thumbnail" loading="lazy"/></a>
+            <div class="ContentSidemenu">
+                <!-- Quick Navigation Header -->
+                <header class="SidemenuHeader">
+                    <h2 class="SidemenuTitle">
+                        <i class="fas fa-list-ul" aria-hidden="true"></i>
+                        Quick Navigation
+                    </h2>
+                    <div class="ProgressBar">
+                        <div class="ProgressFill" id="readingProgress"></div>
+                    </div>
+                </header>
+
+                <!-- Quick Actions Panel -->
+                <div class="QuickActions">
+                    <button class="QuickActionBtn" onclick="scrollToTop()" title="Back to Top">
+                        <i class="fas fa-arrow-up"></i>
+                        <span>Top</span>
+                    </button>
+                    <button class="QuickActionBtn" onclick="toggleAllSections()" title="Expand/Collapse All">
+                        <i class="fas fa-expand-arrows-alt"></i>
+                        <span>Toggle</span>
+                    </button>
+                    <button class="QuickActionBtn" onclick="printPage()" title="Print Page">
+                        <i class="fas fa-print"></i>
+                        <span>Print</span>
+                    </button>
+                </div>
+
+                <!-- Content Navigation -->
+                <nav class="ContentNav" role="navigation">
+                    <!-- Intro Section -->
+                    <div class="NavSection active">
+                        <button class="SectionToggle" aria-expanded="true" data-target="intro-items">
+                            <i class="fas fa-info-circle SectionIcon"></i>
+                            <span class="SectionTitle">Introduction</span>
+                            <span class="ItemCount">1</span>
+                            <i class="fas fa-chevron-down ToggleIcon"></i>
+                        </button>
+                        <ul class="SectionItems" id="intro-items">
+                            <li class="NavItem">
+                                <a href="#Intro" class="NavLink">
+                                    <i class="fas fa-scroll"></i>
+                                    <span>Patch Overview</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Air Section -->
+                    <div class="NavSection">
+                        <button class="SectionToggle" aria-expanded="false" data-target="air-items">
+                            <i class="fas fa-fighter-jet SectionIcon"></i>
+                            <span class="SectionTitle">Air Units</span>
+                            <span class="ItemCount">1</span>
+                            <i class="fas fa-chevron-down ToggleIcon"></i>
+                        </button>
+                        <ul class="SectionItems" id="air-items">
+                            <li class="NavItem">
+                                <a href="#t2gunship" class="NavLink">
+                                    <img src="/assets/images/units/sera/air/T2Gunship.png" alt="T2 Gunship" class="UnitThumb">
+                                    <span>Vulthoo</span>
+                                    <span class="ChangeBadge buff">Buff</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </nav>
+
+                <!-- Enhanced Theme Toggle -->
+                <div class="ThemeToggleContainer">
+                    <button id="themeToggleButton" class="ThemeToggleBtn" aria-label="Switch to light theme" title="Switch to light theme">
+                        <div class="ThemeToggleIcon">
+                            <i class="fas fa-moon" aria-hidden="true"></i>
+                            <i class="fas fa-sun" aria-hidden="true"></i>
+                        </div>
+                        <span class="theme-text">Dark</span>
+                    </button>
+                </div>
             </div>
         </aside>
     </main>
@@ -85,11 +204,11 @@
                 <h4 class="FooterTitle">About</h4>
                 <div class="FooterInfo">
                     <p class="PatchInfo">
-                        <strong>Patch 3822</strong><br>
-                        Released: May 19th, 2025
+                        <strong>Patch 3816</strong><br>
+                        Released: December 10th, 2024
                     </p>
                     <p class="Copyright">
-                        © 2015-2025 <strong>FAForever</strong><br>
+                        © 2015-2024 <strong>FAForever</strong><br>
                         Community-driven balance updates
                     </p>
                 </div>
@@ -118,10 +237,11 @@
         <!-- Bottom Bar -->
         <div class="FooterBottom">
             <div class="FooterBottomContent">
-                <span class="LastUpdated">Last updated: <time datetime="2025-05-19">May 19th, 2025</time></span>
-                <span class="BuildInfo">Balance Team • Patch Notes v3822</span>
+                <span class="LastUpdated">Last updated: <time datetime="2024-12-10">December 10th, 2024</time></span>
+                <span class="BuildInfo">Balance Team • Patch Notes v3816</span>
             </div>
         </div>
     </footer>
+    
 </body>
 </html>
