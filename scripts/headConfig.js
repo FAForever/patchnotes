@@ -76,9 +76,8 @@
      */
     function addSharedScripts() {
         const scripts = [
-            { src: '/scripts/styleLoader.js?v=1724259600', defer: false },
-            { src: '/scripts/themeSwitch.js?v=1724259600', defer: true },
-            { src: '/scripts/contentSidemenu.js?v=1724259600', defer: true }
+            { src: '/scripts/coreUI.js?v=1724259600&cache=bypass', defer: false },
+            { src: '/scripts/contentSidemenu.js?v=1724259600&cache=bypass', defer: true }
         ];
         
         scripts.forEach(config => {
