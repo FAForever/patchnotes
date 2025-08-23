@@ -1,145 +1,519 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="description" content="FAF Patch 3813 balance changes including hover flak mobility, Fire Beetle transport optimization, amphibious tank adjustments, and various unit tweaks.">
+    <meta charset="UTF-8" />
+    <meta name="description" content="FAF Patch 3813 balance changes including hover flak mobility, Fire Beetle transport optimization, amphibious tank adjustments, and various unit tweaks." />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FAForever Patch 3813 - Balance Update</title>
-    <link rel="stylesheet" href="/style/balance.css"/>
-    <script src="/scripts/themeSwitch.js" defer></script>
+
+    <!-- Critical CSS for immediate loading -->
+    <link rel="stylesheet" href="/style/critical.css?v=1724259600" />
+
+    <!-- Load head configuration and shared resources -->
+    <script src="/scripts/headConfig.js?v=1724259600"></script>
 </head>
 <body>
     <main class="Grid">
         <div class="Content">
-            <section id="Intro">
-                <header class="FlexboxContainer">
-                    <h1 class="FlexGrow-4">Patch 3813</h1>
-                    <h4 class="FlexGrow-1" id="date">Date: <time datetime="2024-08-15">August 15th 2024</time></h4>
+            <section id="Intro" class="IntroSection">
+                <header class="PatchHeader">
+                    <div class="PatchTitleGroup">
+                        <h1 class="PatchTitle">Patch 3813</h1>
+                        <span class="PatchVersion">Balance Update</span>
+                    </div>
+                    <div class="PatchMeta">
+                        <time datetime="2024-08-15" class="PatchDate">August 15th, 2024</time>
+                        <span class="PatchStatus">Released</span>
+                    </div>
                 </header>
                 <p class="patchDescription">The balance changes adjust unit stats for better gameplay clarity and fairness, including mobility tweaks, cost balancing, vision reductions, and weapon effectiveness.</p>
-                <h3>-- The Balance Team</h3>
-                <hr>
+                
+                <footer class="PatchCredits">
+                    <div class="TeamSignature">
+                        <span class="TeamIcon">⚖️</span>
+                        <span class="TeamName">The Balance Team</span>
+                    </div>
+                </footer>
+                
+                <hr class="SectionDivider">
             </section>
 
-            <section name="Land Units">
+            <section id="Land">
                 <h2>Land Units</h2>
 
-                <article id="t2flack" class="Card">
-                    <h3> T2 Hover Flack</h3>
-                    <p>Reduce the speed of hover flak on water to be the same as on land. This makes it less oppressive supporting hover raids and more exposed when supporting naval fleets.</p>
+                <article id="aeon_t2_flack" class="PatchCard">
+                    <!-- Card Header Section -->
+                    <header class="PatchCardHeader">
+                        <div class="UnitInfo">
+                            <img src="/assets/images/units/aeon/land/T2MobileFlak.png" class="UnitIcon" alt="Ascendant"/>
+                            <div class="UnitDetails">
+                                <div class="UnitNameRow">
+                                    <h3 class="UnitName">Ascendant</h3>
+                                    <span class="UnitCode">UAL0205</span>
+                                </div>
+                                <span class="FactionBadge aeon">Aeon</span>
+                            </div>
+                        </div>
+                        <div class="ChangeTypeBadge nerf">Nerf</div>
+                    </header>
 
-                    <h4><img src="/assets/images/units/aeon/land/T2HoverTank.png" alt="">Aeon</h4>
-                    <ul>
-                        <li>Water Speed Multiplier(Water Speed): <s>1.35(3.65)</s> <i class="fa-solid fa-arrow-right"></i> 1(2.7)</li>
-                    </ul>
+                    <!-- Card Content Section -->
+                    <div class="CardContent">
+                        <p class="ChangeDescription">Reduce the speed of hover flak on water to be the same as on land. This makes it less oppressive supporting hover raids and more exposed when supporting naval fleets.</p>
 
-                    <h4><img src="/assets/images/units/sera/land/T2HoverFlack.png" alt="">Sera</h4>
-                    <ul>
-                        <li>Water Speed Multiplier(Water Speed): <s>1.4(3.64)</s> <i class="fa-solid fa-arrow-right"></i> 1(2.6)</li>
-                    </ul>
+                        <div class="ChangesList">
+                            <div class="ChangeGroup">
+                                <h4 class="ChangeGroupTitle">
+                                    Movement
+                                </h4>
+                                <ul class="Changes">
+                                    <li class="nerf">
+                                        <span class="ChangeLabel">Water Speed Multiplier:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">1.35</s> 
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                            <strong class="NewValue">1.0</strong>
+                                        </span>
+                                    </li>
+                                    <li class="nerf">
+                                        <span class="ChangeLabel">Water Speed:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">3.65</s> 
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                            <strong class="NewValue">2.7</strong>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </article>
 
-                <article id="t2mobilebomb" class="Card">
-                    <h3><img src="/assets/images/units/cybran/land/T2MobileBomb.png" alt="">Fire Beetle</h3>
-                    <p>Unlike other Tech 2 units, the Fire Beetle only takes up one clamp on transports, the same as Tech 1 units. To ensure that it does not slow transports down excessively, the Fire Beetle's TransportSpeedReduction stat is reduced to match that of Tech 1 units.</p>
+                <article id="sera_t2_flack" class="PatchCard">
+                    <!-- Card Header Section -->
+                    <header class="PatchCardHeader">
+                        <div class="UnitInfo">
+                            <img src="/assets/images/units/sera/land/T2HoverFlack.png" class="UnitIcon" alt="Iashavoh"/>
+                            <div class="UnitDetails">
+                                <div class="UnitNameRow">
+                                    <h3 class="UnitName">Iashavoh</h3>
+                                    <span class="UnitCode">XSL0205</span>
+                                </div>
+                                <span class="FactionBadge sera">Seraphim</span>
+                            </div>
+                        </div>
+                        <div class="ChangeTypeBadge nerf">Nerf</div>
+                    </header>
 
-                    <ul>
-                        <li>TransportSpeedReduction: <s>0.3</s> <i class="fa-solid fa-arrow-right"></i> 0.15</li>
-                    </ul>
+                    <!-- Card Content Section -->
+                    <div class="CardContent">
+                        <p class="ChangeDescription">Reduce the speed of hover flak on water to be the same as on land. This makes it less oppressive supporting hover raids and more exposed when supporting naval fleets.</p>
+
+                        <div class="ChangesList">
+                            <div class="ChangeGroup">
+                                <h4 class="ChangeGroupTitle">
+                                    Movement
+                                </h4>
+                                <ul class="Changes">
+                                    <li class="nerf">
+                                        <span class="ChangeLabel">Water Speed Multiplier:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">1.4</s> 
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                            <strong class="NewValue">1.0</strong>
+                                        </span>
+                                    </li>
+                                    <li class="nerf">
+                                        <span class="ChangeLabel">Water Speed:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">3.64</s> 
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                            <strong class="NewValue">2.6</strong>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </article>
 
-                <article id="t2hovertank" class="Card">
+                <article id="cybran_t2_mobilebomb" class="PatchCard">
+                    <!-- Card Header Section -->
+                    <header class="PatchCardHeader">
+                        <div class="UnitInfo">
+                            <img src="/assets/images/units/cybran/land/T2MobileBomb.png" class="UnitIcon" alt="Fire Beetle"/>
+                            <div class="UnitDetails">
+                                <div class="UnitNameRow">
+                                    <h3 class="UnitName">Fire Beetle</h3>
+                                    <span class="UnitCode">URL0111</span>
+                                </div>
+                                <span class="FactionBadge cybran">Cybran</span>
+                            </div>
+                        </div>
+                        <div class="ChangeTypeBadge buff">Buff</div>
+                    </header>
 
-                    <h3>Tech 2 Amphibious Tanks</h3>
+                    <!-- Card Content Section -->
+                    <div class="CardContent">
+                        <p class="ChangeDescription">Unlike other Tech 2 units, the Fire Beetle only takes up one clamp on transports, the same as Tech 1 units. To ensure that it does not slow transports down excessively, the Fire Beetle's TransportSpeedReduction stat is reduced to match that of Tech 1 units.</p>
 
-                    <p>Reduce Blaze speed to make it easier to catch and reduce its powerful raiding capabilities. Additionally, reduce T2 Amphibious Tank vision by 2 to give them a weapon range disadvantage of 2 when behind enemy lines and lacking intel, similar to T2 land tanks. Riptide is an exception, as it already has a short 18 vision/weapon range.</p>
-
-                    <h4><img src="/assets/images/units/aeon/land/T2HoverTank.png"> Blaze</h4>
-                    <ul>
-                        <li>Speed: <s>4.3</s> <i class="fa-solid fa-arrow-right"></i> 4</li>
-                        <li>Vision Radius: <s>24</s> <i class="fa-solid fa-arrow-right"></i> 22</li>
-                    </ul>
-
-                    <h4><img src="/assets/images/units/sera/land/T2HoverTank.png"> Yenzyne</h4>
-                    <ul>
-                        <li>Vision Radius: <s>20</s> <i class="fa-solid fa-arrow-right"></i> 18</li>
-                    </ul>
-
-                    <h4><img src="/assets/images/units/sera/land/T2HoverTank.png"> Wagner</h4>
-                    <ul>
-                        <li>Vision Radius: <s>22</s> <i class="fa-solid fa-arrow-right"></i> 20</li>
-                    </ul>
+                        <div class="ChangesList">
+                            <div class="ChangeGroup">
+                                <h4 class="ChangeGroupTitle">
+                                    Transport
+                                </h4>
+                                <ul class="Changes">
+                                    <li class="buff">
+                                        <span class="ChangeLabel">TransportSpeedReduction:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">0.3</s> 
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                            <strong class="NewValue">0.15</strong>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </article>
 
-                <article id="t3empmml" class="Card">
-                    <h3>The Pulsar (Cybran T3 Mobile EMP Missile Launcher)</h3>
-                    <p>The Pulsar receives various tweaks in anticipation of its future introduction into the game. Additionally, the Pulsar’s files have been updated to remove the last remnants of its former name. Initially, the unit was called Othismash.</p>
+                <article id="aeon_t2_hovertank" class="PatchCard">
+                    <!-- Card Header Section -->
+                    <header class="PatchCardHeader">
+                        <div class="UnitInfo">
+                            <img src="/assets/images/units/aeon/land/T2HoverTank.png" class="UnitIcon" alt="Blaze"/>
+                            <div class="UnitDetails">
+                                <div class="UnitNameRow">
+                                    <h3 class="UnitName">Blaze</h3>
+                                    <span class="UnitCode">UAL0201</span>
+                                </div>
+                                <span class="FactionBadge aeon">Aeon</span>
+                            </div>
+                        </div>
+                        <div class="ChangeTypeBadge nerf">Nerf</div>
+                    </header>
 
-                    <ul>
-                        <li>Categories Added:
-                            <ul>
-                                <li>PRODUCTDL</li>
-                                <li>SNIPEMODE</li>
-                            </ul>
-                        </li>
-                        <li>Weapon:
-                            <ul>
-                                <li>Damage Radius: <s>0</s> <i class="fa-solid fa-arrow-right"></i> 1</li>
-                                <li>TurretPitchRange: <s>15</s> <i class="fa-solid fa-arrow-right"></i> 40</li>
-                                <li>TurretPitchSpeed: <s>20</s> <i class="fa-solid fa-arrow-right"></i> 50</li>
-                            </ul>
-                        </li>
-                    </ul>
+                    <!-- Card Content Section -->
+                    <div class="CardContent">
+                        <p class="ChangeDescription">Reduce Blaze speed to make it easier to catch and reduce its powerful raiding capabilities. Additionally, reduce T2 Amphibious Tank vision by 2 to give them a weapon range disadvantage of 2 when behind enemy lines and lacking intel, similar to T2 land tanks.</p>
 
-
+                        <div class="ChangesList">
+                            <div class="ChangeGroup">
+                                <h4 class="ChangeGroupTitle">
+                                    Movement
+                                </h4>
+                                <ul class="Changes">
+                                    <li class="nerf">
+                                        <span class="ChangeLabel">Speed:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">4.3</s> 
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                            <strong class="NewValue">4.0</strong>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="ChangeGroup">
+                                <h4 class="ChangeGroupTitle">
+                                    Intelligence
+                                </h4>
+                                <ul class="Changes">
+                                    <li class="nerf">
+                                        <span class="ChangeLabel">Vision Radius:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">24</s> 
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                            <strong class="NewValue">22</strong>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </article>
 
-                <article id="t4exp" class="Card">
-                    <h3><img src="/assets/images/units/sera/land/T4Bot.png"> Ythotha</h3>
-                    <p>Remove the ability for the Ythotha to walk backwards, preventing exploitation of its movement mechanics during combat.</p>
+                <article id="sera_t2_hovertank" class="PatchCard">
+                    <!-- Card Header Section -->
+                    <header class="PatchCardHeader">
+                        <div class="UnitInfo">
+                            <img src="/assets/images/units/sera/land/T2HoverTank.png" class="UnitIcon" alt="Yenzyne"/>
+                            <div class="UnitDetails">
+                                <div class="UnitNameRow">
+                                    <h3 class="UnitName">Yenzyne</h3>
+                                    <span class="UnitCode">XSL0201</span>
+                                </div>
+                                <span class="FactionBadge sera">Seraphim</span>
+                            </div>
+                        </div>
+                        <div class="ChangeTypeBadge nerf">Nerf</div>
+                    </header>
 
-                    <ul>
-                        <li>MaxSpeedReverse: <s>2.5</s> <i class="fa-solid fa-arrow-right"></i> 0</li>
-                    </ul>
+                    <!-- Card Content Section -->
+                    <div class="CardContent">
+                        <p class="ChangeDescription">Reduce T2 Amphibious Tank vision by 2 to give them a weapon range disadvantage of 2 when behind enemy lines and lacking intel, similar to T2 land tanks.</p>
+
+                        <div class="ChangesList">
+                            <div class="ChangeGroup">
+                                <h4 class="ChangeGroupTitle">
+                                    Intelligence
+                                </h4>
+                                <ul class="Changes">
+                                    <li class="nerf">
+                                        <span class="ChangeLabel">Vision Radius:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">20</s> 
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                            <strong class="NewValue">18</strong>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </article>
 
+                <article id="cybran_t2_hovertank" class="PatchCard">
+                    <!-- Card Header Section -->
+                    <header class="PatchCardHeader">
+                        <div class="UnitInfo">
+                            <img src="/assets/images/units/cybran/land/T2HoverTank.png" class="UnitIcon" alt="Wagner"/>
+                            <div class="UnitDetails">
+                                <div class="UnitNameRow">
+                                    <h3 class="UnitName">Wagner</h3>
+                                    <span class="UnitCode">URL0203</span>
+                                </div>
+                                <span class="FactionBadge cybran">Cybran</span>
+                            </div>
+                        </div>
+                        <div class="ChangeTypeBadge nerf">Nerf</div>
+                    </header>
+
+                    <!-- Card Content Section -->
+                    <div class="CardContent">
+                        <p class="ChangeDescription">Reduce T2 Amphibious Tank vision by 2 to give them a weapon range disadvantage of 2 when behind enemy lines and lacking intel, similar to T2 land tanks.</p>
+
+                        <div class="ChangesList">
+                            <div class="ChangeGroup">
+                                <h4 class="ChangeGroupTitle">
+                                    Intelligence
+                                </h4>
+                                <ul class="Changes">
+                                    <li class="nerf">
+                                        <span class="ChangeLabel">Vision Radius:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">22</s> 
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                            <strong class="NewValue">20</strong>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article id="sera_t4_bot" class="PatchCard">
+                    <!-- Card Header Section -->
+                    <header class="PatchCardHeader">
+                        <div class="UnitInfo">
+                            <img src="/assets/images/units/sera/land/T4Bot.png" class="UnitIcon" alt="Ythotha"/>
+                            <div class="UnitDetails">
+                                <div class="UnitNameRow">
+                                    <h3 class="UnitName">Ythotha</h3>
+                                    <span class="UnitCode">XSL0401</span>
+                                </div>
+                                <span class="FactionBadge sera">Seraphim</span>
+                            </div>
+                        </div>
+                        <div class="ChangeTypeBadge nerf">Nerf</div>
+                    </header>
+
+                    <!-- Card Content Section -->
+                    <div class="CardContent">
+                        <p class="ChangeDescription">Remove the ability for the Ythotha to walk backwards, preventing exploitation of its movement mechanics during combat.</p>
+
+                        <div class="ChangesList">
+                            <div class="ChangeGroup">
+                                <h4 class="ChangeGroupTitle">
+                                    Movement
+                                </h4>
+                                <ul class="Changes">
+                                    <li class="nerf">
+                                        <span class="ChangeLabel">MaxSpeedReverse:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">2.5</s> 
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                            <strong class="NewValue">0</strong>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
 
             </section>
 
-            
             <section name="Air Units">
                 <h2>Air Units</h2>
 
-                <article id="t2bomb" class="Card">
-                    <h3><img src="/assets/images/units/aeon/air/T2Mercy.png"> Mercy</h3>
-                    <p>Buff the cost of the Mercy to suit its new role of killing large numbers of low HP targets such as armies, T1 pgens, and engineers. The buildtime is reduced an extra amount compared to other costs since it is a kamikaze unit.</p>
-                    <ul>
-                        <li>Mass Cost: <s>300</s> <i class="fa-solid fa-arrow-right"></i> 230</li>
-                        <li>Energy Cost: <s>6000</s> <i class="fa-solid fa-arrow-right"></i> 4600</li>
-                        <li>Build Time: <s>2000</s> <i class="fa-solid fa-arrow-right"></i> 1200</li>
-                    </ul>
+                <article id="aeon_t2_guided_missile" class="PatchCard">
+                    <!-- Card Header Section -->
+                    <header class="PatchCardHeader">
+                        <div class="UnitInfo">
+                            <img src="/assets/images/units/aeon/air/T2Mercy.png" class="UnitIcon" alt="Mercy"/>
+                            <div class="UnitDetails">
+                                <div class="UnitNameRow">
+                                    <h3 class="UnitName">Mercy</h3>
+                                    <span class="UnitCode">DAA0206</span>
+                                </div>
+                                <span class="FactionBadge aeon">Aeon</span>
+                            </div>
+                        </div>
+                        <div class="ChangeTypeBadge buff">Buff</div>
+                    </header>
+
+                    <!-- Card Content Section -->
+                    <div class="CardContent">
+                        <p class="ChangeDescription">Buff the cost of the Mercy to suit its new role of killing large numbers of low HP targets such as armies, T1 pgens, and engineers. The buildtime is reduced an extra amount compared to other costs since it is a kamikaze unit.</p>
+
+                        <div class="ChangesList">
+                            <div class="ChangeGroup">
+                                <h4 class="ChangeGroupTitle">
+                                    Economy
+                                </h4>
+                                <ul class="Changes">
+                                    <li class="buff">
+                                        <span class="ChangeLabel">Mass Cost:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">300</s> 
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                            <strong class="NewValue">230</strong>
+                                        </span>
+                                    </li>
+                                    <li class="buff">
+                                        <span class="ChangeLabel">Energy Cost:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">6000</s> 
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                            <strong class="NewValue">4600</strong>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="ChangeGroup">
+                                <h4 class="ChangeGroupTitle">
+                                    Construction
+                                </h4>
+                                <ul class="Changes">
+                                    <li class="buff">
+                                        <span class="ChangeLabel">Build Time:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">2000</s> 
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                            <strong class="NewValue">1200</strong>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </article>
 
-                <article id="t3asf" class="Card">
-                    <h3><img src="/assets/images/units/uef/air/T3ASF.png"> T3 ASF</h3>
-                    <p> Remove ASF’s armor against Ahwassa bomb, as it is no longer necessary with the new delayed explosion.</p>
-                    <ul>
-                        <li>Damage taken from Ahwassa bomb 10% -> 100%</li>
-                    </ul>
+                <article id="t3_asf" class="PatchCard">
+                    <!-- Card Header Section -->
+                    <header class="PatchCardHeader">
+                        <div class="UnitInfo">
+                            <img src="/assets/images/units/uef/air/T3ASF.png" class="UnitIcon" alt="T3 ASF"/>
+                            <div class="UnitDetails">
+                                <div class="UnitNameRow">
+                                    <h3 class="UnitName">T3 ASF</h3>
+                                    <span class="UnitCode">Various</span>
+                                </div>
+                                <span class="FactionBadge multi">All Factions</span>
+                            </div>
+                        </div>
+                        <div class="ChangeTypeBadge nerf">Nerf</div>
+                    </header>
+
+                    <!-- Card Content Section -->
+                    <div class="CardContent">
+                        <p class="ChangeDescription">Remove ASF's armor against Ahwassa bomb, as it is no longer necessary with the new delayed explosion.</p>
+
+                        <div class="ChangesList">
+                            <div class="ChangeGroup">
+                                <h4 class="ChangeGroupTitle">
+                                    Defense
+                                </h4>
+                                <ul class="Changes">
+                                    <li class="nerf">
+                                        <span class="ChangeLabel">Damage taken from Ahwassa bomb:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">10%</s> 
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                            <strong class="NewValue">100%</strong>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </article>
 
-                <article id="t4air" class="Card">
-                    <h3><img src="/assets/images/units/cybran/air/T4Gunship.png"> Soul Ripper </h3>
-                    <p> The Soul Ripper’s Iridium Rocket Packs gain the same area of effect radius as its primary weapons. Visually, these weapons appeared like they dealt damage in an area of effect, however, this was never the case. Due to being very inaccurate, this caused them to underperform against smaller units.</p>
+                <article id="cybran_t4_gunship" class="PatchCard">
+                    <!-- Card Header Section -->
+                    <header class="PatchCardHeader">
+                        <div class="UnitInfo">
+                            <img src="/assets/images/units/cybran/air/T4Gunship.png" class="UnitIcon" alt="Soul Ripper"/>
+                            <div class="UnitDetails">
+                                <div class="UnitNameRow">
+                                    <h3 class="UnitName">Soul Ripper</h3>
+                                    <span class="UnitCode">URA0401</span>
+                                </div>
+                                <span class="FactionBadge cybran">Cybran</span>
+                            </div>
+                        </div>
+                        <div class="ChangeTypeBadge buff">Buff</div>
+                    </header>
 
-                    <ul>
-                        <li>Iridium Rocket Packs (x2):
-                            <ul>
-                                <li>Damage Radius: <s>0</s> <i class="fa-solid fa-arrow-right"></i> 3</li>
-                                <li>Damage: <s>190</s> <i class="fa-solid fa-arrow-right"></i> 150</li>
-                                <li>DPS: <s>285</s> <i class="fa-solid fa-arrow-right"></i> 225</li>
-                            </ul>
-                    </ul>
+                    <!-- Card Content Section -->
+                    <div class="CardContent">
+                        <p class="ChangeDescription">The Soul Ripper's Iridium Rocket Packs gain the same area of effect radius as its primary weapons. Visually, these weapons appeared like they dealt damage in an area of effect, however, this was never the case. Due to being very inaccurate, this caused them to underperform against smaller units.</p>
+
+                        <div class="ChangesList">
+                            <div class="ChangeGroup">
+                                <h4 class="ChangeGroupTitle">
+                                    Iridium Rocket Packs (x2)
+                                </h4>
+                                <ul class="Changes">
+                                    <li class="buff">
+                                        <span class="ChangeLabel">Damage Radius:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">0</s> 
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                            <strong class="NewValue">3</strong>
+                                        </span>
+                                    </li>
+                                    <li class="nerf">
+                                        <span class="ChangeLabel">Damage:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">190</s> 
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                            <strong class="NewValue">150</strong>
+                                        </span>
+                                    </li>
+                                    <li class="nerf">
+                                        <span class="ChangeLabel">DPS:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">285</s> 
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                            <strong class="NewValue">225</strong>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </article>
 
             </section>
@@ -147,78 +521,398 @@
             <section name="Naval Units">
                 <h2>Naval Units</h2>
 
-                <article id="t2cruisers" class="Card">
-                    <h3><img src="/assets/images/units/aeon/naval/T2Cruiser.png">Aeon Cruiser</h3>
-                    <p>Unify the MuzzleVelocity stat of the Aeon Cruiser’s missile launchers. The Infinity Class is equipped with two copies of Zealot AA Missile launchers. These two weapons function identically except for their MuzzleVelocity stat, where one weapon has a higher value than the other. This is misleading because the models look the same, and the unit databases imply that both have a MuzzleVelocity of 40. In terms of gameplay, there is virtually no difference.</p>
-                    
-                    <ul>
-                        <li>Zealot AA Missile (Right Battery):
-                            <ul>
-                                <li>MuzzleVelocity: <s>40</s> <i class="fa-solid fa-arrow-right"></i> 55</li>
-                            </ul>
-                        </li>
-                        <li>Zealot AA Missile (Left Battery):
-                            <ul>
-                                <li>MuzzleVelocity: <s>30</s> <i class="fa-solid fa-arrow-right"></i> 35</li>
-                            </ul>
-                    </ul>
+                <article id="aeon_t2_cruiser" class="PatchCard">
+                    <!-- Card Header Section -->
+                    <header class="PatchCardHeader">
+                        <div class="UnitInfo">
+                            <img src="/assets/images/units/aeon/naval/T2Cruiser.png" class="UnitIcon" alt="Aeon Cruiser"/>
+                            <div class="UnitDetails">
+                                <div class="UnitNameRow">
+                                    <h3 class="UnitName">Aeon Cruiser</h3>
+                                    <span class="UnitCode">UAS0202</span>
+                                </div>
+                                <span class="FactionBadge aeon">Aeon</span>
+                            </div>
+                        </div>
+                        <div class="ChangeTypeBadge buff">Buff</div>
+                    </header>
+
+                    <!-- Card Content Section -->
+                    <div class="CardContent">
+                        <p class="ChangeDescription">Unify the MuzzleVelocity stat of the Aeon Cruiser's missile launchers. The Infinity Class is equipped with two copies of Zealot AA Missile launchers. These two weapons function identically except for their MuzzleVelocity stat, where one weapon has a higher value than the other. This is misleading because the models look the same, and the unit databases imply that both have a MuzzleVelocity of 40. In terms of gameplay, there is virtually no difference.</p>
+
+                        <div class="ChangesList">
+                            <div class="ChangeGroup">
+                                <h4 class="ChangeGroupTitle">
+                                    Zealot AA Missile (Right Battery)
+                                </h4>
+                                <ul class="Changes">
+                                    <li class="buff">
+                                        <span class="ChangeLabel">MuzzleVelocity:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">40</s> 
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                            <strong class="NewValue">55</strong>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="ChangeGroup">
+                                <h4 class="ChangeGroupTitle">
+                                    Zealot AA Missile (Left Battery)
+                                </h4>
+                                <ul class="Changes">
+                                    <li class="buff">
+                                        <span class="ChangeLabel">MuzzleVelocity:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">30</s> 
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                            <strong class="NewValue">35</strong>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </article>
 
-                <article id="t3aircraftcarrier" class="Card">
-                    <h3>T3 Cybran & Seraphim Aircraft Carriers</h3>
-                    <p>Add strong tracking capabilities (like the Seraphim SAM) to the AA of the Cybran and Seraphim carriers so that they do not miss their shots.</p>
-                    
-                    <ul>
-                        <li>Cybran carrier had an especially poor hit rate at the edge of its range because its weak tracking disabled its ability to lead targets</li>
-                    </ul>
+                <article id="aeon_t3_aircraft_carrier" class="PatchCard">
+                    <!-- Card Header Section -->
+                    <header class="PatchCardHeader">
+                        <div class="UnitInfo">
+                            <img src="/assets/images/units/cybran/naval/T3AircraftCarrier.png" class="UnitIcon" alt="T3 Aircraft Carriers"/>
+                            <div class="UnitDetails">
+                                <div class="UnitNameRow">
+                                    <h3 class="UnitName">T3 Cybran & Seraphim Aircraft Carriers</h3>
+                                    <span class="UnitCode">Various</span>
+                                </div>
+                                <span class="FactionBadge multi">Cybran & Seraphim</span>
+                            </div>
+                        </div>
+                        <div class="ChangeTypeBadge buff">Buff</div>
+                    </header>
+
+                    <!-- Card Content Section -->
+                    <div class="CardContent">
+                        <p class="ChangeDescription">Add strong tracking capabilities (like the Seraphim SAM) to the AA of the Cybran and Seraphim carriers so that they do not miss their shots. Cybran carrier had an especially poor hit rate at the edge of its range because its weak tracking disabled its ability to lead targets.</p>
+
+                        <div class="ChangesList">
+                            <div class="ChangeGroup">
+                                <h4 class="ChangeGroupTitle">
+                                    Anti-Air Systems
+                                </h4>
+                                <ul class="Changes">
+                                    <li class="buff">
+                                        <span class="ChangeLabel">Tracking Capabilities:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">Weak</s> 
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                            <strong class="NewValue">Strong (Seraphim SAM level)</strong>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </article>
 
             </section>
 
             <section name="ACU Units">
-                <h2>ACU's</h2>
+                <h2>ACUs & SACUs</h2>
 
-                <article id="cybranacu" class="Card">
-                    <h3><img src="/assets/images/units/cybran/land/ACU.png">Cybran ACU</h3>
-                    <p>When the Nano-Repair upgrade was introduced to the Cybran ACU, the MuzzleSalvoSize of its torpedo upgrade was nerfed to prevent the combination from being too oppressive. Unfortunately, this change resulted in the torpedo upgrade being weak even against lower quantities of torpedo defenses, since a single anti-torpedo projectile can negate 500 damage. To alleviate this issue, the torpedo upgrade now launches 3 instead of 2 torpedoes, but at a slightly lower DPS. Additionally, as with most other Cybran torpedoes, their damage is now dealt in multiple pulses.</p>
-                    
-                    <h4><img src="/assets/images/Enhancements/cybran/torp.png" alt="">Nanite Torpedo Launcher</h4>
-                    <ul>
-                        <li>Damage: <s>500</s> <i class="fa-solid fa-arrow-right"></i> 60</li>
-                        <li>Damage over Time Pulses: <s>0</s> <i class="fa-solid fa-arrow-right"></i> 5</li>
-                        <li>MuzzleSalvoSize: <s>2</s> <i class="fa-solid fa-arrow-right"></i> 3</li>
-                        <li>DPS: <s>250</s> <i class="fa-solid fa-arrow-right"></i> 225</li>
-                    </ul>
+                <article id="nanaite_torpedo_launcher_enhancement" class="PatchCard">
+                    <!-- Card Header Section -->
+                    <header class="PatchCardHeader">
+                        <div class="UnitInfo">
+                            <img src="/assets/images/Enhancements/cybran/torp.png" class="UnitIcon" alt="Nanite Torpedo Launcher"/>
+                            <div class="UnitDetails">
+                                <div class="UnitNameRow">
+                                    <h3 class="UnitName">Nanite Torpedo Launcher</h3>
+                                    <span class="UnitCode">URL0001</span>
+                                </div>
+                                <span class="FactionBadge cybran">Cybran</span>
+                            </div>
+                        </div>
+                        <div class="ChangeTypeBadge nerf">Nerf</div>
+                    </header>
+
+                    <!-- Card Content Section -->
+                    <div class="CardContent">
+                        <p class="ChangeDescription">When the Nano-Repair upgrade was introduced to the Cybran ACU, the MuzzleSalvoSize of its torpedo upgrade was nerfed to prevent the combination from being too oppressive. Unfortunately, this change resulted in the torpedo upgrade being weak even against lower quantities of torpedo defenses, since a single anti-torpedo projectile can negate 500 damage. To alleviate this issue, the torpedo upgrade now launches 3 instead of 2 torpedoes, but at a slightly lower DPS. Additionally, as with most other Cybran torpedoes, their damage is now dealt in multiple pulses.</p>
+
+                        <div class="ChangesList">
+                            <div class="ChangeGroup">
+                                <ul class="Changes">
+                                    <li class="nerf">
+                                        <span class="ChangeLabel">Damage:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">500</s> 
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                            <strong class="NewValue">60</strong>
+                                        </span>
+                                    </li>
+                                    <li class="buff">
+                                        <span class="ChangeLabel">Damage over Time Pulses:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">0</s> 
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                            <strong class="NewValue">5</strong>
+                                        </span>
+                                    </li>
+                                    <li class="buff">
+                                        <span class="ChangeLabel">MuzzleSalvoSize:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">2</s> 
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                            <strong class="NewValue">3</strong>
+                                        </span>
+                                    </li>
+                                    <li class="nerf">
+                                        <span class="ChangeLabel">DPS:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">250</s> 
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                            <strong class="NewValue">225</strong>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </article>
-
-
             </section>
         </div>
 
         <aside class="Sidebar" role="navigation" aria-label="Sidebar navigation">
-            <div class="IconSidebar">
-                <h2 class="IconSidebarTitle">Contents</h2>
-                <div class="IconSidebarSpace"></div>
-                <nav class="IconSidebarSubgrid">
-                    <h3 class="IconSidebarSubtitle">Land</h3>
+            <div class="ContentSidemenu">
+                <!-- Quick Navigation Header -->
+                <header class="SidemenuHeader">
+                    <h2 class="SidemenuTitle">
+                        <i class="fas fa-list-ul" aria-hidden="true"></i>
+                        Quick Navigation
+                    </h2>
+                    <div class="ProgressBar">
+                        <div class="ProgressFill" id="readingProgress"></div>
+                    </div>
+                </header>
 
-                    <a href="#t2flack"><img src="/assets/images/units/aeon/land/T2HoverTank.png" alt="T2 Hover Flack Thumbnail" loading="lazy"/></a>
-                    <a href="#t2mobilebomb"><img src="/assets/images/units/cybran/land/T2MobileBomb.png" alt="T2 Mobile Bomb Thumbnail" loading="lazy"/></a>
-                    <a href="#t2hovertank"><img src="/assets/images/units/aeon/land/T2HoverTank.png" alt="T2 Hover Tank Thumbnail" loading="lazy"/></a>
-                    <a href="#t3empmml"><img src="/assets/images/units/cybran/land/T3MobileAA.png" alt="T3 Mobile EMP Thumbnail" loading="lazy"/></a>
-                    <a href="#t4exp"><img src="/assets/images/units/sera/land/T4Bot.png" alt="T4 Bot Thumbnail" loading="lazy"/></a>
-                    
-                    <h3 class="IconSidebarSubtitle">Air</h3>
-                    <a href="#t2bomb"><img src="/assets/images/units/aeon/air/T2Mercy.png" alt="T2 Mercy Thumbnail" loading="lazy"/></a>
-                    <a href="#t3asf"><img src="/assets/images/units/uef/air/T3ASF.png" alt="T3 ASF Thumbnail" loading="lazy"/></a>
-                    <a href="#t4air"><img src="/assets/images/units/cybran/air/T4Gunship.png" alt="T4 Gunship Thumbnail" loading="lazy"/></a>
-                    <h3 class="IconSidebarSubtitle">Naval</h3>
-                    <a href="#t2cruisers"><img src="/assets/images/units/aeon/naval/T2Cruiser.png" alt="T2 Cruiser Thumbnail" loading="lazy"/></a>
-                    <a href="#t3aircraftcarrier"><img src="/assets/images/units/cybran/naval/T3AircraftCarrier.png" alt="T3 Aircraft Carrier Thumbnail" loading="lazy"/></a>
+                <!-- Quick Actions Panel -->
+                <div class="QuickActions">
+                    <button class="QuickActionBtn" onclick="scrollToTop()" title="Back to Top">
+                        <i class="fas fa-arrow-up"></i>
+                        <span>Top</span>
+                    </button>
+                    <button class="QuickActionBtn" onclick="toggleAllSections()" title="Expand/Collapse All">
+                        <i class="fas fa-expand-arrows-alt"></i>
+                        <span>Toggle</span>
+                    </button>
+                    <button class="QuickActionBtn" onclick="printPage()" title="Print Page">
+                        <i class="fas fa-print"></i>
+                        <span>Print</span>
+                    </button>
+                </div>
 
-                    <h3 class="IconSidebarSubtitle">ACU's</h3>
-                    <a href="#cybranacu"><img src="/assets/images/units/cybran/land/ACU.png" alt="Cybran ACU Thumbnail" loading="lazy"/></a>
+                <!-- Content Navigation -->
+                <nav class="ContentNav" role="navigation">
+                    <!-- Intro Section -->
+                    <div class="NavSection active">
+                        <button class="SectionToggle" aria-expanded="true" data-target="intro-items">
+                            <i class="fas fa-info-circle SectionIcon"></i>
+                            <span class="SectionTitle">Introduction</span>
+                            <span class="ItemCount">1</span>
+                            <i class="fas fa-chevron-down ToggleIcon"></i>
+                        </button>
+                        <ul class="SectionItems" id="intro-items">
+                            <li class="NavItem">
+                                <a href="#Intro" class="NavLink">
+                                    <i class="fas fa-scroll"></i>
+                                    <span>Patch Overview</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Land Section -->
+                    <div class="NavSection">
+                        <button class="SectionToggle" aria-expanded="false" data-target="land-items">
+                            <i class="fas fa-tractor SectionIcon"></i>
+                            <span class="SectionTitle">Land Units</span>
+                            <span class="ItemCount">7</span>
+                            <i class="fas fa-chevron-down ToggleIcon"></i>
+                        </button>
+                        <ul class="SectionItems" id="land-items">
+                            <li class="NavItem">
+                                <a href="#aeon_t2_flack" class="NavLink">
+                                    <img src="/assets/images/units/aeon/land/T2MobileFlak.png" class="UnitThumb" alt="Ascendant"/>
+                                    <div class="LinkContent">
+                                        <span class="UnitName">Ascendant</span>
+                                        <span class="ChangeType nerf">Nerf</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="NavItem">
+                                <a href="#sera_t2_flack" class="NavLink">
+                                    <img src="/assets/images/units/sera/land/T2HoverFlack.png" class="UnitThumb" alt="Iashavoh"/>
+                                    <div class="LinkContent">
+                                        <span class="UnitName">Iashavoh</span>
+                                        <span class="ChangeType nerf">Nerf</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="NavItem">
+                                <a href="#cybran_t2_mobilebomb" class="NavLink">
+                                    <img src="/assets/images/units/cybran/land/T2MobileBomb.png" class="UnitThumb" alt="Fire Beetle"/>
+                                    <div class="LinkContent">
+                                        <span class="UnitName">Fire Beetle</span>
+                                        <span class="ChangeType buff">Buff</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="NavItem">
+                                <a href="#aeon_t2_hovertank" class="NavLink">
+                                    <img src="/assets/images/units/aeon/land/T2HoverTank.png" class="UnitThumb" alt="Blaze"/>
+                                    <div class="LinkContent">
+                                        <span class="UnitName">Blaze</span>
+                                        <span class="ChangeType nerf">Nerf</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="NavItem">
+                                <a href="#sera_t2_hovertank" class="NavLink">
+                                    <img src="/assets/images/units/sera/land/T2HoverTank.png" class="UnitThumb" alt="Yenzyne"/>
+                                    <div class="LinkContent">
+                                        <span class="UnitName">Yenzyne</span>
+                                        <span class="ChangeType nerf">Nerf</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="NavItem">
+                                <a href="#cybran_t2_hovertank" class="NavLink">
+                                    <img src="/assets/images/units/cybran/land/T2HoverTank.png" class="UnitThumb" alt="Wagner"/>
+                                    <div class="LinkContent">
+                                        <span class="UnitName">Wagner</span>
+                                        <span class="ChangeType nerf">Nerf</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="NavItem">
+                                <a href="#sera_t4_bot" class="NavLink">
+                                    <img src="/assets/images/units/sera/land/T4Bot.png" class="UnitThumb" alt="Ythotha"/>
+                                    <div class="LinkContent">
+                                        <span class="UnitName">Ythotha</span>
+                                        <span class="ChangeType nerf">Nerf</span>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+
+                    <!-- Air Section -->
+                    <div class="NavSection">
+                        <button class="SectionToggle" aria-expanded="false" data-target="air-items">
+                            <i class="fas fa-plane SectionIcon"></i>
+                            <span class="SectionTitle">Air Units</span>
+                            <span class="ItemCount">3</span>
+                            <i class="fas fa-chevron-down ToggleIcon"></i>
+                        </button>
+                        <ul class="SectionItems" id="air-items">
+                            <li class="NavItem">
+                                <a href="#aeon_t2_guided_missile" class="NavLink">
+                                    <img src="/assets/images/units/aeon/air/T2Mercy.png" class="UnitThumb" alt="Mercy"/>
+                                    <div class="LinkContent">
+                                        <span class="UnitName">Mercy</span>
+                                        <span class="ChangeType buff">Buff</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="NavItem">
+                                <a href="#t3_asf" class="NavLink">
+                                    <img src="/assets/images/units/uef/air/T3ASF.png" class="UnitThumb" alt="T3 ASF"/>
+                                    <div class="LinkContent">
+                                        <span class="UnitName">T3 ASF</span>
+                                        <span class="ChangeType nerf">Nerf</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="NavItem">
+                                <a href="#cybran_t4_gunship" class="NavLink">
+                                    <img src="/assets/images/units/cybran/air/T4Gunship.png" class="UnitThumb" alt="Soul Ripper"/>
+                                    <div class="LinkContent">
+                                        <span class="UnitName">Soul Ripper</span>
+                                        <span class="ChangeType buff">Buff</span>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Naval Section -->
+                    <div class="NavSection">
+                        <button class="SectionToggle" aria-expanded="false" data-target="naval-items">
+                            <i class="fas fa-ship SectionIcon"></i>
+                            <span class="SectionTitle">Naval Units</span>
+                            <span class="ItemCount">2</span>
+                            <i class="fas fa-chevron-down ToggleIcon"></i>
+                        </button>
+                        <ul class="SectionItems" id="naval-items">
+                            <li class="NavItem">
+                                <a href="#aeon_t2_cruiser" class="NavLink">
+                                    <img src="/assets/images/units/aeon/naval/T2Cruiser.png" class="UnitThumb" alt="Aeon Cruiser"/>
+                                    <div class="LinkContent">
+                                        <span class="UnitName">Aeon Cruiser</span>
+                                        <span class="ChangeType buff">Buff</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="NavItem">
+                                <a href="#aeon_t3_aircraft_carrier" class="NavLink">
+                                    <img src="/assets/images/units/cybran/naval/T3AircraftCarrier.png" class="UnitThumb" alt="T3 Cybran & Seraphim Aircraft Carriers"/>
+                                    <div class="LinkContent">
+                                        <span class="UnitName">T3 Cybran & Seraphim Aircraft Carriers</span>
+                                        <span class="ChangeType buff">Buff</span>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- ACU/SACU Section -->
+                    <div class="NavSection">
+                        <button class="SectionToggle" aria-expanded="false" data-target="acu-sacu-items">
+                            <i class="fas fa-robot SectionIcon"></i>
+                            <span class="SectionTitle">ACUs & SACUs Units</span>
+                            <span class="ItemCount">1</span>
+                            <i class="fas fa-chevron-down ToggleIcon"></i>
+                        </button>
+                        <ul class="SectionItems" id="acu-sacu-items">
+                            <li class="NavItem">
+                                <a href="#nanaite_torpedo_launcher_enhancement" class="NavLink">
+                                    <img src="/assets/images/Enhancements/cybran/torp.png" class="UnitThumb" alt="Nanite Torpedo Launcher"/>
+                                    <div class="LinkContent">
+                                        <span class="UnitName">Nanite Torpedo Launcher</span>
+                                        <span class="ChangeType nerf">Nerf</span>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </nav>
+
+                <!-- Footer Info -->
+                <div class="SidemenuFooter">
+                    <div class="PatchStats">
+                        <div class="StatItem">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span>August 15, 2024</span>
+                        </div>
+                        <div class="StatItem">
+                            <i class="fas fa-balance-scale"></i>
+                            <span>15 Changes</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </aside>
     </main>
@@ -260,8 +954,8 @@
                 <h4 class="FooterTitle">About</h4>
                 <div class="FooterInfo">
                     <p class="PatchInfo">
-                        <strong>Patch 3822</strong><br>
-                        Released: May 19th, 2025
+                        <strong>Patch 3813</strong><br>
+                        Released: August 15th, 2024
                     </p>
                     <p class="Copyright">
                         © 2015-2025 <strong>FAForever</strong><br>
@@ -293,8 +987,8 @@
         <!-- Bottom Bar -->
         <div class="FooterBottom">
             <div class="FooterBottomContent">
-                <span class="LastUpdated">Last updated: <time datetime="2025-05-19">May 19th, 2025</time></span>
-                <span class="BuildInfo">Balance Team • Patch Notes v3822</span>
+                <span class="LastUpdated">Last updated: <time datetime="2024-08-15">August 15th, 2024</time></span>
+                <span class="BuildInfo">Balance Team • Patch Notes v3813</span>
             </div>
         </div>
     </footer>
