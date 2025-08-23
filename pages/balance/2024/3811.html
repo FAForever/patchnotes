@@ -2,68 +2,261 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="FAForever Patch 3811 page with detailed balance updates for the T4 Fatboy and other units." />
+    <meta name="description" content="FAF Patch 3811 balance update: T4 Fatboy shield, anti-air, and collision size tweaks. Minor adjustments to select units." />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FAForever Patch 3811 - Balance Update</title>
-    <link rel="stylesheet" href="/style/balance.css"/>
-    <script src="/scripts/themeSwitch.js" defer></script>
+
+    <!-- Critical CSS for immediate loading -->
+    <link rel="stylesheet" href="/style/critical.css?v=1724259600" />
+
+    <!-- Load head configuration and shared resources -->
+    <script src="/scripts/headConfig.js?v=1724259600"></script>
 </head>
 <body>
     <main class="Grid">
         <div class="Content">
-            <section id="Intro">
-                <header class="FlexboxContainer">
-                    <h1 class="FlexGrow-4">Patch 3811</h1>
-                    <h4 class="FlexGrow-1" id="date">Date: <time datetime="2024-07-07">July 7th 2024</time></h4>
+            <section id="Intro" class="IntroSection">
+                <header class="PatchHeader">
+                    <div class="PatchTitleGroup">
+                        <h1 class="PatchTitle">Patch 3811</h1>
+                        <span class="PatchVersion">Balance Update</span>
+                    </div>
+                    <div class="PatchMeta">
+                        <time datetime="2024-07-07" class="PatchDate">July 7th, 2024</time>
+                        <span class="PatchStatus">Released</span>
+                    </div>
                 </header>
                 <p class="patchDescription">This balance update comprises minor adjustments to certain units, including changes to the T4 Fatboy.</p>
-                <h3>-- The Balance Team</h3>
-                <hr>
+                
+                <footer class="PatchCredits">
+                    <div class="TeamSignature">
+                        <span class="TeamIcon">⚖️</span>
+                        <span class="TeamName">The Balance Team</span>
+                    </div>
+                </footer>
+                
+                <hr class="SectionDivider">
             </section>
 
-            <section>
+            <section id="Land">
                 <h2>Land Units</h2>
-                <article id="t4fatboy" class="Card">
-                    <h3><img src="/assets/images/units/uef/land/T4Fatboy.png" alt="T4 Fatboy Unit"/> T4 Fatboy</h3>
-                    <p>The Fatboy has been in an awkward position for some time. These changes aim to address the issues while preserving its identity.</p>
 
-                    <ul>
-                        <li>Shield:
-                            <ul>
-                                <li>Recharge Time: <s>120</s> <i class="fa-solid fa-arrow-right"></i> 75/s</li>
-                                <li>Regeneration Rate: <s>100</s> <i class="fa-solid fa-arrow-right"></i> 200/s</li>
-                            </ul>
-                        </li>
-                        <li>Anti-Air Guns:
-                            <ul>
-                                <li>Range: <s>45</s> <i class="fa-solid fa-arrow-right"></i> 55</li>
-                                <li>Damage: <s>20</s> <i class="fa-solid fa-arrow-right"></i> 40</li>
-                            </ul>
-                        </li>
-                        <li>Collision Size:
-                            <ul>
-                                <li>Uniform Scale: <s>2.22</s> <i class="fa-solid fa-arrow-right"></i> 2.15</li>
-                                <li>Shield Size: <s>25</s> <i class="fa-solid fa-arrow-right"></i> 24</li>
-                                <li>Size X: <s>5.5</s> <i class="fa-solid fa-arrow-right"></i> 5.2</li>
-                                <li>Size Y: <s>1.5</s> <i class="fa-solid fa-arrow-right"></i> 1.4</li>
-                                <li>Size Z: <s>8</s> <i class="fa-solid fa-arrow-right"></i> 7.5</li>
-                            </ul>
-                        </li>
-                    </ul>
+                <article id="uef_t4_mobile_factory" class="PatchCard">
+                    <!-- Card Header Section -->
+                    <header class="PatchCardHeader">
+                        <div class="UnitInfo">
+                            <img src="/assets/images/units/uef/land/T4Fatboy.png" class="UnitIcon" alt="Fatboy"/>
+                            <div class="UnitDetails">
+                                <div class="UnitNameRow">
+                                    <h3 class="UnitName">Fatboy</h3>
+                                    <span class="UnitCode">UAL0205</span>
+                                </div>
+                                <span class="FactionBadge uef">UEF</span>
+                            </div>
+                        </div>
+                        <div class="ChangeTypeBadge buff">Buff</div>
+                    </header>
+
+                    <!-- Card Content Section -->
+                    <div class="CardContent">
+                        <p class="ChangeDescription">The Fatboy has been in an awkward position for some time. These changes aim to address the issues while preserving its identity.</p>
+
+                        <div class="ChangesList">
+                            <!-- Defence -->
+                            <div class="ChangeGroup">
+                                <h4 class="ChangeGroupTitle">
+                                    Defence
+                                </h4>
+                                <ul class="Changes">
+                                    <li class="sub-header"><strong>Shield Generator</strong></li>
+                                    <li class="buff">
+                                        <span class="ChangeLabel">Recharge Time:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">120/s</s> 
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                            <strong class="NewValue">75/s</strong>
+                                        </span>
+                                    </li>
+                                    <li class="nerf">
+                                        <span class="ChangeLabel">Regeneration Rate:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">100/s</s> 
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                            <strong class="NewValue">200/s</strong>
+                                        </span>
+                                    </li>
+                                    <li class="nerf">
+                                        <span class="ChangeLabel">Shield Size:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">25</s> 
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                            <strong class="NewValue">24</strong>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <!-- Weapons -->
+                            <div class="ChangeGroup">
+                                <h4 class="ChangeGroupTitle">
+                                    Weapons
+                                </h4>
+                                <ul class="Changes">
+                                    <li class="sub-header"><strong>Anti-Air Guns</strong></li>
+                                    <li class="buff">
+                                        <span class="ChangeLabel">Range:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">45</s> 
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                            <strong class="NewValue">55</strong>
+                                        </span>
+                                    </li>
+                                    <li class="buff">
+                                        <span class="ChangeLabel">Damage:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">20</s> 
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                            <strong class="NewValue">40</strong>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <!-- Physics -->
+                            <div class="ChangeGroup">
+                                <h4 class="ChangeGroupTitle">
+                                    Physics
+                                </h4>
+                                <ul class="Changes">
+                                    <li class="buff">
+                                        <span class="ChangeLabel">Uniform Scale:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">2.22</s> 
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                            <strong class="NewValue">2.15</strong>
+                                        </span>
+                                    </li>
+                                    <li class="sub-header"><strong>Collision Size</strong></li>
+                                    <li class="buff">
+                                        <span class="ChangeLabel">Size X:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">5.5</s> 
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                            <strong class="NewValue">5.2</strong>
+                                        </span>
+                                    </li>
+                                    <li class="buff">
+                                        <span class="ChangeLabel">Size Y:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">1.5</s> 
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                            <strong class="NewValue">1.4</strong>
+                                        </span>
+                                    </li>
+                                    <li class="buff">
+                                        <span class="ChangeLabel">Size Z:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">8</s> 
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                            <strong class="NewValue">7.5</strong>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </article>
-            </section>
+
+            </section>  
         </div>
 
         <aside class="Sidebar" role="navigation" aria-label="Sidebar navigation">
-            <div class="IconSidebar">
-                <h2 class="IconSidebarTitle">Contents</h2>
-                <div class="IconSidebarSpace"></div>
-                <nav class="IconSidebarSubgrid">
-                    <h3 class="IconSidebarSubtitle">Land</h3>
-                    <a href="#t4fatboy"><img src="/assets/images/units/uef/land/T4Fatboy.png" alt="T4 Fatboy Thumbnail" loading="lazy"/></a>
+            <div class="ContentSidemenu">
+                <!-- Quick Navigation Header -->
+                <header class="SidemenuHeader">
+                    <h2 class="SidemenuTitle">
+                        <i class="fas fa-list-ul" aria-hidden="true"></i>
+                        Quick Navigation
+                    </h2>
+                    <div class="ProgressBar">
+                        <div class="ProgressFill" id="readingProgress"></div>
+                    </div>
+                </header>
+
+                <!-- Quick Actions Panel -->
+                <div class="QuickActions">
+                    <button class="QuickActionBtn" onclick="scrollToTop()" title="Back to Top">
+                        <i class="fas fa-arrow-up"></i>
+                        <span>Top</span>
+                    </button>
+                    <button class="QuickActionBtn" onclick="toggleAllSections()" title="Expand/Collapse All">
+                        <i class="fas fa-expand-arrows-alt"></i>
+                        <span>Toggle</span>
+                    </button>
+                    <button class="QuickActionBtn" onclick="printPage()" title="Print Page">
+                        <i class="fas fa-print"></i>
+                        <span>Print</span>
+                    </button>
+                </div>
+
+                <!-- Content Navigation -->
+                <nav class="ContentNav" role="navigation">
+                    <!-- Intro Section -->
+                    <div class="NavSection active">
+                        <button class="SectionToggle" aria-expanded="true" data-target="intro-items">
+                            <i class="fas fa-info-circle SectionIcon"></i>
+                            <span class="SectionTitle">Introduction</span>
+                            <span class="ItemCount">1</span>
+                            <i class="fas fa-chevron-down ToggleIcon"></i>
+                        </button>
+                        <ul class="SectionItems" id="intro-items">
+                            <li class="NavItem">
+                                <a href="#Intro" class="NavLink">
+                                    <i class="fas fa-scroll"></i>
+                                    <span>Patch Overview</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Land Section -->
+                    <div class="NavSection">
+                        <button class="SectionToggle" aria-expanded="false" data-target="land-items">
+                            <i class="fas fa-tractor SectionIcon"></i>
+                            <span class="SectionTitle">Land Units</span>
+                            <span class="ItemCount">7</span>
+                            <i class="fas fa-chevron-down ToggleIcon"></i>
+                        </button>
+                        <ul class="SectionItems" id="land-items">
+                            <li class="NavItem">
+                                <a href="#uef_t4_mobile_factory" class="NavLink">
+                                    <img src="/assets/images/units/uef/land/T4Fatboy.png" class="UnitThumb" alt="Fatboy"/>
+                                    <div class="LinkContent">
+                                        <span class="UnitName">Fatboy</span>
+                                        <span class="ChangeType buff">Buff</span>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </nav>
+
+                <!-- Footer Info -->
+                <div class="SidemenuFooter">
+                    <div class="PatchStats">
+                        <div class="StatItem">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span>July 7th, 2024</span>
+                        </div>
+                        <div class="StatItem">
+                            <i class="fas fa-balance-scale"></i>
+                            <span>1 Change</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </aside>
+
     </main>
 
     <footer class="SiteFooter">
@@ -103,8 +296,8 @@
                 <h4 class="FooterTitle">About</h4>
                 <div class="FooterInfo">
                     <p class="PatchInfo">
-                        <strong>Patch 3822</strong><br>
-                        Released: May 19th, 2025
+                        <strong>Patch 3811</strong><br>
+                        Released: July 7th, 2024
                     </p>
                     <p class="Copyright">
                         © 2015-2025 <strong>FAForever</strong><br>
@@ -136,8 +329,8 @@
         <!-- Bottom Bar -->
         <div class="FooterBottom">
             <div class="FooterBottomContent">
-                <span class="LastUpdated">Last updated: <time datetime="2025-05-19">May 19th, 2025</time></span>
-                <span class="BuildInfo">Balance Team • Patch Notes v3822</span>
+                <span class="LastUpdated">Last updated: <time datetime="2024-07-07">July 7th, 2024</time></span>
+                <span class="BuildInfo">Balance Team • Patch Notes v3811</span>
             </div>
         </div>
     </footer>
