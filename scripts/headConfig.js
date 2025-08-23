@@ -77,7 +77,7 @@
     function addSharedScripts() {
         const scripts = [
             { src: '/scripts/coreUI.js?v=1724260000&cache=bypass', defer: false },
-            { src: '/scripts/contentSidemenu.js?v=1724260000&cache=bypass', defer: true }
+            { src: '/scripts/contentSidemenu.js?v=1724260000&cache=bypass', defer: false }
         ];
         
         scripts.forEach(config => {
@@ -88,6 +88,12 @@
                 if (config.defer) {
                     script.defer = true;
                 }
+                script.onload = function() {
+                    console.log('Script loaded:', config.src);
+                };
+                script.onerror = function() {
+                    console.error('Script failed to load:', config.src);
+                };
                 document.head.appendChild(script);
             }
         });

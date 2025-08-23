@@ -3,16 +3,63 @@
  * Provides interactive functionality for the content navigation sidebar
  */
 
+// Ensure global functions are available immediately
+window.scrollToTop = function() {
+    console.log('scrollToTop called');
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+};
+
+window.toggleAllSections = function() {
+    console.log('toggleAllSections called');
+    const sections = document.querySelectorAll('.NavSection');
+    const anyExpanded = Array.from(sections).some(section => 
+        !section.classList.contains('collapsed')
+    );
+    
+    sections.forEach(section => {
+        const toggle = section.querySelector('.SectionToggle');
+        if (toggle) {
+            if (anyExpanded) {
+                section.classList.add('collapsed');
+                toggle.setAttribute('aria-expanded', 'false');
+            } else {
+                section.classList.remove('collapsed');
+                toggle.setAttribute('aria-expanded', 'true');
+            }
+        }
+    });
+};
+
+window.printPage = function() {
+    console.log('printPage called');
+    window.print();
+};
+
 // Initialize sidemenu functionality when DOM is loaded
 document.addEventListener('DOMContentLoaded', function() {
+    console.log('ContentSidemenu: DOM loaded, initializing...');
     initContentSidemenu();
 });
 
+// Also initialize immediately if DOM is already loaded
+if (document.readyState === 'loading') {
+    // DOM is still loading
+} else {
+    // DOM is already loaded
+    console.log('ContentSidemenu: DOM already loaded, initializing immediately...');
+    initContentSidemenu();
+}
+
 function initContentSidemenu() {
+    console.log('ContentSidemenu: Starting initialization...');
     initSectionToggles();
     initScrollProgress();
     initActiveNavigation();
     initQuickActions();
+    console.log('ContentSidemenu: Initialization complete');
 }
 
 /**
@@ -20,23 +67,73 @@ function initContentSidemenu() {
  */
 function initSectionToggles() {
     const sectionToggles = document.querySelectorAll('.SectionToggle');
+    console.log('ContentSidemenu: Found', sectionToggles.length, 'section toggles');
     
-    sectionToggles.forEach(toggle => {
-        toggle.addEventListener('click', function() {
-            const targetId = this.getAttribute('data-target');
-            const section = this.closest('.NavSection');
-            const isExpanded = this.getAttribute('aria-expanded') === 'true';
-            
-            // Toggle section
-            if (isExpanded) {
-                section.classList.add('collapsed');
-                this.setAttribute('aria-expanded', 'false');
-            } else {
-                section.classList.remove('collapsed');
-                this.setAttribute('aria-expanded', 'true');
-            }
+    sectionToggles.forEach((toggle, index) => {
+        console.log(`Setting up toggle ${index}:`, toggle);
+        
+        // Ensure the toggle is clickable
+        toggle.style.cursor = 'pointer';
+        toggle.setAttribute('role', 'button');
+        toggle.setAttribute('tabindex', '0');
+        
+        // Remove any existing listeners to prevent duplicates
+        toggle.removeEventListener('click', handleToggleClick);
+        toggle.addEventListener('click', handleToggleClick);
+        
+        // Add keyboard support
+        toggle.removeEventListener('keydown', handleToggleKeydown);
+        toggle.addEventListener('keydown', handleToggleKeydown);
+        
+        // Add visual feedback
+        toggle.addEventListener('mouseenter', function() {
+            this.style.backgroundColor = 'rgba(255, 255, 255, 0.1)';
+        });
+        
+        toggle.addEventListener('mouseleave', function() {
+            this.style.backgroundColor = 'transparent';
         });
     });
+}
+
+function handleToggleClick(e) {
+    e.preventDefault();
+    console.log('Toggle clicked:', this);
+    
+    const section = this.closest('.NavSection');
+    const sectionItems = section.querySelector('.SectionItems');
+    const toggleIcon = this.querySelector('.ToggleIcon');
+    const isExpanded = this.getAttribute('aria-expanded') === 'true';
+    
+    console.log('Current state - isExpanded:', isExpanded);
+    console.log('Section:', section);
+    console.log('SectionItems:', sectionItems);
+    
+    // Toggle section
+    if (isExpanded) {
+        // Collapse
+        section.classList.add('collapsed');
+        this.setAttribute('aria-expanded', 'false');
+        if (toggleIcon) {
+            toggleIcon.style.transform = 'rotate(-90deg)';
+        }
+        console.log('Section collapsed');
+    } else {
+        // Expand
+        section.classList.remove('collapsed');
+        this.setAttribute('aria-expanded', 'true');
+        if (toggleIcon) {
+            toggleIcon.style.transform = 'rotate(0deg)';
+        }
+        console.log('Section expanded');
+    }
+}
+
+function handleToggleKeydown(e) {
+    if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        this.click();
+    }
 }
 
 /**
@@ -169,11 +266,13 @@ document.addEventListener('click', function(e) {
     const link = e.target.closest('.NavLink');
     if (link && link.getAttribute('href').startsWith('#')) {
         e.preventDefault();
+        console.log('NavLink clicked:', link.getAttribute('href'));
         
         const targetId = link.getAttribute('href').substring(1);
         const targetElement = document.getElementById(targetId);
         
         if (targetElement) {
+            console.log('Scrolling to element:', targetElement);
             const headerOffset = 80; // Account for any fixed headers
             const elementPosition = targetElement.getBoundingClientRect().top;
             const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
@@ -182,6 +281,12 @@ document.addEventListener('click', function(e) {
                 top: offsetPosition,
                 behavior: 'smooth'
             });
+            
+            // Update active state immediately
+            document.querySelectorAll('.NavLink').forEach(l => l.classList.remove('active'));
+            link.classList.add('active');
+        } else {
+            console.warn('Target element not found for:', targetId);
         }
     }
 });

@@ -158,12 +158,70 @@
   transition: transform 0.3s ease, color 0.3s ease;
 }
 
+/* Collapsed state styling */
 .NavSection.collapsed .ToggleIcon {
   transform: rotate(-90deg);
 }
 
 .NavSection.collapsed .SectionItems {
-  display: none;
+  display: none !important;
+}
+
+/* Section toggle button styling */
+.SectionToggle {
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  border: none;
+  background: transparent;
+  width: 100%;
+  text-align: left;
+}
+
+.SectionToggle:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.SectionToggle:focus {
+  outline: 2px solid rgba(135, 206, 250, 0.5);
+  outline-offset: 2px;
+}
+
+/* Enhanced section items with smooth transitions */
+.NavSection .SectionItems {
+    transition: all 0.3s ease;
+    opacity: 1;
+    display: block;
+    max-height: 1000px;
+    overflow: hidden;
+}
+
+.NavSection.collapsed .SectionItems {
+    display: none !important;
+    opacity: 0;
+    max-height: 0;
+}
+
+/* Toggle icon animation */
+.ToggleIcon {
+    transition: transform 0.3s ease;
+}
+
+.NavSection.collapsed .ToggleIcon {
+    transform: rotate(-90deg);
+}/* Quick action buttons styling */
+.QuickActionBtn {
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.QuickActionBtn:hover {
+  background-color: rgba(135, 206, 250, 0.1);
+  transform: translateY(-2px);
+}
+
+/* Visual feedback for sidemenu sections */
+.NavSection {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 /* Section Items List */
