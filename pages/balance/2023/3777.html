@@ -1,211 +1,575 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8" />
     <meta name="description" content="FAF Patch 3777 page" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Patch 3777</title>
-    <link rel="stylesheet" href="/style/balance.css" />
-    <script src="/scripts/themeSwitch.js"></script>
+    
+    <title>FAForever Patch 3777 - Balance Update</title>
+
+    <!-- Critical CSS for immediate loading -->
+    <link rel="stylesheet" href="/style/critical.css?v=1724259600" />
+
+    <!-- Load head configuration and shared resources -->
+    <script src="/scripts/headConfig.js?v=1724259600"></script>
 </head>
 <body>
     <main class="Grid">
         <div class="Content">
-            <div id="Intro">
-                <header class="FlexboxContainer">
-                    <h1 class="FlexGrow-4">Patch 3777</h1>
-                    <h4 class="FlexGrow-1" id="date">Date:<i> December 24th 2023</i></h4>
+            <section id="Intro" class="IntroSection">
+                <header class="PatchHeader">
+                    <div class="PatchTitleGroup">
+                        <h1 class="PatchTitle">Patch 3777</h1>
+                        <span class="PatchVersion">Balance Update</span>
+                    </div>
+                    <div class="PatchMeta">
+                        <time datetime="2023-12-23" class="PatchDate">December 23rd, 2023</time>
+                        <span class="PatchStatus">Released</span>
+                    </div>
                 </header>
-                <p class="patchDescription">This is a Small patch that aims at fixes a few minor units and added the new Torrent Change as well as the ability to use billy nuke &amp; teleport. <br>
-                We wish you good luck and much fun playing with the new patch!</p>
-                <h3>-- Balance Team</h3>
-                <hr>
-            </div>
+                <p class="patchDescription">This is a Small patch that aims at fixes a few minor units and added the new Torrent Change as well as the ability to use billy nuke &amp; teleport. We wish you good luck and much fun playing with the new patch!</p>
+                
+                <footer class="PatchCredits">
+                    <div class="TeamSignature">
+                        <span class="TeamIcon">⚖️</span>
+                        <span class="TeamName">The Balance Team</span>
+                    </div>
+                </footer>
+                
+                <hr class="SectionDivider">
+            </section>
 
-            <h2>Land</h2>
+            <section id="land">
+                <h2>Land</h2>
+                    
+                <article id="cybran_t2_mobile_stealth" class="PatchCard">
+                    <!-- Card Header Section -->
+                    <header class="PatchCardHeader">
+                        <div class="UnitInfo">
+                            <img src="/assets/images/units/cybran/land/T2MobileStealth.png" class="UnitIcon" alt="Deceiver"/>
+                            <div class="UnitDetails">
+                                <div class="UnitNameRow">
+                                    <h3 class="UnitName">Deceiver</h3>
+                                    <span class="UnitCode">URL0306</span>
+                                </div>
+                                <span class="FactionBadge cybran">Cybran</span>
+                            </div>
+                        </div>
+                        <div class="ChangeTypeBadge buff">Buff</div>
+                    </header>
 
-            <div id="land">
+                    <!-- Card Content Section -->
+                    <div class="PatchCardContent">
+                        <p class="ChangeDescription">Unlike what the game makes you believe, intel works in a grid-like fashion. The cell size of stealth field intel is 4. Therefore, the previous increase of the radius from 20 to 23 has effectively no impact. The Deceiver now receives the buff it was intended to receive after increasing the vision range of a wide range of units.</p>
 
-                <div id="deceiver" class="Card">
-                    <h3><img src="/assets/images/units/cybran/land/T2MobileStealth.png"> Deceiver</h3>
-                    <p>Unlike what the game makes you believe, intel works in a grid-like fashion. The cell size of stealth field intel is 4. Therefore, the previous increase of the radius from 20 to 23 has effectively no impact. The Deceiver now receives the buff it was intended to receive after increasing the vision range of a wide range of units.</p>
-                    <ul>
-                        <li>Stealth Range: <s>23</s> <i class="fa-solid fa-arrow-right"></i> 24</li>
-                    </ul>
+                        <div class="ChangesList">
+                            <div class="ChangeGroup">
+                                <h4 class="ChangeGroupTitle">
+                                    Intel
+                                </h4>
+                                <ul class="Changes">
+                                    <li class="buff">
+                                        <span class="ChangeLabel">Stealth Range:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">23</s> 
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                            <strong class="NewValue">24</strong>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
 
-                </div>
+                <article id="sera_t3_tank" class="PatchCard">
+                    <!-- Card Header Section -->
+                    <header class="PatchCardHeader">
+                        <div class="UnitInfo">
+                            <img src="/assets/images/units/sera/land/T3Tank.png" class="UnitIcon" alt="Othuum"/>
+                            <div class="UnitDetails">
+                                <div class="UnitNameRow">
+                                    <h3 class="UnitName">Othuum</h3>
+                                    <span class="UnitCode">XSL0303</span>
+                                </div>
+                                <span class="FactionBadge sera">Seraphim</span>
+                            </div>
+                        </div>
+                        <div class="ChangeTypeBadge buff">Buff</div>
+                    </header>
 
-                <div id="othuum" class="Card">
-                    <h3><img src="/assets/images/units/sera/land/T3Tank.png">Othuum</h3>
-                    <ul>
-                      <li>MaxSpeedReverse: <s>0</s> <i class="fa-solid fa-arrow-right"></i> 2.85</li>
-                      <li>BackUpDistance: <s>0</s> <i class="fa-solid fa-arrow-right"></i> 15</li>
-                      <li>RotateOnSpot: <s>true</s> <i class="fa-solid fa-arrow-right"></i> false</li>
-                    </ul>
-                </div>
+                    <!-- Card Content Section -->
+                    <div class="PatchCardContent">
+                        <p class="ChangeDescription"></p>
 
-                <div id="scathis" class="Card">
-                    <h3><img src="/assets/images/units/cybran/land/T4MobileArty.png"> Scathis</h3>
-                    <p> The Scathis now has the same selection priority as other experimental artillery. </p>
-                </div>
+                        <div class="ChangesList">
+                            <div class="ChangeGroup">
+                                <h4 class="ChangeGroupTitle">
+                                    Physics
+                                </h4>
+                                <ul class="Changes">
+                                    <li class="buff">
+                                        <span class="ChangeLabel">Max Speed Reverse:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">0</s> 
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                            <strong class="NewValue">2.85</strong>
+                                        </span>
+                                    </li>
+                                    <li class="buff">
+                                        <span class="ChangeLabel">Back Up Distance:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">0</s> 
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                            <strong class="NewValue">15</strong>
+                                        </span>
+                                    </li>
+                                    <li class="buff">
+                                        <span class="ChangeLabel">Rotate On Spot:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">True</s> 
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                            <strong class="NewValue">False</strong>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </section>
 
-            </div>
+            <section id="navy">
+                <h2>Navy</h2>
 
-            <h2>Navy</h2>
+                <article id="uef_t2_shield_boat" class="PatchCard">
+                    <!-- Card Header Section -->
+                    <header class="PatchCardHeader">
+                        <div class="UnitInfo">
+                            <img src="/assets/images/units/uef/naval/T2ShieldBoat.png" class="UnitIcon" alt="Bulwark"/>
+                            <div class="UnitDetails">
+                                <div class="UnitNameRow">
+                                    <h3 class="UnitName">Bulwark</h3>
+                                    <span class="UnitCode">XES0205</span>
+                                </div>
+                                <span class="FactionBadge uef">UEF</span>
+                            </div>
+                        </div>
+                        <div class="ChangeTypeBadge buff">Buff</div>
+                    </header>
 
-            <div id="navy">
+                    <!-- Card Content Section -->
+                    <div class="PatchCardContent">
+                        <p class="ChangeDescription">The range of the dummy weapon indicates where the shield hits the water line. The dummy weapon prevents the Bulwark from sailing right into the enemy fleet when you issue an attack move order. It roughly remains at the same range as frigates.</p>
 
-                <div id="bulwark" class="Card">
-                    <h3><img src="/assets/images/units/uef/naval/T2ShieldBoat.png"> Bulwark</h3>
-                    <p>The range of the dummy weapon indicates where the shield hits the water line. The dummy weapon prevents the Bulwark from sailing right into the enemy fleet when you issue an attack move order. It roughly remains at the same range as frigates.</p>
-                </div>
+                    </div>
+                </article>
 
-                <div id="nuke-sub" class="Card">
-                    <h3><img src="/assets/images/units/aeon/naval/T3NukeSub.png">Nuke Subs</h3>
-                    <p>All non-experimental units with strategic missile launchers now have a 10-second reload time on their strategic missile launchers. The stationary strategic missile launchers were already affected by this reload time. It primarily applies to the strategic submarines and the Seraphim battleship.
-                    </p>
-                </div>
+                <article id="t3_nuke_sub" class="PatchCard">
+                    <!-- Card Header Section -->
+                    <header class="PatchCardHeader">
+                        <div class="UnitInfo">
+                            <img src="/assets/images/units/uef/naval/T3NukeSub.png" class="UnitIcon" alt="Nuke Subs"/>
+                            <div class="UnitDetails">
+                                <div class="UnitNameRow">
+                                    <h3 class="UnitName">Nuke Subs</h3>
+                                    <span class="UnitCode">All</span>
+                                </div>
+                                <span class="FactionBadge all">All</span>
+                            </div>
+                        </div>
+                        <div class="ChangeTypeBadge nerf">Nerf</div>
+                    </header>
 
-                <div id="torrent" class="Card">
-                    <h3><img src="/assets/images/units/aeon/naval/T3MissleShip.png"> Missile Ship</h3>
-                    <p>The Aeon tech 3 missile ship is now cheaper to build. It fires more missiles that deal less damage but in a larger damage radius. The unit is now more equipped to overwhelm tactical missile defenses and deal damage in a wide area surrounding the target.</p>
-                    <ul>
-                        <li>Health: <s>15000</s> <i class="fa-solid fa-arrow-right"></i> 7500</li>
-                        <li>Mass Cost: <s>8000</s> <i class="fa-solid fa-arrow-right"></i> 4000</li>
-                        <li>Energy Cost: <s>80000</s> <i class="fa-solid fa-arrow-right"></i> 40000</li>
-                        <li>Damage: <s>800</s> <i class="fa-solid fa-arrow-right"></i> 200</li>
-                        <li>Damage Radius: <s>2</s> <i class="fa-solid fa-arrow-right"></i> 3</li>
-                        <li>SalvoSize: <s>5</s> <i class="fa-solid fa-arrow-right"></i> 10</li>
-                        <li>SalvoDelay: <s>1</s> <i class="fa-solid fa-arrow-right"></i> 0.6</li>
-                    </ul>
-                </div>
+                    <!-- Card Content Section -->
+                    <div class="PatchCardContent">
+                        <p class="ChangeDescription">All non-experimental units with strategic missile launchers now have a 10-second reload time on their strategic missile launchers. The stationary strategic missile launchers were already affected by this reload time. It primarily applies to the strategic submarines and the Seraphim battleship.</p>
 
-            </div>
+                    </div>
+                </article>
 
-            <h2>Air</h2>
+                <article id="aeon_t3_missle_ship" class="PatchCard">
+                    <!-- Card Header Section -->
+                    <header class="PatchCardHeader">
+                        <div class="UnitInfo">
+                            <img src="/assets/images/units/aeon/naval/T3MissleShip.png" class="UnitIcon" alt="Torrent"/>
+                            <div class="UnitDetails">
+                                <div class="UnitNameRow">
+                                    <h3 class="UnitName">Torrent</h3>
+                                    <span class="UnitCode">XAS0306</span>
+                                </div>
+                                <span class="FactionBadge aeon">Aeon</span>
+                            </div>
+                        </div>
+                        <div class="ChangeTypeBadge buff">Buff</div>
+                    </header>
 
-            <div id="air">
-                <div id="bombers" class="Card">
-                    <h3><img src="/assets/images/units/uef/air/T2FighterBomber.png"> Bombers</h3>
-                    <p>Fix bombers with multiple unpropelled ordinances from being able to track the target while dropping the ordinance <br><br>
-                    This primarily impacts the Zeus, Scorcher, and the Janus. The behavior is only different when the target is trying to evade the bomber. The overall behavior should be more consistent now with that of other bombers.
-                    </p>
-                </div>
-            </div>
+                    <!-- Card Content Section -->
+                    <div class="PatchCardContent">
+                        <p class="ChangeDescription">The Aeon tech 3 missile ship is now cheaper to build. It fires more missiles that deal less damage but in a larger damage radius. The unit is now more equipped to overwhelm tactical missile defenses and deal damage in a wide area surrounding the target.</p>
 
-            <h2>ACUs</h2>
+                        <div class="ChangesList">
+                            <div class="ChangeGroup">
+                                <h4 class="ChangeGroupTitle">
+                                    Defence
+                                </h4>
+                                <ul class="Changes">
+                                    <li class="nerf">
+                                        <span class="ChangeLabel">Health:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">15000</s> 
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                            <strong class="NewValue">7500</strong>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="ChangeGroup">
+                                <h4 class="ChangeGroupTitle">
+                                    Economy
+                                </h4>
+                                <ul class="Changes">
+                                    <li class="buff">
+                                        <span class="ChangeLabel">Mass Cost:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">8000</s> 
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                            <strong class="NewValue">4000</strong>
+                                        </span>
+                                    </li>
+                                    <li class="buff">
+                                        <span class="ChangeLabel">Energy Cost:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">80000</s> 
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                            <strong class="NewValue">40000</strong>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="ChangeGroup">
+                                <h4 class="ChangeGroupTitle">
+                                    Weapons
+                                </h4>
+                                <ul class="Changes">
+                                    <li class="sub-heading">Serpentine Tactical Missile Rack (x2)</li>
+                                    <li class="nerf">
+                                        <span class="ChangeLabel">Damage:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">800</s> 
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                            <strong class="NewValue">200</strong>
+                                        </span>
+                                    </li>
+                                    <li class="buff">
+                                        <span class="ChangeLabel">Damage Radius:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">2</s> 
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                            <strong class="NewValue">3</strong>
+                                        </span>
+                                    </li>
+                                    <li class="buff">
+                                        <span class="ChangeLabel">Salvo Size:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">5</s> 
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                            <strong class="NewValue">10</strong>
+                                        </span>
+                                    </li>
+                                    <li class="buff">
+                                        <span class="ChangeLabel">Salvo Delay:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">1</s> 
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                            <strong class="NewValue">0.6</strong>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
 
-            <div id="uef">
-                <div id="uefteleport" class="Card">
-                    <h3><img src="/assets/images/Enhancements/uef/teleport.png">UEF ACU Teleport</h3>
-                    <ul>
-                        <li>Upgrade Slot: <s>Back</s> <i class="fa-solid fa-arrow-right"></i> Left</li>
-                    </ul>
-                </div>
-            </div>
+            </section>
+ 
+            <section id="acus">
+                <h2>ACUs</h2>
+
+                <article id="uef_teleport_enh" class="PatchCard">
+                    <!-- Card Header Section -->
+                    <header class="PatchCardHeader">
+                        <div class="UnitInfo">
+                            <img src="/assets/images/Enhancements/uef/teleport.png" class="UnitIcon" alt="ACU Teleport"/>
+                            <div class="UnitDetails">
+                                <div class="UnitNameRow">
+                                    <h3 class="UnitName">ACU Teleport</h3>
+                                    <span class="UnitCode">UEL0001</span>
+                                </div>
+                                <span class="FactionBadge uef">UEF</span>
+                            </div>
+                        </div>
+                        <div class="ChangeTypeBadge buff">Buff</div>
+                    </header>
+
+                    <!-- Card Content Section -->
+                    <div class="PatchCardContent">
+                        <p class="ChangeDescription"></p>
+
+                        <div class="ChangesList">
+                            <div class="ChangeGroup">
+                                <h4 class="ChangeGroupTitle">
+                                    Enhancements
+                                </h4>
+                                <ul class="Changes">
+                                    <li class="buff">
+                                        <span class="ChangeLabel">Upgrade Slot:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">Back</s> 
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                            <strong class="NewValue">Left</strong>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </section>
 
         </div>
 
-        <div class="Sidebar">
-            <div class="IconSidebar">
-                <h2 class="IconSidebarTitle">Contents</h2>
-                <div class="IconSidebarSpace"></div>
-        
-                <div class="IconSidebarSubgrid">
-                    <h3 class="IconSidebarSubtitle">Land</h3><br>
-                    <a href="#deceiver"><img src="/assets/images/units/cybran/land/T2MobileStealth.png" /></a>
-                    <a href="#othuum"><img src="/assets/images/units/sera/land/T3Tank.png" /></a>
-                    <a href="#scathis"><img src="/assets/images/units/cybran/land/T4MobileArty.png" /></a>
-        
-                    <h3 class="IconSidebarSubtitle">Air</h3><br>
-                    <a href="#bombers"><img src="/assets/images/units/uef/air/T2FighterBomber.png" /></a>
-        
-                    <h3 class="IconSidebarSubtitle">Navy</h3><br>
-                    <a href="#bulwark"><img src="/assets/images/units/uef/naval/T2ShieldBoat.png" /></a>
-                    <a href="#nuke-sub"><img src="/assets/images/units/aeon/naval/T3NukeSub.png" /></a>
-                    <a href="#torrent"><img src="/assets/images/units/aeon/naval/T3MissleShip.png" /></a>
-        
-                    <h3 class="IconSidebarSubtitle">ACUs</h3><br>
-                    <a href="#uefteleport"><img src="/assets/images/Enhancements/uef/bubbleshield.png" /></a>
-        
+        <aside class="Sidebar" role="navigation" aria-label="Sidebar navigation">
+            <div class="ContentSidemenu">
+                <!-- Quick Navigation Header -->
+                <header class="SidemenuHeader">
+                    <h2 class="SidemenuTitle">
+                        <i class="fas fa-list-ul" aria-hidden="true"></i>
+                        Quick Navigation
+                    </h2>
+                    <div class="ProgressBar">
+                        <div class="ProgressFill" id="readingProgress"></div>
+                    </div>
+                </header>
+
+                <!-- Quick Actions Panel -->
+                <div class="QuickActions">
+                    <button class="QuickActionBtn" onclick="scrollToTop()" title="Back to Top">
+                        <i class="fas fa-arrow-up"></i>
+                        <span>Top</span>
+                    </button>
+                    <button class="QuickActionBtn" onclick="toggleAllSections()" title="Expand/Collapse All">
+                        <i class="fas fa-expand-arrows-alt"></i>
+                        <span>Toggle</span>
+                    </button>
+                    <button class="QuickActionBtn" onclick="printPage()" title="Print Page">
+                        <i class="fas fa-print"></i>
+                        <span>Print</span>
+                    </button>
                 </div>
-              </div>
-        </div>
+
+                <!-- Content Navigation -->
+                <nav class="ContentNav" role="navigation">
+
+                    <!-- Intro Section -->
+                    <div class="NavSection active">
+                        <button class="SectionToggle" aria-expanded="true" data-target="intro-items">
+                            <i class="fas fa-info-circle SectionIcon"></i>
+                            <span class="SectionTitle">Introduction</span>
+                            <span class="ItemCount">1</span>
+                            <i class="fas fa-chevron-down ToggleIcon"></i>
+                        </button>
+                        <ul class="SectionItems" id="intro-items">
+                            <li class="NavItem">
+                                <a href="#Intro" class="NavLink">
+                                    <i class="fas fa-scroll"></i>
+                                    <span>Patch Overview</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Land Section -->
+                    <div class="NavSection">
+                        <button class="SectionToggle" aria-expanded="false" data-target="land-items">
+                            <i class="fas fa-truck-monster SectionIcon"></i>
+                            <span class="SectionTitle">Land Units</span>
+                            <span class="ItemCount">2</span>
+                            <i class="fas fa-chevron-down ToggleIcon"></i>
+                        </button>
+                        <ul class="SectionItems" id="land-items">
+                            <li class="NavItem">
+                                <a href="#cybran_t2_mobile_stealth" class="NavLink">
+                                    <img src="/assets/images/units/cybran/land/T2MobileStealth.png" class="UnitThumb" alt="Deceiver"/>
+                                    <div class="LinkContent">
+                                        <span class="UnitName">Deceiver</span>
+                                        <span class="ChangeType buff">Buff</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="NavItem">
+                                <a href="#sera_t3_tank" class="NavLink">
+                                    <img src="/assets/images/units/sera/land/T3Tank.png" class="UnitThumb" alt="Othuum"/>
+                                    <div class="LinkContent">
+                                        <span class="UnitName">Othuum</span>
+                                        <span class="ChangeType buff">Buff</span>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                                    
+                    <!-- Navy Section -->
+                    <div class="NavSection">
+                        <button class="SectionToggle" aria-expanded="false" data-target="navy-items">
+                            <i class="fas fa-ship SectionIcon"></i>
+                            <span class="SectionTitle">Navy Units</span>
+                            <span class="ItemCount">3</span>
+                            <i class="fas fa-chevron-down ToggleIcon"></i>
+                        </button>
+                        <ul class="SectionItems" id="navy-items">
+                            <li class="NavItem">
+                                <a href="#uef_t2_shield_boat" class="NavLink">
+                                    <img src="/assets/images/units/uef/naval/T2ShieldBoat.png" class="UnitThumb" alt="Bulwark"/>
+                                    <div class="LinkContent">
+                                        <span class="UnitName">Bulwark</span>
+                                        <span class="ChangeType buff">Buff</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="NavItem">
+                                <a href="#t3_nuke_sub" class="NavLink">
+                                    <img src="/assets/images/units/uef/naval/T3NukeSub.png" class="UnitThumb" alt="Nuke Subs"/>
+                                    <div class="LinkContent">
+                                        <span class="UnitName">Nuke Subs</span>
+                                        <span class="ChangeType nerf">Nerf</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="NavItem">
+                                <a href="#aeon_t3_missle_ship" class="NavLink">
+                                    <img src="/assets/images/units/aeon/naval/T3MissleShip.png" class="UnitThumb" alt="Torrent"/>
+                                    <div class="LinkContent">
+                                        <span class="UnitName">Torrent</span>
+                                        <span class="ChangeType buff">Buff</span>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- ACUs Section -->
+                    <div class="NavSection">
+                        <button class="SectionToggle" aria-expanded="false" data-target="acus-items">
+                            <i class="fas fa-user-astronaut SectionIcon"></i>
+                            <span class="SectionTitle">ACUs</span>
+                            <span class="ItemCount">1</span>
+                            <i class="fas fa-chevron-down ToggleIcon"></i>
+                        </button>
+                        <ul class="SectionItems" id="acus-items">
+                            <li class="NavItem">
+                                <a href="#uef_teleport_enh" class="NavLink">
+                                    <img src="/assets/images/Enhancements/uef/teleport.png" class="UnitThumb" alt="ACU Teleport"/>
+                                    <div class="LinkContent">
+                                        <span class="UnitName">ACU Teleport</span>
+                                        <span class="ChangeType buff">Buff</span>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+
+                <!-- SidemenuFooter -->
+                <div class="SidemenuFooter">
+                    <div class="PatchStats">
+                        <div class="StatItem">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span>December 23, 2023</span>
+                        </div>
+                        <div class="StatItem">
+                            <i class="fas fa-balance-scale"></i>
+                            <span>6 Changes</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </aside>
     </main>
 </body>
-    <footer class="SiteFooter">
-        <div class="FooterContainer">
-            <!-- Navigation Section -->
-            <div class="FooterSection">
-                <h4 class="FooterTitle">Navigation</h4>
-                <nav class="FooterNav">
-                    <a href="/index.html" class="FooterLink">
-                        <i class="fas fa-home" aria-hidden="true"></i>
-                        All Patch Notes
-                    </a>
-                    <a href="#top" class="FooterLink BackToTopLink">
-                        <i class="fas fa-arrow-up" aria-hidden="true"></i>
-                        Back to Top
-                    </a>
-                </nav>
-            </div>
+<footer class="SiteFooter">
+    <div class="FooterContainer">
+        <!-- Navigation Section -->
+        <div class="FooterSection">
+            <h4 class="FooterTitle">Navigation</h4>
+            <nav class="FooterNav">
+                <a href="/index.html" class="FooterLink">
+                    <i class="fas fa-home" aria-hidden="true"></i>
+                    All Patch Notes
+                </a>
+                <a href="#top" class="FooterLink BackToTopLink">
+                    <i class="fas fa-arrow-up" aria-hidden="true"></i>
+                    Back to Top
+                </a>
+            </nav>
+        </div>
 
-            <!-- Quick Actions Section -->
-            <div class="FooterSection">
-                <h4 class="FooterTitle">Quick Actions</h4>
-                <div class="FooterActions">
-                    <button id="themeToggleButton" class="ThemeToggle">
-                        <i class="fas fa-palette" aria-hidden="true"></i>
-                        <span class="ToggleText">Toggle Theme</span>
-                    </button>
-                    <button class="PrintButton" onclick="window.print()">
-                        <i class="fas fa-print" aria-hidden="true"></i>
-                        <span>Print Page</span>
-                    </button>
-                </div>
-            </div>
-
-            <!-- About Section -->
-            <div class="FooterSection">
-                <h4 class="FooterTitle">About</h4>
-                <div class="FooterInfo">
-                    <p class="PatchInfo">
-                        <strong>Patch 3822</strong><br>
-                        Released: May 19th, 2025
-                    </p>
-                    <p class="Copyright">
-                        © 2015-2025 <strong>FAForever</strong><br>
-                        Community-driven balance updates
-                    </p>
-                </div>
-            </div>
-
-            <!-- Social/Links Section -->
-            <div class="FooterSection">
-                <h4 class="FooterTitle">Community</h4>
-                <div class="FooterLinks">
-                    <a href="https://www.faforever.com" class="FooterLink External" target="_blank" rel="noopener">
-                        <i class="fas fa-external-link-alt" aria-hidden="true"></i>
-                        FAForever.com
-                    </a>
-                    <a href="https://discord.gg/mXahAXy" class="FooterLink External" target="_blank" rel="noopener">
-                        <i class="fab fa-discord" aria-hidden="true"></i>
-                        Discord
-                    </a>
-                    <a href="https://github.com/FAForever" class="FooterLink External" target="_blank" rel="noopener">
-                        <i class="fab fa-github" aria-hidden="true"></i>
-                        GitHub
-                    </a>
-                </div>
+        <!-- Quick Actions Section -->
+        <div class="FooterSection">
+            <h4 class="FooterTitle">Quick Actions</h4>
+            <div class="FooterActions">
+                <button id="themeToggleButton" class="ThemeToggle">
+                    <i class="fas fa-palette" aria-hidden="true"></i>
+                    <span class="ToggleText">Toggle Theme</span>
+                </button>
+                <button class="PrintButton" onclick="window.print()">
+                    <i class="fas fa-print" aria-hidden="true"></i>
+                    <span>Print Page</span>
+                </button>
             </div>
         </div>
 
-        <!-- Bottom Bar -->
-        <div class="FooterBottom">
-            <div class="FooterBottomContent">
-                <span class="LastUpdated">Last updated: <time datetime="2025-05-19">May 19th, 2025</time></span>
-                <span class="BuildInfo">Balance Team • Patch Notes v3822</span>
+        <!-- About Section -->
+        <div class="FooterSection">
+            <h4 class="FooterTitle">About</h4>
+            <div class="FooterInfo">
+                <p class="PatchInfo">
+                    <strong>Patch 3777</strong><br>
+                    Released: December 23rd, 2023
+                </p>
+                <p class="Copyright">
+                    © 2015-2025 <strong>FAForever</strong><br>
+                    Community-driven balance updates
+                </p>
             </div>
         </div>
-    </footer>
+
+        <!-- Social/Links Section -->
+        <div class="FooterSection">
+            <h4 class="FooterTitle">Community</h4>
+            <div class="FooterLinks">
+                <a href="https://www.faforever.com" class="FooterLink External" target="_blank" rel="noopener">
+                    <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+                    FAForever.com
+                </a>
+                <a href="https://discord.gg/mXahAXy" class="FooterLink External" target="_blank" rel="noopener">
+                    <i class="fab fa-discord" aria-hidden="true"></i>
+                    Discord
+                </a>
+                <a href="https://github.com/FAForever" class="FooterLink External" target="_blank" rel="noopener">
+                    <i class="fab fa-github" aria-hidden="true"></i>
+                    GitHub
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="FooterBottom">
+        <div class="FooterBottomContent">
+            <span class="LastUpdated">Last updated: <time datetime="2023-12-23">December 23rd, 2023</time></span>
+            <span class="BuildInfo">Balance Team • Patch Notes v3777</span>
+        </div>
+    </div>
+</footer>
 </html>

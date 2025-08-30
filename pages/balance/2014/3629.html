@@ -4,33 +4,152 @@
         <meta charset="UTF-8">
         <meta name="description" content="FAF Patch 3629 page" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <title>Patch 3629</title>
-        <link rel="stylesheet" href="/style/balance.css">
-        <script src="/scripts/themeSwitch.js"></script>
+        <title>FAForever Patch 3629 - Balance Update</title>
+
+    <!-- Critical CSS for immediate loading -->
+    <link rel="stylesheet" href="/style/critical.css?v=1724259600&cache=bypass" />
+
+    <!-- Load head configuration and shared resources -->
+    <script src="/scripts/headConfig.js?v=1724259600&cache=bypass"></script>
     </head>
 <body>
   <main class="Grid">
     <div class="Content">
-      <div id="Intro">
-        <header class="FlexboxContainer">
-          <h1 class="FlexGrow-4">Patch 3629</h1>
-          <h4 class="FlexGrow-1" id="date">Date:<i> February 2nd 2014</i></h4>
-        </header>
-          <h3>-- The Balance Team</h3>
-          <hr>
-      </div>
-      
-      <h2>Land</h2>
-      <div id="land">
-        <div id="t1land" class="Card">
-          <h3>Tech 1 land</h3>
+            <section id="Intro" class="IntroSection">
+                <header class="PatchHeader">
+                    <div class="PatchTitleGroup">
+                        <h1 class="PatchTitle">Patch 3629</h1>
+                        <span class="PatchVersion">Balance Update</span>
+                    </div>
+                    <div class="PatchMeta">
+                        <time datetime="2014-02-02" class="PatchDate">February 2nd, 2014</time>
+                        <span class="PatchStatus">Released</span>
+                    </div>
+                </header>
+                <p class="patchDescription">
+                  Patch 3629 delivers a broad set of balance changes for Supreme Commander: Forged Alliance Forever, refining unit stats and abilities across land, air, naval, ACU, and SCU categories. The update aims to improve gameplay fairness, unit diversity, and strategic counterplay by adjusting damage, speed, veterancy, and enhancement costs. Key highlights include tweaks to mobile artillery, bombers, gunships, submarines, and commander upgrades.
+                </p></p>
 
-          <h4><img src="/assets/images/units/aeon/land/T1Tank.png">Aurora</h4>
-          <p>It’s a very small randomness and only when the Auroras move. They will still hit most of the time but this gives a chance for other tanks to survive longer. This value can be adjusted to make Auroras not as efficient when retreating, but good when they are still.</p>
-          <ul>
-            <li>Speed = <s>3.1</s> <i class="fa-solid fa-arrow-right"></i> 2.9</li>
-            <li>FiringRandomnessWhileMoving = <s>0</s> <i class="fa-solid fa-arrow-right"></i> 0.6</li>
-          </ul>
+                <footer class="PatchCredits">
+                    <div class="TeamSignature">
+                        <span class="TeamIcon">⚖️</span>
+                        <span class="TeamName">The Balance Team</span>
+                    </div>
+                </footer>
+                
+                <hr class="SectionDivider">
+            </section>
+
+      <div id="land">
+        <h2>Land</h2>
+        
+              <article id="aeon_t1_tank" class="PatchCard">
+                <!-- Card Header Section -->
+                    <header class="PatchCardHeader">
+                        <div class="UnitInfo">
+                            <img src="/assets/images/units/aeon/land/T1Tank.png" class="UnitIcon" alt="Aurora"/>
+                            <div class="UnitDetails">
+                                <div class="UnitNameRow">
+                                    <h3 class="UnitName">Aurora</h3>
+                                    <span class="UnitCode">URL0104</span>
+                                </div>
+                                <span class="FactionBadge aeon">Aeon</span>
+                            </div>
+                        </div>
+                        <div class="ChangeTypeBadge nerf">Nerf</div>
+                    </header>
+
+                    <!-- Card Content Section -->
+                    <div class="PatchCardContent">
+                        <p class="ChangeDescription">It’s a very small randomness and only when the Auroras move. They will still hit most of the time but this gives a chance for other tanks to survive longer. This value can be adjusted to make Auroras not as efficient when retreating, but good when they are still.</p>
+
+                        <div class="ChangesList">
+                            <div class="ChangeGroup">
+                                <h4 class="ChangeGroupTitle">
+                                    Physics
+                                </h4>
+                                <ul class="Changes">
+                                    <li class="nerf">
+                                        <span class="ChangeLabel">Max Speed:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">3.1</s> 
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                            <strong class="NewValue">2.9</strong>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="ChangeGroup">
+                                <h4 class="ChangeGroupTitle">
+                                    Weapons
+                                </h4>
+                                <ul class="Changes">
+                                    <li class="nerf">
+                                        <span class="ChangeLabel">Firing Randomness While Moving:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">0</s> 
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                            <strong class="NewValue">0.6</strong>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+              <article id="cybran_t1_mobile_artillery" class="PatchCard">
+                <!-- Card Header Section -->
+                    <header class="PatchCardHeader">
+                        <div class="UnitInfo">
+                            <img src="/assets/images/units/cybran/land/T1MobileArty.png" class="UnitIcon" alt="Medusa"/>
+                            <div class="UnitDetails">
+                                <div class="UnitNameRow">
+                                    <h3 class="UnitName">Medusa</h3>
+                                    <span class="UnitCode">URL0104</span>
+                                </div>
+                                <span class="FactionBadge cybran">Cybran</span>
+                            </div>
+                        </div>
+                        <div class="ChangeTypeBadge nerf">Nerf</div>
+                    </header>
+
+                    <!-- Card Content Section -->
+                    <div class="PatchCardContent">
+                        <p class="ChangeDescription">It’s a very small randomness and only when the Auroras move. They will still hit most of the time but this gives a chance for other tanks to survive longer. This value can be adjusted to make Auroras not as efficient when retreating, but good when they are still.</p>
+
+                        <div class="ChangesList">
+                                        <span class="ChangeLabel">Max Speed:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">3.1</s> 
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                            <strong class="NewValue">2.9</strong>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="ChangeGroup">
+                                <h4 class="ChangeGroupTitle">
+                                    Weapons
+                                </h4>
+                                <ul class="Changes">
+                                    <li class="nerf">
+                                        <span class="ChangeLabel">Firing Randomness While Moving:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">0</s> 
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                            <strong class="NewValue">0.6</strong>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+
+
+
 
           <h4><img src="/assets/images/units/cybran/land/T1MobileArty.png">Medusa</h4>
           <ul>
