@@ -76,6 +76,9 @@
     <link rel="stylesheet" href="./style/pwa.css">
     <link rel="icon" href="./favicon.ico" type="image/x-icon">
 
+    <!-- Static CMS Identity Widget -->
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+
     <!-- External Scripts -->
     <script src="./scripts/errorBoundary.js" defer></script>
     <script src="./scripts/performance.js" defer></script>
@@ -318,5 +321,18 @@
     
     <!-- Back to Top Button -->
     <button id="back-to-top" class="back-to-top" aria-label="Back to top" title="Back to top">↑</button>
+    
+    <!-- Static CMS Identity Widget Initialization -->
+    <script>
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", user => {
+          if (!user) {
+            window.netlifyIdentity.on("login", () => {
+              document.location.href = "/admin/";
+            });
+          }
+        });
+      }
+    </script>
   </body>
 </html>
