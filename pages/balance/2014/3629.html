@@ -14,6 +14,67 @@
     </head>
 <body>
   <main class="Grid">
+    
+    <!-- Sidebar Navigation -->
+    <nav class="SideNav">
+        <div class="SideNavHeader">
+            <h3 class="SideNavTitle">Contents</h3>
+            <button class="SideNavToggle" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        
+        <div class="SideNavContent">
+            <section class="NavSection">
+                <h4 class="NavSectionTitle">
+                    <i class="fas fa-tank"></i>
+                    Land
+                </h4>
+                <ul class="NavList">
+                    <li class="NavItem">
+                        <a href="#aeon_t1_tank" class="NavLink">
+                            <span class="NavText">Aurora</span>
+                            <span class="ChangeType nerf">Nerf</span>
+                        </a>
+                    </li>
+                    <li class="NavItem">
+                        <a href="#cybran_t1_mobile_artillery" class="NavLink">
+                            <span class="NavText">Medusa</span>
+                            <span class="ChangeType mixed">Mixed</span>
+                        </a>
+                    </li>
+                    <li class="NavItem">
+                        <a href="#uef_t1_mobile_artillery" class="NavLink">
+                            <span class="NavText">Lobo</span>
+                            <span class="ChangeType nerf">Nerf</span>
+                        </a>
+                    </li>
+                    <li class="NavItem">
+                        <a href="#all_t1_mobile_aa" class="NavLink">
+                            <span class="NavText">All T1 Mobile AA</span>
+                            <span class="ChangeType buff">Buff</span>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+            
+            <section class="NavSection">
+                <h4 class="NavSectionTitle">
+                    <i class="fas fa-robot"></i>
+                    Tech 2 Land
+                </h4>
+                <ul class="NavList">
+                    <li class="NavItem">
+                        <a href="#uef_t2_range_bot" class="NavLink">
+                            <span class="NavText">Mongoose</span>
+                            <span class="ChangeType buff">Buff</span>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+        </div>
+    </nav>
+    
     <div class="Content">
             <section id="Intro" class="IntroSection">
                 <header class="PatchHeader">
@@ -28,7 +89,7 @@
                 </header>
                 <p class="patchDescription">
                   Patch 3629 delivers a broad set of balance changes for Supreme Commander: Forged Alliance Forever, refining unit stats and abilities across land, air, naval, ACU, and SCU categories. The update aims to improve gameplay fairness, unit diversity, and strategic counterplay by adjusting damage, speed, veterancy, and enhancement costs. Key highlights include tweaks to mobile artillery, bombers, gunships, submarines, and commander upgrades.
-                </p></p>
+                </p>
 
                 <footer class="PatchCredits">
                     <div class="TeamSignature">
@@ -40,8 +101,8 @@
                 <hr class="SectionDivider">
             </section>
 
-      <div id="land">
-        <h2>Land</h2>
+            <section id="land">
+                <h2>Land</h2>
         
               <article id="aeon_t1_tank" class="PatchCard">
                 <!-- Card Header Section -->
@@ -106,7 +167,7 @@
                             <div class="UnitDetails">
                                 <div class="UnitNameRow">
                                     <h3 class="UnitName">Medusa</h3>
-                                    <span class="UnitCode">URL0104</span>
+                                    <span class="UnitCode">URL0103</span>
                                 </div>
                                 <span class="FactionBadge cybran">Cybran</span>
                             </div>
@@ -147,63 +208,259 @@
                     </div>
                 </article>
 
+                <article id="uef_t1_mobile_artillery" class="PatchCard">
+                    <header class="PatchCardHeader">
+                        <div class="UnitInfo">
+                            <img src="/assets/images/units/uef/land/T1MobileArty.png" class="UnitIcon" alt="Lobo"/>
+                            <div class="UnitDetails">
+                                <div class="UnitNameRow">
+                                    <h3 class="UnitName">Lobo</h3>
+                                    <span class="UnitCode">UEL0103</span>
+                                </div>
+                                <span class="FactionBadge uef">UEF</span>
+                            </div>
+                        </div>
+                        <div class="ChangeTypeBadge nerf">Nerf</div>
+                    </header>
+                    <div class="PatchCardContent">
+                        <p class="ChangeDescription">Balance adjustments to UEF T1 mobile artillery damage and firing rate.</p>
+                        <div class="ChangesList">
+                            <div class="ChangeGroup">
+                                <h4 class="ChangeGroupTitle">Weapons</h4>
+                                <ul class="Changes">
+                                    <li class="nerf">
+                                        <span class="ChangeLabel">Damage:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">480</s> 
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                            <strong class="NewValue">400</strong>
+                                        </span>
+                                    </li>
+                                    <li class="buff">
+                                        <span class="ChangeLabel">Reload Time:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">10</s> 
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                            <strong class="NewValue">8.33</strong>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
 
+                <article id="all_t1_mobile_aa" class="PatchCard">
+                    <header class="PatchCardHeader">
+                        <div class="UnitInfo">
+                            <img src="/assets/images/units/aeon/land/T1MobileAA.png" class="UnitIcon" alt="All T1 Mobile AA"/>
+                            <div class="UnitDetails">
+                                <div class="UnitNameRow">
+                                    <h3 class="UnitName">All T1 Mobile AA</h3>
+                                    <span class="UnitCode">T1 AA</span>
+                                </div>
+                                <span class="FactionBadge all">All Factions</span>
+                            </div>
+                        </div>
+                        <div class="ChangeTypeBadge buff">Buff</div>
+                    </header>
+                    <div class="PatchCardContent">
+                        <p class="ChangeDescription">Improved vision radius for all T1 mobile anti-air units to better spot incoming air threats.</p>
+                        <div class="ChangesList">
+                            <div class="ChangeGroup">
+                                <h4 class="ChangeGroupTitle">Vision</h4>
+                                <ul class="Changes">
+                                    <li class="buff">
+                                        <span class="ChangeLabel">Vision Radius:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">18</s> 
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                            <strong class="NewValue">20</strong>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
 
+            </div>
 
+            <section id="t2land">
+                <h2>Tech 2 Land</h2>
 
-          <h4><img src="/assets/images/units/cybran/land/T1MobileArty.png">Medusa</h4>
-          <ul>
-            <li>T2StunDuration = <s>3</s> <i class="fa-solid fa-arrow-right"></i> 2</li>
-            <li>ReloadTime = <s>5</s> <i class="fa-solid fa-arrow-right"></i> 6</li>
-            <li>Damage = <s>195</s> <i class="fa-solid fa-arrow-right"></i> 230</li>
-            <li>DPS = <s>39</s> <i class="fa-solid fa-arrow-right"></i> 38.33</li>
-          </ul>
+                <article id="uef_t2_range_bot" class="PatchCard">
+                    <header class="PatchCardHeader">
+                        <div class="UnitInfo">
+                            <img src="/assets/images/units/uef/land/T2RangeBot.png" class="UnitIcon" alt="Mongoose"/>
+                            <div class="UnitDetails">
+                                <div class="UnitNameRow">
+                                    <h3 class="UnitName">Mongoose</h3>
+                                    <span class="UnitCode">UEL0202</span>
+                                </div>
+                                <span class="FactionBadge uef">UEF</span>
+                            </div>
+                        </div>
+                        <div class="ChangeTypeBadge buff">Buff</div>
+                    </header>
+                    <div class="PatchCardContent">
+                        <p class="ChangeDescription">The unit tracks and targets enemy units better.</p>
+                        <div class="ChangesList">
+                            <div class="ChangeGroup">
+                                <h4 class="ChangeGroupTitle">Weapons</h4>
+                                <ul class="Changes">
+                                    <li class="buff">
+                                        <span class="ChangeLabel">Tracking Radius:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">1.5</s> 
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                            <strong class="NewValue">1.15</strong>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
 
-          <h4><img src="/assets/images/units/uef/land/T1MobileArty.png">Lobo</h4>
-          <ul>
-            <li>Damage = <s>480</s> <i class="fa-solid fa-arrow-right"></i> 400</li>
-            <li>ReloadTime = <s>10</s> <i class="fa-solid fa-arrow-right"></i> 8.33</li>
-          </ul>
+                <article id="uef_t2_range_bot_additional" class="PatchCard">
+                    <header class="PatchCardHeader">
+                        <div class="UnitInfo">
+                            <img src="/assets/images/units/uef/land/T2RangeBot.png" class="UnitIcon" alt="Mongoose"/>
+                            <div class="UnitDetails">
+                                <div class="UnitNameRow">
+                                    <h3 class="UnitName">Mongoose</h3>
+                                    <span class="UnitCode">UEL0202</span>
+                                </div>
+                                <span class="FactionBadge uef">UEF</span>
+                            </div>
+                        </div>
+                        <div class="ChangeTypeBadge nerf">Nerf</div>
+                    </header>
+                    <div class="PatchCardContent">
+                        <p class="ChangeDescription">Additional balance adjustments to improve unit behavior and weapons performance.</p>
+                        <div class="ChangesList">
+                            <div class="ChangeGroup">
+                                <h4 class="ChangeGroupTitle">Movement</h4>
+                                <ul class="Changes">
+                                    <li class="nerf">
+                                        <span class="ChangeLabel">Turn Speed:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">150</s> 
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                            <strong class="NewValue">90</strong>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="ChangeGroup">
+                                <h4 class="ChangeGroupTitle">Weapons</h4>
+                                <ul class="Changes">
+                                    <li class="nerf">
+                                        <span class="ChangeLabel">Firing Tolerance:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">0.1</s> 
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                            <strong class="NewValue">1</strong>
+                                        </span>
+                                    </li>
+                                    <li class="nerf">
+                                        <span class="ChangeLabel">Grenade Damage:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">65</s> 
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                            <strong class="NewValue">50</strong>
+                                        </span>
+                                    </li>
+                                    <li class="buff">
+                                        <span class="ChangeLabel">Grenade Rate of Fire:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">0.1</s> 
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                            <strong class="NewValue">0.15</strong>
+                                        </span>
+                                    </li>
+                                    <li class="nerf">
+                                        <span class="ChangeLabel">Grenade Firing Randomness:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">2</s> 
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                            <strong class="NewValue">2.5</strong>
+                                        </span>
+                                    </li>
+                                    <li class="buff">
+                                        <span class="ChangeLabel">Grenade Pitch Range:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">0</s> 
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                            <strong class="NewValue">55</strong>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
 
-          <h4><img src="/assets/images/units/aeon/land/T1MobileAA.png">All T1 Mobile AA</h4>
-          <ul>
-            <li>VisionRadius = <s>18</s> <i class="fa-solid fa-arrow-right"></i> 20</li>
-          </ul>
+                <article id="sera_t2_tank" class="PatchCard">
+                    <header class="PatchCardHeader">
+                        <div class="UnitInfo">
+                            <img src="/assets/images/units/sera/land/T2Tank.png" class="UnitIcon" alt="Ilshavoh"/>
+                            <div class="UnitDetails">
+                                <div class="UnitNameRow">
+                                    <h3 class="UnitName">Ilshavoh</h3>
+                                    <span class="UnitCode">XSL0202</span>
+                                </div>
+                                <span class="FactionBadge sera">Seraphim</span>
+                            </div>
+                        </div>
+                        <div class="ChangeTypeBadge nerf">Nerf</div>
+                    </header>
+                    <div class="PatchCardContent">
+                        <p class="ChangeDescription">Veterancy threshold adjustment for balance.</p>
+                        <div class="ChangesList">
+                            <div class="ChangeGroup">
+                                <h4 class="ChangeGroupTitle">Veterancy</h4>
+                                <ul class="Changes">
+                                    <li class="nerf">
+                                        <span class="ChangeLabel">Vet Threshold:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">9</s> 
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                            <strong class="NewValue">10</strong>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
 
+            </section>
 
-        </div>
+            <section id="t3land">
+                <h2>Tech 3 Land</h2>
 
-        <div id="t2land" class="Card">
-          <h3>Tech 2 Land</h3>
-
-          <h4><img src="/assets/images/units/uef/land/T2RangeBot.png">Mongoose</h4>
-          <p>The unit tracks and targets enemy units better.</p>
-          <ul>
-            <li>TurnSpeed = <s>150</s> <i class="fa-solid fa-arrow-right"></i> 90</li>
-            <li>FiringTolerance  = <s>0.1</s> <i class="fa-solid fa-arrow-right"></i> 1</li>
-            <li>Grenade Weapon:
-              <ul>
-                <li>Damage = <s>65</s> <i class="fa-solid fa-arrow-right"></i> 50</li>
-                <li>RateOfFire  = <s>0.1</s> <i class="fa-solid fa-arrow-right"></i> 0.15</li>
-                <li>DPS = <s>26</s> <i class="fa-solid fa-arrow-right"></i> 30</li>
-                <li>FiringRandomness = <s>2</s> <i class="fa-solid fa-arrow-right"></i> 2.5</li>
-                <li>PitchRange = <s>0</s> <i class="fa-solid fa-arrow-right"></i> 55</li>
-              </ul>
-            </li>
-          </ul>
-        
-          <h4><img src="/assets/images/units/sera/land/T2Tank.png">Ilshavoh</h4>
-          <ul>
-            <li>VetThreshold = <s>9</s> <i class="fa-solid fa-arrow-right"></i> 10</li>
-          </ul>
-
-        </div>
-
-        <div id="t3land" class="Card">
-          <h3>Tech 3 Land</h3>
-
-          <h4><img src="/assets/images/units/aeon/land/T3Sniper.png">Aeon Sniper</h4>
-          <ul>
+                <article id="aeon_t3_sniper" class="PatchCard">
+                    <header class="PatchCardHeader">
+                        <div class="UnitInfo">
+                            <img src="/assets/images/units/aeon/land/T3Sniper.png" class="UnitIcon" alt="Aeon Sniper"/>
+                            <div class="UnitDetails">
+                                <div class="UnitNameRow">
+                                    <h3 class="UnitName">Aeon Sniper</h3>
+                                    <span class="UnitCode">UAL0308</span>
+                                </div>
+                                <span class="FactionBadge aeon">Aeon</span>
+                            </div>
+                        </div>
+                        <div class="ChangeTypeBadge buff">Buff</div>
+                    </header>
+                    <div class="PatchCardContent">
+                        <p class="ChangeDescription">Veterancy requirements adjustment.</p>
+                        <div class="ChangesList">
+                            <div class="ChangeGroup">
+                                <h4 class="ChangeGroupTitle">Veterancy</h4>
+                                <ul class="Changes">
             <li>Damage = <s>1350</s> <i class="fa-solid fa-arrow-right"></i> 950</li>
             <li>Reload = <s>10</s> <i class="fa-solid fa-arrow-right"></i> 7</li>
             <li>FiringRandomnessWhileMoving = <s>0.8</s> <i class="fa-solid fa-arrow-right"></i> 0.75</li>
@@ -553,8 +810,8 @@
                 <h4 class="FooterTitle">About</h4>
                 <div class="FooterInfo">
                     <p class="PatchInfo">
-                        <strong>Patch 3822</strong><br>
-                        Released: May 19th, 2025
+                        <strong>Patch 3629</strong><br>
+                        Released: February 2nd, 2014
                     </p>
                     <p class="Copyright">
                         © 2015-2025 <strong>FAForever</strong><br>
@@ -586,8 +843,8 @@
         <!-- Bottom Bar -->
         <div class="FooterBottom">
             <div class="FooterBottomContent">
-                <span class="LastUpdated">Last updated: <time datetime="2025-05-19">May 19th, 2025</time></span>
-                <span class="BuildInfo">Balance Team • Patch Notes v3822</span>
+                <span class="LastUpdated">Last updated: <time datetime="2014-02-02">February 2nd, 2014</time></span>
+                <span class="BuildInfo">Balance Team • Patch Notes v3629</span>
             </div>
         </div>
     </footer>
