@@ -1,0 +1,2414 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="FAF Patch 3776 page" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <title>FAForever Patch 3776 - Balance Update</title>
+    
+    <!-- Critical CSS for immediate loading -->
+    <link rel="stylesheet" href="/style/critical.css?v=1724259600" />
+
+    <!-- Load head configuration and shared resources -->
+    <script src="/scripts/headConfig.js?v=1724259600"></script>
+</head>
+<body>
+    <main class="Grid">
+        <div class="Content">
+
+            <section id="Intro" class="IntroSection">
+                <header class="PatchHeader">
+                    <div class="PatchTitleGroup">
+                        <h1 class="PatchTitle">Patch 3776</h1>
+                        <span class="PatchVersion">Balance Update</span>
+                    </div>
+                    <div class="PatchMeta">
+                        <time datetime="2023-12-23" class="PatchDate">December 1st, 2023</time>
+                        <span class="PatchStatus">Released</span>
+                    </div>
+                </header>
+                <p class="patchDescription">The focus of this patch is working on improving the implementation of the previous patch. Cybran regen is improved, Seraphim get a buff to their hps, as well as some smaller changes and fixes.
+                We wish you good luck and much fun playing with the new patch!</p>
+                
+                <footer class="PatchCredits">
+                    <div class="TeamSignature">
+                        <span class="TeamIcon">⚖️</span>
+                        <span class="TeamName">The Balance Team</span>
+                    </div>
+                </footer>
+                
+                <hr class="SectionDivider">
+            </section>
+
+            <section id="air">
+                <h2>Air</h2>
+
+                <article id="uef_t2_fighter_bomber" class="PatchCard">
+                    <!-- Card Header Section -->
+                    <header class="PatchCardHeader">
+                        <div class="UnitInfo">
+                            <img src="/assets/images/units/uef/air/T2FighterBomber.png" class="UnitIcon" alt="Janus"/>
+                            <div class="UnitDetails">
+                                <div class="UnitNameRow">
+                                    <h3 class="UnitName">Janus</h3>
+                                    <span class="UnitCode">DEA0202</span>
+                                </div>
+                                <span class="FactionBadge uef">UEF</span>
+                            </div>
+                        </div>
+                        <div class="ChangeTypeBadge buff">Buff</div>
+                    </header>
+
+                    <!-- Card Content Section -->
+                    <div class="PatchCardContent">
+                        <p class="ChangeDescription">Janus gets a slight buff again to improve it slightly vs units.</p>
+
+                        <div class="ChangesList">
+                            <div class="ChangeGroup">
+                                <h4 class="ChangeGroupTitle">
+                                    Weapons
+                                </h4>
+                                <ul class="Changes">
+                                    <li class="sub-heading">Napalm Carpet Bomb</li>
+                                    <li class="buff">
+                                        <span class="ChangeLabel">Initial Damage:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">15</s> 
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                            <strong class="NewValue">20</strong>
+                                        </span>
+                                    </li>
+                                    <li class="buff">
+                                        <span class="ChangeLabel">Total Initial Damage:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">300</s> 
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                            <strong class="NewValue">400</strong>
+                                        </span>
+                                    </li>
+                                    <li class="buff">
+                                        <span class="ChangeLabel">Damage Over Time:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">1500</s> 
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                            <strong class="NewValue">1600</strong>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+            </section>
+
+            <section id="structures">
+                <h2>Structures</h2>
+
+                <article id="uef_t3_naval_support" class="PatchCard">
+                    <!-- Card Header Section -->
+                    <header class="PatchCardHeader">
+                        <div class="UnitInfo">
+                            <img src="/assets/images/units/uef/structure/T3NavalFacHQ.png" class="UnitIcon" alt="T3 Naval Support Factory"/>
+                            <div class="UnitDetails">
+                                <div class="UnitNameRow">
+                                    <h3 class="UnitName">UEF T3 Naval Support Factory</h3>
+                                    <span class="UnitCode">ZEB9603</span>
+                                </div>
+                                <span class="FactionBadge uef">UEF</span>
+                            </div>
+                        </div>
+                        <div class="ChangeTypeBadge buff">Buff</div>
+                    </header>
+
+                    <!-- Card Content Section -->
+                    <div class="PatchCardContent">
+                        <p class="ChangeDescription">T3 naval support facs were found to be too vulnerable considering the cost of the units being constructed within them so we have reduced their hp nerf.</p>
+
+                        <div class="ChangesList">
+                            <div class="ChangeGroup">
+                                <h4 class="ChangeGroupTitle">
+                                    Defence
+                                </h4>
+                                <ul class="Changes">
+                                    <li class="buff">
+                                        <span class="ChangeLabel">Health:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">13000</s> 
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                            <strong class="NewValue">17000</strong>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article id="sera_t3_naval_support" class="PatchCard">
+                    <!-- Card Header Section -->
+                    <header class="PatchCardHeader">
+                        <div class="UnitInfo">
+                            <img src="/assets/images/units/sera/structure/T3NavalHQ.png" class="UnitIcon" alt="Seraphim T3 Naval Support Factory"/>
+                            <div class="UnitDetails">
+                                <div class="UnitNameRow">
+                                    <h3 class="UnitName">Seraphim T3 Naval Support Factory</h3>
+                                    <span class="UnitCode">XSB9603</span>
+                                </div>
+                                <span class="FactionBadge sera">Seraphim</span>
+                            </div>
+                        </div>
+                        <div class="ChangeTypeBadge buff">Buff</div>
+                    </header>
+                    <!-- Card Content Section -->
+                    <div class="PatchCardContent">
+                        <p class="ChangeDescription">T3 naval support facs were found to be too vulnerable considering the cost of the units being constructed within them so we have reduced their hp nerf.</p>
+                        <div class="ChangesList">
+                            <div class="ChangeGroup">
+                                <h4 class="ChangeGroupTitle">Defence</h4>
+                                <ul class="Changes">
+                                    <li class="buff">
+                                        <span class="ChangeLabel">Health:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">10000</s>
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i>
+                                            <strong class="NewValue">15000</strong>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article id="aeon_t3_naval_support" class="PatchCard">
+                    <!-- Card Header Section -->
+                    <header class="PatchCardHeader">
+                        <div class="UnitInfo">
+                            <img src="/assets/images/units/aeon/structure/T3NavalHQ.png" class="UnitIcon" alt="Aeon T3 Naval Support Factory"/>
+                            <div class="UnitDetails">
+                                <div class="UnitNameRow">
+                                    <h3 class="UnitName">Aeon T3 Naval Support Factory</h3>
+                                    <span class="UnitCode">UAB9603</span>
+                                </div>
+                                <span class="FactionBadge aeon">Aeon</span>
+                            </div>
+                        </div>
+                        <div class="ChangeTypeBadge buff">Buff</div>
+                    </header>
+                    <!-- Card Content Section -->
+                    <div class="PatchCardContent">
+                        <p class="ChangeDescription">T3 naval support facs were found to be too vulnerable considering the cost of the units being constructed within them so we have reduced their hp nerf.</p>
+                        <div class="ChangesList">
+                            <div class="ChangeGroup">
+                                <h4 class="ChangeGroupTitle">Defence</h4>
+                                <ul class="Changes">
+                                    <li class="buff">
+                                        <span class="ChangeLabel">Health:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">10000</s>
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i>
+                                            <strong class="NewValue">13000</strong>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article id="cybran_t3_naval_support" class="PatchCard">
+                    <!-- Card Header Section -->
+                    <header class="PatchCardHeader">
+                        <div class="UnitInfo">
+                            <img src="/assets/images/units/cybran/structure/T3NavalHQ.png" class="UnitIcon" alt="Cybran T3 Naval Support Factory"/>
+                            <div class="UnitDetails">
+                                <div class="UnitNameRow">
+                                    <h3 class="UnitName">Cybran T3 Naval Support Factory</h3>
+                                    <span class="UnitCode">URB9603</span>
+                                </div>
+                                <span class="FactionBadge cybran">Cybran</span>
+                            </div>
+                        </div>
+                        <div class="ChangeTypeBadge buff">Buff</div>
+                    </header>
+                    <!-- Card Content Section -->
+                    <div class="PatchCardContent">
+                        <p class="ChangeDescription">T3 naval support facs were found to be too vulnerable considering the cost of the units being constructed within them so we have reduced their hp nerf and increased regeneration.</p>
+                        <div class="ChangesList">
+                            <div class="ChangeGroup">
+                                <h4 class="ChangeGroupTitle">Defence</h4>
+                                <ul class="Changes">
+                                    <li class="buff">
+                                        <span class="ChangeLabel">Health:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">8000</s>
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i>
+                                            <strong class="NewValue">11000</strong>
+                                        </span>
+                                    </li>
+                                    <li class="buff">
+                                        <span class="ChangeLabel">Regeneration:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">15</s>
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i>
+                                            <strong class="NewValue">30</strong>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article id="uef_t2_naval_support" class="PatchCard">
+                    <!-- Card Header Section -->
+                    <header class="PatchCardHeader">
+                        <div class="UnitInfo">
+                            <img src="/assets/images/units/uef/structure/T2NavalFacHQ.png" class="UnitIcon" alt="T2 UEF Naval Support Factory"/>
+                            <div class="UnitDetails">
+                                <div class="UnitNameRow">
+                                    <h3 class="UnitName">UEF T2 Naval Support Factory</h3>
+                                    <span class="UnitCode">ZEB9502</span>
+                                </div>
+                                <span class="FactionBadge uef">UEF</span>
+                            </div>
+                        </div>
+                        <div class="ChangeTypeBadge buff">Buff</div>
+                    </header>
+                    <!-- Card Content Section -->
+                    <div class="PatchCardContent">
+                        <p class="ChangeDescription">This is a correction of the UEF T2 naval support factory which was missed in testing before the previous balance patch.</p>
+                        <div class="ChangesList">
+                            <div class="ChangeGroup">
+                                <h4 class="ChangeGroupTitle">Defence</h4>
+                                <ul class="Changes">
+                                    <li class="buff">
+                                        <span class="ChangeLabel">Health:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">6000</s>
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i>
+                                            <strong class="NewValue">6500</strong>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article id="uef_mass_storage" class="PatchCard">
+                    <!-- Card Header Section -->
+                    <header class="PatchCardHeader">
+                        <div class="UnitInfo">
+                            <img src="/assets/images/units/uef/structure/T1MassStorage.png" class="UnitIcon" alt="UEF Mass Storage"/>
+                            <div class="UnitDetails">
+                                <div class="UnitNameRow">
+                                    <h3 class="UnitName">UEF Mass Storage</h3>
+                                    <span class="UnitCode">ueb1106</span>
+                                </div>
+                                <span class="FactionBadge uef">UEF</span>
+                            </div>
+                        </div>
+                        <div class="ChangeTypeBadge buff">Buff</div>
+                    </header>
+                    <!-- Card Content Section -->
+                    <div class="PatchCardContent">
+                        <p class="ChangeDescription">Mass storage HP has been given some HP back, so that it is more in line with its cost.</p>
+                        <div class="ChangesList">
+                            <div class="ChangeGroup">
+                                <h4 class="ChangeGroupTitle">Defence</h4>
+                                <ul class="Changes">
+                                    <li class="buff">
+                                        <span class="ChangeLabel">Health:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">760</s>
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i>
+                                            <strong class="NewValue">1200</strong>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article id="sera_mass_storage" class="PatchCard">
+                    <!-- Card Header Section -->
+                    <header class="PatchCardHeader">
+                        <div class="UnitInfo">
+                            <img src="/assets/images/units/sera/structure/T1MassStorage.png" class="UnitIcon" alt="Seraphim Mass Storage"/>
+                            <div class="UnitDetails">
+                                <div class="UnitNameRow">
+                                    <h3 class="UnitName">Seraphim Mass Storage</h3>
+                                    <span class="UnitCode">xsb1106</span>
+                                </div>
+                                <span class="FactionBadge sera">Seraphim</span>
+                            </div>
+                        </div>
+                        <div class="ChangeTypeBadge buff">Buff</div>
+                    </header>
+                    <!-- Card Content Section -->
+                    <div class="PatchCardContent">
+                        <p class="ChangeDescription">Mass storage HP has been given some HP back, so that it is more in line with its cost.</p>
+                        <div class="ChangesList">
+                            <div class="ChangeGroup">
+                                <h4 class="ChangeGroupTitle">Defence</h4>
+                                <ul class="Changes">
+                                    <li class="buff">
+                                        <span class="ChangeLabel">Health:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">600</s>
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i>
+                                            <strong class="NewValue">1100</strong>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article id="aeon_mass_storage" class="PatchCard">
+                    <!-- Card Header Section -->
+                    <header class="PatchCardHeader">
+                        <div class="UnitInfo">
+                            <img src="/assets/images/units/aeon/structure/T1MassStorage.png" class="UnitIcon" alt="Aeon Mass Storage"/>
+                            <div class="UnitDetails">
+                                <div class="UnitNameRow">
+                                    <h3 class="UnitName">Aeon Mass Storage</h3>
+                                    <span class="UnitCode">uab1106</span>
+                                </div>
+                                <span class="FactionBadge aeon">Aeon</span>
+                            </div>
+                        </div>
+                        <div class="ChangeTypeBadge buff">Buff</div>
+                    </header>
+                    <!-- Card Content Section -->
+                    <div class="PatchCardContent">
+                        <p class="ChangeDescription">Mass storage HP has been given some HP back, so that it is more in line with its cost.</p>
+                        <div class="ChangesList">
+                            <div class="ChangeGroup">
+                                <h4 class="ChangeGroupTitle">Defence</h4>
+                                <ul class="Changes">
+                                    <li class="buff">
+                                        <span class="ChangeLabel">Health:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">600</s>
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i>
+                                            <strong class="NewValue">1000</strong>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article id="cybran_mass_storage" class="PatchCard">
+                    <!-- Card Header Section -->
+                    <header class="PatchCardHeader">
+                        <div class="UnitInfo">
+                            <img src="/assets/images/units/cybran/structure/T1MassStorage.png" class="UnitIcon" alt="Cybran Mass Storage"/>
+                            <div class="UnitDetails">
+                                <div class="UnitNameRow">
+                                    <h3 class="UnitName">Cybran Mass Storage</h3>
+                                    <span class="UnitCode">urb1106</span>
+                                </div>
+                                <span class="FactionBadge cybran">Cybran</span>
+                            </div>
+                        </div>
+                        <div class="ChangeTypeBadge buff">Buff</div>
+                    </header>
+                    <!-- Card Content Section -->
+                    <div class="PatchCardContent">
+                        <p class="ChangeDescription">Mass storage HP has been given some HP back, so that it is more in line with its cost. Cybran also receives increased HP regeneration.</p>
+                        <div class="ChangesList">
+                            <div class="ChangeGroup">
+                                <h4 class="ChangeGroupTitle">Defence</h4>
+                                <ul class="Changes">
+                                    <li class="buff">
+                                        <span class="ChangeLabel">Health:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">500</s>
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i>
+                                            <strong class="NewValue">800</strong>
+                                        </span>
+                                    </li>
+                                    <li class="buff">
+                                        <span class="ChangeLabel">Regeneration:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">1</s>
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i>
+                                            <strong class="NewValue">4</strong>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article id="sera_t1_land_factory" class="PatchCard">
+                    <!-- Card Header Section -->
+                    <header class="PatchCardHeader">
+                        <div class="UnitInfo">
+                            <img src="/assets/images/units/sera/structure/T1LandFacHQ.png" class="UnitIcon" alt="Seraphim T1 Land Factory"/>
+                            <div class="UnitDetails">
+                                <div class="UnitNameRow">
+                                    <h3 class="UnitName">Seraphim T1 Land Factory</h3>
+                                    <span class="UnitCode">xsb0102</span>
+                                </div>
+                                <span class="FactionBadge sera">Seraphim</span>
+                            </div>
+                        </div>
+                        <div class="ChangeTypeBadge buff">Buff</div>
+                    </header>
+                    <!-- Card Content Section -->
+                    <div class="PatchCardContent">
+                        <p class="ChangeDescription">T1 Land Factory HP has been increased to improve survivability and bring it more in line with its cost.</p>
+                        <div class="ChangesList">
+                            <div class="ChangeGroup">
+                                <h4 class="ChangeGroupTitle">Defence</h4>
+                                <ul class="Changes">
+                                    <li class="buff">
+                                        <span class="ChangeLabel">Health:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">3100</s>
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i>
+                                            <strong class="NewValue">3500</strong>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article id="sera_t1_air_factory" class="PatchCard">
+                    <!-- Card Header Section -->
+                    <header class="PatchCardHeader">
+                        <div class="UnitInfo">
+                            <img src="/assets/images/units/sera/structure/T1AirFacHQ.png" class="UnitIcon" alt="Seraphim T1 Air Factory"/>
+                            <div class="UnitDetails">
+                                <div class="UnitNameRow">
+                                    <h3 class="UnitName">Seraphim T1 Air Factory</h3>
+                                    <span class="UnitCode">xsb0102_air</span>
+                                </div>
+                                <span class="FactionBadge sera">Seraphim</span>
+                            </div>
+                        </div>
+                        <div class="ChangeTypeBadge buff">Buff</div>
+                    </header>
+                    <!-- Card Content Section -->
+                    <div class="PatchCardContent">
+                        <p class="ChangeDescription">T1 Air Factory HP has been increased to improve survivability and bring it more in line with its cost.</p>
+                        <div class="ChangesList">
+                            <div class="ChangeGroup">
+                                <h4 class="ChangeGroupTitle">Defence</h4>
+                                <ul class="Changes">
+                                    <li class="buff">
+                                        <span class="ChangeLabel">Health:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">3100</s>
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i>
+                                            <strong class="NewValue">3500</strong>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article id="sera_t1_naval_factory" class="PatchCard">
+                    <!-- Card Header Section -->
+                    <header class="PatchCardHeader">
+                        <div class="UnitInfo">
+                            <img src="/assets/images/units/sera/structure/T1NavalHQ.png" class="UnitIcon" alt="Seraphim T1 Naval Factory"/>
+                            <div class="UnitDetails">
+                                <div class="UnitNameRow">
+                                    <h3 class="UnitName">Seraphim T1 Naval Factory</h3>
+                                    <span class="UnitCode">xsb0103</span>
+                                </div>
+                                <span class="FactionBadge sera">Seraphim</span>
+                            </div>
+                        </div>
+                        <div class="ChangeTypeBadge buff">Buff</div>
+                    </header>
+                    <!-- Card Content Section -->
+                    <div class="PatchCardContent">
+                        <p class="ChangeDescription">T1 Naval Factory HP has been increased to improve survivability and bring it more in line with its cost.</p>
+                        <div class="ChangesList">
+                            <div class="ChangeGroup">
+                                <h4 class="ChangeGroupTitle">Defence</h4>
+                                <ul class="Changes">
+                                    <li class="buff">
+                                        <span class="ChangeLabel">Health:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">3100</s>
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i>
+                                            <strong class="NewValue">3500</strong>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article id="sera_t1_power_generator" class="PatchCard">
+                    <!-- Card Header Section -->
+                    <header class="PatchCardHeader">
+                        <div class="UnitInfo">
+                            <img src="/assets/images/units/sera/structure/T1PowerGen.png" class="UnitIcon" alt="Seraphim T1 Power Generator"/>
+                            <div class="UnitDetails">
+                                <div class="UnitNameRow">
+                                    <h3 class="UnitName">Seraphim T1 Power Generator</h3>
+                                    <span class="UnitCode">xsb1101</span>
+                                </div>
+                                <span class="FactionBadge sera">Seraphim</span>
+                            </div>
+                        </div>
+                        <div class="ChangeTypeBadge buff">Buff</div>
+                    </header>
+                    <!-- Card Content Section -->
+                    <div class="PatchCardContent">
+                        <p class="ChangeDescription">T1 Power Generator HP has been increased to improve survivability and bring it more in line with its cost.</p>
+                        <div class="ChangesList">
+                            <div class="ChangeGroup">
+                                <h4 class="ChangeGroupTitle">Defence</h4>
+                                <ul class="Changes">
+                                    <li class="buff">
+                                        <span class="ChangeLabel">Health:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">600</s>
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i>
+                                            <strong class="NewValue">650</strong>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            
+                <article id="sera_hydrocarbon_power_plant" class="PatchCard">
+                    <!-- Card Header Section -->
+                    <header class="PatchCardHeader">
+                        <div class="UnitInfo">
+                            <img src="/assets/images/units/sera/structure/T1Hydrocarbon.png" class="UnitIcon" alt="Seraphim Hydrocarbon Power Plant"/>
+                            <div class="UnitDetails">
+                                <div class="UnitNameRow">
+                                    <h3 class="UnitName">Seraphim Hydrocarbon Power Plant</h3>
+                                    <span class="UnitCode">xsb1102</span>
+                                </div>
+                                <span class="FactionBadge sera">Seraphim</span>
+                            </div>
+                        </div>
+                        <div class="ChangeTypeBadge buff">Buff</div>
+                    </header>
+                    <!-- Card Content Section -->
+                    <div class="PatchCardContent">
+                        <p class="ChangeDescription">Hydrocarbon Power Plant HP has been increased to improve survivability and bring it more in line with its cost.</p>
+                        <div class="ChangesList">
+                            <div class="ChangeGroup">
+                                <h4 class="ChangeGroupTitle">Defence</h4>
+                                <ul class="Changes">
+                                    <li class="buff">
+                                        <span class="ChangeLabel">Health:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">1600</s>
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i>
+                                            <strong class="NewValue">1700</strong>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article id="sera_t1_mass_extractor" class="PatchCard">
+                    <!-- Card Header Section -->
+                    <header class="PatchCardHeader">
+                        <div class="UnitInfo">
+                            <img src="/assets/images/units/sera/structure/T1MassExtractor.png" class="UnitIcon" alt="Seraphim T1 Mass Extractor"/>
+                            <div class="UnitDetails">
+                                <div class="UnitNameRow">
+                                    <h3 class="UnitName">Seraphim T1 Mass Extractor</h3>
+                                    <span class="UnitCode">xsb1103</span>
+                                </div>
+                                <span class="FactionBadge sera">Seraphim</span>
+                            </div>
+                        </div>
+                        <div class="ChangeTypeBadge buff">Buff</div>
+                    </header>
+                    <!-- Card Content Section -->
+                    <div class="PatchCardContent">
+                        <p class="ChangeDescription">T1 Mass Extractor HP has been increased to improve survivability and bring it more in line with its cost.</p>
+                        <div class="ChangesList">
+                            <div class="ChangeGroup">
+                                <h4 class="ChangeGroupTitle">Defence</h4>
+                                <ul class="Changes">
+                                    <li class="buff">
+                                        <span class="ChangeLabel">Health:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">600</s>
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i>
+                                            <strong class="NewValue">650</strong>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article id="sera_t1_wall_segment" class="PatchCard">
+                    <!-- Card Header Section -->
+                    <header class="PatchCardHeader">
+                        <div class="UnitInfo">
+                            <img src="/assets/images/units/sera/structure/T1Wall.png" class="UnitIcon" alt="Seraphim T1 Wall Segment"/>
+                            <div class="UnitDetails">
+                                <div class="UnitNameRow">
+                                    <h3 class="UnitName">Seraphim T1 Wall Segment</h3>
+                                    <span class="UnitCode">xsb5101</span>
+                                </div>
+                                <span class="FactionBadge sera">Seraphim</span>
+                            </div>
+                        </div>
+                        <div class="ChangeTypeBadge buff">Buff</div>
+                    </header>
+                    <!-- Card Content Section -->
+                    <div class="PatchCardContent">
+                        <p class="ChangeDescription">T1 Wall Segment HP has been increased to improve survivability and bring it more in line with its cost.</p>
+                        <div class="ChangesList">
+                            <div class="ChangeGroup">
+                                <h4 class="ChangeGroupTitle">Defence</h4>
+                                <ul class="Changes">
+                                    <li class="buff">
+                                        <span class="ChangeLabel">Health:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">2000</s>
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i>
+                                            <strong class="NewValue">2500</strong>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article id="sera_t2_air_factory_hq" class="PatchCard">
+                    <!-- Card Header Section -->
+                    <header class="PatchCardHeader">
+                        <div class="UnitInfo">
+                            <img src="/assets/images/units/sera/structure/T2AirFacHQ.png" class="UnitIcon" alt="Seraphim T2 Air Factory HQ"/>
+                            <div class="UnitDetails">
+                                <div class="UnitNameRow">
+                                    <h3 class="UnitName">Seraphim T2 Air Factory HQ</h3>
+                                    <span class="UnitCode">xsb0202_air</span>
+                                </div>
+                                <span class="FactionBadge sera">Seraphim</span>
+                            </div>
+                        </div>
+                        <div class="ChangeTypeBadge buff">Buff</div>
+                    </header>
+                    <!-- Card Content Section -->
+                    <div class="PatchCardContent">
+                        <p class="ChangeDescription">T2 Air Factory HQ HP has been increased to improve survivability and bring it more in line with its cost.</p>
+                        <div class="ChangesList">
+                            <div class="ChangeGroup">
+                                <h4 class="ChangeGroupTitle">Defence</h4>
+                                <ul class="Changes">
+                                    <li class="buff">
+                                        <span class="ChangeLabel">Health:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">6200</s>
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i>
+                                            <strong class="NewValue">7000</strong>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article id="sera_t2_land_factory_hq" class="PatchCard">
+                    <!-- Card Header Section -->
+                    <header class="PatchCardHeader">
+                        <div class="UnitInfo">
+                            <img src="/assets/images/units/sera/structure/T2LandFacHQ.png" class="UnitIcon" alt="Seraphim T2 Land Factory HQ"/>
+                            <div class="UnitDetails">
+                                <div class="UnitNameRow">
+                                    <h3 class="UnitName">Seraphim T2 Land Factory HQ</h3>
+                                    <span class="UnitCode">xsb0202</span>
+                                </div>
+                                <span class="FactionBadge sera">Seraphim</span>
+                            </div>
+                        </div>
+                        <div class="ChangeTypeBadge buff">Buff</div>
+                    </header>
+                    <!-- Card Content Section -->
+                    <div class="PatchCardContent">
+                        <p class="ChangeDescription">T2 Land Factory HQ HP has been increased to improve survivability and bring it more in line with its cost.</p>
+                        <div class="ChangesList">
+                            <div class="ChangeGroup">
+                                <h4 class="ChangeGroupTitle">Defence</h4>
+                                <ul class="Changes">
+                                    <li class="buff">
+                                        <span class="ChangeLabel">Health:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">6200</s>
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i>
+                                            <strong class="NewValue">7000</strong>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article id="sera_t2_land_factory_hq" class="PatchCard">
+                    <!-- Card Header Section -->
+                    <header class="PatchCardHeader">
+                        <div class="UnitInfo">
+                            <img src="/assets/images/units/sera/structure/T2LandFacHQ.png" class="UnitIcon" alt="Seraphim T2 Land Factory HQ"/>
+                            <div class="UnitDetails">
+                                <div class="UnitNameRow">
+                                    <h3 class="UnitName">Seraphim T2 Land Factory HQ</h3>
+                                    <span class="UnitCode">xsb0202</span>
+                                </div>
+                                <span class="FactionBadge sera">Seraphim</span>
+                            </div>
+                        </div>
+                        <div class="ChangeTypeBadge buff">Buff</div>
+                    </header>
+                    <!-- Card Content Section -->
+                    <div class="PatchCardContent">
+                        <p class="ChangeDescription">T2 Land Factory HQ HP has been increased to improve survivability and bring it more in line with its cost.</p>
+                        <div class="ChangesList">
+                            <div class="ChangeGroup">
+                                <h4 class="ChangeGroupTitle">Defence</h4>
+                                <ul class="Changes">
+                                    <li class="buff">
+                                        <span class="ChangeLabel">Health:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">6200</s>
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i>
+                                            <strong class="NewValue">7000</strong>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article id="sera_t2_naval_factory_hq" class="PatchCard">
+                    <!-- Card Header Section -->
+                    <header class="PatchCardHeader">
+                        <div class="UnitInfo">
+                            <img src="/assets/images/units/sera/structure/T2NavalHQ.png" class="UnitIcon" alt="Seraphim T2 Naval Factory HQ"/>
+                            <div class="UnitDetails">
+                                <div class="UnitNameRow">
+                                    <h3 class="UnitName">Seraphim T2 Naval Factory HQ</h3>
+                                    <span class="UnitCode">xsb0203</span>
+                                </div>
+                                <span class="FactionBadge sera">Seraphim</span>
+                            </div>
+                        </div>
+                        <div class="ChangeTypeBadge buff">Buff</div>
+                    </header>
+                    <!-- Card Content Section -->
+                    <div class="PatchCardContent">
+                        <p class="ChangeDescription">T2 Naval Factory HQ HP has been increased to improve survivability and bring it more in line with its cost.</p>
+                        <div class="ChangesList">
+                            <div class="ChangeGroup">
+                                <h4 class="ChangeGroupTitle">Defence</h4>
+                                <ul class="Changes">
+                                    <li class="buff">
+                                        <span class="ChangeLabel">Health:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">10000</s>
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i>
+                                            <strong class="NewValue">11000</strong>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article id="sera_t2_air_support_factory" class="PatchCard">
+                    <!-- Card Header Section -->
+                    <header class="PatchCardHeader">
+                        <div class="UnitInfo">
+                            <img src="/assets/images/units/sera/structure/T2AirFacHQ.png" class="UnitIcon" alt="Seraphim T2 Air Support Factory"/>
+                            <div class="UnitDetails">
+                                <div class="UnitNameRow">
+                                    <h3 class="UnitName">Seraphim T2 Air Support Factory</h3>
+                                    <span class="UnitCode">xsb0202_air_support</span>
+                                </div>
+                                <span class="FactionBadge sera">Seraphim</span>
+                            </div>
+                        </div>
+                        <div class="ChangeTypeBadge buff">Buff</div>
+                    </header>
+                    <!-- Card Content Section -->
+                    <div class="PatchCardContent">
+                        <p class="ChangeDescription">T2 Air Support Factory HP has been increased to improve survivability and bring it more in line with its cost.</p>
+                        <div class="ChangesList">
+                            <div class="ChangeGroup">
+                                <h4 class="ChangeGroupTitle">Defence</h4>
+                                <ul class="Changes">
+                                    <li class="buff">
+                                        <span class="ChangeLabel">Health:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">3100</s>
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i>
+                                            <strong class="NewValue">3500</strong>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article id="sera_t2_land_support_factory" class="PatchCard">
+                    <!-- Card Header Section -->
+                    <header class="PatchCardHeader">
+                        <div class="UnitInfo">
+                            <img src="/assets/images/units/sera/structure/T2LandFacHQ.png" class="UnitIcon" alt="Seraphim T2 Land Support Factory"/>
+                            <div class="UnitDetails">
+                                <div class="UnitNameRow">
+                                    <h3 class="UnitName">Seraphim T2 Land Support Factory</h3>
+                                    <span class="UnitCode">xsb0202_land_support</span>
+                                </div>
+                                <span class="FactionBadge sera">Seraphim</span>
+                            </div>
+                        </div>
+                        <div class="ChangeTypeBadge buff">Buff</div>
+                    </header>
+                    <!-- Card Content Section -->
+                    <div class="PatchCardContent">
+                        <p class="ChangeDescription">T2 Land Support Factory HP has been increased to improve survivability and bring it more in line with its cost.</p>
+                        <div class="ChangesList">
+                            <div class="ChangeGroup">
+                                <h4 class="ChangeGroupTitle">Defence</h4>
+                                <ul class="Changes">
+                                    <li class="buff">
+                                        <span class="ChangeLabel">Health:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">3100</s>
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i>
+                                            <strong class="NewValue">3500</strong>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article id="sera_t2_naval_support_factory" class="PatchCard">
+                    <!-- Card Header Section -->
+                    <header class="PatchCardHeader">
+                        <div class="UnitInfo">
+                            <img src="/assets/images/units/sera/structure/T2NavalHQ.png" class="UnitIcon" alt="Seraphim T2 Naval Support Factory"/>
+                            <div class="UnitDetails">
+                                <div class="UnitNameRow">
+                                    <h3 class="UnitName">Seraphim T2 Naval Support Factory</h3>
+                                    <span class="UnitCode">xsb9503</span>
+                                </div>
+                                <span class="FactionBadge sera">Seraphim</span>
+                            </div>
+                        </div>
+                        <div class="ChangeTypeBadge buff">Buff</div>
+                    </header>
+                    <!-- Card Content Section -->
+                    <div class="PatchCardContent">
+                        <p class="ChangeDescription">T2 Naval Support Factory HP has been increased to improve survivability and bring it more in line with its cost.</p>
+                        <div class="ChangesList">
+                            <div class="ChangeGroup">
+                                <h4 class="ChangeGroupTitle">Defence</h4>
+                                <ul class="Changes">
+                                    <li class="buff">
+                                        <span class="ChangeLabel">Health:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">5000</s>
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i>
+                                            <strong class="NewValue">5500</strong>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article id="sera_t2_power_generator" class="PatchCard">
+                    <!-- Card Header Section -->
+                    <header class="PatchCardHeader">
+                        <div class="UnitInfo">
+                            <img src="/assets/images/units/sera/structure/T2PowerGen.png" class="UnitIcon" alt="Seraphim T2 Power Generator"/>
+                            <div class="UnitDetails">
+                                <div class="UnitNameRow">
+                                    <h3 class="UnitName">Seraphim T2 Power Generator</h3>
+                                    <span class="UnitCode">xsb1201</span>
+                                </div>
+                                <span class="FactionBadge sera">Seraphim</span>
+                            </div>
+                        </div>
+                        <div class="ChangeTypeBadge buff">Buff</div>
+                    </header>
+                    <!-- Card Content Section -->
+                    <div class="PatchCardContent">
+                        <p class="ChangeDescription">T2 Power Generator HP has been increased to improve survivability and bring it more in line with its cost.</p>
+                        <div class="ChangesList">
+                            <div class="ChangeGroup">
+                                <h4 class="ChangeGroupTitle">Defence</h4>
+                                <ul class="Changes">
+                                    <li class="buff">
+                                        <span class="ChangeLabel">Health:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">1900</s>
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i>
+                                            <strong class="NewValue">2000</strong>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article id="sera_t2_mass_extractor" class="PatchCard">
+                    <!-- Card Header Section -->
+                    <header class="PatchCardHeader">
+                        <div class="UnitInfo">
+                            <img src="/assets/images/units/sera/structure/T2MassExtractor.png" class="UnitIcon" alt="Seraphim T2 Mass Extractor"/>
+                            <div class="UnitDetails">
+                                <div class="UnitNameRow">
+                                    <h3 class="UnitName">Seraphim T2 Mass Extractor</h3>
+                                    <span class="UnitCode">xsb1202</span>
+                                </div>
+                                <span class="FactionBadge sera">Seraphim</span>
+                            </div>
+                        </div>
+                        <div class="ChangeTypeBadge buff">Buff</div>
+                    </header>
+                    <!-- Card Content Section -->
+                    <div class="PatchCardContent">
+                        <p class="ChangeDescription">T2 Mass Extractor HP has been increased to improve survivability and bring it more in line with its cost.</p>
+                        <div class="ChangesList">
+                            <div class="ChangeGroup">
+                                <h4 class="ChangeGroupTitle">Defence</h4>
+                                <ul class="Changes">
+                                    <li class="buff">
+                                        <span class="ChangeLabel">Health:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">1900</s>
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i>
+                                            <strong class="NewValue">2000</strong>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article id="sera_t3_air_factory_hq" class="PatchCard">
+                    <!-- Card Header Section -->
+                    <header class="PatchCardHeader">
+                        <div class="UnitInfo">
+                            <img src="/assets/images/units/sera/structure/T3AirFacHQ.png" class="UnitIcon" alt="Seraphim T3 Air Factory HQ"/>
+                            <div class="UnitDetails">
+                                <div class="UnitNameRow">
+                                    <h3 class="UnitName">Seraphim T3 Air Factory HQ</h3>
+                                    <span class="UnitCode">xsb0302_air</span>
+                                </div>
+                                <span class="FactionBadge sera">Seraphim</span>
+                            </div>
+                        </div>
+                        <div class="ChangeTypeBadge buff">Buff</div>
+                    </header>
+                    <!-- Card Content Section -->
+                    <div class="PatchCardContent">
+                        <p class="ChangeDescription">T3 Air Factory HQ HP has been increased to improve survivability and bring it more in line with its cost.</p>
+                        <div class="ChangesList">
+                            <div class="ChangeGroup">
+                                <h4 class="ChangeGroupTitle">Defence</h4>
+                                <ul class="Changes">
+                                    <li class="buff">
+                                        <span class="ChangeLabel">Health:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">12400</s>
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i>
+                                            <strong class="NewValue">14000</strong>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article id="sera_t3_land_factory_hq" class="PatchCard">
+                    <!-- Card Header Section -->
+                    <header class="PatchCardHeader">
+                        <div class="UnitInfo">
+                            <img src="/assets/images/units/sera/structure/T3LandFacHQ.png" class="UnitIcon" alt="Seraphim T3 Land Factory HQ"/>
+                            <div class="UnitDetails">
+                                <div class="UnitNameRow">
+                                    <h3 class="UnitName">Seraphim T3 Land Factory HQ</h3>
+                                    <span class="UnitCode">xsb0302</span>
+                                </div>
+                                <span class="FactionBadge sera">Seraphim</span>
+                            </div>
+                        </div>
+                        <div class="ChangeTypeBadge buff">Buff</div>
+                    </header>
+                    <!-- Card Content Section -->
+                    <div class="PatchCardContent">
+                        <p class="ChangeDescription">T3 Land Factory HQ HP has been increased to improve survivability and bring it more in line with its cost.</p>
+                        <div class="ChangesList">
+                            <div class="ChangeGroup">
+                                <h4 class="ChangeGroupTitle">Defence</h4>
+                                <ul class="Changes">
+                                    <li class="buff">
+                                        <span class="ChangeLabel">Health:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">12400</s>
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i>
+                                            <strong class="NewValue">14000</strong>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article id="sera_t3_naval_factory_hq" class="PatchCard">
+                    <!-- Card Header Section -->
+                    <header class="PatchCardHeader">
+                        <div class="UnitInfo">
+                            <img src="/assets/images/units/sera/structure/T3NavalHQ.png" class="UnitIcon" alt="Seraphim T3 Naval Factory HQ"/>
+                            <div class="UnitDetails">
+                                <div class="UnitNameRow">
+                                    <h3 class="UnitName">Seraphim T3 Naval Factory HQ</h3>
+                                    <span class="UnitCode">xsb0303</span>
+                                </div>
+                                <span class="FactionBadge sera">Seraphim</span>
+                            </div>
+                        </div>
+                        <div class="ChangeTypeBadge buff">Buff</div>
+                    </header>
+                    <!-- Card Content Section -->
+                    <div class="PatchCardContent">
+                        <p class="ChangeDescription">T3 Naval Factory HQ HP has been increased to improve survivability and bring it more in line with its cost.</p>
+                        <div class="ChangesList">
+                            <div class="ChangeGroup">
+                                <h4 class="ChangeGroupTitle">Defence</h4>
+                                <ul class="Changes">
+                                    <li class="buff">
+                                        <span class="ChangeLabel">Health:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">20000</s>
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i>
+                                            <strong class="NewValue">22000</strong>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article id="sera_t3_air_support_factory" class="PatchCard">
+                    <!-- Card Header Section -->
+                    <header class="PatchCardHeader">
+                        <div class="UnitInfo">
+                            <img src="/assets/images/units/sera/structure/T3AirFacHQ.png" class="UnitIcon" alt="Seraphim T3 Air Support Factory"/>
+                            <div class="UnitDetails">
+                                <div class="UnitNameRow">
+                                    <h3 class="UnitName">Seraphim T3 Air Support Factory</h3>
+                                    <span class="UnitCode">xsb0302_air_support</span>
+                                </div>
+                                <span class="FactionBadge sera">Seraphim</span>
+                            </div>
+                        </div>
+                        <div class="ChangeTypeBadge buff">Buff</div>
+                    </header>
+                    <!-- Card Content Section -->
+                    <div class="PatchCardContent">
+                        <p class="ChangeDescription">T3 Air Support Factory HP has been increased to improve survivability and bring it more in line with its cost.</p>
+                        <div class="ChangesList">
+                            <div class="ChangeGroup">
+                                <h4 class="ChangeGroupTitle">Defence</h4>
+                                <ul class="Changes">
+                                    <li class="buff">
+                                        <span class="ChangeLabel">Health:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">6200</s>
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i>
+                                            <strong class="NewValue">7000</strong>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article id="sera_t3_land_support_factory" class="PatchCard">
+                    <!-- Card Header Section -->
+                    <header class="PatchCardHeader">
+                        <div class="UnitInfo">
+                            <img src="/assets/images/units/sera/structure/T3LandFacHQ.png" class="UnitIcon" alt="Seraphim T3 Land Support Factory"/>
+                            <div class="UnitDetails">
+                                <div class="UnitNameRow">
+                                    <h3 class="UnitName">Seraphim T3 Land Support Factory</h3>
+                                    <span class="UnitCode">xsb0302_land_support</span>
+                                </div>
+                                <span class="FactionBadge sera">Seraphim</span>
+                            </div>
+                        </div>
+                        <div class="ChangeTypeBadge buff">Buff</div>
+                    </header>
+                    <!-- Card Content Section -->
+                    <div class="PatchCardContent">
+                        <p class="ChangeDescription">T3 Land Support Factory HP has been increased to improve survivability and bring it more in line with its cost.</p>
+                        <div class="ChangesList">
+                            <div class="ChangeGroup">
+                                <h4 class="ChangeGroupTitle">Defence</h4>
+                                <ul class="Changes">
+                                    <li class="buff">
+                                        <span class="ChangeLabel">Health:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">6200</s>
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i>
+                                            <strong class="NewValue">7000</strong>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article id="sera_t3_naval_support" class="PatchCard">
+                    <!-- Card Header Section -->
+                    <header class="PatchCardHeader">
+                        <div class="UnitInfo">
+                            <img src="/assets/images/units/sera/structure/T3NavalHQ.png" class="UnitIcon" alt="Seraphim T3 Naval Support Factory"/>
+                            <div class="UnitDetails">
+                                <div class="UnitNameRow">
+                                    <h3 class="UnitName">Seraphim T3 Naval Support Factory</h3>
+                                    <span class="UnitCode">XSB9603</span>
+                                </div>
+                                <span class="FactionBadge sera">Seraphim</span>
+                            </div>
+                        </div>
+                        <div class="ChangeTypeBadge buff">Buff</div>
+                    </header>
+                    <!-- Card Content Section -->
+                    <div class="PatchCardContent">
+                        <p class="ChangeDescription">T3 Naval Support Factory HP has been increased to improve survivability and bring it more in line with its cost.</p>
+                        <div class="ChangesList">
+                            <div class="ChangeGroup">
+                                <h4 class="ChangeGroupTitle">Defence</h4>
+                                <ul class="Changes">
+                                    <li class="buff">
+                                        <span class="ChangeLabel">Health:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">10000</s>
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i>
+                                            <strong class="NewValue">15000</strong>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article id="sera_t3_power_generator" class="PatchCard">
+                    <!-- Card Header Section -->
+                    <header class="PatchCardHeader">
+                        <div class="UnitInfo">
+                            <img src="/assets/images/units/sera/structure/T3PowerGen.png" class="UnitIcon" alt="Seraphim T3 Power Generator"/>
+                            <div class="UnitDetails">
+                                <div class="UnitNameRow">
+                                    <h3 class="UnitName">Seraphim T3 Power Generator</h3>
+                                    <span class="UnitCode">xsb1301</span>
+                                </div>
+                                <span class="FactionBadge sera">Seraphim</span>
+                            </div>
+                        </div>
+                        <div class="ChangeTypeBadge buff">Buff</div>
+                    </header>
+                    <!-- Card Content Section -->
+                    <div class="PatchCardContent">
+                        <p class="ChangeDescription">T3 Power Generator HP has been increased to improve survivability and bring it more in line with its cost.</p>
+                        <div class="ChangesList">
+                            <div class="ChangeGroup">
+                                <h4 class="ChangeGroupTitle">Defence</h4>
+                                <ul class="Changes">
+                                    <li class="buff">
+                                        <span class="ChangeLabel">Health:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">6200</s>
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i>
+                                            <strong class="NewValue">7000</strong>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article id="sera_t3_mass_extractor" class="PatchCard">
+                    <!-- Card Header Section -->
+                    <header class="PatchCardHeader">
+                        <div class="UnitInfo">
+                            <img src="/assets/images/units/sera/structure/T3MassExtractor.png" class="UnitIcon" alt="Seraphim T3 Mass Extractor"/>
+                            <div class="UnitDetails">
+                                <div class="UnitNameRow">
+                                    <h3 class="UnitName">Seraphim T3 Mass Extractor</h3>
+                                    <span class="UnitCode">xsb1302</span>
+                                </div>
+                                <span class="FactionBadge sera">Seraphim</span>
+                            </div>
+                        </div>
+                        <div class="ChangeTypeBadge buff">Buff</div>
+                    </header>
+                    <!-- Card Content Section -->
+                    <div class="PatchCardContent">
+                        <p class="ChangeDescription">T3 Mass Extractor HP has been increased to improve survivability and bring it more in line with its cost.</p>
+                        <div class="ChangesList">
+                            <div class="ChangeGroup">
+                                <h4 class="ChangeGroupTitle">Defence</h4>
+                                <ul class="Changes">
+                                    <li class="buff">
+                                        <span class="ChangeLabel">Health:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">6200</s>
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i>
+                                            <strong class="NewValue">7000</strong>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article id="cybran_t1_land_factory_regen" class="PatchCard">
+                    <!-- Card Header Section -->
+                    <header class="PatchCardHeader">
+                        <div class="UnitInfo">
+                            <img src="/assets/images/units/cybran/structure/T1LandFacHQ.png" class="UnitIcon" alt="Cybran T1 Land Factory"/>
+                            <div class="UnitDetails">
+                                <div class="UnitNameRow">
+                                    <h3 class="UnitName">Cybran T1 Land Factory</h3>
+                                    <span class="UnitCode">urb0102</span>
+                                </div>
+                                <span class="FactionBadge cybran">Cybran</span>
+                            </div>
+                        </div>
+                        <div class="ChangeTypeBadge buff">Buff</div>
+                    </header>
+                    <!-- Card Content Section -->
+                    <div class="PatchCardContent">
+                        <p class="ChangeDescription">T1 Land Factory regeneration has been increased to make Cybran structures more resilient.</p>
+                        <div class="ChangesList">
+                            <div class="ChangeGroup">
+                                <h4 class="ChangeGroupTitle">Regeneration</h4>
+                                <ul class="Changes">
+                                    <li class="buff">
+                                        <span class="ChangeLabel">Regeneration:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">3</s>
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i>
+                                            <strong class="NewValue">6</strong>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article id="cybran_t1_air_factory_regen" class="PatchCard">
+                    <!-- Card Header Section -->
+                    <header class="PatchCardHeader">
+                        <div class="UnitInfo">
+                            <img src="/assets/images/units/cybran/structure/T1AirFacHQ.png" class="UnitIcon" alt="Cybran T1 Air Factory"/>
+                            <div class="UnitDetails">
+                                <div class="UnitNameRow">
+                                    <h3 class="UnitName">Cybran T1 Air Factory</h3>
+                                    <span class="UnitCode">urb0102_air</span>
+                                </div>
+                                <span class="FactionBadge cybran">Cybran</span>
+                            </div>
+                        </div>
+                        <div class="ChangeTypeBadge buff">Buff</div>
+                    </header>
+                    <!-- Card Content Section -->
+                    <div class="PatchCardContent">
+                        <p class="ChangeDescription">T1 Air Factory regeneration has been increased to make Cybran structures more resilient.</p>
+                        <div class="ChangesList">
+                            <div class="ChangeGroup">
+                                <h4 class="ChangeGroupTitle">Regeneration</h4>
+                                <ul class="Changes">
+                                    <li class="buff">
+                                        <span class="ChangeLabel">Regeneration:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">3</s>
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i>
+                                            <strong class="NewValue">6</strong>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article id="cybran_t1_naval_factory_regen" class="PatchCard">
+                    <!-- Card Header Section -->
+                    <header class="PatchCardHeader">
+                        <div class="UnitInfo">
+                            <img src="/assets/images/units/cybran/structure/T1NavalHQ.png" class="UnitIcon" alt="Cybran T1 Naval Factory"/>
+                            <div class="UnitDetails">
+                                <div class="UnitNameRow">
+                                    <h3 class="UnitName">Cybran T1 Naval Factory</h3>
+                                    <span class="UnitCode">urb0103</span>
+                                </div>
+                                <span class="FactionBadge cybran">Cybran</span>
+                            </div>
+                        </div>
+                        <div class="ChangeTypeBadge buff">Buff</div>
+                    </header>
+                    <!-- Card Content Section -->
+                    <div class="PatchCardContent">
+                        <p class="ChangeDescription">T1 Naval Factory regeneration has been increased to make Cybran structures more resilient.</p>
+                        <div class="ChangesList">
+                            <div class="ChangeGroup">
+                                <h4 class="ChangeGroupTitle">Regeneration</h4>
+                                <ul class="Changes">
+                                    <li class="buff">
+                                        <span class="ChangeLabel">Regeneration:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">3</s>
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i>
+                                            <strong class="NewValue">6</strong>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article id="cybran_t1_power_generator_regen" class="PatchCard">
+                    <!-- Card Header Section -->
+                    <header class="PatchCardHeader">
+                        <div class="UnitInfo">
+                            <img src="/assets/images/units/cybran/structure/T1PowerGen.png" class="UnitIcon" alt="Cybran T1 Power Generator"/>
+                            <div class="UnitDetails">
+                                <div class="UnitNameRow">
+                                    <h3 class="UnitName">Cybran T1 Power Generator</h3>
+                                    <span class="UnitCode">urb1101</span>
+                                </div>
+                                <span class="FactionBadge cybran">Cybran</span>
+                            </div>
+                        </div>
+                        <div class="ChangeTypeBadge buff">Buff</div>
+                    </header>
+                    <!-- Card Content Section -->
+                    <div class="PatchCardContent">
+                        <p class="ChangeDescription">T1 Power Generator regeneration has been increased to make Cybran structures more resilient.</p>
+                        <div class="ChangesList">
+                            <div class="ChangeGroup">
+                                <h4 class="ChangeGroupTitle">Regeneration</h4>
+                                <ul class="Changes">
+                                    <li class="buff">
+                                        <span class="ChangeLabel">Regeneration:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">1</s>
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i>
+                                            <strong class="NewValue">2</strong>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article id="cybran_t1_mass_extractor_regen" class="PatchCard">
+                    <!-- Card Header Section -->
+                    <header class="PatchCardHeader">
+                        <div class="UnitInfo">
+                            <img src="/assets/images/units/cybran/structure/T1MassExtractor.png" class="UnitIcon" alt="Cybran T1 Mass Extractor"/>
+                            <div class="UnitDetails">
+                                <div class="UnitNameRow">
+                                    <h3 class="UnitName">Cybran T1 Mass Extractor</h3>
+                                    <span class="UnitCode">urb1103</span>
+                                </div>
+                                <span class="FactionBadge cybran">Cybran</span>
+                            </div>
+                        </div>
+                        <div class="ChangeTypeBadge buff">Buff</div>
+                    </header>
+                    <!-- Card Content Section -->
+                    <div class="PatchCardContent">
+                        <p class="ChangeDescription">T1 Mass Extractor regeneration has been increased to make Cybran structures more resilient.</p>
+                        <div class="ChangesList">
+                            <div class="ChangeGroup">
+                                <h4 class="ChangeGroupTitle">Regeneration</h4>
+                                <ul class="Changes">
+                                    <li class="buff">
+                                        <span class="ChangeLabel">Regeneration:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">1</s>
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i>
+                                            <strong class="NewValue">2</strong>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article id="cybran_t1_hydrocarbon_power_plant_regen" class="PatchCard">
+                    <!-- Card Header Section -->
+                    <header class="PatchCardHeader">
+                        <div class="UnitInfo">
+                            <img src="/assets/images/units/cybran/structure/T1Hydrocarbon.png" class="UnitIcon" alt="Cybran T1 Hydrocarbon Power Plant"/>
+                            <div class="UnitDetails">
+                                <div class="UnitNameRow">
+                                    <h3 class="UnitName">Cybran T1 Hydrocarbon Power Plant</h3>
+                                    <span class="UnitCode">urb1102</span>
+                                </div>
+                                <span class="FactionBadge cybran">Cybran</span>
+                            </div>
+                        </div>
+                        <div class="ChangeTypeBadge buff">Buff</div>
+                    </header>
+                    <!-- Card Content Section -->
+                    <div class="PatchCardContent">
+                        <p class="ChangeDescription">T1 Hydrocarbon Power Plant regeneration has been increased to make Cybran structures more resilient.</p>
+                        <div class="ChangesList">
+                            <div class="ChangeGroup">
+                                <h4 class="ChangeGroupTitle">Regeneration</h4>
+                                <ul class="Changes">
+                                    <li class="buff">
+                                        <span class="ChangeLabel">Regeneration:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">1</s>
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i>
+                                            <strong class="NewValue">6</strong>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article id="cybran_t1_wall_segment_regen" class="PatchCard">
+                    <!-- Card Header Section -->
+                    <header class="PatchCardHeader">
+                        <div class="UnitInfo">
+                            <img src="/assets/images/units/cybran/structure/T1Wall.png" class="UnitIcon" alt="Cybran T1 Wall Segment"/>
+                            <div class="UnitDetails">
+                                <div class="UnitNameRow">
+                                    <h3 class="UnitName">Cybran T1 Wall Segment</h3>
+                                    <span class="UnitCode">urb5101</span>
+                                </div>
+                                <span class="FactionBadge cybran">Cybran</span>
+                            </div>
+                        </div>
+                        <div class="ChangeTypeBadge buff">Buff</div>
+                    </header>
+                    <!-- Card Content Section -->
+                    <div class="PatchCardContent">
+                        <p class="ChangeDescription">T1 Wall Segment regeneration has been increased to make Cybran structures more resilient.</p>
+                        <div class="ChangesList">
+                            <div class="ChangeGroup">
+                                <h4 class="ChangeGroupTitle">Regeneration</h4>
+                                <ul class="Changes">
+                                    <li class="buff">
+                                        <span class="ChangeLabel">Regeneration:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">3</s>
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i>
+                                            <strong class="NewValue">6</strong>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article id="cybran_t2_air_factory_hq_regen" class="PatchCard">
+                    <!-- Card Header Section -->
+                    <header class="PatchCardHeader">
+                        <div class="UnitInfo">
+                            <img src="/assets/images/units/cybran/structure/T2AirFacHQ.png" class="UnitIcon" alt="Cybran T2 Air Factory HQ"/>
+                            <div class="UnitDetails">
+                                <div class="UnitNameRow">
+                                    <h3 class="UnitName">Cybran T2 Air Factory HQ</h3>
+                                    <span class="UnitCode">urb0202_air</span>
+                                </div>
+                                <span class="FactionBadge cybran">Cybran</span>
+                            </div>
+                        </div>
+                        <div class="ChangeTypeBadge buff">Buff</div>
+                    </header>
+                    <!-- Card Content Section -->
+                    <div class="PatchCardContent">
+                        <p class="ChangeDescription">T2 Air Factory HQ regeneration has been increased to make Cybran structures more resilient.</p>
+                        <div class="ChangesList">
+                            <div class="ChangeGroup">
+                                <h4 class="ChangeGroupTitle">Regeneration</h4>
+                                <ul class="Changes">
+                                    <li class="buff">
+                                        <span class="ChangeLabel">Regeneration:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">10</s>
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i>
+                                            <strong class="NewValue">20</strong>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article id="cybran_t2_land_factory_hq_regen" class="PatchCard">
+                    <!-- Card Header Section -->
+                    <header class="PatchCardHeader">
+                        <div class="UnitInfo">
+                            <img src="/assets/images/units/cybran/structure/T2LandFacHQ.png" class="UnitIcon" alt="Cybran T2 Land Factory HQ"/>
+                            <div class="UnitDetails">
+                                <div class="UnitNameRow">
+                                    <h3 class="UnitName">Cybran T2 Land Factory HQ</h3>
+                                    <span class="UnitCode">urb0202</span>
+                                </div>
+                                <span class="FactionBadge cybran">Cybran</span>
+                            </div>
+                        </div>
+                        <div class="ChangeTypeBadge buff">Buff</div>
+                    </header>
+                    <!-- Card Content Section -->
+                    <div class="PatchCardContent">
+                        <p class="ChangeDescription">T2 Land Factory HQ regeneration has been increased to make Cybran structures more resilient.</p>
+                        <div class="ChangesList">
+                            <div class="ChangeGroup">
+                                <h4 class="ChangeGroupTitle">Regeneration</h4>
+                                <ul class="Changes">
+                                    <li class="buff">
+                                        <span class="ChangeLabel">Regeneration:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">10</s>
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i>
+                                            <strong class="NewValue">20</strong>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article id="cybran_t2_naval_factory_hq_regen" class="PatchCard">
+                    <!-- Card Header Section -->
+                    <header class="PatchCardHeader">
+                        <div class="UnitInfo">
+                            <img src="/assets/images/units/cybran/structure/T2NavalHQ.png" class="UnitIcon" alt="Cybran T2 Naval Factory HQ"/>
+                            <div class="UnitDetails">
+                                <div class="UnitNameRow">
+                                    <h3 class="UnitName">Cybran T2 Naval Factory HQ</h3>
+                                    <span class="UnitCode">urb0203</span>
+                                </div>
+                                <span class="FactionBadge cybran">Cybran</span>
+                            </div>
+                        </div>
+                        <div class="ChangeTypeBadge buff">Buff</div>
+                    </header>
+                    <!-- Card Content Section -->
+                    <div class="PatchCardContent">
+                        <p class="ChangeDescription">T2 Naval Factory HQ regeneration has been increased to make Cybran structures more resilient.</p>
+                        <div class="ChangesList">
+                            <div class="ChangeGroup">
+                                <h4 class="ChangeGroupTitle">Regeneration</h4>
+                                <ul class="Changes">
+                                    <li class="buff">
+                                        <span class="ChangeLabel">Regeneration:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">15</s>
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i>
+                                            <strong class="NewValue">30</strong>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article id="cybran_t2_air_support_factory_regen" class="PatchCard">
+                    <!-- Card Header Section -->
+                    <header class="PatchCardHeader">
+                        <div class="UnitInfo">
+                            <img src="/assets/images/units/cybran/structure/T2AirFacHQ.png" class="UnitIcon" alt="Cybran T2 Air Support Factory"/>
+                            <div class="UnitDetails">
+                                <div class="UnitNameRow">
+                                    <h3 class="UnitName">Cybran T2 Air Support Factory</h3>
+                                    <span class="UnitCode">urb0202_air_support</span>
+                                </div>
+                                <span class="FactionBadge cybran">Cybran</span>
+                            </div>
+                        </div>
+                        <div class="ChangeTypeBadge buff">Buff</div>
+                    </header>
+                    <!-- Card Content Section -->
+                    <div class="PatchCardContent">
+                        <p class="ChangeDescription">T2 Air Support Factory regeneration has been increased to make Cybran structures more resilient.</p>
+                        <div class="ChangesList">
+                            <div class="ChangeGroup">
+                                <h4 class="ChangeGroupTitle">Regeneration</h4>
+                                <ul class="Changes">
+                                    <li class="buff">
+                                        <span class="ChangeLabel">Regeneration:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">3</s>
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i>
+                                            <strong class="NewValue">6</strong>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article id="cybran_t2_land_support_factory_regen" class="PatchCard">
+                    <!-- Card Header Section -->
+                    <header class="PatchCardHeader">
+                        <div class="UnitInfo">
+                            <img src="/assets/images/units/cybran/structure/T2LandFacHQ.png" class="UnitIcon" alt="Cybran T2 Land Support Factory"/>
+                            <div class="UnitDetails">
+                                <div class="UnitNameRow">
+                                    <h3 class="UnitName">Cybran T2 Land Support Factory</h3>
+                                    <span class="UnitCode">urb0202_land_support</span>
+                                </div>
+                                <span class="FactionBadge cybran">Cybran</span>
+                            </div>
+                        </div>
+                        <div class="ChangeTypeBadge buff">Buff</div>
+                    </header>
+                    <!-- Card Content Section -->
+                    <div class="PatchCardContent">
+                        <p class="ChangeDescription">T2 Land Support Factory regeneration has been increased to make Cybran structures more resilient.</p>
+                        <div class="ChangesList">
+                            <div class="ChangeGroup">
+                                <h4 class="ChangeGroupTitle">Regeneration</h4>
+                                <ul class="Changes">
+                                    <li class="buff">
+                                        <span class="ChangeLabel">Regeneration:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">3</s>
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i>
+                                            <strong class="NewValue">6</strong>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article id="cybran_t2_naval_factory_regen" class="PatchCard">
+                    <!-- Card Header Section -->
+                    <header class="PatchCardHeader">
+                        <div class="UnitInfo">
+                            <img src="/assets/images/units/cybran/structure/T2NavalHQ.png" class="UnitIcon" alt="Cybran T2 Naval Factory"/>
+                            <div class="UnitDetails">
+                                <div class="UnitNameRow">
+                                    <h3 class="UnitName">Cybran T2 Naval Factory</h3>
+                                    <span class="UnitCode">urb9503</span>
+                                </div>
+                                <span class="FactionBadge cybran">Cybran</span>
+                            </div>
+                        </div>
+                        <div class="ChangeTypeBadge buff">Buff</div>
+                    </header>
+                    <!-- Card Content Section -->
+                    <div class="PatchCardContent">
+                        <p class="ChangeDescription">T2 Naval Factory regeneration has been increased to make Cybran structures more resilient.</p>
+                        <div class="ChangesList">
+                            <div class="ChangeGroup">
+                                <h4 class="ChangeGroupTitle">Regeneration</h4>
+                                <ul class="Changes">
+                                    <li class="buff">
+                                        <span class="ChangeLabel">Regeneration:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">6</s>
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i>
+                                            <strong class="NewValue">12</strong>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article id="cybran_t2_power_generator_regen" class="PatchCard">
+                    <!-- Card Header Section -->
+                    <header class="PatchCardHeader">
+                        <div class="UnitInfo">
+                            <img src="/assets/images/units/cybran/structure/T2PowerGen.png" class="UnitIcon" alt="Cybran T2 Power Generator"/>
+                            <div class="UnitDetails">
+                                <div class="UnitNameRow">
+                                    <h3 class="UnitName">Cybran T2 Power Generator</h3>
+                                    <span class="UnitCode">urb1201</span>
+                                </div>
+                                <span class="FactionBadge cybran">Cybran</span>
+                            </div>
+                        </div>
+                        <div class="ChangeTypeBadge buff">Buff</div>
+                    </header>
+                    <!-- Card Content Section -->
+                    <div class="PatchCardContent">
+                        <p class="ChangeDescription">T2 Power Generator regeneration has been increased to make Cybran structures more resilient.</p>
+                        <div class="ChangesList">
+                            <div class="ChangeGroup">
+                                <h4 class="ChangeGroupTitle">Regeneration</h4>
+                                <ul class="Changes">
+                                    <li class="buff">
+                                        <span class="ChangeLabel">Regeneration:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">3</s>
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i>
+                                            <strong class="NewValue">6</strong>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article id="cybran_t2_mass_extractor_regen" class="PatchCard">
+                    <!-- Card Header Section -->
+                    <header class="PatchCardHeader">
+                        <div class="UnitInfo">
+                            <img src="/assets/images/units/cybran/structure/T2MassExtractor.png" class="UnitIcon" alt="Cybran T2 Mass Extractor"/>
+                            <div class="UnitDetails">
+                                <div class="UnitNameRow">
+                                    <h3 class="UnitName">Cybran T2 Mass Extractor</h3>
+                                    <span class="UnitCode">urb1202</span>
+                                </div>
+                                <span class="FactionBadge cybran">Cybran</span>
+                            </div>
+                        </div>
+                        <div class="ChangeTypeBadge buff">Buff</div>
+                    </header>
+                    <!-- Card Content Section -->
+                    <div class="PatchCardContent">
+                        <p class="ChangeDescription">T2 Mass Extractor regeneration has been increased to make Cybran structures more resilient.</p>
+                        <div class="ChangesList">
+                            <div class="ChangeGroup">
+                                <h4 class="ChangeGroupTitle">Regeneration</h4>
+                                <ul class="Changes">
+                                    <li class="buff">
+                                        <span class="ChangeLabel">Regeneration:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">3</s>
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i>
+                                            <strong class="NewValue">6</strong>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article id="cybran_t3_land_factory_hq_regen" class="PatchCard">
+                    <!-- Card Header Section -->
+                    <header class="PatchCardHeader">
+                        <div class="UnitInfo">
+                            <img src="/assets/images/units/cybran/structure/T3LandFacHQ.png" class="UnitIcon" alt="Cybran T3 Land Factory HQ"/>
+                            <div class="UnitDetails">
+                                <div class="UnitNameRow">
+                                    <h3 class="UnitName">Cybran T3 Land Factory HQ</h3>
+                                    <span class="UnitCode">urb0302</span>
+                                </div>
+                                <span class="FactionBadge cybran">Cybran</span>
+                            </div>
+                        </div>
+                        <div class="ChangeTypeBadge buff">Buff</div>
+                    </header>
+                    <!-- Card Content Section -->
+                    <div class="PatchCardContent">
+                        <p class="ChangeDescription">T3 Land Factory HQ regeneration has been increased to make Cybran structures more resilient.</p>
+                        <div class="ChangesList">
+                            <div class="ChangeGroup">
+                                <h4 class="ChangeGroupTitle">Regeneration</h4>
+                                <ul class="Changes">
+                                    <li class="buff">
+                                        <span class="ChangeLabel">Regeneration:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">20</s>
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i>
+                                            <strong class="NewValue">40</strong>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article id="cybran_t3_air_factory_hq_regen" class="PatchCard">
+                    <!-- Card Header Section -->
+                    <header class="PatchCardHeader">
+                        <div class="UnitInfo">
+                            <img src="/assets/images/units/cybran/structure/T3AirFacHQ.png" class="UnitIcon" alt="Cybran T3 Air Factory HQ"/>
+                            <div class="UnitDetails">
+                                <div class="UnitNameRow">
+                                    <h3 class="UnitName">Cybran T3 Air Factory HQ</h3>
+                                    <span class="UnitCode">urb0302_air</span>
+                                </div>
+                                <span class="FactionBadge cybran">Cybran</span>
+                            </div>
+                        </div>
+                        <div class="ChangeTypeBadge buff">Buff</div>
+                    </header>
+                    <!-- Card Content Section -->
+                    <div class="PatchCardContent">
+                        <p class="ChangeDescription">T3 Air Factory HQ regeneration has been increased to make Cybran structures more resilient.</p>
+                        <div class="ChangesList">
+                            <div class="ChangeGroup">
+                                <h4 class="ChangeGroupTitle">Regeneration</h4>
+                                <ul class="Changes">
+                                    <li class="buff">
+                                        <span class="ChangeLabel">Regeneration:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">20</s>
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i>
+                                            <strong class="NewValue">40</strong>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article id="cybran_t3_naval_factory_hq_regen" class="PatchCard">
+                    <!-- Card Header Section -->
+                    <header class="PatchCardHeader">
+                        <div class="UnitInfo">
+                            <img src="/assets/images/units/cybran/structure/T3NavalHQ.png" class="UnitIcon" alt="Cybran T3 Naval Factory HQ"/>
+                            <div class="UnitDetails">
+                                <div class="UnitNameRow">
+                                    <h3 class="UnitName">Cybran T3 Naval Factory HQ</h3>
+                                    <span class="UnitCode">urb0303</span>
+                                </div>
+                                <span class="FactionBadge cybran">Cybran</span>
+                            </div>
+                        </div>
+                        <div class="ChangeTypeBadge buff">Buff</div>
+                    </header>
+                    <!-- Card Content Section -->
+                    <div class="PatchCardContent">
+                        <p class="ChangeDescription">T3 Naval Factory HQ regeneration has been increased to make Cybran structures more resilient.</p>
+                        <div class="ChangesList">
+                            <div class="ChangeGroup">
+                                <h4 class="ChangeGroupTitle">Regeneration</h4>
+                                <ul class="Changes">
+                                    <li class="buff">
+                                        <span class="ChangeLabel">Regeneration:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">30</s>
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i>
+                                            <strong class="NewValue">60</strong>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article id="cybran_t3_air_support_factory_regen" class="PatchCard">
+                    <!-- Card Header Section -->
+                    <header class="PatchCardHeader">
+                        <div class="UnitInfo">
+                            <img src="/assets/images/units/cybran/structure/T3AirFacHQ.png" class="UnitIcon" alt="Cybran T3 Air Support Factory"/>
+                            <div class="UnitDetails">
+                                <div class="UnitNameRow">
+                                    <h3 class="UnitName">Cybran T3 Air Support Factory</h3>
+                                    <span class="UnitCode">urb0302_air_support</span>
+                                </div>
+                                <span class="FactionBadge cybran">Cybran</span>
+                            </div>
+                        </div>
+                        <div class="ChangeTypeBadge buff">Buff</div>
+                    </header>
+                    <!-- Card Content Section -->
+                    <div class="PatchCardContent">
+                        <p class="ChangeDescription">T3 Air Support Factory regeneration has been increased to make Cybran structures more resilient.</p>
+                        <div class="ChangesList">
+                            <div class="ChangeGroup">
+                                <h4 class="ChangeGroupTitle">Regeneration</h4>
+                                <ul class="Changes">
+                                    <li class="buff">
+                                        <span class="ChangeLabel">Regeneration:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">10</s>
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i>
+                                            <strong class="NewValue">20</strong>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article id="cybran_t3_land_support_factory_regen" class="PatchCard">
+                    <!-- Card Header Section -->
+                    <header class="PatchCardHeader">
+                        <div class="UnitInfo">
+                            <img src="/assets/images/units/cybran/structure/T3LandFacHQ.png" class="UnitIcon" alt="Cybran T3 Land Support Factory"/>
+                            <div class="UnitDetails">
+                                <div class="UnitNameRow">
+                                    <h3 class="UnitName">Cybran T3 Land Support Factory</h3>
+                                    <span class="UnitCode">urb0302_land_support</span>
+                                </div>
+                                <span class="FactionBadge cybran">Cybran</span>
+                            </div>
+                        </div>
+                        <div class="ChangeTypeBadge buff">Buff</div>
+                    </header>
+                    <!-- Card Content Section -->
+                    <div class="PatchCardContent">
+                        <p class="ChangeDescription">T3 Land Support Factory regeneration has been increased to make Cybran structures more resilient.</p>
+                        <div class="ChangesList">
+                            <div class="ChangeGroup">
+                                <h4 class="ChangeGroupTitle">Regeneration</h4>
+                                <ul class="Changes">
+                                    <li class="buff">
+                                        <span class="ChangeLabel">Regeneration:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">10</s>
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i>
+                                            <strong class="NewValue">20</strong>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article id="cybran_t3_naval_factory_regen" class="PatchCard">
+                    <!-- Card Header Section -->
+                    <header class="PatchCardHeader">
+                        <div class="UnitInfo">
+                            <img src="/assets/images/units/cybran/structure/T3NavalHQ.png" class="UnitIcon" alt="Cybran T3 Naval Factory"/>
+                            <div class="UnitDetails">
+                                <div class="UnitNameRow">
+                                    <h3 class="UnitName">Cybran T3 Naval Factory</h3>
+                                    <span class="UnitCode">urb9603</span>
+                                </div>
+                                <span class="FactionBadge cybran">Cybran</span>
+                            </div>
+                        </div>
+                        <div class="ChangeTypeBadge buff">Buff</div>
+                    </header>
+                    <!-- Card Content Section -->
+                    <div class="PatchCardContent">
+                        <p class="ChangeDescription">T3 Naval Factory regeneration has been increased to make Cybran structures more resilient.</p>
+                        <div class="ChangesList">
+                            <div class="ChangeGroup">
+                                <h4 class="ChangeGroupTitle">Regeneration</h4>
+                                <ul class="Changes">
+                                    <li class="buff">
+                                        <span class="ChangeLabel">Regeneration:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">15</s>
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i>
+                                            <strong class="NewValue">30</strong>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article id="cybran_t3_power_generator_regen" class="PatchCard">
+                    <!-- Card Header Section -->
+                    <header class="PatchCardHeader">
+                        <div class="UnitInfo">
+                            <img src="/assets/images/units/cybran/structure/T3PowerGen.png" class="UnitIcon" alt="Cybran T3 Power Generator"/>
+                            <div class="UnitDetails">
+                                <div class="UnitNameRow">
+                                    <h3 class="UnitName">Cybran T3 Power Generator</h3>
+                                    <span class="UnitCode">urb1301</span>
+                                </div>
+                                <span class="FactionBadge cybran">Cybran</span>
+                            </div>
+                        </div>
+                        <div class="ChangeTypeBadge buff">Buff</div>
+                    </header>
+                    <!-- Card Content Section -->
+                    <div class="PatchCardContent">
+                        <p class="ChangeDescription">T3 Power Generator regeneration has been increased to make Cybran structures more resilient.</p>
+                        <div class="ChangesList">
+                            <div class="ChangeGroup">
+                                <h4 class="ChangeGroupTitle">Regeneration</h4>
+                                <ul class="Changes">
+                                    <li class="buff">
+                                        <span class="ChangeLabel">Regeneration:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">10</s>
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i>
+                                            <strong class="NewValue">20</strong>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article id="cybran_t3_mass_extractor_regen" class="PatchCard">
+                    <!-- Card Header Section -->
+                    <header class="PatchCardHeader">
+                        <div class="UnitInfo">
+                            <img src="/assets/images/units/cybran/structure/T3MassExtractor.png" class="UnitIcon" alt="Cybran T3 Mass Extractor"/>
+                            <div class="UnitDetails">
+                                <div class="UnitNameRow">
+                                    <h3 class="UnitName">Cybran T3 Mass Extractor</h3>
+                                    <span class="UnitCode">urb1302</span>
+                                </div>
+                                <span class="FactionBadge cybran">Cybran</span>
+                            </div>
+                        </div>
+                        <div class="ChangeTypeBadge buff">Buff</div>
+                    </header>
+                    <!-- Card Content Section -->
+                    <div class="PatchCardContent">
+                        <p class="ChangeDescription">T3 Mass Extractor regeneration has been increased to make Cybran structures more resilient.</p>
+                        <div class="ChangesList">
+                            <div class="ChangeGroup">
+                                <h4 class="ChangeGroupTitle">Regeneration</h4>
+                                <ul class="Changes">
+                                    <li class="buff">
+                                        <span class="ChangeLabel">Regeneration:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">10</s>
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i>
+                                            <strong class="NewValue">20</strong>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article id="t2_radar" class="PatchCard">
+                    <!-- Card Header Section -->
+                    <header class="PatchCardHeader">
+                        <div class="UnitInfo">
+                            <img src="/assets/images/units/uef/structure/T2Radar.png" class="UnitIcon" alt="T2 Radar"/>
+                            <div class="UnitDetails">
+                                <div class="UnitNameRow">
+                                    <h3 class="UnitName">T2 Radar</h3>
+                                    <span class="UnitCode">ueb3202</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ChangeTypeBadge buff">Buff</div>
+                    </header>
+                    <!-- Card Content Section -->
+                    <div class="PatchCardContent">
+                        <p class="ChangeDescription">We have reduced the maintenance cost of T2 radars to encourage this intel option in the mid-game.</p>
+                        <div class="ChangesList">
+                            <div class="ChangeGroup">
+                                <h4 class="ChangeGroupTitle">Economy</h4>
+                                <ul class="Changes">
+                                    <li class="buff">
+                                        <span class="ChangeLabel">Maintenance Cost:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">250</s>
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i>
+                                            <strong class="NewValue">200</strong>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+            </section>
+        </div>
+
+        <aside class="Sidebar" role="navigation" aria-label="Sidebar navigation">
+            <div class="ContentSidemenu">
+                <!-- Quick Navigation Header -->
+                <header class="SidemenuHeader">
+                    <h2 class="SidemenuTitle">
+                        <i class="fas fa-list-ul" aria-hidden="true"></i>
+                        Quick Navigation
+                    </h2>
+                    <div class="ProgressBar">
+                        <div class="ProgressFill" id="readingProgress"></div>
+                    </div>
+                </header>
+
+                <!-- Quick Actions Panel -->
+                <div class="QuickActions">
+                    <button class="QuickActionBtn" onclick="scrollToTop()" title="Back to Top">
+                        <i class="fas fa-arrow-up"></i>
+                        <span>Top</span>
+                    </button>
+                    <button class="QuickActionBtn" onclick="toggleAllSections()" title="Expand/Collapse All">
+                        <i class="fas fa-expand-arrows-alt"></i>
+                        <span>Toggle</span>
+                    </button>
+                    <button class="QuickActionBtn" onclick="printPage()" title="Print Page">
+                        <i class="fas fa-print"></i>
+                        <span>Print</span>
+                    </button>
+                </div>
+
+                <!-- Content Navigation -->
+                <nav class="ContentNav" role="navigation">
+
+                    <!-- Intro Section -->
+                    <div class="NavSection active">
+                        <button class="SectionToggle" aria-expanded="true" data-target="intro-items">
+                            <i class="fas fa-info-circle SectionIcon"></i>
+                            <span class="SectionTitle">Introduction</span>
+                            <span class="ItemCount">1</span>
+                            <i class="fas fa-chevron-down ToggleIcon"></i>
+                        </button>
+                        <ul class="SectionItems" id="intro-items">
+                            <li class="NavItem">
+                                <a href="#Intro" class="NavLink">
+                                    <i class="fas fa-scroll"></i>
+                                    <span>Patch Overview</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Air Section -->
+                    <div class="NavSection">
+                        <button class="SectionToggle" aria-expanded="false" data-target="air-items">
+                            <i class="fas fa-plane SectionIcon"></i>
+                            <span class="SectionTitle">Air Units</span>
+                            <span class="ItemCount">1</span>
+                            <i class="fas fa-chevron-down ToggleIcon"></i>
+                        </button>
+                        <ul class="SectionItems" id="air-items">
+                            <li class="NavItem">
+                                <a href="#uef_t2_fighter_bomber" class="NavLink">
+                                    <img src="/assets/images/units/uef/air/T2FighterBomber.png" class="UnitThumb" alt="Janus"/>
+                                    <div class="LinkContent">
+                                        <span class="UnitName">Janus</span>
+                                        <span class="ChangeType buff">Buff</span>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                                    
+                    <!-- Structure Section -->
+                    <div class="NavSection">
+                        <button class="SectionToggle" aria-expanded="false" data-target="structure-items">
+                            <span class="SectionTitle">Structures</span>
+                            <span class="ItemCount">44</span>
+                            <i class="fas fa-chevron-down ToggleIcon"></i>
+                        </button>
+                        <ul class="SectionItems" id="structure-items">
+                            <li class="NavItem"><a href="#uef_t3_naval_support" class="NavLink"><img src="/assets/images/units/uef/structure/T3NavalFacHQ.png" class="UnitThumb" alt="UEF T3 Naval Support Factory"/><div class="LinkContent"><span class="UnitName">UEF T3 Naval Support Factory</span><span class="ChangeType buff">Buff</span></div></a></li>
+                            <li class="NavItem"><a href="#sera_t3_naval_support" class="NavLink"><img src="/assets/images/units/sera/structure/T3NavalHQ.png" class="UnitThumb" alt="Seraphim T3 Naval Support Factory"/><div class="LinkContent"><span class="UnitName">Seraphim T3 Naval Support Factory</span><span class="ChangeType buff">Buff</span></div></a></li>
+                            <li class="NavItem"><a href="#aeon_t3_naval_support" class="NavLink"><img src="/assets/images/units/aeon/structure/T3NavalHQ.png" class="UnitThumb" alt="Aeon T3 Naval Support Factory"/><div class="LinkContent"><span class="UnitName">Aeon T3 Naval Support Factory</span><span class="ChangeType buff">Buff</span></div></a></li>
+                            <li class="NavItem"><a href="#cybran_t3_naval_support" class="NavLink"><img src="/assets/images/units/cybran/structure/T3NavalHQ.png" class="UnitThumb" alt="Cybran T3 Naval Support Factory"/><div class="LinkContent"><span class="UnitName">Cybran T3 Naval Support Factory</span><span class="ChangeType buff">Buff</span></div></a></li>
+                            <li class="NavItem"><a href="#uef_t2_naval_support" class="NavLink"><img src="/assets/images/units/uef/structure/T2NavalFacHQ.png" class="UnitThumb" alt="UEF T2 Naval Support Factory"/><div class="LinkContent"><span class="UnitName">UEF T2 Naval Support Factory</span><span class="ChangeType buff">Buff</span></div></a></li>
+                            <li class="NavItem"><a href="#uef_mass_storage" class="NavLink"><img src="/assets/images/units/uef/structure/T1MassStorage.png" class="UnitThumb" alt="UEF Mass Storage"/><div class="LinkContent"><span class="UnitName">UEF Mass Storage</span><span class="ChangeType buff">Buff</span></div></a></li>
+                            <li class="NavItem"><a href="#sera_mass_storage" class="NavLink"><img src="/assets/images/units/sera/structure/T1MassStorage.png" class="UnitThumb" alt="Seraphim Mass Storage"/><div class="LinkContent"><span class="UnitName">Seraphim Mass Storage</span><span class="ChangeType buff">Buff</span></div></a></li>
+                            <li class="NavItem"><a href="#aeon_mass_storage" class="NavLink"><img src="/assets/images/units/aeon/structure/T1MassStorage.png" class="UnitThumb" alt="Aeon Mass Storage"/><div class="LinkContent"><span class="UnitName">Aeon Mass Storage</span><span class="ChangeType buff">Buff</span></div></a></li>
+                            <li class="NavItem"><a href="#cybran_mass_storage" class="NavLink"><img src="/assets/images/units/cybran/structure/T1MassStorage.png" class="UnitThumb" alt="Cybran Mass Storage"/><div class="LinkContent"><span class="UnitName">Cybran Mass Storage</span><span class="ChangeType buff">Buff</span></div></a></li>
+                            <li class="NavItem"><a href="#sera_t1_land_factory" class="NavLink"><img src="/assets/images/units/sera/structure/T1LandFacHQ.png" class="UnitThumb" alt="Seraphim T1 Land Factory"/><div class="LinkContent"><span class="UnitName">Seraphim T1 Land Factory</span><span class="ChangeType buff">Buff</span></div></a></li>
+                            <li class="NavItem"><a href="#sera_t1_air_factory" class="NavLink"><img src="/assets/images/units/sera/structure/T1AirFacHQ.png" class="UnitThumb" alt="Seraphim T1 Air Factory"/><div class="LinkContent"><span class="UnitName">Seraphim T1 Air Factory</span><span class="ChangeType buff">Buff</span></div></a></li>
+                            <li class="NavItem"><a href="#sera_t1_naval_factory" class="NavLink"><img src="/assets/images/units/sera/structure/T1NavalHQ.png" class="UnitThumb" alt="Seraphim T1 Naval Factory"/><div class="LinkContent"><span class="UnitName">Seraphim T1 Naval Factory</span><span class="ChangeType buff">Buff</span></div></a></li>
+                            <li class="NavItem"><a href="#sera_t1_power_generator" class="NavLink"><img src="/assets/images/units/sera/structure/T1PowerGen.png" class="UnitThumb" alt="Seraphim T1 Power Generator"/><div class="LinkContent"><span class="UnitName">Seraphim T1 Power Generator</span><span class="ChangeType buff">Buff</span></div></a></li>
+                            <li class="NavItem"><a href="#sera_hydrocarbon_power_plant" class="NavLink"><img src="/assets/images/units/sera/structure/T1Hydrocarbon.png" class="UnitThumb" alt="Seraphim Hydrocarbon Power Plant"/><div class="LinkContent"><span class="UnitName">Seraphim Hydrocarbon Power Plant</span><span class="ChangeType buff">Buff</span></div></a></li>
+                            <li class="NavItem"><a href="#sera_t1_mass_extractor" class="NavLink"><img src="/assets/images/units/sera/structure/T1MassExtractor.png" class="UnitThumb" alt="Seraphim T1 Mass Extractor"/><div class="LinkContent"><span class="UnitName">Seraphim T1 Mass Extractor</span><span class="ChangeType buff">Buff</span></div></a></li>
+                            <li class="NavItem"><a href="#sera_t1_wall_segment" class="NavLink"><img src="/assets/images/units/sera/structure/T1Wall.png" class="UnitThumb" alt="Seraphim T1 Wall Segment"/><div class="LinkContent"><span class="UnitName">Seraphim T1 Wall Segment</span><span class="ChangeType buff">Buff</span></div></a></li>
+                            <li class="NavItem"><a href="#sera_t2_air_factory_hq" class="NavLink"><img src="/assets/images/units/sera/structure/T2AirFacHQ.png" class="UnitThumb" alt="Seraphim T2 Air Factory HQ"/><div class="LinkContent"><span class="UnitName">Seraphim T2 Air Factory HQ</span><span class="ChangeType buff">Buff</span></div></a></li>
+                            <li class="NavItem"><a href="#sera_t2_land_factory_hq" class="NavLink"><img src="/assets/images/units/sera/structure/T2LandFacHQ.png" class="UnitThumb" alt="Seraphim T2 Land Factory HQ"/><div class="LinkContent"><span class="UnitName">Seraphim T2 Land Factory HQ</span><span class="ChangeType buff">Buff</span></div></a></li>
+                            <li class="NavItem"><a href="#sera_t2_naval_factory_hq" class="NavLink"><img src="/assets/images/units/sera/structure/T2NavalHQ.png" class="UnitThumb" alt="Seraphim T2 Naval Factory HQ"/><div class="LinkContent"><span class="UnitName">Seraphim T2 Naval Factory HQ</span><span class="ChangeType buff">Buff</span></div></a></li>
+                            <li class="NavItem"><a href="#sera_t2_air_support_factory" class="NavLink"><img src="/assets/images/units/sera/structure/T2AirFacHQ.png" class="UnitThumb" alt="Seraphim T2 Air Support Factory"/><div class="LinkContent"><span class="UnitName">Seraphim T2 Air Support Factory</span><span class="ChangeType buff">Buff</span></div></a></li>
+                            <li class="NavItem"><a href="#sera_t2_land_support_factory" class="NavLink"><img src="/assets/images/units/sera/structure/T2LandFacHQ.png" class="UnitThumb" alt="Seraphim T2 Land Support Factory"/><div class="LinkContent"><span class="UnitName">Seraphim T2 Land Support Factory</span><span class="ChangeType buff">Buff</span></div></a></li>
+                            <li class="NavItem"><a href="#sera_t2_naval_support_factory" class="NavLink"><img src="/assets/images/units/sera/structure/T2NavalHQ.png" class="UnitThumb" alt="Seraphim T2 Naval Support Factory"/><div class="LinkContent"><span class="UnitName">Seraphim T2 Naval Support Factory</span><span class="ChangeType buff">Buff</span></div></a></li>
+                            <li class="NavItem"><a href="#sera_t2_power_generator" class="NavLink"><img src="/assets/images/units/sera/structure/T2PowerGen.png" class="UnitThumb" alt="Seraphim T2 Power Generator"/><div class="LinkContent"><span class="UnitName">Seraphim T2 Power Generator</span><span class="ChangeType buff">Buff</span></div></a></li>
+                            <li class="NavItem"><a href="#sera_t2_mass_extractor" class="NavLink"><img src="/assets/images/units/sera/structure/T2MassExtractor.png" class="UnitThumb" alt="Seraphim T2 Mass Extractor"/><div class="LinkContent"><span class="UnitName">Seraphim T2 Mass Extractor</span><span class="ChangeType buff">Buff</span></div></a></li>
+                            <li class="NavItem"><a href="#sera_t3_air_factory_hq" class="NavLink"><img src="/assets/images/units/sera/structure/T3AirFacHQ.png" class="UnitThumb" alt="Seraphim T3 Air Factory HQ"/><div class="LinkContent"><span class="UnitName">Seraphim T3 Air Factory HQ</span><span class="ChangeType buff">Buff</span></div></a></li>
+                            <li class="NavItem"><a href="#sera_t3_land_factory_hq" class="NavLink"><img src="/assets/images/units/sera/structure/T3LandFacHQ.png" class="UnitThumb" alt="Seraphim T3 Land Factory HQ"/><div class="LinkContent"><span class="UnitName">Seraphim T3 Land Factory HQ</span><span class="ChangeType buff">Buff</span></div></a></li>
+                            <li class="NavItem"><a href="#sera_t3_naval_factory_hq" class="NavLink"><img src="/assets/images/units/sera/structure/T3NavalHQ.png" class="UnitThumb" alt="Seraphim T3 Naval Factory HQ"/><div class="LinkContent"><span class="UnitName">Seraphim T3 Naval Factory HQ</span><span class="ChangeType buff">Buff</span></div></a></li>
+                            <li class="NavItem"><a href="#sera_t3_air_support_factory" class="NavLink"><img src="/assets/images/units/sera/structure/T3AirFacHQ.png" class="UnitThumb" alt="Seraphim T3 Air Support Factory"/><div class="LinkContent"><span class="UnitName">Seraphim T3 Air Support Factory</span><span class="ChangeType buff">Buff</span></div></a></li>
+                            <li class="NavItem"><a href="#sera_t3_land_support_factory" class="NavLink"><img src="/assets/images/units/sera/structure/T3LandFacHQ.png" class="UnitThumb" alt="Seraphim T3 Land Support Factory"/><div class="LinkContent"><span class="UnitName">Seraphim T3 Land Support Factory</span><span class="ChangeType buff">Buff</span></div></a></li>
+                            <li class="NavItem"><a href="#sera_t3_naval_support" class="NavLink"><img src="/assets/images/units/sera/structure/T3NavalHQ.png" class="UnitThumb" alt="Seraphim T3 Naval Support Factory"/><div class="LinkContent"><span class="UnitName">Seraphim T3 Naval Support Factory</span><span class="ChangeType buff">Buff</span></div></a></li>
+                            <li class="NavItem"><a href="#sera_t3_power_generator" class="NavLink"><img src="/assets/images/units/sera/structure/T3PowerGen.png" class="UnitThumb" alt="Seraphim T3 Power Generator"/><div class="LinkContent"><span class="UnitName">Seraphim T3 Power Generator</span><span class="ChangeType buff">Buff</span></div></a></li>
+                            <li class="NavItem"><a href="#sera_t3_mass_extractor" class="NavLink"><img src="/assets/images/units/sera/structure/T3MassExtractor.png" class="UnitThumb" alt="Seraphim T3 Mass Extractor"/><div class="LinkContent"><span class="UnitName">Seraphim T3 Mass Extractor</span><span class="ChangeType buff">Buff</span></div></a></li>
+                            <li class="NavItem"><a href="#cybran_t1_land_factory_regen" class="NavLink"><img src="/assets/images/units/cybran/structure/T1LandFacHQ.png" class="UnitThumb" alt="Cybran T1 Land Factory"/><div class="LinkContent"><span class="UnitName">Cybran T1 Land Factory</span><span class="ChangeType buff">Buff</span></div></a></li>
+                            <li class="NavItem"><a href="#cybran_t1_air_factory_regen" class="NavLink"><img src="/assets/images/units/cybran/structure/T1AirFacHQ.png" class="UnitThumb" alt="Cybran T1 Air Factory"/><div class="LinkContent"><span class="UnitName">Cybran T1 Air Factory</span></div><span class="ChangeType buff">Buff</span></a></li>
+                            <li class="NavItem"><a href="#cybran_t1_naval_factory_regen" class="NavLink"><img src="/assets/images/units/cybran/structure/T1NavalHQ.png" class="UnitThumb" alt="Cybran T1 Naval Factory"/><div class="LinkContent"><span class="UnitName">Cybran T1 Naval Factory</span><span class="ChangeType buff">Buff</span></div></a></li>
+                            <li class="NavItem"><a href="#cybran_t1_power_generator_regen" class="NavLink"><img src="/assets/images/units/cybran/structure/T1PowerGen.png" class="UnitThumb" alt="Cybran T1 Power Generator"/><div class="LinkContent"><span class="UnitName">Cybran T1 Power Generator</span><span class="ChangeType buff">Buff</span></div></a></li>
+                            <li class="NavItem"><a href="#cybran_t1_mass_extractor_regen" class="NavLink"><img src="/assets/images/units/cybran/structure/T1MassExtractor.png" class="UnitThumb" alt="Cybran T1 Mass Extractor"/><div class="LinkContent"><span class="UnitName">Cybran T1 Mass Extractor</span><span class="ChangeType buff">Buff</span></div></a></li>
+                            <li class="NavItem"><a href="#cybran_t1_hydrocarbon_power_plant_regen" class="NavLink"><img src="/assets/images/units/cybran/structure/T1Hydrocarbon.png" class="UnitThumb" alt="Cybran T1 Hydrocarbon Power Plant"/><div class="LinkContent"><span class="UnitName">Cybran T1 Hydrocarbon Power Plant</span><span class="ChangeType buff">Buff</span></div></a></li>
+                            <li class="NavItem"><a href="#cybran_t1_wall_segment_regen" class="NavLink"><img src="/assets/images/units/cybran/structure/T1Wall.png" class="UnitThumb" alt="Cybran T1 Wall Segment"/><div class="LinkContent"><span class="UnitName">Cybran T1 Wall Segment</span><span class="ChangeType buff">Buff</span></div></a></li>
+                            <li class="NavItem"><a href="#cybran_t2_air_factory_hq_regen" class="NavLink"><img src="/assets/images/units/cybran/structure/T2AirFacHQ.png" class="UnitThumb" alt="Cybran T2 Air Factory HQ"/><div class="LinkContent"><span class="UnitName">Cybran T2 Air Factory HQ</span><span class="ChangeType buff">Buff</span></div></a></li>
+                            <li class="NavItem"><a href="#cybran_t2_land_factory_hq_regen" class="NavLink"><img src="/assets/images/units/cybran/structure/T2LandFacHQ.png" class="UnitThumb" alt="Cybran T2 Land Factory HQ"/><div class="LinkContent"><span class="UnitName">Cybran T2 Land Factory HQ</span><span class="ChangeType buff">Buff</span></div></a></li>
+                            <li class="NavItem"><a href="#cybran_t2_naval_factory_hq_regen" class="NavLink"><img src="/assets/images/units/cybran/structure/T2NavalHQ.png" class="UnitThumb" alt="Cybran T2 Naval Factory HQ"/><div class="LinkContent"><span class="UnitName">Cybran T2 Naval Factory HQ</span><span class="ChangeType buff">Buff</span></div></a></li>
+                            <li class="NavItem"><a href="#cybran_t2_air_support_factory_regen" class="NavLink"><img src="/assets/images/units/cybran/structure/T2AirFacHQ.png" class="UnitThumb" alt="Cybran T2 Air Support Factory"/><div class="LinkContent"><span class="UnitName">Cybran T2 Air Support Factory</span><span class="ChangeType buff">Buff</span></div></a></li>
+                            <li class="NavItem"><a href="#cybran_t2_land_support_factory_regen" class="NavLink"><img src="/assets/images/units/cybran/structure/T2LandFacHQ.png" class="UnitThumb" alt="Cybran T2 Land Support Factory"/><div class="LinkContent"><span class="UnitName">Cybran T2 Land Support Factory</span><span class="ChangeType buff">Buff</span></div></a></li>
+                            <li class="NavItem"><a href="#cybran_t2_naval_factory_regen" class="NavLink"><img src="/assets/images/units/cybran/structure/T2NavalHQ.png" class="UnitThumb" alt="Cybran T2 Naval Factory"/><div class="LinkContent"><span class="UnitName">Cybran T2 Naval Factory</span><span class="ChangeType buff">Buff</span></div></a></li>
+                            <li class="NavItem"><a href="#cybran_t2_power_generator_regen" class="NavLink"><img src="/assets/images/units/cybran/structure/T2PowerGen.png" class="UnitThumb" alt="Cybran T2 Power Generator"/><div class="LinkContent"><span class="UnitName">Cybran T2 Power Generator</span><span class="ChangeType buff">Buff</span></div></a></li>
+                            <li class="NavItem"><a href="#cybran_t2_mass_extractor_regen" class="NavLink"><img src="/assets/images/units/cybran/structure/T2MassExtractor.png" class="UnitThumb" alt="Cybran T2 Mass Extractor"/><div class="LinkContent"><span class="UnitName">Cybran T2 Mass Extractor</span><span class="ChangeType buff">Buff</span></div></a></li>
+                            <li class="NavItem"><a href="#cybran_t3_land_factory_hq_regen" class="NavLink"><img src="/assets/images/units/cybran/structure/T3LandFacHQ.png" class="UnitThumb" alt="Cybran T3 Land Factory HQ"/><div class="LinkContent"><span class="UnitName">Cybran T3 Land Factory HQ</span><span class="ChangeType buff">Buff</span></div></a></li>
+                            <li class="NavItem"><a href="#cybran_t3_air_factory_hq_regen" class="NavLink"><img src="/assets/images/units/cybran/structure/T3AirFacHQ.png" class="UnitThumb" alt="Cybran T3 Air Factory HQ"/><div class="LinkContent"><span class="UnitName">Cybran T3 Air Factory HQ</span><span class="ChangeType buff">Buff</span></div></a></li>
+                            <li class="NavItem"><a href="#cybran_t3_naval_factory_hq_regen" class="NavLink"><img src="/assets/images/units/cybran/structure/T3NavalHQ.png" class="UnitThumb" alt="Cybran T3 Naval Factory HQ"/><div class="LinkContent"><span class="UnitName">Cybran T3 Naval Factory HQ</span><span class="ChangeType buff">Buff</span></div></a></li>
+                            <li class="NavItem"><a href="#cybran_t3_air_support_factory_regen" class="NavLink"><img src="/assets/images/units/cybran/structure/T3AirFacHQ.png" class="UnitThumb" alt="Cybran T3 Air Support Factory"/><div class="LinkContent"><span class="UnitName">Cybran T3 Air Support Factory</span><span class="ChangeType buff">Buff</span></div></a></li>
+                            <li class="NavItem"><a href="#cybran_t3_land_support_factory_regen" class="NavLink"><img src="/assets/images/units/cybran/structure/T3LandFacHQ.png" class="UnitThumb" alt="Cybran T3 Land Support Factory"/><div class="LinkContent"><span class="UnitName">Cybran T3 Land Support Factory</span><span class="ChangeType buff">Buff</span></div></a></li>
+                            <li class="NavItem"><a href="#cybran_t3_naval_factory_regen" class="NavLink"><img src="/assets/images/units/cybran/structure/T3NavalHQ.png" class="UnitThumb" alt="Cybran T3 Naval Factory"/><div class="LinkContent"><span class="UnitName">Cybran T3 Naval Factory</span><span class="ChangeType buff">Buff</span></div></a></li>
+                            <li class="NavItem"><a href="#cybran_t3_power_generator_regen" class="NavLink"><img src="/assets/images/units/cybran/structure/T3PowerGen.png" class="UnitThumb" alt="Cybran T3 Power Generator"/><div class="LinkContent"><span class="UnitName">Cybran T3 Power Generator</span><span class="ChangeType buff">Buff</span></div></a></li>
+                            <li class="NavItem"><a href="#cybran_t3_mass_extractor_regen" class="NavLink"><img src="/assets/images/units/cybran/structure/T3MassExtractor.png" class="UnitThumb" alt="Cybran T3 Mass Extractor"/><div class="LinkContent"><span class="UnitName">Cybran T3 Mass Extractor</span><span class="ChangeType buff">Buff</span></div></a></li>
+                            <li class="NavItem"><a href="#t2_radar" class="NavLink"><img src="/assets/images/units/uef/structure/T2Radar.png" class="UnitThumb" alt="T2 Radar"/><div class="LinkContent"><span class="UnitName">T2 Radar</span><span class="ChangeType buff">Buff</span></div></a></li>
+                        </ul>
+                    </div>
+                </nav>
+
+                <!-- SidemenuFooter -->
+                <div class="SidemenuFooter">
+                    <div class="PatchStats">
+                        <div class="StatItem">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span>December 1, 2023</span>
+                        </div>
+                        <div class="StatItem">
+                            <i class="fas fa-balance-scale"></i>
+                            <span>45 Structure Changes</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+    </main>
+</body>
+    <footer class="SiteFooter">
+        <div class="FooterContainer">
+            <!-- Navigation Section -->
+            <div class="FooterSection">
+                <h4 class="FooterTitle">Navigation</h4>
+                <nav class="FooterNav">
+                    <a href="/index.html" class="FooterLink">
+                        <i class="fas fa-home" aria-hidden="true"></i>
+                        All Patch Notes
+                    </a>
+                    <a href="#top" class="FooterLink BackToTopLink">
+                        <i class="fas fa-arrow-up" aria-hidden="true"></i>
+                        Back to Top
+                    </a>
+                </nav>
+            </div>
+
+            <!-- Quick Actions Section -->
+            <div class="FooterSection">
+                <h4 class="FooterTitle">Quick Actions</h4>
+                <div class="FooterActions">
+                    <button id="themeToggleButton" class="ThemeToggle">
+                        <i class="fas fa-palette" aria-hidden="true"></i>
+                        <span class="ToggleText">Toggle Theme</span>
+                    </button>
+                    <button class="PrintButton" onclick="window.print()">
+                        <i class="fas fa-print" aria-hidden="true"></i>
+                        <span>Print Page</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- About Section -->
+            <div class="FooterSection">
+                <h4 class="FooterTitle">About</h4>
+                <div class="FooterInfo">
+                    <p class="PatchInfo">
+                        <strong>Patch 3776</strong><br>
+                        Released: December 1st, 2023
+                    </p>
+                    <p class="Copyright">
+                        © 2015-2025 <strong>FAForever</strong><br>
+                        Community-driven balance updates
+                    </p>
+                </div>
+            </div>
+
+            <!-- Social/Links Section -->
+            <div class="FooterSection">
+                <h4 class="FooterTitle">Community</h4>
+                <div class="FooterLinks">
+                    <a href="https://www.faforever.com" class="FooterLink External" target="_blank" rel="noopener">
+                        <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+                        FAForever.com
+                    </a>
+                    <a href="https://discord.gg/mXahAXy" class="FooterLink External" target="_blank" rel="noopener">
+                        <i class="fab fa-discord" aria-hidden="true"></i>
+                        Discord
+                    </a>
+                    <a href="https://github.com/FAForever" class="FooterLink External" target="_blank" rel="noopener">
+                        <i class="fab fa-github" aria-hidden="true"></i>
+                        GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="FooterBottom">
+            <div class="FooterBottomContent">
+                <span class="LastUpdated">Last updated: <time datetime="2023-12-01">December 1st, 2023</time></span>
+                <span class="BuildInfo">Balance Team • Patch Notes v3776</span>
+            </div>
+        </div>
+    </footer>
+</html>

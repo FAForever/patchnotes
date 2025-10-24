@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="FAForever Patch 3816 page with detailed balance updates for the Vulthoo gunship." />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <title>FAForever Patch 3816 - Balance Update</title>
+
+    <!-- Critical CSS for immediate loading -->
+    <link rel="stylesheet" href="/style/critical.css?v=1724259600" />
+
+    <!-- Load head configuration and shared resources -->
+    <script src="/scripts/headConfig.js?v=1724259600"></script>
+</head>
+<body>
+    <main class="Grid">
+        <div class="Content">
+            <section id="Intro" class="IntroSection">
+                <header class="PatchHeader">
+                    <div class="PatchTitleGroup">
+                        <h1 class="PatchTitle">Patch 3816</h1>
+                        <span class="PatchVersion">Balance Update</span>
+                    </div>
+                    <div class="PatchMeta">
+                        <time datetime="2024-12-10" class="PatchDate">December 10th, 2024</time>
+                        <span class="PatchStatus">Released</span>
+                    </div>
+                </header>
+                <p class="patchDescription">Reduced the build time of the Vulthoo to make it more viable during early Tech 2, addressing its underperformance post-rework.</p>
+                
+                <footer class="PatchCredits">
+                    <div class="TeamSignature">
+                        <span class="TeamIcon">⚖️</span>
+                        <span class="TeamName">The Balance Team</span>
+                    </div>
+                </footer>
+                
+                <hr class="SectionDivider">
+            </section>
+
+            <section id="Air">
+                <h2>Air Units</h2>
+
+                <article id="t2gunship" class="PatchCard">
+                    <!-- Card Header Section -->
+                    <header class="PatchCardHeader">
+                        <div class="UnitInfo">
+                            <img src="/assets/images/units/sera/air/T2Gunship.png" class="UnitIcon" alt="Vulthoo"/>
+                            <div class="UnitDetails">
+                                <div class="UnitNameRow">
+                                    <h3 class="UnitName">Vulthoo</h3>
+                                    <span class="UnitCode">XSA0204</span>
+                                </div>
+                                <span class="FactionBadge seraphim">Seraphim</span>
+                            </div>
+                        </div>
+                        <div class="ChangeTypeBadge buff">Buff</div>
+                    </header>
+
+                    <!-- Card Content Section -->
+                    <div class="PatchCardContent">
+                        <p class="ChangeDescription">Vulthoo have been underperforming after their rework. Their biggest weak point was the excessive amount of build time required which made it impractical to make them in the earlier stages of tech 2 especially.</p>
+
+                        <div class="ChangesList">
+                            <div class="ChangeGroup">
+                                <h4 class="ChangeGroupTitle">
+                                    Construction
+                                </h4>
+                                <ul class="Changes">
+                                    <li class="buff">
+                                        <span class="ChangeLabel">Build Time:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">3300</s> 
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                            <strong class="NewValue">2700</strong>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </section>
+
+        </div>
+
+        <aside class="Sidebar" role="navigation" aria-label="Sidebar navigation">
+            <div class="ContentSidemenu">
+                <!-- Quick Navigation Header -->
+                <header class="SidemenuHeader">
+                    <h2 class="SidemenuTitle">
+                        <i class="fas fa-list-ul" aria-hidden="true"></i>
+                        Quick Navigation
+                    </h2>
+                    <div class="ProgressBar">
+                        <div class="ProgressFill" id="readingProgress"></div>
+                    </div>
+                </header>
+
+                <!-- Quick Actions Panel -->
+                <div class="QuickActions">
+                    <button class="QuickActionBtn" onclick="scrollToTop()" title="Back to Top">
+                        <i class="fas fa-arrow-up"></i>
+                        <span>Top</span>
+                    </button>
+                    <button class="QuickActionBtn" onclick="toggleAllSections()" title="Expand/Collapse All">
+                        <i class="fas fa-expand-arrows-alt"></i>
+                        <span>Toggle</span>
+                    </button>
+                    <button class="QuickActionBtn" onclick="printPage()" title="Print Page">
+                        <i class="fas fa-print"></i>
+                        <span>Print</span>
+                    </button>
+                </div>
+
+                <!-- Content Navigation -->
+                <nav class="ContentNav" role="navigation">
+                    <!-- Intro Section -->
+                    <div class="NavSection active">
+                        <button class="SectionToggle" aria-expanded="true" data-target="intro-items">
+                            <i class="fas fa-info-circle SectionIcon"></i>
+                            <span class="SectionTitle">Introduction</span>
+                            <span class="ItemCount">1</span>
+                            <i class="fas fa-chevron-down ToggleIcon"></i>
+                        </button>
+                        <ul class="SectionItems" id="intro-items">
+                            <li class="NavItem">
+                                <a href="#Intro" class="NavLink">
+                                    <i class="fas fa-scroll"></i>
+                                    <span>Patch Overview</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Air Section -->
+                    <div class="NavSection">
+                        <button class="SectionToggle" aria-expanded="false" data-target="air-items">
+                            <i class="fas fa-plane SectionIcon"></i>
+                            <span class="SectionTitle">Air Units</span>
+                            <span class="ItemCount">1</span>
+                            <i class="fas fa-chevron-down ToggleIcon"></i>
+                        </button>
+                        <ul class="SectionItems" id="air-items">
+                            <li class="NavItem">
+                                <a href="#t2gunship" class="NavLink">
+                                    <img src="/assets/images/units/sera/air/T2Gunship.png" class="UnitThumb" alt="Vulthoo"/>
+                                    <div class="LinkContent">
+                                        <span class="UnitName">Vulthoo</span>
+                                        <span class="ChangeType buff">Buff</span>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+
+                <!-- Footer Info -->
+                <div class="SidemenuFooter">
+                    <div class="PatchStats">
+                        <div class="StatItem">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span>December 10, 2024</span>
+                        </div>
+                        <div class="StatItem">
+                            <i class="fas fa-balance-scale"></i>
+                            <span>1 Change</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+    </main>
+
+    <footer class="SiteFooter">
+        <div class="FooterContainer">
+            <!-- Navigation Section -->
+            <div class="FooterSection">
+                <h4 class="FooterTitle">Navigation</h4>
+                <nav class="FooterNav">
+                    <a href="/index.html" class="FooterLink">
+                        <i class="fas fa-home" aria-hidden="true"></i>
+                        All Patch Notes
+                    </a>
+                    <a href="#top" class="FooterLink BackToTopLink">
+                        <i class="fas fa-arrow-up" aria-hidden="true"></i>
+                        Back to Top
+                    </a>
+                </nav>
+            </div>
+
+            <!-- Quick Actions Section -->
+            <div class="FooterSection">
+                <h4 class="FooterTitle">Quick Actions</h4>
+                <div class="FooterActions">
+                    <button id="themeToggleButton" class="ThemeToggle">
+                        <i class="fas fa-palette" aria-hidden="true"></i>
+                        <span class="ToggleText">Toggle Theme</span>
+                    </button>
+                    <button class="PrintButton" onclick="window.print()">
+                        <i class="fas fa-print" aria-hidden="true"></i>
+                        <span>Print Page</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- About Section -->
+            <div class="FooterSection">
+                <h4 class="FooterTitle">About</h4>
+                <div class="FooterInfo">
+                    <p class="PatchInfo">
+                        <strong>Patch 3816</strong><br>
+                        Released: December 10th, 2024
+                    </p>
+                    <p class="Copyright">
+                        © 2015-2024 <strong>FAForever</strong><br>
+                        Community-driven balance updates
+                    </p>
+                </div>
+            </div>
+
+            <!-- Social/Links Section -->
+            <div class="FooterSection">
+                <h4 class="FooterTitle">Community</h4>
+                <div class="FooterLinks">
+                    <a href="https://www.faforever.com" class="FooterLink External" target="_blank" rel="noopener">
+                        <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+                        FAForever.com
+                    </a>
+                    <a href="https://discord.gg/mXahAXy" class="FooterLink External" target="_blank" rel="noopener">
+                        <i class="fab fa-discord" aria-hidden="true"></i>
+                        Discord
+                    </a>
+                    <a href="https://github.com/FAForever" class="FooterLink External" target="_blank" rel="noopener">
+                        <i class="fab fa-github" aria-hidden="true"></i>
+                        GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="FooterBottom">
+            <div class="FooterBottomContent">
+                <span class="LastUpdated">Last updated: <time datetime="2024-12-10">December 10th, 2024</time></span>
+                <span class="BuildInfo">Balance Team • Patch Notes v3816</span>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

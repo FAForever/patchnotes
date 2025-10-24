@@ -104,7 +104,7 @@ self.addEventListener('fetch', event => {
             const responseToCache = response.clone();
 
             // Cache patch pages and assets dynamically
-            if (event.request.url.includes('/pages/balance/') || 
+            if (event.request.url.includes('/pages/') || 
                 event.request.url.includes('/assets/')) {
               caches.open(DYNAMIC_CACHE)
                 .then(cache => {
