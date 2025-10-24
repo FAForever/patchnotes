@@ -1,68 +1,69 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="description" content="FAF Patch 3779 page" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8"/>
+    <meta name="description" content="FAForever Patch 3779 balance update featuring targeted adjustments across land, air, and naval units. Key changes include Aurora range reduction, Jester flight mechanics, Cybran frigate damage nerf, and various structure improvements." />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    
     <title>FAForever Patch 3779 - Balance Update</title>
-    <link rel="stylesheet" href="/style/balance.css" />
 
     <!-- Critical CSS for immediate loading -->
-    <link rel="stylesheet" href="/style/critical.css?v=1724259600" />
+    <link rel="stylesheet" href="/style/critical.css?v=1724259600&cache=bypass" />
 
     <!-- Load head configuration and shared resources -->
-    <script src="/scripts/headConfig.js?v=1724259600"></script>
+    <script src="/scripts/headConfig.js?v=1724259600&cache=bypass"></script>
 </head>
 <body>
-    <main class="Grid">
-        <div class="Content">
-            <section id="Intro" class="IntroSection">
-                <header class="PatchHeader">
-                    <div class="PatchTitleGroup">
-                        <h1 class="PatchTitle">Patch 3779</h1>
-                        <span class="PatchVersion">Balance Update</span>
-                    </div>
-                    <div class="PatchMeta">
-                        <time datetime="2024-07-07" class="PatchDate">January 22nd, 2024</time>
-                        <span class="PatchStatus">Released</spa n>
-                    </div>
-                </header>
-                <p class="patchDescription">This patch introduces a new mechanic: Loyalists can now redirect incoming missiles, transferring their ownership so that Tactical Missile Defenses (TMDs) can intercept them. Several other mechanics have also been refined. Additionally, Seraphim SCUs receive a slight economic bonus.</p>
+  <main class="Grid">
+    <div class="Content">
 
-                <footer class="PatchCredits">
-                    <div class="TeamSignature">
-                        <span class="TeamIcon">⚖️</span>
-                        <span class="TeamName">The Balance Team</span>
-                    </div>
-                </footer>
-                
-                <hr class="SectionDivider">
-            </section>
+    <section id="Intro" class="IntroSection">
+        <header class="PatchHeader">
+            <div class="PatchTitleGroup">
+              <h1 class="PatchTitle">Patch 3779</h1>
+              <span class="PatchVersion">Balance Update</span>
+            </div>
+            <div class="PatchMeta">
+              <time datetime="2024-01-22" class="PatchDate">January 22nd, 2024</time>
+              <span class="PatchStatus">Released</span>
+            </div>
+        </header>
+        <p class="patchDescription">This patch introduces a new mechanic: Loyalists can now redirect incoming missiles, transferring their ownership so that Tactical Missile Defenses (TMDs) can intercept them. Several other mechanics have also been refined. Additionally, Seraphim SCUs receive a slight economic bonus.</p>
+        <footer class="PatchCredits">
+            <div class="TeamSignature">
+                <span class="TeamIcon">⚖️</span>
+                <span class="TeamName">The Balance Team</span>
+            </div>
+        </footer>
+          
+        <hr class="SectionDivider">
+    </section>
 
-            <section id="land">
-                <h2>Land</h2>
+    <section id="land">
+        <h2>Land Units</h2>
 
-                <article id="uef_t3_assult_bot" class="PatchCard">
-                    <!-- Card Header Section -->
-                    <header class="PatchCardHeader">
-                        <div class="UnitInfo">
-                            <img src="/assets/images/units/uef/land/T3Bot.png" class="UnitIcon" alt="Percival"/>
-                            <div class="UnitDetails">
-                                <div class="UnitNameRow">
-                                    <h3 class="UnitName">Percival</h3>
-                                    <span class="UnitCode">XEL0305</span>
-                                </div>
-                                <span class="FactionBadge uef">UEF</span>
-                            </div>
+        <!---T3 Assault Bot -->
+        <article id="uef_t3_assult_bot" class="PatchCard">
+            <!-- Card Header Section -->
+            <header class="PatchCardHeader">
+                <div class="UnitInfo">
+                    <img src="/assets/images/units/uef/land/T3Bot.png" class="UnitIcon" alt="Percival"/>
+                    <div class="UnitDetails">
+                        <div class="UnitNameRow">
+                            <h3 class="UnitName">Percival</h3>
+                            <span class="UnitCode">XEL0305</span>
                         </div>
-                        <div class="ChangeTypeBadge buff">Buff</div>
-                    </header>
-
-                    <!-- Card Content Section -->
-                    <div class="PatchCardContent">
-                        <p class="ChangeDescription">The Percival now prioritizes firing at structures over tech 1 units. Its targeting priorities are now similar to Snipers.</p>
+                        <span class="FactionBadge uef">UEF</span>
                     </div>
-                </article>
+                </div>
+                <div class="ChangeTypeBadge buff">Buff</div>
+            </header>
+
+            <!-- Card Content Section -->
+            <div class="PatchCardContent">
+                <p class="ChangeDescription">The Percival now prioritizes firing at structures over tech 1 units. Its targeting priorities are now similar to Snipers.</p>
+            </div>
+        </article>
 
                 <article id="cybran_t3_bot" class="PatchCard">
                     <!-- Card Header Section -->
