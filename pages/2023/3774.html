@@ -1,0 +1,1326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="description" content="FAForever Patch 3774 balance update featuring major Ythotha improvements with enhanced mobility and firing capabilities, Janus napalm adjustments, and comprehensive HP rebalancing across all factory types and economic structures to promote aggressive gameplay and faction diversity." />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    
+    <title>FAForever Patch 3774 - Balance Update</title>
+
+    <!-- Critical CSS for immediate loading -->
+    <link rel="stylesheet" href="/style/critical.css?v=1724259600&cache=bypass" />
+
+    <!-- Load head configuration and shared resources -->
+    <script src="/scripts/headConfig.js?v=1724259600&cache=bypass"></script>
+</head>
+<body>
+  <main class="Grid">
+    <div class="Content">
+
+      <section id="Intro" class="IntroSection">
+          <header class="PatchHeader">
+            <div class="PatchTitleGroup">
+              <h1 class="PatchTitle">Patch 3774</h1>
+              <span class="PatchVersion">Balance Update</span>
+            </div>
+            <div class="PatchMeta">
+              <time datetime="2023-11-15" class="PatchDate">November 15th, 2023</time>
+              <span class="PatchStatus">Released</span>
+            </div>
+          </header>
+          <p class="patchDescription">This update delivers long-awaited Ythotha enhancements with improved mobility and firing capabilities, refines Janus napalm mechanics for better counterplay, and implements comprehensive HP rebalancing across factories and economic structures. The changes promote aggressive gameplay while establishing clearer faction identity through differentiated defensive capabilities and unique faction strengths.</p>
+          <footer class="PatchCredits">
+              <div class="TeamSignature">
+                  <span class="TeamIcon">⚖️</span>
+                  <span class="TeamName">The Balance Team</span>
+              </div>
+          </footer>
+          
+          <hr class="SectionDivider">
+      </section>
+
+      <section id="Land">
+        <h2>Land Units</h2>
+
+        <article id="ythotha" class="PatchCard">
+          <!-- Card Header Section -->
+          <header class="PatchCardHeader">
+              <div class="UnitInfo">
+                  <img src="/assets/images/units/sera/land/T4Bot.png" class="UnitIcon" alt="Ythotha"/>
+                  <div class="UnitDetails">
+                      <div class="UnitNameRow">
+                          <h3 class="UnitName">Ythotha</h3>
+                          <span class="UnitCode">XSL0401</span>
+                      </div>
+                      <span class="FactionBadge sera">SERAPHIM</span>
+                  </div>
+              </div>
+              <div class="ChangeTypeBadge buff">Buff</div>
+          </header>
+          <!-- Card Content Section -->
+          <div class="CardContent">
+            <p class="ChangeDescription">A buff to the Ythotha has been long planned and wished, but buffing it in a way that makes the unit more dynamic and interesting turned out to be difficult. We have decided to improve it by making it more nimble and also allowing it to shoot 45 degrees backwards so that it can be microed to a much greater degree. It also gets a slight range increase to help with this goal. We will closely observe if this new microability in certain situations gives the Ythotha the power it should have, or if further adjustments are needed.</p>
+            <div class="ChangesList">
+              <div class="ChangeGroup">
+                <h4 class="ChangeGroupTitle">
+                  Mobility
+                </h4>
+                <ul class="Changes">
+                  <li class="buff">
+                    <span class="ChangeLabel">TurnRate:</span>
+                    <span class="ChangeValue">
+                      <s class="OldValue">40</s> 
+                      <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                      <strong class="NewValue">60</strong>
+                    </span>
+                  </li>
+                </ul>
+              </div>
+              <div class="ChangeGroup">
+                <h4 class="ChangeGroupTitle">
+                  Weapon
+                </h4>
+                <ul class="Changes">
+                  <li class="buff">
+                    <span class="ChangeLabel">EyeWeapon Range:</span>
+                    <span class="ChangeValue">
+                      <s class="OldValue">45</s> 
+                      <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                      <strong class="NewValue">47</strong>
+                    </span>
+                  </li>
+                  <li class="buff">
+                    <span class="ChangeLabel">LeftArm Range:</span>
+                    <span class="ChangeValue">
+                      <s class="OldValue">45</s> 
+                      <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                      <strong class="NewValue">47</strong>
+                    </span>
+                  </li>
+                  <li class="buff">
+                    <span class="ChangeLabel">RightArm Range:</span>
+                    <span class="ChangeValue">
+                      <s class="OldValue">15</s> 
+                      <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                      <strong class="NewValue">47</strong>
+                    </span>
+                  </li>
+                  <li class="buff">
+                    <span class="ChangeLabel">AA Range:</span>
+                    <span class="ChangeValue">
+                      <s class="OldValue">45</s> 
+                      <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                      <strong class="NewValue">47</strong>
+                    </span>
+                  </li>
+                  <li class="buff">
+                    <span class="ChangeLabel">AA AOE:</span>
+                    <span class="ChangeValue">
+                      <s class="OldValue">1.5</s> 
+                      <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                      <strong class="NewValue">4</strong>
+                    </span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section id="Air">
+        <h2>Air Units</h2>
+
+        <article id="janus" class="PatchCard">
+          <!-- Card Header Section -->
+          <header class="PatchCardHeader">
+              <div class="UnitInfo">
+                  <img src="/assets/images/units/uef/air/T2FighterBomber.png" class="UnitIcon" alt="Janus"/>
+                  <div class="UnitDetails">
+                      <div class="UnitNameRow">
+                          <h3 class="UnitName">Janus</h3>
+                          <span class="UnitCode">UEA0203</span>
+                      </div>
+                      <span class="FactionBadge uef">UEF</span>
+                  </div>
+              </div>
+              <div class="ChangeTypeBadge nerf">Nerf</div>
+          </header>
+          <!-- Card Content Section -->
+          <div class="CardContent">
+            <p class="ChangeDescription">The Janus change in the last patch worked well but was found to be too strong. The napalm's burn time is increased to allow players to react and move out of the damage radius before all damage has been dealt. The initial damage of the bombs is also decreased.</p>
+            <div class="ChangesList">
+              <div class="ChangeGroup">
+                <h4 class="ChangeGroupTitle">
+                  Napalm Mechanics
+                </h4>
+                <ul class="Changes">
+                  <li class="nerf">
+                    <span class="ChangeLabel">DoTTime:</span>
+                    <span class="ChangeValue">
+                      <s class="OldValue">4.2</s> 
+                      <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                      <strong class="NewValue">6</strong>
+                    </span>
+                  </li>
+                  <li class="nerf">
+                    <span class="ChangeLabel">InitialDamage/bomb:</span>
+                    <span class="ChangeValue">
+                      <s class="OldValue">30</s> 
+                      <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                      <strong class="NewValue">15</strong>
+                    </span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section id="Structures">
+        <h2>Structures</h2>
+
+        <article id="t1_t2_support_factories" class="PatchCard">
+          <!-- Card Header Section -->
+          <header class="PatchCardHeader">
+              <div class="UnitInfo">
+                  <img src="/assets/images/units/uef/structure/T1LandFac.png" class="UnitIcon" alt="T1 Land/Air/Navy and T2 Land/Air Support Factories"/>
+                  <div class="UnitDetails">
+                      <div class="UnitNameRow">
+                          <h3 class="UnitName">T1 Land/Air/Navy and T2 Land/Air Support Factories</h3>
+                          <span class="UnitCode">UXB0101/UXB0102/UXB0103/UXB0201/UXB0202</span>
+                      </div>
+                      <span class="FactionBadge mixed">ALL</span>
+                  </div>
+              </div>
+              <div class="ChangeTypeBadge nerf">Nerf</div>
+          </header>
+          <!-- Card Content Section -->
+          <div class="CardContent">
+            <p class="ChangeDescription">The goal with all the HP reductions in general is to allow more options for aggressive play, especially in the late game and to bring the game closer to how it is working with the current low t2 pg HP and its impact on the game.</p>
+            <p class="ChangeDescription">The goal with increasing the HP differences between the factions is to make them a relevant and interesting part of the game, rather than a visual difference without much impact. The changes are aimed to increase faction diversity and attempt to even out the current differences in power between the factions by giving them more unique strengths and weaknesses, rather than making them more equal. This are rather big changes, but we believe they will make the game more diverse and interesting.</p>
+            <p class="ChangeDescription">To compensate cybran a bit for the rather large nerf's, and to accompany their new weakness with a strength that fits to them, all their nerfed buildings do (very slowly) regenerate health now in return. They are more vulnerable, but if you don't kill them they will be back at full HP after about 10 minutes for each building.</p>
+            
+            <div class="ChangesList">
+              <div class="ChangeGroup">
+                <h4 class="ChangeGroupTitle">
+                  Hit Points
+                </h4>
+                <ul class="Changes">
+                  <li class="nerf">
+                    <span class="ChangeLabel">UEF HP:</span>
+                    <span class="ChangeValue">
+                      <s class="OldValue">4100 / 4100 / 4800 and 4500 / 4500</s> 
+                      <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                      <strong class="NewValue">4000</strong>
+                    </span>
+                  </li>
+                  <li class="nerf">
+                    <span class="ChangeLabel">Aeon HP:</span>
+                    <span class="ChangeValue">
+                      <s class="OldValue">3700 / 3700 / 4400 and 4100 / 4100</s> 
+                      <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                      <strong class="NewValue">3100</strong>
+                    </span>
+                  </li>
+                  <li class="nerf">
+                    <span class="ChangeLabel">Seraphim HP:</span>
+                    <span class="ChangeValue">
+                      <s class="OldValue">3700 / 3700 / 4600 and 4300 / 4300</s> 
+                      <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                      <strong class="NewValue">3100</strong>
+                    </span>
+                  </li>
+                  <li class="nerf">
+                    <span class="ChangeLabel">Cybran HP:</span>
+                    <span class="ChangeValue">
+                      <s class="OldValue">3500 / 3500 / 4200 and 3900 / 3900</s> 
+                      <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                      <strong class="NewValue">2500</strong>
+                    </span>
+                  </li>
+                  <li class="buff">
+                    <span class="ChangeLabel">Cybran HP regeneration:</span>
+                    <span class="ChangeValue">
+                      <s class="OldValue">0</s> 
+                      <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                      <strong class="NewValue">3 hp/s</strong>
+                    </span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article id="t2_t3_hq_factories" class="PatchCard">
+          <!-- Card Header Section -->
+          <header class="PatchCardHeader">
+              <div class="UnitInfo">
+                  <img src="/assets/images/units/uef/structure/T2LandFacHQ.png" class="UnitIcon" alt="T2 Land/Air HQ and T3 Land/Air Support Factories"/>
+                  <div class="UnitDetails">
+                      <div class="UnitNameRow">
+                          <h3 class="UnitName">T2 Land/Air HQ and T3 Land/Air Support Factories</h3>
+                          <span class="UnitCode">UXB0201/UXB0202/UXB0301/UXB0302</span>
+                      </div>
+                      <span class="FactionBadge mixed">ALL</span>
+                  </div>
+              </div>
+              <div class="ChangeTypeBadge nerf">Nerf</div>
+          </header>
+          <!-- Card Content Section -->
+          <div class="CardContent">
+            <div class="ChangesList">
+              <div class="ChangeGroup">
+                <h4 class="ChangeGroupTitle">
+                  Hit Points
+                </h4>
+                <ul class="Changes">
+                  <li class="nerf">
+                    <span class="ChangeLabel">UEF HP:</span>
+                    <span class="ChangeValue">
+                      <s class="OldValue">9000 and 4500 / 4500</s> 
+                      <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                      <strong class="NewValue">8000</strong>
+                    </span>
+                  </li>
+                  <li class="nerf">
+                    <span class="ChangeLabel">Aeon HP:</span>
+                    <span class="ChangeValue">
+                      <s class="OldValue">8200 and 10000</s> 
+                      <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                      <strong class="NewValue">6200</strong>
+                    </span>
+                  </li>
+                  <li class="nerf">
+                    <span class="ChangeLabel">Seraphim HP:</span>
+                    <span class="ChangeValue">
+                      <s class="OldValue">8200 and 10500</s> 
+                      <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                      <strong class="NewValue">6200</strong>
+                    </span>
+                  </li>
+                  <li class="nerf">
+                    <span class="ChangeLabel">Cybran HP:</span>
+                    <span class="ChangeValue">
+                      <s class="OldValue">7800 and 9500</s> 
+                      <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                      <strong class="NewValue">5000</strong>
+                    </span>
+                  </li>
+                  <li class="buff">
+                    <span class="ChangeLabel">Cybran HP regeneration:</span>
+                    <span class="ChangeValue">
+                      <s class="OldValue">0</s> 
+                      <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                      <strong class="NewValue">10 hp/s</strong>
+                    </span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article id="t3_land_air_hqs" class="PatchCard">
+          <!-- Card Header Section -->
+          <header class="PatchCardHeader">
+              <div class="UnitInfo">
+                  <img src="/assets/images/units/uef/structure/T3LandFacHQ.png" class="UnitIcon" alt="T3 Land/Air HQs"/>
+                  <div class="UnitDetails">
+                      <div class="UnitNameRow">
+                          <h3 class="UnitName">T3 Land/Air HQs</h3>
+                          <span class="UnitCode">UXB0301/UXB0302</span>
+                      </div>
+                      <span class="FactionBadge mixed">ALL</span>
+                  </div>
+              </div>
+              <div class="ChangeTypeBadge nerf">Nerf</div>
+          </header>
+          <!-- Card Content Section -->
+          <div class="CardContent">
+            <div class="ChangesList">
+              <div class="ChangeGroup">
+                <h4 class="ChangeGroupTitle">
+                  Hit Points
+                </h4>
+                <ul class="Changes">
+                  <li class="nerf">
+                    <span class="ChangeLabel">UEF HP:</span>
+                    <span class="ChangeValue">
+                      <s class="OldValue">22000</s> 
+                      <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                      <strong class="NewValue">16000</strong>
+                    </span>
+                  </li>
+                  <li class="nerf">
+                    <span class="ChangeLabel">Aeon HP:</span>
+                    <span class="ChangeValue">
+                      <s class="OldValue">20000</s> 
+                      <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                      <strong class="NewValue">12400</strong>
+                    </span>
+                  </li>
+                  <li class="nerf">
+                    <span class="ChangeLabel">Seraphim HP:</span>
+                    <span class="ChangeValue">
+                      <s class="OldValue">21000</s> 
+                      <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                      <strong class="NewValue">12400</strong>
+                    </span>
+                  </li>
+                  <li class="nerf">
+                    <span class="ChangeLabel">Cybran HP:</span>
+                    <span class="ChangeValue">
+                      <s class="OldValue">19000</s> 
+                      <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                      <strong class="NewValue">10000</strong>
+                    </span>
+                  </li>
+                  <li class="buff">
+                    <span class="ChangeLabel">Cybran HP regeneration:</span>
+                    <span class="ChangeValue">
+                      <s class="OldValue">0</s> 
+                      <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                      <strong class="NewValue">20 hp/s</strong>
+                    </span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article id="t2_navy_support_factories" class="PatchCard">
+          <!-- Card Header Section -->
+          <header class="PatchCardHeader">
+              <div class="UnitInfo">
+                  <img src="/assets/images/units/uef/structure/T2NavalFac.png" class="UnitIcon" alt="T2 Navy Support Factories"/>
+                  <div class="UnitDetails">
+                      <div class="UnitNameRow">
+                          <h3 class="UnitName">T2 Navy Support Factories</h3>
+                          <span class="UnitCode">UXB0203</span>
+                      </div>
+                      <span class="FactionBadge mixed">ALL</span>
+                  </div>
+              </div>
+              <div class="ChangeTypeBadge nerf">Nerf</div>
+          </header>
+          <!-- Card Content Section -->
+          <div class="CardContent">
+            <div class="ChangesList">
+              <div class="ChangeGroup">
+                <h4 class="ChangeGroupTitle">
+                  Hit Points
+                </h4>
+                <ul class="Changes">
+                  <li class="nerf">
+                    <span class="ChangeLabel">UEF HP:</span>
+                    <span class="ChangeValue">
+                      <s class="OldValue">9000</s> 
+                      <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                      <strong class="NewValue">6000</strong>
+                    </span>
+                  </li>
+                  <li class="nerf">
+                    <span class="ChangeLabel">Aeon HP:</span>
+                    <span class="ChangeValue">
+                      <s class="OldValue">8000</s> 
+                      <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                      <strong class="NewValue">5000</strong>
+                    </span>
+                  </li>
+                  <li class="nerf">
+                    <span class="ChangeLabel">Seraphim HP:</span>
+                    <span class="ChangeValue">
+                      <s class="OldValue">8500</s> 
+                      <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                      <strong class="NewValue">5000</strong>
+                    </span>
+                  </li>
+                  <li class="nerf">
+                    <span class="ChangeLabel">Cybran HP:</span>
+                    <span class="ChangeValue">
+                      <s class="OldValue">7500</s> 
+                      <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                      <strong class="NewValue">4000</strong>
+                    </span>
+                  </li>
+                  <li class="buff">
+                    <span class="ChangeLabel">Cybran HP regeneration:</span>
+                    <span class="ChangeValue">
+                      <s class="OldValue">0</s> 
+                      <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                      <strong class="NewValue">6 hp/s</strong>
+                    </span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article id="t2_navy_hqs_t3_navy_support" class="PatchCard">
+          <!-- Card Header Section -->
+          <header class="PatchCardHeader">
+              <div class="UnitInfo">
+                  <img src="/assets/images/units/uef/structure/T2NavalFacHQ.png" class="UnitIcon" alt="T2 Navy HQs / T3 Navy Support Factories"/>
+                  <div class="UnitDetails">
+                      <div class="UnitNameRow">
+                          <h3 class="UnitName">T2 Navy HQs / T3 Navy Support Factories</h3>
+                          <span class="UnitCode">UXB0203/UXB0303</span>
+                      </div>
+                      <span class="FactionBadge mixed">ALL</span>
+                  </div>
+              </div>
+              <div class="ChangeTypeBadge nerf">Nerf</div>
+          </header>
+          <!-- Card Content Section -->
+          <div class="CardContent">
+            <div class="ChangesList">
+              <div class="ChangeGroup">
+                <h4 class="ChangeGroupTitle">
+                  Hit Points
+                </h4>
+                <ul class="Changes">
+                  <li class="nerf">
+                    <span class="ChangeLabel">UEF HP:</span>
+                    <span class="ChangeValue">
+                      <s class="OldValue">18000 / 20000</s> 
+                      <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                      <strong class="NewValue">13000</strong>
+                    </span>
+                  </li>
+                  <li class="nerf">
+                    <span class="ChangeLabel">Aeon HP:</span>
+                    <span class="ChangeValue">
+                      <s class="OldValue">16000 / 18750</s> 
+                      <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                      <strong class="NewValue">10000</strong>
+                    </span>
+                  </li>
+                  <li class="nerf">
+                    <span class="ChangeLabel">Seraphim HP:</span>
+                    <span class="ChangeValue">
+                      <s class="OldValue">17000 / 19000</s> 
+                      <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                      <strong class="NewValue">10000</strong>
+                    </span>
+                  </li>
+                  <li class="nerf">
+                    <span class="ChangeLabel">Cybran HP:</span>
+                    <span class="ChangeValue">
+                      <s class="OldValue">15000 / 17000</s> 
+                      <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                      <strong class="NewValue">8000</strong>
+                    </span>
+                  </li>
+                  <li class="buff">
+                    <span class="ChangeLabel">Cybran HP regeneration:</span>
+                    <span class="ChangeValue">
+                      <s class="OldValue">0</s> 
+                      <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                      <strong class="NewValue">15 hp/s</strong>
+                    </span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article id="t3_navy_hqs" class="PatchCard">
+          <!-- Card Header Section -->
+          <header class="PatchCardHeader">
+              <div class="UnitInfo">
+                  <img src="/assets/images/units/uef/structure/T3NavalFacHQ.png" class="UnitIcon" alt="T3 Navy HQs"/>
+                  <div class="UnitDetails">
+                      <div class="UnitNameRow">
+                          <h3 class="UnitName">T3 Navy HQs</h3>
+                          <span class="UnitCode">UXB0303</span>
+                      </div>
+                      <span class="FactionBadge mixed">ALL</span>
+                  </div>
+              </div>
+              <div class="ChangeTypeBadge nerf">Nerf</div>
+          </header>
+          <!-- Card Content Section -->
+          <div class="CardContent">
+            <div class="ChangesList">
+              <div class="ChangeGroup">
+                <h4 class="ChangeGroupTitle">
+                  Hit Points
+                </h4>
+                <ul class="Changes">
+                  <li class="nerf">
+                    <span class="ChangeLabel">UEF HP:</span>
+                    <span class="ChangeValue">
+                      <s class="OldValue">40000</s> 
+                      <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                      <strong class="NewValue">26000</strong>
+                    </span>
+                  </li>
+                  <li class="nerf">
+                    <span class="ChangeLabel">Aeon HP:</span>
+                    <span class="ChangeValue">
+                      <s class="OldValue">37500</s> 
+                      <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                      <strong class="NewValue">20000</strong>
+                    </span>
+                  </li>
+                  <li class="nerf">
+                    <span class="ChangeLabel">Seraphim HP:</span>
+                    <span class="ChangeValue">
+                      <s class="OldValue">38000</s> 
+                      <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                      <strong class="NewValue">20000</strong>
+                    </span>
+                  </li>
+                  <li class="nerf">
+                    <span class="ChangeLabel">Cybran HP:</span>
+                    <span class="ChangeValue">
+                      <s class="OldValue">34000</s> 
+                      <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                      <strong class="NewValue">16000</strong>
+                    </span>
+                  </li>
+                  <li class="buff">
+                    <span class="ChangeLabel">Cybran HP regeneration:</span>
+                    <span class="ChangeValue">
+                      <s class="OldValue">0</s> 
+                      <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                      <strong class="NewValue">30 hp/s</strong>
+                    </span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article id="t1_mass_extractors_power_generators" class="PatchCard">
+          <!-- Card Header Section -->
+          <header class="PatchCardHeader">
+              <div class="UnitInfo">
+                  <img src="/assets/images/units/uef/structure/T1MassExtractor.png" class="UnitIcon" alt="T1 Mass Extractors and T1 Power Generators"/>
+                  <div class="UnitDetails">
+                      <div class="UnitNameRow">
+                          <h3 class="UnitName">T1 Mass Extractors and T1 Power Generators</h3>
+                          <span class="UnitCode">UXB1103/UXB1101</span>
+                      </div>
+                      <span class="FactionBadge mixed">ALL</span>
+                  </div>
+              </div>
+              <div class="ChangeTypeBadge nerf">Nerf</div>
+          </header>
+          <!-- Card Content Section -->
+          <div class="CardContent">
+            <p class="ChangeDescription">If you look at the values, you will notice that we tried to make the new HP values as consistent and intuitive as possible. Mex and PGs now have equal HP, and most support factories have the same HP as the lower tech HQ. Meanwhile every HQ upgrade will double its HP.</p>
+            <p class="ChangeDescription">These changes have many interesting side effects and small direct or indirect buffs to specific units and factions. Some examples:</p>
+            <ul class="ChangeDescription">
+              <li>Tired of getting first bombed, or losing your t2 PGs to corsairs? You can pick UEF now, and enjoy their additional toughness.</li>
+              <li>Or you always felt bad for the Notha (Seraphim Fighter bomber) to be just a less fancy version of the corsair? While corsairs are still better at what they excel at, Nothas can kill t2 mex with 2 bombs now, something Corsairs can only do if they are very lucky and hit all their bombs.</li>
+              <li>Or you have enough of cybran players TMLing your stuff over and over, even when you have TMD? They can keep doing this, but many of their buildings are very vulnerable to TMLs themself now..</li>
+            </ul>
+            
+            <div class="ChangesList">
+              <div class="ChangeGroup">
+                <h4 class="ChangeGroupTitle">
+                  Hit Points
+                </h4>
+                <ul class="Changes">
+                  <li class="buff">
+                    <span class="ChangeLabel">UEF HP:</span>
+                    <span class="ChangeValue">
+                      <s class="OldValue">600</s> 
+                      <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                      <strong class="NewValue">760</strong>
+                    </span>
+                  </li>
+                  <li class="neutral">
+                    <span class="ChangeLabel">Seraphim HP:</span>
+                    <span class="ChangeValue">600</span>
+                  </li>
+                  <li class="neutral">
+                    <span class="ChangeLabel">Aeon HP:</span>
+                    <span class="ChangeValue">600</span>
+                  </li>
+                  <li class="nerf">
+                    <span class="ChangeLabel">Cybran HP:</span>
+                    <span class="ChangeValue">
+                      <s class="OldValue">600</s> 
+                      <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                      <strong class="NewValue">500</strong>
+                    </span>
+                  </li>
+                  <li class="buff">
+                    <span class="ChangeLabel">Cybran HP regeneration:</span>
+                    <span class="ChangeValue">
+                      <s class="OldValue">0</s> 
+                      <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                      <strong class="NewValue">1 hp/s</strong>
+                    </span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article id="t1_mass_storage" class="PatchCard">
+          <!-- Card Header Section -->
+          <header class="PatchCardHeader">
+              <div class="UnitInfo">
+                  <img src="/assets/images/units/uef/structure/T1MassStorage.png" class="UnitIcon" alt="T1 Mass Storage"/>
+                  <div class="UnitDetails">
+                      <div class="UnitNameRow">
+                          <h3 class="UnitName">T1 Mass Storage</h3>
+                          <span class="UnitCode">UXB1106</span>
+                      </div>
+                      <span class="FactionBadge mixed">ALL</span>
+                  </div>
+              </div>
+              <div class="ChangeTypeBadge nerf">Nerf</div>
+          </header>
+          <!-- Card Content Section -->
+          <div class="CardContent">
+            <div class="ChangesList">
+              <div class="ChangeGroup">
+                <h4 class="ChangeGroupTitle">
+                  Hit Points
+                </h4>
+                <ul class="Changes">
+                  <li class="nerf">
+                    <span class="ChangeLabel">UEF HP:</span>
+                    <span class="ChangeValue">
+                      <s class="OldValue">1600</s> 
+                      <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                      <strong class="NewValue">760</strong>
+                    </span>
+                  </li>
+                  <li class="nerf">
+                    <span class="ChangeLabel">Aeon HP:</span>
+                    <span class="ChangeValue">
+                      <s class="OldValue">1600</s> 
+                      <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                      <strong class="NewValue">600</strong>
+                    </span>
+                  </li>
+                  <li class="nerf">
+                    <span class="ChangeLabel">Seraphim HP:</span>
+                    <span class="ChangeValue">
+                      <s class="OldValue">1600</s> 
+                      <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                      <strong class="NewValue">600</strong>
+                    </span>
+                  </li>
+                  <li class="nerf">
+                    <span class="ChangeLabel">Cybran HP:</span>
+                    <span class="ChangeValue">
+                      <s class="OldValue">1600</s> 
+                      <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                      <strong class="NewValue">500</strong>
+                    </span>
+                  </li>
+                  <li class="buff">
+                    <span class="ChangeLabel">Cybran HP regeneration:</span>
+                    <span class="ChangeValue">
+                      <s class="OldValue">0</s> 
+                      <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                      <strong class="NewValue">1 hp/s</strong>
+                    </span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article id="t2_mass_extractors_power_generators" class="PatchCard">
+          <!-- Card Header Section -->
+          <header class="PatchCardHeader">
+              <div class="UnitInfo">
+                  <img src="/assets/images/units/uef/structure/T2MassExtractor.png" class="UnitIcon" alt="T2 Mass Extractors and T2 Power Generators"/>
+                  <div class="UnitDetails">
+                      <div class="UnitNameRow">
+                          <h3 class="UnitName">T2 Mass Extractors and T2 Power Generators</h3>
+                          <span class="UnitCode">UXB1202/UXB1201</span>
+                      </div>
+                      <span class="FactionBadge mixed">ALL</span>
+                  </div>
+              </div>
+              <div class="ChangeTypeBadge nerf">Nerf</div>
+          </header>
+          <!-- Card Content Section -->
+          <div class="CardContent">
+            <div class="ChangesList">
+              <div class="ChangeGroup">
+                <h4 class="ChangeGroupTitle">
+                  Hit Points
+                </h4>
+                <ul class="Changes">
+                  <li class="nerf">
+                    <span class="ChangeLabel">UEF HP:</span>
+                    <span class="ChangeValue">
+                      <s class="OldValue">3000 / 2160</s> 
+                      <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                      <strong class="NewValue">2500</strong>
+                    </span>
+                  </li>
+                  <li class="nerf">
+                    <span class="ChangeLabel">Aeon HP:</span>
+                    <span class="ChangeValue">
+                      <s class="OldValue">3000 / 2160</s> 
+                      <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                      <strong class="NewValue">1900</strong>
+                    </span>
+                  </li>
+                  <li class="nerf">
+                    <span class="ChangeLabel">Seraphim HP:</span>
+                    <span class="ChangeValue">
+                      <s class="OldValue">3000 / 2160</s> 
+                      <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                      <strong class="NewValue">1900</strong>
+                    </span>
+                  </li>
+                  <li class="nerf">
+                    <span class="ChangeLabel">Cybran HP:</span>
+                    <span class="ChangeValue">
+                      <s class="OldValue">3000 / 2160</s> 
+                      <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                      <strong class="NewValue">1800</strong>
+                    </span>
+                  </li>
+                  <li class="buff">
+                    <span class="ChangeLabel">Cybran HP regeneration:</span>
+                    <span class="ChangeValue">
+                      <s class="OldValue">0</s> 
+                      <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                      <strong class="NewValue">3 hp/s</strong>
+                    </span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article id="t3_mass_extractors_power_generators" class="PatchCard">
+          <!-- Card Header Section -->
+          <header class="PatchCardHeader">
+              <div class="UnitInfo">
+                  <img src="/assets/images/units/uef/structure/T3MassExtractor.png" class="UnitIcon" alt="T3 Mass Extractors and T3 Power Generators"/>
+                  <div class="UnitDetails">
+                      <div class="UnitNameRow">
+                          <h3 class="UnitName">T3 Mass Extractors and T3 Power Generators</h3>
+                          <span class="UnitCode">UXB1302/UXB1301</span>
+                      </div>
+                      <span class="FactionBadge mixed">ALL</span>
+                  </div>
+              </div>
+              <div class="ChangeTypeBadge nerf">Nerf</div>
+          </header>
+          <!-- Card Content Section -->
+          <div class="CardContent">
+            <div class="ChangesList">
+              <div class="ChangeGroup">
+                <h4 class="ChangeGroupTitle">
+                  Hit Points
+                </h4>
+                <ul class="Changes">
+                  <li class="buff">
+                    <span class="ChangeLabel">UEF HP:</span>
+                    <span class="ChangeValue">
+                      <s class="OldValue">8400 / 9720</s> 
+                      <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                      <strong class="NewValue">9000</strong>
+                    </span>
+                  </li>
+                  <li class="nerf">
+                    <span class="ChangeLabel">Aeon HP:</span>
+                    <span class="ChangeValue">
+                      <s class="OldValue">8400 / 9720</s> 
+                      <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                      <strong class="NewValue">6200</strong>
+                    </span>
+                  </li>
+                  <li class="nerf">
+                    <span class="ChangeLabel">Seraphim HP:</span>
+                    <span class="ChangeValue">
+                      <s class="OldValue">8400 / 9720</s> 
+                      <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                      <strong class="NewValue">6200</strong>
+                    </span>
+                  </li>
+                  <li class="nerf">
+                    <span class="ChangeLabel">Cybran HP:</span>
+                    <span class="ChangeValue">
+                      <s class="OldValue">8400 / 9720</s> 
+                      <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                      <strong class="NewValue">6000</strong>
+                    </span>
+                  </li>
+                  <li class="buff">
+                    <span class="ChangeLabel">Cybran HP regeneration:</span>
+                    <span class="ChangeValue">
+                      <s class="OldValue">0</s> 
+                      <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                      <strong class="NewValue">10 hp/s</strong>
+                    </span>
+                  </li>
+                  <li class="nerf">
+                    <span class="ChangeLabel">Explosion Damage (only t3 Power Generator):</span>
+                    <span class="ChangeValue">
+                      <s class="OldValue">8000</s> 
+                      <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                      <strong class="NewValue">5500</strong>
+                    </span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article id="hydrocarbon_powerplants" class="PatchCard">
+          <!-- Card Header Section -->
+          <header class="PatchCardHeader">
+              <div class="UnitInfo">
+                  <img src="/assets/images/units/uef/structure/T1HydroCarbonPowerPlant.png" class="UnitIcon" alt="HydroCarbon PowerPlants"/>
+                  <div class="UnitDetails">
+                      <div class="UnitNameRow">
+                          <h3 class="UnitName">HydroCarbon PowerPlants</h3>
+                          <span class="UnitCode">UXB1102</span>
+                      </div>
+                      <span class="FactionBadge mixed">ALL</span>
+                  </div>
+              </div>
+              <div class="ChangeTypeBadge nerf">Nerf</div>
+          </header>
+          <!-- Card Content Section -->
+          <div class="CardContent">
+            <div class="ChangesList">
+              <div class="ChangeGroup">
+                <h4 class="ChangeGroupTitle">
+                  Hit Points
+                </h4>
+                <ul class="Changes">
+                  <li class="buff">
+                    <span class="ChangeLabel">UEF HP:</span>
+                    <span class="ChangeValue">
+                      <s class="OldValue">1600</s> 
+                      <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                      <strong class="NewValue">1800</strong>
+                    </span>
+                  </li>
+                  <li class="neutral">
+                    <span class="ChangeLabel">Aeon HP:</span>
+                    <span class="ChangeValue">1600</span>
+                  </li>
+                  <li class="neutral">
+                    <span class="ChangeLabel">Seraphim HP:</span>
+                    <span class="ChangeValue">1600</span>
+                  </li>
+                  <li class="nerf">
+                    <span class="ChangeLabel">Cybran HP:</span>
+                    <span class="ChangeValue">
+                      <s class="OldValue">1600</s> 
+                      <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                      <strong class="NewValue">1400</strong>
+                    </span>
+                  </li>
+                  <li class="buff">
+                    <span class="ChangeLabel">Cybran HP regeneration:</span>
+                    <span class="ChangeValue">
+                      <s class="OldValue">0</s> 
+                      <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                      <strong class="NewValue">1 hp/s</strong>
+                    </span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article id="walls" class="PatchCard">
+          <!-- Card Header Section -->
+          <header class="PatchCardHeader">
+              <div class="UnitInfo">
+                  <img src="/assets/images/units/uef/structure/T1Wall.png" class="UnitIcon" alt="Walls"/>
+                  <div class="UnitDetails">
+                      <div class="UnitNameRow">
+                          <h3 class="UnitName">Walls</h3>
+                          <span class="UnitCode">UXB5101</span>
+                      </div>
+                      <span class="FactionBadge mixed">ALL</span>
+                  </div>
+              </div>
+              <div class="ChangeTypeBadge nerf">Nerf</div>
+          </header>
+          <!-- Card Content Section -->
+          <div class="CardContent">
+            <p class="ChangeDescription">The last building that got its HP changed are Walls. They found increasing popularity in the past year, and with that also causing increasing annoyance and they proved that they are very powerful. Walls take twice the time to build now (which is still very fast), and while UEF walls are almost as hard to destroy as before, Cybran walls are much less of a obstacle.</p>
+            
+            <div class="ChangesList">
+              <div class="ChangeGroup">
+                <h4 class="ChangeGroupTitle">
+                  Construction
+                </h4>
+                <ul class="Changes">
+                  <li class="nerf">
+                    <span class="ChangeLabel">BuildTime:</span>
+                    <span class="ChangeValue">
+                      <s class="OldValue">10</s> 
+                      <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                      <strong class="NewValue">20</strong>
+                    </span>
+                  </li>
+                </ul>
+              </div>
+              <div class="ChangeGroup">
+                <h4 class="ChangeGroupTitle">
+                  Hit Points
+                </h4>
+                <ul class="Changes">
+                  <li class="nerf">
+                    <span class="ChangeLabel">UEF HP:</span>
+                    <span class="ChangeValue">
+                      <s class="OldValue">4000</s> 
+                      <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                      <strong class="NewValue">3000</strong>
+                    </span>
+                  </li>
+                  <li class="nerf">
+                    <span class="ChangeLabel">Aeon HP:</span>
+                    <span class="ChangeValue">
+                      <s class="OldValue">4000</s> 
+                      <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                      <strong class="NewValue">2000</strong>
+                    </span>
+                  </li>
+                  <li class="nerf">
+                    <span class="ChangeLabel">Seraphim HP:</span>
+                    <span class="ChangeValue">
+                      <s class="OldValue">4000</s> 
+                      <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                      <strong class="NewValue">2000</strong>
+                    </span>
+                  </li>
+                  <li class="nerf">
+                    <span class="ChangeLabel">Cybran HP:</span>
+                    <span class="ChangeValue">
+                      <s class="OldValue">4000</s> 
+                      <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                      <strong class="NewValue">1500</strong>
+                    </span>
+                  </li>
+                  <li class="buff">
+                    <span class="ChangeLabel">Cybran HP regeneration:</span>
+                    <span class="ChangeValue">
+                      <s class="OldValue">0</s> 
+                      <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                      <strong class="NewValue">3 hp/s</strong>
+                    </span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
+
+    </div>
+
+  <aside class="Sidebar" role="navigation" aria-label="Quick Navigation">
+      <div class="ContentSidemenu">
+          <!-- Quick Navigation Header -->
+          <header class="SidemenuHeader">
+              <h2 class="SidemenuTitle">
+                  <i class="fas fa-list-ul" aria-hidden="true"></i>
+                  Quick Navigation
+              </h2>
+              <div class="ProgressBar">
+                  <div class="ProgressFill" id="readingProgress"></div>
+              </div>
+          </header>
+
+          <!-- Quick Actions Panel -->
+          <div class="QuickActions">
+              <button class="QuickActionBtn" onclick="scrollToTop()" title="Back to Top">
+                  <i class="fas fa-arrow-up"></i>
+                  <span>Top</span>
+              </button>
+              <button class="QuickActionBtn" onclick="toggleAllSections()" title="Expand/Collapse All">
+                  <i class="fas fa-expand-arrows-alt"></i>
+                  <span>Toggle</span>
+              </button>
+              <button class="QuickActionBtn" onclick="printPage()" title="Print Page">
+                  <i class="fas fa-print"></i>
+                  <span>Print</span>
+              </button>
+          </div>
+
+          <!-- Content Navigation -->
+          <nav class="ContentNav" role="navigation">
+              
+              <!-- Land Units Section -->
+              <div class="NavSection active">
+                  <button class="SectionToggle" aria-expanded="true" data-target="land-items">
+                      <i class="fas fa-tank SectionIcon"></i>
+                      <span class="SectionTitle">Land Units</span>
+                      <span class="ItemCount">1</span>
+                      <i class="fas fa-chevron-down ToggleIcon"></i>
+                  </button>
+                  <ul class="SectionItems" id="land-items">
+                      <li class="NavItem">
+                          <a href="#ythotha" class="NavLink">
+                              <img src="/assets/images/units/sera/land/T4Bot.png" class="UnitThumb" alt="Ythotha"/>
+                              <div class="LinkContent">
+                                  <span class="UnitName">Ythotha</span>
+                                  <span class="ChangeType buff">Buff</span>
+                              </div>
+                          </a>
+                      </li>
+                  </ul>
+              </div>
+
+              <!-- Air Units Section -->
+              <div class="NavSection">
+                  <button class="SectionToggle" aria-expanded="false" data-target="air-items">
+                      <i class="fas fa-plane SectionIcon"></i>
+                      <span class="SectionTitle">Air Units</span>
+                      <span class="ItemCount">1</span>
+                      <i class="fas fa-chevron-down ToggleIcon"></i>
+                  </button>
+                  <ul class="SectionItems" id="air-items">
+                      <li class="NavItem">
+                          <a href="#janus" class="NavLink">
+                              <img src="/assets/images/units/uef/air/T2FighterBomber.png" class="UnitThumb" alt="Janus"/>
+                              <div class="LinkContent">
+                                  <span class="UnitName">Janus</span>
+                                  <span class="ChangeType nerf">Nerf</span>
+                              </div>
+                          </a>
+                      </li>
+                  </ul>
+              </div>
+
+              <!-- Structures Section -->
+              <div class="NavSection">
+                  <button class="SectionToggle" aria-expanded="false" data-target="structure-items">
+                      <i class="fas fa-building SectionIcon"></i>
+                      <span class="SectionTitle">Structures</span>
+                      <span class="ItemCount">12</span>
+                      <i class="fas fa-chevron-down ToggleIcon"></i>
+                  </button>
+                  <ul class="SectionItems" id="structure-items">
+                      <li class="NavItem">
+                          <a href="#t1_t2_support_factories" class="NavLink">
+                              <img src="/assets/images/icons/categories/structure.png" class="UnitThumb" alt="T1 & T2 Support Factories"/>
+                              <div class="LinkContent">
+                                  <span class="UnitName">T1 & T2 Support Factories</span>
+                                  <span class="ChangeType nerf">Nerf</span>
+                              </div>
+                          </a>
+                      </li>
+                      <li class="NavItem">
+                          <a href="#t2_t3_hq_factories" class="NavLink">
+                              <img src="/assets/images/icons/categories/structure.png" class="UnitThumb" alt="T2 & T3 HQ Factories"/>
+                              <div class="LinkContent">
+                                  <span class="UnitName">T2 & T3 HQ Factories</span>
+                                  <span class="ChangeType nerf">Nerf</span>
+                              </div>
+                          </a>
+                      </li>
+                      <li class="NavItem">
+                          <a href="#t3_land_air_hqs" class="NavLink">
+                              <img src="/assets/images/icons/categories/structure.png" class="UnitThumb" alt="T3 Land & Air HQs"/>
+                              <div class="LinkContent">
+                                  <span class="UnitName">T3 Land & Air HQs</span>
+                                  <span class="ChangeType nerf">Nerf</span>
+                              </div>
+                          </a>
+                      </li>
+                      <li class="NavItem">
+                          <a href="#t2_navy_support_factories" class="NavLink">
+                              <img src="/assets/images/icons/categories/structure.png" class="UnitThumb" alt="T2 Navy Support Factories"/>
+                              <div class="LinkContent">
+                                  <span class="UnitName">T2 Navy Support Factories</span>
+                                  <span class="ChangeType nerf">Nerf</span>
+                              </div>
+                          </a>
+                      </li>
+                      <li class="NavItem">
+                          <a href="#t2_navy_hqs_t3_navy_support" class="NavLink">
+                              <img src="/assets/images/icons/categories/structure.png" class="UnitThumb" alt="T2 Navy HQs & T3 Navy Support"/>
+                              <div class="LinkContent">
+                                  <span class="UnitName">T2 Navy HQs & T3 Navy Support</span>
+                                  <span class="ChangeType nerf">Nerf</span>
+                              </div>
+                          </a>
+                      </li>
+                      <li class="NavItem">
+                          <a href="#t3_navy_hqs" class="NavLink">
+                              <img src="/assets/images/icons/categories/structure.png" class="UnitThumb" alt="T3 Navy HQs"/>
+                              <div class="LinkContent">
+                                  <span class="UnitName">T3 Navy HQs</span>
+                                  <span class="ChangeType nerf">Nerf</span>
+                              </div>
+                          </a>
+                      </li>
+                      <li class="NavItem">
+                          <a href="#t1_mass_extractors_power_generators" class="NavLink">
+                              <img src="/assets/images/icons/categories/economy.png" class="UnitThumb" alt="T1 Mass Extractors & Power Generators"/>
+                              <div class="LinkContent">
+                                  <span class="UnitName">T1 Mass Extractors & Power Generators</span>
+                                  <span class="ChangeType nerf">Nerf</span>
+                              </div>
+                          </a>
+                      </li>
+                      <li class="NavItem">
+                          <a href="#t1_mass_storage" class="NavLink">
+                              <img src="/assets/images/icons/categories/economy.png" class="UnitThumb" alt="T1 Mass Storage"/>
+                              <div class="LinkContent">
+                                  <span class="UnitName">T1 Mass Storage</span>
+                                  <span class="ChangeType nerf">Nerf</span>
+                              </div>
+                          </a>
+                      </li>
+                      <li class="NavItem">
+                          <a href="#t2_mass_extractors_power_generators" class="NavLink">
+                              <img src="/assets/images/icons/categories/economy.png" class="UnitThumb" alt="T2 Mass Extractors & Power Generators"/>
+                              <div class="LinkContent">
+                                  <span class="UnitName">T2 Mass Extractors & Power Generators</span>
+                                  <span class="ChangeType nerf">Nerf</span>
+                              </div>
+                          </a>
+                      </li>
+                      <li class="NavItem">
+                          <a href="#t3_mass_extractors_power_generators" class="NavLink">
+                              <img src="/assets/images/icons/categories/economy.png" class="UnitThumb" alt="T3 Mass Extractors & Power Generators"/>
+                              <div class="LinkContent">
+                                  <span class="UnitName">T3 Mass Extractors & Power Generators</span>
+                                  <span class="ChangeType nerf">Nerf</span>
+                              </div>
+                          </a>
+                      </li>
+                      <li class="NavItem">
+                          <a href="#hydrocarbon_powerplants" class="NavLink">
+                              <img src="/assets/images/icons/categories/economy.png" class="UnitThumb" alt="Hydrocarbon Powerplants"/>
+                              <div class="LinkContent">
+                                  <span class="UnitName">Hydrocarbon Powerplants</span>
+                                  <span class="ChangeType nerf">Nerf</span>
+                              </div>
+                          </a>
+                      </li>
+                      <li class="NavItem">
+                          <a href="#walls" class="NavLink">
+                              <img src="/assets/images/icons/categories/structure.png" class="UnitThumb" alt="Walls"/>
+                              <div class="LinkContent">
+                                  <span class="UnitName">Walls</span>
+                                  <span class="ChangeType nerf">Nerf</span>
+                              </div>
+                          </a>
+                      </li>
+                  </ul>
+              </div>
+
+          </nav>
+
+          <!-- Footer Info -->
+          <div class="SidemenuFooter">
+              <div class="PatchStats">
+                  <div class="StatItem">
+                      <i class="fas fa-calendar-alt"></i>
+                      <span>November 15, 2023</span>
+                  </div>
+                  <div class="StatItem">
+                      <i class="fas fa-balance-scale"></i>
+                      <span>14 Changes</span>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </aside>
+  </main>
+</body>
+  <!-- Modern Footer -->
+  <footer class="SiteFooter">
+        <div class="FooterContainer">
+            <!-- Navigation Section -->
+            <div class="FooterSection">
+                <h4 class="FooterTitle">Navigation</h4>
+                <nav class="FooterNav">
+                    <a href="/index.html" class="FooterLink">
+                        <i class="fas fa-home" aria-hidden="true"></i>
+                        All Patch Notes
+                    </a>
+                    <a href="#top" class="FooterLink BackToTopLink">
+                        <i class="fas fa-arrow-up" aria-hidden="true"></i>
+                        Back to Top
+                    </a>
+                </nav>
+            </div>
+
+            <!-- Quick Actions Section -->
+            <div class="FooterSection">
+                <h4 class="FooterTitle">Quick Actions</h4>
+                <div class="FooterActions">
+                    <button id="themeToggleButton" class="ThemeToggle">
+                        <i class="fas fa-palette" aria-hidden="true"></i>
+                        <span class="ToggleText">Toggle Theme</span>
+                    </button>
+                    <button class="PrintButton" onclick="window.print()">
+                        <i class="fas fa-print" aria-hidden="true"></i>
+                        <span>Print Page</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- About Section -->
+            <div class="FooterSection">
+                <h4 class="FooterTitle">About</h4>
+                <div class="FooterInfo">
+                    <p class="PatchInfo">
+                        <strong>Patch 3774</strong><br>
+                        Released: November 15th, 2023
+                    </p>
+                    <p class="Copyright">
+                        © 2015-2025 <strong>FAForever</strong><br>
+                        Community-driven balance updates
+                    </p>
+                </div>
+            </div>
+
+            <!-- Social/Links Section -->
+            <div class="FooterSection">
+                <h4 class="FooterTitle">Community</h4>
+                <div class="FooterLinks">
+                    <a href="https://www.faforever.com" class="FooterLink External" target="_blank" rel="noopener">
+                        <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+                        FAForever.com
+                    </a>
+                    <a href="https://discord.gg/mXahAXy" class="FooterLink External" target="_blank" rel="noopener">
+                        <i class="fab fa-discord" aria-hidden="true"></i>
+                        Discord
+                    </a>
+                    <a href="https://github.com/FAForever" class="FooterLink External" target="_blank" rel="noopener">
+                        <i class="fab fa-github" aria-hidden="true"></i>
+                        GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="FooterBottom">
+            <div class="FooterBottomContent">
+                <span class="LastUpdated">Last updated: <time datetime="2023-11-15">November 15th, 2023</time></span>
+                <span class="BuildInfo">Balance Team • Patch Notes v3774</span>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

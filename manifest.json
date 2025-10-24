@@ -67,7 +67,7 @@
       "name": "Latest Patch",
       "short_name": "Latest",
       "description": "View the most recent balance patch",
-      "url": "/pages/balance/2025/3825.html",
+      "url": "/pages/2025/3825.html",
       "icons": [{ "src": "./assets/images/icons/icon-96x96.svg", "sizes": "96x96" }]
     },
     {
@@ -87,7 +87,7 @@
   "protocol_handlers": [
     {
       "protocol": "web+faforever",
-      "url": "/pages/balance/%s"
+      "url": "/pages/%s"
     }
   ]
 }
