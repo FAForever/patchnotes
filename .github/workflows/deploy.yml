@@ -24,25 +24,20 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v4
 
-    - name: Setup Node.js
-      uses: actions/setup-node@v4
-      with:
-        node-version: '18'
-        cache: 'npm'
-
-    - name: Install dependencies
-      run: |
-        npm init -y
-        npm install --save-dev @staticcms/core
-
     - name: Setup Pages
       uses: actions/configure-pages@v4
 
-    - name: Build with Jekyll
-      uses: actions/jekyll-build-pages@v1
-      with:
-        source: ./
-        destination: ./_site
+    - name: Build static site
+      run: |
+        # Copy all files to _site directory
+        mkdir -p _site
+        cp -r * _site/ 2>/dev/null || true
+        # Remove workflow files from _site
+        rm -rf _site/.github
+        # Ensure proper permissions
+        find _site -type f -name "*.html" -exec chmod 644 {} \;
+        find _site -type f -name "*.css" -exec chmod 644 {} \;
+        find _site -type f -name "*.js" -exec chmod 644 {} \;
 
     - name: Upload artifact
       uses: actions/upload-pages-artifact@v3
