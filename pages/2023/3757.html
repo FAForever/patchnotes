@@ -1,91 +1,253 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="description" content="FAF Patch 3757 page" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Patch 3757</title>
-    <link rel="stylesheet" href="/style/balance.css"/>
-    <script src="/scripts/themeSwitch.js"></script>
-  </head>
-  <body>
-    <main class="Grid">
-      <div class="Content">
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="description" content="FAForever Patch 3757 balance update featuring Galactic Colossus improvements with enhanced HP and speed, Aurora health adjustments, Czar wreckage fixes, and various unit balance changes to promote strategic diversity." />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    
+    <title>FAForever Patch 3757 - Balance Update</title>
 
-        <div id="Intro">
-          <header class="FlexboxContainer">
-            <h1 class="FlexGrow-4">Patch 3757</h1>
-            <h4 class="FlexGrow-1" id="date">Date:<i> May 20th 2023</i></h4>
+    <!-- Critical CSS for immediate loading -->
+    <link rel="stylesheet" href="/style/critical.css?v=1724259600&cache=bypass" />
+
+    <!-- Load head configuration and shared resources -->
+    <script src="/scripts/headConfig.js?v=1724259600&cache=bypass"></script>
+</head>
+<body>
+    <main class="Grid">
+    <div class="Content">
+
+      <section id="Intro" class="IntroSection">
+          <header class="PatchHeader">
+            <div class="PatchTitleGroup">
+              <h1 class="PatchTitle">Patch 3757</h1>
+              <span class="PatchVersion">Balance Update</span>
+            </div>
+            <div class="PatchMeta">
+              <time datetime="2023-05-20" class="PatchDate">May 20th, 2023</time>
+              <span class="PatchStatus">Released</span>
+            </div>
           </header>
           <p class="patchDescription">A balance patch has been released with a few important changes that have been planned for a while, but were delayed. <br>
           We hope you enjoy this new patch</p>
-          <h3>-- The Balance Team</h3>
-          <hr>
-        </div>
+          <footer class="PatchCredits">
+              <div class="TeamSignature">
+                  <span class="TeamIcon">⚖️</span>
+                  <span class="TeamName">The Balance Team</span>
+              </div>
+          </footer>
+          
+          <hr class="SectionDivider">
+      </section>
 
-        <h2>Land</h2>
+      <section id="Land">
+        <h2>Land Units</h2>
 
-        <div id="land">
-
-          <div id="gc" class="Card">
-            <h3><img src="/assets/images/units/aeon/land/T4GC.png"/> Galactic Colossus </h3>
-            <p> Previously the claws would instantaneously destroy the unit upon arrival. This matched the old behavior, but with the bug fixes of the claws it was only slightly too strong. </p>
-            <ul>
-              <li>Claw Damage: 730 dps</li>
-            </ul>
+        <article id="gc" class="PatchCard">
+          <!-- Card Header Section -->
+          <header class="PatchCardHeader">
+              <div class="UnitInfo">
+                  <img src="/assets/images/units/aeon/land/T4GC.png" class="UnitIcon" alt="Galactic Colossus"/>
+                  <div class="UnitDetails">
+                      <div class="UnitNameRow">
+                          <h3 class="UnitName">Galactic Colossus</h3>
+                          <span class="UnitCode">UAL0401</span>
+                      </div>
+                      <span class="FactionBadge aeon">AEON</span>
+                  </div>
+              </div>
+              <div class="ChangeTypeBadge nerf">Nerf</div>
+          </header>
+          <!-- Card Content Section -->
+          <div class="CardContent">
+            <p class="ChangeDescription">Previously the claws would instantaneously destroy the unit upon arrival. This matched the old behavior, but with the bug fixes of the claws it was only slightly too strong.</p>
+            <div class="ChangesList">
+              <div class="ChangeGroup">
+                <h4 class="ChangeGroupTitle">Weapon</h4>
+                <ul class="Changes">
+                  <li class="nerf">
+                    <span class="ChangeLabel">Claw Damage:</span>
+                    <span class="ChangeValue">
+                      <strong class="NewValue">730 dps</strong>
+                    </span>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
+        </article>
 
-        </div>
+      </section>
 
+      <section id="Structures">
         <h2>Structures</h2>
 
-        <div id="structures">
-
-          <div id="airstaging" class="Card">
-            <h3><img src="/assets/images/units/cybran/structure/T1AirStaging.png"/> Air Staging Facility</h3>
-            
-            <p> When they were moved from tech 2 to tech 1 their build time was not reduced accordingly. </p>
-            <ul>
-              <li>Build Time: <s>450</s> <i class="fa-solid fa-arrow-right"></i> 350</li>
-            </ul>
+        <article id="airstaging" class="PatchCard">
+          <!-- Card Header Section -->
+          <header class="PatchCardHeader">
+              <div class="UnitInfo">
+                  <img src="/assets/images/units/cybran/structure/T1AirStaging.png" class="UnitIcon" alt="Air Staging Facility"/>
+                  <div class="UnitDetails">
+                      <div class="UnitNameRow">
+                          <h3 class="UnitName">Air Staging Facility</h3>
+                          <span class="UnitCode">XSB0104</span>
+                      </div>
+                      <span class="FactionBadge neutral">ALL FACTIONS</span>
+                  </div>
+              </div>
+              <div class="ChangeTypeBadge buff">Buff</div>
+          </header>
+          <!-- Card Content Section -->
+          <div class="CardContent">
+            <p class="ChangeDescription">When they were moved from tech 2 to tech 1 their build time was not reduced accordingly.</p>
+            <div class="ChangesList">
+              <div class="ChangeGroup">
+                <h4 class="ChangeGroupTitle">Economy</h4>
+                <ul class="Changes">
+                  <li class="buff">
+                    <span class="ChangeLabel">Build Time:</span>
+                    <span class="ChangeValue">
+                      <s class="OldValue">450</s> 
+                      <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                      <strong class="NewValue">350</strong>
+                    </span>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
+        </article>
 
-        </div>
+      </section>
 
+      <section id="ACUs">
         <h2>ACUs</h2>
 
-        <div id="acus">
-          <div id="aeonacu">
-
-            <div id="Chrono" class="Card">
-              <h3><img src="/assets/images/Enhancements/aeon/chrono.png"/> Chrono Dampener</h3>
-              <ul>
-                <li> The chrono dampener received several buffs over the past year. With this patch we nerf it by changing how the Chrono Dampener behaves. </li>
-                <li> The old behavior applies the same stun on all units over a large radius every 5.0 seconds. The stun duration was 3.5 seconds. </li>
-                <li> The new behavior applies a diminishing stun based on the distance of the unit to the ACU over a large radius every 5.0 seconds. The stun is applied in slices of 0.4 seconds. There are 10 slices. Units that are on top of the ACU receive all slices, and are therefore stunned for 4.0 seconds. Units at the outer edge of the radius receive only a single slice and are therefore stunned for 0.4 seconds. </li>
-              </ul>
+        <article id="aeon_chrono" class="PatchCard">
+          <!-- Card Header Section -->
+          <header class="PatchCardHeader">
+              <div class="UnitInfo">
+                  <img src="/assets/images/Enhancements/aeon/chrono.png" class="UnitIcon" alt="Chrono Dampener"/>
+                  <div class="UnitDetails">
+                      <div class="UnitNameRow">
+                          <h3 class="UnitName">Chrono Dampener</h3>
+                      </div>
+                      <span class="FactionBadge aeon">AEON</span>
+                  </div>
+              </div>
+              <div class="ChangeTypeBadge nerf">Nerf</div>
+          </header>
+          <!-- Card Content Section -->
+          <div class="CardContent">
+            <p class="ChangeDescription">The chrono dampener received several buffs over the past year. With this patch we nerf it by changing how the Chrono Dampener behaves.</p>
+            <div class="ChangesList">
+              <div class="ChangeGroup">
+                <h4 class="ChangeGroupTitle">Other</h4>
+                <ul class="Changes">
+                  <li class="nerf">
+                    <span class="ChangeLabel">Old Behavior:</span>
+                    <span class="ChangeValue">Applies the same stun on all units over a large radius every 5.0 seconds. The stun duration was 3.5 seconds.</span>
+                  </li>
+                  <li class="buff">
+                    <span class="ChangeLabel">New Behavior:</span>
+                    <span class="ChangeValue">Applies a diminishing stun based on the distance of the unit to the ACU over a large radius every 5.0 seconds. The stun is applied in slices of 0.4 seconds. There are 10 slices. Units that are on top of the ACU receive all slices, and are therefore stunned for 4.0 seconds. Units at the outer edge of the radius receive only a single slice and are therefore stunned for 0.4 seconds.</span>
+                  </li>
+                </ul>
+              </div>
             </div>
+          </div>
+        </article>
 
+      </section>
+    </div>
+  <aside class="Sidebar" role="navigation" aria-label="Quick Navigation">
+      <div class="ContentSidemenu">
+          <!-- Quick Navigation Header -->
+          <header class="SidemenuHeader">
+              <h2 class="SidemenuTitle">
+                  <i class="fas fa-list-ul" aria-hidden="true"></i>
+                  Quick Navigation
+              </h2>
+              <div class="ProgressBar">
+                  <div class="ProgressFill" id="readingProgress"></div>
+              </div>
+          </header>
+
+          <!-- Quick Actions Panel -->
+          <div class="QuickActions">
+              <button class="QuickActionBtn" onclick="scrollToTop()" title="Back to Top">
+                  <i class="fas fa-arrow-up"></i>
+                  <span>Top</span>
+              </button>
+              <button class="QuickActionBtn" onclick="toggleAllSections()" title="Expand/Collapse All">
+                  <i class="fas fa-expand-arrows-alt"></i>
+                  <span>Toggle</span>
+              </button>
+              <button class="QuickActionBtn" onclick="printPage()" title="Print Page">
+                  <i class="fas fa-print"></i>
+                  <span>Print</span>
+              </button>
           </div>
-        </div>
-      </div>
-      <div class="Sidebar">
-        <div class="IconSidebar">
-          <h2 class="IconSidebarTitle">Contents</h2>
-          <div class="IconSidebarSpace"></div>
-  
-          <div class="IconSidebarSubgrid">
-              <h3 class="IconSidebarSubtitle">Land</h3><br>
-              <a href="#GC"><img src="/assets/images/units/aeon/land/T4GC.png"/></a>
-  
-              <h3 class="IconSidebarSubtitle">Structures</h3><br>
-              <a href="#airstaging"><img src="/assets/images/units/cybran/structure/T1AirStaging.png"/></a>
-  
-              <h3 class="IconSidebarSubtitle">ACU</h3><br>
-              <a href="#Chrono"><img src="/assets/images/Enhancements/aeon/chrono.png"></a>
+
+          <!-- Content Navigation -->
+          <nav class="ContentNav" role="navigation">
+              
+              <!-- Land Units Section -->
+              <div class="NavSection">
+                  <button class="SectionToggle" aria-expanded="false" data-target="land-items">
+                      <i class="fas fa-tank SectionIcon"></i>
+                      <span class="SectionTitle">Land Units</span>
+                      <span class="ItemCount">1</span>
+                      <i class="fas fa-chevron-down ToggleIcon"></i>
+                  </button>
+                  <ul class="SectionItems" id="land-items">
+                      <li class="NavItem"><a href="#gc" class="NavLink"><img src="/assets/images/units/aeon/land/T4GC.png" class="UnitThumb" alt="Galactic Colossus"/><div class="LinkContent"><span class="UnitName">Galactic Colossus</span><span class="ChangeType nerf">Nerf</span></div></a></li>
+                  </ul>
+              </div>
+
+              <!-- Structures Section -->
+              <div class="NavSection">
+                  <button class="SectionToggle" aria-expanded="false" data-target="structure-items">
+                      <i class="fas fa-building SectionIcon"></i>
+                      <span class="SectionTitle">Structures</span>
+                      <span class="ItemCount">1</span>
+                      <i class="fas fa-chevron-down ToggleIcon"></i>
+                  </button>
+                  <ul class="SectionItems" id="structure-items">
+                      <li class="NavItem"><a href="#airstaging" class="NavLink"><img src="/assets/images/units/cybran/structure/T1AirStaging.png" class="UnitThumb" alt="Air Staging Facility"/><div class="LinkContent"><span class="UnitName">Air Staging Facility</span><span class="ChangeType buff">Buff</span></div></a></li>
+                  </ul>
+              </div>
+
+              <!-- ACU Section -->
+              <div class="NavSection">
+                  <button class="SectionToggle" aria-expanded="false" data-target="acu-items">
+                      <i class="fas fa-user-astronaut SectionIcon"></i>
+                      <span class="SectionTitle">ACU</span>
+                      <span class="ItemCount">1</span>
+                      <i class="fas fa-chevron-down ToggleIcon"></i>
+                  </button>
+                  <ul class="SectionItems" id="acu-items">
+                      <li class="NavItem"><a href="#aeon_chrono" class="NavLink"><img src="/assets/images/Enhancements/aeon/chrono.png" class="UnitThumb" alt="Chrono Dampener"/><div class="LinkContent"><span class="UnitName">Chrono Dampener</span><span class="ChangeType nerf">Nerf</span></div></a></li>
+                  </ul>
+              </div>
+
+          </nav>
+
+          <!-- Footer Info -->
+          <div class="SidemenuFooter">
+              <div class="PatchStats">
+                  <div class="StatItem">
+                      <i class="fas fa-calendar-alt"></i>
+                      <span>May 20th, 2023</span>
+                  </div>
+                  <div class="StatItem">
+                      <i class="fas fa-balance-scale"></i>
+                      <span>3 Changes</span>
+                  </div>
+              </div>
           </div>
-        </div>
       </div>
+  </aside>
     </main>
   </body>
     <footer class="SiteFooter">
@@ -125,8 +287,8 @@
                 <h4 class="FooterTitle">About</h4>
                 <div class="FooterInfo">
                     <p class="PatchInfo">
-                        <strong>Patch 3822</strong><br>
-                        Released: May 19th, 2025
+                        <strong>Patch 3757</strong><br>
+                        Released: May 20th, 2023
                     </p>
                     <p class="Copyright">
                         © 2015-2025 <strong>FAForever</strong><br>
@@ -158,8 +320,8 @@
         <!-- Bottom Bar -->
         <div class="FooterBottom">
             <div class="FooterBottomContent">
-                <span class="LastUpdated">Last updated: <time datetime="2025-05-19">May 19th, 2025</time></span>
-                <span class="BuildInfo">Balance Team • Patch Notes v3822</span>
+                <span class="LastUpdated">Last updated: <time datetime="2023-05-20">May 20th, 2023</time></span>
+                <span class="BuildInfo">Balance Team • Patch Notes v3757</span>
             </div>
         </div>
     </footer>
