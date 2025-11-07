@@ -1,155 +1,534 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <meta name="description" content="FAF Patch 3720 page" />
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="description" content="FAForever Patch 3720 balance update featuring fine-tuning changes including Selen/Jester/Bomber buffs, Mantis icon update, Shard targeting fix, mex efficiency reversion, target priority adjustments, and overcharge mechanic improvements for mobile shields." />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Patch 3720</title>
-    <link rel="stylesheet" href="/style/balance.css" />
-    <script src="/scripts/themeSwitch.js"></script>
-  </head>
-  <body>
+    
+    <title>FAForever Patch 3720 - Balance Update</title>
+
+    <!-- Critical CSS for immediate loading -->
+    <link rel="stylesheet" href="/style/critical.css?v=1724259600&cache=bypass" />
+
+    <!-- Load head configuration and shared resources -->
+    <script src="/scripts/headConfig.js?v=1724259600&cache=bypass"></script>
+</head>
+<body>
     <main class="Grid">
       <div class="Content">
 
-        <div id="Intro">
-          <header class="FlexboxContainer">
-            <h1 class="FlexGrow-4">Patch 3720</h1>
-            <h4 class="FlexGrow-1" id="date">Date:<i> May 15th 2021</i></h4>
+      <section id="Intro" class="IntroSection">
+          <header class="PatchHeader">
+            <div class="PatchTitleGroup">
+              <h1 class="PatchTitle">Patch 3720</h1>
+              <span class="PatchVersion">Balance Update</span>
+            </div>
+            <div class="PatchMeta">
+              <time datetime="2021-05-15" class="PatchDate">May 15th, 2021</time>
+              <span class="PatchStatus">Released</span>
+            </div>
           </header>
           <p class="patchDescription">This patch is a combination of small fine-tuning and changes to game mechanics. It's a relatively small patch stabilizing the balance and getting things out of the way so that the focus can (hopefully) be shifted towards SCUs going forward. <br>
           Selen, Jester and Bombers are all getting small buffs as a follow-up to previous patch. Mantis icon is changed from a LAB icon to a tank icon as this became an apparent issue with the resurgence of LAB usage after their buff. Shard will now actually hit stuff. Mex build time and build power are reverted to pre-engymod values, making them more efficient to assist and making the choice between using engineers for reclaim and assist more meaningful. Target priorities have been fine-tuned from the last change. Overcharge now kills a mobile shield generator if it depletes its shield. <br>
-          We wish you good luck and much fun playing with the new patch!</p>                                
+          We wish you good luck and much fun playing with the new patch!</p>
+          <footer class="PatchCredits">
+              <div class="TeamSignature">
+                  <span class="TeamIcon">⚖️</span>
+                  <span class="TeamName">The Balance Team</span>
+              </div>
+          </footer>
+          
+          <hr class="SectionDivider">
+      </section>
 
-          <h3>-- The Balance Team</h3>
-          <hr>
-        </div>
-
+      <section id="land">
         <h2>Land</h2>
 
-        <div id="land">
-
-          <div id="mantis" class="Card">                            
-            <h3><img src="/assets/images/units/cybran/land/T1Tank.png"> Mantis</h3>
-            
-            <ul>
-                <li>Icon changed from a LAB icon to a T1 tank icon.</li>
-            </ul>
+        <article id="skyslammer" class="PatchCard">
+          <!-- Card Header Section -->
+          <header class="PatchCardHeader">
+              <div class="UnitInfo">
+                  <img src="/assets/images/units/cybran/land/T1MobileAA.png" class="UnitIcon" alt="Sky Slammer"/>
+                  <div class="UnitDetails">
+                      <div class="UnitNameRow">
+                          <h3 class="UnitName">Sky Slammer</h3>
+                          <span class="UnitCode">URL0104</span>
+                      </div>
+                      <span class="FactionBadge cybran">CYBRAN</span>
+                  </div>
+              </div>
+              <div class="ChangeTypeBadge buff">Buff</div>
+          </header>
+          <!-- Card Content Section -->
+          <div class="CardContent">
+            <p class="ChangeDescription">Improvements to projectile characteristics to enhance anti-air effectiveness and tracking capability.</p>
+            <div class="ChangesList">
+              <div class="ChangeGroup">
+                <h4 class="ChangeGroupTitle">Weapon</h4>
+                <ul class="Changes">
+                  <li class="buff">
+                    <span class="ChangeLabel">Projectile Lifetime:</span>
+                    <span class="ChangeValue">
+                      <s class="OldValue">3.5</s> 
+                      <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                      <strong class="NewValue">4.5</strong>
+                    </span>
+                  </li>
+                  <li class="buff">
+                    <span class="ChangeLabel">Muzzle Velocity:</span>
+                    <span class="ChangeValue">
+                      <s class="OldValue">15</s> 
+                      <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                      <strong class="NewValue">20</strong>
+                    </span>
+                  </li>
+                  <li class="buff">
+                    <span class="ChangeLabel">Projectile Max Speed:</span>
+                    <span class="ChangeValue">
+                      <s class="OldValue">50</s> 
+                      <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                      <strong class="NewValue">60</strong>
+                    </span>
+                  </li>
+                  <li class="buff">
+                    <span class="ChangeLabel">Projectile Acceleration:</span>
+                    <span class="ChangeValue">
+                      <s class="OldValue">(8 + Random() * 5)</s> 
+                      <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                      <strong class="NewValue">(16 + Random() * 5)</strong>
+                    </span>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
+        </article>
         
-          <div id="skyslammer" class="Card">                            
-            <h3><img src="/assets/images/units/cybran/land/T1MobileAA.png"> Sky Slammer</h3>
-
-            <ul>
-              <li>Projectile Lifetime: <s>3.5</s> <i class="fa-solid fa-arrow-right"></i> 4.5</li>
-              <li>Muzzle Velocity: <s>15</s> <i class="fa-solid fa-arrow-right"></i> 20</li>
-              <li>Projectile Max Speed: <s>50</s> <i class="fa-solid fa-arrow-right"></i> 60</li>
-              <li>Projectile Acceleration: <s>(8 + Random() * 5)</s> <i class="fa-solid fa-arrow-right"></i> (16 + Random() * 5)</li>
-            </ul>
+        <article id="selen" class="PatchCard">
+          <!-- Card Header Section -->
+          <header class="PatchCardHeader">
+              <div class="UnitInfo">
+                  <img src="/assets/images/units/sera/land/T1Scout.png" class="UnitIcon" alt="Selen"/>
+                  <div class="UnitDetails">
+                      <div class="UnitNameRow">
+                          <h3 class="UnitName">Selen</h3>
+                          <span class="UnitCode">XSL0101</span>
+                      </div>
+                      <span class="FactionBadge sera">SERAPHIM</span>
+                  </div>
+              </div>
+              <div class="ChangeTypeBadge buff">Buff</div>
+          </header>
+          <!-- Card Content Section -->
+          <div class="CardContent">
+            <p class="ChangeDescription">Small buff as a follow-up to previous patch, improving combat effectiveness and turret tracking.</p>
+            <div class="ChangesList">
+              <div class="ChangeGroup">
+                <h4 class="ChangeGroupTitle">Weapon</h4>
+                <ul class="Changes">
+                  <li class="buff">
+                    <span class="ChangeLabel">Range:</span>
+                    <span class="ChangeValue">
+                      <s class="OldValue">18</s> 
+                      <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                      <strong class="NewValue">19</strong>
+                    </span>
+                  </li>
+                  <li class="buff">
+                    <span class="ChangeLabel">Turret Yaw Speed:</span>
+                    <span class="ChangeValue">
+                      <s class="OldValue">120</s> 
+                      <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                      <strong class="NewValue">130</strong>
+                    </span>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
-        
-          <div id="selen" class="Card">                            
-            <h3><img src="/assets/images/units/sera/land/T1Scout.png"> Selen</h3>
+        </article>
 
-            <ul>
-              <li>Range: <s>18</s> <i class="fa-solid fa-arrow-right"></i> 19</li>
-              <li>TurretYawSpeed : <s>120</s> <i class="fa-solid fa-arrow-right"></i> 130</li>
-            </ul>
-          </div>
+      </section>
 
-        </div>
-
+      <section id="air">
         <h2>Air</h2>
 
-        <div id="air">
-
-          <div id="jester" class="Card">
-            <h3><img src="/assets/images/units/cybran/air/T1Gunship.png"> Jester</h3>
-
-            <ul>
-              <li>Speed: <s>9</s> <i class="fa-solid fa-arrow-right"></i> 10</li>
-              <li>MuzzleVelocity: <s>40</s> <i class="fa-solid fa-arrow-right"></i> 55</li>
-              <li>DamageRadius: <s>0</s> <i class="fa-solid fa-arrow-right"></i> 0.15</li>
-            </ul>
+        <article id="jester" class="PatchCard">
+          <!-- Card Header Section -->
+          <header class="PatchCardHeader">
+              <div class="UnitInfo">
+                  <img src="/assets/images/units/cybran/air/T1Gunship.png" class="UnitIcon" alt="Jester"/>
+                  <div class="UnitDetails">
+                      <div class="UnitNameRow">
+                          <h3 class="UnitName">Jester</h3>
+                          <span class="UnitCode">URA0101</span>
+                      </div>
+                      <span class="FactionBadge cybran">CYBRAN</span>
+                  </div>
+              </div>
+              <div class="ChangeTypeBadge buff">Buff</div>
+          </header>
+          <!-- Card Content Section -->
+          <div class="CardContent">
+            <p class="ChangeDescription">Small buff as a follow-up to previous patch, improving speed and weapon effectiveness with added splash damage.</p>
+            <div class="ChangesList">
+              <div class="ChangeGroup">
+                <h4 class="ChangeGroupTitle">Mobility</h4>
+                <ul class="Changes">
+                  <li class="buff">
+                    <span class="ChangeLabel">Speed:</span>
+                    <span class="ChangeValue">
+                      <s class="OldValue">9</s> 
+                      <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                      <strong class="NewValue">10</strong>
+                    </span>
+                  </li>
+                </ul>
+              </div>
+              <div class="ChangeGroup">
+                <h4 class="ChangeGroupTitle">Weapon</h4>
+                <ul class="Changes">
+                  <li class="buff">
+                    <span class="ChangeLabel">Muzzle Velocity:</span>
+                    <span class="ChangeValue">
+                      <s class="OldValue">40</s> 
+                      <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                      <strong class="NewValue">55</strong>
+                    </span>
+                  </li>
+                  <li class="buff">
+                    <span class="ChangeLabel">Damage Radius:</span>
+                    <span class="ChangeValue">
+                      <s class="OldValue">0</s> 
+                      <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                      <strong class="NewValue">0.15</strong>
+                    </span>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
+        </article>
         
-          <div id="t1 bomber" class="Card">
-            <h3><img src="/assets/images/units/uef/air/T1Bommber.png"> T1 Bomber</h3>
-      
-            <ul>
-              <li>RadarRadius: <s>42</s> <i class="fa-solid fa-arrow-right"></i> 44</li>
-            </ul>
-          </div> 
+        <article id="t1bomber" class="PatchCard">
+          <!-- Card Header Section -->
+          <header class="PatchCardHeader">
+              <div class="UnitInfo">
+                  <img src="/assets/images/units/uef/air/T1Bommber.png" class="UnitIcon" alt="Scorcher"/>
+                  <div class="UnitDetails">
+                      <div class="UnitNameRow">
+                          <h3 class="UnitName">T1 Bomber</h3>
+                          <span class="UnitCode">UEA0103</span>
+                      </div>
+                      <span class="FactionBadge uef">UEF</span>
+                  </div>
+              </div>
+              <div class="ChangeTypeBadge buff">Buff</div>
+          </header>
+          <!-- Card Content Section -->
+          <div class="CardContent">
+            <p class="ChangeDescription">Small buff as a follow-up to previous patch, improving radar range for better scouting capability.</p>
+            <div class="ChangesList">
+              <div class="ChangeGroup">
+                <h4 class="ChangeGroupTitle">Vision</h4>
+                <ul class="Changes">
+                  <li class="buff">
+                    <span class="ChangeLabel">Radar Radius:</span>
+                    <span class="ChangeValue">
+                      <s class="OldValue">42</s> 
+                      <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                      <strong class="NewValue">44</strong>
+                    </span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </article>
 
+      </section>
 
-        </div>
-
+      <section id="naval">
         <h2>Navy</h2>
 
-        <div id="navy">
-
-          <div id="shard" class="Card">
-            <h3><img src="/assets/images/units/aeon/naval/T1AABoat.png"> Shard</h3>
-
-            <ul>
-              <li>Damage: <s>7</s> <i class="fa-solid fa-arrow-right"></i> 6</li>
-              <li>MuzzleVelocity: <s>45</s> <i class="fa-solid fa-arrow-right"></i> 60</li>
-            </ul>
+        <article id="shard" class="PatchCard">
+          <!-- Card Header Section -->
+          <header class="PatchCardHeader">
+              <div class="UnitInfo">
+                  <img src="/assets/images/units/aeon/naval/T1AABoat.png" class="UnitIcon" alt="Shard"/>
+                  <div class="UnitDetails">
+                      <div class="UnitNameRow">
+                          <h3 class="UnitName">Shard</h3>
+                          <span class="UnitCode">UAS0102</span>
+                      </div>
+                      <span class="FactionBadge aeon">AEON</span>
+                  </div>
+              </div>
+              <div class="ChangeTypeBadge mixed">Mixed</div>
+          </header>
+          <!-- Card Content Section -->
+          <div class="CardContent">
+            <p class="ChangeDescription">Shard will now actually hit stuff. Significant muzzle velocity increase to fix targeting issues, with slight damage reduction to compensate.</p>
+            <div class="ChangesList">
+              <div class="ChangeGroup">
+                <h4 class="ChangeGroupTitle">Weapon</h4>
+                <ul class="Changes">
+                  <li class="nerf">
+                    <span class="ChangeLabel">Damage:</span>
+                    <span class="ChangeValue">
+                      <s class="OldValue">7</s> 
+                      <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                      <strong class="NewValue">6</strong>
+                    </span>
+                  </li>
+                  <li class="buff">
+                    <span class="ChangeLabel">Muzzle Velocity:</span>
+                    <span class="ChangeValue">
+                      <s class="OldValue">45</s> 
+                      <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                      <strong class="NewValue">60</strong>
+                    </span>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
+        </article>
 
-        </div>
+      </section>
 
+      <section id="structures">
         <h2>Structures</h2>
 
-        <div id="structure">
-          
-          <div id="mexs" class="Card">
-            <h3>Mass Extractors</h3>
-
-            <img src="/assets/images/units/aeon/structure/T1MassExtractor.png"><b>Tech 1</b>
-            <ul>
-              <li>BuildPower: <s>13</s> <i class="fa-solid fa-arrow-right"></i> 10</li>
-            </ul>
-
-            <img src="/assets/images/units/uef/structure/T2MassExtractor.png"><b>Tech 2</b>
-            <ul>
-              <li>BuildPower: <s>20.58</s> <i class="fa-solid fa-arrow-right"></i> 15</li>
-              <li>BuildTime: <s>1171 </s> <i class="fa-solid fa-arrow-right"></i> 900</li>
-            </ul>
-
-            <img src="/assets/images/units/cybran/structure/T3MassExtractor.png"><b>Tech 3</b>
-            <ul>
-              <li>BuildTime: <s>3944 </s> <i class="fa-solid fa-arrow-right"></i> 2875</li>
-            </ul>
+        <article id="t1mex" class="PatchCard">
+          <!-- Card Header Section -->
+          <header class="PatchCardHeader">
+              <div class="UnitInfo">
+                  <img src="/assets/images/units/aeon/structure/T1MassExtractor.png" class="UnitIcon" alt="T1 Mass Extractor"/>
+                  <div class="UnitDetails">
+                      <div class="UnitNameRow">
+                          <h3 class="UnitName">T1 Mass Extractor</h3>
+                      </div>
+                      <span class="FactionBadge universal">UNIVERSAL</span>
+                  </div>
+              </div>
+              <div class="ChangeTypeBadge nerf">Nerf</div>
+          </header>
+          <!-- Card Content Section -->
+          <div class="CardContent">
+            <p class="ChangeDescription">Build power reverted to pre-engymod values, making T1 mexes more efficient to assist.</p>
+            <div class="ChangesList">
+              <div class="ChangeGroup">
+                <h4 class="ChangeGroupTitle">Economy</h4>
+                <ul class="Changes">
+                  <li class="nerf">
+                    <span class="ChangeLabel">Build Power:</span>
+                    <span class="ChangeValue">
+                      <s class="OldValue">13</s> 
+                      <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                      <strong class="NewValue">10</strong>
+                    </span>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
+        </article>
 
-        </div>
+        <article id="t2mex" class="PatchCard">
+          <!-- Card Header Section -->
+          <header class="PatchCardHeader">
+              <div class="UnitInfo">
+                  <img src="/assets/images/units/uef/structure/T2MassExtractor.png" class="UnitIcon" alt="T2 Mass Extractor"/>
+                  <div class="UnitDetails">
+                      <div class="UnitNameRow">
+                          <h3 class="UnitName">T2 Mass Extractor</h3>
+                      </div>
+                      <span class="FactionBadge universal">UNIVERSAL</span>
+                  </div>
+              </div>
+              <div class="ChangeTypeBadge nerf">Nerf</div>
+          </header>
+          <!-- Card Content Section -->
+          <div class="CardContent">
+            <p class="ChangeDescription">Build power and build time reverted to pre-engymod values, improving assist efficiency and making the choice between reclaim and assist more meaningful.</p>
+            <div class="ChangesList">
+              <div class="ChangeGroup">
+                <h4 class="ChangeGroupTitle">Economy</h4>
+                <ul class="Changes">
+                  <li class="nerf">
+                    <span class="ChangeLabel">Build Power:</span>
+                    <span class="ChangeValue">
+                      <s class="OldValue">20.58</s> 
+                      <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                      <strong class="NewValue">15</strong>
+                    </span>
+                  </li>
+                  <li class="nerf">
+                    <span class="ChangeLabel">Build Time:</span>
+                    <span class="ChangeValue">
+                      <s class="OldValue">1,171</s> 
+                      <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                      <strong class="NewValue">900</strong>
+                    </span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article id="t3mex" class="PatchCard">
+          <!-- Card Header Section -->
+          <header class="PatchCardHeader">
+              <div class="UnitInfo">
+                  <img src="/assets/images/units/cybran/structure/T3MassExtractor.png" class="UnitIcon" alt="T3 Mass Extractor"/>
+                  <div class="UnitDetails">
+                      <div class="UnitNameRow">
+                          <h3 class="UnitName">T3 Mass Extractor</h3>
+                      </div>
+                      <span class="FactionBadge universal">UNIVERSAL</span>
+                  </div>
+              </div>
+              <div class="ChangeTypeBadge nerf">Nerf</div>
+          </header>
+          <!-- Card Content Section -->
+          <div class="CardContent">
+            <p class="ChangeDescription">Build time reverted to pre-engymod values, making T3 mexes more efficient to assist.</p>
+            <div class="ChangesList">
+              <div class="ChangeGroup">
+                <h4 class="ChangeGroupTitle">Economy</h4>
+                <ul class="Changes">
+                  <li class="nerf">
+                    <span class="ChangeLabel">Build Time:</span>
+                    <span class="ChangeValue">
+                      <s class="OldValue">3,944</s> 
+                      <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                      <strong class="NewValue">2,875</strong>
+                    </span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </article>
+
+      </section>
 
       </div>
-      <div class="Sidebar">
-        <div class="IconSidebar">
-          <h2 class="IconSidebarTitle">Contents</h2>
-          <div class="IconSidebarSpace"></div>
-  
-          <div class="IconSidebarSubgrid">
-              <h3 class="IconSidebarSubtitle">Land</h3><br>
-              <a href="#mantis"><img src="/assets/images/units/cybran/land/T1Tank.png"></a>
-              <a href="#skyslammer"><img src="/assets/images/units/cybran/land/T1MobileAA.png"></a>
-              <a href="#selen"><img src="/assets/images/units/sera/land/T1Scout.png"></a>
-  
-              <h3 class="IconSidebarSubtitle">Air</h3><br>
-              <a href="#jester"><img src="/assets/images/units/cybran/air/T1Gunship.png"></a>
-              <a href="#t1 bomber"><img src="/assets/images/units/uef/air/T1Bommber.png"></a>
-  
-              <h3 class="IconSidebarSubtitle">Navy</h3><br>
-              <a href="#shard"><img src="/assets/images/units/aeon/naval/T1AABoat.png"></a>
-  
-              <h3 class="IconSidebarSubtitle">Structures</h3><br>
-              <a href="#mexs"><img src="/assets/images/units/uef/structure/T3MassExtractor.png"></a>
-  
+      
+      <!-- Sidebar Navigation -->
+      <aside class="Sidebar" role="navigation" aria-label="Quick Navigation">
+        <div class="ContentSidemenu">
+          <!-- Quick Navigation Header -->
+          <header class="SidemenuHeader">
+              <h2 class="SidemenuTitle">
+                  <i class="fas fa-list-ul" aria-hidden="true"></i>
+                  Quick Navigation
+              </h2>
+              <div class="ProgressBar">
+                  <div class="ProgressFill" id="readingProgress"></div>
+              </div>
+          </header>
+
+          <!-- Quick Actions Panel -->
+          <div class="QuickActions">
+              <button class="QuickActionBtn" onclick="scrollToTop()" title="Back to Top">
+                  <i class="fas fa-arrow-up"></i>
+                  <span>Top</span>
+              </button>
+              <button class="QuickActionBtn" onclick="toggleAllSections()" title="Expand/Collapse All">
+                  <i class="fas fa-expand-arrows-alt"></i>
+                  <span>Toggle</span>
+              </button>
+              <button class="QuickActionBtn" onclick="printPage()" title="Print Page">
+                  <i class="fas fa-print"></i>
+                  <span>Print</span>
+              </button>
           </div>
-        </div>
+
+          <!-- Content Navigation -->
+          <nav class="ContentNav" role="navigation">
+              
+              <!-- Land Units Section -->
+              <div class="NavSection">
+                  <button class="SectionToggle" aria-expanded="false" data-target="land-items">
+                      <i class="fas fa-tank SectionIcon"></i>
+                      <span class="SectionTitle">Land Units</span>
+                      <span class="ItemCount">2</span>
+                      <i class="fas fa-chevron-down ToggleIcon"></i>
+                  </button>
+                  <ul class="SectionItems" id="land-items">
+                      <li class="NavItem"><a href="#skyslammer" class="NavLink"><div class="LinkContent"><span class="UnitName">Sky Slammer</span><span class="ChangeType buff">Buff</span></div></a></li>
+                      <li class="NavItem"><a href="#selen" class="NavLink"><div class="LinkContent"><span class="UnitName">Selen</span><span class="ChangeType buff">Buff</span></div></a></li>
+                  </ul>
+              </div>
+
+              <!-- Air Units Section -->
+              <div class="NavSection">
+                  <button class="SectionToggle" aria-expanded="false" data-target="air-items">
+                      <i class="fas fa-plane SectionIcon"></i>
+                      <span class="SectionTitle">Air Units</span>
+                      <span class="ItemCount">2</span>
+                      <i class="fas fa-chevron-down ToggleIcon"></i>
+                  </button>
+                  <ul class="SectionItems" id="air-items">
+                      <li class="NavItem"><a href="#jester" class="NavLink"><div class="LinkContent"><span class="UnitName">Jester</span><span class="ChangeType buff">Buff</span></div></a></li>
+                      <li class="NavItem"><a href="#t1bomber" class="NavLink"><div class="LinkContent"><span class="UnitName">T1 Bomber</span><span class="ChangeType buff">Buff</span></div></a></li>
+                  </ul>
+              </div>
+
+              <!-- Navy Section -->
+              <div class="NavSection">
+                  <button class="SectionToggle" aria-expanded="false" data-target="navy-items">
+                      <i class="fas fa-ship SectionIcon"></i>
+                      <span class="SectionTitle">Navy</span>
+                      <span class="ItemCount">1</span>
+                      <i class="fas fa-chevron-down ToggleIcon"></i>
+                  </button>
+                  <ul class="SectionItems" id="navy-items">
+                      <li class="NavItem"><a href="#shard" class="NavLink"><div class="LinkContent"><span class="UnitName">Shard</span><span class="ChangeType mixed">Mixed</span></div></a></li>
+                  </ul>
+              </div>
+
+              <!-- Structures Section -->
+              <div class="NavSection">
+                  <button class="SectionToggle" aria-expanded="false" data-target="structure-items">
+                      <i class="fas fa-building SectionIcon"></i>
+                      <span class="SectionTitle">Structures</span>
+                      <span class="ItemCount">3</span>
+                      <i class="fas fa-chevron-down ToggleIcon"></i>
+                  </button>
+                  <ul class="SectionItems" id="structure-items">
+                      <li class="NavItem"><a href="#t1mex" class="NavLink"><div class="LinkContent"><span class="UnitName">T1 Mass Extractor</span><span class="ChangeType nerf">Nerf</span></div></a></li>
+                      <li class="NavItem"><a href="#t2mex" class="NavLink"><div class="LinkContent"><span class="UnitName">T2 Mass Extractor</span><span class="ChangeType nerf">Nerf</span></div></a></li>
+                      <li class="NavItem"><a href="#t3mex" class="NavLink"><div class="LinkContent"><span class="UnitName">T3 Mass Extractor</span><span class="ChangeType nerf">Nerf</span></div></a></li>
+                  </ul>
+              </div>
+
+          </nav>
+
+          <!-- Footer Info -->
+          <div class="SidemenuFooter">
+              <div class="PatchStats">
+                  <div class="StatItem">
+                      <i class="fas fa-calendar-alt"></i>
+                      <span>May 15th, 2021</span>
+                  </div>
+                  <div class="StatItem">
+                      <i class="fas fa-balance-scale"></i>
+                      <span>8 Changes</span>
+                  </div>
+              </div>
+              <div class="SidemenuFooterActions">
+                  <button class="QuickActionBtn" onclick="window.print()" title="Print">
+                      <i class="fas fa-print"></i>
+                  </button>
+              </div>
+          </div>
       </div>
+  </aside>
+    </div>
     </main>
     </body>
     <footer class="SiteFooter">
@@ -189,8 +568,8 @@
                 <h4 class="FooterTitle">About</h4>
                 <div class="FooterInfo">
                     <p class="PatchInfo">
-                        <strong>Patch 3822</strong><br>
-                        Released: May 19th, 2025
+                        <strong>Patch 3720</strong><br>
+                        Released: May 15th, 2021
                     </p>
                     <p class="Copyright">
                         © 2015-2025 <strong>FAForever</strong><br>

@@ -1,458 +1,1374 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <meta name="description" content="FAF Patch 3725 page" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Patch 3725</title>
-    <link rel="stylesheet" href="/style/balance.css"/>
-    <script src="/scripts/themeSwitch.js"></script>
-  </head>
-    <body>
-      <main class="Grid">
-        <div class="Content">
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="description" content="FAForever Patch 3725 balance update featuring Seraphim nerfs to Selen cloak and Zthuee efficiency, Cybran mid-game buffs, various land/naval/air unit adjustments, and ACU upgrade reworks with QoL improvements." />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    
+    <title>FAForever Patch 3725 - Balance Update</title>
 
-          <div id="Intro">
-            <header class="FlexboxContainer">
-              <h1 class="FlexGrow-4">Patch 3725</h1>
-              <h4 class="FlexGrow-1" id="date">Date:<i> November 26th 2021</i></h4>
-            </header>
-            <p class="patchDescription">This patch touches various land, naval and air units as well as reworks a couple of ACU upgrades. Notably seraphim are receiving significant nerfs to Selen cloak and Zthuee build time efficiency while cybran are getting some buffs that will make their mid-game a lot more robust. Plus various QoL improvements and fixes to inconsistent unit behavior.</p>
-            <h3>-- The Balance Team</h3>
-            <hr>
-        </div>
+    <!-- Critical CSS for immediate loading -->
+    <link rel="stylesheet" href="/style/critical.css?v=1724259600&cache=bypass" />
 
+    <!-- Load head configuration and shared resources -->
+    <script src="/scripts/headConfig.js?v=1724259600&cache=bypass"></script>
+</head>
+<body>
+    <main class="Grid">
+      <div class="Content">
+
+      <section id="Intro" class="IntroSection">
+          <header class="PatchHeader">
+            <div class="PatchTitleGroup">
+              <h1 class="PatchTitle">Patch 3725</h1>
+              <span class="PatchVersion">Balance Update</span>
+            </div>
+            <div class="PatchMeta">
+              <time datetime="2021-11-26" class="PatchDate">November 26th, 2021</time>
+              <span class="PatchStatus">Released</span>
+            </div>
+          </header>
+          <p class="patchDescription">This patch touches various land, naval and air units as well as reworks a couple of ACU upgrades. Notably seraphim are receiving significant nerfs to Selen cloak and Zthuee build time efficiency while cybran are getting some buffs that will make their mid-game a lot more robust. Plus various QoL improvements and fixes to inconsistent unit behavior.</p>
+          <footer class="PatchCredits">
+              <div class="TeamSignature">
+                  <span class="TeamIcon">⚖️</span>
+                  <span class="TeamName">The Balance Team</span>
+              </div>
+          </footer>
+          
+          <hr class="SectionDivider">
+      </section>
+
+      <section id="land">
         <h2>Land</h2>
 
-        <div id="land">
-
-          <div id="zuee" class="Card">
-            <h3><img src="/assets/images/units/sera/land/T1MobileArty.png"> Zthuee</h3>
-            <p>Zthuee are more efficient BP-wise for their strength compared to other T1 arties which allows for powerful arty spam with a rather small investment in factories. This brings them more in line with other factions.</p>
-
-            <ul>
-                <li>BuildTime: <s>180</s> <i class="fa-solid fa-arrow-right"></i> 270</li>
-            </ul>
-          </div>
-
-          <div id="t3lightbots" class="Card">
-            <h3>Tech 3 Light Assault Bots</h3>
-                            
-            <p>This is a small buff to the Titan and the Loyalist bringing their E and BT costs more in line with other T3 units which should make massing them a bit easier, potentially prolonging the T3 light bot stage before bricks and percival's come out.</p>
-
-              <div id="titan">
-                <h3><img src="/assets/images/units/uef/land/T3Bot.png">Titan</h3>
-                
-                  <ul>
-                    <li>BuildCostEnergy: <s>5400</s> <i class="fa-solid fa-arrow-right"></i> 5250</li>
-                    <li>BuildTime: <s>2400</s> <i class="fa-solid fa-arrow-right"></i> 2160</li>
-                  </ul>
+        <article id="zuee" class="PatchCard">
+          <!-- Card Header Section -->
+          <header class="PatchCardHeader">
+              <div class="UnitInfo">
+                  <img src="/assets/images/units/sera/land/T1MobileArty.png" class="UnitIcon" alt="Zthuee"/>
+                  <div class="UnitDetails">
+                      <div class="UnitNameRow">
+                          <h3 class="UnitName">Zthuee</h3>
+                          <span class="UnitCode">XSL0103</span>
+                      </div>
+                      <span class="FactionBadge sera">SERAPHIM</span>
+                  </div>
               </div>
-
-              <div id="loya">
-                <h3><img src="/assets/images/units/cybran/land/T3AssultBot.png">Loyalist</h3>
-
-                <ul>
-                  <li>BuildCostEnergy: <s>5400</s> <i class="fa-solid fa-arrow-right"></i> 5250</li>
-                  <li>BuildTime: <s>2400</s> <i class="fa-solid fa-arrow-right"></i> 2160</li>
-                </ul>
-
-                <p>Allows loyalists to better deal with T2 which is the main threat during early T3 stage.</p>
-                
-                <ul>
-                  <li>Add 1.5s stun to the slow-firing weapon affecting units up to and including T2, excluding navy and structures</li>
+              <div class="ChangeTypeBadge nerf">Nerf</div>
+          </header>
+          <!-- Card Content Section -->
+          <div class="CardContent">
+            <p class="ChangeDescription">Zthuee are more efficient BP-wise for their strength compared to other T1 arties which allows for powerful arty spam with a rather small investment in factories. This brings them more in line with other factions.</p>
+            <div class="ChangesList">
+              <div class="ChangeGroup">
+                <h4 class="ChangeGroupTitle">Economy</h4>
+                <ul class="Changes">
+                  <li class="nerf">
+                    <span class="ChangeLabel">Build Time:</span>
+                    <span class="ChangeValue">
+                      <s class="OldValue">180</s> 
+                      <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                      <strong class="NewValue">270</strong>
+                    </span>
+                  </li>
                 </ul>
               </div>
+            </div>
           </div>
+        </article>
+
+        <article id="titan" class="PatchCard">
+          <!-- Card Header Section -->
+          <header class="PatchCardHeader">
+              <div class="UnitInfo">
+                  <img src="/assets/images/units/uef/land/T3Bot.png" class="UnitIcon" alt="Titan"/>
+                  <div class="UnitDetails">
+                      <div class="UnitNameRow">
+                          <h3 class="UnitName">Titan</h3>
+                          <span class="UnitCode">UEL0303</span>
+                      </div>
+                      <span class="FactionBadge uef">UEF</span>
+                  </div>
+              </div>
+              <div class="ChangeTypeBadge buff">Buff</div>
+          </header>
+          <!-- Card Content Section -->
+          <div class="CardContent">
+            <p class="ChangeDescription">This is a small buff to the Titan bringing its energy and build time costs more in line with other T3 units which should make massing them a bit easier, potentially prolonging the T3 light bot stage before bricks and percival's come out.</p>
+            <div class="ChangesList">
+              <div class="ChangeGroup">
+                <h4 class="ChangeGroupTitle">Economy</h4>
+                <ul class="Changes">
+                  <li class="buff">
+                    <span class="ChangeLabel">Energy Cost:</span>
+                    <span class="ChangeValue">
+                      <s class="OldValue">5,400</s> 
+                      <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                      <strong class="NewValue">5,250</strong>
+                    </span>
+                  </li>
+                  <li class="buff">
+                    <span class="ChangeLabel">Build Time:</span>
+                    <span class="ChangeValue">
+                      <s class="OldValue">2,400</s> 
+                      <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                      <strong class="NewValue">2,160</strong>
+                    </span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article id="loyalist" class="PatchCard">
+          <!-- Card Header Section -->
+          <header class="PatchCardHeader">
+              <div class="UnitInfo">
+                  <img src="/assets/images/units/cybran/land/T3AssultBot.png" class="UnitIcon" alt="Loyalist"/>
+                  <div class="UnitDetails">
+                      <div class="UnitNameRow">
+                          <h3 class="UnitName">Loyalist</h3>
+                          <span class="UnitCode">URL0303</span>
+                      </div>
+                      <span class="FactionBadge cybran">CYBRAN</span>
+                  </div>
+              </div>
+              <div class="ChangeTypeBadge buff">Buff</div>
+          </header>
+          <!-- Card Content Section -->
+          <div class="CardContent">
+            <p class="ChangeDescription">This is a small buff to the Loyalist bringing its energy and build time costs more in line with other T3 units which should make massing them a bit easier, potentially prolonging the T3 light bot stage before bricks and percival's come out. Additionally, allows loyalists to better deal with T2 which is the main threat during early T3 stage.</p>
+            <div class="ChangesList">
+              <div class="ChangeGroup">
+                <h4 class="ChangeGroupTitle">Economy</h4>
+                <ul class="Changes">
+                  <li class="buff">
+                    <span class="ChangeLabel">Energy Cost:</span>
+                    <span class="ChangeValue">
+                      <s class="OldValue">5,400</s> 
+                      <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                      <strong class="NewValue">5,250</strong>
+                    </span>
+                  </li>
+                  <li class="buff">
+                    <span class="ChangeLabel">Build Time:</span>
+                    <span class="ChangeValue">
+                      <s class="OldValue">2,400</s> 
+                      <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                      <strong class="NewValue">2,160</strong>
+                    </span>
+                  </li>
+                </ul>
+              </div>
+              <div class="ChangeGroup">
+                <h4 class="ChangeGroupTitle">Weapon</h4>
+                <ul class="Changes">
+                  <li class="buff">
+                    <span class="ChangeLabel">Stun Effect:</span>
+                    <span class="ChangeValue">
+                      <strong class="NewValue">Add 1.5s stun to the slow-firing weapon affecting units up to and including T2, excluding navy and structures</strong>
+                    </span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </article>
                         
-          <div id="t1scouts" class="Card">
-            <h3>Tech 1 Land Scouts</h3>
-                            
-            <p>Make scouts slightly more appealing to create early game and help the scouts to not aggro on enemy units and civilians from far away when they are given an attack move or an assist order.</p>
-
-              <div id="snoop">
-                <img src="/assets/images/units/uef/land/T1Scout.png"><b>UEF Scout (Snoop)</b>
-                <ul>
-                  <li>Reduce the aggro range while on assist/attack move</li>
-                  <li>BuildTime: <s>80</s> <i class="fa-solid fa-arrow-right"></i> 60</li>
+        <article id="snoop" class="PatchCard">
+          <!-- Card Header Section -->
+          <header class="PatchCardHeader">
+              <div class="UnitInfo">
+                  <img src="/assets/images/units/uef/land/T1Scout.png" class="UnitIcon" alt="Snoop"/>
+                  <div class="UnitDetails">
+                      <div class="UnitNameRow">
+                          <h3 class="UnitName">Snoop</h3>
+                          <span class="UnitCode">UEL0101</span>
+                      </div>
+                      <span class="FactionBadge uef">UEF</span>
+                  </div>
+              </div>
+              <div class="ChangeTypeBadge buff">Buff</div>
+          </header>
+          <!-- Card Content Section -->
+          <div class="CardContent">
+            <p class="ChangeDescription">Make scouts slightly more appealing to create early game and help the scouts to not aggro on enemy units and civilians from far away when they are given an attack move or an assist order.</p>
+            <div class="ChangesList">
+              <div class="ChangeGroup">
+                <h4 class="ChangeGroupTitle">Economy</h4>
+                <ul class="Changes">
+                  <li class="buff">
+                    <span class="ChangeLabel">Build Time:</span>
+                    <span class="ChangeValue">
+                      <s class="OldValue">80</s> 
+                      <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                      <strong class="NewValue">60</strong>
+                    </span>
+                  </li>
                 </ul>
               </div>
+              <div class="ChangeGroup">
+                <h4 class="ChangeGroupTitle">Other</h4>
+                <ul class="Changes">
+                  <li class="buff">
+                    <span class="ChangeLabel">Aggro Range:</span>
+                    <span class="ChangeValue">
+                      <strong class="NewValue">Reduce the aggro range while on assist/attack move</strong>
+                    </span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </article>
               
-              <div id="mole">
-                <img src="/assets/images/units/cybran/land/T1Scout.png"><b>Cybran Scout (Mole)</b>
-                <ul>
-                    <li>BuildCostEnergy: <s>80</s> <i class="fa-solid fa-arrow-right"></i> 60</li>
-                    <li>EnergyMaintenanceCost: <s>5</s> <i class="fa-solid fa-arrow-right"></i> 1</li>
-                    <li>Reduce the aggro range while on assist/attack move</li>
-                    <li>BuildTime: <s>80</s> <i class="fa-solid fa-arrow-right"></i> 60</li>
+        <article id="mole" class="PatchCard">
+          <!-- Card Header Section -->
+          <header class="PatchCardHeader">
+              <div class="UnitInfo">
+                  <img src="/assets/images/units/cybran/land/T1Scout.png" class="UnitIcon" alt="Mole"/>
+                  <div class="UnitDetails">
+                      <div class="UnitNameRow">
+                          <h3 class="UnitName">Mole</h3>
+                          <span class="UnitCode">URL0101</span>
+                      </div>
+                      <span class="FactionBadge cybran">CYBRAN</span>
+                  </div>
+              </div>
+              <div class="ChangeTypeBadge buff">Buff</div>
+          </header>
+          <!-- Card Content Section -->
+          <div class="CardContent">
+            <p class="ChangeDescription">Make scouts slightly more appealing to create early game and help the scouts to not aggro on enemy units and civilians from far away when they are given an attack move or an assist order.</p>
+            <div class="ChangesList">
+              <div class="ChangeGroup">
+                <h4 class="ChangeGroupTitle">Economy</h4>
+                <ul class="Changes">
+                  <li class="buff">
+                    <span class="ChangeLabel">Energy Cost:</span>
+                    <span class="ChangeValue">
+                      <s class="OldValue">80</s> 
+                      <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                      <strong class="NewValue">60</strong>
+                    </span>
+                  </li>
+                  <li class="buff">
+                    <span class="ChangeLabel">Energy Maintenance Cost:</span>
+                    <span class="ChangeValue">
+                      <s class="OldValue">5</s> 
+                      <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                      <strong class="NewValue">1</strong>
+                    </span>
+                  </li>
+                  <li class="buff">
+                    <span class="ChangeLabel">Build Time:</span>
+                    <span class="ChangeValue">
+                      <s class="OldValue">80</s> 
+                      <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                      <strong class="NewValue">60</strong>
+                    </span>
+                  </li>
                 </ul>
               </div>
+              <div class="ChangeGroup">
+                <h4 class="ChangeGroupTitle">Other</h4>
+                <ul class="Changes">
+                  <li class="buff">
+                    <span class="ChangeLabel">Aggro Range:</span>
+                    <span class="ChangeValue">
+                      <strong class="NewValue">Reduce the aggro range while on assist/attack move</strong>
+                    </span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </article>
                    
-              <div id="spirit">
-                <img src="/assets/images/units/aeon/land/T1Scout.png"><b>Aeon Scout (Spirit)</b>
-                <ul>
-                  <li>BuildCostEnergy: <s>40</s> <i class="fa-solid fa-arrow-right"></i> 60</li>
-                  <li>Reduce the aggro range while on assist/attack move</li>
-                  <li>BuildTime: <s>80</s> <i class="fa-solid fa-arrow-right"></i> 60</li>
+        <article id="spirit" class="PatchCard">
+          <!-- Card Header Section -->
+          <header class="PatchCardHeader">
+              <div class="UnitInfo">
+                  <img src="/assets/images/units/aeon/land/T1Scout.png" class="UnitIcon" alt="Spirit"/>
+                  <div class="UnitDetails">
+                      <div class="UnitNameRow">
+                          <h3 class="UnitName">Spirit</h3>
+                          <span class="UnitCode">UAL0101</span>
+                      </div>
+                      <span class="FactionBadge aeon">AEON</span>
+                  </div>
+              </div>
+              <div class="ChangeTypeBadge mixed">Mixed</div>
+          </header>
+          <!-- Card Content Section -->
+          <div class="CardContent">
+            <p class="ChangeDescription">Make scouts slightly more appealing to create early game and help the scouts to not aggro on enemy units and civilians from far away when they are given an attack move or an assist order.</p>
+            <div class="ChangesList">
+              <div class="ChangeGroup">
+                <h4 class="ChangeGroupTitle">Economy</h4>
+                <ul class="Changes">
+                  <li class="nerf">
+                    <span class="ChangeLabel">Energy Cost:</span>
+                    <span class="ChangeValue">
+                      <s class="OldValue">40</s> 
+                      <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                      <strong class="NewValue">60</strong>
+                    </span>
+                  </li>
+                  <li class="buff">
+                    <span class="ChangeLabel">Build Time:</span>
+                    <span class="ChangeValue">
+                      <s class="OldValue">80</s> 
+                      <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                      <strong class="NewValue">60</strong>
+                    </span>
+                  </li>
                 </ul>
               </div>
-
-              <div id="selen">
-                <img src="/assets/images/units/sera/land/T1Scout.png"><b>Seraphim Scout (Selen)</b>
-                <ul>
-                  <li>Reduce the aggro range while on assist/attack move</li>
-                  <li>BuildTime: <s>80</s> <i class="fa-solid fa-arrow-right"></i> 60</li>
-                  <li>Energy Maintenance Cost: <s>0</s> <i class="fa-solid fa-arrow-right"></i> 1</li>
-                  <li>StealthWaitTime: <s>1</s> <i class="fa-solid fa-arrow-right"></i> 3</li>
-                  <li>Vision and radar range are now multiplied by 0.6 when entering cloak mode</li>
+              <div class="ChangeGroup">
+                <h4 class="ChangeGroupTitle">Other</h4>
+                <ul class="Changes">
+                  <li class="buff">
+                    <span class="ChangeLabel">Aggro Range:</span>
+                    <span class="ChangeValue">
+                      <strong class="NewValue">Reduce the aggro range while on assist/attack move</strong>
+                    </span>
+                  </li>
                 </ul>
-                <p>Drastically reduce the abusiveness of cloaked selen both in the early game with the reduced radar as well as in the mid game with energy maintenance cost.</p>
               </div>
-          </div>
-
-          <div id="labs" class="Card">
-            <h3><img src="/assets/images/units/aeon/land/T1LightAssultBot.png"> LABs</h3>
-            
-            <p>Allow for more reliable hitting of unmicroed labs moving at an angle.</p>
-
-            <ul>
-              <li>Slightly increase the hitbox</li>
-            </ul>
-          </div>
-
-          <div id="beetle" class="Card">
-            <h3><img src="/assets/images/units/cybran/land/T2MobileBomb.png"> Fire beetles</h3>
-
-            <p>Slightly increase maneuverability to compensate for pathfinding, slightly increase the explosion radius and buff hp to 400 for slightly more survivability, notably allowing it to survive an obsidian shot. Make the beetle come close before detonating if it is manually ordered to attack a unit, before it would detonate at max range and miss a lot of potential damage, now it either detonates up close or gets killed before that and detonates closer than before anyway. Added an extra range ring to indicate the detonation trigger radius.</p>
-
-            <ul>
-              <li>HP: <s>350</s> <i class="fa-solid fa-arrow-right"></i> 400</li>
-              <li>ExplosionRadius: <s>6</s> <i class="fa-solid fa-arrow-right"></i> 6.5</li>
-              <li>MaxAcceleration: <s>5</s> <i class="fa-solid fa-arrow-right"></i> 7</li>
-              <li>TurnRate: <s>160</s> <i class="fa-solid fa-arrow-right"></i> 200</li>
-              <li>Reduce detonation trigger distance when manually attacking a unit</li>
-            </ul>
-          </div>
-
-          <div id="rhino" class="Card">
-            <h3><img src="/assets/images/units/cybran/land/T2Tank.png"> Rhino</h3>
-            
-            <ul>
-              <li>Revert the weapon from a beam-type to a projectile-type to prevent misses when leading targets</li>
-            </ul>
-          </div>
-
-        </div>
-
-        <h2>Air</h2>
-
-        <div id="air">
-
-          <div id="t1trans" class="Card">
-            <h3><img src="/assets/images/units/aeon/air/T1Transport.png"> T1 Transports</h3>
-            
-            <ul>
-                <li>Add dummy weapons to T1 transports which allows LABs inside the transport to focus fire targets</li>
-            </ul>
-          </div>
-
-          <div id="scorcher" class="Card">
-            <h3><img src="/assets/images/units/uef/air/T1Bommber.png"> Scorcher</h3>
-
-            <p>Scorcher’s drop pattern allows it to sometimes kill engies even if enemy manages to partially dodge. These changes convert some of the bomb’s initial damage to damage over time as well as make the drop pattern tighter resulting in a smaller spread of the bombs thus not allowing the last two of them to home in on an engie that had already started to dodge.</p>
-
-            <ul>
-                <li>Damage: <s>4</s> <i class="fa-solid fa-arrow-right"></i> 4.5</li>
-                <li>InitialDamage: <s>47.5</s> <i class="fa-solid fa-arrow-right"></i> 42.5</li>
-                <li>MuzzleSalvoDelay: <s>0.3</s> <i class="fa-solid fa-arrow-right"></i> 0.2</li>
-            </ul>
-          </div>
-
-          <div id="notha" class="Card">
-            <h3><img src="/assets/images/units/sera/air/T2FighterBomber.png"> Notha</h3>
-
-            <p>Make shooting nothas down easier as they could be extremely difficult to deal with if you lose air control.</p>
-
-            <ul>
-              <li>HP: <s>1175</s> <i class="fa-solid fa-arrow-right"></i> 1000</li>
-            </ul>
-          </div>
-
-          <div id="soulripper" class="Card">
-            <h3><img src="/assets/images/units/cybran/air/T4Gunship.png"> Soul Ripper</h3>
-            
-            <p>After the numerous veterancy changes as well as experimental BT changes soul ripper has lost most of its strength, this will allow it to rotate around the map easier and be more effective at harassing and sniping.</p>
-
-            <ul>
-              <li>Add Stealth at -600 energy maintenance cost</li>
-            </ul>
-          </div>
-
-          <div id="strats" class="Card">
-            <h3>Strategic Bombers</h3>
-
-            <p>Reduce the snowball effect from early strat bomber rushes killing mass extractors continuously and regaining any hp lost, making it very difficult to kill them if you don't have air control.</p>
-
-            <div id="cstrat">
-              <b><img src="/assets/images/units/cybran/air/T3Strat.png"> Revenant</b>
-              <ul>
-                <li>DamageRadius: <s>7</s> <i class="fa-solid fa-arrow-right"></i> 6.5</li>
-                <li>EnergyMaintenanceCost: <s>65</s> <i class="fa-solid fa-arrow-right"></i> 150</li>
-                <li>Double the amount of mass killed required to vet</li>
-              </ul>
             </div>
-
-            <div id="astrat">
-              <b><img src="/assets/images/units/aeon/air/T3Strat.png"> Shocker</b>
-              <ul>
-                <li>Damage: <s>3450</s> <i class="fa-solid fa-arrow-right"></i> 3000</li>
-                <li>DamageRadius: <s>4</s> <i class="fa-solid fa-arrow-right"></i> 5.25</li>
-                <li>Added a 3s stun of units up to and including T3</li>
-                <li>Double the amount of mass killed required to vet</li>
-              </ul>
-            </div>
-
-            <div id="sstrat">
-              <b><img src="/assets/images/units/sera/air/T3Strat.png"> Sinntha</b>
-              <ul>
-                <li>Damage: <s>3250</s> <i class="fa-solid fa-arrow-right"></i> 3000</li>
-                <li>DamageRadius: <s>5</s> <i class="fa-solid fa-arrow-right"></i> 6</li>
-                <li>Double the amount of mass killed required to vet</li>
-              </ul>
-            </div>
-
-            <div id="ustrat">
-              <b><img src="/assets/images/units/uef/air/T3Strat.png"> Ambassador</b>
-              <ul>
-                <li>Damage: <s>3000</s> <i class="fa-solid fa-arrow-right"></i> 3100</li>
-                <li>DamageRadius: <s>6</s> <i class="fa-solid fa-arrow-right"></i> 5.5</li>
-                <li>Double the amount of mass killed required to vet</li>
-              </ul>
-            </div>
-
           </div>
+        </article>
 
-          <div id="aeonbomber" class="Card">
-            <h3><img src="/assets/images/units/aeon/air/T1Bomber.png"> Shimmer</h3>
-            <ul>
-              <li>Better match the EMP radius to the damage radius</li>
-            </ul>
+        <article id="selen" class="PatchCard">
+          <!-- Card Header Section -->
+          <header class="PatchCardHeader">
+              <div class="UnitInfo">
+                  <img src="/assets/images/units/sera/land/T1Scout.png" class="UnitIcon" alt="Selen"/>
+                  <div class="UnitDetails">
+                      <div class="UnitNameRow">
+                          <h3 class="UnitName">Selen</h3>
+                          <span class="UnitCode">XSL0101</span>
+                      </div>
+                      <span class="FactionBadge sera">SERAPHIM</span>
+                  </div>
+              </div>
+              <div class="ChangeTypeBadge nerf">Nerf</div>
+          </header>
+          <!-- Card Content Section -->
+          <div class="CardContent">
+            <p class="ChangeDescription">Drastically reduce the abusiveness of cloaked selen both in the early game with the reduced radar as well as in the mid game with energy maintenance cost. Also helps the scouts to not aggro on enemy units and civilians from far away when they are given an attack move or an assist order.</p>
+            <div class="ChangesList">
+              <div class="ChangeGroup">
+                <h4 class="ChangeGroupTitle">Economy</h4>
+                <ul class="Changes">
+                  <li class="buff">
+                    <span class="ChangeLabel">Build Time:</span>
+                    <span class="ChangeValue">
+                      <s class="OldValue">80</s> 
+                      <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                      <strong class="NewValue">60</strong>
+                    </span>
+                  </li>
+                  <li class="nerf">
+                    <span class="ChangeLabel">Energy Maintenance Cost:</span>
+                    <span class="ChangeValue">
+                      <s class="OldValue">0</s> 
+                      <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                      <strong class="NewValue">1</strong>
+                    </span>
+                  </li>
+                </ul>
+              </div>
+              <div class="ChangeGroup">
+                <h4 class="ChangeGroupTitle">Vision</h4>
+                <ul class="Changes">
+                  <li class="nerf">
+                    <span class="ChangeLabel">Cloak Vision/Radar:</span>
+                    <span class="ChangeValue">
+                      <strong class="NewValue">Vision and radar range are now multiplied by 0.6 when entering cloak mode</strong>
+                    </span>
+                  </li>
+                </ul>
+              </div>
+              <div class="ChangeGroup">
+                <h4 class="ChangeGroupTitle">Other</h4>
+                <ul class="Changes">
+                  <li class="nerf">
+                    <span class="ChangeLabel">Stealth Wait Time:</span>
+                    <span class="ChangeValue">
+                      <s class="OldValue">1</s> 
+                      <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                      <strong class="NewValue">3</strong>
+                    </span>
+                  </li>
+                  <li class="buff">
+                    <span class="ChangeLabel">Aggro Range:</span>
+                    <span class="ChangeValue">
+                      <strong class="NewValue">Reduce the aggro range while on assist/attack move</strong>
+                    </span>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
+        </article>
 
-          <div id="jester" class="Card">
-            <h3><img src="/assets/images/units/cybran/air/T1Gunship.png"> Jester</h3>
-            
-            <p>Now jester should be able to hit all or at least most targets consistently.</p>
-            
-            <ul>
-              <li>Fix the bug where it would not do damage to moving units</li>
-              <li>Replace splash damage with soft projectile homing</li>
-            </ul>
-            
+        <article id="beetle" class="PatchCard">
+          <!-- Card Header Section -->
+          <header class="PatchCardHeader">
+              <div class="UnitInfo">
+                  <img src="/assets/images/units/cybran/land/T2MobileBomb.png" class="UnitIcon" alt="Fire Beetle"/>
+                  <div class="UnitDetails">
+                      <div class="UnitNameRow">
+                          <h3 class="UnitName">Fire Beetle</h3>
+                          <span class="UnitCode">XRL0302</span>
+                      </div>
+                      <span class="FactionBadge cybran">CYBRAN</span>
+                  </div>
+              </div>
+              <div class="ChangeTypeBadge buff">Buff</div>
+          </header>
+          <!-- Card Content Section -->
+          <div class="CardContent">
+            <p class="ChangeDescription">Slightly increase maneuverability to compensate for pathfinding, slightly increase the explosion radius and buff hp to 400 for slightly more survivability, notably allowing it to survive an obsidian shot. Make the beetle come close before detonating if it is manually ordered to attack a unit, before it would detonate at max range and miss a lot of potential damage, now it either detonates up close or gets killed before that and detonates closer than before anyway. Added an extra range ring to indicate the detonation trigger radius.</p>
+            <div class="ChangesList">
+              <div class="ChangeGroup">
+                <h4 class="ChangeGroupTitle">Durability</h4>
+                <ul class="Changes">
+                  <li class="buff">
+                    <span class="ChangeLabel">Health:</span>
+                    <span class="ChangeValue">
+                      <s class="OldValue">350</s> 
+                      <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                      <strong class="NewValue">400</strong>
+                    </span>
+                  </li>
+                </ul>
+              </div>
+              <div class="ChangeGroup">
+                <h4 class="ChangeGroupTitle">Weapon</h4>
+                <ul class="Changes">
+                  <li class="buff">
+                    <span class="ChangeLabel">Explosion Radius:</span>
+                    <span class="ChangeValue">
+                      <s class="OldValue">6</s> 
+                      <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                      <strong class="NewValue">6.5</strong>
+                    </span>
+                  </li>
+                </ul>
+              </div>
+              <div class="ChangeGroup">
+                <h4 class="ChangeGroupTitle">Mobility</h4>
+                <ul class="Changes">
+                  <li class="buff">
+                    <span class="ChangeLabel">Max Acceleration:</span>
+                    <span class="ChangeValue">
+                      <s class="OldValue">5</s> 
+                      <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                      <strong class="NewValue">7</strong>
+                    </span>
+                  </li>
+                  <li class="buff">
+                    <span class="ChangeLabel">Turn Rate:</span>
+                    <span class="ChangeValue">
+                      <s class="OldValue">160</s> 
+                      <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                      <strong class="NewValue">200</strong>
+                    </span>
+                  </li>
+                </ul>
+              </div>
+              <div class="ChangeGroup">
+                <h4 class="ChangeGroupTitle">Other</h4>
+                <ul class="Changes">
+                  <li class="buff">
+                <div class="Sidebar" role="navigation" aria-label="Quick Navigation">
+                  <div class="ContentSidemenu">
+                    <!-- Quick Navigation Header -->
+                    <header class="SidemenuHeader">
+                      <h2 class="SidemenuTitle">
+                        <i class="fas fa-list-ul" aria-hidden="true"></i>
+                        Quick Navigation
+                      </h2>
+                    </header>
+
+                    <!-- Quick Actions Panel -->
+                    <div class="QuickActions">
+                      <button class="QuickActionBtn" onclick="scrollToTop()" title="Back to Top">
+                        <i class="fas fa-arrow-up"></i>
+                        <span>Top</span>
+                      </button>
+                      <button class="QuickActionBtn" onclick="toggleAllSections()" title="Expand/Collapse All">
+                        <i class="fas fa-expand-arrows-alt"></i>
+                        <span>Toggle</span>
+                      </button>
+                      <button class="QuickActionBtn" onclick="printPage()" title="Print Page">
+                        <i class="fas fa-print"></i>
+                        <span>Print</span>
+                      </button>
+                    </div>
+
+                    <nav class="ContentNav">
+                      <!-- Land Units -->
+                      <div class="NavSection">
+                        <button class="SectionToggle" aria-expanded="false" data-target="land-items">
+                          <i class="fas fa-tank SectionIcon"></i>
+                          <span class="SectionTitle">Land</span>
+                          <span class="ItemCount">8</span>
+                          <i class="fas fa-chevron-down ToggleIcon"></i>
+                        </button>
+                        <ul class="SectionItems" id="land-items">
+                          <li class="NavItem"><a href="#zuee" class="NavLink"><span class="UnitName">Zthuee</span></a></li>
+                          <li class="NavItem"><a href="#titan" class="NavLink"><span class="UnitName">Titan</span></a></li>
+                          <li class="NavItem"><a href="#loyalist" class="NavLink"><span class="UnitName">Loyalist</span></a></li>
+                          <li class="NavItem"><a href="#snoop" class="NavLink"><span class="UnitName">Snoop</span></a></li>
+                          <li class="NavItem"><a href="#mole" class="NavLink"><span class="UnitName">Mole</span></a></li>
+                          <li class="NavItem"><a href="#spirit" class="NavLink"><span class="UnitName">Spirit</span></a></li>
+                          <li class="NavItem"><a href="#selen" class="NavLink"><span class="UnitName">Selen</span></a></li>
+                          <li class="NavItem"><a href="#beetle" class="NavLink"><span class="UnitName">Fire Beetle</span></a></li>
+                        </ul>
+                      </div>
+
+                      <!-- Air Units -->
+                      <div class="NavSection">
+                        <button class="SectionToggle" aria-expanded="false" data-target="air-items">
+                          <i class="fas fa-plane SectionIcon"></i>
+                          <span class="SectionTitle">Air</span>
+                          <span class="ItemCount">7</span>
+                          <i class="fas fa-chevron-down ToggleIcon"></i>
+                        </button>
+                        <ul class="SectionItems" id="air-items">
+                          <li class="NavItem"><a href="#scorcher" class="NavLink"><span class="UnitName">Scorcher</span></a></li>
+                          <li class="NavItem"><a href="#notha" class="NavLink"><span class="UnitName">Notha</span></a></li>
+                          <li class="NavItem"><a href="#soulripper" class="NavLink"><span class="UnitName">Soul Ripper</span></a></li>
+                          <li class="NavItem"><a href="#revenant" class="NavLink"><span class="UnitName">Revenant</span></a></li>
+                          <li class="NavItem"><a href="#shocker" class="NavLink"><span class="UnitName">Shocker</span></a></li>
+                          <li class="NavItem"><a href="#sinntha" class="NavLink"><span class="UnitName">Sinntha</span></a></li>
+                          <li class="NavItem"><a href="#ambassador" class="NavLink"><span class="UnitName">Ambassador</span></a></li>
+                        </ul>
+                      </div>
+
+                      <!-- Naval Units -->
+                      <div class="NavSection">
+                        <button class="SectionToggle" aria-expanded="false" data-target="navy-items">
+                          <i class="fas fa-ship SectionIcon"></i>
+                          <span class="SectionTitle">Navy</span>
+                          <span class="ItemCount">5</span>
+                          <i class="fas fa-chevron-down ToggleIcon"></i>
+                        </button>
+                        <ul class="SectionItems" id="navy-items">
+                          <li class="NavItem"><a href="#valiant" class="NavLink"><span class="UnitName">Valiant</span></a></li>
+                          <li class="NavItem"><a href="#salem" class="NavLink"><span class="UnitName">Salem</span></a></li>
+                          <li class="NavItem"><a href="#exodus" class="NavLink"><span class="UnitName">Exodus</span></a></li>
+                          <li class="NavItem"><a href="#uashavoh" class="NavLink"><span class="UnitName">Uashavoh</span></a></li>
+                          <li class="NavItem"><a href="#atlantis" class="NavLink"><span class="UnitName">Atlantis</span></a></li>
+                        </ul>
+                      </div>
+
+                      <!-- ACUs -->
+                      <div class="NavSection">
+                        <button class="SectionToggle" aria-expanded="false" data-target="acu-items">
+                          <i class="fas fa-user-astronaut SectionIcon"></i>
+                          <span class="SectionTitle">ACUs</span>
+                          <span class="ItemCount">2</span>
+                          <i class="fas fa-chevron-down ToggleIcon"></i>
+                        </button>
+                        <ul class="SectionItems" id="acu-items">
+                          <li class="NavItem"><a href="#cybstealth" class="NavLink"><span class="UnitName">Cybran Stealth</span></a></li>
+                          <li class="NavItem"><a href="#seraregen" class="NavLink"><span class="UnitName">Seraphim Regen</span></a></li>
+                        </ul>
+                      </div>
+                    </nav>
+
+                    <!-- Footer Info -->
+                    <div class="SidemenuFooter">
+                      <div class="PatchStats">
+                        <div class="StatItem"><i class="fas fa-calendar-alt"></i><span>May 19th, 2021</span></div>
+                        <div class="StatItem"><i class="fas fa-balance-scale"></i><span>22 Changes</span></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                  </div>
+              </div>
+              <div class="ChangeTypeBadge buff">Buff</div>
+          </header>
+          <!-- Card Content Section -->
+          <div class="CardContent">
+            <p class="ChangeDescription">After the numerous veterancy changes as well as experimental BT changes soul ripper has lost most of its strength, this will allow it to rotate around the map easier and be more effective at harassing and sniping.</p>
+            <div class="ChangesList">
+              <div class="ChangeGroup">
+                <h4 class="ChangeGroupTitle">Intel</h4>
+                <ul class="Changes">
+                  <li class="buff">
+                    <span class="ChangeLabel">Stealth:</span>
+                    <span class="ChangeValue">
+                      <strong class="NewValue">Add Stealth at -600 energy maintenance cost</strong>
+                    </span>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
+        </article>
 
-        </div>
+        <article id="revenant" class="PatchCard">
+          <!-- Card Header Section -->
+          <header class="PatchCardHeader">
+              <div class="UnitInfo">
+                  <img src="/assets/images/units/cybran/air/T3Strat.png" class="UnitIcon" alt="Revenant"/>
+                  <div class="UnitDetails">
+                      <div class="UnitNameRow">
+                          <h3 class="UnitName">Revenant</h3>
+                          <span class="UnitCode">URA0304</span>
+                      </div>
+                      <span class="FactionBadge cybran">CYBRAN</span>
+                  </div>
+              </div>
+              <div class="ChangeTypeBadge nerf">Nerf</div>
+          </header>
+          <!-- Card Content Section -->
+          <div class="CardContent">
+            <p class="ChangeDescription">Reduce the snowball effect from early strat bomber rushes killing mass extractors continuously and regaining any hp lost, making it very difficult to kill them if you don't have air control.</p>
+            <div class="ChangesList">
+              <div class="ChangeGroup">
+                <h4 class="ChangeGroupTitle">Economy</h4>
+                <ul class="Changes">
+                  <li class="nerf">
+                    <span class="ChangeLabel">Energy Maintenance Cost:</span>
+                    <span class="ChangeValue">
+                      <s class="OldValue">65</s> 
+                      <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                      <strong class="NewValue">150</strong>
+                    </span>
+                  </li>
+                </ul>
+              </div>
+              <div class="ChangeGroup">
+                <h4 class="ChangeGroupTitle">Weapon</h4>
+                <ul class="Changes">
+                  <li class="nerf">
+                    <span class="ChangeLabel">Damage Radius:</span>
+                    <span class="ChangeValue">
+                      <s class="OldValue">7</s> 
+                      <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                      <strong class="NewValue">6.5</strong>
+                    </span>
+                  </li>
+                </ul>
+              </div>
+              <div class="ChangeGroup">
+                <h4 class="ChangeGroupTitle">Other</h4>
+                <ul class="Changes">
+                  <li class="nerf">
+                    <span class="ChangeLabel">Veterancy:</span>
+                    <span class="ChangeValue">
+                      <strong class="NewValue">Double the amount of mass killed required to vet</strong>
+                    </span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </article>
 
+        <article id="shocker" class="PatchCard">
+          <!-- Card Header Section -->
+          <header class="PatchCardHeader">
+              <div class="UnitInfo">
+                  <img src="/assets/images/units/aeon/air/T3Strat.png" class="UnitIcon" alt="Shocker"/>
+                  <div class="UnitDetails">
+                      <div class="UnitNameRow">
+                          <h3 class="UnitName">Shocker</h3>
+                          <span class="UnitCode">UAA0304</span>
+                      </div>
+                      <span class="FactionBadge aeon">AEON</span>
+                  </div>
+              </div>
+              <div class="ChangeTypeBadge mixed">Mixed</div>
+          </header>
+          <!-- Card Content Section -->
+          <div class="CardContent">
+            <p class="ChangeDescription">Reduce the snowball effect from early strat bomber rushes killing mass extractors continuously and regaining any hp lost, making it very difficult to kill them if you don't have air control. Adds stun effect to compensate for damage reduction.</p>
+            <div class="ChangesList">
+              <div class="ChangeGroup">
+                <h4 class="ChangeGroupTitle">Weapon</h4>
+                <ul class="Changes">
+                  <li class="nerf">
+                    <span class="ChangeLabel">Damage:</span>
+                    <span class="ChangeValue">
+                      <s class="OldValue">3,450</s> 
+                      <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                      <strong class="NewValue">3,000</strong>
+                    </span>
+                  </li>
+                  <li class="buff">
+                    <span class="ChangeLabel">Damage Radius:</span>
+                    <span class="ChangeValue">
+                      <s class="OldValue">4</s> 
+                      <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                      <strong class="NewValue">5.25</strong>
+                    </span>
+                  </li>
+                  <li class="buff">
+                    <span class="ChangeLabel">Stun Effect:</span>
+                    <span class="ChangeValue">
+                      <strong class="NewValue">Added a 3s stun of units up to and including T3</strong>
+                    </span>
+                  </li>
+                </ul>
+              </div>
+              <div class="ChangeGroup">
+                <h4 class="ChangeGroupTitle">Other</h4>
+                <ul class="Changes">
+                  <li class="nerf">
+                    <span class="ChangeLabel">Veterancy:</span>
+                    <span class="ChangeValue">
+                      <strong class="NewValue">Double the amount of mass killed required to vet</strong>
+                    </span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article id="sinntha" class="PatchCard">
+          <!-- Card Header Section -->
+          <header class="PatchCardHeader">
+              <div class="UnitInfo">
+                  <img src="/assets/images/units/sera/air/T3Strat.png" class="UnitIcon" alt="Sinntha"/>
+                  <div class="UnitDetails">
+                      <div class="UnitNameRow">
+                          <h3 class="UnitName">Sinntha</h3>
+                          <span class="UnitCode">XSA0304</span>
+                      </div>
+                      <span class="FactionBadge sera">SERAPHIM</span>
+                  </div>
+              </div>
+              <div class="ChangeTypeBadge mixed">Mixed</div>
+          </header>
+          <!-- Card Content Section -->
+          <div class="CardContent">
+            <p class="ChangeDescription">Reduce the snowball effect from early strat bomber rushes killing mass extractors continuously and regaining any hp lost, making it very difficult to kill them if you don't have air control.</p>
+            <div class="ChangesList">
+              <div class="ChangeGroup">
+                <h4 class="ChangeGroupTitle">Weapon</h4>
+                <ul class="Changes">
+                  <li class="nerf">
+                    <span class="ChangeLabel">Damage:</span>
+                    <span class="ChangeValue">
+                      <s class="OldValue">3,250</s> 
+                      <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                      <strong class="NewValue">3,000</strong>
+                    </span>
+                  </li>
+                  <li class="buff">
+                    <span class="ChangeLabel">Damage Radius:</span>
+                    <span class="ChangeValue">
+                      <s class="OldValue">5</s> 
+                      <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                      <strong class="NewValue">6</strong>
+                    </span>
+                  </li>
+                </ul>
+              </div>
+              <div class="ChangeGroup">
+                <h4 class="ChangeGroupTitle">Other</h4>
+                <ul class="Changes">
+                  <li class="nerf">
+                    <span class="ChangeLabel">Veterancy:</span>
+                    <span class="ChangeValue">
+                      <strong class="NewValue">Double the amount of mass killed required to vet</strong>
+                    </span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article id="ambassador" class="PatchCard">
+          <!-- Card Header Section -->
+          <header class="PatchCardHeader">
+              <div class="UnitInfo">
+                  <img src="/assets/images/units/uef/air/T3Strat.png" class="UnitIcon" alt="Ambassador"/>
+                  <div class="UnitDetails">
+                      <div class="UnitNameRow">
+                          <h3 class="UnitName">Ambassador</h3>
+                          <span class="UnitCode">UEA0304</span>
+                      </div>
+                      <span class="FactionBadge uef">UEF</span>
+                  </div>
+              </div>
+              <div class="ChangeTypeBadge mixed">Mixed</div>
+          </header>
+          <!-- Card Content Section -->
+          <div class="CardContent">
+            <p class="ChangeDescription">Reduce the snowball effect from early strat bomber rushes killing mass extractors continuously and regaining any hp lost, making it very difficult to kill them if you don't have air control.</p>
+            <div class="ChangesList">
+              <div class="ChangeGroup">
+                <h4 class="ChangeGroupTitle">Weapon</h4>
+                <ul class="Changes">
+                  <li class="buff">
+                    <span class="ChangeLabel">Damage:</span>
+                    <span class="ChangeValue">
+                      <s class="OldValue">3,000</s> 
+                      <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                      <strong class="NewValue">3,100</strong>
+                    </span>
+                  </li>
+                  <li class="nerf">
+                    <span class="ChangeLabel">Damage Radius:</span>
+                    <span class="ChangeValue">
+                      <s class="OldValue">6</s> 
+                      <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                      <strong class="NewValue">5.5</strong>
+                    </span>
+                  </li>
+                </ul>
+              </div>
+              <div class="ChangeGroup">
+                <h4 class="ChangeGroupTitle">Other</h4>
+                <ul class="Changes">
+                  <li class="nerf">
+                    <span class="ChangeLabel">Veterancy:</span>
+                    <span class="ChangeValue">
+                      <strong class="NewValue">Double the amount of mass killed required to vet</strong>
+                    </span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </article>
+           
+      </section>
+      
+      <section id="naval">
         <h2>Navy</h2>
-
-        <div id="navy">
-
-          <div id="destroyers" class="Card">
-            <h3>Tech 2 Destroyer</h3>
-
-            <div id="udestro">
-              <b><img src="/assets/images/units/uef/naval/T2Destroyer.png">UEF</b>
-              <p>Improve handling and micro potential, slightly improve effectiveness vs submarines.</p>
-              <ul>
-                <li>TurretYawRange: <s>140</s> <i class="fa-solid fa-arrow-right"></i> 160</li>
-                <li>TurretYawSpeed: <s>90</s> <i class="fa-solid fa-arrow-right"></i> 100</li>
-                <li>Torpedo firing cycle adjusted to combat torpedo defense better</li>
-              </ul>
+        
+        <article id="valiant" class="PatchCard">
+          <!-- Card Header Section -->
+          <header class="PatchCardHeader">
+              <div class="UnitInfo">
+                  <img src="/assets/images/units/uef/naval/T2Destroyer.png" class="UnitIcon" alt="Valiant"/>
+                  <div class="UnitDetails">
+                      <div class="UnitNameRow">
+                          <h3 class="UnitName">Valiant</h3>
+                          <span class="UnitCode">UES0201</span>
+                      </div>
+                      <span class="FactionBadge uef">UEF</span>
+                  </div>
+              </div>
+              <div class="ChangeTypeBadge buff">Buff</div>
+          </header>
+          <!-- Card Content Section -->
+          <div class="CardContent">
+            <p class="ChangeDescription">Improve handling and micro potential, slightly improve effectiveness vs submarines.</p>
+            <div class="ChangesList">
+              <div class="ChangeGroup">
+                <h4 class="ChangeGroupTitle">Weapon</h4>
+                <ul class="Changes">
+                  <li class="buff">
+                    <span class="ChangeLabel">Turret Yaw Range:</span>
+                    <span class="ChangeValue">
+                      <s class="OldValue">140</s> 
+                      <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                      <strong class="NewValue">160</strong>
+                    </span>
+                  </li>
+                  <li class="buff">
+                    <span class="ChangeLabel">Turret Yaw Speed:</span>
+                    <span class="ChangeValue">
+                      <s class="OldValue">90</s> 
+                      <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                      <strong class="NewValue">100</strong>
+                    </span>
+                  </li>
+                  <li class="buff">
+                    <span class="ChangeLabel">Torpedo Firing Cycle:</span>
+                    <span class="ChangeValue">
+                      <strong class="NewValue">Adjusted to combat torpedo defense better</strong>
+                    </span>
+                  </li>
+                </ul>
+              </div>
             </div>
+          </div>
+        </article>
 
-            <div id="cdestro">
-              <b><img src="/assets/images/units/cybran/naval/T2Destoryer.png">Cybran</b>
-              <p>Make it slightly less punishing to have to retreat your navy.</p>
-              <ul>
-                <li>TurretYawRange: <s>135</s> <i class="fa-solid fa-arrow-right"></i> 140</li>
-              </ul>
+        <article id="salem" class="PatchCard">
+          <!-- Card Header Section -->
+          <header class="PatchCardHeader">
+              <div class="UnitInfo">
+                  <img src="/assets/images/units/cybran/naval/T2Destoryer.png" class="UnitIcon" alt="Salem Class"/>
+                  <div class="UnitDetails">
+                      <div class="UnitNameRow">
+                          <h3 class="UnitName">Salem Class</h3>
+                          <span class="UnitCode">URS0201</span>
+                      </div>
+                      <span class="FactionBadge cybran">CYBRAN</span>
+                  </div>
+              </div>
+              <div class="ChangeTypeBadge buff">Buff</div>
+          </header>
+          <!-- Card Content Section -->
+          <div class="CardContent">
+            <p class="ChangeDescription">Make it slightly less punishing to have to retreat your navy.</p>
+            <div class="ChangesList">
+              <div class="ChangeGroup">
+                <h4 class="ChangeGroupTitle">Weapon</h4>
+                <ul class="Changes">
+                  <li class="buff">
+                    <span class="ChangeLabel">Turret Yaw Range:</span>
+                    <span class="ChangeValue">
+                      <s class="OldValue">135</s> 
+                      <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                      <strong class="NewValue">140</strong>
+                    </span>
+                  </li>
+                </ul>
+              </div>
             </div>
+          </div>
+        </article>
 
-            <div id="adestro">
-              <b><img src="/assets/images/units/aeon/naval/T2Destroyer.png">Aeon</b>
-              <p>Slightly reduce the micro potential to soften the snowball effect that can occur with aeon destroyers.</p>
-              <ul>
-                <li>TurretYawRange: <s>160</s> <i class="fa-solid fa-arrow-right"></i> 150</li>
-                <li>TurretYawSpeed: <s>100</s> <i class="fa-solid fa-arrow-right"></i> 90</li>
-              </ul>             
+        <article id="exodus" class="PatchCard">
+          <!-- Card Header Section -->
+          <header class="PatchCardHeader">
+              <div class="UnitInfo">
+                  <img src="/assets/images/units/aeon/naval/T2Destroyer.png" class="UnitIcon" alt="Exodus"/>
+                  <div class="UnitDetails">
+                      <div class="UnitNameRow">
+                          <h3 class="UnitName">Exodus</h3>
+                          <span class="UnitCode">UAS0201</span>
+                      </div>
+                      <span class="FactionBadge aeon">AEON</span>
+                  </div>
+              </div>
+              <div class="ChangeTypeBadge nerf">Nerf</div>
+          </header>
+          <!-- Card Content Section -->
+          <div class="CardContent">
+            <p class="ChangeDescription">Slightly reduce the micro potential to soften the snowball effect that can occur with aeon destroyers.</p>
+            <div class="ChangesList">
+              <div class="ChangeGroup">
+                <h4 class="ChangeGroupTitle">Weapon</h4>
+                <ul class="Changes">
+                  <li class="nerf">
+                    <span class="ChangeLabel">Turret Yaw Range:</span>
+                    <span class="ChangeValue">
+                      <s class="OldValue">160</s> 
+                      <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                      <strong class="NewValue">150</strong>
+                    </span>
+                  </li>
+                  <li class="nerf">
+                    <span class="ChangeLabel">Turret Yaw Speed:</span>
+                    <span class="ChangeValue">
+                      <s class="OldValue">100</s> 
+                      <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                      <strong class="NewValue">90</strong>
+                    </span>
+                  </li>
+                </ul>
+              </div>
             </div>
+          </div>
+        </article>
 
-            <div id="sdestro">
-              <b><img src="/assets/images/units/sera/naval/T2Destroyer.png">Seraphim</b>
-              <ul>
-                <li>Torpedo firing cycle adjusted to combat torpedo defense better</li>
-              </ul>
+        <article id="uashavoh" class="PatchCard">
+          <!-- Card Header Section -->
+          <header class="PatchCardHeader">
+              <div class="UnitInfo">
+                  <img src="/assets/images/units/sera/naval/T2Destroyer.png" class="UnitIcon" alt="Uashavoh"/>
+                  <div class="UnitDetails">
+                      <div class="UnitNameRow">
+                          <h3 class="UnitName">Uashavoh</h3>
+                          <span class="UnitCode">XSS0201</span>
+                      </div>
+                      <span class="FactionBadge sera">SERAPHIM</span>
+                  </div>
+              </div>
+              <div class="ChangeTypeBadge buff">Buff</div>
+          </header>
+          <!-- Card Content Section -->
+          <div class="CardContent">
+            <p class="ChangeDescription">Improve effectiveness vs submarines with adjusted torpedo firing cycle.</p>
+            <div class="ChangesList">
+              <div class="ChangeGroup">
+                <h4 class="ChangeGroupTitle">Weapon</h4>
+                <ul class="Changes">
+                  <li class="buff">
+                    <span class="ChangeLabel">Torpedo Firing Cycle:</span>
+                    <span class="ChangeValue">
+                      <strong class="NewValue">Adjusted to combat torpedo defense better</strong>
+                    </span>
+                  </li>
+                </ul>
+              </div>
             </div>
-
           </div>
+        </article>
 
-          <div id="atlantis" class="Card">
-          <h3><img src="/assets/images/units/uef/naval/T4AircraftCarrier.png"> Atlantis</h3>
-          
-          <ul>
-            <li>Fix the AA behaving in a way inconsistent with the stats, adjust the stats to preserve the current balance</li>
-          </ul>
+        <article id="atlantis" class="PatchCard">
+          <!-- Card Header Section -->
+          <header class="PatchCardHeader">
+              <div class="UnitInfo">
+                  <img src="/assets/images/units/uef/naval/T4AircraftCarrier.png" class="UnitIcon" alt="Atlantis"/>
+                  <div class="UnitDetails">
+                      <div class="UnitNameRow">
+                          <h3 class="UnitName">Atlantis</h3>
+                          <span class="UnitCode">UES0401</span>
+                      </div>
+                      <span class="FactionBadge uef">UEF</span>
+                  </div>
+              </div>
+              <div class="ChangeTypeBadge buff">Buff</div>
+          </header>
+          <!-- Card Content Section -->
+          <div class="CardContent">
+            <p class="ChangeDescription">Fix the AA behaving in a way inconsistent with the stats, adjust the stats to preserve the current balance.</p>
+            <div class="ChangesList">
+              <div class="ChangeGroup">
+                <h4 class="ChangeGroupTitle">Other</h4>
+                <ul class="Changes">
+                  <li class="buff">
+                    <span class="ChangeLabel">Anti-Air Behavior:</span>
+                    <span class="ChangeValue">
+                      <strong class="NewValue">Fixed AA behavior to be consistent with stats</strong>
+                    </span>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
+        </article>
 
-        </div>
+      </section>
 
-        <h2>Structures</h2>
 
-        <div id="structure">
-
-          <div id="kennels" class="Card">
-            <h3><img src="/assets/images/units/uef/air/T2KennelDrone.png"> Kennel Drones</h3>
-            <ul>
-              <li>Now have higher selection priority than buildings</li>
-            </ul>
-          </div>
-
-          <div id="uefsonar" class="Card">
-            <h3><img src="/assets/images/units/uef/structure/T3Sonar.png"> UEF T3 Sonar</h3>
-            <ul>
-              <li>Add Jamming</li>
-            </ul>
-          </div>
-
-          <div id="para" class="Card">
-            <h3><img src="/assets/images/units/aeon/structure/T4ResorceGenerator.png"> Paragon</h3>
-
-            <p>This will prevent the bug where despite not draining more E than paragon provides you still go into stall and drop shields.</p>
-            
-            <ul>
-              <li>Add a 100,000 E storage</li>
-            </ul>
-          </div>
-
-          <div id="pds" class="Card">
-            <h3><img src="/assets/images/units/aeon/structure/T1PointDefence.png"> T1 PDs</h3>
-
-            <ul>
-              <li>Adjust the hitboxes and bones of the PDs to make the wall-pd template behave the same way for each faction</li>
-            </ul>
-          </div>
-
-          <div id="t4arty" class="Card">
-            <h3><img src="/assets/images/units/uef/structure/T4StaticArty.png"> T4 Artilleries</h3>
-            <p>This makes all T4 arties viable for all 3 people who play 81x81 maps.</p>
-            <ul>
-              <li>Ranges normalized to 4000 (Mavor range)</li>
-            </ul>
-          </div>
-
-        </div>
-
+      <section id="acus">
         <h2>ACUs</h2>
 
-        <div id="acus">
+            <article id="cybstealth" class="PatchCard">
+              <!-- Card Header Section -->
+              <header class="PatchCardHeader">
+                  <div class="UnitInfo">
+                      <img src="/assets/images/Enhancements/cybran/stealth.png" class="UnitIcon" alt="Cybran ACU Stealth"/>
+                      <div class="UnitDetails">
+                          <div class="UnitNameRow">
+                              <h3 class="UnitName">Cybran ACU Stealth Upgrade</h3>
+                              <span class="UnitCode">URL0001</span>
+                          </div>
+                          <span class="FactionBadge cybran">CYBRAN</span>
+                      </div>
+                  </div>
+                  <div class="ChangeTypeBadge buff">Buff</div>
+              </header>
+              <!-- Card Content Section -->
+              <div class="CardContent">
+                <p class="ChangeDescription">Gives cybran acu better chances in mid-game against ACUs that can have both T2 and gun at the same time.</p>
+                <div class="ChangesList">
+                  <div class="ChangeGroup">
+                    <h4 class="ChangeGroupTitle">Economy</h4>
+                    <ul class="Changes">
+                      <li class="nerf">
+                        <span class="ChangeLabel">Energy Cost:</span>
+                        <span class="ChangeValue">
+                          <s class="OldValue">5,000</s> 
+                          <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                          <strong class="NewValue">14,000</strong>
+                        </span>
+                      </li>
+                      <li class="nerf">
+                        <span class="ChangeLabel">Mass Cost:</span>
+                        <span class="ChangeValue">
+                          <s class="OldValue">350</s> 
+                          <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                          <strong class="NewValue">650</strong>
+                        </span>
+                      </li>
+                      <li class="nerf">
+                        <span class="ChangeLabel">Build Time:</span>
+                        <span class="ChangeValue">
+                          <s class="OldValue">500</s> 
+                          <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                          <strong class="NewValue">800</strong>
+                        </span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="ChangeGroup">
+                    <h4 class="ChangeGroupTitle">Durability</h4>
+                    <ul class="Changes">
+                      <li class="buff">
+                        <span class="ChangeLabel">Health Bonus:</span>
+                        <span class="ChangeValue">
+                          <strong class="NewValue">Provides 2,000 extra HP</strong>
+                        </span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </article>
 
-          <div id="cybranacu">
-            <div id="cybstealth" class="Card">
-              <h3><img src="/assets/images/Enhancements/cybran/stealth.png">Cybran ACU Stealth Upgrade</h3>
-              
-              <p>Gives cybran acu better chances in mid-game against ACUs that can have both T2 and gun at the same time.</p>
-
-              <ul>
-                <li>EnergyCost: <s>5000</s> <i class="fa-solid fa-arrow-right"></i> 14000</li>
-                <li>MassCost: <s>350</s> <i class="fa-solid fa-arrow-right"></i> 650</li>
-                <li>BuildTime: <s>500</s> <i class="fa-solid fa-arrow-right"></i> 800</li>
-                <li>Provides 2000 extra HP</li>
-              </ul>
-            </div>
-
-          </div>
-
-          <div id="seraphimacu">
-
-            <div id="seraregen" class="Card">
-              <h3><img src="/assets/images/Enhancements/sera/advancedregenfield.png">Sera ACU Regen Field Upgrade</h3>
-
-              <p>This boosts the upgrade's attractiveness over the T2 upgrade and also fixes some inconsistencies where some units were getting more regen from the first upgrade tier than the second.</p>
-              
-              <ul>
-                <li>Now provides regen to the ACU itself, 10 hp/s for the first upgrade and 20 hp/s for the second</li>
-                <li>Now uses different regen floor values for units depending on their tier:
-                  <p>Basic Tier</p>
-                  <ul>
-                    <li>RegenFloorT1: 3</li>
-                    <li>RegenFloorT2: 8</li>
-                    <li>RegenFloorT3: 15</li>
-                    <li>RegenFloorT4: 25</li>
-                    <li>RegenFloorSCU: 15</li>
+          <article id="seraregen" class="PatchCard">
+            <!-- Card Header Section -->
+            <header class="PatchCardHeader">
+                <div class="UnitInfo">
+                    <img src="/assets/images/Enhancements/sera/advancedregenfield.png" class="UnitIcon" alt="Sera ACU Regen Field"/>
+                    <div class="UnitDetails">
+                        <div class="UnitNameRow">
+                            <h3 class="UnitName">Sera ACU Regen Field Upgrade</h3>
+                            <span class="UnitCode">XSL0001</span>
+                        </div>
+                        <span class="FactionBadge sera">SERAPHIM</span>
+                    </div>
+                </div>
+                <div class="ChangeTypeBadge buff">Buff</div>
+            </header>
+            <!-- Card Content Section -->
+            <div class="CardContent">
+              <p class="ChangeDescription">This boosts the upgrade's attractiveness over the T2 upgrade and also fixes some inconsistencies where some units were getting more regen from the first upgrade tier than the second.</p>
+              <div class="ChangesList">
+                <div class="ChangeGroup">
+                  <h4 class="ChangeGroupTitle">Durability</h4>
+                  <ul class="Changes">
+                    <li class="buff">
+                      <span class="ChangeLabel">ACU Regeneration:</span>
+                      <span class="ChangeValue">
+                        <strong class="NewValue">Now provides regen to the ACU itself, 10 hp/s for the first upgrade and 20 hp/s for the second</strong>
+                      </span>
+                    </li>
                   </ul>
-                  <p>Advanced Tier</p>
-                  <ul>
-                    <li>RegenFloorT1: 15</li>
-                    <li>RegenFloorT2: 30</li>
-                    <li>RegenFloorT3: 60</li>
-                    <li>RegenFloorT4: 120</li>
-                    <li>RegenFloorSCU: 80</li>
+                </div>
+                <div class="ChangeGroup">
+                  <h4 class="ChangeGroupTitle">Other</h4>
+                  <ul class="Changes">
+                    <li class="buff">
+                      <span class="ChangeLabel">Regen Floor Values:</span>
+                      <span class="ChangeValue">
+                        <strong class="NewValue">Now uses different regen floor values for units depending on their tier</strong>
+                      </span>
+                      <div style="margin-top: 8px;">
+                        <p style="margin: 4px 0; font-weight: 600;">Basic Tier:</p>
+                        <ul style="margin: 4px 0 8px 20px; list-style: disc;">
+                          <li>RegenFloorT1: 3</li>
+                          <li>RegenFloorT2: 8</li>
+                          <li>RegenFloorT3: 15</li>
+                          <li>RegenFloorT4: 25</li>
+                          <li>RegenFloorSCU: 15</li>
+                        </ul>
+                        <p style="margin: 4px 0; font-weight: 600;">Advanced Tier:</p>
+                        <ul style="margin: 4px 0 0 20px; list-style: disc;">
+                          <li>RegenFloorT1: 15</li>
+                          <li>RegenFloorT2: 30</li>
+                          <li>RegenFloorT3: 60</li>
+                          <li>RegenFloorT4: 120</li>
+                          <li>RegenFloorSCU: 80</li>
+                        </ul>
+                      </div>
+                    </li>
                   </ul>
-                </li>
-              </ul>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-        </div>
+          </article>
+        
+      </section>
+
+
         <div class="Sidebar">
-          <div class="IconSidebar">
-            <h2 class="IconSidebarTitle">Contents</h2>
-            <div class="IconSidebarSpace"></div>
-    
-            <div class="IconSidebarSubgrid">
-                <h3 class="IconSidebarSubtitle">Land</h3><br>
-                <a href="#zuee"><img src="/assets/images/units/sera/land/T1MobileArty.png"></a>
-                <a href="#titan"><img src="/assets/images/units/uef/land/T3Bot.png"></a>
-                <a href="#loya"><img src="/assets/images/units/cybran/land/T3AssultBot.png"></a>
-                <a href="#snoop"><img src="/assets/images/units/uef/land/T1Scout.png"></a>
-                <a href="#mole"><img src="/assets/images/units/cybran/land/T1Scout.png"></a>
-                <a href="#spirit"><img src="/assets/images/units/aeon/land/T1Scout.png"></a>
-                <a href="#selen"><img src="/assets/images/units/sera/land/T1Scout.png"></a>
-                <a href="#labs"><img src="/assets/images/units/aeon/land/T1LightAssultBot.png"></a>
-                <a href="#beetle"><img src="/assets/images/units/cybran/land/T2MobileBomb.png"></a>
-                <a href="#rhino"><img src="/assets/images/units/cybran/land/T2Tank.png"></a>
-    
-                <h3 class="IconSidebarSubtitle">Air</h3><br>
-                <a href="#t1trans"><img src="/assets/images/units/aeon/air/T1Transport.png"></a>
-                <a href="#scorcher"><img src="/assets/images/units/uef/air/T1Bommber.png"></a>
-                <a href="#notha"><img src="/assets/images/units/sera/air/T2FighterBomber.png"></a>
-                <a href="#soulripper"><img src="/assets/images/units/cybran/air/T4Gunship.png"></a>
-                <a href="#cstrat"><img src="/assets/images/units/cybran/air/T3Strat.png"></a>
-                <a href="#astrat"><img src="/assets/images/units/aeon/air/T3Strat.png"></a>
-                <a href="#sstrat"><img src="/assets/images/units/sera/air/T3Strat.png"></a>
-                <a href="#ustrat"><img src="/assets/images/units/uef/air/T3Strat.png"></a>
-                <a href="#aeonbomber"><img src="/assets/images/units/aeon/air/T1Bomber.png"></a>
-                <a href="#jester"><img src="/assets/images/units/cybran/air/T1Gunship.png"></a>
-    
-                <h3 class="IconSidebarSubtitle">Navy</h3><br>
-                <a href="#udestro"><img src="/assets/images/units/uef/naval/T2Destroyer.png"></a>
-                <a href="#cdestro"><img src="/assets/images/units/cybran/naval/T2Destoryer.png"></a>
-                <a href="#adestro"><img src="/assets/images/units/aeon/naval/T2Destroyer.png"></a>
-                <a href="#sdestro"><img src="/assets/images/units/sera/naval/T2Destroyer.png"></a>
-                <a href="#atlantis"><img src="/assets/images/units/uef/naval/T4AircraftCarrier.png"></a>
-    
-                <h3 class="IconSidebarSubtitle">Structures</h3><br>
-                <a href="#kennels"><img src="/assets/images/units/uef/structure/T2EngieStationL1.png"></a>
-                <a href="#uefsonar"><img src="/assets/images/units/uef/structure/T3Sonar.png"></a>
-                <a href="#para"><img src="/assets/images/units/aeon/structure/T4ResorceGenerator.png"></a>
-                <a href="#pds"><img src="/assets/images/units/aeon/structure/T1PointDefence.png"></a>
-                <a href="#t4arty"><img src="/assets/images/units/uef/structure/T4StaticArty.png"></a>
-    
-                <h3 class="IconSidebarSubtitle">ACUs</h3><br>
-                <a href="#cybstealth"><img src="/assets/images/Enhancements/cybran/stealth.png"></a>
-                <a href="#seraregen"><img src="/assets/images/Enhancements/sera/advancedregenfield.png"></a>
+          <nav class="ContentSidemenu" aria-label="Page Navigation">
+            <div class="SidemenuHeader">
+                <h2 class="SidemenuTitle">Contents</h2>
             </div>
-          </div>
+
+            <div class="SidemenuContent">
+                <!-- Land Section -->
+                <div class="NavSection">
+                    <button class="NavSectionToggle" aria-expanded="true">
+                        <i class="fas fa-tank-front SectionIcon"></i>
+                        <span class="SectionTitle">Land</span>
+                        <i class="fas fa-chevron-down ToggleIcon"></i>
+                    </button>
+                    <div class="NavSectionContent">
+                        <a href="#zuee" class="NavLink">
+                            <span class="LinkText">Zthuee</span>
+                        </a>
+                        <a href="#titan" class="NavLink">
+                            <span class="LinkText">Titan</span>
+                        </a>
+                        <a href="#loyalist" class="NavLink">
+                            <span class="LinkText">Loyalist</span>
+                        </a>
+                        <a href="#snoop" class="NavLink">
+                            <span class="LinkText">Snoop</span>
+                        </a>
+                        <a href="#mole" class="NavLink">
+                            <span class="LinkText">Mole</span>
+                        </a>
+                        <a href="#spirit" class="NavLink">
+                            <span class="LinkText">Spirit</span>
+                        </a>
+                        <a href="#selen" class="NavLink">
+                            <span class="LinkText">Selen</span>
+                        </a>
+                        <a href="#beetle" class="NavLink">
+                            <span class="LinkText">Fire Beetle</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Air Section -->
+                <div class="NavSection">
+                    <button class="NavSectionToggle" aria-expanded="true">
+                        <i class="fas fa-jet-fighter SectionIcon"></i>
+                        <span class="SectionTitle">Air</span>
+                        <i class="fas fa-chevron-down ToggleIcon"></i>
+                    </button>
+                    <div class="NavSectionContent">
+                        <a href="#t1trans" class="NavLink">
+                            <span class="LinkText">T1 Transports</span>
+                        </a>
+                        <a href="#scorcher" class="NavLink">
+                            <span class="LinkText">Scorcher</span>
+                        </a>
+                        <a href="#notha" class="NavLink">
+                            <span class="LinkText">Notha</span>
+                        </a>
+                        <a href="#soulripper" class="NavLink">
+                            <span class="LinkText">Soul Ripper</span>
+                        </a>
+                        <a href="#revenant" class="NavLink">
+                            <span class="LinkText">Revenant</span>
+                        </a>
+                        <a href="#shocker" class="NavLink">
+                            <span class="LinkText">Shocker</span>
+                        </a>
+                        <a href="#sinntha" class="NavLink">
+                            <span class="LinkText">Sinntha</span>
+                        </a>
+                        <a href="#ambassador" class="NavLink">
+                            <span class="LinkText">Ambassador</span>
+                        </a>
+                        <a href="#aeonbomber" class="NavLink">
+                            <span class="LinkText">Shimmer</span>
+                        </a>
+                        <a href="#jester" class="NavLink">
+                            <span class="LinkText">Jester</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Navy Section -->
+                <div class="NavSection">
+                    <button class="NavSectionToggle" aria-expanded="true">
+                        <i class="fas fa-ship SectionIcon"></i>
+                        <span class="SectionTitle">Navy</span>
+                        <i class="fas fa-chevron-down ToggleIcon"></i>
+                    </button>
+                    <div class="NavSectionContent">
+                        <a href="#valiant" class="NavLink">
+                            <span class="LinkText">Valiant</span>
+                        </a>
+                        <a href="#salem" class="NavLink">
+                            <span class="LinkText">Salem Class</span>
+                        </a>
+                        <a href="#exodus" class="NavLink">
+                            <span class="LinkText">Exodus</span>
+                        </a>
+                        <a href="#uashavoh" class="NavLink">
+                            <span class="LinkText">Uashavoh</span>
+                        </a>
+                        <a href="#atlantis" class="NavLink">
+                            <span class="LinkText">Atlantis</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Structures Section -->
+                <div class="NavSection">
+                    <button class="NavSectionToggle" aria-expanded="true">
+                        <i class="fas fa-building SectionIcon"></i>
+                        <span class="SectionTitle">Structures</span>
+                        <i class="fas fa-chevron-down ToggleIcon"></i>
+                    </button>
+                    <div class="NavSectionContent">
+                        <a href="#kennels" class="NavLink">
+                            <span class="LinkText">Kennel Drones</span>
+                        </a>
+                        <a href="#uefsonar" class="NavLink">
+                            <span class="LinkText">UEF T3 Sonar</span>
+                        </a>
+                        <a href="#para" class="NavLink">
+                            <span class="LinkText">Paragon</span>
+                        </a>
+                        <a href="#pds" class="NavLink">
+                            <span class="LinkText">T1 PDs</span>
+                        </a>
+                        <a href="#t4arty" class="NavLink">
+                            <span class="LinkText">T4 Artilleries</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- ACUs Section -->
+                <div class="NavSection">
+                    <button class="NavSectionToggle" aria-expanded="true">
+                        <i class="fas fa-robot SectionIcon"></i>
+                        <span class="SectionTitle">ACUs</span>
+                        <i class="fas fa-chevron-down ToggleIcon"></i>
+                    </button>
+                    <div class="NavSectionContent">
+                        <a href="#cybstealth" class="NavLink">
+                            <span class="LinkText">Cybran ACU Stealth</span>
+                        </a>
+                        <a href="#seraregen" class="NavLink">
+                            <span class="LinkText">Sera ACU Regen Field</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sidebar Footer -->
+            <div class="SidemenuFooter">
+                <div class="PatchStats">
+                    <div class="StatItem">
+                        <i class="fas fa-wrench StatIcon"></i>
+                        <span class="StatValue">20</span>
+                        <span class="StatLabel">Changes</span>
+                    </div>
+                    <div class="StatItem">
+                        <i class="fas fa-arrow-up StatIcon buff"></i>
+                        <span class="StatValue">12</span>
+                        <span class="StatLabel">Buffs</span>
+                    </div>
+                    <div class="StatItem">
+                        <i class="fas fa-arrow-down StatIcon nerf"></i>
+                        <span class="StatValue">8</span>
+                        <span class="StatLabel">Nerfs</span>
+                    </div>
+                </div>
+                <div class="QuickActionsPanel">
+                    <a href="/index.html" class="QuickAction">
+                        <i class="fas fa-home"></i>
+                        <span>All Patches</span>
+                    </a>
+                    <a href="#top" class="QuickAction">
+                        <i class="fas fa-arrow-up"></i>
+                        <span>Back to Top</span>
+                    </a>
+                </div>
+            </div>
+          </nav>
         </div>
       </main>  
     </body>
@@ -493,8 +1409,8 @@
                 <h4 class="FooterTitle">About</h4>
                 <div class="FooterInfo">
                     <p class="PatchInfo">
-                        <strong>Patch 3822</strong><br>
-                        Released: May 19th, 2025
+                        <strong>Patch 3725</strong><br>
+                        Released: November 26th, 2021
                     </p>
                     <p class="Copyright">
                         © 2015-2025 <strong>FAForever</strong><br>
@@ -526,8 +1442,8 @@
         <!-- Bottom Bar -->
         <div class="FooterBottom">
             <div class="FooterBottomContent">
-                <span class="LastUpdated">Last updated: <time datetime="2025-05-19">May 19th, 2025</time></span>
-                <span class="BuildInfo">Balance Team • Patch Notes v3822</span>
+                <span class="LastUpdated">Last updated: <time datetime="2021-11-26">November 26th, 2021</time></span>
+                <span class="BuildInfo">Balance Team • Patch Notes v3725</span>
             </div>
         </div>
     </footer>
