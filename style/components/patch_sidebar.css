@@ -29,6 +29,12 @@
   gap: 4px; /* Reduced from 5px */
 }
 
+/* Ensure sticky sidebar content sits below the footer in stacking order */
+.IconSidebar,
+.IconGrid {
+  z-index: 1;
+}
+
 /* Title in Icon Sidebar */
 .IconSidebarTitle,
 .IconSidebarSubtitle {

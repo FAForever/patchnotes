@@ -449,32 +449,81 @@
 
           <!-- Content Navigation -->
           <nav class="ContentNav" role="navigation">
+              <!-- Intro Section -->
+              <div class="NavSection active">
+                  <button class="SectionToggle" aria-expanded="true" data-target="intro-items">
+                      <i class="fas fa-info-circle SectionIcon"></i>
+                      <span class="SectionTitle">Introduction</span>
+                      <span class="ItemCount">1</span>
+                      <i class="fas fa-chevron-down ToggleIcon"></i>
+                  </button>
+                  <ul class="SectionItems" id="intro-items">
+                      <li class="NavItem">
+                          <a href="#Intro" class="NavLink">
+                              <i class="fas fa-scroll"></i>
+                              <span>Patch Overview</span>
+                          </a>
+                      </li>
+                  </ul>
+              </div>
               
               <!-- Land Units Section -->
               <div class="NavSection">
                   <button class="SectionToggle" aria-expanded="false" data-target="land-items">
-                      <i class="fas fa-tank SectionIcon"></i>
+                      <i class="fas fa-tractor SectionIcon"></i>
                       <span class="SectionTitle">Land Units</span>
                       <span class="ItemCount">2</span>
                       <i class="fas fa-chevron-down ToggleIcon"></i>
                   </button>
                   <ul class="SectionItems" id="land-items">
-                      <li class="NavItem"><a href="#skyslammer" class="NavLink"><div class="LinkContent"><span class="UnitName">Sky Slammer</span><span class="ChangeType buff">Buff</span></div></a></li>
-                      <li class="NavItem"><a href="#selen" class="NavLink"><div class="LinkContent"><span class="UnitName">Selen</span><span class="ChangeType buff">Buff</span></div></a></li>
+                      <li class="NavItem">
+                          <a href="#skyslammer" class="NavLink">
+                              <img src="/assets/images/units/cybran/land/T1MobileAA.png" class="UnitThumb" alt="Sky Slammer"/>
+                              <div class="LinkContent">
+                                  <span class="UnitName">Sky Slammer</span>
+                                  <span class="ChangeType buff">Buff</span>
+                              </div>
+                          </a>
+                      </li>
+                      <li class="NavItem">
+                          <a href="#selen" class="NavLink">
+                              <img src="/assets/images/units/sera/land/T1Scout.png" class="UnitThumb" alt="Selen"/>
+                              <div class="LinkContent">
+                                  <span class="UnitName">Selen</span>
+                                  <span class="ChangeType buff">Buff</span>
+                              </div>
+                          </a>
+                      </li>
                   </ul>
               </div>
 
               <!-- Air Units Section -->
               <div class="NavSection">
                   <button class="SectionToggle" aria-expanded="false" data-target="air-items">
-                      <i class="fas fa-plane SectionIcon"></i>
+                      <i class="fas fa-jet-fighter SectionIcon"></i>
                       <span class="SectionTitle">Air Units</span>
                       <span class="ItemCount">2</span>
                       <i class="fas fa-chevron-down ToggleIcon"></i>
                   </button>
                   <ul class="SectionItems" id="air-items">
-                      <li class="NavItem"><a href="#jester" class="NavLink"><div class="LinkContent"><span class="UnitName">Jester</span><span class="ChangeType buff">Buff</span></div></a></li>
-                      <li class="NavItem"><a href="#t1bomber" class="NavLink"><div class="LinkContent"><span class="UnitName">T1 Bomber</span><span class="ChangeType buff">Buff</span></div></a></li>
+                      <li class="NavItem">
+                          <a href="#jester" class="NavLink">
+                              <img src="/assets/images/units/cybran/air/T1Gunship.png" class="UnitThumb" alt="Jester"/>
+                              <div class="LinkContent">
+                                  <span class="UnitName">Jester</span>
+                                  <span class="ChangeType buff">Buff</span>
+                              </div>
+                          </a>
+                      </li>
+                      <li class="NavItem">
+                          <a href="#t1bomber" class="NavLink">
+                              <img src="/assets/images/units/uef/air/T1Bommber.png" class="UnitThumb" alt="Scorcher"/>
+                              <div class="LinkContent">
+                                  <span class="UnitName">T1 Bomber</span>
+                                  <span class="ChangeType buff">Buff</span>
+                              </div>
+                          </a>
+                      </li>
                   </ul>
               </div>
 
@@ -487,7 +536,15 @@
                       <i class="fas fa-chevron-down ToggleIcon"></i>
                   </button>
                   <ul class="SectionItems" id="navy-items">
-                      <li class="NavItem"><a href="#shard" class="NavLink"><div class="LinkContent"><span class="UnitName">Shard</span><span class="ChangeType mixed">Mixed</span></div></a></li>
+                      <li class="NavItem">
+                          <a href="#shard" class="NavLink">
+                              <img src="/assets/images/units/aeon/naval/T1AABoat.png" class="UnitThumb" alt="Shard"/>
+                              <div class="LinkContent">
+                                  <span class="UnitName">Shard</span>
+                                  <span class="ChangeType mixed">Mixed</span>
+                              </div>
+                          </a>
+                      </li>
                   </ul>
               </div>
 
@@ -500,9 +557,33 @@
                       <i class="fas fa-chevron-down ToggleIcon"></i>
                   </button>
                   <ul class="SectionItems" id="structure-items">
-                      <li class="NavItem"><a href="#t1mex" class="NavLink"><div class="LinkContent"><span class="UnitName">T1 Mass Extractor</span><span class="ChangeType nerf">Nerf</span></div></a></li>
-                      <li class="NavItem"><a href="#t2mex" class="NavLink"><div class="LinkContent"><span class="UnitName">T2 Mass Extractor</span><span class="ChangeType nerf">Nerf</span></div></a></li>
-                      <li class="NavItem"><a href="#t3mex" class="NavLink"><div class="LinkContent"><span class="UnitName">T3 Mass Extractor</span><span class="ChangeType nerf">Nerf</span></div></a></li>
+                      <li class="NavItem">
+                          <a href="#t1mex" class="NavLink">
+                              <img src="/assets/images/units/aeon/structure/T1MassExtractor.png" class="UnitThumb" alt="T1 Mass Extractor"/>
+                              <div class="LinkContent">
+                                  <span class="UnitName">T1 Mass Extractor</span>
+                                  <span class="ChangeType nerf">Nerf</span>
+                              </div>
+                          </a>
+                      </li>
+                      <li class="NavItem">
+                          <a href="#t2mex" class="NavLink">
+                              <img src="/assets/images/units/uef/structure/T2MassExtractor.png" class="UnitThumb" alt="T2 Mass Extractor"/>
+                              <div class="LinkContent">
+                                  <span class="UnitName">T2 Mass Extractor</span>
+                                  <span class="ChangeType nerf">Nerf</span>
+                              </div>
+                          </a>
+                      </li>
+                      <li class="NavItem">
+                          <a href="#t3mex" class="NavLink">
+                              <img src="/assets/images/units/cybran/structure/T3MassExtractor.png" class="UnitThumb" alt="T3 Mass Extractor"/>
+                              <div class="LinkContent">
+                                  <span class="UnitName">T3 Mass Extractor</span>
+                                  <span class="ChangeType nerf">Nerf</span>
+                              </div>
+                          </a>
+                      </li>
                   </ul>
               </div>
 

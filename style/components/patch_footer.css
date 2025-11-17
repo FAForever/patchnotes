@@ -9,6 +9,9 @@
   padding: 0;
   color: var(--Text, #ecf0f1);
   box-shadow: 0 -3px 16px rgba(0, 0, 0, 0.1); /* Reduced from -4px 20px */
+  /* Ensure the footer appears above any sticky/positioned sidebars */
+  position: relative;
+  z-index: 60;
 }
 
 .FooterContainer {
