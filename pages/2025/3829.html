@@ -1,0 +1,1217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="FAForever Patch 3825 balance update featuring Sky Slammer T1 AA adjustments, naval unit rebalancing including Bulwark, CI:18 Mermaid, and Sou-istle, plus ACU enhancement modifications for Range, Speed, Nanite Torpedo Launcher, and Nano-Repair System." />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>FAForever Patch 3825 - Balance Update</title>
+
+    <!-- Critical CSS for immediate loading -->
+    <link rel="stylesheet" href="/style/critical.css?v=1724259600&cache=bypass" />
+
+    <!-- Load head configuration and shared resources -->
+    <script src="/scripts/headConfig.js?v=1724259600&cache=bypass"></script>
+</head>
+<body>
+    <main class="Grid">
+        <div class="Content">
+
+            <section id="Intro" class="IntroSection">
+                <header class="PatchHeader">
+                    <div class="PatchTitleGroup">
+                        <h1 class="PatchTitle">Patch 3825</h1>
+                        <span class="PatchVersion">Balance Update</span>
+                    </div>
+                    <div class="PatchMeta">
+                        <time datetime="2025-08-15" class="PatchDate">August 15th, 2025</time>
+                        <span class="PatchStatus">Released</span>
+                    </div>
+                </header>
+                <p class="patchDescription">This patch focuses on targeted balance adjustments across land, naval, and ACU enhancement systems. The Cybran Sky Slammer T1 mobile AA receives a damage reduction to account for its improved projectile retargeting capabilities. Naval balance sees changes with the UEF Bulwark shield boat and Cybran CI:18 Mermaid stealth boat both receiving size reductions while the CI:18 Mermaid also gets a durability reduction to improve counterplay opportunities. The Seraphim Sou-istle T1 submarine's anti-torpedo defense reload is nerfed to prevent excessive dominance against other T1 subs and snowballing effects. ACU enhancement costs are rebalanced, with the first Aeon range upgrade becoming more expensive while the speed upgrades costs are reduced, and Cybran torpedo upgrade gains improved salvo size and the nano repair loses some regen rate.</p>
+
+                <footer class="PatchCredits">
+                    <div class="TeamSignature">
+                        <span class="TeamIcon">⚖️</span>
+                        <span class="TeamName">The Balance Team</span>
+                    </div>
+                </footer>
+                
+                <hr class="SectionDivider">
+            </section>
+
+            <section id="Land">
+                <h2>Land Units</h2>
+
+                <article id="land_scouts" class="PatchCard">
+                <!-- Card Header Section -->
+                    <header class="PatchCardHeader">
+                        <div class="UnitInfo">
+                            <img src="/assets/images/units/aeon/land/T1Scout.png" class="UnitIcon" alt="Land Scouts"/>
+                            <div class="UnitDetails">
+                                <div class="UnitNameRow">
+                                    <h3 class="UnitName">Land Scouts</h3>
+                                    <span class="UnitCode">T1 Scouts</span>
+                                </div>
+                                <span class="FactionBadge universal">Universal</span>
+                            </div>
+                        </div>
+                        <div class="ChangeTypeBadge buff">Buff</div>
+                    </header>
+
+                    <!-- Card Content Section -->
+                    <div class="PatchCardContent">
+                        <p class="ChangeDescription">Land scouts now prioritize radar over mobiles and ignore PD and static AA.</p>
+
+                        <div class="ChangesList">
+                            <div class="ChangeGroup">
+                                <h4 class="ChangeGroupTitle">
+                                    Intel
+                                </h4>
+                                <ul class="Changes">
+                                    <li class="buff">
+                                        <span class="ChangeLabel">Vision Radius:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">18</s> 
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                            <strong class="NewValue">22</strong>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article id="firebeetle" class="PatchCard">
+                <!-- Card Header Section -->
+                    <header class="PatchCardHeader">
+                        <div class="UnitInfo">
+                            <img src="/assets/images/units/cybran/land/T2MobileBoomb.png" class="UnitIcon" alt="Fire Beetle"/>
+                            <div class="UnitDetails">
+                                <div class="UnitNameRow">
+                                    <h3 class="UnitName">Fire Beetle</h3>
+                                    <span class="UnitCode">XRL0302</span>
+                                </div>
+                                <span class="FactionBadge cybran">Cybran</span>
+                            </div>
+                        </div>
+                        <div class="ChangeTypeBadge buff">Buff</div>
+                    </header>
+
+                    <!-- Card Content Section -->
+                    <div class="PatchCardContent">
+                        <p class="ChangeDescription">Beetles now consume 10 Energy per second while cloaked. Previously the only cloaked unit without an energy upkeep, they enabled low-cost early T2 rushes despite their high power. This change aligns them with other cloaked units and slightly curbs early aggression without compromising their core role.</p>
+
+                        <div class="ChangesList">
+                            <div class="ChangeGroup">
+                                <h4 class="ChangeGroupTitle">
+                                    Economy
+                                </h4>
+                                <ul class="Changes">
+                                    <li class="nerf">
+                                        <span class="ChangeLabel">Energy Drain:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">0</s> 
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                            <strong class="NewValue">10</strong>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article id="suthanus" class="PatchCard">
+                <!-- Card Header Section -->
+                    <header class="PatchCardHeader">
+                        <div class="UnitInfo">
+                            <img src="/assets/images/units/sera/land/T3MobileAA.png" class="UnitIcon" alt="Suthanus"/>
+                            <div class="UnitDetails">
+                                <div class="UnitNameRow">
+                                    <h3 class="UnitName">Suthanus</h3>
+                                    <span class="UnitCode">XSL0305</span>
+                                </div>
+                                <span class="FactionBadge sera">Seraphim</span>
+                            </div>
+                        </div>
+                        <div class="ChangeTypeBadge buff">Buff</div>
+                    </header>
+
+                    <!-- Card Content Section -->
+                    <div class="PatchCardContent">
+                        <p class="ChangeDescription">Removed the Seraphim Lightning Tank's FiringTolerance, which may have caused missed shots against aircraft. This fix improves reliability without altering unit performance.</p>
+
+                        <div class="ChangesList">
+                            <div class="ChangeGroup">
+                                <h4 class="ChangeGroupTitle">
+                                    Weapon
+                                </h4>
+                                <ul class="Changes">
+                                    <li class="sub-header"><strong>Lightning Projector Anti-Air:</strong></li>
+                                    <li class="buff">
+                                        <span class="ChangeLabel">Fireing Tolerance:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">2</s> 
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                            <strong class="NewValue">0</strong>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article id="megalith" class="PatchCard">
+                <!-- Card Header Section -->
+                    <header class="PatchCardHeader">
+                        <div class="UnitInfo">
+                            <img src="/assets/images/units/cybran/land/T3MegaBot.png" class="UnitIcon" alt="Megalith"/>
+                            <div class="UnitDetails">
+                                <div class="UnitNameRow">
+                                    <h3 class="UnitName">Megalith</h3>
+                                    <span class="UnitCode">XRL0403</span>
+                                </div>
+                                <span class="FactionBadge cybran">Cybran</span>
+                            </div>
+                        </div>
+                        <div class="ChangeTypeBadge buff">Buff</div>
+                    </header>
+
+                    <!-- Card Content Section -->
+                    <div class="PatchCardContent">
+                        <p class="ChangeDescription">The Megalith has received several usability improvements to streamline egg deployment and engineering behavior. Its build range has been extended by +1, allowing eggs to be placed farther away and preventing them from spawning within the Megalith’s footprint, which previously caused unnecessary movement. Repair capability has been added so the Megalith can finish incomplete eggs, and reclaim functionality is now explicitly enabled—whereas before, it could only reclaim by placing eggs on wrecks. Pause functionality has also been added to bring it in line with standard engineering units. Lastly, the stats for T3 Mobile Artillery and T3 Mobile Anti-Air crab eggs have been updated to reflect recent balance changes to those units</p>
+
+                    </div>
+                </article>
+
+            </section>
+
+            <section id="Naval">
+                <h2>Naval Units</h2>
+
+                <article id="salem" class="PatchCard">
+                    <!-- Card Header Section -->
+                    <header class="PatchCardHeader">
+                        <div class="UnitInfo">
+                            <img src="/assets/images/units/aeon/naval/T3Battleship.png" class="UnitIcon" alt="Salem Class"/>
+                            <div class="UnitDetails">
+                                <div class="UnitNameRow">
+                                    <h3 class="UnitName">Salem Class</h3>
+                                    <span class="UnitCode">UAS0302</span>
+                                </div>
+                                <span class="FactionBadge aeon">Aeon</span>
+                            </div>
+                        </div>
+                        <div class="ChangeTypeBadge buff">Buff</div>
+                    </header>
+
+                    <!-- Card Content Section -->
+                    <div class="PatchCardContent">
+                        <p class="ChangeDescription">Reduced Salem’s anti-torpedo flare target check interval from 1.0s to 0.4s—the standard for anti-projectile weapons. This improves torpedo detection and flare response, especially against torpedo bombers.</p>
+
+                        <div class="ChangesList">
+                            <!-- Weapon Changes -->
+                            <div class="ChangeGroup">
+                                <h4 class="ChangeGroupTitle">
+                                    Weapon
+                                </h4>
+                                <ul class="Changes">
+                                    <li class="sub-header"><strong>Anit Torpedo:</strong></li>
+                                    <li class="buff">
+                                        <span class="ChangeLabel">Target Check Interval:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">1s</s> 
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                            <strong class="NewValue">0.4s</strong>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+            </section>
+
+            <section id="Air">
+                <h2>Air Units</h2>
+
+                <article id="aeon_strat_bomber" class="PatchCard">
+                    <!-- Card Header Section -->
+                    <header class="PatchCardHeader">
+                        <div class="UnitInfo">
+                            <img src="/assets/images/units/aeon/air/T3StratBomber.png" class="UnitIcon" alt="Ambassador"/>
+                            <div class="UnitDetails">
+                                <div class="UnitNameRow">
+                                    <h3 class="UnitName">Ambassador</h3>
+                                    <span class="UnitCode">UAA0304</span>
+                                </div>
+                                <span class="FactionBadge aeon">Aeon</span>
+                            </div>
+                        </div>
+                        <div class="ChangeTypeBadge buff">Buff</div>
+                    </header>
+
+                    <!-- Card Content Section -->
+                    <div class="PatchCardContent">
+                        <p class="ChangeDescription">Improve the maneuverability and reliability of Strategic Bombers to promote proactive use and compete with T3 gunships. Enhanced turn speed and lift factor allow strats to micro more effectively to avoid flak damage and reduce opportunities for ASF/SAMs to deal damage. The improved bomb drop threshold greatly increases reliability on uneven terrain or during turns, though bombs may drop from further away, making ACU dodging easier. Auto-attack range reduced to match radar range. Veterancy requirements adjusted to reflect previous mass cost reductions.</p>
+
+                        <div class="ChangesList">
+                            <div class="ChangeGroup">
+                                <h4 class="ChangeGroupTitle">
+                                    Combat Stats
+                                </h4>
+                                <ul class="Changes">
+                                    <li class="buff">
+                                        <span class="ChangeLabel">Turn Speed:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">0.8</s> 
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                            <strong class="NewValue">1.2</strong>
+                                        </span>
+                                    </li>
+                                    <li class="buff">
+                                        <span class="ChangeLabel">Lift Factor:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">7</s> 
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                            <strong class="NewValue">10</strong>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="ChangeGroup">
+                                <h4 class="ChangeGroupTitle">
+                                    Weapon
+                                </h4>
+                                <ul class="Changes">
+                                    <li class="buff">
+                                        <span class="ChangeLabel">Bomb Drop Threshold:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">3.5</s> 
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                            <strong class="NewValue">8</strong>
+                                        </span>
+                                    </li>
+                                    <li class="buff">
+                                        <span class="ChangeLabel">Break Off Distance:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">60</s> 
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                            <strong class="NewValue">50</strong>
+                                        </span>
+                                    </li>
+                                    <li class="buff">
+                                        <span class="ChangeLabel">Random Break Off Distance Mult:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">1.5</s> 
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                            <strong class="NewValue">1</strong>
+                                        </span>
+                                    </li>
+                                    <li class="nerf">
+                                        <span class="ChangeLabel">Auto-attack Range:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">90</s> 
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                            <strong class="NewValue">64</strong>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="ChangeGroup">
+                                <h4 class="ChangeGroupTitle">
+                                    Veterancy
+                                </h4>
+                                <ul class="Changes">
+                                    <li class="buff">
+                                        <span class="ChangeLabel">Mass Killed per Level:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">4200</s> 
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                            <strong class="NewValue">3500 (2x own mass)</strong>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article id="cybran_strat_bomber" class="PatchCard">
+                    <!-- Card Header Section -->
+                    <header class="PatchCardHeader">
+                        <div class="UnitInfo">
+                            <img src="/assets/images/units/cybran/air/T3StratBomber.png" class="UnitIcon" alt="Strategic Bomber"/>
+                            <div class="UnitDetails">
+                                <div class="UnitNameRow">
+                                    <h3 class="UnitName">Strategic Bomber</h3>
+                                    <span class="UnitCode">URA0304</span>
+                                </div>
+                                <span class="FactionBadge cybran">Cybran</span>
+                            </div>
+                        </div>
+                        <div class="ChangeTypeBadge buff">Buff</div>
+                    </header>
+
+                    <!-- Card Content Section -->
+                    <div class="PatchCardContent">
+                        <p class="ChangeDescription">Improve the maneuverability and reliability of Strategic Bombers to promote proactive use and compete with T3 gunships. Enhanced turn speed and lift factor allow strats to micro more effectively to avoid flak damage and reduce opportunities for ASF/SAMs to deal damage. The improved bomb drop threshold greatly increases reliability on uneven terrain or during turns, though bombs may drop from further away, making ACU dodging easier. Auto-attack range reduced to match radar range. Veterancy requirements adjusted to reflect previous mass cost reductions.</p>
+
+                        <div class="ChangesList">
+                            <div class="ChangeGroup">
+                                <h4 class="ChangeGroupTitle">
+                                    Combat Stats
+                                </h4>
+                                <ul class="Changes">
+                                    <li class="buff">
+                                        <span class="ChangeLabel">Turn Speed:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">0.8</s> 
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                            <strong class="NewValue">1.2</strong>
+                                        </span>
+                                    </li>
+                                    <li class="buff">
+                                        <span class="ChangeLabel">Lift Factor:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">7</s> 
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                            <strong class="NewValue">10</strong>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="ChangeGroup">
+                                <h4 class="ChangeGroupTitle">
+                                    Weapon
+                                </h4>
+                                <ul class="Changes">
+                                    <li class="buff">
+                                        <span class="ChangeLabel">Bomb Drop Threshold:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">3.5</s> 
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                            <strong class="NewValue">8</strong>
+                                        </span>
+                                    </li>
+                                    <li class="buff">
+                                        <span class="ChangeLabel">Break Off Distance:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">60</s> 
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                            <strong class="NewValue">50</strong>
+                                        </span>
+                                    </li>
+                                    <li class="buff">
+                                        <span class="ChangeLabel">Random Break Off Distance Mult:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">1.5</s> 
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                            <strong class="NewValue">1</strong>
+                                        </span>
+                                    </li>
+                                    <li class="nerf">
+                                        <span class="ChangeLabel">Auto-attack Range:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">90</s> 
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                            <strong class="NewValue">64</strong>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="ChangeGroup">
+                                <h4 class="ChangeGroupTitle">
+                                    Veterancy
+                                </h4>
+                                <ul class="Changes">
+                                    <li class="buff">
+                                        <span class="ChangeLabel">Mass Killed per Level:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">4200</s> 
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                            <strong class="NewValue">3500 (2x own mass)</strong>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article id="uef_strat_bomber" class="PatchCard">
+                    <!-- Card Header Section -->
+                    <header class="PatchCardHeader">
+                        <div class="UnitInfo">
+                            <img src="/assets/images/units/uef/air/T3StratBomber.png" class="UnitIcon" alt="Ambassador"/>
+                            <div class="UnitDetails">
+                                <div class="UnitNameRow">
+                                    <h3 class="UnitName">Ambassador</h3>
+                                    <span class="UnitCode">UEA0304</span>
+                                </div>
+                                <span class="FactionBadge uef">UEF</span>
+                            </div>
+                        </div>
+                        <div class="ChangeTypeBadge buff">Buff</div>
+                    </header>
+
+                    <!-- Card Content Section -->
+                    <div class="PatchCardContent">
+                        <p class="ChangeDescription">Improve the maneuverability and reliability of Strategic Bombers to promote proactive use and compete with T3 gunships. Enhanced turn speed and lift factor allow strats to micro more effectively to avoid flak damage and reduce opportunities for ASF/SAMs to deal damage. The improved bomb drop threshold greatly increases reliability on uneven terrain or during turns, though bombs may drop from further away, making ACU dodging easier. Auto-attack range reduced to match radar range. Veterancy requirements adjusted to reflect previous mass cost reductions.</p>
+
+                        <div class="ChangesList">
+                            <div class="ChangeGroup">
+                                <h4 class="ChangeGroupTitle">
+                                    Combat Stats
+                                </h4>
+                                <ul class="Changes">
+                                    <li class="buff">
+                                        <span class="ChangeLabel">Turn Speed:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">0.8</s> 
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                            <strong class="NewValue">1.2</strong>
+                                        </span>
+                                    </li>
+                                    <li class="buff">
+                                        <span class="ChangeLabel">Lift Factor:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">7</s> 
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                            <strong class="NewValue">10</strong>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="ChangeGroup">
+                                <h4 class="ChangeGroupTitle">
+                                    Weapon
+                                </h4>
+                                <ul class="Changes">
+                                    <li class="buff">
+                                        <span class="ChangeLabel">Bomb Drop Threshold:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">3.5</s> 
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                            <strong class="NewValue">8</strong>
+                                        </span>
+                                    </li>
+                                    <li class="buff">
+                                        <span class="ChangeLabel">Break Off Distance:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">60</s> 
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                            <strong class="NewValue">50</strong>
+                                        </span>
+                                    </li>
+                                    <li class="buff">
+                                        <span class="ChangeLabel">Random Break Off Distance Mult:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">1.5</s> 
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                            <strong class="NewValue">1</strong>
+                                        </span>
+                                    </li>
+                                    <li class="nerf">
+                                        <span class="ChangeLabel">Auto-attack Range:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">90</s> 
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                            <strong class="NewValue">64</strong>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="ChangeGroup">
+                                <h4 class="ChangeGroupTitle">
+                                    Veterancy
+                                </h4>
+                                <ul class="Changes">
+                                    <li class="buff">
+                                        <span class="ChangeLabel">Mass Killed per Level:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">4200</s> 
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                            <strong class="NewValue">3500 (2x own mass)</strong>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article id="sera_strat_bomber" class="PatchCard">
+                    <!-- Card Header Section -->
+                    <header class="PatchCardHeader">
+                        <div class="UnitInfo">
+                            <img src="/assets/images/units/sera/air/T3StratBomber.png" class="UnitIcon" alt="Sinntha"/>
+                            <div class="UnitDetails">
+                                <div class="UnitNameRow">
+                                    <h3 class="UnitName">Sinntha</h3>
+                                    <span class="UnitCode">XSA0304</span>
+                                </div>
+                                <span class="FactionBadge sera">Seraphim</span>
+                            </div>
+                        </div>
+                        <div class="ChangeTypeBadge buff">Buff</div>
+                    </header>
+
+                    <!-- Card Content Section -->
+                    <div class="PatchCardContent">
+                        <p class="ChangeDescription">Improve the maneuverability and reliability of Strategic Bombers to promote proactive use and compete with T3 gunships. Enhanced turn speed and lift factor allow strats to micro more effectively to avoid flak damage and reduce opportunities for ASF/SAMs to deal damage. The improved bomb drop threshold greatly increases reliability on uneven terrain or during turns, though bombs may drop from further away, making ACU dodging easier. Auto-attack range reduced to match radar range. Veterancy requirements adjusted to reflect previous mass cost reductions.</p>
+
+                        <div class="ChangesList">
+                            <div class="ChangeGroup">
+                                <h4 class="ChangeGroupTitle">
+                                    Combat Stats
+                                </h4>
+                                <ul class="Changes">
+                                    <li class="buff">
+                                        <span class="ChangeLabel">Turn Speed:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">0.8</s> 
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                            <strong class="NewValue">1.2</strong>
+                                        </span>
+                                    </li>
+                                    <li class="buff">
+                                        <span class="ChangeLabel">Lift Factor:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">7</s> 
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                            <strong class="NewValue">10</strong>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="ChangeGroup">
+                                <h4 class="ChangeGroupTitle">
+                                    Weapon
+                                </h4>
+                                <ul class="Changes">
+                                    <li class="buff">
+                                        <span class="ChangeLabel">Bomb Drop Threshold:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">3.5</s> 
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                            <strong class="NewValue">8</strong>
+                                        </span>
+                                    </li>
+                                    <li class="buff">
+                                        <span class="ChangeLabel">Break Off Distance:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">60</s> 
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                            <strong class="NewValue">50</strong>
+                                        </span>
+                                    </li>
+                                    <li class="buff">
+                                        <span class="ChangeLabel">Random Break Off Distance Mult:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">1.5</s> 
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                            <strong class="NewValue">1</strong>
+                                        </span>
+                                    </li>
+                                    <li class="nerf">
+                                        <span class="ChangeLabel">Auto-attack Range:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">90</s> 
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                            <strong class="NewValue">64</strong>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="ChangeGroup">
+                                <h4 class="ChangeGroupTitle">
+                                    Veterancy
+                                </h4>
+                                <ul class="Changes">
+                                    <li class="buff">
+                                        <span class="ChangeLabel">Mass Killed per Level:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">4200</s> 
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                            <strong class="NewValue">3500 (2x own mass)</strong>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            
+            </section>
+
+            <section id="ACUs">
+                <h2>ACUs & SACUs</h2>
+
+                <article id="sera_tml" class="PatchCard">
+                    <!-- Card Header Section -->
+                    <header class="PatchCardHeader">
+                        <div class="UnitInfo">
+                            <img src="/assets/images/Enhancements/sera/tml.png" class="UnitIcon" alt="Tactical Missile Launcher"/>
+                            <div class="UnitDetails">
+                                <div class="UnitNameRow">
+                                    <h3 class="UnitName">Tactical Missile Launcher</h3>
+                                    <span class="UnitCode">Enhancement</span>
+                                </div>
+                                <span class="FactionBadge sera">Seraphim</span>
+                            </div>
+                        </div>
+                        <div class="ChangeTypeBadge nerf">Nerf</div>
+                    </header>
+
+                    <!-- Card Content Section -->
+                    <div class="PatchCardContent">
+                        <p class="ChangeDescription">Increase build time for ACU TMLs so that they are less effective on the move, in combat, and from the water. You can still reach a high fire rate with engineer assistance. The increased minimum range makes ACU TMLs less powerful in ACU vs ACU fights.</p>
+
+                        <div class="ChangesList">
+                            <!-- Weapon Changes -->
+                            <div class="ChangeGroup">
+                                <h4 class="ChangeGroupTitle">
+                                    Weapon
+                                </h4>
+                                <ul class="Changes">
+                                    <li class="sub-header"><strong>Laanse Tactical Missile:</strong></li>
+                                    <li class="nerf">
+                                        <span class="ChangeLabel">Missile Build Time:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">450</s> 
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                            <strong class="NewValue">700 (same as SACU)</strong>
+                                        </span>
+                                    </li>
+                                    <li class="nerf">
+                                        <span class="ChangeLabel">Build Time with T2 Suite:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">10.8s</s> 
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                            <strong class="NewValue">16.7s</strong>
+                                        </span>
+                                    </li>
+                                    <li class="nerf">
+                                        <span class="ChangeLabel">Build Time with T3 Suite:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">4.5s</s> 
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                            <strong class="NewValue">7.0s</strong>
+                                        </span>
+                                    </li>
+                                    <li class="nerf">
+                                        <span class="ChangeLabel">Minimum Range:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">15</s> 
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                            <strong class="NewValue">30</strong>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article id="uef_tml" class="PatchCard">
+                    <!-- Card Header Section -->
+                    <header class="PatchCardHeader">
+                        <div class="UnitInfo">
+                            <img src="/assets/images/Enhancements/uef/tml.png" class="UnitIcon" alt="Tactical Missile Launcher"/>
+                            <div class="UnitDetails">
+                                <div class="UnitNameRow">
+                                    <h3 class="UnitName">Tactical Missile Launcher</h3>
+                                    <span class="UnitCode">Enhancement</span>
+                                </div>
+                                <span class="FactionBadge uef">UEF</span>
+                            </div>
+                        </div>
+                        <div class="ChangeTypeBadge nerf">Nerf</div>
+                    </header>
+
+                    <!-- Card Content Section -->
+                    <div class="PatchCardContent">
+                        <p class="ChangeDescription">Increase build time for ACU TMLs so that they are less effective on the move, in combat, and from the water. You can still reach a high fire rate with engineer assistance. The increased minimum range makes ACU TMLs less powerful in ACU vs ACU fights. The minimum range for both TML and Billy nuke has been increased so that the TML's minimum range ring is visible.</p>
+
+                        <div class="ChangesList">
+                            <!-- Weapon Changes -->
+                            <div class="ChangeGroup">
+                                <h4 class="ChangeGroupTitle">
+                                    Weapon
+                                </h4>
+                                <ul class="Changes">
+                                    <li class="sub-header"><strong>Tactical Missile & Billy Nuke:</strong></li>
+                                    <li class="nerf">
+                                        <span class="ChangeLabel">Missile Build Time:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">450</s> 
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                            <strong class="NewValue">700 (same as SACU)</strong>
+                                        </span>
+                                    </li>
+                                    <li class="nerf">
+                                        <span class="ChangeLabel">Build Time with T2 Suite:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">10.8s</s> 
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                            <strong class="NewValue">16.7s</strong>
+                                        </span>
+                                    </li>
+                                    <li class="nerf">
+                                        <span class="ChangeLabel">Build Time with T3 Suite:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">4.5s</s> 
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                            <strong class="NewValue">7.0s</strong>
+                                        </span>
+                                    </li>
+                                    <li class="nerf">
+                                        <span class="ChangeLabel">Minimum Range (TML & Billy):</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">15</s> 
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                            <strong class="NewValue">30</strong>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+            </section>
+
+            <section id="Structures">
+                <h2>Structures</h2>
+
+                <article id="novax_center" class="PatchCard">
+                    <!-- Card Header Section -->
+                    <header class="PatchCardHeader">
+                        <div class="UnitInfo">
+                            <img src="/assets/images/units/uef/structure/T3SatelliteCenter.png" class="UnitIcon" alt="Novax Center"/>
+                            <div class="UnitDetails">
+                                <div class="UnitNameRow">
+                                    <h3 class="UnitName">Novax Center</h3>
+                                    <span class="UnitCode">XEB2402</span>
+                                </div>
+                                <span class="FactionBadge uef">UEF</span>
+                            </div>
+                        </div>
+                        <div class="ChangeTypeBadge buff">Buff</div>
+                    </header>
+
+                    <!-- Card Content Section -->
+                    <div class="PatchCardContent">
+                        <p class="ChangeDescription">Automatically start rebuilding the Novax Satellite at the base station if the satellite is destroyed by artillery fire, nuclear missiles, or any other means.</p>
+
+                        <div class="ChangesList">
+                            <!-- Display Changes -->
+                            <div class="ChangeGroup">
+                                <h4 class="ChangeGroupTitle">
+                                    Display
+                                </h4>
+                                <ul class="Changes">
+                                    <li class="buff">
+                                        <span class="ChangeLabel">Satellite Rebuild:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">False</s> 
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                            <strong class="NewValue">True</strong>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article id="cybran_hqs" class="PatchCard">
+                    <!-- Card Header Section -->
+                    <header class="PatchCardHeader">
+                        <div class="UnitInfo">
+                            <img src="/assets/images/units/cybran/structure/T2AirHQ.png" class="UnitIcon" alt="Cybran HQs"/>
+                            <div class="UnitDetails">
+                                <div class="UnitNameRow">
+                                    <h3 class="UnitName">T2 Air & Land HQs</h3>
+                                    <span class="UnitCode">T2 HQ Structures</span>
+                                </div>
+                                <span class="FactionBadge cybran">Cybran</span>
+                            </div>
+                        </div>
+                        <div class="ChangeTypeBadge buff">Buff</div>
+                    </header>
+
+                    <!-- Card Content Section -->
+                    <div class="PatchCardContent">
+                        <p class="ChangeDescription">Adjust HP of T2 Air/Land HQs so that Cybran T2 HQs do not die to 1 TML hit. This prevents Cybran players from being unfairly locked out of the tech needed to counter TMLs.</p>
+
+                        <div class="ChangesList">
+                            <!-- Defence Changes -->
+                            <div class="ChangeGroup">
+                                <h4 class="ChangeGroupTitle">
+                                    Defence
+                                </h4>
+                                <ul class="Changes">
+                                    <li class="buff">
+                                        <span class="ChangeLabel">Health:</span>
+                                        <span class="ChangeValue">
+                                            <strong class="NewValue">Increased to survive 1 TML hit</strong>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+            </section>
+
+        </div>
+
+        <aside class="Sidebar" role="navigation" aria-label="Quick Navigation">
+            <div class="ContentSidemenu">
+                <!-- Quick Navigation Header -->
+                <header class="SidemenuHeader">
+                    <h2 class="SidemenuTitle">
+                        <i class="fas fa-list-ul" aria-hidden="true"></i>
+                        Quick Navigation
+                    </h2>
+                    <div class="ProgressBar">
+                        <div class="ProgressFill" id="readingProgress"></div>
+                    </div>
+                </header>
+
+                <!-- Quick Actions Panel -->
+                <div class="QuickActions">
+                    <button class="QuickActionBtn" onclick="scrollToTop()" title="Back to Top">
+                        <i class="fas fa-arrow-up"></i>
+                        <span>Top</span>
+                    </button>
+                    <button class="QuickActionBtn" onclick="toggleAllSections()" title="Expand/Collapse All">
+                        <i class="fas fa-expand-arrows-alt"></i>
+                        <span>Toggle</span>
+                    </button>
+                    <button class="QuickActionBtn" onclick="printPage()" title="Print Page">
+                        <i class="fas fa-print"></i>
+                        <span>Print</span>
+                    </button>
+                </div>
+
+                <!-- Content Navigation -->
+                <nav class="ContentNav" role="navigation">
+                    <!-- Intro Section -->
+                    <div class="NavSection active">
+                        <button class="SectionToggle" aria-expanded="true" data-target="intro-items">
+                            <i class="fas fa-info-circle SectionIcon"></i>
+                            <span class="SectionTitle">Introduction</span>
+                            <span class="ItemCount">1</span>
+                            <i class="fas fa-chevron-down ToggleIcon"></i>
+                        </button>
+                        <ul class="SectionItems" id="intro-items">
+                            <li class="NavItem">
+                                <a href="#Intro" class="NavLink">
+                                    <i class="fas fa-scroll"></i>
+                                    <span>Patch Overview</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Land Units Section -->
+                    <div class="NavSection active">
+                        <button class="SectionToggle" aria-expanded="true" data-target="land-items">
+                            <i class="fas fa-tank SectionIcon"></i>
+                            <span class="SectionTitle">Land Units</span>
+                            <span class="ItemCount">4</span>
+                            <i class="fas fa-chevron-down ToggleIcon"></i>
+                        </button>
+                        <ul class="SectionItems" id="land-items">
+                            <li class="NavItem">
+                                <a href="#land_scouts" class="NavLink">
+                                    <img src="/assets/images/units/aeon/land/T1Scout.png" class="UnitThumb" alt="Land Scouts"/>
+                                    <div class="LinkContent">
+                                        <span class="UnitName">Land Scouts</span>
+                                        <span class="ChangeType buff">Buff</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="NavItem">
+                                <a href="#firebeetle" class="NavLink">
+                                    <img src="/assets/images/units/cybran/land/T2MobileBomb.png" class="UnitThumb" alt="Fire Beetle"/>
+                                    <div class="LinkContent">
+                                        <span class="UnitName">Fire Beetle</span>
+                                        <span class="ChangeType nerf">Nerf</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="NavItem">
+                                <a href="#suthanus" class="NavLink">
+                                    <img src="/assets/images/units/sera/land/T3MobileAA.png" class="UnitThumb" alt="Suthanus"/>
+                                    <div class="LinkContent">
+                                        <span class="UnitName">Suthanus</span>
+                                        <span class="ChangeType buff">Buff</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="NavItem">
+                                <a href="#megalith" class="NavLink">
+                                    <img src="/assets/images/units/cybran/land/T3MegaBot.png" class="UnitThumb" alt="Megalith"/>
+                                    <div class="LinkContent">
+                                        <span class="UnitName">Megalith</span>
+                                        <span class="ChangeType buff">Buff</span>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Naval Units Section -->
+                    <div class="NavSection active">
+                        <button class="SectionToggle" aria-expanded="true" data-target="naval-items">
+                            <i class="fas fa-ship SectionIcon"></i>
+                            <span class="SectionTitle">Naval Units</span>
+                            <span class="ItemCount">1</span>
+                            <i class="fas fa-chevron-down ToggleIcon"></i>
+                        </button>
+                        <ul class="SectionItems" id="naval-items">
+                            <li class="NavItem">
+                                <a href="#salem" class="NavLink">
+                                    <img src="/assets/images/units/aeon/naval/T3Battleship.png" class="UnitThumb" alt="Salem Class"/>
+                                    <div class="LinkContent">
+                                        <span class="UnitName">Salem Class</span>
+                                        <span class="ChangeType buff">Buff</span>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Air Units Section -->
+                    <div class="NavSection active">
+                        <button class="SectionToggle" aria-expanded="true" data-target="air-items">
+                            <i class="fas fa-plane SectionIcon"></i>
+                            <span class="SectionTitle">Air Units</span>
+                            <span class="ItemCount">4</span>
+                            <i class="fas fa-chevron-down ToggleIcon"></i>
+                        </button>
+                        <ul class="SectionItems" id="air-items">
+                            <li class="NavItem">
+                                <a href="#aeon_strat_bomber" class="NavLink">
+                                    <img src="/assets/images/units/aeon/air/T3StratBomber.png" class="UnitThumb" alt="Ambassador"/>
+                                    <div class="LinkContent">
+                                        <span class="UnitName">Ambassador</span>
+                                        <span class="ChangeType buff">Buff</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="NavItem">
+                                <a href="#cybran_strat_bomber" class="NavLink">
+                                    <img src="/assets/images/units/cybran/air/T3StratBomber.png" class="UnitThumb" alt="Strategic Bomber"/>
+                                    <div class="LinkContent">
+                                        <span class="UnitName">Strategic Bomber</span>
+                                        <span class="ChangeType buff">Buff</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="NavItem">
+                                <a href="#uef_strat_bomber" class="NavLink">
+                                    <img src="/assets/images/units/uef/air/T3StratBomber.png" class="UnitThumb" alt="Ambassador"/>
+                                    <div class="LinkContent">
+                                        <span class="UnitName">Ambassador</span>
+                                        <span class="ChangeType buff">Buff</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="NavItem">
+                                <a href="#sera_strat_bomber" class="NavLink">
+                                    <img src="/assets/images/units/sera/air/T3StratBomber.png" class="UnitThumb" alt="Sinntha"/>
+                                    <div class="LinkContent">
+                                        <span class="UnitName">Sinntha</span>
+                                        <span class="ChangeType buff">Buff</span>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- ACU & SACU Section -->
+                    <div class="NavSection active">
+                        <button class="SectionToggle" aria-expanded="true" data-target="acu-items">
+                            <i class="fas fa-robot SectionIcon"></i>
+                            <span class="SectionTitle">ACU & SACU</span>
+                            <span class="ItemCount">2</span>
+                            <i class="fas fa-chevron-down ToggleIcon"></i>
+                        </button>
+                        <ul class="SectionItems" id="acu-items">
+                            <li class="NavItem">
+                                <a href="#sera_tml" class="NavLink">
+                                    <img src="/assets/images/Enhancements/sera/tml.png" class="UnitThumb" alt="Sera TML"/>
+                                    <div class="LinkContent">
+                                        <span class="UnitName">TML (Sera)</span>
+                                        <span class="ChangeType nerf">Nerf</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="NavItem">
+                                <a href="#uef_tml" class="NavLink">
+                                    <img src="/assets/images/Enhancements/uef/tml.png" class="UnitThumb" alt="UEF TML"/>
+                                    <div class="LinkContent">
+                                        <span class="UnitName">TML (UEF)</span>
+                                        <span class="ChangeType nerf">Nerf</span>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Structures Section -->
+                    <div class="NavSection active">
+                        <button class="SectionToggle" aria-expanded="true" data-target="structures-items">
+                            <i class="fas fa-building SectionIcon"></i>
+                            <span class="SectionTitle">Structures</span>
+                            <span class="ItemCount">2</span>
+                            <i class="fas fa-chevron-down ToggleIcon"></i>
+                        </button>
+                        <ul class="SectionItems" id="structures-items">
+                            <li class="NavItem">
+                                <a href="#novax_center" class="NavLink">
+                                    <img src="/assets/images/units/uef/structure/T3SatelliteCenter.png" class="UnitThumb" alt="Novax Center"/>
+                                    <div class="LinkContent">
+                                        <span class="UnitName">Novax Center</span>
+                                        <span class="ChangeType buff">Buff</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="NavItem">
+                                <a href="#cybran_hqs" class="NavLink">
+                                    <img src="/assets/images/units/cybran/structure/T2LandHQ.png" class="UnitThumb" alt="Cybran HQs"/>
+                                    <div class="LinkContent">
+                                        <span class="UnitName">T2 HQs</span>
+                                        <span class="ChangeType buff">Buff</span>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Other Section -->
+                    <div class="NavSection active">
+                        <button class="SectionToggle" aria-expanded="true" data-target="other-items">
+                            <i class="fas fa-cogs SectionIcon"></i>
+                            <span class="SectionTitle">Other</span>
+                            <span class="ItemCount">1</span>
+                            <i class="fas fa-chevron-down ToggleIcon"></i>
+                        </button>
+                        <ul class="SectionItems" id="other-items">
+                            <li class="NavItem">
+                                <a href="#mechanics" class="NavLink">
+                                    <img src="/assets/images/orders/mechanic.png" class="UnitThumb" alt="Game Mechanics"/>
+                                    <div class="LinkContent">
+                                        <span class="UnitName">Game Mechanics</span>
+                                        <span class="ChangeType nerf">Nerf</span>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+
+                <!-- Footer Info -->
+                <div class="SidemenuFooter">
+                    <div class="PatchStats">
+                        <div class="StatItem">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span>August 15, 2025</span>
+                        </div>
+                        <div class="StatItem">
+                            <i class="fas fa-balance-scale"></i>
+                            <span>14 Changes</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+    </main>
+
+    <footer class="SiteFooter">
+        <div class="FooterContainer">
+            <!-- Navigation Section -->
+            <div class="FooterSection">
+                <h4 class="FooterTitle">Navigation</h4>
+                <nav class="FooterNav">
+                    <a href="/index.html" class="FooterLink">
+                        <i class="fas fa-home" aria-hidden="true"></i>
+                        All Patch Notes
+                    </a>
+                    <a href="#top" class="FooterLink BackToTopLink">
+                        <i class="fas fa-arrow-up" aria-hidden="true"></i>
+                        Back to Top
+                    </a>
+                </nav>
+            </div>
+
+            <!-- Quick Actions Section -->
+            <div class="FooterSection">
+                <h4 class="FooterTitle">Quick Actions</h4>
+                <div class="FooterActions">
+                    <button id="themeToggleButton" class="ThemeToggle">
+                        <i class="fas fa-palette" aria-hidden="true"></i>
+                        <span class="ToggleText">Toggle Theme</span>
+                    </button>
+                    <button class="PrintButton" onclick="window.print()">
+                        <i class="fas fa-print" aria-hidden="true"></i>
+                        <span>Print Page</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- About Section -->
+            <div class="FooterSection">
+                <h4 class="FooterTitle">About</h4>
+                <div class="FooterInfo">
+                    <p class="PatchInfo">
+                        <strong>Patch 3825</strong><br>
+                        Released: August 15th, 2025
+                    </p>
+                    <p class="Copyright">
+                        © 2015-2025 <strong>FAForever</strong><br>
+                        Community-driven balance updates
+                    </p>
+                </div>
+            </div>
+
+            <!-- Social/Links Section -->
+            <div class="FooterSection">
+                <h4 class="FooterTitle">Community</h4>
+                <div class="FooterLinks">
+                    <a href="https://www.faforever.com" class="FooterLink External" target="_blank" rel="noopener">
+                        <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+                        FAForever.com
+                    </a>
+                    <a href="https://discord.gg/mXahAXy" class="FooterLink External" target="_blank" rel="noopener">
+                        <i class="fab fa-discord" aria-hidden="true"></i>
+                        Discord
+                    </a>
+                    <a href="https://github.com/FAForever" class="FooterLink External" target="_blank" rel="noopener">
+                        <i class="fab fa-github" aria-hidden="true"></i>
+                        GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="FooterBottom">
+            <div class="FooterBottomContent">
+                <span class="LastUpdated">Last updated: <time datetime="2025-08-15">August 15th, 2025</time></span>
+                <span class="BuildInfo">Balance Team • Patch Notes v3825</span>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
