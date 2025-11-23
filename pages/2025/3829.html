@@ -838,7 +838,7 @@
                             <div class="UnitDetails">
                                 <div class="UnitNameRow">
                                     <h3 class="UnitName">T2 Air & Land HQs</h3>
-                                    <span class="UnitCode">T2 HQ Structures</span>
+                                    <span class="UnitCode">URB0201, URB0202</span>
                                 </div>
                                 <span class="FactionBadge cybran">Cybran</span>
                             </div>
@@ -860,7 +860,99 @@
                                     <li class="buff">
                                         <span class="ChangeLabel">Health:</span>
                                         <span class="ChangeValue">
-                                            <strong class="NewValue">Increased to survive 1 TML hit</strong>
+                                            <s class="OldValue">5.5k</s> 
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                            <strong class="NewValue">6.1k</strong>
+                                        </span>
+                                    </li>
+                                    <li class="nerf">
+                                        <span class="ChangeLabel">Regen Rate:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">20</s> 
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                            <strong class="NewValue">15</strong>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article id="aeon_hqs" class="PatchCard">
+                    <!-- Card Header Section -->
+                    <header class="PatchCardHeader">
+                        <div class="UnitInfo">
+                            <img src="/assets/images/units/aeon/structure/T2LandFactoryHQ.png" class="UnitIcon" alt="Aeon HQs"/>
+                            <div class="UnitDetails">
+                                <div class="UnitNameRow">
+                                    <h3 class="UnitName">T2 Air & Land HQs</h3>
+                                    <span class="UnitCode">UAB0201, UAB0202</span>
+                                </div>
+                                <span class="FactionBadge aeon">Aeon</span>
+                            </div>
+                        </div>
+                        <div class="ChangeTypeBadge buff">Buff</div>
+                    </header>
+
+                    <!-- Card Content Section -->
+                    <div class="PatchCardContent">
+                        <p class="ChangeDescription">Adjust HP of T2 Air/Land HQs so that Cybran T2 HQs do not die to 1 TML hit. This prevents Cybran players from being unfairly locked out of the tech needed to counter TMLs.</p>
+
+                        <div class="ChangesList">
+                            <!-- Defence Changes -->
+                            <div class="ChangeGroup">
+                                <h4 class="ChangeGroupTitle">
+                                    Defence
+                                </h4>
+                                <ul class="Changes">
+                                    <li class="buff">
+                                        <span class="ChangeLabel">Health:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">6.4k</s> 
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                            <strong class="NewValue">6.6k</strong>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article id="sera_hqs" class="PatchCard">
+                    <!-- Card Header Section -->
+                    <header class="PatchCardHeader">
+                        <div class="UnitInfo">
+                            <img src="/assets/images/units/sera/structure/T2LandFacHQ.png" class="UnitIcon" alt="Seraphim HQs"/>
+                            <div class="UnitDetails">
+                                <div class="UnitNameRow">
+                                    <h3 class="UnitName">T2 Air & Land HQs</h3>
+                                    <span class="UnitCode">XSB0201, XSB0202</span>
+                                </div>
+                                <span class="FactionBadge sera">Seraphim</span>
+                            </div>
+                        </div>
+                        <div class="ChangeTypeBadge buff">Buff</div>
+                    </header>
+
+                    <!-- Card Content Section -->
+                    <div class="PatchCardContent">
+                        <p class="ChangeDescription">Adjust HP of T2 Air/Land HQs so that Cybran T2 HQs do not die to 1 TML hit. This prevents Cybran players from being unfairly locked out of the tech needed to counter TMLs.</p>
+
+                        <div class="ChangesList">
+                            <!-- Defence Changes -->
+                            <div class="ChangeGroup">
+                                <h4 class="ChangeGroupTitle">
+                                    Defence
+                                </h4>
+                                <ul class="Changes">
+                                    <li class="buff">
+                                        <span class="ChangeLabel">Health:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">7k</s> 
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                            <strong class="NewValue">7.2k</strong>
                                         </span>
                                     </li>
                                 </ul>
@@ -1074,7 +1166,7 @@
                         <button class="SectionToggle" aria-expanded="true" data-target="structures-items">
                             <i class="fas fa-building SectionIcon"></i>
                             <span class="SectionTitle">Structures</span>
-                            <span class="ItemCount">2</span>
+                            <span class="ItemCount">4</span>
                             <i class="fas fa-chevron-down ToggleIcon"></i>
                         </button>
                         <ul class="SectionItems" id="structures-items">
@@ -1091,7 +1183,25 @@
                                 <a href="#cybran_hqs" class="NavLink">
                                     <img src="/assets/images/units/cybran/structure/T2LandFacHQ.png" class="UnitThumb" alt="Cybran HQs"/>
                                     <div class="LinkContent">
-                                        <span class="UnitName">T2 HQs</span>
+                                        <span class="UnitName">T2 HQs (Cybran)</span>
+                                        <span class="ChangeType buff">Buff</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="NavItem">
+                                <a href="#aeon_hqs" class="NavLink">
+                                    <img src="/assets/images/units/aeon/structure/T2LandFactoryHQ.png" class="UnitThumb" alt="Aeon HQs"/>
+                                    <div class="LinkContent">
+                                        <span class="UnitName">T2 HQs (Aeon)</span>
+                                        <span class="ChangeType buff">Buff</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="NavItem">
+                                <a href="#sera_hqs" class="NavLink">
+                                    <img src="/assets/images/units/sera/structure/T2LandFacHQ.png" class="UnitThumb" alt="Seraphim HQs"/>
+                                    <div class="LinkContent">
+                                        <span class="UnitName">T2 HQs (Seraphim)</span>
                                         <span class="ChangeType buff">Buff</span>
                                     </div>
                                 </a>
