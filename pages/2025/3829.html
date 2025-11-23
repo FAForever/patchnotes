@@ -61,25 +61,7 @@
 
                     <!-- Card Content Section -->
                     <div class="PatchCardContent">
-                        <p class="ChangeDescription">Land scouts now prioritize radar over mobiles and ignore PD and static AA.</p>
-
-                        <div class="ChangesList">
-                            <div class="ChangeGroup">
-                                <h4 class="ChangeGroupTitle">
-                                    Intel
-                                </h4>
-                                <ul class="Changes">
-                                    <li class="buff">
-                                        <span class="ChangeLabel">Vision Radius:</span>
-                                        <span class="ChangeValue">
-                                            <s class="OldValue">18</s> 
-                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
-                                            <strong class="NewValue">22</strong>
-                                        </span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
+                        <p class="ChangeDescription">Land scouts now prioritize radar over mobiles and PD and static AA.</p>
                     </div>
                 </article>
 
@@ -96,7 +78,7 @@
                                 <span class="FactionBadge cybran">Cybran</span>
                             </div>
                         </div>
-                        <div class="ChangeTypeBadge buff">Buff</div>
+                        <div class="ChangeTypeBadge nerf">Nerf</div>
                     </header>
 
                     <!-- Card Content Section -->
@@ -196,13 +178,13 @@
                     <!-- Card Header Section -->
                     <header class="PatchCardHeader">
                         <div class="UnitInfo">
-                            <img src="/assets/images/units/aeon/naval/T3Battleship.png" class="UnitIcon" alt="Salem Class"/>
+                            <img src="/assets/images/units/cybran/naval/T2Destoryer.png" class="UnitIcon" alt="Salem Class"/>
                             <div class="UnitDetails">
                                 <div class="UnitNameRow">
                                     <h3 class="UnitName">Salem Class</h3>
-                                    <span class="UnitCode">UAS0302</span>
+                                    <span class="UnitCode">URS0201</span>
                                 </div>
-                                <span class="FactionBadge aeon">Aeon</span>
+                                <span class="FactionBadge cybran">Cybran</span>
                             </div>
                         </div>
                         <div class="ChangeTypeBadge buff">Buff</div>
@@ -239,323 +221,17 @@
             <section id="Air">
                 <h2>Air Units</h2>
 
-                <article id="aeon_strat_bomber" class="PatchCard">
+                <article id="strat_bombers" class="PatchCard">
                     <!-- Card Header Section -->
                     <header class="PatchCardHeader">
                         <div class="UnitInfo">
-                            <img src="/assets/images/units/aeon/air/T3Strat.png" class="UnitIcon" alt="Shocker"/>
+                            <img src="/assets/images/units/aeon/air/T3Strat.png" class="UnitIcon" alt="Strategic Bombers"/>
                             <div class="UnitDetails">
                                 <div class="UnitNameRow">
-                                    <h3 class="UnitName">Shocker</h3>
-                                    <span class="UnitCode">UAA0304</span>
+                                    <h3 class="UnitName">Strategic Bombers</h3>
+                                    <span class="UnitCode">T3 Strategic Bombers</span>
                                 </div>
-                                <span class="FactionBadge aeon">Aeon</span>
-                            </div>
-                        </div>
-                        <div class="ChangeTypeBadge buff">Buff</div>
-                    </header>
-
-                    <!-- Card Content Section -->
-                    <div class="PatchCardContent">
-                        <p class="ChangeDescription">Improve the maneuverability and reliability of Strategic Bombers to promote proactive use and compete with T3 gunships. Enhanced turn speed and lift factor allow strats to micro more effectively to avoid flak damage and reduce opportunities for ASF/SAMs to deal damage. The improved bomb drop threshold greatly increases reliability on uneven terrain or during turns, though bombs may drop from further away, making ACU dodging easier. Auto-attack range reduced to match radar range. Veterancy requirements adjusted to reflect previous mass cost reductions.</p>
-
-                        <div class="ChangesList">
-                            <div class="ChangeGroup">
-                                <h4 class="ChangeGroupTitle">
-                                    Combat Stats
-                                </h4>
-                                <ul class="Changes">
-                                    <li class="buff">
-                                        <span class="ChangeLabel">Turn Speed:</span>
-                                        <span class="ChangeValue">
-                                            <s class="OldValue">0.8</s> 
-                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
-                                            <strong class="NewValue">1.2</strong>
-                                        </span>
-                                    </li>
-                                    <li class="buff">
-                                        <span class="ChangeLabel">Lift Factor:</span>
-                                        <span class="ChangeValue">
-                                            <s class="OldValue">7</s> 
-                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
-                                            <strong class="NewValue">10</strong>
-                                        </span>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="ChangeGroup">
-                                <h4 class="ChangeGroupTitle">
-                                    Weapon
-                                </h4>
-                                <ul class="Changes">
-                                    <li class="buff">
-                                        <span class="ChangeLabel">Bomb Drop Threshold:</span>
-                                        <span class="ChangeValue">
-                                            <s class="OldValue">3.5</s> 
-                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
-                                            <strong class="NewValue">8</strong>
-                                        </span>
-                                    </li>
-                                    <li class="buff">
-                                        <span class="ChangeLabel">Break Off Distance:</span>
-                                        <span class="ChangeValue">
-                                            <s class="OldValue">60</s> 
-                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
-                                            <strong class="NewValue">50</strong>
-                                        </span>
-                                    </li>
-                                    <li class="buff">
-                                        <span class="ChangeLabel">Random Break Off Distance Mult:</span>
-                                        <span class="ChangeValue">
-                                            <s class="OldValue">1.5</s> 
-                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
-                                            <strong class="NewValue">1</strong>
-                                        </span>
-                                    </li>
-                                    <li class="nerf">
-                                        <span class="ChangeLabel">Auto-attack Range:</span>
-                                        <span class="ChangeValue">
-                                            <s class="OldValue">90</s> 
-                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
-                                            <strong class="NewValue">64</strong>
-                                        </span>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="ChangeGroup">
-                                <h4 class="ChangeGroupTitle">
-                                    Veterancy
-                                </h4>
-                                <ul class="Changes">
-                                    <li class="buff">
-                                        <span class="ChangeLabel">Mass Killed per Level:</span>
-                                        <span class="ChangeValue">
-                                            <s class="OldValue">4200</s> 
-                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
-                                            <strong class="NewValue">3500 (2x own mass)</strong>
-                                        </span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-
-                <article id="cybran_strat_bomber" class="PatchCard">
-                    <!-- Card Header Section -->
-                    <header class="PatchCardHeader">
-                        <div class="UnitInfo">
-                            <img src="/assets/images/units/cybran/air/T3Strat.png" class="UnitIcon" alt="Revenant"/>
-                            <div class="UnitDetails">
-                                <div class="UnitNameRow">
-                                    <h3 class="UnitName">Revenant</h3>
-                                    <span class="UnitCode">URA0304</span>
-                                </div>
-                                <span class="FactionBadge cybran">Cybran</span>
-                            </div>
-                        </div>
-                        <div class="ChangeTypeBadge buff">Buff</div>
-                    </header>
-
-                    <!-- Card Content Section -->
-                    <div class="PatchCardContent">
-                        <p class="ChangeDescription">Improve the maneuverability and reliability of Strategic Bombers to promote proactive use and compete with T3 gunships. Enhanced turn speed and lift factor allow strats to micro more effectively to avoid flak damage and reduce opportunities for ASF/SAMs to deal damage. The improved bomb drop threshold greatly increases reliability on uneven terrain or during turns, though bombs may drop from further away, making ACU dodging easier. Auto-attack range reduced to match radar range. Veterancy requirements adjusted to reflect previous mass cost reductions.</p>
-
-                        <div class="ChangesList">
-                            <div class="ChangeGroup">
-                                <h4 class="ChangeGroupTitle">
-                                    Combat Stats
-                                </h4>
-                                <ul class="Changes">
-                                    <li class="buff">
-                                        <span class="ChangeLabel">Turn Speed:</span>
-                                        <span class="ChangeValue">
-                                            <s class="OldValue">0.8</s> 
-                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
-                                            <strong class="NewValue">1.2</strong>
-                                        </span>
-                                    </li>
-                                    <li class="buff">
-                                        <span class="ChangeLabel">Lift Factor:</span>
-                                        <span class="ChangeValue">
-                                            <s class="OldValue">7</s> 
-                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
-                                            <strong class="NewValue">10</strong>
-                                        </span>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="ChangeGroup">
-                                <h4 class="ChangeGroupTitle">
-                                    Weapon
-                                </h4>
-                                <ul class="Changes">
-                                    <li class="buff">
-                                        <span class="ChangeLabel">Bomb Drop Threshold:</span>
-                                        <span class="ChangeValue">
-                                            <s class="OldValue">3.5</s> 
-                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
-                                            <strong class="NewValue">8</strong>
-                                        </span>
-                                    </li>
-                                    <li class="buff">
-                                        <span class="ChangeLabel">Break Off Distance:</span>
-                                        <span class="ChangeValue">
-                                            <s class="OldValue">60</s> 
-                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
-                                            <strong class="NewValue">50</strong>
-                                        </span>
-                                    </li>
-                                    <li class="buff">
-                                        <span class="ChangeLabel">Random Break Off Distance Mult:</span>
-                                        <span class="ChangeValue">
-                                            <s class="OldValue">1.5</s> 
-                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
-                                            <strong class="NewValue">1</strong>
-                                        </span>
-                                    </li>
-                                    <li class="nerf">
-                                        <span class="ChangeLabel">Auto-attack Range:</span>
-                                        <span class="ChangeValue">
-                                            <s class="OldValue">90</s> 
-                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
-                                            <strong class="NewValue">64</strong>
-                                        </span>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="ChangeGroup">
-                                <h4 class="ChangeGroupTitle">
-                                    Veterancy
-                                </h4>
-                                <ul class="Changes">
-                                    <li class="buff">
-                                        <span class="ChangeLabel">Mass Killed per Level:</span>
-                                        <span class="ChangeValue">
-                                            <s class="OldValue">4200</s> 
-                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
-                                            <strong class="NewValue">3500 (2x own mass)</strong>
-                                        </span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-
-                <article id="uef_strat_bomber" class="PatchCard">
-                    <!-- Card Header Section -->
-                    <header class="PatchCardHeader">
-                        <div class="UnitInfo">
-                            <img src="/assets/images/units/uef/air/T3Strat.png" class="UnitIcon" alt="Ambassador"/>
-                            <div class="UnitDetails">
-                                <div class="UnitNameRow">
-                                    <h3 class="UnitName">Ambassador</h3>
-                                    <span class="UnitCode">UEA0304</span>
-                                </div>
-                                <span class="FactionBadge uef">UEF</span>
-                            </div>
-                        </div>
-                        <div class="ChangeTypeBadge buff">Buff</div>
-                    </header>
-
-                    <!-- Card Content Section -->
-                    <div class="PatchCardContent">
-                        <p class="ChangeDescription">Improve the maneuverability and reliability of Strategic Bombers to promote proactive use and compete with T3 gunships. Enhanced turn speed and lift factor allow strats to micro more effectively to avoid flak damage and reduce opportunities for ASF/SAMs to deal damage. The improved bomb drop threshold greatly increases reliability on uneven terrain or during turns, though bombs may drop from further away, making ACU dodging easier. Auto-attack range reduced to match radar range. Veterancy requirements adjusted to reflect previous mass cost reductions.</p>
-
-                        <div class="ChangesList">
-                            <div class="ChangeGroup">
-                                <h4 class="ChangeGroupTitle">
-                                    Combat Stats
-                                </h4>
-                                <ul class="Changes">
-                                    <li class="buff">
-                                        <span class="ChangeLabel">Turn Speed:</span>
-                                        <span class="ChangeValue">
-                                            <s class="OldValue">0.8</s> 
-                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
-                                            <strong class="NewValue">1.2</strong>
-                                        </span>
-                                    </li>
-                                    <li class="buff">
-                                        <span class="ChangeLabel">Lift Factor:</span>
-                                        <span class="ChangeValue">
-                                            <s class="OldValue">7</s> 
-                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
-                                            <strong class="NewValue">10</strong>
-                                        </span>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="ChangeGroup">
-                                <h4 class="ChangeGroupTitle">
-                                    Weapon
-                                </h4>
-                                <ul class="Changes">
-                                    <li class="buff">
-                                        <span class="ChangeLabel">Bomb Drop Threshold:</span>
-                                        <span class="ChangeValue">
-                                            <s class="OldValue">3.5</s> 
-                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
-                                            <strong class="NewValue">8</strong>
-                                        </span>
-                                    </li>
-                                    <li class="buff">
-                                        <span class="ChangeLabel">Break Off Distance:</span>
-                                        <span class="ChangeValue">
-                                            <s class="OldValue">60</s> 
-                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
-                                            <strong class="NewValue">50</strong>
-                                        </span>
-                                    </li>
-                                    <li class="buff">
-                                        <span class="ChangeLabel">Random Break Off Distance Mult:</span>
-                                        <span class="ChangeValue">
-                                            <s class="OldValue">1.5</s> 
-                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
-                                            <strong class="NewValue">1</strong>
-                                        </span>
-                                    </li>
-                                    <li class="nerf">
-                                        <span class="ChangeLabel">Auto-attack Range:</span>
-                                        <span class="ChangeValue">
-                                            <s class="OldValue">90</s> 
-                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
-                                            <strong class="NewValue">64</strong>
-                                        </span>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="ChangeGroup">
-                                <h4 class="ChangeGroupTitle">
-                                    Veterancy
-                                </h4>
-                                <ul class="Changes">
-                                    <li class="buff">
-                                        <span class="ChangeLabel">Mass Killed per Level:</span>
-                                        <span class="ChangeValue">
-                                            <s class="OldValue">4200</s> 
-                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
-                                            <strong class="NewValue">3500 (2x own mass)</strong>
-                                        </span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-
-                <article id="sera_strat_bomber" class="PatchCard">
-                    <!-- Card Header Section -->
-                    <header class="PatchCardHeader">
-                        <div class="UnitInfo">
-                            <img src="/assets/images/units/sera/air/T3Strat.png" class="UnitIcon" alt="Sinntha"/>
-                            <div class="UnitDetails">
-                                <div class="UnitNameRow">
-                                    <h3 class="UnitName">Sinntha</h3>
-                                    <span class="UnitCode">XSA0304</span>
-                                </div>
-                                <span class="FactionBadge sera">Seraphim</span>
+                                <span class="FactionBadge universal">Universal</span>
                             </div>
                         </div>
                         <div class="ChangeTypeBadge buff">Buff</div>
@@ -843,7 +519,7 @@
                                 <span class="FactionBadge cybran">Cybran</span>
                             </div>
                         </div>
-                        <div class="ChangeTypeBadge buff">Buff</div>
+                        <div class="ChangeTypeBadge mixed">Mixed</div>
                     </header>
 
                     <!-- Card Content Section -->
@@ -1073,7 +749,7 @@
                         <ul class="SectionItems" id="naval-items">
                             <li class="NavItem">
                                 <a href="#salem" class="NavLink">
-                                    <img src="/assets/images/units/aeon/naval/T3Battleship.png" class="UnitThumb" alt="Salem Class"/>
+                                    <img src="/assets/images/units/cybran/naval/T2Destoryer.png" class="UnitThumb" alt="Salem Class"/>
                                     <div class="LinkContent">
                                         <span class="UnitName">Salem Class</span>
                                         <span class="ChangeType buff">Buff</span>
@@ -1088,42 +764,15 @@
                         <button class="SectionToggle" aria-expanded="true" data-target="air-items">
                             <i class="fas fa-plane SectionIcon"></i>
                             <span class="SectionTitle">Air Units</span>
-                            <span class="ItemCount">4</span>
+                            <span class="ItemCount">1</span>
                             <i class="fas fa-chevron-down ToggleIcon"></i>
                         </button>
                         <ul class="SectionItems" id="air-items">
                             <li class="NavItem">
-                                <a href="#aeon_strat_bomber" class="NavLink">
-                                    <img src="/assets/images/units/aeon/air/T3Strat.png" class="UnitThumb" alt="Shocker"/>
+                                <a href="#strat_bombers" class="NavLink">
+                                    <img src="/assets/images/units/aeon/air/T3Strat.png" class="UnitThumb" alt="Strategic Bombers"/>
                                     <div class="LinkContent">
-                                        <span class="UnitName">Shocker</span>
-                                        <span class="ChangeType buff">Buff</span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="NavItem">
-                                <a href="#cybran_strat_bomber" class="NavLink">
-                                    <img src="/assets/images/units/cybran/air/T3Strat.png" class="UnitThumb" alt="Revenant"/>
-                                    <div class="LinkContent">
-                                        <span class="UnitName">Revenant</span>
-                                        <span class="ChangeType buff">Buff</span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="NavItem">
-                                <a href="#uef_strat_bomber" class="NavLink">
-                                    <img src="/assets/images/units/uef/air/T3Strat.png" class="UnitThumb" alt="Ambassador"/>
-                                    <div class="LinkContent">
-                                        <span class="UnitName">Ambassador</span>
-                                        <span class="ChangeType buff">Buff</span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="NavItem">
-                                <a href="#sera_strat_bomber" class="NavLink">
-                                    <img src="/assets/images/units/sera/air/T3Strat.png" class="UnitThumb" alt="Sinntha"/>
-                                    <div class="LinkContent">
-                                        <span class="UnitName">Sinntha</span>
+                                        <span class="UnitName">Strategic Bombers</span>
                                         <span class="ChangeType buff">Buff</span>
                                     </div>
                                 </a>
@@ -1184,7 +833,7 @@
                                     <img src="/assets/images/units/cybran/structure/T2LandFacHQ.png" class="UnitThumb" alt="Cybran HQs"/>
                                     <div class="LinkContent">
                                         <span class="UnitName">T2 HQs (Cybran)</span>
-                                        <span class="ChangeType buff">Buff</span>
+                                        <span class="ChangeType mixed">Mixed</span>
                                     </div>
                                 </a>
                             </li>
@@ -1220,7 +869,7 @@
                         </div>
                         <div class="StatItem">
                             <i class="fas fa-balance-scale"></i>
-                            <span>14 Changes</span>
+                            <span>11 Changes</span>
                         </div>
                     </div>
                 </div>
