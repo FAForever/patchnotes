@@ -4,16 +4,16 @@
 
 /* Enhanced Content Sidemenu Styling */
 .ContentSidemenu {
-  background: linear-gradient(135deg, rgba(45, 52, 62, 0.95) 0%, rgba(32, 38, 47, 0.95) 100%);
-  backdrop-filter: blur(8px); /* Reduced from 10px */
-  border-radius: 13px; /* Reduced from 16px */
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: linear-gradient(135deg, var(--Card) 0%, var(--IconGridBackground) 100%);
+  backdrop-filter: blur(6px);
+  border-radius: 13px;
+  border: 1px solid var(--Line);
   box-shadow: 
-    0 6px 26px rgba(0, 0, 0, 0.3), /* Reduced from 8px 32px */
-    0 3px 13px rgba(0, 0, 0, 0.2); /* Reduced from 4px 16px */
+    0 6px 26px rgba(0, 0, 0, 0.08),
+    0 3px 13px rgba(0, 0, 0, 0.05);
   position: sticky;
-  top: 16px; /* Reduced from 20px */
-  max-height: calc(100vh - 32px); /* Reduced from 40px */
+  top: 16px;
+  max-height: calc(100vh - 32px);
   overflow-y: auto;
   color: var(--Text-Primary);
 }
@@ -21,7 +21,7 @@
 /* Sidemenu Header */
 .SidemenuHeader {
   padding: 1.2rem; /* Reduced from 1.5rem */
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid var(--Line);
 }
 
 .SidemenuTitle {
@@ -35,7 +35,7 @@
 }
 
 .SidemenuTitle i {
-  color: #87cefa;
+  color: var(--Link);
   font-size: 0.88rem; /* Reduced from 1.1rem */
 }
 
@@ -43,14 +43,14 @@
 .ProgressBar {
   width: 100%;
   height: 3px; /* Reduced from 4px */
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--Line);
   border-radius: 2px;
   overflow: hidden;
 }
 
 .ProgressFill {
   height: 100%;
-  background: linear-gradient(90deg, #87cefa, #c2a732);
+  background: linear-gradient(90deg, var(--Link), var(--Link-Hover));
   width: 0%;
   transition: width 0.3s ease;
 }
@@ -60,7 +60,7 @@
   display: flex;
   gap: 0.4rem; /* Reduced from 0.5rem */
   padding: 0.8rem 1.2rem; /* Reduced from 1rem 1.5rem */
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid var(--Line);
 }
 
 .QuickActionBtn {
@@ -68,8 +68,8 @@
   flex-direction: column;
   align-items: center;
   gap: 0.2rem; /* Reduced from 0.25rem */
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: transparent;
+  border: 1px solid var(--Line);
   border-radius: 6px; /* Reduced from 8px */
   padding: 0.4rem; /* Reduced from 0.5rem */
   color: var(--Text-Secondary);
@@ -80,9 +80,9 @@
 }
 
 .QuickActionBtn:hover {
-  background: rgba(135, 206, 250, 0.1);
-  border-color: rgba(135, 206, 250, 0.3);
-  color: #87cefa;
+  background: var(--added);
+  border-color: var(--Link);
+  color: var(--Link);
   transform: translateY(-2px);
 }
 
@@ -122,12 +122,12 @@
 }
 
 .SectionToggle:hover {
-  background: rgba(255, 255, 255, 0.05);
-  color: #87cefa;
+  background: var(--added);
+  color: var(--Link);
 }
 
 .SectionToggle:hover .SectionIcon {
-  color: #87cefa;
+  color: var(--Link);
 }
 
 .SectionIcon {
@@ -142,8 +142,8 @@
 }
 
 .ItemCount {
-  background: rgba(135, 206, 250, 0.2);
-  color: #87cefa;
+  background: var(--added);
+  color: var(--Link);
   border-radius: 10px; /* Reduced from 12px */
   padding: 0.1rem 0.4rem; /* Reduced from 0.125rem 0.5rem */
   font-size: 0.6rem; /* Reduced from 0.75rem */
@@ -182,7 +182,7 @@
 }
 
 .SectionToggle:focus {
-  outline: 2px solid rgba(135, 206, 250, 0.5);
+  outline: 2px solid var(--Link);
   outline-offset: 2px;
 }
 
@@ -229,8 +229,8 @@
   list-style: none;
   margin: 0;
   padding: 0;
-  background: rgba(0, 0, 0, 0.1);
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  background: transparent;
+  border-top: 1px solid var(--Line);
 }
 
 /* Navigation Items */
@@ -251,15 +251,15 @@
 }
 
 .NavLink:hover {
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--added);
   color: var(--Text-Primary);
-  border-left-color: #87cefa;
+  border-left-color: var(--Link);
 }
 
 .NavLink.active {
-  background: rgba(135, 206, 250, 0.1);
-  color: #87cefa;
-  border-left-color: #87cefa;
+  background: var(--added);
+  color: var(--Link);
+  border-left-color: var(--Link);
 }
 
 /* Unit Thumbnails */
@@ -268,7 +268,7 @@
   height: 32px;
   border-radius: 6px;
   object-fit: cover;
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--Background);
   padding: 2px;
   flex-shrink: 0;
 }
@@ -329,8 +329,8 @@
 /* Sidemenu Footer */
 .SidemenuFooter {
   padding: 1rem 1.5rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  background: rgba(0, 0, 0, 0.1);
+  border-top: 1px solid var(--Line);
+  background: transparent;
   border-radius: 0 0 16px 16px;
 }
 
@@ -349,7 +349,7 @@
 }
 
 .StatItem i {
-  color: #87cefa;
+  color: var(--Link);
   font-size: 0.9rem;
   width: 1rem;
   text-align: center;
@@ -361,15 +361,15 @@
 }
 
 .ContentSidemenu::-webkit-scrollbar-track {
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--Line);
   border-radius: 3px;
 }
 
 .ContentSidemenu::-webkit-scrollbar-thumb {
-  background: rgba(135, 206, 250, 0.3);
+  background: var(--Link);
   border-radius: 3px;
 }
 
 .ContentSidemenu::-webkit-scrollbar-thumb:hover {
-  background: rgba(135, 206, 250, 0.5);
+  background: var(--Link-Hover);
 }
