@@ -6,15 +6,16 @@
 
 /* Base Card Structure - Used for all balance cards */
 .PatchCard {
-    border: 2px solid var(--Line);
-    background: linear-gradient(145deg, var(--Card) 0%, var(--IconGridBackground) 100%);
-    border-radius: 16px;
+    border: 1px solid var(--Line);
+    background: linear-gradient(135deg, var(--Card) 0%, var(--IconGridBackground) 100%);
+    backdrop-filter: blur(6px);
+    border-radius: 13px;
     margin: 24px 0;
     overflow: hidden;
     transition: all 0.3s ease;
     box-shadow: 
-        0 6px 20px rgba(0, 0, 0, 0.1),
-        0 2px 8px rgba(0, 0, 0, 0.06);
+        0 6px 26px rgba(0, 0, 0, 0.08),
+        0 3px 13px rgba(0, 0, 0, 0.05);
     position: relative;
     padding: 16px 24px;
     /* 15% size reduction to optimize space usage */
@@ -26,16 +27,16 @@
 .PatchCard:hover {
     transform: scale(0.85) translateY(-8px);
     box-shadow: 
-        0 24px 48px rgba(0, 0, 0, 0.2),
-        0 12px 24px rgba(0, 0, 0, 0.12);
+        0 8px 32px rgba(0, 0, 0, 0.12),
+        0 4px 16px rgba(0, 0, 0, 0.08);
     border-color: var(--Link);
 }
 
 /* Card Header - Professional styling */
 .PatchCardHeader {
-    background: linear-gradient(135deg, var(--IconGridBackground) 0%, var(--Card) 100%);
+    background: transparent;
     padding: 32px;
-    border-bottom: 3px solid var(--Line);
+    border-bottom: 1px solid var(--Line);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -70,12 +71,12 @@
     width: 80px;
     height: 80px;
     border-radius: 16px;
-    border: 3px solid var(--Line);
+    border: 1px solid var(--Line);
     background: linear-gradient(135deg, var(--Background) 0%, var(--Card) 100%);
     padding: 8px;
     box-shadow: 
-        0 12px 32px rgba(0, 0, 0, 0.2),
-        0 4px 16px rgba(0, 0, 0, 0.1);
+        0 6px 20px rgba(0, 0, 0, 0.08),
+        0 3px 10px rgba(0, 0, 0, 0.05);
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
 }
@@ -96,8 +97,8 @@
 .UnitIcon:hover {
     transform: scale(1.08) rotate(2deg);
     box-shadow: 
-        0 16px 40px rgba(0, 0, 0, 0.25),
-        0 8px 24px rgba(0, 0, 0, 0.15);
+        0 8px 24px rgba(0, 0, 0, 0.12),
+        0 4px 16px rgba(0, 0, 0, 0.08);
 }
 
 .UnitIcon:hover::before {
@@ -328,43 +329,34 @@
 }
 
 .ChangeDescription {
-    color: var(--Text-Secondary);
+    color: var(--Text-Primary);
     line-height: 1.8;
     margin-bottom: 32px;
-    padding: 28px 28px 28px 48px;
-    background: linear-gradient(135deg, var(--IconGridBackground) 0%, rgba(var(--Card-RGB, 44, 62, 80), 0.8) 100%);
-    border-left: none;
-    border-radius: 16px;
-    font-size: 1.1rem;
+    padding: 24px 28px;
+    background: transparent;
+    border-left: 3px solid var(--Link);
+    border-radius: 0;
+    font-size: 1.05rem;
     position: relative;
     margin-left: 0;
-    box-shadow: 
-        inset 0 1px 3px rgba(0, 0, 0, 0.1),
-        0 4px 16px rgba(0, 0, 0, 0.08);
-    border: 1px solid rgba(var(--Link-RGB, 52, 152, 219), 0.2);
-    backdrop-filter: blur(10px);
+    box-shadow: none;
+    border-right: none;
+    border-top: none;
+    border-bottom: none;
+    backdrop-filter: none;
     transition: all 0.3s ease;
 }
 
 .ChangeDescription:hover {
-    transform: translateY(-2px);
-    box-shadow: 
-        inset 0 1px 3px rgba(0, 0, 0, 0.15),
-        0 8px 24px rgba(0, 0, 0, 0.12);
-    border-color: rgba(var(--Link-RGB, 52, 152, 219), 0.4);
+    transform: none;
+    box-shadow: none;
+    border-left-color: var(--Link-Hover);
+    padding-left: 32px;
 }
 
 .ChangeDescription::before {
-    content: '"';
-    position: absolute;
-    top: 16px;
-    left: 16px;
-    font-size: 2.5rem;
-    font-weight: 900;
-    color: var(--Link);
-    opacity: 0.4;
-    font-family: 'Georgia', serif;
-    line-height: 1;
+    content: '';
+    display: none;
 }
 
 /* Changes List */
@@ -663,17 +655,17 @@
     gap: 12px;
     font-family: 'JetBrains Mono', 'Courier New', monospace;
     font-size: 0.95rem;
-    background: rgba(var(--Background-RGB, 52, 73, 94), 0.5);
+    background: transparent;
     padding: 8px 16px;
-    border-radius: 12px;
-    border: 1px solid rgba(var(--Line-RGB, 189, 195, 199), 0.3);
+    border-radius: 0;
+    border: none;
     transition: all 0.3s ease;
 }
 
 .ChangeValue:hover {
-    background: rgba(var(--Link-RGB, 52, 152, 219), 0.1);
-    border-color: var(--Link);
-    transform: scale(1.02);
+    background: transparent;
+    border-color: transparent;
+    transform: none;
 }
 
 .OldValue {

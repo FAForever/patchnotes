@@ -3,12 +3,12 @@
    ======================================== */
 
 .SiteFooter {
-  background: linear-gradient(135deg, var(--Card-Background, #2c3e50) 0%, var(--Background, #34495e) 100%);
-  border-top: 3px solid var(--Link, #3498db);
+  background: linear-gradient(135deg, var(--Card) 0%, var(--IconGridBackground) 100%);
+  border-top: 1px solid var(--Line);
   margin-top: 32px; /* Reduced from 40px */
   padding: 0;
-  color: var(--Text, #ecf0f1);
-  box-shadow: 0 -3px 16px rgba(0, 0, 0, 0.1); /* Reduced from -4px 20px */
+  color: var(--Text);
+  box-shadow: 0 -3px 16px rgba(0, 0, 0, 0.08);
   /* Ensure the footer appears above any sticky/positioned sidebars */
   position: relative;
   z-index: 60;
@@ -32,9 +32,9 @@
 .FooterTitle {
   font-size: 0.96em; /* Reduced from 1.2em */
   font-weight: 600;
-  color: var(--Link, #3498db);
+  color: var(--Link);
   margin: 0 0 8px 0; /* Reduced from 10px */
-  border-bottom: 2px solid var(--Link, #3498db);
+  border-bottom: 2px solid var(--Link);
   padding-bottom: 6px; /* Reduced from 8px */
   display: flex;
   align-items: center;
@@ -53,7 +53,7 @@
   display: flex;
   align-items: center;
   gap: 8px; /* Reduced from 10px */
-  color: var(--Text, #bdc3c7);
+  color: var(--Text-Secondary);
   text-decoration: none;
   padding: 6px 10px; /* Reduced from 8px 12px */
   border-radius: 5px; /* Reduced from 6px */
@@ -62,8 +62,8 @@
 }
 
 .FooterLink:hover {
-  background-color: rgba(52, 152, 219, 0.1);
-  color: var(--Link, #3498db);
+  background-color: var(--added);
+  color: var(--Link);
   transform: translateX(4px); /* Reduced from 5px */
 }
 
@@ -78,7 +78,7 @@
   display: flex;
   align-items: center;
   gap: 8px; /* Reduced from 10px */
-  background: var(--Button-Background, #3498db);
+  background: var(--Link);
   color: white;
   border: none;
   padding: 8px 12px; /* Reduced from 10px 15px */
@@ -91,9 +91,9 @@
 
 .ThemeToggle:hover,
 .PrintButton:hover {
-  background: var(--Button-Hover, #2980b9);
+  background: var(--Link-Hover);
   transform: translateY(-2px);
-  box-shadow: 0 3px 10px rgba(52, 152, 219, 0.3); /* Reduced from 4px 12px */
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
 }
 
 .FooterInfo {
@@ -103,10 +103,10 @@
 }
 
 .PatchInfo {
-  background: rgba(52, 152, 219, 0.1);
+  background: var(--added);
   padding: 12px; /* Reduced from 15px */
   border-radius: 6px; /* Reduced from 8px */
-  border-left: 3px solid var(--Link, #3498db); /* Reduced from 4px */
+  border-left: 3px solid var(--Link);
   margin: 0;
 }
 
@@ -124,8 +124,8 @@
 }
 
 .FooterBottom {
-  background: rgba(0, 0, 0, 0.2);
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  background: var(--IconGridBackground);
+  border-top: 1px solid var(--Line);
   padding: 12px 16px; /* Reduced from 15px 20px */
 }
 

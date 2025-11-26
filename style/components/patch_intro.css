@@ -4,15 +4,15 @@
 
 /* Enhanced Intro Section Styling */
 .IntroSection {
-  background: linear-gradient(135deg, rgba(57, 62, 70, 0.95) 0%, rgba(34, 40, 49, 0.9) 100%);
+  background: linear-gradient(135deg, var(--Card) 0%, var(--IconGridBackground) 100%);
   backdrop-filter: blur(6px); /* Reduced from 8px */
   border-radius: 13px; /* Reduced from 16px */
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--Line);
   padding: 1.6rem; /* Reduced from 2rem */
   margin-bottom: 1.6rem; /* Reduced from 2rem */
   box-shadow: 
-    0 6px 26px rgba(0, 0, 0, 0.3), /* Reduced from 8px 32px */
-    0 3px 13px rgba(0, 0, 0, 0.2); /* Reduced from 4px 16px */
+    0 6px 26px rgba(0, 0, 0, 0.08), /* Reduced from 8px 32px */
+    0 3px 13px rgba(0, 0, 0, 0.05); /* Reduced from 4px 16px */
 }
 
 .PatchHeader {
@@ -21,7 +21,7 @@
   align-items: center;
   margin-bottom: 1.2rem; /* Reduced from 1.5rem */
   padding-bottom: 0.8rem; /* Reduced from 1rem */
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid var(--Line);
 }
 
 .PatchTitleGroup {
@@ -33,9 +33,9 @@
 .PatchTitle {
   font-size: 2rem; /* Reduced from 2.5rem */
   font-weight: 700;
-  color: #eee;
+  color: var(--Text-Primary);
   margin: 0;
-  background: linear-gradient(135deg, #87cefa, #c2a732);
+  background: linear-gradient(135deg, var(--Link), var(--Link-Hover));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -43,11 +43,11 @@
 
 .PatchVersion {
   font-size: 0.7rem; /* Reduced from 0.875rem */
-  color: var(--Text-Secondary);
-  background: rgba(0, 210, 255, 0.2);
+  color: var(--Text-Primary);
+  background: var(--added);
   padding: 0.2rem 0.6rem; /* Reduced from 0.25rem 0.75rem */
   border-radius: 10px; /* Reduced from 12px */
-  border: 1px solid rgba(0, 210, 255, 0.3);
+  border: 1px solid var(--Link);
   width: fit-content;
   text-transform: uppercase;
   letter-spacing: 0.4px; /* Reduced from 0.5px */
@@ -69,11 +69,11 @@
 
 .PatchStatus {
   font-size: 0.6rem; /* Reduced from 0.75rem */
-  color: #4caf50;
-  background: rgba(76, 175, 80, 0.2);
+  color: #198754;
+  background: var(--buff);
   padding: 0.2rem 0.6rem; /* Reduced from 0.25rem 0.75rem */
   border-radius: 10px; /* Reduced from 12px */
-  border: 1px solid rgba(76, 175, 80, 0.3);
+  border: 1px solid #198754;
   text-transform: uppercase;
   letter-spacing: 0.4px; /* Reduced from 0.5px */
   font-weight: 600;
@@ -94,7 +94,8 @@
 .PatchCredits {
   margin-top: 1.2rem; /* Reduced from 1.5rem */
   padding-top: 0.8rem; /* Reduced from 1rem */
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid var(--Line);
+  background: transparent;
 }
 
 .TeamSignature {
@@ -102,6 +103,7 @@
   align-items: center;
   gap: 0.6rem; /* Reduced from 0.75rem */
   justify-content: center;
+  background: transparent;
 }
 
 .TeamIcon {
@@ -111,7 +113,7 @@
 
 .TeamName {
   font-size: 0.9rem; /* Reduced from 1.1rem */
-  color: var(--Text-Secondary);
-  font-weight: 500;
+  color: var(--Text-Primary);
+  font-weight: 600;
   font-style: italic;
 }

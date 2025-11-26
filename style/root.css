@@ -34,7 +34,7 @@
   --added: rgba(31, 52, 172, 0.7);
 
   /* Link Colors */
-  --Link: #eee;
+  --Link: #87cefa;
   --Link-Card: #000;
   --Link-Unvisited: #87cefa;
   --Link-Visited: #dc143c;
@@ -52,43 +52,43 @@
 
 :root.light-mode {
   /* Background Colors */
-  --Background: #f2f2f2;
-  --FooterBackground: #e0e0e0;
-  --IndexGridBackground: rgba(240, 240, 240, 0.4);
-  --IndexGridBackgroundBlur: rgba(240, 240, 240, 0.8);
-  --IconGridBackground: #e0e0e0;
+  --Background: #f8f9fa;
+  --FooterBackground: #dee2e6;
+  --IndexGridBackground: rgba(233, 236, 239, 0.5);
+  --IndexGridBackgroundBlur: rgba(233, 236, 239, 0.9);
+  --IconGridBackground: #e9ecef;
 
   /* Text Colors */
-  --Text: #222831;
-  --Text-Primary: #222831;
-  --Text-Secondary: #666;
+  --Text: #212529;
+  --Text-Primary: #212529;
+  --Text-Secondary: #6c757d;
   --Top: #000;
 
   /* Card Colors */
   --Card: #ffffff;
 
   /* Tags */
-  --buff: rgba(76, 142, 34, 0.8);
-  --nerf: rgba(150, 40, 40, 0.75);
-  --stats: rgba(0, 0, 0, 0.4);
-  --removed: rgba(185, 80, 20, 0.7);
-  --added: rgba(50, 90, 200, 0.75);
+  --buff: rgba(25, 135, 84, 0.15);
+  --nerf: rgba(220, 53, 69, 0.15);
+  --stats: rgba(0, 0, 0, 0.1);
+  --removed: rgba(253, 126, 20, 0.15);
+  --added: rgba(13, 110, 253, 0.15);
 
   /* Link Colors */
-  --Link: #0056b3;
+  --Link: #0066cc;
   --Link-Card: #ffffff;
-  --Link-Unvisited: #0047ab;
-  --Link-Visited: #8b0000;
-  --Link-Hover: #d4a020;
+  --Link-Unvisited: #0056b3;
+  --Link-Visited: #6a0dad;
+  --Link-Hover: #004085;
 
   /* Other */
-  --Strike: #666;
-  --Line: #bbb;
-  --LM-HR: #aaa;
-  --ButtonBackground: #4474c1;
+  --Strike: #adb5bd;
+  --Line: #ced4da;
+  --LM-HR: #dee2e6;
+  --ButtonBackground: #0d6efd;
   --ButtonText: #fff;
-  --IconGlow: rgba(0, 0, 0, 0.2);
-  --Accent-Color: #00d2ff;
+  --IconGlow: rgba(0, 0, 0, 0.15);
+  --Accent-Color: #0066cc;
 }
 
 html {
