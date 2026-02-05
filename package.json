@@ -1,0 +1,45 @@
+{
+  "name": "faforever-patchnotes",
+  "version": "2.3.1",
+  "description": "Progressive Web App for FAForever patch notes with WCAG 2.1 AAA accessibility",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx http-server -p 8080 -c-1",
+    "test:a11y": "npm run test:lighthouse && npm run test:pa11y",
+    "test:lighthouse": "lighthouse http://localhost:8080 --only-categories=accessibility --view",
+    "test:lighthouse:ci": "lighthouse http://localhost:8080 --only-categories=accessibility --output=html --output-path=./reports/lighthouse-a11y.html",
+    "test:pa11y": "pa11y http://localhost:8080 --standard WCAG2AAA",
+    "test:pa11y:report": "pa11y http://localhost:8080 --standard WCAG2AAA --reporter html > ./reports/pa11y-report.html",
+    "test:axe": "axe http://localhost:8080 --save ./reports/axe-results.json",
+    "serve": "npx http-server -p 8080 -c-1 -o",
+    "validate": "node scripts/validatePatches.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FAForever/patchnotes.git"
+  },
+  "keywords": [
+    "faforever",
+    "supreme-commander",
+    "patchnotes",
+    "pwa",
+    "accessibility",
+    "wcag"
+  ],
+  "author": "FAForever Community",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/FAForever/patchnotes/issues"
+  },
+  "homepage": "https://patchnotes.faforever.com",
+  "devDependencies": {
+    "@axe-core/cli": "^4.8.0",
+    "http-server": "^14.1.1",
+    "lighthouse": "^11.4.0",
+    "pa11y": "^7.0.0"
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  }
+}

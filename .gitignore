@@ -1,0 +1,107 @@
+# Editor directories and files
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+*.swp
+*~
+.DS_Store
+
+# OS generated files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+pnpm-debug.log*
+
+# Temporary files
+*.tmp
+*.temp
+*.cache
+.sass-cache/
+
+# Build outputs (if you add a build process later)
+dist/
+build/
+.output/
+.vercel/
+.netlify/
+
+# Dependencies (if you add npm later)
+node_modules/
+.pnp
+.pnp.js
+
+# Testing (if you add tests later)
+coverage/
+*.lcov
+.nyc_output/
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Service worker and cache
+# Note: sw.js is tracked, but exclude debug versions
+sw.debug.js
+
+# Backup files
+*.bak
+*.backup
+*_backup
+backup/
+
+# Archive files
+*.zip
+*.tar.gz
+*.rar
+*.7z
+
+# Patches in progress (keep the TBD directory clean)
+pages/**/TBD.html
+pages/**/*.draft.html
+
+# Local test data
+test-data/
+local-patches/
+
+# Analytics and monitoring data
+analytics-data/
+performance-reports/
+
+# Static site generators (if used later)
+.next/
+.nuxt/
+.cache/
+public/
+
+# Documentation build
+docs/.vuepress/dist/
+docs/_site/
+
+# Lock files (if you add package managers)
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Local configuration
+local.config.js
+local.config.json

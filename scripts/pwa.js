@@ -1,8 +1,10 @@
 // PWA Installation and Management
+// Version 2.3.0 - Enhanced with better notifications and cache management
 class PWAManager {
   constructor() {
     this.deferredPrompt = null;
     this.isInstalled = false;
+    this.logger = window.Logger ? new Logger('PWA') : console;
     this.init();
   }
 
@@ -18,6 +20,9 @@ class PWAManager {
     
     // Listen for app updates
     this.setupUpdateListener();
+    
+    // Add cache management button
+    this.setupCacheManagement();
   }
 
   checkInstallStatus() {
@@ -26,7 +31,7 @@ class PWAManager {
                      window.navigator.standalone === true;
     
     if (this.isInstalled) {
-      console.log('PWA: Running as installed app');
+      this.logger.info?.('Running as installed app');
       this.hideInstallPrompt();
     }
   }
@@ -35,22 +40,32 @@ class PWAManager {
     if ('serviceWorker' in navigator) {
       try {
         const registration = await navigator.serviceWorker.register('/sw.js');
-        console.log('PWA: Service Worker registered', registration);
+        this.logger.info?.('Service Worker registered', registration);
         
         // Listen for updates
         registration.addEventListener('updatefound', () => {
-          console.log('PWA: New version available');
-          this.showUpdateAvailable();
+          this.logger.info?.('New version available');
+          const newWorker = registration.installing;
+          
+          newWorker.addEventListener('statechange', () => {
+            if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+              // New service worker available
+              this.showUpdateAvailable(registration);
+            }
+          });
         });
         
-      } catch (error) {
-        console.error('PWA: Service Worker registration failed', error);
-      }
-    }
-  }
+        // Store registration for later use
+        this.registration = registration;
+      this.logger.info?.('Install prompt available');
+      e.preventDefault();
+      this.deferredPrompt = e;
+      this.showInstallPrompt();
+    });
 
-  setupInstallPrompt() {
-    // Listen for install prompt
+    // Listen for successful install
+    window.addEventListener('appinstalled', () => {
+      this.logger.info?.('l prompt
     window.addEventListener('beforeinstallprompt', (e) => {
       console.log('PWA: Install prompt available');
       e.preventDefault();
@@ -243,6 +258,174 @@ class PWAManager {
         completeMsg.remove();
         document.body.classList.remove('pwa-banner-active');
       }, 300);
+    }, 3000);
+  }
+  
+  /**
+   * Setup cache management UI
+   */
+  setupCacheManagement() {
+    // Add cache management to footer if desired
+    // This gives users control over cached data
+    document.addEventListener('DOMContentLoaded', () => {
+      this.addCacheManagementButton();
+    });
+  }
+  
+  /**
+   * Add cache management button to UI
+   */
+  addCacheManagementButton() {
+    const footer = document.querySelector('.SiteFooter .FooterActions');
+    if (!footer) return;
+    
+    const cacheButton = document.createElement('button');
+    cacheButton.className = 'CacheManageButton';
+    cacheButton.innerHTML = `
+      <i class="fas fa-database" aria-hidden="true"></i>
+      <span>Clear Cache</span>
+    `;
+    cacheButton.setAttribute('title', 'Clear cached data');
+    cacheButton.addEventListener('click', () => this.showCacheManagement());
+    
+    footer.appendChild(cacheButton);
+  }
+  
+  /**
+   * Show cache management dialog
+   */
+  async showCacheManagement() {
+    const cacheInfo = await this.getCacheInfo();
+    
+    const modal = document.createElement('div');
+    modal.className = 'pwa-cache-modal';
+    modal.innerHTML = `
+      <div class="pwa-cache-overlay"></div>
+      <div class="pwa-cache-content">
+        <div class="pwa-cache-header">
+          <h3>🗄️ Cache Management</h3>
+          <button class="pwa-cache-close" aria-label="Close">×</button>
+        </div>
+        <div class="pwa-cache-body">
+          <div class="cache-info">
+            <p><strong>Stored Data:</strong> ${cacheInfo.size}</p>
+            <p><strong>Cached Items:</strong> ${cacheInfo.count} files</p>
+            <p class="cache-note">Clearing cache will remove offline data. It will be re-downloaded on your next visit.</p>
+          </div>
+          <div class="cache-actions">
+            <button class="btn btn-danger" id="clear-all-cache">
+              <i class="fas fa-trash" aria-hidden="true"></i>
+              Clear All Cache
+            </button>
+            <button class="btn btn-secondary" id="refresh-cache">
+              <i class="fas fa-sync" aria-hidden="true"></i>
+              Refresh Cache
+            </button>
+          </div>
+        </div>
+      </div>
+    `;
+    
+    document.body.appendChild(modal);
+    
+    // Event listeners
+    modal.querySelector('.pwa-cache-overlay').addEventListener('click', () => modal.remove());
+    modal.querySelector('.pwa-cache-close').addEventListener('click', () => modal.remove());
+    modal.querySelector('#clear-all-cache').addEventListener('click', async () => {
+      await this.clearAllCache();
+      modal.remove();
+    });
+    modal.querySelector('#refresh-cache').addEventListener('click', async () => {
+      await this.refreshCache();
+      modal.remove();
+    });
+  }
+  
+  /**
+   * Get cache information
+   * @returns {Object} Cache info with size and count
+   */
+  async getCacheInfo() {
+    if (!('caches' in window)) {
+      return { size: 'Unknown', count: 0 };
+    }
+    
+    try {
+      const cacheNames = await caches.keys();
+      let totalCount = 0;
+      
+      for (const name of cacheNames) {
+        const cache = await caches.open(name);
+        const keys = await cache.keys();
+        totalCount += keys.length;
+      }
+      
+      // Estimate size (rough approximation)
+      const sizeEstimate = totalCount * 50; // Rough estimate: 50KB per file
+      const sizeMB = (sizeEstimate / 1024).toFixed(2);
+      
+      return {
+        size: `~${sizeMB} MB`,
+        count: totalCount
+      };
+    } catch (error) {
+      this.logger.error?.('Failed to get cache info:', error);
+      return { size: 'Unknown', count: 0 };
+    }
+  }
+  
+  /**
+   * Clear all caches
+   */
+  async clearAllCache() {
+    if (!('caches' in window)) return;
+    
+    try {
+      const cacheNames = await caches.keys();
+      await Promise.all(cacheNames.map(name => caches.delete(name)));
+      
+      this.showNotification('✅ Cache cleared successfully', 'success');
+      this.logger.info?.('All caches cleared');
+      
+     // Reload after short delay
+      setTimeout(() => window.location.reload(), 1000);
+    } catch (error) {
+      this.logger.error?.('Failed to clear cache:', error);
+      this.showNotification('❌ Failed to clear cache', 'error');
+    }
+  }
+  
+  /**
+   * Refresh cache by reloading and updating service worker
+   */
+  async refreshCache() {
+    try {
+      if (this.registration) {
+        await this.registration.update();
+        this.showNotification('🔄 Cache refreshed', 'success');
+        setTimeout(() => window.location.reload(), 1000);
+      }
+    } catch (error) {
+      this.logger.error?.('Failed to refresh cache:', error);
+      this.showNotification('❌ Failed to refresh cache', 'error');
+    }
+  }
+  
+  /**
+   * Show notification toast
+   * @param {string} message - Message to show
+   * @param {string} type - 'success' or 'error'
+   */
+  showNotification(message, type = 'success') {
+    const notification = document.createElement('div');
+    notification.className = `pwa-notification pwa-notification-${type}`;
+    notification.textContent = message;
+    document.body.appendChild(notification);
+    
+    setTimeout(() => notification.classList.add('show'), 10);
+    setTimeout(() => {
+      notification.classList.remove('show');
+      setTimeout(() => notification.remove(), 300);
     }, 3000);
   }
 }

@@ -42,10 +42,18 @@ Your efforts help keep Supreme Commander: Forged Alliance Forever and this proje
 
 ## 🔗 Links
 
+### **Live Site & Community**
 - **🌐 Live Site:** [https://patchnotes.faforever.com/](https://patchnotes.faforever.com/)
 - **📱 Install as App:** Available on all devices via browser
 - **🎮 FAForever:** [https://faforever.com/](https://faforever.com/)
 - **💬 Community:** [FAForever Discord](https://discord.gg/hgvj6Af)
+
+### **Documentation**
+- **♿ [Accessibility Statement](ACCESSIBILITY.md)** - WCAG 2.1 AAA compliance & testing
+- **🤝 [Contributing Guide](CONTRIBUTING.md)** - How to contribute to the project
+- **🔒 [Security Policy](SECURITY.md)** - Vulnerability reporting & security features
+- **🏗️ [Architecture](ARCHITECTURE.md)** - Technical documentation & design decisions
+- **📝 [Changelog](CHANGELOG.md)** - Version history & release notes
 
 ---
 
@@ -82,10 +90,16 @@ This repository contains the source code and documentation for the **Patchnotes 
 - Smooth animations and professional polish
 
 ### ♿ **Accessibility & Performance**
-- WCAG 2.1 compliant with full screen reader support
-- Keyboard navigation throughout the interface
+- **WCAG 2.1 AAA compliant** - Full accessibility for users with disabilities
+- **Skip links** for keyboard navigation
+- **Screen reader support** with comprehensive ARIA labels
+- **Keyboard shortcuts** for all functionality (press `?` for help)
+- **High contrast focus indicators** for visibility
+- **Reduced motion support** for users with vestibular disorders
+- **44×44px minimum touch targets** (WCAG 2.1 AAA)
 - Optimized performance with sub-second load times
 - Error boundaries with automatic retry mechanisms
+- 📖 **[Full Accessibility Documentation](ACCESSIBILITY.md)**
 
 ### 📊 **Analytics & Monitoring**
 - Privacy-friendly user behavior tracking

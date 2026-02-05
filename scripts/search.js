@@ -1,4 +1,9 @@
-// Search and Filter Functionality for Patches
+/**
+ * Search and Filter Functionality for Patches
+ * Provides real-time search, year filtering, and keyboard shortcuts
+ * @class PatchSearch
+ * @version 1.0.0
+ */
 class PatchSearch {
   constructor() {
     this.allPatches = [];
@@ -9,6 +14,10 @@ class PatchSearch {
     this.init();
   }
 
+  /**
+   * Initialize the search functionality
+   * Waits for DOM to be ready before setup
+   */
   init() {
     // Wait for DOM to be ready
     document.addEventListener('DOMContentLoaded', () => {
@@ -17,12 +26,19 @@ class PatchSearch {
     });
   }
 
+  /**
+   * Setup references to DOM elements
+   */
   setupElements() {
     this.searchInput = document.getElementById('patch-search');
     this.yearFilter = document.getElementById('year-filter');
     this.clearButton = document.getElementById('clear-search');
   }
 
+  /**
+   * Setup all event listeners for search functionality
+   * Includes debounced search, filters, keyboard shortcuts
+   */
   setupEventListeners() {
     if (!this.searchInput || !this.yearFilter || !this.clearButton) {
       console.warn('Search elements not found');
@@ -68,12 +84,20 @@ class PatchSearch {
     });
   }
 
+  /**
+   * Set the patches data for searching
+   * @param {Array} patches - Array of patch objects to search through
+   */
   setPatches(patches) {
     this.allPatches = patches;
     this.filteredPatches = [...patches];
     this.populateYearFilter();
   }
 
+  /**
+   * Populate the year filter dropdown with available years
+   * Extracts years from patch dates and creates options
+   */
   populateYearFilter() {
     if (!this.yearFilter) return;
 
@@ -85,6 +109,10 @@ class PatchSearch {
     // Clear existing options except "All years"
     this.yearFilter.innerHTML = '<option value="">All years</option>';
     
+  /**
+   * Perform search on patches based on query
+   * @param {string} query - Search query string
+   */
     years.forEach(year => {
       const option = document.createElement('option');
       option.value = year;
@@ -110,6 +138,10 @@ class PatchSearch {
     }
 
     this.applyCurrentFilters();
+  /**
+   * Filter patches by year
+   * @param {string} year - Year to filter by (empty string for all years)
+   */
     this.renderResults();
     this.updateSearchStats(query);
   }
@@ -120,6 +152,12 @@ class PatchSearch {
       return;
     }
 
+  /**
+   * Perform search on a specific set of patches
+   * @param {Array} patches - Patches to search through
+   * @param {string} searchTerm - Term to search for
+   * @returns {Array} Filtered patches
+   */
     const currentSearch = this.searchInput.value.toLowerCase().trim();
     let patches = currentSearch ? this.performSearchOnPatches(this.allPatches, currentSearch) : [...this.allPatches];
     
@@ -129,25 +167,39 @@ class PatchSearch {
   }
 
   performSearchOnPatches(patches, searchTerm) {
+  /**
+   * Apply currently selected filters (year, type, etc.)
+   */
     return patches.filter(patch => {
       const patchNumber = patch.patch.toLowerCase();
       const patchDate = patch.date.toLowerCase();
       
       return patchNumber.includes(searchTerm) || 
              patchDate.includes(searchTerm) ||
+  /**
+   * Apply the current search query
+   */
              searchTerm === patchNumber;
     });
   }
 
   applyCurrentFilters() {
     const yearValue = this.yearFilter.value;
+  /**
+   * Clear all search and filter criteria
+   * Resets to show all patches
+   */
     if (yearValue) {
       this.filteredPatches = this.filteredPatches.filter(patch => 
         patch.date.includes(yearValue)
       );
     }
   }
-
+/**
+   * Render filtered search results
+   * Delegates to global renderPatchList function
+   */
+  
   applySearch() {
     const searchTerm = this.searchInput.value;
     this.performSearch(searchTerm);
@@ -156,6 +208,11 @@ class PatchSearch {
   clearSearch() {
     this.searchInput.value = '';
     this.yearFilter.value = '';
+  /**
+   * Update search statistics display
+   * Shows count of filtered vs total patches
+   * @param {string} query - Current search query
+   */
     this.filteredPatches = [...this.allPatches];
     this.clearButton.style.display = 'none';
     this.renderResults();

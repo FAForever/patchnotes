@@ -30,7 +30,10 @@
     <link rel="preload" href="./assets/images/faction/Seraphim.svg" as="image">
     
     <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
+          integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" 
+          crossorigin="anonymous" 
+          referrerpolicy="no-referrer">
     
     <!-- META Tags For Discord and Social Sharing -->
     <meta name="twitter:image:src" content="https://raw.githubusercontent.com/FAForever/patchnotes/master/assets/images/thumbnail/thumbnail.png">
@@ -74,12 +77,17 @@
     <!-- External CSS -->
     <link rel="stylesheet" href="./style/index.css?v=2.2">
     <link rel="stylesheet" href="./style/pwa.css">
+    <link rel="stylesheet" href="./style/components/keyboard-shortcuts.css">
+    <link rel="stylesheet" href="./style/components/pwa-cache.css">
+    <link rel="stylesheet" href="./style/components/accessibility.css">
     <link rel="icon" href="./favicon.ico" type="image/x-icon">
 
     <!-- Static CMS Identity Widget -->
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 
     <!-- External Scripts -->
+    <script src="./scripts/logger.js"></script>
+    <script src="./scripts/lazyLoader.js" defer></script>
     <script src="./scripts/errorBoundary.js" defer></script>
     <script src="./scripts/performance.js" defer></script>
     <script src="./scripts/analytics.js" defer></script>
@@ -88,13 +96,17 @@
     <script src="./scripts/populatePatches.js" defer></script>
     <script src="./scripts/backToTop.js" defer></script>
     <script src="./scripts/pwa.js" defer></script>
+    <script src="./scripts/keyboardShortcuts.js" defer></script>
   </head>
   <body>
-    <main id="main-content" class="GridContainer">
+    <!-- Skip Link for Keyboard Navigation -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <main id="main-content" class="GridContainer" role="main">
       <div class="Space"></div>
 
       <!-- Enhanced Hero Section -->
-      <header class="HeroSection GridItemBackground">
+      <header class="HeroSection GridItemBackground" role="banner">
         <div class="HeroContent">
           <div class="HeroLeft">
             <div class="HeroTitle">
@@ -118,11 +130,11 @@
               </div>
             </div>
             <div class="HeroActions">
-              <a href="#" id="latest-patch-btn" class="PrimaryButton" aria-label="View latest patch">
+              <a href="#" id="latest-patch-btn" class="PrimaryButton" aria-label="View latest patch notes">
                 <i class="fas fa-rocket" aria-hidden="true"></i>
                 <span>Latest</span>
               </a>
-              <button type="button" id="random-patch-btn" class="SecondaryButton" aria-label="View random patch">
+              <button type="button" id="random-patch-btn" class="SecondaryButton" aria-label="View a random patch from the archive">
                 <i class="fas fa-shuffle" aria-hidden="true"></i>
                 <span>Random</span>
               </button>
@@ -132,18 +144,20 @@
       </header>
 
       <!-- Enhanced Patch Browser Section -->
-      <section class="PatchBrowser GridItemBackground">
+      <section class="PatchBrowser GridItemBackground" aria-label="Patch browser and search">
         <div class="SectionHeader">
           <h2>
             <i class="fas fa-list" aria-hidden="true"></i>
             Browse Patches
           </h2>
-          <div class="SectionActions">
-            <button type="button" class="ViewToggle" data-view="list" aria-label="Switch to grid view" title="Switch to grid view">
+          <div class="SectionActions" role="group" aria-label="View options">
+            <button type="button" class="ViewToggle" data-view="list" aria-label="Switch to list view" aria-pressed="false" title="Switch to list view">
               <i class="fas fa-list" aria-hidden="true"></i>
+              <span class="sr-only">List view</span>
             </button>
-            <button type="button" class="ViewToggle active" data-view="grid" aria-label="Switch to list view" title="Switch to list view">
+            <button type="button" class="ViewToggle active" data-view="grid" aria-label="Switch to grid view" aria-pressed="true" title="Switch to grid view">
               <i class="fas fa-th-large" aria-hidden="true"></i>
+              <span class="sr-only">Grid view</span>
             </button>
           </div>
         </div>
@@ -160,11 +174,12 @@
                 aria-label="Search through patch notes"
                 autocomplete="off"
               >
-              <button type="button" id="clear-search" class="ClearButton" aria-label="Clear search" title="Clear search">
+              <button type="button" id="clear-search" class="ClearButton" aria-label="Clear search input" title="Clear search">
                 <i class="fas fa-times" aria-hidden="true"></i>
+                <span class="sr-only">Clear</span>
               </button>
             </div>
-            <div class="SearchStats">
+            <div class="SearchStats" role="status" aria-live="polite">
               <span id="search-results">Showing all patches</span>
             </div>
           </div>
@@ -193,16 +208,16 @@
               </select>
             </div>
 
-            <div class="QuickFilters">
-              <button type="button" class="QuickFilter active" data-filter="all">
+            <div class="QuickFilters" role="group" aria-label="Quick filter options">
+              <button type="button" class="QuickFilter active" data-filter="all" aria-pressed="true">
                 <i class="fas fa-globe" aria-hidden="true"></i>
                 All
               </button>
-              <button type="button" class="QuickFilter" data-filter="recent">
+              <button type="button" class="QuickFilter" data-filter="recent" aria-pressed="false">
                 <i class="fas fa-clock" aria-hidden="true"></i>
                 Recent
               </button>
-              <button type="button" class="QuickFilter" data-filter="2025">
+              <button type="button" class="QuickFilter" data-filter="2025" aria-pressed="false">
                 <i class="fas fa-star" aria-hidden="true"></i>
                 2025
               </button>
@@ -211,8 +226,8 @@
         </div>
 
         <!-- Loading State -->
-        <div id="loading-state" class="LoadingState" style="display: none;">
-          <div class="LoadingSkeleton">
+        <div id="loading-state" class="LoadingState" style="display: none;" role="status" aria-live="polite" aria-label="Loading patches">
+          <div class="LoadingSkeleton" aria-hidden="true">
             <div class="SkeletonItem"></div>
             <div class="SkeletonItem"></div>
             <div class="SkeletonItem"></div>
@@ -227,8 +242,8 @@
         </div>
 
         <!-- No Results State -->
-        <div id="no-results" class="NoResults" style="display: none;">
-          <div class="NoResultsIcon">
+        <div id="no-results" class="NoResults" style="display: none;" role="status" aria-live="polite">
+          <div class="NoResultsIcon" aria-hidden="true">
             <i class="fas fa-search" aria-hidden="true"></i>
           </div>
           <h3>No patches found</h3>
@@ -243,12 +258,12 @@
     </main>
     
     <!-- Footer -->
-    <footer class="SiteFooter">
+    <footer class="SiteFooter" role="contentinfo">
         <div class="FooterContainer">
             <!-- Navigation Section -->
             <div class="FooterSection">
                 <h4 class="FooterTitle">Navigation</h4>
-                <nav class="FooterNav">
+                <nav class="FooterNav" aria-label="Footer navigation">
                     <a href="#main-content" class="FooterLink">
                         <i class="fas fa-list" aria-hidden="true"></i>
                         Patch List
@@ -263,12 +278,12 @@
             <!-- Quick Actions Section -->
             <div class="FooterSection">
                 <h4 class="FooterTitle">Quick Actions</h4>
-                <div class="FooterActions">
-                    <button id="themeToggleButton" class="ThemeToggle">
+                <div class="FooterActions" role="group" aria-label="Quick actions">
+                    <button id="themeToggleButton" class="ThemeToggle" aria-label="Toggle between light and dark theme">
                         <i class="fas fa-palette" aria-hidden="true"></i>
                         <span class="ToggleText">Toggle Theme</span>
                     </button>
-                    <button class="PrintButton" onclick="window.print()">
+                    <button class="PrintButton" onclick="window.print()" aria-label="Print this page">
                         <i class="fas fa-print" aria-hidden="true"></i>
                         <span>Print Page</span>
                     </button>
@@ -293,7 +308,7 @@
             <!-- Social/Links Section -->
             <div class="FooterSection">
                 <h4 class="FooterTitle">Community</h4>
-                <div class="FooterLinks">
+                <nav class="FooterLinks" aria-label="Community links">
                     <a href="https://www.faforever.com" class="FooterLink External" target="_blank" rel="noopener">
                         <i class="fas fa-external-link-alt" aria-hidden="true"></i>
                         FAForever.com
@@ -302,25 +317,25 @@
                         <i class="fab fa-discord" aria-hidden="true"></i>
                         Discord
                     </a>
-                    <a href="https://github.com/FAForever" class="FooterLink External" target="_blank" rel="noopener">
+                    <a href="https://github.com/FAForever" class="FooterLink External" target="_blank" rel="noopener" aria-label="Visit FAForever on GitHub (opens in new tab)">
                         <i class="fab fa-github" aria-hidden="true"></i>
                         GitHub
                     </a>
-                </div>
+                </nav>
             </div>
         </div>
 
         <!-- Bottom Bar -->
         <div class="FooterBottom">
             <div class="FooterBottomContent">
-                <span class="LastUpdated">Last updated: <time datetime="2025-08-21">August 21st, 2025</time></span>
+                <span class="LastUpdated">Last updated: <time datetime="2026-02-05">February 5th, 2026</time></span>
                 <span class="BuildInfo">Balance Team • Patch Notes Archive</span>
             </div>
         </div>
     </footer>
     
     <!-- Back to Top Button -->
-    <button id="back-to-top" class="back-to-top" aria-label="Back to top" title="Back to top">↑</button>
+    <button id="back-to-top" class="back-to-top" aria-label="Scroll back to top of page" title="Back to top">↑</button>
     
     <!-- Static CMS Identity Widget Initialization -->
     <script>

@@ -1,7 +1,7 @@
 /**
  * Core UI Manager - Consolidated Script
  * Combines theme switching, background management, and style loading
- * Version: 2.1.0
+ * Version: 2.3.0 - Enhanced with smooth transitions and auto-sync
  */
 
 (function() {
@@ -12,12 +12,35 @@
     // ========================================
     
     const THEME_KEY = 'theme';
+    const AUTO_THEME_KEY = 'autoTheme';
     const LIGHT_MODE_CLASS = 'light-mode';
+    const THEME_TRANSITION_CLASS = 'theme-transition';
 
+    /**
+     * Enable smooth theme transitions
+     */
+    function enableTransitions() {
+        document.documentElement.classList.add(THEME_TRANSITION_CLASS);
+    }
+
+    /**
+     * Disable theme transitions temporarily
+     */
+    function disableTransitions() {
+        document.documentElement.classList.remove(THEME_TRANSITION_CLASS);
+    }
+
+    /**
+     * Toggle between light and dark theme
+     */
     function toggleTheme() {
         const htmlElement = document.documentElement;
         const themeToggleButton = document.querySelector('#themeToggleButton');
         const themeText = themeToggleButton?.querySelector('.theme-text');
+        
+        // Enable smooth transitions
+        enableTransitions();
+        
         const isLightMode = htmlElement.classList.toggle(LIGHT_MODE_CLASS);
         const newTheme = isLightMode ? 'light' : 'dark';
 
@@ -34,35 +57,51 @@
 
         try {
             localStorage.setItem(THEME_KEY, newTheme);
+            localStorage.removeItem(AUTO_THEME_KEY); // Disable auto theme
         } catch (e) {
             console.warn('Unable to access localStorage. Theme will reset on reload.');
         }
         
         // Trigger background update for new theme
         updateBackground();
+        
+        // Show notification
+        showThemeNotification(`Switched to ${newTheme} theme`);
     }
 
+    /**
+     * Load and apply saved theme
+     */
     function loadTheme() {
         const htmlElement = document.documentElement;
         const themeToggleButton = document.querySelector('#themeToggleButton');
         const themeText = themeToggleButton?.querySelector('.theme-text');
         
         let savedTheme;
+        let autoTheme = false;
+        
         try {
             savedTheme = localStorage.getItem(THEME_KEY);
+            autoTheme = localStorage.getItem(AUTO_THEME_KEY) === 'true';
         } catch (e) {
             console.warn('Unable to access localStorage. Using default theme.');
         }
 
         const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        const theme = savedTheme || (prefersDark ? 'dark' : 'light');
+        const theme = (autoTheme || !savedTheme) ? (prefersDark ? 'dark' : 'light') : savedTheme;
         const isLightMode = theme === 'light';
 
+        // Apply theme without transition on initial load
+        disableTransitions();
+        
         if (isLightMode) {
             htmlElement.classList.add(LIGHT_MODE_CLASS);
         } else {
             htmlElement.classList.remove(LIGHT_MODE_CLASS);
         }
+        
+        // Re-enable transitions after a short delay
+        setTimeout(enableTransitions, 100);
 
         // Update button text
         if (themeToggleButton && themeText) {
@@ -75,7 +114,84 @@
             );
         }
     }
+    
+    /**
+     * Enable auto theme sync with system preferences
+     */
+    function enableAutoTheme() {
+        try {
+            localStorage.setItem(AUTO_THEME_KEY, 'true');
+            localStorage.removeItem(THEME_KEY);
+            
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            applyTheme(prefersDark ? 'dark' : 'light');
+            
+            showThemeNotification('Auto theme enabled');
+        } catch (e) {
+            console.warn('Failed to enable auto theme');
+        }
+    }
+    
+    /**
+     * Apply a specific theme
+     * @param {string} theme - 'light' or 'dark'
+     */
+    function applyTheme(theme) {
+        const htmlElement = document.documentElement;
+        const isLightMode = theme === 'light';
+        
+        enableTransitions();
+        
+        if (isLightMode) {
+            htmlElement.classList.add(LIGHT_MODE_CLASS);
+        } else {
+            htmlElement.classList.remove(LIGHT_MODE_CLASS);
+        }
+        
+        updateBackground();
+        updateThemeButton();
+    }
+    
+    /**
+     * Update theme toggle button state
+     */
+    function updateThemeButton() {
+        const themeToggleButton = document.querySelector('#themeToggleButton');
+        const themeText = themeToggleButton?.querySelector('.theme-text');
+        const isLightMode = document.documentElement.classList.contains(LIGHT_MODE_CLASS);
+        
+        if (themeToggleButton && themeText) {
+            themeText.textContent = isLightMode ? 'Light' : 'Dark';
+            themeToggleButton.setAttribute('aria-label', 
+                isLightMode ? 'Switch to dark theme' : 'Switch to light theme'
+            );
+            themeToggleButton.setAttribute('title', 
+                isLightMode ? 'Switch to dark theme' : 'Switch to light theme'
+            );
+        }
+    }
+    
+    /**
+     * Show theme change notification
+     * @param {string} message - Notification message
+     */
+    function showThemeNotification(message) {
+        // Reuse keyboard shortcuts notification if available
+        const notification = document.createElement('div');
+        notification.className = 'shortcuts-notification theme-notification';
+        notification.textContent = message;
+        document.body.appendChild(notification);
+        
+        setTimeout(() => notification.classList.add('show'), 10);
+        setTimeout(() => {
+            notification.classList.remove('show');
+            setTimeout(() => notification.remove(), 300);
+        }, 2000);
+    }
 
+    /**
+     * Initialize theme management
+     */
     function initTheme() {
         loadTheme();
         
@@ -85,13 +201,28 @@
             themeToggleButton.addEventListener('click', toggleTheme);
         }
         
-        // Listen for system theme changes
+        // Listen for system theme changes (only if auto theme is enabled)
         window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
-            if (!localStorage.getItem(THEME_KEY)) {
-                loadTheme();
-                updateBackground();
+            try {
+                const autoTheme = localStorage.getItem(AUTO_THEME_KEY) === 'true';
+                const manualTheme = localStorage.getItem(THEME_KEY);
+                
+                if (autoTheme || !manualTheme) {
+                    const newTheme = e.matches ? 'dark' : 'light';
+                    applyTheme(newTheme);
+                    showThemeNotification(`System theme changed to ${newTheme}`);
+                }
+            } catch (e) {
+                // localStorage not available
             }
         });
+        
+        // Expose functions globally for keyboard shortcuts
+        window.themeManager = {
+            toggle: toggleTheme,
+            enableAuto: enableAutoTheme,
+            applyTheme: applyTheme
+        };
     }
 
     // ========================================

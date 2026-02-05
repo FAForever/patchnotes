@@ -1,0 +1,223 @@
+/* PWA Cache Management Modal */
+
+.pwa-cache-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pwa-cache-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(4px);
+  cursor: pointer;
+}
+
+.pwa-cache-content {
+  position: relative;
+  background: var(--Card);
+  border-radius: 12px;
+  max-width: 500px;
+  width: 90%;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  animation: modalSlideIn 0.3s ease;
+}
+
+@keyframes modalSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.pwa-cache-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 24px;
+  border-bottom: 2px solid var(--Line);
+  background: var(--IndexGridBackground);
+}
+
+.pwa-cache-header h3 {
+  margin: 0;
+  font-size: 20px;
+  color: var(--Text-Primary);
+}
+
+.pwa-cache-close {
+  background: none;
+  border: none;
+  color: var(--Text);
+  font-size: 28px;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  line-height: 1;
+}
+
+.pwa-cache-close:hover {
+  background: var(--Line);
+  color: var(--Accent-Color);
+}
+
+.pwa-cache-body {
+  padding: 24px;
+}
+
+.cache-info {
+  background: var(--IndexGridBackground);
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.cache-info p {
+  margin: 8px 0;
+  color: var(--Text);
+  line-height: 1.6;
+}
+
+.cache-info strong {
+  color: var(--Accent-Color);
+}
+
+.cache-note {
+  font-size: 14px;
+  color: var(--Text-Secondary);
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid var(--Line);
+}
+
+.cache-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.cache-actions .btn {
+  flex: 1;
+  min-width: 150px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.cache-actions .btn-danger {
+  background: #dc3545;
+  color: #fff;
+}
+
+.cache-actions .btn-danger:hover {
+  background: #c82333;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(220, 53, 69, 0.3);
+}
+
+.cache-actions .btn-secondary {
+  background: var(--Card);
+  color: var(--Text);
+  border: 2px solid var(--Line);
+}
+
+.cache-actions .btn-secondary:hover {
+  background: var(--Line);
+  transform: translateY(-2px);
+}
+
+/* Cache Management Button in Footer */
+.CacheManageButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  background: var(--Card);
+  border: 2px solid var(--Line);
+  border-radius: 6px;
+  color: var(--Text);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 14px;
+}
+
+.CacheManageButton:hover {
+  background: var(--Line);
+  border-color: var(--Accent-Color);
+  color: var(--Accent-Color);
+  transform: translateY(-2px);
+}
+
+/* PWA Notification Toast */
+.pwa-notification {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  padding: 16px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  z-index: 10001;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.3s ease;
+}
+
+.pwa-notification.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.pwa-notification-success {
+  background: #28a745;
+  color: #fff;
+}
+
+.pwa-notification-error {
+  background: #dc3545;
+  color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .pwa-cache-content {
+    width: 95%;
+  }
+  
+  .cache-actions {
+    flex-direction: column;
+  }
+  
+  .cache-actions .btn {
+    width: 100%;
+  }
+  
+  .pwa-notification {
+    left: 16px;
+    right: 16px;
+    bottom: 16px;
+  }
+}

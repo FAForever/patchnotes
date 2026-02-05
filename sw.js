@@ -1,20 +1,30 @@
 // Service Worker for FAForever Patchnotes PWA
-const CACHE_NAME = 'faforever-patchnotes-v2.2';
-const STATIC_CACHE = 'static-v2.2';
-const DYNAMIC_CACHE = 'dynamic-v2.2';
-const CSS_CACHE = 'css-v2.2';
+const CACHE_NAME = 'faforever-patchnotes-v2.3.1';
+const STATIC_CACHE = 'static-v2.3.1';
+const DYNAMIC_CACHE = 'dynamic-v2.3.1';
+const CSS_CACHE = 'css-v2.3.1';
 
 // Cache version - increment this when styles change
-const CACHE_VERSION = '2.2.0';
+const CACHE_VERSION = '2.3.1';
 
 // Assets to cache immediately (excluding CSS to allow fresh loading)
 const STATIC_ASSETS = [
   '/',
   '/index.html',
+  '/404.html',
+  '/scripts/logger.js',
   '/scripts/populatePatches.js',
+  '/scripts/search.js',
   '/scripts/coreUI.js',
+  '/scripts/lazyLoader.js',
+  '/scripts/keyboardShortcuts.js',
+  '/scripts/errorBoundary.js',
+  '/scripts/performance.js',
+  '/scripts/analytics.js',
   '/scripts/contentSidemenu.js',
   '/scripts/headConfig.js',
+  '/scripts/backToTop.js',
+  '/scripts/pwa.js',
   '/assets/images/faction/UEF.svg',
   '/assets/images/faction/Cybran.svg',
   '/assets/images/faction/Aeon.svg',
@@ -28,7 +38,11 @@ const CSS_ASSETS = [
   '/style/index.css',
   '/style/root.css',
   '/style/balance.css',
-  '/style/critical.css'
+  '/style/critical.css',
+  '/style/pwa.css',
+  '/style/components/keyboard-shortcuts.css',
+  '/style/components/pwa-cache.css',
+  '/style/components/accessibility.css'
 ];
 
 // Install event - cache static assets

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found | FAForever Patchnotes</title>
+    <meta name="description" content="The page you're looking for doesn't exist. Return to FAForever Patchnotes.">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    
+    <!-- Inline Critical CSS for fast loading -->
+    <style>
+        :root {
+            --background: #222831;
+            --text: #eee;
+            --accent: #00d2ff;
+            --accent-hover: #c2a732;
+            --card: #393e46;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: var(--background);
+            color: var(--text);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .error-container {
+            text-align: center;
+            max-width: 600px;
+            animation: fadeIn 0.5s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .error-code {
+            font-size: 120px;
+            font-weight: bold;
+            background: linear-gradient(135deg, var(--accent), var(--accent-hover));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 20px;
+            line-height: 1;
+        }
+        
+        .error-title {
+            font-size: 32px;
+            margin-bottom: 16px;
+            color: var(--text);
+        }
+        
+        .error-message {
+            font-size: 18px;
+            color: #bbb;
+            margin-bottom: 40px;
+            line-height: 1.6;
+        }
+        
+        .button-group {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 14px 28px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn-primary {
+            background: var(--accent);
+            color: #000;
+        }
+        
+        .btn-primary:hover {
+            background: var(--accent-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 210, 255, 0.3);
+        }
+        
+        .btn-secondary {
+            background: var(--card);
+            color: var(--text);
+        }
+        
+        .btn-secondary:hover {
+            background: #4a5058;
+            transform: translateY(-2px);
+        }
+        
+        .helpful-links {
+            margin-top: 60px;
+            padding-top: 40px;
+            border-top: 1px solid #444;
+        }
+        
+        .helpful-links h3 {
+            font-size: 20px;
+            margin-bottom: 20px;
+            color: var(--text);
+        }
+        
+        .links-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            margin-top: 20px;
+        }
+        
+        .link-card {
+            background: var(--card);
+            padding: 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            color: var(--text);
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        
+        .link-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-4px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+        
+        .link-card-icon {
+            font-size: 32px;
+            margin-bottom: 12px;
+        }
+        
+        .link-card-title {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        
+        .link-card-desc {
+            font-size: 14px;
+            color: #bbb;
+            line-height: 1.4;
+        }
+        
+        @media (max-width: 600px) {
+            .error-code {
+                font-size: 80px;
+            }
+            
+            .error-title {
+                font-size: 24px;
+            }
+            
+            .error-message {
+                font-size: 16px;
+            }
+            
+            .button-group {
+                flex-direction: column;
+            }
+            
+            .btn {
+                width: 100%;
+                justify-content: center;
+            }
+            
+            .links-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="error-container">
+        <div class="error-code">404</div>
+        <h1 class="error-title">Page Not Found</h1>
+        <p class="error-message">
+            The patch note you're looking for doesn't exist or has been moved. 
+            This might be a broken link, or the patch hasn't been published yet.
+        </p>
+        
+        <div class="button-group">
+            <a href="/" class="btn btn-primary">
+                <span>🏠</span>
+                <span>Back to Home</span>
+            </a>
+            <button onclick="history.back()" class="btn btn-secondary">
+                <span>←</span>
+                <span>Go Back</span>
+            </button>
+        </div>
+        
+        <div class="helpful-links">
+            <h3>Quick Navigation</h3>
+            <div class="links-grid">
+                <a href="/" class="link-card">
+                    <div class="link-card-icon">📋</div>
+                    <div class="link-card-title">All Patches</div>
+                    <div class="link-card-desc">Browse complete patch archive</div>
+                </a>
+                
+                <a href="https://www.faforever.com" class="link-card">
+                    <div class="link-card-icon">🎮</div>
+                    <div class="link-card-title">FAForever</div>
+                    <div class="link-card-desc">Main FAF website</div>
+                </a>
+                
+                <a href="https://discord.gg/mXahAXy" class="link-card">
+                    <div class="link-card-icon">💬</div>
+                    <div class="link-card-title">Discord</div>
+                    <div class="link-card-desc">Join the community</div>
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Log 404 for analytics if available
+        if (window.logger) {
+            window.logger.warn('404 Page Not Found:', window.location.href);
+        }
+        
+        // Report to analytics if available
+        if (window.userAnalytics) {
+            window.userAnalytics.trackEvent('error', {
+                type: '404',
+                path: window.location.pathname
+            });
+        }
+    </script>
+</body>
+</html>

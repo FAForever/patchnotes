@@ -1,12 +1,13 @@
+/**
+ * Populate the patch list from patches.json
+ * @async
+ */
 async function populate() {
+  const logger = new Logger('Populate');
   const requestURL = './assets/data/patches.json';
   const container = document.querySelector('.BalanceJSONList');
   
-  // Mobile debugging
-  console.log('Mobile Debug - Starting populate()');
-  console.log('Mobile Debug - Container found:', !!container);
-  console.log('Mobile Debug - Request URL:', requestURL);
-  console.log('Mobile Debug - Current URL:', window.location.href);
+  logger.debug('Starting populate()', { container: !!container, requestURL });
   
   // Show loading state
   showLoadingState(container);
@@ -14,18 +15,16 @@ async function populate() {
   try {
     const response = await fetch(requestURL, { cache: 'no-cache' });
     
-    console.log('Mobile Debug - Response status:', response.status);
-    console.log('Mobile Debug - Response ok:', response.ok);
+    logger.debug('Fetch response', { status: response.status, ok: response.ok });
 
     if (!response.ok) {
       throw new Error(`Network response was not ok: ${response.statusText}`);
     }
 
     const patches = await response.json();
-    console.log('Mobile Debug - Patches loaded:', patches);
-    
     const { balance = [] } = patches; // Provide empty arrays as fallback
-    console.log('Mobile Debug - Balance array length:', balance.length);
+    
+    logger.debug('Patches loaded', { count: balance.length });
 
     if (balance.length === 0) {
       throw new Error('Invalid data format: Missing Balance data.');
@@ -33,37 +32,34 @@ async function populate() {
 
     // Render only if data exists
     if (balance.length > 0) {
-      // Mobile optimization: limit to last 10 patches on mobile devices
-      const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-      const patchesToRender = isMobile ? balance.slice(0, 10) : balance;
-      
-      console.log('Mobile Debug - Is mobile device:', isMobile);
-      console.log('Mobile Debug - User agent:', navigator.userAgent);
-      console.log('Mobile Debug - Total patches available:', balance.length);
-      console.log('Mobile Debug - Patches to render:', patchesToRender.length);
-      
-      renderPatchList(patchesToRender, '.BalanceJSONList');
+      // Use responsive design instead of limiting patches on mobile
+      renderPatchList(balance, '.BalanceJSONList');
       
       // Update hero statistics
       updateHeroStats();
       
       // Initialize search with patch data
       if (window.patchSearch) {
-        window.patchSearch.setPatches(patchesToRender);
+        window.patchSearch.setPatches(balance);
       }
+      
+      logger.info(`Successfully loaded ${balance.length} patches`);
     } else {
       showEmptyState(container);
     }
   } catch (error) {
-    console.error('Mobile Debug - Error occurred:', error);
-    console.error('There has been a problem with your fetch operation:', error);
+    logger.error('Failed to load patches:', error);
     showErrorState(container, error.message);
   }
 }
 
+/**
+ * Show loading skeleton while patches are fetched
+ * @param {HTMLElement} container - The container element
+ */
 function showLoadingState(container) {
   if (!container) {
-    console.error('Mobile Debug - No container for loading state');
+    console.error('No container for loading state');
     return;
   }
   
@@ -79,42 +75,44 @@ function showLoadingState(container) {
       <p>Loading patch archives...</p>
     </div>
   `;
-  console.log('Mobile Debug - Loading state shown');
 }
 
+/**
+ * Show error state with retry option
+ * @param {HTMLElement} container - The container element
+ * @param {string} message - Error message to display
+ */
 function showErrorState(container, message) {
   if (!container) {
-    console.error('Mobile Debug - No container for error state');
+    console.error('No container for error state');
     return;
   }
   
-  // More detailed error for mobile debugging
   const userAgent = navigator.userAgent;
-  const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent);
-  
-  console.log('Mobile Debug - Showing error state:', message);
-  console.log('Mobile Debug - Is mobile device:', isMobile);
   
   container.innerHTML = `
     <div class="error-state">
       <p>⚠️ Failed to load patches</p>
       <div class="error-details">
         <p><strong>Error:</strong> ${message}</p>
-        ${isMobile ? '<p><strong>Device:</strong> Mobile device detected</p>' : ''}
         <p><strong>URL:</strong> ${window.location.href}</p>
       </div>
       <button onclick="populate()" class="retry-btn">Try Again</button>
       <details style="margin-top: 16px; text-align: left;">
-        <summary style="cursor: pointer; color: var(--Accent-Color);">Debug Info</summary>
+        <summary style="cursor: pointer; color: var(--Accent-Color);">Technical Details</summary>
         <pre style="font-size: 12px; margin-top: 8px; white-space: pre-wrap;">${userAgent}</pre>
       </details>
     </div>
   `;
 }
 
+/**
+ * Show empty state when no patches match filters
+ * @param {HTMLElement} container - The container element
+ */
 function showEmptyState(container) {
   if (!container) {
-    console.error('Mobile Debug - No container for empty state');
+    console.error('No container for empty state');
     return;
   }
   
@@ -129,19 +127,23 @@ function showEmptyState(container) {
       </button>
     </div>
   `;
-  console.log('Mobile Debug - Empty state shown');
 }
 
+/**
+ * Render the list of patches in the container
+ * @param {Array} patchList - Array of patch objects
+ * @param {string} containerSelector - CSS selector for container
+ */
 function renderPatchList(patchList, containerSelector) {
+  const logger = new Logger('Render');
   const container = document.querySelector(containerSelector);
 
-  console.log('Mobile Debug - Rendering patch list');
-  console.log('Mobile Debug - Patch list length:', patchList.length);
-
   if (!container) {
-    console.error(`Container with selector "${containerSelector}" not found.`);
+    logger.error(`Container not found: ${containerSelector}`);
     return;
   }
+  
+  logger.debug('Rendering patches', { count: patchList.length });
 
   const fragment = document.createDocumentFragment(); // Use DocumentFragment for better performance
 
@@ -199,13 +201,12 @@ function renderPatchList(patchList, containerSelector) {
   if (!container.classList.contains('list-view') && !container.classList.contains('grid-view')) {
     container.classList.add('grid-view');
   }
-  
-  console.log('Mobile Debug - Patch list rendered successfully');
 }
 
 // Initialize when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
-  console.log('Mobile Debug - DOM Content Loaded');
+  const logger = new Logger('Init');
+  logger.debug('DOM Content Loaded');
   initializeEnhancedUI();
   populate();
 });
@@ -423,8 +424,6 @@ function toggleView(viewType) {
   } else {
     container.classList.add('list-view');
   }
-  
-  console.log('View toggled to:', viewType);
 }
 
 function goToLatestPatch() {
@@ -435,8 +434,6 @@ function goToLatestPatch() {
     if (link && link.href) {
       window.location.href = link.href;
     }
-  } else {
-    console.log('No patches available');
   }
 }
 
@@ -449,8 +446,6 @@ function goToRandomPatch() {
     if (link && link.href) {
       window.location.href = link.href;
     }
-  } else {
-    console.log('No visible patches available');
   }
 }
 
