@@ -176,7 +176,7 @@
                 <div class="FooterActions">
                     <button id="themeToggleButton" class="ThemeToggle">
                         <i class="fas fa-palette" aria-hidden="true"></i>
-                        <span class="ToggleText">Toggle Theme</span>
+                        <span class="ToggleText">Toggle Dark/Light Mode</span>
                     </button>
                     <button class="PrintButton" onclick="window.print()">
                         <i class="fas fa-print" aria-hidden="true"></i>
@@ -185,37 +185,30 @@
                 </div>
             </div>
 
-            <!-- About Section -->
+            <!-- Faction Theme Section -->
             <div class="FooterSection">
-                <h4 class="FooterTitle">About</h4>
-                <div class="FooterInfo">
-                    <p class="PatchInfo">
-                        <strong>Patch 3809</strong><br>
-                        Released: April 20th, 2024
-                    </p>
-                    <p class="Copyright">
-                        © 2015-2025 <strong>FAForever</strong><br>
-                        Community-driven balance updates
-                    </p>
-                </div>
-            </div>
-
-            <!-- Social/Links Section -->
-            <div class="FooterSection">
-                <h4 class="FooterTitle">Community</h4>
-                <div class="FooterLinks">
-                    <a href="https://www.faforever.com" class="FooterLink External" target="_blank" rel="noopener">
-                        <i class="fas fa-external-link-alt" aria-hidden="true"></i>
-                        FAForever.com
-                    </a>
-                    <a href="https://discord.gg/mXahAXy" class="FooterLink External" target="_blank" rel="noopener">
-                        <i class="fab fa-discord" aria-hidden="true"></i>
-                        Discord
-                    </a>
-                    <a href="https://github.com/FAForever" class="FooterLink External" target="_blank" rel="noopener">
-                        <i class="fab fa-github" aria-hidden="true"></i>
-                        GitHub
-                    </a>
+                <h4 class="FooterTitle">Faction Theme</h4>
+                <div class="FactionThemes">
+                    <button class="FactionButton active" data-faction="default" aria-label="Default theme">
+                        <span class="FactionIcon">⚔️</span>
+                        <span class="FactionLabel">Default</span>
+                    </button>
+                    <button class="FactionButton" data-faction="aeon" aria-label="Aeon theme">
+                        <img src="/assets/images/faction/Aeon.svg" alt="Aeon" class="FactionLogo">
+                        <span class="FactionLabel">Aeon</span>
+                    </button>
+                    <button class="FactionButton" data-faction="uef" aria-label="UEF theme">
+                        <img src="/assets/images/faction/UEF.svg" alt="UEF" class="FactionLogo">
+                        <span class="FactionLabel">UEF</span>
+                    </button>
+                    <button class="FactionButton" data-faction="cybran" aria-label="Cybran theme">
+                        <img src="/assets/images/faction/Cybran.svg" alt="Cybran" class="FactionLogo">
+                        <span class="FactionLabel">Cybran</span>
+                    </button>
+                    <button class="FactionButton" data-faction="sera" aria-label="Seraphim theme">
+                        <img src="/assets/images/faction/Seraphim.svg" alt="Seraphim" class="FactionLogo">
+                        <span class="FactionLabel">Sera</span>
+                    </button>
                 </div>
             </div>
         </div>
@@ -223,7 +216,21 @@
         <!-- Bottom Bar -->
         <div class="FooterBottom">
             <div class="FooterBottomContent">
-                <span class="LastUpdated">Last updated: <time datetime="2024-04-20">April 20th, 2024</time></span>
+                <div class="FooterBottomLinks">
+                    <a href="https://www.faforever.com" class="FooterBottomLink" target="_blank" rel="noopener" aria-label="FAForever Website">
+                        <i class="fas fa-globe" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://discord.gg/mXahAXy" class="FooterBottomLink" target="_blank" rel="noopener" aria-label="Discord">
+                        <i class="fab fa-discord" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://github.com/FAForever" class="FooterBottomLink" target="_blank" rel="noopener" aria-label="GitHub">
+                        <i class="fab fa-github" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://forum.faforever.com" class="FooterBottomLink" target="_blank" rel="noopener" aria-label="Forum">
+                        <i class="fas fa-comments" aria-hidden="true"></i>
+                    </a>
+                </div>
+                <span class="Copyright">© 2015-2026 <strong>FAForever</strong> • Community-driven balance updates</span>
                 <span class="BuildInfo">Balance Team • Patch Notes v3809</span>
             </div>
         </div>

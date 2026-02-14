@@ -68,15 +68,16 @@
 }
 
 .PatchStatus {
-  font-size: 0.6rem; /* Reduced from 0.75rem */
-  color: #198754;
-  background: var(--buff);
-  padding: 0.2rem 0.6rem; /* Reduced from 0.25rem 0.75rem */
-  border-radius: 10px; /* Reduced from 12px */
+  font-size: 0.7rem;
+  color: #ffffff;
+  background: #198754;
+  padding: 0.3rem 0.8rem;
+  border-radius: 10px;
   border: 1px solid #198754;
   text-transform: uppercase;
-  letter-spacing: 0.4px; /* Reduced from 0.5px */
-  font-weight: 600;
+  letter-spacing: 0.5px;
+  font-weight: 700;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .PatchSummary {

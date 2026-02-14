@@ -16,7 +16,7 @@
 
 .FooterContainer {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Reduced from 250px */
+  grid-template-columns: repeat(2, 1fr);
   gap: 24px; /* Reduced from 30px */
   padding: 32px 16px; /* Reduced from 40px 20px */
   max-width: 960px; /* Reduced from 1200px */
@@ -102,19 +102,15 @@
   gap: 12px; /* Reduced from 15px */
 }
 
-.PatchInfo {
-  background: var(--added);
-  padding: 12px; /* Reduced from 15px */
-  border-radius: 6px; /* Reduced from 8px */
-  border-left: 3px solid var(--Link);
-  margin: 0;
-}
-
 .Copyright {
   margin: 0;
-  font-size: 0.72em; /* Reduced from 0.9em */
+  font-size: 0.68em;
   opacity: 0.8;
   line-height: 1.5;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  gap: 6px;
 }
 
 .External::after {
@@ -132,18 +128,49 @@
 .FooterBottomContent {
   max-width: 960px; /* Reduced from 1200px */
   margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
   align-items: center;
   font-size: 0.68em; /* Reduced from 0.85em */
   opacity: 0.7;
+  gap: 16px;
 }
 
-.LastUpdated,
+.FooterBottomLinks {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  justify-self: start;
+}
+
+.FooterBottomLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  color: var(--Text-Secondary);
+  background: var(--Card);
+  border-radius: 50%;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 1.2em;
+  border: 1px solid var(--Line);
+}
+
+.FooterBottomLink:hover {
+  background: var(--Link);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  border-color: var(--Link);
+}
+
 .BuildInfo {
   display: flex;
   align-items: center;
   gap: 6px; /* Reduced from 8px */
+  justify-self: end;
 }
 /* ========================================
    FACTION THEME SELECTOR
@@ -212,3 +239,28 @@
   text-align: center;
   white-space: nowrap;
 }
+
+/* ========================================
+   RESPONSIVE FOOTER
+   ======================================== */
+
+@media (max-width: 768px) {
+  .FooterContainer {
+    grid-template-columns: 1fr;
+  }
+  
+  .FooterBottomContent {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 12px;
+  }
+  
+  .FooterBottomLinks {
+    justify-self: center;
+  }
+  
+  .BuildInfo {
+    justify-self: center;
+  }
+}
+
