@@ -924,11 +924,38 @@
                 <div class="FooterActions">
                     <button id="themeToggleButton" class="ThemeToggle">
                         <i class="fas fa-palette" aria-hidden="true"></i>
-                        <span class="ToggleText">Toggle Theme</span>
+                        <span class="ToggleText">Toggle Dark/Light Mode</span>
                     </button>
                     <button class="PrintButton" onclick="window.print()">
                         <i class="fas fa-print" aria-hidden="true"></i>
                         <span>Print Page</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Faction Theme Section -->
+            <div class="FooterSection">
+                <h4 class="FooterTitle">Faction Theme</h4>
+                <div class="FactionThemes">
+                    <button class="FactionButton active" data-faction="default" aria-label="Default theme">
+                        <span class="FactionIcon">⚔️</span>
+                        <span class="FactionLabel">Default</span>
+                    </button>
+                    <button class="FactionButton" data-faction="aeon" aria-label="Aeon theme">
+                        <img src="/assets/images/faction/Aeon.svg" alt="Aeon" class="FactionLogo">
+                        <span class="FactionLabel">Aeon</span>
+                    </button>
+                    <button class="FactionButton" data-faction="uef" aria-label="UEF theme">
+                        <img src="/assets/images/faction/UEF.svg" alt="UEF" class="FactionLogo">
+                        <span class="FactionLabel">UEF</span>
+                    </button>
+                    <button class="FactionButton" data-faction="cybran" aria-label="Cybran theme">
+                        <img src="/assets/images/faction/Cybran.svg" alt="Cybran" class="FactionLogo">
+                        <span class="FactionLabel">Cybran</span>
+                    </button>
+                    <button class="FactionButton" data-faction="sera" aria-label="Seraphim theme">
+                        <img src="/assets/images/faction/Seraphim.svg" alt="Seraphim" class="FactionLogo">
+                        <span class="FactionLabel">Sera</span>
                     </button>
                 </div>
             </div>

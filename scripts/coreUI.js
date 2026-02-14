@@ -249,6 +249,120 @@
     }
 
     // ========================================
+    // FACTION THEME MANAGEMENT
+    // ========================================
+    
+    const FACTION_KEY = 'factionTheme';
+    
+    const FACTION_COLORS = {
+        default: {
+            primary: '#4a9eff',
+            secondary: '#2e7dd1',
+            accent: '#3b8ed9'
+        },
+        aeon: {
+            primary: '#2ecc71',
+            secondary: '#27ae60',
+            accent: '#1e8449'
+        },
+        uef: {
+            primary: '#3498db',
+            secondary: '#2980b9',
+            accent: '#21618c'
+        },
+        cybran: {
+            primary: '#e74c3c',
+            secondary: '#c0392b',
+            accent: '#922b21'
+        },
+        sera: {
+            primary: '#f39c12',
+            secondary: '#e67e22',
+            accent: '#d35400'
+        }
+    };
+    
+    /**
+     * Apply faction theme colors
+     * @param {string} faction - 'default', 'aeon', 'uef', 'cybran', or 'sera'
+     */
+    function applyFactionTheme(faction) {
+        const colors = FACTION_COLORS[faction] || FACTION_COLORS.default;
+        const root = document.documentElement;
+        
+        // Apply CSS custom properties
+        root.style.setProperty('--Link', colors.primary);
+        root.style.setProperty('--Link-Hover', colors.secondary);
+        root.style.setProperty('--Icon-Glow', colors.accent);
+        
+        // Save preference
+        try {
+            localStorage.setItem(FACTION_KEY, faction);
+        } catch (e) {
+            console.warn('Unable to save faction theme preference');
+        }
+        
+        // Update button states
+        updateFactionButtons(faction);
+        
+        // Show notification
+        const factionName = faction.charAt(0).toUpperCase() + faction.slice(1);
+        showThemeNotification(`${factionName} theme applied`);
+    }
+    
+    /**
+     * Update faction button active states
+     * @param {string} activeFaction - The currently active faction
+     */
+    function updateFactionButtons(activeFaction) {
+        const buttons = document.querySelectorAll('.FactionButton');
+        buttons.forEach(button => {
+            const faction = button.getAttribute('data-faction');
+            if (faction === activeFaction) {
+                button.classList.add('active');
+            } else {
+                button.classList.remove('active');
+            }
+        });
+    }
+    
+    /**
+     * Load saved faction theme
+     */
+    function loadFactionTheme() {
+        let savedFaction = 'default';
+        
+        try {
+            savedFaction = localStorage.getItem(FACTION_KEY) || 'default';
+        } catch (e) {
+            console.warn('Unable to load faction theme preference');
+        }
+        
+        applyFactionTheme(savedFaction);
+    }
+    
+    /**
+     * Initialize faction theme management
+     */
+    function initFactionTheme() {
+        loadFactionTheme();
+        
+        // Add event listeners to faction buttons
+        const factionButtons = document.querySelectorAll('.FactionButton');
+        factionButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const faction = button.getAttribute('data-faction');
+                applyFactionTheme(faction);
+            });
+        });
+        
+        // Expose function globally
+        window.factionThemeManager = {
+            applyTheme: applyFactionTheme
+        };
+    }
+
+    // ========================================
     // STYLE LOADING MANAGEMENT
     // ========================================
     
@@ -436,6 +550,7 @@
     function init() {
         initTheme();
         initBackground();
+        initFactionTheme();
         initStyleLoader();
         initRandomFactions();
     }

@@ -145,3 +145,70 @@
   align-items: center;
   gap: 6px; /* Reduced from 8px */
 }
+/* ========================================
+   FACTION THEME SELECTOR
+   ======================================== */
+
+.FactionThemes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: flex-start;
+}
+
+.FactionButton {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  background: var(--Card);
+  border: 2px solid var(--Line);
+  border-radius: 8px;
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: inherit;
+  font-size: 0.7em;
+  color: var(--Text-Secondary);
+  min-width: 70px;
+}
+
+.FactionButton:hover {
+  background: var(--added);
+  border-color: var(--Link);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.FactionButton.active {
+  background: var(--Link);
+  border-color: var(--Link);
+  color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.FactionLogo {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  filter: brightness(0.8);
+  transition: filter 0.3s ease;
+}
+
+.FactionButton:hover .FactionLogo,
+.FactionButton.active .FactionLogo {
+  filter: brightness(1.2);
+}
+
+.FactionIcon {
+  font-size: 1.8em;
+  display: block;
+}
+
+.FactionLabel {
+  display: block;
+  font-weight: 600;
+  text-align: center;
+  white-space: nowrap;
+}
