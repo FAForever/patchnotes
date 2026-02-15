@@ -279,6 +279,11 @@
             primary: '#f39c12',
             secondary: '#e67e22',
             accent: '#d35400'
+        },
+        'old-style': {
+            primary: '#ff6600',
+            secondary: '#ff8833',
+            accent: '#ff9944'
         }
     };
     
