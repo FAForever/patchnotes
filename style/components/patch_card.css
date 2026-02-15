@@ -115,6 +115,12 @@
     margin-bottom: 12px;
 }
 
+.FactionRow {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
 .UnitDetails h3 {
     margin: 0;
     font-size: 2.2rem;
@@ -184,81 +190,69 @@
 }
 
 .FactionBadge.sera { 
-    background: linear-gradient(135deg, rgba(245, 158, 11, 0.3) 0%, rgba(245, 158, 11, 0.15) 100%);
+    background: linear-gradient(135deg, rgba(234, 217, 152, 0.5) 0%, rgba(240, 229, 180, 0.3) 100%);
     color: var(--Text-Primary); 
-    border-color: rgba(245, 158, 11, 0.8);
-    box-shadow: 0 6px 20px rgba(245, 158, 11, 0.2);
+    border-color: rgba(234, 217, 152, 0.4);
 }
 
 .FactionBadge.sera:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba(245, 158, 11, 0.3);
-    border-color: rgba(245, 158, 11, 1);
+    border-color: rgba(234, 217, 152, 0.6);
 }
 
 .FactionBadge.aeon { 
-    background: linear-gradient(135deg, rgba(74, 222, 128, 0.3) 0%, rgba(74, 222, 128, 0.15) 100%);
+    background: linear-gradient(135deg, rgba(178, 251, 165, 0.5) 0%, rgba(200, 252, 190, 0.3) 100%);
     color: var(--Text-Primary); 
-    border-color: rgba(74, 222, 128, 0.8);
-    box-shadow: 0 6px 20px rgba(74, 222, 128, 0.2);
+    border-color: rgba(178, 251, 165, 0.4);
 }
 
 .FactionBadge.aeon:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba(74, 222, 128, 0.3);
-    border-color: rgba(74, 222, 128, 1);
+    border-color: rgba(178, 251, 165, 0.6);
 }
 
 .FactionBadge.uef { 
-    background: linear-gradient(135deg, rgba(59, 130, 246, 0.3) 0%, rgba(59, 130, 246, 0.15) 100%);
+    background: linear-gradient(135deg, rgba(179, 235, 242, 0.5) 0%, rgba(205, 242, 247, 0.3) 100%);
     color: var(--Text-Primary); 
-    border-color: rgba(59, 130, 246, 0.8);
-    box-shadow: 0 6px 20px rgba(59, 130, 246, 0.2);
+    border-color: rgba(179, 235, 242, 0.4);
 }
 
 .FactionBadge.uef:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba(59, 130, 246, 0.3);
-    border-color: rgba(59, 130, 246, 1);
+    border-color: rgba(179, 235, 242, 0.6);
 }
 
 .FactionBadge.cybran { 
-    background: linear-gradient(135deg, rgba(239, 68, 68, 0.3) 0%, rgba(239, 68, 68, 0.15) 100%);
+    background: linear-gradient(135deg, rgba(255, 116, 108, 0.5) 0%, rgba(255, 142, 135, 0.3) 100%);
     color: var(--Text-Primary); 
-    border-color: rgba(239, 68, 68, 0.8);
-    box-shadow: 0 6px 20px rgba(239, 68, 68, 0.2);
+    border-color: rgba(255, 116, 108, 0.4);
 }
 
 .FactionBadge.cybran:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba(239, 68, 68, 0.3);
-    border-color: rgba(239, 68, 68, 1);
+    border-color: rgba(255, 116, 108, 0.6);
 }
 
 .FactionBadge.rework { 
-    background: linear-gradient(135deg, rgba(168, 85, 247, 0.3) 0%, rgba(168, 85, 247, 0.15) 100%);
+    background: linear-gradient(135deg, rgba(220, 200, 245, 0.5) 0%, rgba(235, 225, 250, 0.3) 100%);
     color: var(--Text-Primary); 
-    border-color: rgba(168, 85, 247, 0.8);
-    box-shadow: 0 6px 20px rgba(168, 85, 247, 0.2);
+    border-color: rgba(210, 190, 240, 0.4);
 }
 
 .FactionBadge.rework:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba(168, 85, 247, 0.3);
-    border-color: rgba(168, 85, 247, 1);
+    border-color: rgba(210, 190, 240, 0.6);
 }
 
 .FactionBadge.universal { 
-    background: linear-gradient(135deg, rgba(156, 163, 175, 0.3) 0%, rgba(156, 163, 175, 0.15) 100%);
+    background: linear-gradient(135deg, rgba(191, 191, 191, 0.5) 0%, rgba(210, 210, 210, 0.3) 100%);
     color: var(--Text-Primary); 
-    border-color: rgba(156, 163, 175, 0.8);
-    box-shadow: 0 6px 20px rgba(156, 163, 175, 0.2);
+    border-color: rgba(191, 191, 191, 0.4);
 }
 
 .FactionBadge.universal:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba(156, 163, 175, 0.3);
-    border-color: rgba(156, 163, 175, 1);
+    border-color: rgba(191, 191, 191, 0.6);
 }
 
 /* Change Type Badges */

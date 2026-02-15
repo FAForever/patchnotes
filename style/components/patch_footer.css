@@ -189,8 +189,8 @@
   align-items: center;
   justify-content: center;
   gap: 4px;
-  background: var(--Card);
-  border: 2px solid var(--Line);
+  background: rgba(200, 220, 240, 0.2);
+  border: 2px solid rgba(150, 180, 210, 0.3);
   border-radius: 8px;
   padding: 8px 12px;
   cursor: pointer;
@@ -202,17 +202,17 @@
 }
 
 .FactionButton:hover {
-  background: var(--added);
-  border-color: var(--Link);
+  background: rgba(150, 200, 250, 0.25);
+  border-color: rgba(100, 180, 250, 0.5);
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 12px rgba(100, 180, 250, 0.2);
 }
 
 .FactionButton.active {
-  background: var(--Link);
-  border-color: var(--Link);
-  color: white;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  background: rgba(120, 180, 240, 0.35);
+  border-color: rgba(80, 150, 230, 0.6);
+  color: var(--Text);
+  box-shadow: 0 4px 12px rgba(100, 180, 250, 0.3);
 }
 
 .FactionLogo {
