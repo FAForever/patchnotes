@@ -14,6 +14,25 @@ h6 {
   margin: 8px 0; /* Reduced from 10px */
 }
 
+/* Section H2 Headings - Enhanced Styling */
+section h2 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--Text-Primary);
+  margin: 20px 0 16px 0;
+  padding: 10px 16px;
+  background: linear-gradient(90deg, var(--Card) 0%, transparent 100%);
+  border-left: 3px solid var(--Link);
+  border-radius: 4px;
+  letter-spacing: 0.3px;
+  transition: all 0.2s ease;
+}
+
+section h2:hover {
+  transform: translateX(2px);
+  border-left-width: 4px;
+}
+
 a {
   color: var(--Link);
   text-decoration: underline;
