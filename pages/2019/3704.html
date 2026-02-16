@@ -10,7 +10,7 @@
     </head>
     <body>
         <main class="Grid">
-            <section class="Content">
+            <div class="Content">
 
                 <!-- Intro Section -->
                 <section class="IntroSection" id="Intro">
@@ -32,7 +32,7 @@
                 </section>
 
                 <!-- Land Units Section -->
-                <section id="land">
+                <section id="Land">
                     <h2>Land</h2>
 
                     <article id="t2engineers" class="PatchCard">
@@ -1058,7 +1058,7 @@
                     </article>
                 </section>
                
-                <section id="air">
+                <section id="Air">
                 <h2>Air</h2>
                     <article id="renegade" class="PatchCard">
                         <header class="PatchCardHeader">
@@ -1412,7 +1412,7 @@
                     </article>
                 </section>
 
-                <section id="navy">
+                <section id="Navy">
                     <h2>Navy</h2>
 
                     <article id="beacon" class="PatchCard">
@@ -1704,7 +1704,7 @@
                                         <div class="ChangeTypeBadge buff">Buff</div>
                                     </div>
                                     <div class="FactionRow">
-                                        <span class="FactionBadge seraphim">Seraphim</span>
+                                        <span class="FactionBadge sera">Seraphim</span>
                                         <span class="UnitCode">XSS0304</span>
                                     </div>
                                 </div>
@@ -1774,7 +1774,7 @@
                     </article>
                 </section>
 
-                <div id="structures">
+                <section id="Structures">
                 <h2>Structures</h2>
 
                     <article id="T1_Airstageing" class="PatchCard">
@@ -1913,6 +1913,46 @@
                                                 <s class="OldValue">600</s>
                                                 <i class="fa-solid fa-arrow-right ChangeArrow"></i>
                                                 <strong class="NewValue">400</strong>
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article id="T2_TML" class="PatchCard">
+                        <!-- Card Header Section-->
+                        <header class="PatchCardHeader">
+                            <div class="UnitInfo">
+                                <img src="/assets/images/units/cybran/structure/T2Tml.png" alt="T2 Tactical Missile Launcher" class="UnitIcon" loading="lazy">
+                                <div class="UnitDetails">
+                                    <div class="UnitNameRow">
+                                        <h3 class="UnitName">T2 Tactical Missile Launcher</h3>
+                                        <div class="ChangeTypeBadge buff">Buff</div>
+                                    </div>
+                                    <div class="FactionRow">
+                                        <span class="FactionBadge universal">Universal</span>
+                                        <span class="UnitCode">UEB2108,URB2108,UAB2108,XSB2108</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </header>
+
+                        <!-- Card Contentt Section-->
+                        <div class="PatchCardContent">
+                            <p class="UnitDescription">T2 Tactical Missile Launcher gets a build time decrease to make T2 rushes on small maps more viable.</p>
+                            
+                            <div class="ChangesList">
+                                <div class="ChangeGroup">
+                                    <h4 class="ChangeGroupTitle">Economy</h4>
+                                    <ul class="Changes">
+                                        <li class="buff">
+                                            <span class="ChangeLabel">Mass Cost:</span>
+                                            <span class="ChangeValue">
+                                                <s class="OldValue">180</s>
+                                                <i class="fa-solid fa-arrow-right ChangeArrow"></i>
+                                                <strong class="NewValue">250</strong>
                                             </span>
                                         </li>
                                     </ul>
@@ -2124,7 +2164,7 @@
                         <!-- Card Header Section-->
                         <header class="PatchCardHeader">
                             <div class="UnitInfo">
-                                <img src="/assets/images/units/uef/structure/T2ShieldGen.png" alt="Shield of Light" class="UnitIcon" loading="lazy">
+                                <img src="/assets/images/units/uef/structure/T2ShieldGen.png" alt="SD - Pulse" class="UnitIcon" loading="lazy">
                                 <div class="UnitDetails">
                                     <div class="UnitNameRow">
                                         <h3 class="UnitName">SD - Pulse</h3>
@@ -2184,7 +2224,7 @@
                                         <div class="ChangeTypeBadge buff">Buff</div>
                                     </div>
                                     <div class="FactionRow">
-                                        <span class="FactionBadge seraphim">Seraphim</span>
+                                        <span class="FactionBadge sera">Seraphim</span>
                                         <span class="UnitCode">XSB4202</span>
                                     </div>
                                 </div>
@@ -2691,7 +2731,7 @@
                                         <div class="ChangeTypeBadge buff">Buff</div>
                                     </div>
                                     <div class="FactionRow">
-                                        <span class="FactionBadge seraphim">Seraphim</span>
+                                        <span class="FactionBadge sera">Seraphim</span>
                                         <span class="UnitCode">XSB2302</span>
                                     </div>
                                 </div>
@@ -2999,347 +3039,1022 @@
                             </div>
                         </div>
                     </article>
-                </div>
+                </section>
 
-                <h2>ACUs</h2>
-
-                <div id="acu">
+                <section id="ACUs">
                     <h2>ACU's & SACU's</h2>
 
                     <article id="sera_regen_aura" class="PatchCard">
-                    <!-- Card Header Section -->
-                    <header class="PatchCardHeader">
-                        <div class="UnitInfo">
-                            <img src="/assets/images/Enhancements/sera/regenfield.png" class="UnitIcon" alt="Regen Aura"/>
-                            <div class="UnitDetails">
-                                <div class="UnitNameRow">
-                                    <h3 class="UnitName">Regen Aura</h3>
-                                    <div class="ChangeTypeBadge buff">Buff</div>
-                                </div>
-                                <div class="FactionRow">
-                                    <span class="FactionBadge sera">Seraphim</span>
-                                    <span class="UnitCode">Enhancement</span>
+                        <!-- Card Header Section -->
+                        <header class="PatchCardHeader">
+                            <div class="UnitInfo">
+                                <img src="/assets/images/Enhancements/sera/regenfield.png" class="UnitIcon" alt="Regen Aura"/>
+                                <div class="UnitDetails">
+                                    <div class="UnitNameRow">
+                                        <h3 class="UnitName">Regen Aura</h3>
+                                        <div class="ChangeTypeBadge buff">Buff</div>
+                                    </div>
+                                    <div class="FactionRow">
+                                        <span class="FactionBadge sera">Seraphim</span>
+                                        <span class="UnitCode">Enhancement</span>
+                                    </div>
                                 </div>
                             </div>
+                        </header>
+
+                        <!-- Card Content Section -->
+                        <div class="PatchCardContent">
+                            <p class="ChangeDescription">Restoration Field has a larger range and grants additional max hp. Thaam in the field's range will be bumped to 308 hp, requiring an extra shot from enemy ACUs to be killed. An fx will help spot the units benefiting from this upgrade.</p>
+
+                            <div class="ChangesList">
+                                <!-- Weapon Changes -->
+                                <div class="ChangeGroup">
+                                    <h4 class="ChangeGroupTitle">
+                                        Economy
+                                    </h4>
+                                    <ul class="Changes">
+                                        <li class="buff">
+                                            <span class="ChangeLabel">Mass Cost:</span>
+                                            <span class="ChangeValue">
+                                                <s class="OldValue">600</s> 
+                                                <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                                <strong class="NewValue">700</strong>
+                                            </span>
+                                        </li>
+                                        <li class="buff">
+                                            <span class="ChangeLabel">Energy Cost:</span>
+                                            <span class="ChangeValue">
+                                                <s class="OldValue">4500</s>
+                                                <i class="fa-solid fa-arrow-right ChangeArrow"></i>
+                                                <strong class="NewValue">18000</strong>
+                                            </span>
+                                        </li>
+                                        <li class="buff">
+                                            <span class="ChangeLabel">Build Time:</span>
+                                            <span class="ChangeValue">
+                                                <s class="OldValue">600</s>
+                                                <i class="fa-solid fa-arrow-right ChangeArrow"></i>
+                                                <strong class="NewValue">700</strong>
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="ChangeGroup">
+                                    <h4 class="ChangeGroupTitle">
+                                        Enhancement Changes
+                                    </h4>
+                                    <ul class="Changes">
+                                        <li class="buff">
+                                            <span class="ChangeLabel">Health Increase:</span>
+                                            <span class="ChangeValue">
+                                                <s class="OldValue">+1000</s> 
+                                                <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                                <strong class="NewValue">+500</strong>
+                                            </span>
+                                        </li>
+                                        <li class="buff">
+                                            <span class="ChangeLabel">Range:</span>
+                                            <span class="ChangeValue">
+                                                <s class="OldValue">22</s>
+                                                <i class="fa-solid fa-arrow-right ChangeArrow"></i>
+                                                <strong class="NewValue">30</strong>
+                                            </span>
+                                        </li>
+                                        <li class="buff">
+                                            <span class="ChangeLabel">Max Health Multiplier:</span>
+                                            <span class="ChangeValue">
+                                                <s class="OldValue">1</s>
+                                                <i class="fa-solid fa-arrow-right ChangeArrow"></i>
+                                                <strong class="NewValue">1.1</strong>
+                                            </span>
+                                        </li>
+                                        <li class="buff">
+                                            <span class="ChangeLabel">Min Regen:</span>
+                                            <span class="ChangeValue">
+                                                <s class="OldValue">0</s>
+                                                <i class="fa-solid fa-arrow-right ChangeArrow"></i>
+                                                <strong class="NewValue">3</strong>
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article id="sera_adv_regen_aura" class="PatchCard">
+                        <!-- Card Header Section -->
+                        <header class="PatchCardHeader">
+                            <div class="UnitInfo">
+                                <img src="/assets/images/Enhancements/sera/advancedregenfield.png" class="UnitIcon" alt="Advanced Regen Aura"/>
+                                <div class="UnitDetails">
+                                    <div class="UnitNameRow">
+                                        <h3 class="UnitName">Advanced Regen Aura</h3>
+                                        <div class="ChangeTypeBadge buff">Buff</div>
+                                    </div>
+                                    <div class="FactionRow">
+                                        <span class="FactionBadge sera">Seraphim</span>
+                                        <span class="UnitCode">Enhancement</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </header>
+
+                        <!-- Card Content Section -->
+                        <div class="PatchCardContent">
+                            <p class="ChangeDescription">Advanced Restoration Field grants a minimum regen of 15/s, has a greater range and grants more health.</p>
+
+                            <div class="ChangesList">
+                                <!-- Weapon Changes -->
+                                <div class="ChangeGroup">
+                                    <h4 class="ChangeGroupTitle">
+                                        Economy
+                                    </h4>
+                                    <ul class="Changes">
+                                        <li class="buff">
+                                            <span class="ChangeLabel">Mass Cost:</span>
+                                            <span class="ChangeValue">
+                                                <s class="OldValue">1500</s> 
+                                                <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                                <strong class="NewValue">1800</strong>
+                                            </span>
+                                        </li>
+                                        <li class="buff">
+                                            <span class="ChangeLabel">Energy Cost:</span>
+                                            <span class="ChangeValue">
+                                                <s class="OldValue">31250</s>
+                                                <i class="fa-solid fa-arrow-right ChangeArrow"></i>
+                                                <strong class="NewValue">42000</strong>
+                                            </span>
+                                        </li>
+                                        <li class="buff">
+                                            <span class="ChangeLabel">Build Time:</span>
+                                            <span class="ChangeValue">
+                                                <s class="OldValue">1250</s>
+                                                <i class="fa-solid fa-arrow-right ChangeArrow"></i>
+                                                <strong class="NewValue">1500</strong>
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="ChangeGroup">
+                                    <h4 class="ChangeGroupTitle">
+                                        Enhancement Changes
+                                    </h4>
+                                    <ul class="Changes">
+                                        <li class="buff">
+                                            <span class="ChangeLabel">Health Increase:</span>
+                                            <span class="ChangeValue">
+                                                <s class="OldValue">+2500</s> 
+                                                <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                                <strong class="NewValue">+1500</strong>
+                                            </span>
+                                        </li>
+                                        <li class="buff">
+                                            <span class="ChangeLabel">Range:</span>
+                                            <span class="ChangeValue">
+                                                <s class="OldValue">30</s>
+                                                <i class="fa-solid fa-arrow-right ChangeArrow"></i>
+                                                <strong class="NewValue">35</strong>
+                                            </span>
+                                        </li>
+                                        <li class="buff">
+                                            <span class="ChangeLabel">Max Health Multiplier:</span>
+                                            <span class="ChangeValue">
+                                                <s class="OldValue">1.1</s>
+                                                <i class="fa-solid fa-arrow-right ChangeArrow"></i>
+                                                <strong class="NewValue">1.2</strong>
+                                            </span>
+                                        </li>
+                                        <li class="buff">
+                                            <span class="ChangeLabel">Min Regen:</span>
+                                            <span class="ChangeValue">
+                                                <s class="OldValue">0</s>
+                                                <i class="fa-solid fa-arrow-right ChangeArrow"></i>
+                                                <strong class="NewValue">15</strong>
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article id="aeon_personal_shield" class="PatchCard">
+                        <!-- Card Header Section -->
+                        <header class="PatchCardHeader">
+                            <div class="UnitInfo">
+                                <img src="/assets/images/Enhancements/aeon/shield.png" class="UnitIcon" alt="Personal Shield"/>
+                                <div class="UnitDetails">
+                                    <div class="UnitNameRow">
+                                        <h3 class="UnitName">Personal Shield</h3>
+                                        <div class="ChangeTypeBadge buff">Buff</div>
+                                    </div>
+                                    <div class="FactionRow">
+                                        <span class="FactionBadge aeon">Aeon</span>
+                                        <span class="UnitCode">Enhancement</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </header>
+
+                        <!-- Card Content Section -->
+                        <div class="PatchCardContent">
+                            <p class="ChangeDescription">The first Aeon ACU shield is buffed with a lower recharge time.</p>
+
+                            <div class="ChangesList">
+                                <!-- Weapon Changes -->
+                                <div class="ChangeGroup">
+                                    <h4 class="ChangeGroupTitle">
+                                        Shield
+                                    </h4>
+                                    <ul class="Changes">
+                                        <li class="buff">
+                                            <span class="ChangeLabel">Recharge Time:</span>
+                                            <span class="ChangeValue">
+                                                <s class="OldValue">90</s> 
+                                                <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                                <strong class="NewValue">75</strong>
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article id="aeon_chrono" class="PatchCard">
+                        <!-- Card Header Section -->
+                        <header class="PatchCardHeader">
+                            <div class="UnitInfo">
+                                <img src="/assets/images/Enhancements/aeon/chrono.png" class="UnitIcon" alt="Chrono Dampener"/>
+                                <div class="UnitDetails">
+                                    <div class="UnitNameRow">
+                                        <h3 class="UnitName">Chrono Dampener</h3>
+                                        <div class="ChangeTypeBadge buff">Buff</div>
+                                    </div>
+                                    <div class="FactionRow">
+                                        <span class="FactionBadge aeon">Aeon</span>
+                                        <span class="UnitCode">Enhancement</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </header>
+
+                        <!-- Card Content Section -->
+                        <div class="PatchCardContent">
+                            <p class="ChangeDescription">TChrono Dampener's stun was so long that units would lose their move orders, so it is reduced. 3000 health is added to the upgrade.</p>
+
+                            <div class="ChangesList">
+                                <!-- Weapon Changes -->
+                                <div class="ChangeGroup">
+                                    <h4 class="ChangeGroupTitle">
+                                        Weapon
+                                    </h4>
+                                    <ul class="Changes">
+                                        <li class="buff">
+                                            <span class="ChangeLabel">Stun Time:</span>
+                                            <span class="ChangeValue">
+                                                <s class="OldValue">3.5s</s> 
+                                                <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                                <strong class="NewValue">2.5s</strong>
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="ChangeGroup">
+                                    <h4 class="ChangeGroupTitle">
+                                        Defence
+                                    </h4>
+                                    <ul class="Changes">
+                                        <li class="buff">
+                                            <span class="ChangeLabel">Health :</span>
+                                            <span class="ChangeValue">
+                                                <s class="OldValue">+0</s> 
+                                                <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                                <strong class="NewValue">+3000</strong>
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                </section>
+
+            </div>
+            <aside class="Sidebar" role="navigation" aria-label="Quick Navigation">
+                <div class="ContentSidemenu">
+                    <!-- Quick Navigation Header -->
+                    <header class="SidemenuHeader">
+                        <h2 class="SidemenuTitle">
+                            <i class="fas fa-list-ul" aria-hidden="true"></i>
+                            Quick Navigation
+                        </h2>
+                        <div class="ProgressBar">
+                            <div class="ProgressFill" id="readingProgress"></div>
                         </div>
                     </header>
 
-                    <!-- Card Content Section -->
-                    <div class="PatchCardContent">
-                        <p class="ChangeDescription">Restoration Field has a larger range and grants additional max hp. Thaam in the field's range will be bumped to 308 hp, requiring an extra shot from enemy ACUs to be killed. An fx will help spot the units benefiting from this upgrade.</p>
+                    <!-- Quick Actions Panel -->
+                    <div class="QuickActions">
+                        <button class="QuickActionBtn" onclick="scrollToTop()" title="Back to Top">
+                            <i class="fas fa-arrow-up"></i>
+                            <span>Top</span>
+                        </button>
+                        <button class="QuickActionBtn" onclick="toggleAllSections()" title="Expand/Collapse All">
+                            <i class="fas fa-expand-arrows-alt"></i>
+                            <span>Toggle</span>
+                        </button>
+                        <button class="QuickActionBtn" onclick="printPage()" title="Print Page">
+                            <i class="fas fa-print"></i>
+                            <span>Print</span>
+                        </button>
+                    </div>
 
-                        <div class="ChangesList">
-                            <!-- Weapon Changes -->
-                            <div class="ChangeGroup">
-                                <h4 class="ChangeGroupTitle">
-                                    Economy
-                                </h4>
-                                <ul class="Changes">
-                                    <li class="buff">
-                                        <span class="ChangeLabel">Mass Cost:</span>
-                                        <span class="ChangeValue">
-                                            <s class="OldValue">600</s> 
-                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
-                                            <strong class="NewValue">700</strong>
-                                        </span>
-                                    </li>
-                                    <li class="buff">
-                                        <span class="ChangeLabel">Energy Cost:</span>
-                                        <span class="ChangeValue">
-                                            <s class="OldValue">4500</s>
-                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i>
-                                            <strong class="NewValue">18000</strong>
-                                        </span>
-                                    </li>
-                                    <li class="buff">
-                                        <span class="ChangeLabel">Build Time:</span>
-                                        <span class="ChangeValue">
-                                            <s class="OldValue">600</s>
-                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i>
-                                            <strong class="NewValue">700</strong>
-                                        </span>
-                                    </li>
-                                </ul>
+                    <!-- Content Navigation -->
+                    <nav class="ContentNav" role="navigation">
+                        <!-- Land Units Section -->
+                        <div class="NavSection active">
+                            <button class="SectionToggle" aria-expanded="true" data-target="land-items">
+                                <i class="fas fa-tank SectionIcon"></i>
+                                <span class="SectionTitle">Land Units</span>
+                                <span class="ItemCount">21</span>
+                                <i class="fas fa-chevron-down ToggleIcon"></i>
+                            </button>
+                            <ul class="SectionItems" id="land-items">
+                                <li class="NavItem">
+                                    <a href="#t2engineers" class="NavLink">
+                                        <img src="/assets/images/units/aeon/land/T2Engie.png" class="UnitThumb" alt="T2 Engineers"/>
+                                        <div class="LinkContent">
+                                            <span class="UnitName">T2 Engineers</span>
+                                            <span class="ChangeType buff">Buff</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="NavItem">
+                                    <a href="#t3engineers" class="NavLink">
+                                        <img src="/assets/images/units/aeon/land/T3Engie.png" class="UnitThumb" alt="T3 Engineers"/>
+                                        <div class="LinkContent">
+                                            <span class="UnitName">T3 Engineers</span>
+                                            <span class="ChangeType buff">Buff</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="NavItem">
+                                    <a href="#selen" class="NavLink">
+                                        <img src="/assets/images/units/sera/land/T1Scout.png" class="UnitThumb" alt="Selen"/>
+                                        <div class="LinkContent">
+                                            <span class="UnitName">Selen</span>
+                                            <span class="ChangeType buff">Buff</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="NavItem">
+                                    <a href="#t1maa-aeon" class="NavLink">
+                                        <img src="/assets/images/units/aeon/land/T1MobileAA.png" class="UnitThumb" alt="Thistle"/>
+                                        <div class="LinkContent">
+                                            <span class="UnitName">Thistle</span>
+                                            <span class="ChangeType nerf">Nerf</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="NavItem">
+                                    <a href="#t1maa-cybran" class="NavLink">
+                                        <img src="/assets/images/units/cybran/land/T1MobileAA.png" class="UnitThumb" alt="Sky Slammer"/>
+                                        <div class="LinkContent">
+                                            <span class="UnitName">Sky Slammer</span>
+                                            <span class="ChangeType nerf">Nerf</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="NavItem">
+                                    <a href="#t1maa-sera" class="NavLink">
+                                        <img src="/assets/images/units/sera/land/T1MobileAA.png" class="UnitThumb" alt="Suthanus"/>
+                                        <div class="LinkContent">
+                                            <span class="UnitName">Suthanus</span>
+                                            <span class="ChangeType nerf">Nerf</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="NavItem">
+                                    <a href="#t1maa-uef" class="NavLink">
+                                        <img src="/assets/images/units/uef/land/T1MobileAA.png" class="UnitThumb" alt="Archer"/>
+                                        <div class="LinkContent">
+                                            <span class="UnitName">Archer</span>
+                                            <span class="ChangeType nerf">Nerf</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="NavItem">
+                                    <a href="#mongoose" class="NavLink">
+                                        <img src="/assets/images/units/uef/land/T2RangeBot.png" class="UnitThumb" alt="Mongoose"/>
+                                        <div class="LinkContent">
+                                            <span class="UnitName">Mongoose</span>
+                                            <span class="ChangeType buff">Buff</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="NavItem">
+                                    <a href="#asylum" class="NavLink">
+                                        <img src="/assets/images/units/aeon/land/T2MobileShield.png" class="UnitThumb" alt="Asylum"/>
+                                        <div class="LinkContent">
+                                            <span class="UnitName">Asylum</span>
+                                            <span class="ChangeType mixed">Mixed</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="NavItem">
+                                    <a href="#parashield" class="NavLink">
+                                        <img src="/assets/images/units/uef/land/T2MobileShield.png" class="UnitThumb" alt="Parashield"/>
+                                        <div class="LinkContent">
+                                            <span class="UnitName">Parashield</span>
+                                            <span class="ChangeType mixed">Mixed</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="NavItem">
+                                    <a href="#athanah" class="NavLink">
+                                        <img src="/assets/images/units/sera/land/T3MobileShield.png" class="UnitThumb" alt="Athanah"/>
+                                        <div class="LinkContent">
+                                            <span class="UnitName">Athanah</span>
+                                            <span class="ChangeType mixed">Mixed</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="NavItem">
+                                    <a href="#deceiver" class="NavLink">
+                                        <img src="/assets/images/units/cybran/land/T2MobileStealth.png" class="UnitThumb" alt="Deceiver"/>
+                                        <div class="LinkContent">
+                                            <span class="UnitName">Deceiver</span>
+                                            <span class="ChangeType mixed">Mixed</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="NavItem">
+                                    <a href="#wagner" class="NavLink">
+                                        <img src="/assets/images/units/cybran/land/T2HoverTank.png" class="UnitThumb" alt="Wagner"/>
+                                        <div class="LinkContent">
+                                            <span class="UnitName">Wagner</span>
+                                            <span class="ChangeType buff">Buff</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="NavItem">
+                                    <a href="#brick" class="NavLink">
+                                        <img src="/assets/images/units/cybran/land/T3Tank.png" class="UnitThumb" alt="Brick"/>
+                                        <div class="LinkContent">
+                                            <span class="UnitName">Brick</span>
+                                            <span class="ChangeType buff">Buff</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="NavItem">
+                                    <a href="#othuum" class="NavLink">
+                                        <img src="/assets/images/units/sera/land/T3Tank.png" class="UnitThumb" alt="Othuum"/>
+                                        <div class="LinkContent">
+                                            <span class="UnitName">Othuum</span>
+                                            <span class="ChangeType buff">Buff</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="NavItem">
+                                    <a href="#harbinger" class="NavLink">
+                                        <img src="/assets/images/units/aeon/land/T3Tank.png" class="UnitThumb" alt="Harbinger"/>
+                                        <div class="LinkContent">
+                                            <span class="UnitName">Harbinger</span>
+                                            <span class="ChangeType buff">Buff</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="NavItem">
+                                    <a href="#t3maa-aeon" class="NavLink">
+                                        <img src="/assets/images/units/aeon/land/T3MobileAA.png" class="UnitThumb" alt="Redeemer"/>
+                                        <div class="LinkContent">
+                                            <span class="UnitName">Redeemer</span>
+                                            <span class="ChangeType buff">Buff</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="NavItem">
+                                    <a href="#t3maa-cybran" class="NavLink">
+                                        <img src="/assets/images/units/cybran/land/T3MobileAA.png" class="UnitThumb" alt="Brick"/>
+                                        <div class="LinkContent">
+                                            <span class="UnitName">Brick</span>
+                                            <span class="ChangeType buff">Buff</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="NavItem">
+                                    <a href="#t3maa-uef" class="NavLink">
+                                        <img src="/assets/images/units/uef/land/T3MobileAA.png" class="UnitThumb" alt="Sky Boxer"/>
+                                        <div class="LinkContent">
+                                            <span class="UnitName">Sky Boxer</span>
+                                            <span class="ChangeType buff">Buff</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="NavItem">
+                                    <a href="#t3maa-sera" class="NavLink">
+                                        <img src="/assets/images/units/sera/land/T3MobileAA.png" class="UnitThumb" alt="Ythhu"/>
+                                        <div class="LinkContent">
+                                            <span class="UnitName">Ythhu</span>
+                                            <span class="ChangeType buff">Buff</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="NavItem">
+                                    <a href="#scathis" class="NavLink">
+                                        <img src="/assets/images/units/cybran/land/T4MobileArty.png" class="UnitThumb" alt="Scathis"/>
+                                        <div class="LinkContent">
+                                            <span class="UnitName">Scathis</span>
+                                            <span class="ChangeType mixed">Mixed</span>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Air Units Section -->
+                        <div class="NavSection active">
+                            <button class="SectionToggle" aria-expanded="true" data-target="air-items">
+                                <i class="fas fa-plane SectionIcon"></i>
+                                <span class="SectionTitle">Air Units</span>
+                                <span class="ItemCount">7</span>
+                                <i class="fas fa-chevron-down ToggleIcon"></i>
+                            </button>
+                            <ul class="SectionItems" id="air-items">
+                                <li class="NavItem">
+                                    <a href="#renegade" class="NavLink">
+                                        <img src="/assets/images/units/cybran/air/T2Gunship.png" class="UnitThumb" alt="Renegade"/>
+                                        <div class="LinkContent">
+                                            <span class="UnitName">Renegade</span>
+                                            <span class="ChangeType nerf">Nerf</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="NavItem">
+                                    <a href="#torpbombers" class="NavLink">
+                                        <img src="/assets/images/units/sera/air/T2TorpedoBomber.png" class="UnitThumb" alt="Torpedo Bombers"/>
+                                        <div class="LinkContent">
+                                            <span class="UnitName">Torpedo Bombers</span>
+                                            <span class="ChangeType mixed">Mixed</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="NavItem">
+                                    <a href="#notha" class="NavLink">
+                                        <img src="/assets/images/units/sera/air/T2FighterBomber.png" class="UnitThumb" alt="Notha"/>
+                                        <div class="LinkContent">
+                                            <span class="UnitName">Notha</span>
+                                            <span class="ChangeType buff">Buff</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="NavItem">
+                                    <a href="#restorer" class="NavLink">
+                                        <img src="/assets/images/units/aeon/air/T3AAGunship.png" class="UnitThumb" alt="Restorer"/>
+                                        <div class="LinkContent">
+                                            <span class="UnitName">Restorer</span>
+                                            <span class="ChangeType buff">Buff</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="NavItem">
+                                    <a href="#wailer" class="NavLink">
+                                        <img src="/assets/images/units/cybran/air/T3Gunship.png" class="UnitThumb" alt="Wailer"/>
+                                        <div class="LinkContent">
+                                            <span class="UnitName">Wailer</span>
+                                            <span class="ChangeType buff">Buff</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="NavItem">
+                                    <a href="#broadsword" class="NavLink">
+                                        <img src="/assets/images/units/uef/air/T3Gunship.png" class="UnitThumb" alt="Broadsword"/>
+                                        <div class="LinkContent">
+                                            <span class="UnitName">Broadsword</span>
+                                            <span class="ChangeType buff">Buff</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="NavItem">
+                                    <a href="#novax" class="NavLink">
+                                        <img src="/assets/images/units/uef/structure/T4SataliteCenter.png" class="UnitThumb" alt="Novax Center"/>
+                                        <div class="LinkContent">
+                                            <span class="UnitName">Novax Center</span>
+                                            <span class="ChangeType mixed">Mixed</span>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Naval Units Section -->
+                        <div class="NavSection active">
+                            <button class="SectionToggle" aria-expanded="true" data-target="naval-items">
+                                <i class="fas fa-ship SectionIcon"></i>
+                                <span class="SectionTitle">Naval Units</span>
+                                <span class="ItemCount">9</span>
+                                <i class="fas fa-chevron-down ToggleIcon"></i>
+                            </button>
+                            <ul class="SectionItems" id="naval-items">
+                                <li class="NavItem">
+                                    <a href="#beacon" class="NavLink">
+                                        <img src="/assets/images/units/aeon/naval/T1Frigate.png" class="UnitThumb" alt="Beacon"/>
+                                        <div class="LinkContent">
+                                            <span class="UnitName">Beacon</span>
+                                            <span class="ChangeType buff">Buff</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="NavItem">
+                                    <a href="#exodus" class="NavLink">
+                                        <img src="/assets/images/units/aeon/naval/T2Destroyer.png" class="UnitThumb" alt="Exodus"/>
+                                        <div class="LinkContent">
+                                            <span class="UnitName">Exodus</span>
+                                            <span class="ChangeType buff">Buff</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="NavItem">
+                                    <a href="#siren" class="NavLink">
+                                        <img src="/assets/images/units/cybran/naval/T2Cruiser.png" class="UnitThumb" alt="Siren"/>
+                                        <div class="LinkContent">
+                                            <span class="UnitName">Siren</span>
+                                            <span class="ChangeType buff">Buff</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="NavItem">
+                                    <a href="#ShieldBoat" class="NavLink">
+                                        <img src="/assets/images/units/uef/naval/T2ShieldBoat.png" class="UnitThumb" alt="Bulwark"/>
+                                        <div class="LinkContent">
+                                            <span class="UnitName">Bulwark</span>
+                                            <span class="ChangeType buff">Buff</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="NavItem">
+                                    <a href="#T3_Cybran_Battleship" class="NavLink">
+                                        <img src="/assets/images/units/cybran/naval/T3Battleship.png" class="UnitThumb" alt="Galaxy"/>
+                                        <div class="LinkContent">
+                                            <span class="UnitName">Galaxy</span>
+                                            <span class="ChangeType buff">Buff</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="NavItem">
+                                    <a href="#T3_UEF_Battleship" class="NavLink">
+                                        <img src="/assets/images/units/uef/naval/T3Battleship.png" class="UnitThumb" alt="Summit"/>
+                                        <div class="LinkContent">
+                                            <span class="UnitName">Summit</span>
+                                            <span class="ChangeType buff">Buff</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="NavItem">
+                                    <a href="#T3_Aeon_Battleship" class="NavLink">
+                                        <img src="/assets/images/units/aeon/naval/T3Battleship.png" class="UnitThumb" alt="Omen"/>
+                                        <div class="LinkContent">
+                                            <span class="UnitName">Omen</span>
+                                            <span class="ChangeType buff">Buff</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="NavItem">
+                                    <a href="#T3_Sera_Subhunter" class="NavLink">
+                                        <img src="/assets/images/units/sera/naval/T3Subhunter.png" class="UnitThumb" alt="Yathsou"/>
+                                        <div class="LinkContent">
+                                            <span class="UnitName">Yathsou</span>
+                                            <span class="ChangeType buff">Buff</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="NavItem">
+                                    <a href="#T4_Aeon_Battleship" class="NavLink">
+                                        <img src="/assets/images/units/aeon/naval/T4Battleship.png" class="UnitThumb" alt="Tempest"/>
+                                        <div class="LinkContent">
+                                            <span class="UnitName">Tempest</span>
+                                            <span class="ChangeType buff">Buff</span>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Structures Section -->
+                        <div class="NavSection active">
+                            <button class="SectionToggle" aria-expanded="true" data-target="structures-items">
+                                <i class="fas fa-building SectionIcon"></i>
+                                <span class="SectionTitle">Structures</span>
+                                <span class="ItemCount">26</span>
+                                <i class="fas fa-chevron-down ToggleIcon"></i>
+                            </button>
+                            <ul class="SectionItems" id="structures-items">
+                                <li class="NavItem">
+                                    <a href="#T1_Airstageing" class="NavLink">
+                                        <img src="/assets/images/units/cybran/structure/T1AirStaging.png" class="UnitThumb" alt="Air Staging"/>
+                                        <div class="LinkContent">
+                                            <span class="UnitName">Air Staging</span>
+                                            <span class="ChangeType buff">Buff</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="NavItem">
+                                    <a href="#T2_Land_HQs" class="NavLink">
+                                        <img src="/assets/images/units/cybran/structure/T2LandFacHQ.png" class="UnitThumb" alt="T2 Land HQs"/>
+                                        <div class="LinkContent">
+                                            <span class="UnitName">T2 Land HQs</span>
+                                            <span class="ChangeType buff">Buff</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="NavItem">
+                                    <a href="#T2_TMD" class="NavLink">
+                                        <img src="/assets/images/units/aeon/structure/T2TMD.png" class="UnitThumb" alt="T2 Tactical Missile Defense"/>
+                                        <div class="LinkContent">
+                                            <span class="UnitName">T2 Tactical Missile Defense</span>
+                                            <span class="ChangeType buff">Buff</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="NavItem">
+                                    <a href="#T2_TML" class="NavLink">
+                                        <img src="/assets/images/units/cybran/structure/T2Tml.png" class="UnitThumb" alt="T2 Tactical Missile Launcher"/>
+                                        <div class="LinkContent">
+                                            <span class="UnitName">T2 Tactical Missile Launcher</span>
+                                            <span class="ChangeType buff">Buff</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="NavItem">
+                                    <a href="#T2_Artiliery" class="NavLink">
+                                        <img src="/assets/images/units/aeon/structure/T2Artiliery.png" class="UnitThumb" alt="T2 Artillery Installation"/>
+                                        <div class="LinkContent">
+                                            <span class="UnitName">T2 Artillery Installation</span>
+                                            <span class="ChangeType buff">Buff</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="NavItem">
+                                    <a href="#T2_Radar" class="NavLink">
+                                        <img src="/assets/images/units/aeon/structure/T2Radar.png" class="UnitThumb" alt="T2 Radar"/>
+                                        <div class="LinkContent">
+                                            <span class="UnitName">T2 Radar</span>
+                                            <span class="ChangeType buff">Buff</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="NavItem">
+                                    <a href="#T2_Static_Flack" class="NavLink">
+                                        <img src="/assets/images/units/aeon/structure/T2StaticFlack.png" class="UnitThumb" alt="T2 Static Flak"/>
+                                        <div class="LinkContent">
+                                            <span class="UnitName">T2 Static Flak</span>
+                                            <span class="ChangeType buff">Buff</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="NavItem">
+                                    <a href="#T2_Aeon_Shield" class="NavLink">
+                                        <img src="/assets/images/units/aeon/structure/T2SheildGen.png" class="UnitThumb" alt="Shield of Light"/>
+                                        <div class="LinkContent">
+                                            <span class="UnitName">Shield of Light</span>
+                                            <span class="ChangeType buff">Buff</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="NavItem">
+                                    <a href="#T2_UEF_Shield" class="NavLink">
+                                        <img src="/assets/images/units/uef/structure/T2ShieldGen.png" class="UnitThumb" alt="SD - Pulse"/>
+                                        <div class="LinkContent">
+                                            <span class="UnitName">SD - Pulse</span>
+                                            <span class="ChangeType buff">Buff</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="NavItem">
+                                    <a href="#T2_Sera_Shield" class="NavLink">
+                                        <img src="/assets/images/units/seraphim/structure/T2ShieldGen.png" class="UnitThumb" alt="Atha"/>
+                                        <div class="LinkContent">
+                                            <span class="UnitName">Atha</span>
+                                            <span class="ChangeType buff">Buff</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="NavItem">
+                                    <a href="#T2_Cybran_Shield_Lvl1" class="NavLink">
+                                        <img src="/assets/images/units/cybran/structure/T2ShieldL4.png" class="UnitThumb" alt="ED1"/>
+                                        <div class="LinkContent">
+                                            <span class="UnitName">ED1</span>
+                                            <span class="ChangeType buff">Buff</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="NavItem">
+                                    <a href="#T2_Cybran_Shield_Lvl2" class="NavLink">
+                                        <img src="/assets/images/units/cybran/structure/T2ShieldL4.png" class="UnitThumb" alt="ED2"/>
+                                        <div class="LinkContent">
+                                            <span class="UnitName">ED2</span>
+                                            <span class="ChangeType buff">Buff</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="NavItem">
+                                    <a href="#T2_Cybran_Shield_Lvl3" class="NavLink">
+                                        <img src="/assets/images/units/cybran/structure/T2ShieldL4.png" class="UnitThumb" alt="ED3"/>
+                                        <div class="LinkContent">
+                                            <span class="UnitName">ED3</span>
+                                            <span class="ChangeType buff">Buff</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="NavItem">
+                                    <a href="#T3_Cybran_Shield_Lvl4" class="NavLink">
+                                        <img src="/assets/images/units/cybran/structure/T2ShieldL4.png" class="UnitThumb" alt="ED4"/>
+                                        <div class="LinkContent">
+                                            <span class="UnitName">ED4</span>
+                                            <span class="ChangeType buff">Buff</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="NavItem">
+                                    <a href="#T3_Cybran_Shield_Lvl5" class="NavLink">
+                                        <img src="/assets/images/units/cybran/structure/T2ShieldL5.png" class="UnitThumb" alt="ED5"/>
+                                        <div class="LinkContent">
+                                            <span class="UnitName">ED5</span>
+                                            <span class="ChangeType buff">Buff</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="NavItem">
+                                    <a href="#T3_UEF_Shield" class="NavLink">
+                                        <img src="/assets/images/units/uef/structure/T3ShieldGen.png" class="UnitThumb" alt="HSD Pulse"/>
+                                        <div class="LinkContent">
+                                            <span class="UnitName">HSD Pulse</span>
+                                            <span class="ChangeType buff">Buff</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="NavItem">
+                                    <a href="#T3_Nuke_Silo" class="NavLink">
+                                        <img src="/assets/images/units/uef/structure/T3NukeLauncher.png" class="UnitThumb" alt="Nuke Silo"/>
+                                        <div class="LinkContent">
+                                            <span class="UnitName">Nuke Silo</span>
+                                            <span class="ChangeType buff">Buff</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="NavItem">
+                                    <a href="#T3_Aeon_Static_Artiliery" class="NavLink">
+                                        <img src="/assets/images/units/aeon/structure/T3StaticArty.png" class="UnitThumb" alt="Emissary"/>
+                                        <div class="LinkContent">
+                                            <span class="UnitName">Emissary</span>
+                                            <span class="ChangeType buff">Buff</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="NavItem">
+                                    <a href="#T3_Sera_Static_Artiliery" class="NavLink">
+                                        <img src="/assets/images/units/sera/structure/T3StaticArty.png" class="UnitThumb" alt="Hovatham"/>
+                                        <div class="LinkContent">
+                                            <span class="UnitName">Hovatham</span>
+                                            <span class="ChangeType buff">Buff</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="NavItem">
+                                    <a href="#T3_UEF_Static_Artiliery" class="NavLink">
+                                        <img src="/assets/images/units/uef/structure/T3StaticArty.png" class="UnitThumb" alt="Duke"/>
+                                        <div class="LinkContent">
+                                            <span class="UnitName">Duke</span>
+                                            <span class="ChangeType buff">Buff</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="NavItem">
+                                    <a href="#T3_Cybran_Static_Artiliery" class="NavLink">
+                                        <img src="/assets/images/units/cybran/structure/T3StaticArty.png" class="UnitThumb" alt="Disruptor"/>
+                                        <div class="LinkContent">
+                                            <span class="UnitName">Disruptor</span>
+                                            <span class="ChangeType buff">Buff</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="NavItem">
+                                    <a href="#T3_Aeon_Optics_Facility" class="NavLink">
+                                        <img src="/assets/images/units/aeon/structure/T3Optics.png" class="UnitThumb" alt="Eye of Rhianne"/>
+                                        <div class="LinkContent">
+                                            <span class="UnitName">Eye of Rhianne</span>
+                                            <span class="ChangeType buff">Buff</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="NavItem">
+                                    <a href="#T4_UEF_Static_Artiliery" class="NavLink">
+                                        <img src="/assets/images/units/uef/structure/T4StaticArty.png" class="UnitThumb" alt="Mavor"/>
+                                        <div class="LinkContent">
+                                            <span class="UnitName">Mavor</span>
+                                            <span class="ChangeType buff">Buff</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="NavItem">
+                                    <a href="#T4_Aeon_Static_Artiliery" class="NavLink">
+                                        <img src="/assets/images/units/aeon/structure/T4RapidArty.png" class="UnitThumb" alt="Salvation"/>
+                                        <div class="LinkContent">
+                                            <span class="UnitName">Salvation</span>
+                                            <span class="ChangeType buff">Buff</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="NavItem">
+                                    <a href="#T4_Aeon_ResourceGenerator" class="NavLink">
+                                        <img src="/assets/images/units/aeon/structure/T4ResorceGenerator.png" class="UnitThumb" alt="Paragon"/>
+                                        <div class="LinkContent">
+                                            <span class="UnitName">Paragon</span>
+                                            <span class="ChangeType buff">Buff</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="NavItem">
+                                    <a href="#T4_Sera_NukeLauncher" class="NavLink">
+                                        <img src="/assets/images/units/sera/structure/T4NukeLauncher.png" class="UnitThumb" alt="Yolona Oss"/>
+                                        <div class="LinkContent">
+                                            <span class="UnitName">Yolona Oss</span>
+                                            <span class="ChangeType buff">Buff</span>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- ACUs Section -->
+                        <div class="NavSection active">
+                            <button class="SectionToggle" aria-expanded="true" data-target="acu-items">
+                                <i class="fas fa-robot SectionIcon"></i>
+                                <span class="SectionTitle">ACUs & SACUs</span>
+                                <span class="ItemCount">4</span>
+                                <i class="fas fa-chevron-down ToggleIcon"></i>
+                            </button>
+                            <ul class="SectionItems" id="acu-items">
+                                <li class="NavItem">
+                                    <a href="#sera_regen_aura" class="NavLink">
+                                        <img src="/assets/images/Enhancements/sera/regenfield.png" class="UnitThumb" alt="Regen Aura"/>
+                                        <div class="LinkContent">
+                                            <span class="UnitName">Regen Aura</span>
+                                            <span class="ChangeType buff">Buff</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="NavItem">
+                                    <a href="#sera_adv_regen_aura" class="NavLink">
+                                        <img src="/assets/images/Enhancements/sera/advancedregenfield.png" class="UnitThumb" alt="Advanced Regen Aura"/>
+                                        <div class="LinkContent">
+                                            <span class="UnitName">Advanced Regen Aura</span>
+                                            <span class="ChangeType buff">Buff</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="NavItem">
+                                    <a href="#aeon_personal_shield" class="NavLink">
+                                        <img src="/assets/images/Enhancements/aeon/shield.png" class="UnitThumb" alt="Personal Shield"/>
+                                        <div class="LinkContent">
+                                            <span class="UnitName">Personal Shield</span>
+                                            <span class="ChangeType buff">Buff</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="NavItem">
+                                    <a href="#aeon_chrono" class="NavLink">
+                                        <img src="/assets/images/Enhancements/aeon/chrono.png" class="UnitThumb" alt="Chrono Dampener"/>
+                                        <div class="LinkContent">
+                                            <span class="UnitName">Chrono Dampener</span>
+                                            <span class="ChangeType buff">Buff</span>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+
+                    <!-- Footer Info -->
+                    <div class="SidemenuFooter">
+                        <div class="PatchStats">
+                            <div class="StatItem">
+                                <i class="fas fa-calendar-alt"></i>
+                                <span>June 18, 2019</span>
+                            </div>
+                            <div class="StatItem">
+                                <i class="fas fa-balance-scale"></i>
+                                <span>67 Changes</span>
                             </div>
                         </div>
                     </div>
-                </article>
-
-
-
-                    <div id="sera" class="Card">
-
-                        <div id="regenaura">
-                            <h3><img src="/assets/images/Enhancements/sera/regenfield.png">Regen Aura</h3>
-                            <p>Restoration Field has a larger range and grants additional max hp. Thaam in the field's range will be bumped to 308 hp, requiring an extra shot from enemy ACUs to be killed. An fx will help spot the units benefiting from this upgrade.</p>
-                            <ul>
-                                <li>
-                                    <span class="ChangeLabel">Mass cost:</span>
-                                    <span class="ChangeValue">
-                                        <s class="OldValue">600</s> 
-                                        <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
-                                        <strong class="NewValue">700</strong>
-                                    </span>
-                                </li>
-                                <li>
-                                    <span class="ChangeLabel">Energy cost:</span>
-                                    <span class="ChangeValue">
-                                        <s class="OldValue">4500</s> 
-                                        <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
-                                        <strong class="NewValue">18000</strong>
-                                    </span>
-                                </li>
-                                <li>
-                                    <span class="ChangeLabel">Build time:</span>
-                                    <span class="ChangeValue">
-                                        <s class="OldValue">600</s> 
-                                        <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
-                                        <strong class="NewValue">700</strong>
-                                    </span>
-                                </li>
-                                <li>
-                                    <span class="ChangeLabel">Added ACU HP:</span>
-                                    <span class="ChangeValue">
-                                        <s class="OldValue">1000</s> 
-                                        <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
-                                        <strong class="NewValue">500</strong>
-                                    </span>
-                                </li>
-                                <li>
-                                    <span class="ChangeLabel">Range:</span>
-                                    <span class="ChangeValue">
-                                        <s class="OldValue">22</s> 
-                                        <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
-                                        <strong class="NewValue">30</strong>
-                                    </span>
-                                </li>
-                                <li>
-                                    <span class="ChangeLabel">Max Health Multiplier:</span>
-                                    <span class="ChangeValue">
-                                        <s class="OldValue">1</s> 
-                                        <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
-                                        <strong class="NewValue">1.1</strong>
-                                    </span>
-                                </li>
-                                <li>
-                                    <span class="ChangeLabel">Min Regen:</span>
-                                    <span class="ChangeValue">
-                                        <s class="OldValue">0</s> 
-                                        <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
-                                        <strong class="NewValue">3</strong>
-                                    </span>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <div id="advregenaura">
-                            <h3><img src="/assets/images/Enhancements/sera/advancedregenfield.png">Advanced Regen Aura</h3>
-                            <p>Advanced Restoration Field grants a minimum regen of 15/s, has a greater range and grants more health. </p>
-                            <ul>
-                                <li>
-                                    <span class="ChangeLabel">Mass cost:</span>
-                                    <span class="ChangeValue">
-                                        <s class="OldValue">1500</s> 
-                                        <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
-                                        <strong class="NewValue">1800</strong>
-                                    </span>
-                                </li>
-                                <li>
-                                    <span class="ChangeLabel">Energy cost:</span>
-                                    <span class="ChangeValue">
-                                        <s class="OldValue">31250</s> 
-                                        <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
-                                        <strong class="NewValue">42000</strong>
-                                    </span>
-                                </li>
-                                <li>
-                                    <span class="ChangeLabel">Build time:</span>
-                                    <span class="ChangeValue">
-                                        <s class="OldValue">1250</s> 
-                                        <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
-                                        <strong class="NewValue">1500</strong>
-                                    </span>
-                                </li>
-                                <li>
-                                    <span class="ChangeLabel">Added ACU HP:</span>
-                                    <span class="ChangeValue">
-                                        <s class="OldValue">2500</s> 
-                                        <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
-                                        <strong class="NewValue">1500</strong>
-                                    </span>
-                                </li>
-                                <li>
-                                    <span class="ChangeLabel">Range:</span>
-                                    <span class="ChangeValue">
-                                        <s class="OldValue">30</s> 
-                                        <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
-                                        <strong class="NewValue">35</strong>
-                                    </span>
-                                </li>
-                                <li>
-                                    <span class="ChangeLabel">Max Health Multiplier:</span>
-                                    <span class="ChangeValue">
-                                        <s class="OldValue">1.1</s> 
-                                        <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
-                                        <strong class="NewValue">1.2</strong>
-                                    </span>
-                                </li>
-                                <li>
-                                    <span class="ChangeLabel">Min Regen:</span>
-                                    <span class="ChangeValue">
-                                        <s class="OldValue">0</s> 
-                                        <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
-                                        <strong class="NewValue">15</strong>
-                                    </span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div id="aeon" class="Card">
-
-                        <div id="shield">
-                            <h3><img src="/assets/images/Enhancements/aeon/shield.png">Aeon Personal Shield</h3>
-                            <p>The first Aeon ACU shield is buffed with a lower recharge time. </p>
-                            <ul>
-                                <li>
-                                    <span class="ChangeLabel">Shield Recharge time:</span>
-                                    <span class="ChangeValue">
-                                        <s class="OldValue">90</s> 
-                                        <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
-                                        <strong class="NewValue">75</strong>
-                                    </span>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <div id="chrono">
-                            <h3><img src="/assets/images/Enhancements/aeon/chrono.png">Chrono Dampener</h3>
-                            <p>Chrono Dampener's stun was so long that units would lose their move orders, so it is reduced. 3000 health is added to the upgrade.</p>
-                            <ul>
-                                <li>
-                                    <span class="ChangeLabel">Additional Health:</span>
-                                    <span class="ChangeValue">
-                                        <s class="OldValue">0</s> 
-                                        <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
-                                        <strong class="NewValue">3000</strong>
-                                    </span>
-                                </li>
-                                <li>
-                                    <span class="ChangeLabel">Stun Time:</span>
-                                    <span class="ChangeValue">
-                                        <s class="OldValue">3.5s</s> 
-                                        <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
-                                        <strong class="NewValue">2.5s</strong>
-                                    </span>
-                                </li>
-                            </ul>
-                        </div>
-
-                    </div>
-
                 </div>
-
-                <h2>Projectiles</h2>
-
-                <div id="projectile">
-
-                    <div id="tml" class="Card">
-                        <h3><img src="/assets/images/units/cybran/structure/T2Tml.png"> Tactical missile</h3>
-                        <ul>
-                            <li>
-                                <span class="ChangeLabel">Mass cost:</span>
-                                <span class="ChangeValue">
-                                    <s class="OldValue">180</s> 
-                                    <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
-                                    <strong class="NewValue">250</strong>
-                                </span>
-                            </li>
-                        </ul>
-                        ACU Tactical Missile
-                        <ul>
-                            <li>
-                                <span class="ChangeLabel">Mass cost:</span>
-                                <span class="ChangeValue">
-                                    <s class="OldValue">180</s> 
-                                    <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
-                                    <strong class="NewValue">250</strong>
-                                </span>
-                            </li>
-                            <li>
-                                <span class="ChangeLabel">Build time:</span>
-                                <span class="ChangeValue">
-                                    <s class="OldValue">300</s> 
-                                    <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
-                                    <strong class="NewValue">450</strong>
-                                </span>
-                            </li>
-                        </ul>
-                    </div>
-
-                </div>
-            </div>
-            <div class="Sidebar">
-                <div class="IconSidebar">
-                    <h2 class="IconSidebarTitle">Contents</h2>
-                    <div class="IconSidebarSpace"></div>
-            
-                    <div class="IconSidebarSubgrid">
-                        <h3 class="IconSidebarSubtitle">Land</h3><br>
-                            <a href="#engie"><img src="/assets/images/units/aeon/land/T3Engie.png"></a>
-                            <a href="#selen"><img src="/assets/images/units/sera/land/T1Scout.png"></a>
-                            <a href="#t1maa"><img src="/assets/images/units/aeon/land/T1MobileAA.png"></a>
-                            <a href="#mongoose"><img src="/assets/images/units/uef/land/T2RangeBot.png"></a>
-                            <a href="#mobileshield"><img src="/assets/images/units/aeon/land/T2MobileShield.png"></a>
-                            <a href="#deceiver"><img src="/assets/images/units/cybran/land/T2MobileStealth.png"></a>
-                            <a href="#wagner"><img src="/assets/images/units/cybran/land/T2HoverTank.png"></a>
-                            <a href="#t3tanks"><img src="/assets/images/units/cybran/land/T3Tank.png"></a>
-                            <a href="#t3mma"><img src="/assets/images/units/uef/land/T3MobileAA.png"></a>
-                            <a href="#scathis"><img src="/assets/images/units/cybran/land/T4MobileArty.png"></a>
-            
-                        <h3 class="IconSidebarSubtitle">Air</h3><br>
-                            <a href="#t2gunships"><img src="/assets/images/units/cybran/air/T2Gunship.png"></a>
-                            <a href="#torp"><img src="/assets/images/units/sera/air/T2TorpedoBomber.png"></a>
-                            <a href="#notha"><img src="/assets/images/units/sera/air/T2FighterBomber.png"></a>
-                            <a href="#t3gunship"><img src="/assets/images/units/aeon/air/T3AAGunship.png"></a>
-                            <a href="#novax"><img src="/assets/images/units/uef/structure/T4SataliteCenter.png"></a>
-            
-                        <h3 class="IconSidebarSubtitle">Navy</h3><br>
-                            <a href="#frig"><img src="/assets/images/units/aeon/naval/T1Frigate.png"></a>
-                            <a href="#destro"><img src="/assets/images/units/aeon/naval/T2Destroyer.png"></a>
-                            <a href="#cruiser"><img src="/assets/images/units/cybran/naval/T2Cruiser.png"></a>
-                            <a href="#shieldboat"><img src="/assets/images/units/uef/naval/T2ShieldBoat.png"></a>
-                            <a href="#battleship"><img src="/assets/images/units/uef/naval/T3Battleship.png"></a>
-                            <a href="#t3sub"><img src="/assets/images/units/sera/naval/T3SubHunter.png"></a>
-                            <a href="#tempest"><img src="/assets/images/units/aeon/naval/T4Battleship.png"></a>
-            
-                        <h3 class="IconSidebarSubtitle">Structures</h3><br>
-                            <a href="#airstaging"><img src="/assets/images/units/cybran/structure/T1AirStaging.png"></a>
-                            <a href="#t2landhq"><img src="/assets/images/units/sera/structure/T2LandFacHQ.png"></a>
-                            <a href="#tmd"><img src="/assets/images/units/aeon/structure/T2TMD.png"></a>
-                            <a href="#t2arty"><img src="/assets/images/units/aeon/structure/T2StaticArty.png"></a>
-                            <a href="#t2radar"><img src="/assets/images/units/uef/structure/T2Radar.png"></a>
-                            <a href="#t2flack"><img src="/assets/images/units/aeon/structure/T2Flack.png"></a>
-                            <a href="#t2shield"><img src="/assets/images/units/cybran/structure/T2ShieldL4.png"></a>
-                            <a href="#t3shield"><img src="/assets/images/units/cybran/structure/T3ShieldL5.png"></a>
-                            <a href="#nuke"><img src="/assets/images/units/uef/structure/T3NukeLauncher.png"></a>
-                            <a href="#t3arty"><img src="/assets/images/units/uef/structure/T3StaticArty.png"></a>
-                            <a href="#eye"><img src="/assets/images/units/aeon/structure/T4Optics.png"></a>
-                            <a href="#para"><img src="/assets/images/units/aeon/structure/T4ResorceGenerator.png"></a>
-            
-                        <h3 class="IconSidebarSubtitle">ACUs</h3><br>
-                            <a href="#regenaura"><img src="/assets/images/Enhancements/sera/regenfield.png"></a>
-                            <a href="#advregenaura"><img src="/assets/images/Enhancements/sera/advancedregenfield.png"></a>
-                            <a href="#shield"><img src="/assets/images/Enhancements/aeon/shield.png"></a>
-                            <a href="#chrono"><img src="/assets/images/Enhancements/aeon/chrono.png"></a>
-
-                        <h3 class="IconSidebarSubtitle">Projectiles</h3><br>
-                            <a href="#tml"><img src="/assets/images/units/cybran/structure/T2Tml.png"></a>
-                    </div>
-                </div>
-            </div>
+            </aside>
         </main>
-    </body>
     <footer class="SiteFooter">
         <div class="FooterContainer">
             <!-- Navigation Section -->
@@ -3417,9 +4132,10 @@
                         <i class="fas fa-comments" aria-hidden="true"></i>
                     </a>
                 </div>
-                <span class="Copyright">© 2015-2026 <strong>FAForever</strong> • Community-driven balance updates</span>
-                <span class="BuildInfo">Balance Team • Patch Notes v3822</span>
+                <span class="Copyright">© 2015-2019 <strong>FAForever</strong> • Community-driven balance updates</span>
+                <span class="BuildInfo">Balance Team • Patch Notes v3704</span>
             </div>
         </div>
     </footer>
+    </body>
 </html>
