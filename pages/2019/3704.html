@@ -10,7 +10,7 @@
     </head>
     <body>
         <main class="Grid">
-            <div class="Content">
+            <section class="Content">
 
                 <!-- Intro Section -->
                 <section class="IntroSection" id="Intro">
@@ -1057,7 +1057,6 @@
                         </div>
                     </article>
                 </section>
-
                
                 <section id="air">
                 <h2>Air</h2>
@@ -1413,10 +1412,8 @@
                     </article>
                 </section>
 
-                
-
                 <section id="navy">
-                <h2>Navy</h2>
+                    <h2>Navy</h2>
 
                     <article id="beacon" class="PatchCard">
                         <header class="PatchCardHeader">
@@ -1775,11 +1772,10 @@
                             </div>
                         </div>
                     </article>
-                </div>
-
-                <h2>Structures</h2>
+                </section>
 
                 <div id="structures">
+                <h2>Structures</h2>
 
                     <article id="T1_Airstageing" class="PatchCard">
                         <!-- Card Header Section-->
@@ -2230,7 +2226,7 @@
                         </div>
                     </article>
 
-                    <article id="T2_Cybran__Shield_Lvl1" class="PatchCard">
+                    <article id="T2_Cybran_Shield_Lvl1" class="PatchCard">
                         <!-- Card Header Section-->
                         <header class="PatchCardHeader">
                             <div class="UnitInfo">
@@ -2291,7 +2287,7 @@
                         </div>
                     </article>
 
-                    <article id="T2_Cybran__Shield_Lvl2" class="PatchCard">
+                    <article id="T2_Cybran_Shield_Lvl2" class="PatchCard">
                         <!-- Card Header Section-->
                         <header class="PatchCardHeader">
                             <div class="UnitInfo">
@@ -2352,7 +2348,7 @@
                         </div>
                     </article>
 
-                    <article id="T2_Cybran__Shield_Lvl3" class="PatchCard">
+                    <article id="T2_Cybran_Shield_Lvl3" class="PatchCard">
                         <!-- Card Header Section-->
                         <header class="PatchCardHeader">
                             <div class="UnitInfo">
@@ -2413,7 +2409,7 @@
                         </div>
                     </article>
 
-                    <article id="T3_Cybran__Shield_Lvl4" class="PatchCard">
+                    <article id="T3_Cybran_Shield_Lvl4" class="PatchCard">
                         <!-- Card Header Section-->
                         <header class="PatchCardHeader">
                             <div class="UnitInfo">
@@ -2474,7 +2470,7 @@
                         </div>
                     </article>
 
-                    <article id="T3_Cybran__Shield_Lvl5" class="PatchCard">
+                    <article id="T3_Cybran_Shield_Lvl5" class="PatchCard">
                         <!-- Card Header Section-->
                         <header class="PatchCardHeader">
                             <div class="UnitInfo">
@@ -2527,170 +2523,549 @@
                         </div>
                     </article>
 
+                    <article id="T3_UEF_Shield" class="PatchCard">
+                        <!-- Card Header Section-->
+                        <header class="PatchCardHeader">
+                            <div class="UnitInfo">
+                                <img src="/assets/images/units/uef/structure/T3ShieldGen.png" alt="HSD Pulse" class="UnitIcon" loading="lazy">
+                                <div class="UnitDetails">
+                                    <div class="UnitNameRow">
+                                        <h3 class="UnitName">HSD Pulse</h3>
+                                        <div class="ChangeTypeBadge buff">Buff</div>
+                                    </div>
+                                    <div class="FactionRow">
+                                        <span class="FactionBadge uef">UEF</span>
+                                        <span class="UnitCode">UEB4301</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </header>
 
-                    <div id="t3shields" class="Card">
-                        <h3>Tech 3 Shields</h3>
+                        <!-- Card Contentt Section-->
+                        <div class="PatchCardContent">
+                            <p class="UnitDescription">The T3 UEF shield can now withstand a single mavor shell without dropping. It also gets a slight cost increase.</p>
+                            
+                            <div class="ChangesList">
+                                <div class="ChangeGroup">
+                                    <h4 class="ChangeGroupTitle">Shield</h4>
+                                    <ul class="Changes">
+                                            <li class="buff">
+                                                <span class="ChangeLabel">Health:</span>
+                                            <span class="ChangeValue">
+                                                <s class="OldValue">15000</s>
+                                                <i class="fa-solid fa-arrow-right ChangeArrow"></i>
+                                                <strong class="NewValue">17000</strong>
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="ChangeGroup">
+                                    <h4 class="ChangeGroupTitle">Economy</h4>
+                                    <ul class="Changes">
+                                            <li class="buff">
+                                                <span class="ChangeLabel">Energy cost:</span>
+                                                <span class="ChangeValue">
+                                                <s class="OldValue">50000</s>
+                                                <i class="fa-solid fa-arrow-right ChangeArrow"></i>
+                                                <strong class="NewValue">55000</strong>
+                                            </span>
+                                        </li>
+                                        <li class="buff">
+                                                <span class="ChangeLabel">Mass cost:</span>
+                                                <span class="ChangeValue">
+                                                <s class="OldValue">3000</s>
+                                                <i class="fa-solid fa-arrow-right ChangeArrow"></i>
+                                                <strong class="NewValue">3300</strong>
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
 
-                        <h3><img src="/assets/images/units/uef/structure/T3Shield.png"> HSD Pulse</h3>
-                        <p>The T3 UEF shield can now withstand a single mavor shell without dropping. It also gets a slight cost increase.</p>
-                        <ul>
-                            <li>
-                                <span class="ChangeLabel">Shield Health:</span>
-                                <span class="ChangeValue">
-                                    <s class="OldValue">15000</s> 
-                                    <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
-                                    <strong class="NewValue">17000</strong>
-                                </span>
-                            </li>
-                            <li>
-                                <span class="ChangeLabel">Mass cost:</span>
-                                <span class="ChangeValue">
-                                    <s class="OldValue">3000</s> 
-                                    <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
-                                    <strong class="NewValue">3300</strong>
-                                </span>
-                            </li>
-                            <li>
-                                <span class="ChangeLabel">Energy cost:</span>
-                                <span class="ChangeValue">
-                                    <s class="OldValue">50000</s> 
-                                    <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
-                                    <strong class="NewValue">55000</strong>
-                                </span>
-                            </li>
-                        </ul>
-                        
-                    </div>
+                    <article id="T3_Nuke_Silo" class="PatchCard">
+                        <!-- Card Header Section-->
+                        <header class="PatchCardHeader">
+                            <div class="UnitInfo">
+                                <img src="/assets/images/units/uef/structure/T3NukeLauncher.png" alt="Nuke Silo" class="UnitIcon" loading="lazy">
+                                <div class="UnitDetails">
+                                    <div class="UnitNameRow">
+                                        <h3 class="UnitName">Nuke Silo</h3>
+                                        <div class="ChangeTypeBadge buff">Buff</div>
+                                    </div>
+                                    <div class="FactionRow">
+                                        <span class="FactionBadge universal">Universal</span>
+                                        <span class="UnitCode">UEB2305,URB2305,UAB2305,XSB2305</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </header>
 
-                    <div id="nuke" class="Card">
-                        <h3><img src="/assets/images/units/uef/structure/T3NukeLauncher.png"> Nuke Launchers</h3>
-                        <p>Assisting Nuke Launchers has been nerfed by increasing the Build time of the missile and proportionally increasing the Build power of the launcher. It also get a nerf of build time for consistency with experimentals' built time nerf of last balance patch.</p>
-                        <ul>
-                            <li>
-                                <span class="ChangeLabel">Build power:</span>
-                                <span class="ChangeValue">
-                                    <s class="OldValue">1080</s> 
-                                    <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
-                                    <strong class="NewValue">1500</strong>
-                                </span>
-                            </li>
-                            <li>
-                                <span class="ChangeLabel">Missile Build time:</span>
-                                <span class="ChangeValue">
-                                    <s class="OldValue">324000</s> 
-                                    <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
-                                    <strong class="NewValue">450000</strong>
-                                </span>
-                            </li>
-                            <li>
-                                <span class="ChangeLabel">Build Time:</span>
-                                <span class="ChangeValue">
-                                    <s class="OldValue">10453</s> 
-                                    <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
-                                    <strong class="NewValue">25000</strong>
-                                </span>
-                            </li>
-                        </ul>
-                        
-                    </div>
+                        <!-- Card Contentt Section-->
+                        <div class="PatchCardContent">
+                            <p class="UnitDescription">Assisting Nuke Launchers has been nerfed by increasing the Build time of the missile and proportionally increasing the Build power of the launcher. It also get a nerf of build time for consistency with experimentals' built time nerf of last balance patch.</p>
+                            
+                            <div class="ChangesList">
+                                <div class="ChangeGroup">
+                                    <h4 class="ChangeGroupTitle">Economy</h4>
+                                    <ul class="Changes">
+                                            <li class="buff">
+                                                <span class="ChangeLabel">Build Power:</span>
+                                                <span class="ChangeValue">
+                                                <s class="OldValue">1080</s>
+                                                <i class="fa-solid fa-arrow-right ChangeArrow"></i>
+                                                <strong class="NewValue">1500</strong>
+                                            </span>
+                                        </li>
+                                        <li class="buff">
+                                                <span class="ChangeLabel">Build Time:</span>
+                                                <span class="ChangeValue">
+                                                <s class="OldValue">10453</s>
+                                                <i class="fa-solid fa-arrow-right ChangeArrow"></i>
+                                                <strong class="NewValue">25000</strong>
+                                            </span>
+                                        </li>
+                                            <li class="buff">
+                                                    <span class="ChangeLabel">Missile Build Time:</span>
+                                                    <span class="ChangeValue">
+                                                    <s class="OldValue">324000</s>
+                                                    <i class="fa-solid fa-arrow-right ChangeArrow"></i>
+                                                    <strong class="NewValue">450000</strong>
+                                                </span>
+                                            </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
 
-                    <div id="t3arty" class="Card">
-                        <h3><img src="/assets/images/units/uef/structure/T3StaticArty.png"> T3 Static Artillery</h3>
-                        <p>The build time of T3 Arty have been increased to keep up with BT nerf of experimentals that happened last balance patch</p>
-                        <ul>
-                            <li>
-                                <span class="ChangeLabel">Emissary (Aeon):</span>
-                                <span class="ChangeValue">
-                                    <s class="OldValue">30764</s> 
-                                    <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
-                                    <strong class="NewValue">120000</strong>
-                                </span>
-                            </li>
-                            <li>
-                                <span class="ChangeLabel">Hovatham (Seraphim):</span>
-                                <span class="ChangeValue">
-                                    <s class="OldValue">29792</s> 
-                                    <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
-                                    <strong class="NewValue">110000</strong>
-                                </span>
-                            </li>
-                            <li>
-                                <span class="ChangeLabel">Duke (UEF):</span>
-                                <span class="ChangeValue">
-                                    <s class="OldValue">30278</s> 
-                                    <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
-                                    <strong class="NewValue">115000</strong>
-                                </span>
-                            </li>
-                            <li>
-                                <span class="ChangeLabel">Disruptor (Cybran):</span>
-                                <span class="ChangeValue">
-                                    <s class="OldValue">29308</s> 
-                                    <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
-                                    <strong class="NewValue">105000</strong>
-                                </span>
-                            </li>
-                        </ul>
-                    </div>
+                    <article id="T3_Aeon_Static_Artiliery" class="PatchCard">
+                        <!-- Card Header Section-->
+                        <header class="PatchCardHeader">
+                            <div class="UnitInfo">
+                                <img src="/assets/images/units/aeon/structure/T3StaticArty.png" alt="Emissary" class="UnitIcon" loading="lazy">
+                                <div class="UnitDetails">
+                                    <div class="UnitNameRow">
+                                        <h3 class="UnitName">Emissary</h3>
+                                        <div class="ChangeTypeBadge buff">Buff</div>
+                                    </div>
+                                    <div class="FactionRow">
+                                        <span class="FactionBadge aeon">Aeon</span>
+                                        <span class="UnitCode">UAB2302</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </header>
 
-                    <div id="eye" class="Card">
-                        <h3><img src="/assets/images/units/aeon/structure/T4Optics.png"> Eye of Rhianne</h3>
-                        <p>Energy storage is added to the Eye so additional energy storages are not required to use it.</p>
-                        <ul>
-                            <li>
-                                <span class="ChangeLabel">Energy Storage:</span>
-                                <span class="ChangeValue">
-                                    <s class="OldValue">0</s> 
-                                    <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
-                                    <strong class="NewValue">10000</strong>
-                                </span>
-                            </li>
-                        </ul>
-                    </div>
+                        <!-- Card Contentt Section-->
+                        <div class="PatchCardContent">
+                            <p class="UnitDescription">The build time of T3 Arty have been increased to keep up with BT nerf of experimentals that happened last balance patch</p>
+                            
+                            <div class="ChangesList">
+                                <div class="ChangeGroup">
+                                    <h4 class="ChangeGroupTitle">Economy</h4>
+                                    <ul class="Changes">
+                                        <li class="buff">
+                                                <span class="ChangeLabel">Build Time:</span>
+                                                <span class="ChangeValue">
+                                                <s class="OldValue">30765</s>
+                                                <i class="fa-solid fa-arrow-right ChangeArrow"></i>
+                                                <strong class="NewValue">120000</strong>
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
 
-                    <div id="para" class="Card">
-                        <h3><img src="/assets/images/units/aeon/structure/T4ResorceGenerator.png"> Game Enders</h3>
-                        <p>Increase of the build time on Game Ender. A lower increase is applied on the salvation, so the paragon is not nerfed too much, and this act as an indirect buff to the salvation.</p>
-                        <ul>
-                            <li>
-                                <span class="ChangeLabel">Mavor:</span>
-                                <span class="ChangeValue">
-                                    <s class="OldValue">99900</s> 
-                                    <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
-                                    <strong class="NewValue">300000</strong>
-                                </span>
-                            </li>
-                            <li>
-                                <span class="ChangeLabel">Paragon:</span>
-                                <span class="ChangeValue">
-                                    <s class="OldValue">125100</s> 
-                                    <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
-                                    <strong class="NewValue">325000</strong>
-                                </span>
-                            </li>
-                            <li>
-                                <span class="ChangeLabel">Salvation:</span>
-                                <span class="ChangeValue">
-                                    <s class="OldValue">90000</s> 
-                                    <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
-                                    <strong class="NewValue">100000</strong>
-                                </span>
-                            </li>
-                            <li>
-                                <span class="ChangeLabel">Yolona Oss:</span>
-                                <span class="ChangeValue">
-                                    <s class="OldValue">125100</s> 
-                                    <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
-                                    <strong class="NewValue">250000</strong>
-                                </span>
-                            </li>
-                        </ul>
-                    </div>
+                    <article id="T3_Sera_Static_Artiliery" class="PatchCard">
+                        <!-- Card Header Section-->
+                        <header class="PatchCardHeader">
+                            <div class="UnitInfo">
+                                <img src="/assets/images/units/sera/structure/T3StaticArty.png" alt="Hovatham" class="UnitIcon" loading="lazy">
+                                <div class="UnitDetails">
+                                    <div class="UnitNameRow">
+                                        <h3 class="UnitName">Hovatham</h3>
+                                        <div class="ChangeTypeBadge buff">Buff</div>
+                                    </div>
+                                    <div class="FactionRow">
+                                        <span class="FactionBadge seraphim">Seraphim</span>
+                                        <span class="UnitCode">XSB2302</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </header>
+
+                        <!-- Card Contentt Section-->
+                        <div class="PatchCardContent">
+                            <p class="UnitDescription">The build time of T3 Arty have been increased to keep up with BT nerf of experimentals that happened last balance patch</p>
+                            
+                            <div class="ChangesList">
+                                <div class="ChangeGroup">
+                                    <h4 class="ChangeGroupTitle">Economy</h4>
+                                    <ul class="Changes">
+                                        <li class="buff">
+                                                <span class="ChangeLabel">Build Time:</span>
+                                                <span class="ChangeValue">
+                                                <s class="OldValue">29792</s>
+                                                <i class="fa-solid fa-arrow-right ChangeArrow"></i>
+                                                <strong class="NewValue">110000</strong>
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article id="T3_UEF_Static_Artiliery" class="PatchCard">
+                        <!-- Card Header Section-->
+                        <header class="PatchCardHeader">
+                            <div class="UnitInfo">
+                                <img src="/assets/images/units/uef/structure/T3StaticArty.png" alt="Duke" class="UnitIcon" loading="lazy">
+                                <div class="UnitDetails">
+                                    <div class="UnitNameRow">
+                                        <h3 class="UnitName">Duke</h3>
+                                        <div class="ChangeTypeBadge buff">Buff</div>
+                                    </div>
+                                    <div class="FactionRow">
+                                        <span class="FactionBadge uef">UEF</span>
+                                        <span class="UnitCode">UEB2302</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </header>
+
+                        <!-- Card Contentt Section-->
+                        <div class="PatchCardContent">
+                            <p class="UnitDescription">The build time of T3 Arty have been increased to keep up with BT nerf of experimentals that happened last balance patch</p>
+                            
+                            <div class="ChangesList">
+                                <div class="ChangeGroup">
+                                    <h4 class="ChangeGroupTitle">Economy</h4>
+                                    <ul class="Changes">
+                                        <li class="buff">
+                                                <span class="ChangeLabel">Build Time:</span>
+                                                <span class="ChangeValue">
+                                                <s class="OldValue">30278</s>
+                                                <i class="fa-solid fa-arrow-right ChangeArrow"></i>
+                                                <strong class="NewValue">115000</strong>
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article id="T3_Cybran_Static_Artiliery" class="PatchCard">
+                        <!-- Card Header Section-->
+                        <header class="PatchCardHeader">
+                            <div class="UnitInfo">
+                                <img src="/assets/images/units/cybran/structure/T3StaticArty.png" alt="Disruptor" class="UnitIcon" loading="lazy">
+                                <div class="UnitDetails">
+                                    <div class="UnitNameRow">
+                                        <h3 class="UnitName">Disruptor</h3>
+                                        <div class="ChangeTypeBadge buff">Buff</div>
+                                    </div>
+                                    <div class="FactionRow">
+                                        <span class="FactionBadge cybran">Cybran</span>
+                                        <span class="UnitCode">URB2302</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </header>
+
+                        <!-- Card Contentt Section-->
+                        <div class="PatchCardContent">
+                            <p class="UnitDescription">The build time of T3 Arty have been increased to keep up with BT nerf of experimentals that happened last balance patch</p>
+                            
+                            <div class="ChangesList">
+                                <div class="ChangeGroup">
+                                    <h4 class="ChangeGroupTitle">Economy</h4>
+                                    <ul class="Changes">
+                                        <li class="buff">
+                                                <span class="ChangeLabel">Build Time:</span>
+                                                <span class="ChangeValue">
+                                                <s class="OldValue">29308</s>
+                                                <i class="fa-solid fa-arrow-right ChangeArrow"></i>
+                                                <strong class="NewValue">105000</strong>
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article id="T3_Aeon_Optics_Facility" class="PatchCard">
+                        <!-- Card Header Section-->
+                        <header class="PatchCardHeader">
+                            <div class="UnitInfo">
+                                <img src="/assets/images/units/aeon/structure/T3Optics.png" alt="Eye of Rhianne" class="UnitIcon" loading="lazy">
+                                <div class="UnitDetails">
+                                    <div class="UnitNameRow">
+                                        <h3 class="UnitName">Eye of Rhianne</h3>
+                                        <div class="ChangeTypeBadge buff">Buff</div>
+                                    </div>
+                                    <div class="FactionRow">
+                                        <span class="FactionBadge aeon">Aeon</span>
+                                        <span class="UnitCode">XAB3301</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </header>
+
+                        <!-- Card Contentt Section-->
+                        <div class="PatchCardContent">
+                            <p class="UnitDescription">The build time of T3 Arty have been increased to keep up with BT nerf of experimentals that happened last balance patch</p>
+                            
+                            <div class="ChangesList">
+                                <div class="ChangeGroup">
+                                    <h4 class="ChangeGroupTitle">Economy</h4>
+                                    <ul class="Changes">
+                                        <li class="buff">
+                                                <span class="ChangeLabel">Energy Storage:</span>
+                                                <span class="ChangeValue">
+                                                <s class="OldValue">0</s>
+                                                <i class="fa-solid fa-arrow-right ChangeArrow"></i>
+                                                <strong class="NewValue">10000</strong>
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article id="T4_UEF_Static_Artiliery" class="PatchCard">
+                        <!-- Card Header Section-->
+                        <header class="PatchCardHeader">
+                            <div class="UnitInfo">
+                                <img src="/assets/images/units/uef/structure/T4StaticArty.png" alt="Mavor" class="UnitIcon" loading="lazy">
+                                <div class="UnitDetails">
+                                    <div class="UnitNameRow">
+                                        <h3 class="UnitName">Mavor</h3>
+                                        <div class="ChangeTypeBadge buff">Buff</div>
+                                    </div>
+                                    <div class="FactionRow">
+                                        <span class="FactionBadge uef">UEF</span>
+                                        <span class="UnitCode">UEB2401</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </header>
+
+                        <!-- Card Contentt Section-->
+                        <div class="PatchCardContent">
+                            <p class="UnitDescription">Increase of the build time on Game Ender.</p>
+                            
+                            <div class="ChangesList">
+                                <div class="ChangeGroup">
+                                    <h4 class="ChangeGroupTitle">Economy</h4>
+                                    <ul class="Changes">
+                                        <li class="buff">
+                                                <span class="ChangeLabel">Build Time:</span>
+                                                <span class="ChangeValue">
+                                                <s class="OldValue">99900</s>
+                                                <i class="fa-solid fa-arrow-right ChangeArrow"></i>
+                                                <strong class="NewValue">300000</strong>
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article id="T4_Aeon_Static_Artiliery" class="PatchCard">
+                        <!-- Card Header Section-->
+                        <header class="PatchCardHeader">
+                            <div class="UnitInfo">
+                                <img src="/assets/images/units/aeon/structure/T4RapidArty.png" alt="Salvation" class="UnitIcon" loading="lazy">
+                                <div class="UnitDetails">
+                                    <div class="UnitNameRow">
+                                        <h3 class="UnitName">Salvation</h3>
+                                        <div class="ChangeTypeBadge buff">Buff</div>
+                                    </div>
+                                    <div class="FactionRow">
+                                        <span class="FactionBadge aeon">Aeon</span>
+                                        <span class="UnitCode">XAB2307</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </header>
+
+                        <!-- Card Contentt Section-->
+                        <div class="PatchCardContent">
+                            <p class="UnitDescription">Increase of the build time on Game Ender.</p>
+                            
+                            <div class="ChangesList">
+                                <div class="ChangeGroup">
+                                    <h4 class="ChangeGroupTitle">Economy</h4>
+                                    <ul class="Changes">
+                                        <li class="buff">
+                                                <span class="ChangeLabel">Build Time:</span>
+                                                <span class="ChangeValue">
+                                                <s class="OldValue">90000</s>
+                                                <i class="fa-solid fa-arrow-right ChangeArrow"></i>
+                                                <strong class="NewValue">100000</strong>
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article id="T4_Aeon_ResourceGenerator" class="PatchCard">
+                        <!-- Card Header Section-->
+                        <header class="PatchCardHeader">
+                            <div class="UnitInfo">
+                                <img src="/assets/images/units/aeon/structure/T4ResorceGenerator.png" alt="Paragon" class="UnitIcon" loading="lazy">
+                                <div class="UnitDetails">
+                                    <div class="UnitNameRow">
+                                        <h3 class="UnitName">Paragon</h3>
+                                        <div class="ChangeTypeBadge buff">Buff</div>
+                                    </div>
+                                    <div class="FactionRow">
+                                        <span class="FactionBadge aeon">Aeon</span>
+                                        <span class="UnitCode">XAB1401</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </header>
+
+                        <!-- Card Contentt Section-->
+                        <div class="PatchCardContent">
+                            <p class="UnitDescription">Increase of the build time on Game Ender.</p>
+                            
+                            <div class="ChangesList">
+                                <div class="ChangeGroup">
+                                    <h4 class="ChangeGroupTitle">Economy</h4>
+                                    <ul class="Changes">
+                                        <li class="buff">
+                                                <span class="ChangeLabel">Build Time:</span>
+                                                <span class="ChangeValue">
+                                                <s class="OldValue">125100</s>
+                                                <i class="fa-solid fa-arrow-right ChangeArrow"></i>
+                                                <strong class="NewValue">325000</strong>
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article id="T4_Sera_NukeLauncher" class="PatchCard">
+                        <!-- Card Header Section-->
+                        <header class="PatchCardHeader">
+                            <div class="UnitInfo">
+                                <img src="/assets/images/units/sera/structure/T4NukeLauncher.png" alt="Yolona Oss" class="UnitIcon" loading="lazy">
+                                <div class="UnitDetails">
+                                    <div class="UnitNameRow">
+                                        <h3 class="UnitName">Yolona Oss</h3>
+                                        <div class="ChangeTypeBadge buff">Buff</div>
+                                    </div>
+                                    <div class="FactionRow">
+                                        <span class="FactionBadge sera">Sera</span>
+                                        <span class="UnitCode">XSB2401</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </header>
+
+                        <!-- Card Contentt Section-->
+                        <div class="PatchCardContent">
+                            <p class="UnitDescription">Increase of the build time on Game Ender.</p>
+                            
+                            <div class="ChangesList">
+                                <div class="ChangeGroup">
+                                    <h4 class="ChangeGroupTitle">Economy</h4>
+                                    <ul class="Changes">
+                                        <li class="buff">
+                                                <span class="ChangeLabel">Build Time:</span>
+                                                <span class="ChangeValue">
+                                                <s class="OldValue">125100</s>
+                                                <i class="fa-solid fa-arrow-right ChangeArrow"></i>
+                                                <strong class="NewValue">250000</strong>
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
                 </div>
 
                 <h2>ACUs</h2>
 
                 <div id="acu">
+                    <h2>ACU's & SACU's</h2>
+
+                    <article id="sera_regen_aura" class="PatchCard">
+                    <!-- Card Header Section -->
+                    <header class="PatchCardHeader">
+                        <div class="UnitInfo">
+                            <img src="/assets/images/Enhancements/sera/regenfield.png" class="UnitIcon" alt="Regen Aura"/>
+                            <div class="UnitDetails">
+                                <div class="UnitNameRow">
+                                    <h3 class="UnitName">Regen Aura</h3>
+                                    <div class="ChangeTypeBadge buff">Buff</div>
+                                </div>
+                                <div class="FactionRow">
+                                    <span class="FactionBadge sera">Seraphim</span>
+                                    <span class="UnitCode">Enhancement</span>
+                                </div>
+                            </div>
+                        </div>
+                    </header>
+
+                    <!-- Card Content Section -->
+                    <div class="PatchCardContent">
+                        <p class="ChangeDescription">Restoration Field has a larger range and grants additional max hp. Thaam in the field's range will be bumped to 308 hp, requiring an extra shot from enemy ACUs to be killed. An fx will help spot the units benefiting from this upgrade.</p>
+
+                        <div class="ChangesList">
+                            <!-- Weapon Changes -->
+                            <div class="ChangeGroup">
+                                <h4 class="ChangeGroupTitle">
+                                    Economy
+                                </h4>
+                                <ul class="Changes">
+                                    <li class="buff">
+                                        <span class="ChangeLabel">Mass Cost:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">600</s> 
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                            <strong class="NewValue">700</strong>
+                                        </span>
+                                    </li>
+                                    <li class="buff">
+                                        <span class="ChangeLabel">Energy Cost:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">4500</s>
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i>
+                                            <strong class="NewValue">18000</strong>
+                                        </span>
+                                    </li>
+                                    <li class="buff">
+                                        <span class="ChangeLabel">Build Time:</span>
+                                        <span class="ChangeValue">
+                                            <s class="OldValue">600</s>
+                                            <i class="fa-solid fa-arrow-right ChangeArrow"></i>
+                                            <strong class="NewValue">700</strong>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+
 
                     <div id="sera" class="Card">
 
