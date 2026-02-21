@@ -1,210 +1,1244 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="description" content="FAF Patch 3696 page" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-	<title>Patch 3696</title>
-    <link rel="stylesheet" href="/style/balance.css"/>
-    <script src="/scripts/themeSwitch.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="description" content="FAForever Patch 3696 balance update featuring major T3 land rebalancing with direct fire unit nerfs, ACU combat upgrade adjustments, overcharge rework, experimental unit build time increases, teleport delays, shield boat nerfs, and T2 land stage improvements." />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>FAForever Patch 3696 - Balance Update</title>
+
+    <!-- Critical CSS for immediate loading -->
+    <link rel="stylesheet" href="/style/critical.css?v=1724259600&cache=bypass" />
+
+    <!-- Load head configuration and shared resources -->
+    <script src="/scripts/headConfig.js?v=1724259600&cache=bypass"></script>
 </head>
 <body>
-	<main class="Grid">
-		<div class="Content">
+    <main class="Grid">
+        <div class="Content">
+            <section id="Intro" class="IntroSection">
+                <header class="PatchHeader">
+                    <div class="PatchTitleGroup">
+                        <h1 class="PatchTitle">Patch 3696</h1>
+                        <span class="PatchVersion">Balance Update</span>
+                    </div>
+                    <div class="PatchMeta">
+                        <time datetime="2018-05-26" class="PatchDate">May 26th, 2018</time>
+                        <span class="PatchStatus">Released</span>
+                    </div>
+                </header>
+                <p class="patchDescription">There are four main portions to this balance patch. First is the nerf to direct fire T3 Land units. Second is the rebalance of ACU combat upgrades. Third is the increase in Experimental Unit build times and fourth is an overcharge rework. A T3 land rebalance has been promised for a very long time so we are very happy to finally be at the beta stage for this important development in Forged Alliance. The aim is to allow a larger window on a large number of maps for the T2 land stage. It is potentially one of the most interesting stages of the game, with many different unit compositions and matchups coming into play, but for a long time it has been a very short stage of gameplay because of the effectiveness of T3 land and the effectiveness of commanders.</p>
+                <p class="patchDescription">The balance team found it necessary to introduce combat ACU upgrade changes, an overcharge rework and Experimental build time increases with the T3 land rebalance. Combat ACU upgrades have been shown to be very strong recently, becoming a staple of teamgames. Some of these upgrades are too dominant and with the T3 land changes, some nerfs are required to prevent the ACU from being too powerful.</p>
+                <p class="patchDescription">With the delays this patch has faced, other smaller issues have been admitted into this patch as they were deemed important. The most notable of these are the addition of a delay to teleport, a nerf of shield boats and several other changes listed below.</p>
 
-			<div id="Intro">
-				<header class="FlexboxContainer">
-					<h1 class="FlexGrow-4">Patch 3696</h1>
-					<h4 class="FlexGrow-1" id="date">Date:<i> May 26th 2018</i></h4>
-				  </header>
-				<p class="patchDescription">There are four main portions to this balance patch. First is the nerf to direct fire T3 Land units.
-				Second is the rebalance of ACU combat upgrades. Third is the increase in Experimental Unit build times and fourth is an
-				overcharge rework. A T3 land rebalance has been promised for a very long time so we are very happy to finally be at the beta stage
-				for this important development in Forged Alliance. The aim is to allow a larger window on a large number of maps
-				for the T2 land stage. It is potentially one of the most interesting stages of the game, with many different unit
-				compositions and matchups coming into play, but for a long time it has been a very short stage of gameplay
-				because of the effectiveness of T3 land and the effectiveness of commanders. <br>
-				The balance team found it necessary to introduce combat ACU upgrade changes, an overcharge rework and Experimental build time increases
-				with the T3 land rebalance. Combat ACU upgrades have been shown to be very strong recently, becoming a staple of teamgames. Some of these
-				upgrades are too dominant and with the T3 land changes, some nerfs are required to prevent the ACU from being too powerful. <br>
-				With the delays this patch has faced, other smaller issues have been admitted into this patch as they were deemed important. The most
-				notable of these are the addition of a delay to teleport, a nerf of shield boats and several other changes listed below. </p>
-				
-				<h3>- The Balance Team</h3>
-				<hr>
-			</div>
+                <footer class="PatchCredits">
+                    <div class="TeamSignature">
+                        <span class="TeamIcon">⚖️</span>
+                        <span class="TeamName">The Balance Team</span>
+                    </div>
+                </footer>
+                
+                <hr class="SectionDivider">
+            </section>
 
-			<h2>Land</h2>
+            <section id="Land">
+                <h2>Land Units</h2>
 
-			<div id="land">
+                    <article id="t1_sera_land_scout" class="PatchCard">
+                        <header class="PatchCardHeader">
+                            <div class="UnitInfo">
+                                <img src="/assets/images/units/sera/land/T1Scout.png" alt="Selen" class="UnitIcon" loading="lazy">
+                                <div class="UnitDetails">
+                                    <div class="UnitNameRow">
+                                        <h3 class="UnitName">Selen</h3>
+                                        <div class="ChangeTypeBadge buff">Buff</div>
+                                    </div>
+                                    <div class="FactionRow">
+                                        <span class="FactionBadge sera">Seraphim</span>
+                                        <span class="UnitCode">XSL0101</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </header>
+                        <div class="PatchCardContent">
+                            <p class="UnitDescription">Removed the Power drain from the stealth/cloak ability while not moving.</p>
+                        </div>
+                    </article>
+					                    
+					<article id="t1_aeon_tank" class="PatchCard">
+                        <header class="PatchCardHeader">
+                            <div class="UnitInfo">
+                                <img src="/assets/images/units/aeon/land/T1Tank.png" alt="Aurora" class="UnitIcon" loading="lazy">
+                                <div class="UnitDetails">
+                                    <div class="UnitNameRow">
+                                        <h3 class="UnitName">Aurora</h3>
+                                        <div class="ChangeTypeBadge buff">Buff</div>
+                                    </div>
+                                    <div class="FactionRow">
+                                        <span class="FactionBadge aeon">Aeon</span>
+                                        <span class="UnitCode">XSL0101</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </header>
+                        <div class="PatchCardContent">
+                            <p class="UnitDescription">Removed the Power drain from the stealth/cloak ability while not moving.</p>
+							<div class="ChangesList">
+                                <div class="ChangeGroup">
+                                    <h4 class="ChangeGroupTitle">Weapon</h4>
+                                    <ul class="Changes">
+                                        <li class="buff">
+                                            <span class="ChangeLabel">Firing Randomness While Moving:</span>
+                                            <span class="ChangeValue">
+                                                <s class="OldValue">0.3</s> 
+                                                <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                                <strong class="NewValue">0.1</strong>
+                                            </span>
+                                        </li>
+										<li class="buff">
+                                            <span class="ChangeLabel">Muzzle Velocity:</span>
+                                            <span class="ChangeValue">
+                                                <s class="OldValue">30</s> 
+                                                <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                                <strong class="NewValue">25</strong>
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+										
+					<article id="t1_aeon_mobile_aa" class="PatchCard">
+                        <header class="PatchCardHeader">
+                            <div class="UnitInfo">
+                                <img src="/assets/images/units/aeon/land/T1MobileAA.png" alt="Thistle" class="UnitIcon" loading="lazy">
+                                <div class="UnitDetails">
+                                    <div class="UnitNameRow">
+                                        <h3 class="UnitName">Thistle</h3>
+                                        <div class="ChangeTypeBadge buff">Buff</div>
+                                    </div>
+                                    <div class="FactionRow">
+                                        <span class="FactionBadge aeon">Aeon</span>
+                                        <span class="UnitCode">UAL0104</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </header>
+                        <div class="PatchCardContent">
+                            <p class="UnitDescription">T1 MAA gets a small damage reduction and mass cost reduction so it doesn't cost more than tanks anymore.</p>
+							<div class="ChangesList">
+								<div class="ChangeGroup">
+                                  	<h4 class="ChangeGroupTitle">Economy</h4>
+                                
+									<ul class="Changes">
+                                        <li class="buff">
+                                            <span class="ChangeLabel">Mass Cost:</span>
+                                            <span class="ChangeValue">
+                                                <s class="OldValue">55</s> 
+                                                <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                                <strong class="NewValue">50</strong>
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="ChangeGroup">
+                                    <h4 class="ChangeGroupTitle">Weapon</h4>
+                                    <ul class="Changes">
+                                        <li class="buff">
+                                            <span class="ChangeLabel">Damage:</span>
+                                            <span class="ChangeValue">
+                                                <s class="OldValue">10</s> 
+                                                <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                                <strong class="NewValue">8</strong>
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
 
-				<div id="scout" class="Card">
-					<h3><img src="/assets/images/units/sera/land/T1Scout.png"> Selen</h3>
-					<p>Removed the Power drain from the stealth/cloak ability while not moving.</p>
-				</div>
+					<article id="t1_uef_mobile_aa" class="PatchCard">
+                        <header class="PatchCardHeader">
+                            <div class="UnitInfo">
+                                <img src="/assets/images/units/uef/land/T1MobileAA.png" alt="Archer" class="UnitIcon" loading="lazy">
+                                <div class="UnitDetails">
+                                    <div class="UnitNameRow">
+                                        <h3 class="UnitName">Archer</h3>
+                                        <div class="ChangeTypeBadge buff">Buff</div>
+                                    </div>
+                                    <div class="FactionRow">
+                                        <span class="FactionBadge uef">UEF</span>
+                                        <span class="UnitCode">UEL0104</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </header>
+                        <div class="PatchCardContent">
+                            <p class="UnitDescription">T1 MAA gets a small damage reduction and mass cost reduction so it doesn't cost more than tanks anymore.</p>
+							<div class="ChangesList">
+								<div class="ChangeGroup">
+                                  	<h4 class="ChangeGroupTitle">Economy</h4>
+                                
+									<ul class="Changes">
+                                        <li class="buff">
+                                            <span class="ChangeLabel">Mass Cost:</span>
+                                            <span class="ChangeValue">
+                                                <s class="OldValue">55</s> 
+                                                <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                                <strong class="NewValue">50</strong>
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="ChangeGroup">
+                                    <h4 class="ChangeGroupTitle">Weapon</h4>
+                                    <ul class="Changes">
+                                        <li class="buff">
+                                            <span class="ChangeLabel">Damage:</span>
+                                            <span class="ChangeValue">
+                                                <s class="OldValue">16</s> 
+                                                <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                                <strong class="NewValue">14</strong>
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+										
+					<article id="t1_sera_mobile_aa" class="PatchCard">
+                        <header class="PatchCardHeader">
+                            <div class="UnitInfo">
+                                <img src="/assets/images/units/sera/land/T1MobileAA.png" alt="Ia-istle" class="UnitIcon" loading="lazy">
+                                <div class="UnitDetails">
+                                    <div class="UnitNameRow">
+                                        <h3 class="UnitName">Ia-istle</h3>
+                                        <div class="ChangeTypeBadge buff">Buff</div>
+                                    </div>
+                                    <div class="FactionRow">
+                                        <span class="FactionBadge seraphim">Seraphim</span>
+                                        <span class="UnitCode">XSL0104</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </header>
+                        <div class="PatchCardContent">
+                            <p class="UnitDescription">T1 MAA gets a small damage reduction and mass cost reduction so it doesn't cost more than tanks anymore.</p>
+							<div class="ChangesList">
+								<div class="ChangeGroup">
+                                  	<h4 class="ChangeGroupTitle">Economy</h4>
+                                
+									<ul class="Changes">
+                                        <li class="buff">
+                                            <span class="ChangeLabel">Mass Cost:</span>
+                                            <span class="ChangeValue">
+                                                <s class="OldValue">55</s> 
+                                                <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                                <strong class="NewValue">50</strong>
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="ChangeGroup">
+                                    <h4 class="ChangeGroupTitle">Weapon</h4>
+                                    <ul class="Changes">
+                                        <li class="buff">
+                                            <span class="ChangeLabel">Damage:</span>
+                                            <span class="ChangeValue">
+                                                <s class="OldValue">8</s> 
+                                                <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                                <strong class="NewValue">14</strong>
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
 
-				<div id="tanks" class="Card">
-					<h3><img src="/assets/images/units/aeon/land/T1Tank.png"> Aurora</h3>
-					<ul>
-						<li>FiringRandomnessWhileMoving: <s>0.3</s> <i class="fa-solid fa-arrow-right"></i> 0.1</li>
-						<li>MuzzleVelocity: <s>30</s> <i class="fa-solid fa-arrow-right"></i> 25</li>
-					</ul>
-				</div>
+					<article id="t1_cybran_mobile_aa" class="PatchCard">
+                        <header class="PatchCardHeader">
+                            <div class="UnitInfo">
+                                <img src="/assets/images/units/cybran/land/T1MobileAA.png" alt="Sky Slammer" class="UnitIcon" loading="lazy">
+                                <div class="UnitDetails">
+                                    <div class="UnitNameRow">
+                                        <h3 class="UnitName">Sky Slammer</h3>
+                                        <div class="ChangeTypeBadge buff">Buff</div>
+                                    </div>
+                                    <div class="FactionRow">
+                                        <span class="FactionBadge cybran">Cybran</span>
+                                        <span class="UnitCode">XSL0104</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </header>
+                        <div class="PatchCardContent">
+                            <p class="UnitDescription">T1 MAA gets a small damage reduction and mass cost reduction so it doesn't cost more than tanks anymore.</p>
+							<div class="ChangesList">
+								<div class="ChangeGroup">
+                                  	<h4 class="ChangeGroupTitle">Economy</h4>
+                                
+									<ul class="Changes">
+                                        <li class="buff">
+                                            <span class="ChangeLabel">Mass Cost:</span>
+                                            <span class="ChangeValue">
+                                                <s class="OldValue">55</s> 
+                                                <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                                <strong class="NewValue">50</strong>
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="ChangeGroup">
+                                    <h4 class="ChangeGroupTitle">Weapon</h4>
+                                    <ul class="Changes">
+                                        <li class="buff">
+                                            <span class="ChangeLabel">Damage:</span>
+                                            <span class="ChangeValue">
+                                                <s class="OldValue">10</s> 
+                                                <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                                <strong class="NewValue">9</strong>
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
 
-				<div id="maa" class="Card">
-					<h3><img src="/assets/images/units/uef/land/T1MobileAA.png"> T1 Mobile Anti Air</h3>
-					<p>T1 MAA gets a small damage reduction and mass cost reduction so it doesn't cost more than tanks anymore. Sera MAA is fixed so that is does its intended damage.</p>
-					<ul>
-						Aeon:
-						<li>Mass Cost: <s>55</s> <i class="fa-solid fa-arrow-right"></i> 50</li>
-						<li>Damage: <s>10</s> <i class="fa-solid fa-arrow-right"></i> 8</li>
-						<br>
-						UEF:
-						<li>Mass Cost: <s>55</s> <i class="fa-solid fa-arrow-right"></i> 50</li>
-						<li>Damage: <s>16</s> <i class="fa-solid fa-arrow-right"></i> 14</li>
-						<br>
-						Seraphim:
-						<li>Mass Cost: <s>55</s> <i class="fa-solid fa-arrow-right"></i> 50</li>
-						<li>Damage: <s>8</s> <i class="fa-solid fa-arrow-right"></i> 14</li>
-						Cybran:
-						<li>Mass Cost: <s>55</s> <i class="fa-solid fa-arrow-right"></i> 50</li>
-						<li>Damage: <s>10</s> <i class="fa-solid fa-arrow-right"></i> 9</li>
-					</ul>
-				</div>
+					<article id="t2_cybran_mobile_bomb" class="PatchCard">
+                        <header class="PatchCardHeader">
+                            <div class="UnitInfo">
+                                <img src="/assets/images/units/cybran/land/T2MobileBomb.png" alt="Fire Beetle" class="UnitIcon" loading="lazy">
+                                <div class="UnitDetails">
+                                    <div class="UnitNameRow">
+                                        <h3 class="UnitName">Fire Beetle</h3>
+                                        <div class="ChangeTypeBadge buff">Buff</div>
+                                    </div>
+                                    <div class="FactionRow">
+                                        <span class="FactionBadge cybran">Cybran</span>
+                                        <span class="UnitCode">XRL0302</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </header>
+                        <div class="PatchCardContent">
+                            <p class="UnitDescription">Fire beetles are getting a much needed rebalance to encourage their use within armies.</p>
+							<div class="ChangesList">
+								<div class="ChangeGroup">
+                                  	<h4 class="ChangeGroupTitle">Defence</h4>
+									<ul class="Changes">
+                                        <li class="buff">
+                                            <span class="ChangeLabel">Health:</span>
+                                            <span class="ChangeValue">
+                                                <s class="OldValue">300</s> 
+                                                <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                                <strong class="NewValue">500</strong>
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="ChangeGroup">
+                                    <h4 class="ChangeGroupTitle">Physics</h4>
+                                    <ul class="Changes">
+                                        <li class="buff">
+                                            <span class="ChangeLabel">Transport Class:</span>
+                                            <span class="ChangeValue">
+                                                <s class="OldValue">2</s> 
+                                                <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                                <strong class="NewValue">1</strong>
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </div>
+								<div class="ChangeGroup">
+                                    <h4 class="ChangeGroupTitle">Weapons</h4>
+                                    <ul class="Changes">
+                                        <li class="buff">
+                                            <span class="ChangeLabel">Damage:</span>
+                                            <span class="ChangeValue">
+                                                <s class="OldValue">3500</s> 
+                                                <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                                <strong class="NewValue">1500</strong>
+                                            </span>
+                                        </li>
+										<li class="buff">
+											<span class="ChangeLabel">Area of Effect:</span>
+											<span class="ChangeValue">
+												<s class="OldValue">4.5</s> 
+												<i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+												<strong class="NewValue">6</strong>
+                                            </span>
+                                        </li>
+										<li class="buff">
+											<span class="ChangeLabel">Stun Ability:</span>
+											<span class="ChangeValue">
+												<s class="OldValue">None</s> 
+												<i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+												<strong class="NewValue">Added. Duration: 2s. Stuns all units except Experimentals</strong>
+                                            </span>
+										</li>
+										<li class="buff">
+											<span class="ChangeLabel">Friendly Fire:</span>
+											<span class="ChangeValue">
+												<s class="OldValue">Enabled</s>
+												<i class="fa-solid fa-arrow-right ChangeArrow"></i>
+												<strong class="NewValue">Disabled</strong>
+											</span>
+										</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
 
-				<div id="bettle" class="Card">
-					<h3><img src="/assets/images/units/cybran/land/T2MobileBomb.png"> Fire Beetle:</h3>
-					<p>Fire beetles are getting a much needed rebalance to encourage their use within armies. </p>
-					<ul>
-						<li>Damage: <s>3500</s> <i class="fa-solid fa-arrow-right"></i> 1500</li>
-						<li>AoE: <s>4.5</s> <i class="fa-solid fa-arrow-right"></i> 6</li>
-						<li>Transport class: <s>2</s> <i class="fa-solid fa-arrow-right"></i> 1</li>
-						<li>Stun ability added. Duration <i class="fa-solid fa-arrow-right"></i> 2s. Stuns all units except Experimentals</li>
-						<li>Friendly Fire <i class="fa-solid fa-arrow-right"></i> Disabled</li>
-						<li>Health: <s>300</s> <i class="fa-solid fa-arrow-right"></i> 500</li>
-					</ul>
-				</div>
+					<article id="t3_aeon_tank" class="PatchCard">
+                        <header class="PatchCardHeader">
+                            <div class="UnitInfo">
+                                <img src="/assets/images/units/aeon/land/T3Tank.png" alt="Harbinger" class="UnitIcon" loading="lazy">
+                                <div class="UnitDetails">
+                                    <div class="UnitNameRow">
+                                        <h3 class="UnitName">Harbinger</h3>
+                                        <div class="ChangeTypeBadge buff">Buff</div>
+                                    </div>
+                                    <div class="FactionRow">
+                                        <span class="FactionBadge aeon">Aeon</span>
+                                        <span class="UnitCode">XSL0104</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </header>
+                        <div class="PatchCardContent">
+                            <p class="UnitDescription">The Harbinger rebalance puts more focus on the shield. The shield accounts for more of the total hp will regen and recharge much more quickly than before. This emphasizes the micro capabilities of the Harb, allowing for more hit and run combat tactics..</p>
+							<div class="ChangesList">
+								<div class="ChangeGroup">
+                                  	<h4 class="ChangeGroupTitle">Defence</h4>
+                                
+									<ul class="Changes">
+                                        <li class="buff">
+                                            <span class="ChangeLabel">Health:</span>
+                                            <span class="ChangeValue">
+                                                <s class="OldValue">4600</s> 
+                                                <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                                <strong class="NewValue">3050</strong>
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </div>
+								<div class="ChangeGroup">
+                                  	<h4 class="ChangeGroupTitle">Economy</h4>
+                                
+									<ul class="Changes">
+                                        <li class="buff">
+                                            <span class="ChangeLabel">Build Time:</span>
+                                            <span class="ChangeValue">
+                                                <s class="OldValue">4500</s> 
+                                                <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                                <strong class="NewValue">3600</strong>
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </div>
+								<div class="ChangeGroup">
+                                  	<h4 class="ChangeGroupTitle">Physics</h4>
+                                
+									<ul class="Changes">
+                                        <li class="buff">
+                                            <span class="ChangeLabel">Speed:</span>
+                                            <span class="ChangeValue">
+                                                <s class="OldValue">3</s> 
+                                                <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                                <strong class="NewValue">2.85</strong>
+                                            </span>
+                                        </li>
+										<li class="buff">
+											<span class="ChangeLabel">Acceleration:</span>
+											<span class="ChangeValue">
+												<s class="OldValue">3</s>
+												<i class="fa-solid fa-arrow-right ChangeArrow"></i>
+												<strong class="NewValue">3.2</strong>
+											</span>
+										</li>
+										<li class="buff">
+											<span class="ChangeLabel">Turn Rate:</span>
+											<span class="ChangeValue">
+												<s class="OldValue">120</s>
+												<i class="fa-solid fa-arrow-right ChangeArrow"></i>
+												<strong class="NewValue">130</strong>
+											</span>
+										</li>
+                                    </ul>
+                                </div>
+                                <div class="ChangeGroup">
+                                    <h4 class="ChangeGroupTitle">Shield</h4>
+                                    <ul class="Changes">
+                                        <li class="buff">
+                                            <span class="ChangeLabel">Health:</span>
+                                            <span class="ChangeValue">
+                                                <s class="OldValue">1300</s> 
+                                                <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                                <strong class="NewValue">1000</strong>
+                                            </span>
+                                        </li>
+										<li class="buff">
+											<span class="ChangeLabel">Regen Rate:</span>
+											<span class="ChangeValue">
+												<s class="OldValue">9</s>
+												<i class="fa-solid fa-arrow-right ChangeArrow"></i>
+												<strong class="NewValue">30</strong>
+											</span>
+										</li>
+										<li class="buff">
+											<span class="ChangeLabel">Recharge Time:</span>
+											<span class="ChangeValue">
+												<s class="OldValue">63</s>
+												<i class="fa-solid fa-arrow-right ChangeArrow"></i>
+												<strong class="NewValue">40</strong>
+											</span>
+										</li>
+										<li class="buff">
+											<span class="ChangeLabel">Regen Start Time:</span>
+											<span class="ChangeValue">
+												<s class="OldValue">3</s>
+												<i class="fa-solid fa-arrow-right ChangeArrow"></i>
+												<strong class="NewValue">2</strong>
+											</span>
+										</li>
+										<li class="buff">
+											<span class="ChangeLabel">Power Drain:</span>
+											<span class="ChangeValue">
+												<s class="OldValue">25</s>
+												<i class="fa-solid fa-arrow-right ChangeArrow"></i>
+												<strong class="NewValue">30</strong>
+											</span>
+										</li>
+                                    </ul>
+                                </div>
+								<div class="ChangeGroup">
+                                  	<h4 class="ChangeGroupTitle">Weapon</h4>
+                                
+									<ul class="Changes">
+                                        <li class="buff">
+                                            <span class="ChangeLabel">Damage:</span>
+                                            <span class="ChangeValue">
+                                                <s class="OldValue">300</s> 
+                                                <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                                <strong class="NewValue">320</strong>
+                                            </span>
+                                        </li>
+										<li class="buff">
+											<span class="ChangeLabel">Rate of Fire:</span>
+											<span class="ChangeValue">
+												<s class="OldValue">1.25</s>
+												<i class="fa-solid fa-arrow-right ChangeArrow"></i>
+												<strong class="NewValue">1</strong>
+											</span>
+										</li>
+										<li class="buff">
+											<span class="ChangeLabel">Range:</span>
+											<span class="ChangeValue">
+												<s class="OldValue">28</s>
+												<i class="fa-solid fa-arrow-right ChangeArrow"></i>
+												<strong class="NewValue">26</strong>
+											</span>
+										</li>
+										<li class="buff">
+											<span class="ChangeLabel">DPS:</span>
+											<span class="ChangeValue">
+												<s class="OldValue">375</s>
+												<i class="fa-solid fa-arrow-right ChangeArrow"></i>
+												<strong class="NewValue">320</strong>
+											</span>
+										</li>
+										<li class="buff">
+											<span class="ChangeLabel">Muzzle Velocity:</span>
+											<span class="ChangeValue">
+												<s class="OldValue">30</s>
+												<i class="fa-solid fa-arrow-right ChangeArrow"></i>
+												<strong class="NewValue">40</strong>
+											</span>
+										</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
 
-				<div id="t3tanks" class="Card">
+ 					<article id="t3_sera_tank" class="PatchCard">
+                        <header class="PatchCardHeader">
+                            <div class="UnitInfo">
+                                <img src="/assets/images/units/sera/land/T3Tank.png" alt="Othuum" class="UnitIcon" loading="lazy">
+                                <div class="UnitDetails">
+                                    <div class="UnitNameRow">
+                                        <h3 class="UnitName">Othuum</h3>
+                                        <div class="ChangeTypeBadge buff">Buff</div>
+                                    </div>
+                                    <div class="FactionRow">
+                                        <span class="FactionBadge seraphim">Seraphim</span>
+                                        <span class="UnitCode">XSL0104</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </header>
+                        <div class="PatchCardContent">
+                            <p class="UnitDescription">More emphasis is put on the longer range high alpha damage weapon of the Othuum and its target priorities have been fixed to be in line with other T3 tanks.</p>
+							<div class="ChangesList">
+								<div class="ChangeGroup">
+                                  	<h4 class="ChangeGroupTitle">Defence</h4>
+                                
+									<ul class="Changes">
+                                        <li class="buff">
+                                            <span class="ChangeLabel">Health:</span>
+                                            <span class="ChangeValue">
+                                                <s class="OldValue">6700</s> 
+                                                <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                                <strong class="NewValue">5000</strong>
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </div>
+								<div class="ChangeGroup">
+                                  	<h4 class="ChangeGroupTitle">Physics</h4>
+                                
+									<ul class="Changes">
+                                        <li class="buff">
+                                            <span class="ChangeLabel">Acceleration:</span>
+                                            <span class="ChangeValue">
+                                                <s class="OldValue">2.6</s> 
+                                                <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                                <strong class="NewValue">3.5</strong>
+                                            </span>
+                                        </li>
+										<li class="buff">
+											<span class="ChangeLabel">SizeY:</span>
+											<span class="ChangeValue">
+												<s class="OldValue">0.45</s>
+												<i class="fa-solid fa-arrow-right ChangeArrow"></i>
+												<strong class="NewValue">0.65</strong>
+											</span>
+										</li>
+										<li class="buff">
+											<span class="ChangeLabel">SizeZ:</span>
+											<span class="ChangeValue">
+												<s class="OldValue">2.0</s>
+												<i class="fa-solid fa-arrow-right ChangeArrow"></i>
+												<strong class="NewValue">2.3</strong>
+											</span>
+										</li>
+                                    </ul>
+                                </div>
+								<div class="ChangeGroup">
+                                  	<h4 class="ChangeGroupTitle">Weapon</h4>
+                                	
+									<li class="sub-header"><strong>Aire-au Bolter (x2):</strong></li>
+									
+									<ul class="Changes">
+                                        <li class="buff">
+                                            <span class="ChangeLabel">Damage:</span>
+                                            <span class="ChangeValue">
+                                                <s class="OldValue">75</s> 
+                                                <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                                <strong class="NewValue">39</strong>
+                                            </span>
+                                        </li>
+										<li class="buff">
+											<span class="ChangeLabel">Muzzle Velocity:</span>
+											<span class="ChangeValue">
+												<s class="OldValue">35</s>
+												<i class="fa-solid fa-arrow-right ChangeArrow"></i>
+												<strong class="NewValue">40</strong>
+											</span>
+										</li>
+										<li class="buff">
+											<span class="ChangeLabel">Turret Yaw Speed:</span>
+											<span class="ChangeValue">
+												<s class="OldValue">90</s>
+												<i class="fa-solid fa-arrow-right ChangeArrow"></i>
+												<strong class="NewValue">120</strong>
+											</span>
+										</li>
+										<li class="buff">
+											<span class="ChangeLabel">Combined DPS:</span>
+											<span class="ChangeValue">
+												<s class="OldValue">300</s>
+												<i class="fa-solid fa-arrow-right ChangeArrow"></i>
+												<strong class="NewValue">156</strong>
+											</span>
+										</li>
+                                    </ul>
 
-					<h3><img src="/assets/images/units/aeon/land/T3Tank.png"> Harbinger:</h3>
-					<p>The Harbinger rebalance puts more focus on the shield. The shield accounts for more of the total hp will regen and recharge much more quickly than before. This emphasizes the micro capabilities of the Harb, allowing for more hit and run combat tactics.</p>
-					<ul>
-						<li>BuildTime: <s>4500</s> <i class="fa-solid fa-arrow-right"></i> 3600</li>
-						<li>Health: <s>4600</s> <i class="fa-solid fa-arrow-right"></i> 3050</li>
-						<li>Speed: <s>3</s> <i class="fa-solid fa-arrow-right"></i> 2.85</li>
-						<li>Acceleration: <s>3</s> <i class="fa-solid fa-arrow-right"></i> 3.2</li>
-						<li>Turn Rate: <s>120</s> <i class="fa-solid fa-arrow-right"></i> 130</li>
-						<li>Shield</li>
-						<ul>
-							<li>Shield Health: <s>1300</s> <i class="fa-solid fa-arrow-right"></i> 1000</li>
-							<li>Shield Regen Rate: <s>9</s> <i class="fa-solid fa-arrow-right"></i> 30</li>
-							<li>Shield Recharge Time: <s>63</s> <i class="fa-solid fa-arrow-right"></i> 40</li>
-							<li>ShieldRegenStartTime: <s>3</s> <i class="fa-solid fa-arrow-right"></i> 2</li>
-							<li>Power Drain: <s>25</s> <i class="fa-solid fa-arrow-right"></i> 30</li>								
-						</ul>
-						<li>Weapon</li>
-						<ul>
-							<li>Damage: <s>300</s> <i class="fa-solid fa-arrow-right"></i> 320</li>
-							<li>Rate of Fire: <s>1.25</s> <i class="fa-solid fa-arrow-right"></i> 1</li>
-							<li>Range: <s>28</s> <i class="fa-solid fa-arrow-right"></i> 26</li>
-							<li>DPS: <s>375</s> <i class="fa-solid fa-arrow-right"></i> 320</li>
-							<li>Muzzle Velocity: <s>30</s> <i class="fa-solid fa-arrow-right"></i> 40</li>								
-						</ul>
-					</ul>
+									<li class="sub-header"><strong>Thau Cannon:</strong></li>
+									
+									<ul class="Changes">
+                                        <li class="buff">
+                                            <span class="ChangeLabel">Damage:</span>
+                                            <span class="ChangeValue">
+                                                <s class="OldValue">400</s> 
+                                                <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                                <strong class="NewValue">525</strong>
+                                            </span>
+                                        </li>
+										<li class="buff">
+											<span class="ChangeLabel">Range:</span>
+											<span class="ChangeValue">
+												<s class="OldValue">32</s>
+												<i class="fa-solid fa-arrow-right ChangeArrow"></i>
+												<strong class="NewValue">28</strong>
+											</span>
+										</li>
+										<li class="buff">
+											<span class="ChangeLabel">Muzzle Velocity:</span>
+											<span class="ChangeValue">
+												<s class="OldValue">30</s>
+												<i class="fa-solid fa-arrow-right ChangeArrow"></i>
+												<strong class="NewValue">40</strong>
+											</span>
+										</li>
+										<li class="buff">
+											<span class="ChangeLabel">DPS:</span>
+											<span class="ChangeValue">
+												<s class="OldValue">100</s>
+												<i class="fa-solid fa-arrow-right ChangeArrow"></i>
+												<strong class="NewValue">131</strong>
+											</span>
+										</li>
+                                    </ul>
 
-					<h3><img src="/assets/images/units/sera/land/T3Tank.png"> Othuum:</h3>
-					<p>More emphasis is put on the longer range high alpha damage weapon of the Othuum and its target priorities have been fixed to be in line with other T3 tanks.</p>
-					<ul>
-						<li>Health: <s>6700</s> <i class="fa-solid fa-arrow-right"></i> 5000</li>
-						<li>Acceleration: <s>2.6</s> <i class="fa-solid fa-arrow-right"></i> 3.5</li>
-						<li>SizeY: <s>0.45</s> <i class="fa-solid fa-arrow-right"></i> 0.65</li>
-						<li>SizeZ: <s>2.0</s> <i class="fa-solid fa-arrow-right"></i> 2.3</li>
-						<li>First 2 Guns</li>
-						<ul>
-							<li>Damage: <s>75</s> <i class="fa-solid fa-arrow-right"></i> 39</li>
-							<li>Muzzle Velocity: <s>35</s> <i class="fa-solid fa-arrow-right"></i> 40</li>
-							<li>Turret Yaw Speed: <s>90</s> <i class="fa-solid fa-arrow-right"></i> 120</li>
-							<li>Combined DPS: <s>300</s> <i class="fa-solid fa-arrow-right"></i> 156</li>							
-						</ul>
-						<li>3rd Gun:</li>
-						<ul>
-							<li>Damage: <s>400</s> <i class="fa-solid fa-arrow-right"></i> 525</li>
-							<li>Range: <s>32</s> <i class="fa-solid fa-arrow-right"></i> 28</li>
-							<li>Muzzle Velocity: <s>30</s> <i class="fa-solid fa-arrow-right"></i> 40</li>
-							<li>DPS: <s>100</s> <i class="fa-solid fa-arrow-right"></i> 131</li>							
-						</ul>
-						<li>Torpedo Weapon:</li>
-						<ul>
-							<li>Range: <s>32</s> <i class="fa-solid fa-arrow-right"></i> 28</li>	
-						</ul>
-						<li>Target Priorities:</li>
-						<ul>
-							<li>Othuum now priorities T3 over T2 over T1 instead of the reverse.</li>	
-						</ul>
-					</ul>
+									<li class="sub-header"><strong>Uall Cavitation Torpedo Launcher:</strong></li>
+									
+									<ul class="Changes">
+										<li class="buff">
+											<span class="ChangeLabel">Range:</span>
+											<span class="ChangeValue">
+												<s class="OldValue">32</s>
+												<i class="fa-solid fa-arrow-right ChangeArrow"></i>
+												<strong class="NewValue">28</strong>
+											</span>
+										</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
 
-					<h3><img src="/assets/images/units/uef/land/T3Tank.png"> Percival:</h3>
-					<p>The Percival now has the longest range of the T3 tanks and bots so kiting is now very important, even against Bricks. A turret yaw speed increase and slight muzzle velocity increase enables better micro capabilities.</p>
-					<ul>
-						<li>Health: <s>9300</s> <i class="fa-solid fa-arrow-right"></i> 7200</li>
-						<li>BuildTime: <s>6000</s> <i class="fa-solid fa-arrow-right"></i> 4800</li>
-						<li>Speed: <s>2</s> 2.1</li>
-						<li>Acceleration: <s></s> <i class="fa-solid fa-arrow-right"></i> 2.1</li>
-						<li>TurnRate: <s>60</s> <i class="fa-solid fa-arrow-right"></i> 70</li>
-						<li>Weapon</li>
-						<ul>
-							<li>Damage: <s>1600</s> <i class="fa-solid fa-arrow-right"></i> 1670</li>
-							<li>Rate of Fire: <s>0.25</s> <i class="fa-solid fa-arrow-right"></i> 0.2</li>
-							<li>Range: <s>35</s> <i class="fa-solid fa-arrow-right"></i> 34</li>
-							<li>Muzzle Velocity: <s>35</s> <i class="fa-solid fa-arrow-right"></i> 38</li>
-							<li>Turret Yaw Speed: <s>60</s> <i class="fa-solid fa-arrow-right"></i> 90</li>
-							<li>DPS: <s>400</s> <i class="fa-solid fa-arrow-right"></i> 334</li>	
-						</ul>
-					</ul>
-					
-					<h3><img src="/assets/images/units/cybran/land/T3Tank.png"> Brick:</h3>
-					<p>The brick now has slightly less range than a Percy but gains speed, turn rate and muzzle velocity to allow for better micro. </p>
-					<ul>
-						<li>Health: <s>9000</s> <i class="fa-solid fa-arrow-right"></i> 7500</li>
-						<li>BuildTime: <s>6000</s> <i class="fa-solid fa-arrow-right"></i> 4800</li>
-						<li>Speed: <s>2</s> <i class="fa-solid fa-arrow-right"></i> 2.3</li>
-						<li>Acceleration: <s>2</s> <i class="fa-solid fa-arrow-right"></i> 2.3</li>
-						<li>TurnRate: <s>60</s> <i class="fa-solid fa-arrow-right"></i> 65</li>
-						<li>Main Weapon:</li>
-						<ul>
-							<li>Damage: <s>150</s> <i class="fa-solid fa-arrow-right"></i> 125</li>
-							<li>Range: <s>35</s> <i class="fa-solid fa-arrow-right"></i> 32</li>
-							<li>MuzzleVelocity: <s>35</s> <i class="fa-solid fa-arrow-right"></i> 42</li>
-							<li>Turret Yaw Speed: <s>60</s> <i class="fa-solid fa-arrow-right"></i> 90</li>
-							<li>DPS: <s>375</s> <i class="fa-solid fa-arrow-right"></i> 312.5</li>							
-						</ul>
-					</ul>
+					<article id="t3_uef_tank" class="PatchCard">
+                        <header class="PatchCardHeader">
+                            <div class="UnitInfo">
+                                <img src="/assets/images/units/uef/land/T3Tank.png" alt="Percival" class="UnitIcon" loading="lazy">
+                                <div class="UnitDetails">
+                                    <div class="UnitNameRow">
+                                        <h3 class="UnitName">Percival</h3>
+                                        <div class="ChangeTypeBadge buff">Buff</div>
+                                    </div>
+                                    <div class="FactionRow">
+                                        <span class="FactionBadge uef">UEF</span>
+                                        <span class="UnitCode">XSL0104</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </header>
+                        <div class="PatchCardContent">
+                            <p class="UnitDescription">The Percival now has the longest range of the T3 tanks and bots so kiting is now very important, even against Bricks. A turret yaw speed increase and slight muzzle velocity increase enables better micro capabilities.</p>
 
-					<hr>
+							<div class="ChangesList">
+								<div class="ChangeGroup">
+                                  	<h4 class="ChangeGroupTitle">Defence</h4>
+                                
+									<ul class="Changes">
+                                        <li class="buff">
+                                            <span class="ChangeLabel">Health:</span>
+                                            <span class="ChangeValue">
+                                                <s class="OldValue">9300</s> 
+                                                <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                                <strong class="NewValue">7200</strong>
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </div>
+								<div class="ChangeGroup">
+                                  	<h4 class="ChangeGroupTitle">Economy</h4>
+                                
+									<ul class="Changes">
+                                        <li class="buff">
+                                            <span class="ChangeLabel">Build Time:</span>
+                                            <span class="ChangeValue">
+                                                <s class="OldValue">6000</s> 
+                                                <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                                <strong class="NewValue">4800</strong>
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </div>
+								<div class="ChangeGroup">
+                                  	<h4 class="ChangeGroupTitle">Physics</h4>
+                                
+									<ul class="Changes">
+                                        <li class="buff">
+                                            <span class="ChangeLabel">Speed:</span>
+                                            <span class="ChangeValue">
+                                                <s class="OldValue">2</s> 
+                                                <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                                <strong class="NewValue">2.1</strong>
+                                            </span>
+                                        </li>
+										<li class="buff">
+											<span class="ChangeLabel">Acceleration:</span>
+											<span class="ChangeValue">
+												<s class="OldValue">0</s>
+												<i class="fa-solid fa-arrow-right ChangeArrow"></i>
+												<strong class="NewValue">2.1</strong>
+											</span>
+										</li>
+										<li class="buff">
+											<span class="ChangeLabel">Turn Rate:</span>
+											<span class="ChangeValue">
+												<s class="OldValue">60</s>
+												<i class="fa-solid fa-arrow-right ChangeArrow"></i>
+												<strong class="NewValue">70</strong>
+											</span>
+										</li>
+                                    </ul>
+                                </div>
+								<div class="ChangeGroup">
+                                  	<h4 class="ChangeGroupTitle">Weapon</h4>
+                                	
+									<li class="sub-header"><strong>AIonized Plasma Cannon:</strong></li>
+									
+									<ul class="Changes">
+                                        <li class="buff">
+                                            <span class="ChangeLabel">Damage:</span>
+                                            <span class="ChangeValue">
+                                                <s class="OldValue">1600</s> 
+                                                <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                                <strong class="NewValue">1670</strong>
+                                            </span>
+                                        </li>
+										<li class="buff">
+											<span class="ChangeLabel">Fire Rate:</span>
+											<span class="ChangeValue">
+												<s class="OldValue">0.25</s>
+												<i class="fa-solid fa-arrow-right ChangeArrow"></i>
+												<strong class="NewValue">0.2</strong>
+											</span>
+										</li>
+										<li class="buff">
+											<span class="ChangeLabel">Range:</span>
+											<span class="ChangeValue">
+												<s class="OldValue">35</s>
+												<i class="fa-solid fa-arrow-right ChangeArrow"></i>
+												<strong class="NewValue">34</strong>
+											</span>
+										</li>
+										<li class="buff">
+											<span class="ChangeLabel">Muzzle Velocity:</span>
+											<span class="ChangeValue">
+												<s class="OldValue">35</s>
+												<i class="fa-solid fa-arrow-right ChangeArrow"></i>
+												<strong class="NewValue">38</strong>
+											</span>
+										</li>
+										<li class="buff">
+											<span class="ChangeLabel">Turret Yaw Speed:</span>
+											<span class="ChangeValue">
+												<s class="OldValue">60</s>
+												<i class="fa-solid fa-arrow-right ChangeArrow"></i>
+												<strong class="NewValue">90</strong>
+											</span>
+										</li>
+										<li class="buff">
+											<span class="ChangeLabel">DPS:</span>
+											<span class="ChangeValue">
+												<s class="OldValue">400</s>
+												<i class="fa-solid fa-arrow-right ChangeArrow"></i>
+												<strong class="NewValue">334</strong>
+											</span>
+										</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
 
-					<h3><img src="/assets/images/units/uef/land/T3Tank.png"> Titan:</h3>
-					<p>The titan has a smaller health shield but this regens very quickly, sometimes even during the course of a battle if you can keep them alive. It's target priorities are also fixed as with the Othuum.</p>					
-					<ul>
-						<li>Health: <s>2200</s> <i class="fa-solid fa-arrow-right"></i> 2550</li>
-						<li>Speed: <s>4</s> <i class="fa-solid fa-arrow-right"></i> 3.8</li>
-						<li>Acceleration: <s>4</s> <i class="fa-solid fa-arrow-right"></i> 4.2</li>
-						<li>Shield</li>
-						<ul>
-							<li>Shield: <s>1200</s> <i class="fa-solid fa-arrow-right"></i> 600</li>
-							<li>Recharge Time: <s>60</s> <i class="fa-solid fa-arrow-right"></i> 15</li>
-							<li>Regen Rate: <s>9</s> <i class="fa-solid fa-arrow-right"></i> 20</li>							
-						</ul>
-						<ul>
-							<li>Range: <s>20</s> <i class="fa-solid fa-arrow-right"></i> 22</li>
-							<li>Muzzle Velocity: <s>30</s> <i class="fa-solid fa-arrow-right"></i> 35</li>
-							<li>Turn rate: <s>150</s> <i class="fa-solid fa-arrow-right"></i> 120</li>							
-						</ul>
-						<li>Target Priorities:</li>						
-						<ul>
-							<li>Titan now priorities T3 over T2 over T1 instead of the reverse.</li>
-						</ul>
-					</ul>
+					<article id="t3_cybran_tank" class="PatchCard">
+                        <header class="PatchCardHeader">
+                            <div class="UnitInfo">
+                                <img src="/assets/images/units/cybran/land/T3Tank.png" alt="Brick" class="UnitIcon" loading="lazy">
+                                <div class="UnitDetails">
+                                    <div class="UnitNameRow">
+                                        <h3 class="UnitName">Brick</h3>
+                                        <div class="ChangeTypeBadge buff">Buff</div>
+                                    </div>
+                                    <div class="FactionRow">
+                                        <span class="FactionBadge cybran">Cybran</span>
+                                        <span class="UnitCode">XSL0104</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </header>
+                        <div class="PatchCardContent">
+                            <p class="UnitDescription">The brick now has slightly less range than a Percy but gains speed, turn rate and muzzle velocity to allow for better micro.</p>
+
+							<div class="ChangesList">
+								<div class="ChangeGroup">
+                                  	<h4 class="ChangeGroupTitle">Defence</h4>
+                                
+									<ul class="Changes">
+                                        <li class="buff">
+                                            <span class="ChangeLabel">Health:</span>
+                                            <span class="ChangeValue">
+                                                <s class="OldValue">9000</s> 
+                                                <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                                <strong class="NewValue">7500</strong>
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </div>
+								<div class="ChangeGroup">
+                                  	<h4 class="ChangeGroupTitle">Economy</h4>
+                                
+									<ul class="Changes">
+                                        <li class="buff">
+                                            <span class="ChangeLabel">Build Time:</span>
+                                            <span class="ChangeValue">
+                                                <s class="OldValue">6000</s> 
+                                                <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                                <strong class="NewValue">4800</strong>
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </div>
+								<div class="ChangeGroup">
+                                  	<h4 class="ChangeGroupTitle">Physics</h4>
+                                
+									<ul class="Changes">
+                                        <li class="buff">
+                                            <span class="ChangeLabel">Speed:</span>
+                                            <span class="ChangeValue">
+                                                <s class="OldValue">2</s> 
+                                                <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                                <strong class="NewValue">2.3</strong>
+                                            </span>
+                                        </li>
+										<li class="buff">
+											<span class="ChangeLabel">Acceleration:</span>
+											<span class="ChangeValue">
+												<s class="OldValue">2</s>
+												<i class="fa-solid fa-arrow-right ChangeArrow"></i>
+												<strong class="NewValue">2.3</strong>
+											</span>
+										</li>
+										<li class="buff">
+											<span class="ChangeLabel">Turn Rate:</span>
+											<span class="ChangeValue">
+												<s class="OldValue">60</s>
+												<i class="fa-solid fa-arrow-right ChangeArrow"></i>
+												<strong class="NewValue">65</strong>
+											</span>
+										</li>
+                                    </ul>
+                                </div>
+								<div class="ChangeGroup">
+                                  	<h4 class="ChangeGroupTitle">Weapon</h4>
+                                	
+									<li class="sub-header"><strong>Heavy Disintegrator Pulse Laser:</strong></li>
+									
+									<ul class="Changes">
+                                        <li class="buff">
+                                            <span class="ChangeLabel">Damage:</span>
+                                            <span class="ChangeValue">
+                                                <s class="OldValue">150</s> 
+                                                <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                                <strong class="NewValue">125</strong>
+                                            </span>
+                                        </li>
+										<li class="buff">
+											<span class="ChangeLabel">Range:</span>
+											<span class="ChangeValue">
+												<s class="OldValue">35</s>
+												<i class="fa-solid fa-arrow-right ChangeArrow"></i>
+												<strong class="NewValue">32</strong>
+											</span>
+										</li>
+										<li class="buff">
+											<span class="ChangeLabel">Muzzle Velocity:</span>
+											<span class="ChangeValue">
+												<s class="OldValue">35</s>
+												<i class="fa-solid fa-arrow-right ChangeArrow"></i>
+												<strong class="NewValue">42</strong>
+											</span>
+										</li>
+										<li class="buff">
+											<span class="ChangeLabel">Turret Yaw Speed:</span>
+											<span class="ChangeValue">
+												<s class="OldValue"><60/s>
+												<i class="fa-solid fa-arrow-right ChangeArrow"></i>
+												<strong class="NewValue">90</strong>
+											</span>
+										</li>
+										<li class="buff">
+											<span class="ChangeLabel">DPS:</span>
+											<span class="ChangeValue">
+												<s class="OldValue">375</s>
+												<i class="fa-solid fa-arrow-right ChangeArrow"></i>
+												<strong class="NewValue">312.5</strong>
+											</span>
+										</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+					<article id="t3_uef_bot" class="PatchCard">
+                        <header class="PatchCardHeader">
+                            <div class="UnitInfo">
+                                <img src="/assets/images/units/uef/land/T3Bot.png" alt="Titan" class="UnitIcon" loading="lazy">
+                                <div class="UnitDetails">
+                                    <div class="UnitNameRow">
+                                        <h3 class="UnitName">Titan</h3>
+                                        <div class="ChangeTypeBadge buff">Buff</div>
+                                    </div>
+                                    <div class="FactionRow">
+                                        <span class="FactionBadge uef">UEF</span>
+                                        <span class="UnitCode">XSL0104</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </header>
+                        <div class="PatchCardContent">
+                            <p class="UnitDescription">The titan has a smaller health shield but this regens very quickly, sometimes even during the course of a battle if you can keep them alive. It's target priorities are also fixed as with the Othuum.</p>
+
+							<div class="ChangesList">
+								<div class="ChangeGroup">
+                                  	<h4 class="ChangeGroupTitle">Defence</h4>
+                                
+									<ul class="Changes">
+                                        <li class="buff">
+                                            <span class="ChangeLabel">Health:</span>
+                                            <span class="ChangeValue">
+                                                <s class="OldValue">2200</s> 
+                                                <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                                <strong class="NewValue">2550</strong>
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </div>
+								<div class="ChangeGroup">
+                                  	<h4 class="ChangeGroupTitle">Physics</h4>
+                                
+									<ul class="Changes">
+                                        <li class="buff">
+                                            <span class="ChangeLabel">Speed:</span>
+                                            <span class="ChangeValue">
+                                                <s class="OldValue">4</s> 
+                                                <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                                <strong class="NewValue">3.8</strong>
+                                            </span>
+                                        </li>
+										<li class="buff">
+											<span class="ChangeLabel">Acceleration:</span>
+											<span class="ChangeValue">
+												<s class="OldValue">4</s>
+												<i class="fa-solid fa-arrow-right ChangeArrow"></i>
+												<strong class="NewValue">4.2</strong>
+											</span>
+										</li>
+                                    </ul>
+                                </div>
+								<div class="ChangeGroup">
+                                  	<h4 class="ChangeGroupTitle">Shield</h4>
+                                	
+									<ul class="Changes">
+                                        <li class="buff">
+                                            <span class="ChangeLabel">Health:</span>
+                                            <span class="ChangeValue">
+                                                <s class="OldValue">1200</s> 
+                                                <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                                <strong class="NewValue">600</strong>
+                                            </span>
+                                        </li>
+										<li class="buff">
+											<span class="ChangeLabel">Recharge Time:</span>
+											<span class="ChangeValue">
+												<s class="OldValue">60</s>
+												<i class="fa-solid fa-arrow-right ChangeArrow"></i>
+												<strong class="NewValue">15</strong>
+											</span>
+										</li>
+										<li class="buff">
+											<span class="ChangeLabel">Regen Rate:</span>
+											<span class="ChangeValue">
+												<s class="OldValue">9</s>
+												<i class="fa-solid fa-arrow-right ChangeArrow"></i>
+												<strong class="NewValue">20</strong>
+											</span>
+										</li>
+                                    </ul>
+                                </div>
+								<div class="ChangeGroup">
+                                  	<h4 class="ChangeGroupTitle">Weapon</h4>
+                                	
+									<li class="sub-header"><strong>Heavy Plasma Cannon:</strong></li>
+									
+									<ul class="Changes">
+                                        <li class="buff">
+                                            <span class="ChangeLabel">Range:</span>
+                                            <span class="ChangeValue">
+                                                <s class="OldValue">20</s> 
+                                                <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                                <strong class="NewValue">22</strong>
+                                            </span>
+                                        </li>
+										<li class="buff">
+											<span class="ChangeLabel">Muzzle Velocity:</span>
+											<span class="ChangeValue">
+												<s class="OldValue">30</s>
+												<i class="fa-solid fa-arrow-right ChangeArrow"></i>
+												<strong class="NewValue">35</strong>
+											</span>
+										</li>
+										<li class="buff">
+											<span class="ChangeLabel">Turret Yaw Speed:</span>
+											<span class="ChangeValue">
+												<s class="OldValue">150</s>
+												<i class="fa-solid fa-arrow-right ChangeArrow"></i>
+												<strong class="NewValue">120</strong>
+											</span>
+										</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+					<article id="t3_cybran_bot" class="PatchCard">
+                        <header class="PatchCardHeader">
+                            <div class="UnitInfo">
+                                <img src="/assets/images/units/cybran/land/T3AssultBot.png" alt="Loyalist" class="UnitIcon" loading="lazy">
+                                <div class="UnitDetails">
+                                    <div class="UnitNameRow">
+                                        <h3 class="UnitName">Loyalist</h3>
+                                        <div class="ChangeTypeBadge buff">Buff</div>
+                                    </div>
+                                    <div class="FactionRow">
+                                        <span class="FactionBadge cybran">Cybran</span>
+                                        <span class="UnitCode">XSL0104</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </header>
+                        <div class="PatchCardContent">
+                            <p class="UnitDescription">The Loyalist gets a small nerf to many stats, and its stun will no longer affect Experimentals and ACUs.</p>
+
+							<div class="ChangesList">
+								<div class="ChangeGroup">
+                                  	<h4 class="ChangeGroupTitle">Defence</h4>
+                                
+									<ul class="Changes">
+                                        <li class="buff">
+                                            <span class="ChangeLabel">Health:</span>
+                                            <span class="ChangeValue">
+                                                <s class="OldValue">3100</s> 
+                                                <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                                <strong class="NewValue">3000</strong>
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </div>
+								<div class="ChangeGroup">
+                                  	<h4 class="ChangeGroupTitle">Physics</h4>
+                                
+									<ul class="Changes">
+                                        <li class="buff">
+                                            <span class="ChangeLabel">Speed:</span>
+                                            <span class="ChangeValue">
+                                                <s class="OldValue">4</s> 
+                                                <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                                <strong class="NewValue">3.8</strong>
+                                            </span>
+                                        </li>
+										<li class="buff">
+											<span class="ChangeLabel">Acceleration:</span>
+											<span class="ChangeValue">
+												<s class="OldValue">4</s>
+												<i class="fa-solid fa-arrow-right ChangeArrow"></i>
+												<strong class="NewValue">4.2</strong>
+											</span>
+										</li>
+                                    </ul>
+                                </div>
+								<div class="ChangeGroup">
+                                  	<h4 class="ChangeGroupTitle">Weapons</h4>
+                                	
+									<li class="sub-header"><strong>Death EMP:</strong></li>
+
+									<ul class="Changes">
+                                        <li class="buff">
+                                            <span class="ChangeLabel">Duration:</span>
+                                            <span class="ChangeValue">
+                                                <s class="OldValue">2s</s> 
+                                                <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                                <strong class="NewValue">4s</strong>
+                                            </span>
+                                        </li>
+										<li class="buff">
+											<span class="ChangeLabel">Recharge Time:</span>
+											<span class="ChangeValue">
+												<s class="OldValue">60</s>
+												<i class="fa-solid fa-arrow-right ChangeArrow"></i>
+												<strong class="NewValue">15</strong>
+											</span>
+										</li>
+										<li class="buff">
+											<span class="ChangeLabel">Regen Rate:</span>
+											<span class="ChangeValue">
+												<s class="OldValue">9</s>
+												<i class="fa-solid fa-arrow-right ChangeArrow"></i>
+												<strong class="NewValue">20</strong>
+											</span>
+										</li>
+                                    </ul>
+                                </div>
+								<div class="ChangeGroup">
+                                  	<h4 class="ChangeGroupTitle">Weapon</h4>
+                                	
+									<li class="sub-header"><strong>Heavy Plasma Cannon:</strong></li>
+									
+									<ul class="Changes">
+                                        <li class="buff">
+                                            <span class="ChangeLabel">Range:</span>
+                                            <span class="ChangeValue">
+                                                <s class="OldValue">20</s> 
+                                                <i class="fa-solid fa-arrow-right ChangeArrow"></i> 
+                                                <strong class="NewValue">22</strong>
+                                            </span>
+                                        </li>
+										<li class="buff">
+											<span class="ChangeLabel">Muzzle Velocity:</span>
+											<span class="ChangeValue">
+												<s class="OldValue">30</s>
+												<i class="fa-solid fa-arrow-right ChangeArrow"></i>
+												<strong class="NewValue">35</strong>
+											</span>
+										</li>
+										<li class="buff">
+											<span class="ChangeLabel">Turret Yaw Speed:</span>
+											<span class="ChangeValue">
+												<s class="OldValue">150</s>
+												<i class="fa-solid fa-arrow-right ChangeArrow"></i>
+												<strong class="NewValue">120</strong>
+											</span>
+										</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+
 
 					<h3><img src="/assets/images/units/cybran/land/T3AssultBot.png"> Loyalist:</h3>
 					<p>The Loyalist gets a small nerf to many stats, and its stun will no longer affect Experimentals and ACUs.</p>
@@ -392,11 +1426,10 @@
 					</div>
 				</div>
 
-			</div>
+			</section>
 
+            <section id="Air">
 			<h2>Air</h2>
-
-			<div id="air">
 
 				<div id="t1bomber" class="Card"> 
 					<h3><img src="/assets/images/units/aeon/air/T1Bomber.png"> T1 Bombers:</h3>
@@ -422,9 +1455,10 @@
 				</div>
 			</div>
 
-            <h2>Navy</h2>
+            </section>
 
-			<div id="navy">
+            <section id="Navy">
+            <h2>Navy</h2>
 				
 				<div id="battleship" class="Card">
 					<h3><img src="/assets/images/units/aeon/naval/T3Battleship.png"> Battleships: </h3>
@@ -463,11 +1497,10 @@
 						<li>Health: <s>750</s> <i class="fa-solid fa-arrow-right"></i> 800</li>
 					</ul>
 				</div>
-			</div>
+			</section>
 
+            <section id="Structures">
 			<h2>Structures</h2>
-			
-			<div id="structures">
 				
 				<div id="factory" class="Card">
 					<h3><img src="/assets/images/units/cybran/structure/T3LandFacHQ.png"> T3 Land HQs:</h3>
@@ -521,11 +1554,10 @@
 					<h3><img src="/assets/images/units/cybran/structure/T2ShieldL4.png"> Cybran Shield</h3>
 					<p>Added the ED4 Shield to the list of buildable structures and to the hotbuild keygroup for shields.</p>
 				</div>
-			</div>
+			</section>
 
+            <section id="ACUs">
 			<h2>ACUs</h2>
-
-			<div id="ACU">
 				
 				<div id="aeonacu" class="Card">
 					<h3>Aeon ACU</h3>
@@ -621,7 +1653,7 @@
 					</div>
 
 				</div>
-			</div>
+			</section>
 
 		</div>
 		<div class="Sidebar">
@@ -750,8 +1782,8 @@
                         <i class="fas fa-comments" aria-hidden="true"></i>
                     </a>
                 </div>
-                <span class="Copyright">© 2015-2026 <strong>FAForever</strong> • Community-driven balance updates</span>
-                <span class="BuildInfo">Balance Team • Patch Notes v3822</span>
+                <span class="Copyright">© 2015-2018 <strong>FAForever</strong> • Community-driven balance updates</span>
+                <span class="BuildInfo">Balance Team • Patch Notes v3696</span>
             </div>
         </div>
     </footer>
