@@ -1,30 +1,47 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="description" content="FAF Patch 3674 page" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <title>Patch 3674</title>
-        <link rel="stylesheet" href="/style/balance.css">
-        <script src="/scripts/themeSwitch.js"></script>
-    </head>
-    <body>
-        <main class="Grid">
-            <div class="Content">
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="FAForever Patch 3674 balance update featuring comprehensive HP changes across unit types, Ythotha experimental buff with improved turn rate and weapon arcs, and stun effect adjustments removing air unit interactions." />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-                <div id="Intro">
-                    <header class="FlexboxContainer">
-                        <h1 class="FlexGrow-4">Patch 3674</h1>
-                        <h4 class="FlexGrow-1" id="date">Date:<i> February 6th 2017</i></h4>
-                      </header>
-                    <p>This patch contains the HP changes that have been in testing and discussion for a long time, and some Ythotha buffs on top. As always, you can post your feedback and opinion on the forums.</p>
-                    <p>We wish you good luck and much fun playing with the new patch!</p>
+    <title>FAForever Patch 3674 - Balance Update</title>
 
-                    <h3>-- The balance team</h3>
-                    <hr>
-                </div>
+    <!-- Critical CSS for immediate loading -->
+    <link rel="stylesheet" href="/style/critical.css?v=1724259600&cache=bypass" />
 
-                <h2>Land</h2>
+    <!-- Load head configuration and shared resources -->
+    <script src="/scripts/headConfig.js?v=1724259600&cache=bypass"></script>
+</head>
+<body>
+    <main class="Grid">
+        <div class="Content">
+
+            <section id="Intro" class="IntroSection">
+                <header class="PatchHeader">
+                    <div class="PatchTitleGroup">
+                        <h1 class="PatchTitle">Patch 3674</h1>
+                        <span class="PatchVersion">Balance Update</span>
+                    </div>
+                    <div class="PatchMeta">
+                        <time datetime="2017-02-06" class="PatchDate">February 6th, 2017</time>
+                        <span class="PatchStatus">Released</span>
+                    </div>
+                </header>
+                <p class="patchDescription">This patch contains the comprehensive HP changes that have been in testing and discussion for a long time, along with significant Ythotha experimental buffs. The update introduces sweeping health point reductions across factories, structures, and economy buildings to enable more aggressive gameplay options, especially in the late game. Faction HP differences are increased to make them more meaningful and distinct. Cybran structures receive regeneration capabilities to compensate for their lower health pools. Additionally, stun effects no longer affect air units, and the Janus receives napalm timing adjustments.</p>
+
+                <footer class="PatchCredits">
+                    <div class="TeamSignature">
+                        <span class="TeamIcon">⚖️</span>
+                        <span class="TeamName">The Balance Team</span>
+                    </div>
+                </footer>
+                
+                <hr class="SectionDivider">
+            </section>
+
+            <section id="Land">
+                <h2>Land Units</h2>
 
                 <div id="land">
 
@@ -182,29 +199,132 @@
                 </div>
             </div>
             <div class="Sidebar">
-                <div class="IconSidebar">
-
-                    <h2 class="IconSidebarTitle">Contents</h2><br>
-
-                    <div class="IconSidebarSpace"></div>
-
-                    <div class="IconSidebarSubgrid">
-
-                        <h3 class="IconSidebarSubtitle">Land</h3><br>
-                        
-                        <a href="#stun"><img src="/assets/images/units/cybran/land/T3AssultBot.png"></a>
-                        <a href="#ythotha"><img src="/assets/images/units/sera/land/T4Bot.png"></a>
-
-                        <h3 class="IconSidebarSubtitle">Air</h3><br>
-    
-                        <a href="#janus"><img src="/assets/images/units/uef/air/T2FighterBomber.png"></a>
-
-                        <h3 class="IconSidebarSubtitle">Structures</h3><br>
-    
-                        <a href="#fachp"><img src="/assets/images/units/sera/structure/T1LandFac.png"></a>
-                        <a href="#StructureChanges"><img src="/assets/images/units/cybran/structure/T3MassExtractor.png"></a>
+                <aside class="ContentSidemenu" aria-label="Patch Contents Navigation">
+                    <!-- Quick Actions Panel -->
+                    <div class="QuickActions">
+                        <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" 
+                                class="ActionButton" 
+                                aria-label="Back to top">
+                            <i class="fa-solid fa-arrow-up"></i>
+                            <span>Back to Top</span>
+                        </button>
+                        <button onclick="document.querySelectorAll('.NavSection').forEach(s => s.classList.toggle('expanded'))" 
+                                class="ActionButton" 
+                                aria-label="Toggle all sections">
+                            <i class="fa-solid fa-bars"></i>
+                            <span>Toggle All</span>
+                        </button>
+                        <button onclick="window.print()" 
+                                class="ActionButton" 
+                                aria-label="Print page">
+                            <i class="fa-solid fa-print"></i>
+                            <span>Print</span>
+                        </button>
                     </div>
-                </div>
+
+                    <!-- Main Navigation -->
+                    <nav class="ContentNav" aria-label="Patch changes by category">
+                        <!-- Land Section -->
+                        <div class="NavSection expanded">
+                            <button class="SectionToggle" 
+                                    onclick="this.parentElement.classList.toggle('expanded')" 
+                                    aria-expanded="true">
+                                <i class="fa-solid fa-tank"></i>
+                                <span class="SectionTitle">Land Units</span>
+                                <span class="ItemCount">2</span>
+                                <i class="fa-solid fa-chevron-down ToggleIcon"></i>
+                            </button>
+                            <div class="NavItems">
+                                <a href="#stun" class="NavItem NavLink">
+                                    <img src="/assets/images/units/cybran/land/T3AssultBot.png" 
+                                         alt="Stun" 
+                                         class="UnitThumb" 
+                                         loading="lazy" />
+                                    <span class="ItemLabel">Stun</span>
+                                    <span class="ChangeType change">Change</span>
+                                </a>
+                                <a href="#ythotha" class="NavItem NavLink">
+                                    <img src="/assets/images/units/sera/land/T4Bot.png" 
+                                         alt="Ythotha" 
+                                         class="UnitThumb" 
+                                         loading="lazy" />
+                                    <span class="ItemLabel">Ythotha</span>
+                                    <span class="ChangeType buff">Buff</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Air Section -->
+                        <div class="NavSection expanded">
+                            <button class="SectionToggle" 
+                                    onclick="this.parentElement.classList.toggle('expanded')" 
+                                    aria-expanded="true">
+                                <i class="fa-solid fa-jet-fighter"></i>
+                                <span class="SectionTitle">Air Units</span>
+                                <span class="ItemCount">1</span>
+                                <i class="fa-solid fa-chevron-down ToggleIcon"></i>
+                            </button>
+                            <div class="NavItems">
+                                <a href="#janus" class="NavItem NavLink">
+                                    <img src="/assets/images/units/uef/air/T2FighterBomber.png" 
+                                         alt="Janus" 
+                                         class="UnitThumb" 
+                                         loading="lazy" />
+                                    <span class="ItemLabel">Janus</span>
+                                    <span class="ChangeType nerf">Nerf</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Structures Section -->
+                        <div class="NavSection expanded">
+                            <button class="SectionToggle" 
+                                    onclick="this.parentElement.classList.toggle('expanded')" 
+                                    aria-expanded="true">
+                                <i class="fa-solid fa-building"></i>
+                                <span class="SectionTitle">Structures</span>
+                                <span class="ItemCount">2</span>
+                                <i class="fa-solid fa-chevron-down ToggleIcon"></i>
+                            </button>
+                            <div class="NavItems">
+                                <a href="#fachp" class="NavItem NavLink">
+                                    <img src="/assets/images/units/sera/structure/T1LandFac.png" 
+                                         alt="Factory HP Reductions" 
+                                         class="UnitThumb" 
+                                         loading="lazy" />
+                                    <span class="ItemLabel">Factory HP Reductions</span>
+                                    <span class="ChangeType nerf">Nerf</span>
+                                </a>
+                                <a href="#StructureChanges" class="NavItem NavLink">
+                                    <img src="/assets/images/units/cybran/structure/T3MassExtractor.png" 
+                                         alt="Structure HP Changes" 
+                                         class="UnitThumb" 
+                                         loading="lazy" />
+                                    <span class="ItemLabel">Structure HP Changes</span>
+                                    <span class="ChangeType nerf">Nerf</span>
+                                </a>
+                            </div>
+                        </div>
+                    </nav>
+
+                    <!-- Footer Stats -->
+                    <footer class="SidebarFooter">
+                        <div class="PatchStats">
+                            <div class="StatItem">
+                                <i class="fa-solid fa-calendar"></i>
+                                <span>Feb 6, 2017</span>
+                            </div>
+                            <div class="StatItem">
+                                <i class="fa-solid fa-hashtag"></i>
+                                <span>Patch 3674</span>
+                            </div>
+                            <div class="StatItem">
+                                <i class="fa-solid fa-list"></i>
+                                <span>5 Changes</span>
+                            </div>
+                        </div>
+                    </footer>
+                </aside>
             </div>
         </main>
     </body>
