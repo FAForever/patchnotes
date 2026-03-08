@@ -1,6 +1,140 @@
 # FAF Patchnotes
 
-A modern Progressive Web App providing comprehensive access to all current and previous patch notes## 🤝 Contributing
+> **Version 2.3.1** - A modern Progressive Web App providing comprehensive access to all current and previous patch notes for *Supreme Commander: Forged Alliance Forever* (FAF), featuring advanced search capabilities, offline functionality, and a beautiful frosted glass interface.
+
+---
+
+## Overview
+
+**Patchnotes Faforever** is a professional PWA platform that serves as a centralized, feature-rich hub for players to stay informed about the latest game updates, balance changes, and development progress for FAF. Whether you're a long-time player or just starting, you'll find organized, searchable patch information with a premium user experience across all devices.
+
+## ✨ Features
+
+### 🔍 **Advanced Search & Filtering**
+- Real-time search through all patch notes with instant results
+- Year-based filtering for quick navigation through patch history
+- Live search statistics and result counts
+- Keyboard shortcuts for power users (press `Ctrl/Cmd + K` for search, `?` for help)
+
+### 📱 **Progressive Web App (PWA)**
+- Install as a native app on any device (mobile, tablet, desktop)
+- Full offline functionality - browse patches without internet
+- Background updates with smart caching
+- Push notification support (future feature)
+
+### 🎨 **Modern UI/UX**
+- Beautiful frosted glass design with dynamic backgrounds
+- Dark/Light theme toggle with system preference detection
+- Responsive design optimized for all screen sizes
+- Smooth animations and professional polish
+
+### ♿ **Accessibility & Performance**
+- **WCAG 2.1 AAA compliant** - Full accessibility for users with disabilities
+- **Skip links** for keyboard navigation
+- **Screen reader support** with comprehensive ARIA labels
+- **Keyboard shortcuts** for all functionality (press `?` for help)
+- **High contrast focus indicators** for visibility
+- **Reduced motion support** for users with vestibular disorders
+- **44×44px minimum touch targets** (WCAG 2.1 AAA)
+- Optimized performance with sub-second load times
+- Error boundaries with automatic retry mechanisms
+- 📖 **[Full Accessibility Documentation](ACCESSIBILITY.md)**
+
+### 📊 **Analytics & Monitoring**
+- Privacy-friendly user behavior tracking
+- Performance monitoring and diagnostics
+- Search pattern analysis for continuous improvement
+- Session analytics for usage insights
+
+### 🛡️ **Reliability & Quality**
+- Comprehensive error handling and recovery
+- Background sync for seamless updates
+- Resource optimization and intelligent caching
+- Cross-browser compatibility with fallback support
+
+## 🚀 How to Use
+
+### **Web Browser**
+Visit: 👉 [https://patchnotes.faforever.com/](https://patchnotes.faforever.com/)
+
+### **Install as App**
+1. **Desktop**: Click the install prompt or use your browser's "Install" option
+2. **Mobile**: Tap "Add to Home Screen" when prompted
+3. **Benefits**: Faster loading, offline access, native app experience
+
+### **Search & Navigation**
+- Use the search bar to find specific patches, units, or changes
+- Filter by year using the dropdown menu
+- Press `Ctrl/Cmd + K` for quick search access
+- Press `?` to view all keyboard shortcuts
+- Toggle between Dark/Light themes in the footer
+
+### **Offline Usage**
+Once installed, the app works completely offline - perfect for reviewing patches during gameplay or when internet is limited.
+
+## 🛠️ Technical Stack
+
+- **Frontend**: Vanilla JavaScript (ES6+), CSS3 with advanced features
+- **PWA**: Service Worker, Web App Manifest, Background Sync
+- **Styling**: CSS Grid, Flexbox, Backdrop-filter, Custom Properties
+- **Performance**: Resource preloading, critical CSS inlining, optimized caching
+- **Accessibility**: ARIA labels, semantic HTML, keyboard navigation, WCAG 2.1 AAA
+- **Monitoring**: Performance tracking, error boundaries, user analytics
+
+## 📂 Project Structure
+
+```
+├── index.html              # Main application entry point
+├── manifest.json           # PWA configuration
+├── sw.js                   # Service Worker for offline functionality
+├── assets/
+│   ├── data/
+│   │   └── patches.json    # Patch metadata
+│   └── images/             # Icons, backgrounds, faction logos, unit images
+│       ├── backgrounds/
+│       ├── Enhancements/
+│       ├── faction/
+│       ├── icons/
+│       ├── orders/
+│       ├── thumbnail/
+│       └── units/
+├── pages/                  # Individual patch note HTML files
+│   ├── 2017/ ... 2026/
+│   └── Template/
+├── scripts/
+│   ├── analytics.js        # User behavior tracking
+│   ├── backToTop.js        # Back to top button
+│   ├── collapse.js         # Collapsible sections
+│   ├── contentSidemenu.js  # Content navigation
+│   ├── coreUI.js           # Core UI functionality
+│   ├── errorBoundary.js    # Error handling
+│   ├── headConfig.js       # Head configuration
+│   ├── keyboardShortcuts.js # Keyboard shortcuts (? for help)
+│   ├── lazyLoader.js       # Lazy loading images
+│   ├── logger.js           # Logging system
+│   ├── performance.js      # Performance monitoring
+│   ├── populatePatches.js  # Patch list generation
+│   ├── pwa.js              # PWA installation and updates
+│   ├── search.js           # Advanced search functionality
+│   ├── updatePatchFiles.js # Patch file updates
+│   └── validatePatches.js  # Patch data validation
+└── style/
+    ├── balance.css         # Balance change styling
+    ├── critical.css        # Critical inline CSS
+    ├── index.css           # Main styles with frosted glass
+    ├── pwa.css             # PWA-specific styling
+    ├── root.css            # CSS variables and base styles
+    └── components/         # Component-specific styles
+        ├── accessibility.css
+        ├── button.css
+        ├── enhanced-ui.css
+        ├── images.css
+        ├── keyboard-shortcuts.css
+        ├── patch_*.css     # Patch page components
+        └── ...
+```
+
+## 🤝 Contributing
 
 Contributions are welcome and appreciated!  
 If you'd like to help improve the site or suggest new features:
@@ -57,7 +191,8 @@ Your efforts help keep Supreme Commander: Forged Alliance Forever and this proje
 
 ---
 
-*Built with ❤️ for the Supreme Commander: Forged Alliance Forever community*ance Forever* (FAF), featuring advanced search capabilities, offline functionality, and a beautiful frosted glass interface.
+*Built with ❤️ for the Supreme Commander: Forged Alliance Forever community*
+
 
 ---
 
