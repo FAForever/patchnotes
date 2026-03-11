@@ -1,0 +1,28 @@
+<article id="{{unit_id}}" class="PatchCard">
+    <!-- Card Header Section -->
+    <header class="PatchCardHeader">
+        <div class="UnitInfo">
+            <img src="{{icon}}" class="UnitIcon" alt="{{unit_name}}"/>
+            
+            <div class="UnitDetails">
+                <div class="UnitNameRow">
+                    <h3 class="UnitName">{{unit_name}}</h3>
+                    <div class="ChangeTypeBadge {{change_type}}">{{change_type_label}}</div>
+                </div>
+                <div class="FactionRow">
+                    <span class="FactionBadge {{faction}}">{{faction}}</span>
+                    <span class="UnitCode">{{unit_code}}</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Card Content Section -->
+    <div class="PatchCardContent">
+        <p class="ChangeDescription">{{change_description}}</p>
+
+        <div class="ChangesList">
+            {{change_groups}}
+        </div>
+    </div>
+</article>

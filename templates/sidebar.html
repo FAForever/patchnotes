@@ -1,0 +1,67 @@
+<aside class="Sidebar" role="navigation" aria-label="Quick Navigation">
+<div class="ContentSidemenu">
+
+<header class="SidemenuHeader">
+<h2 class="SidemenuTitle">
+<i class="fas fa-list-ul"></i>
+Quick Navigation
+</h2>
+
+<div class="ProgressBar">
+<div class="ProgressFill" id="readingProgress"></div>
+</div>
+</header>
+
+<div class="QuickActions">
+
+<button class="QuickActionBtn" onclick="scrollToTop()">
+<i class="fas fa-arrow-up"></i>
+<span>Top</span>
+</button>
+
+<button class="QuickActionBtn" onclick="toggleAllSections()">
+<i class="fas fa-expand-arrows-alt"></i>
+<span>Toggle</span>
+</button>
+
+<button class="QuickActionBtn" onclick="printPage()">
+<i class="fas fa-print"></i>
+<span>Print</span>
+</button>
+
+</div>
+
+<nav class="ContentNav">
+
+{{ intro_section }}
+
+{{ land_section }}
+
+{{ naval_section }}
+
+{{ air_section }}
+
+{{ acu_section }}
+
+</nav>
+
+<div class="SidemenuFooter">
+
+<div class="PatchStats">
+
+<div class="StatItem">
+<i class="fas fa-calendar-alt"></i>
+<span>{{ patch_date }}</span>
+</div>
+
+<div class="StatItem">
+<i class="fas fa-balance-scale"></i>
+<span>{{ change_count }} Changes</span>
+</div>
+
+</div>
+
+</div>
+
+</div>
+</aside>
