@@ -1,1 +1,52 @@
-#
+name: Patch Change Submission
+description: Submit balance changes for the next patch
+title: "[Patch] Balance Changes"
+labels: ["patch-submission"]
+ 
+body:
+ 
+  - type: input
+    id: patch_version
+    attributes:
+      label: Patch Version
+      description: Version number for this patch
+      placeholder: "3710"
+    validations:
+      required: true
+ 
+  - type: textarea
+    id: patch_summary
+    attributes:
+      label: Patch Summary
+      description: Short description of the patch goals
+      placeholder: |
+        Example:
+        Adjust T2 stealth gameplay and improve counterplay options.
+    validations:
+      required: true
+ 
+  - type: textarea
+    id: units
+    attributes:
+      label: Unit Changes
+      description: Enter unit changes in the structured format below
+      value: |
+        - unit_code: URL0306
+          change_type: nerf
+          unit_name: Deceiver
+          faction: Cybran
+ 
+          description: Reduce stealth field range to make fire beetles easier to counter.
+ 
+          changes:
+            - category: Intel
+              label: Radar Radius
+              old: 24
+              new: 20
+ 
+            - category: Intel
+              label: Sonar Radius
+              old: 24
+              new: 20
+    validations:
+      required: true
