@@ -1,0 +1,278 @@
+patch:
+  version: 3830
+  date: 2026-02-14
+  summary: >
+    This patch delivers focused balance and behavior improvements across naval, air, and support units. Naval attack-move behavior is refined, and the Aeon Exodus destroyer is buffed for better accuracy, micro, and shore bombardment. Air units gain smoother movement, while stealth and harassment tools are toned down through Deceiver and Fire Beetle adjustments. Support and naval units receive refinements to improve reliability and counterplay, including buffs to Seraphim subs, restored Cybran frigate range, and stronger anti-torpedo interactions. ACU tactical missiles are also improved for more consistent close-range combat.
+
+sections:
+
+  land:
+
+    - unit_id: T2_Cybran_Mobile_Stealth
+      unit_code: URL0306
+      name: Deceiver
+      faction: Cybran
+      icon: /assets/images/units/cybran/land/T2MobileStealth.png
+      change_type: nerf
+
+      description: >
+        Reduce deceiver stealth field range to make fire beetles easier to kill, make hiding armies/raids more difficult, and reduce its effectiveness in comparison to static stealth field generators.
+
+      changes:
+
+        - category: Intel
+          stats:
+
+            - label: Radar Radius
+              old: 24
+              new: 20
+
+            - label: Sonar Radius
+              old: 24
+              new: 20
+      
+    - unit_id: T2_Cybran_Mobile_Bomb
+      unit_code: XRL0302
+      name: Fire Beetle
+      faction: Cybran
+      icon: /assets/images/units/cybran/land/T2MobileBomb.png
+      change_type: nerf
+
+      description: >
+        Fire Beetles take longer to build because they were too strong defensively at Tech 2. This change, along with the Deceiver nerf, means you need more infrastructure to produce lots of them for defense or armies.
+
+      changes:
+
+        - category: Economy
+          stats:
+            - label: Build Time
+              old: 550
+              new: 700
+
+    - unit_id: T2_UEF_Field_Engineer
+      unit_code: XEL0209
+      name: Sparky
+      faction: UEF
+      icon: /assets/images/units/uef/land/T2FieldEngie.png
+      change_type: nerf
+
+      description: >
+        Reduce the Sparky's Guard Scan Radius, since the large radius caused them to chase enemies instead of reclaiming during attack-move or patrol. The smaller radius keeps them focused on reclaim in contested areas while still letting them defend themselves when enemies get close.
+
+      changes:
+
+        - category: AI
+          stats:
+            - label: Guard Scan Radius
+              old: 26
+              new: 8
+
+  naval:
+
+    - unit_id: T1_Sera_Submarine
+      unit_code: XSS0203
+      name: Sou-Istle
+      faction: Seraphim
+      icon: /assets/images/units/seraphim/naval/T1Sub.png
+      change_type: nerf
+
+      description: >
+        Increase Seraphim T1 Submarine's HP so that it draws other T1 subs and survives 1 torpedo bomber pass like other subs.
+
+      changes:
+
+        - category: Defense
+          stats:
+            - label: Health
+              old: 550
+              new: 610
+
+    - unit_id: T1_Cybran_Frigate
+      unit_code: URS0103
+      name: Trident
+      faction: Cybran
+      icon: /assets/images/units/cybran/naval/T1Frigate.png
+      change_type: buff
+
+      description: >
+        Reverts the nerf to the Cybran frigate's range from #4565, since it left them too weak to cover Salems and caused issues on maps where lots of frigate raiding is required.
+
+      changes:
+
+        - category: Weapons
+
+          groups:
+
+            - name: Proton Cannon
+              stats:
+
+                - label: Range
+                  old: 26
+                  new: 28
+
+    - unit_id: T2_Aeon_Destroyer
+      unit_code: UAS0201
+      name: Exodus
+      faction: Aeon
+      icon: /assets/images/units/aeon/naval/T2Destroyer.png
+      change_type: buff
+
+      description: >
+        The Exodus is made easier to control and more reliable in combat. It now misses less when being microed, can shoot from farther away to better bombard shores at Tech 2, and has its turret movement restored, making it more responsive and effective again.
+
+      changes:
+
+        - category: Weapons
+
+          groups:
+
+            - name: Oblivion Cannon
+              stats:
+
+                - label: Firing Randomness
+                  old: 0.25
+                  new: 0.2
+
+                - label: Firing Tolerance
+                  old: 2
+                  new: 1
+
+                - label: Range
+                  old: 70
+                  new: 75
+
+                - label: Turret Yaw Range
+                  old: 150
+                  new: 160
+
+                - label: Turret Yaw Speed
+                  old: 90
+                  new: 100
+
+    - unit_id: T2_Sera_Destroyer
+      unit_code: XSS0202
+      name: Exodus
+      faction: Seraphim
+      icon: /assets/images/units/seraphim/naval/T2Destroyer.png
+      change_type: nerf
+
+      description: >
+        Make anti-torpedoes more effective against the Seraphim destroyer. This makes T2 subs stronger against the Seraphim destroyer, giving Aeon and Cybran navies a new counterplay option.
+
+      changes:
+
+        - category: Weapons
+
+          groups:
+
+            - name: Ana-It Torpedo Launcher
+              stats:
+
+                - label: Torpedoes Per Salvo
+                  old: 4
+                  new: 3
+
+                - label: Salvo Delay Between Shots
+                  old: 0.9s
+                  new: 0.8s
+
+                - label: Damage
+                  old: 95
+                  new: 126
+
+                - label: DPS (Damage per Second)
+                  old: 95
+                  new: 94
+
+  air:
+
+    - unit_id: T1_Interceptor
+      unit_code: UAA0102, UEA0102, URA0102, XSA0102
+      name: T1 Interceptors
+      faction: Universal
+      icon: /assets/images/units/aeon/air/T1Interceptor.png
+      change_type: buff
+
+      description: >
+        Reduce the distance at which T1 Interceptors hover instead of turning when given a move order.
+
+      changes:
+
+        - category: Air Movement
+          stats:
+            - label: Start Turn Distance
+              old: 10
+              new: 5
+
+    - unit_id: T2_Swiftwind
+      unit_code: XAA0202
+      name: Swiftwind
+      faction: Aeon
+      icon: /assets/images/units/aeon/air/T2CombatFighter.png
+      change_type: buff
+
+      description: >
+          Reduce the distance at which Swiftwinds hover instead of turning when given a move order.
+
+      changes:
+
+        - category: Air Movement
+          stats:
+            - label: Start Turn Distance
+              old: 10
+              new: 5
+
+  acu:
+
+    - unit_id: Sera_ACU
+      unit_code: XSL0001
+      name: Seraphim ACU
+      faction: Seraphim
+      icon: /assets/images/units/seraphim/land/XSL0001.png
+      change_type: buff
+
+      description: >
+          The minimum range of the Seraphim ACU's TML is reduced, making it stronger in ACU vs ACU fights and fixing the issue where it wouldn't move into range to attack.
+
+      changes:
+
+        - category: Enhancements
+
+          groups:
+
+            - name: Laanse Tactical Missile (TML)
+              stats:
+
+                - label: Minimum Range
+                  old: 30
+                  new: 20
+
+    - unit_id: UEF_ACU
+      unit_code: UEL001
+      name: UEF ACU
+      faction: UEF
+      icon: /assets/images/units/uef/land/UEL001.png
+      change_type: buff
+
+      description: >
+          he minimum range of the UEF ACU's TML is reduced, making it stronger in ACU vs ACU fights and fixing the issue where it wouldn't move into range to attack.
+
+      changes:
+
+        - category: Enhancements
+
+          groups:
+
+            - name: Tactical Warhead (TML)
+              stats:
+
+                - label: Minimum Range
+                  old: 30
+                  new: 20
+
+            - name: Nucular Warehead (Billy Nuke)
+              stats:
+
+                - label: Minimum Range
+                  old: 30
+                  new: 20
